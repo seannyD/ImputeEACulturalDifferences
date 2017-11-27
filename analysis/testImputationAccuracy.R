@@ -1,0 +1,69 @@
+library(reshape2)
+library(ggplot2)
+setwd("~/Documents/Bristol/word2vec/word2vec_DPLACE/analysis/")
+
+load("../data/EA_imputed/preImputed.Rdat")
+soc.id = eadx[,1]
+# take out socid
+eadx = eadx[,-1]
+
+getAccuracy = function(f){
+  #print(f)
+  load(f)
+  test.arrInd = test.arrInd[test.arrInd[,1]!=0,]
+  accuracy = sum(eadx2[test.arrInd] == eadx[test.arrInd])/nrow(test.arrInd)
+  # baseline
+  baseline = replicate(10,getRandomBaseline(test.arrInd,eadx,eadx2))
+  z = (accuracy - mean(baseline))/sd(baseline)
+  return(c(accuracy=accuracy, baseline=mean(baseline), z=z))
+}
+
+getRandomBaseline = function(test.arrInd, eadx, eadx2){
+  # imputation by random sampling
+  randomBaseline = 
+      sapply(test.arrInd[,2], function(X){
+      sx = eadx2[,X]
+      sx = sx[!is.na(sx)]
+      sample(sx,1)
+    })
+  sum(randomBaseline == eadx[test.arrInd])/nrow(test.arrInd)
+}
+
+
+getFolderAccuracy = function(folder,prefix){
+  accuracy.orig = sapply( 
+    paste0(folder,
+           list.files(folder,prefix)),
+    getAccuracy)
+  
+  accuracy.orig = as.data.frame(t(accuracy.orig))
+  return(c(mean(accuracy.orig$accuracy),
+          (mean(accuracy.orig$baseline)),
+          (mean(accuracy.orig$z))))
+}
+
+########################
+
+
+
+
+getFolderAccuracy("../results/imputationTests/test1/","imputeTest_[0-9]*.rDat")
+
+getFolderAccuracy("../results/imputationTests/test2/","imputeTest_[0-9]*.rDat")
+
+getFolderAccuracy("../results/imputationTests/testFAIR/","imputeTest_*")
+getFolderAccuracy("../results/imputationTests/testFAIR_Area/","imputeTest_*")
+# Area: not much difference in z, but a bit higher on absolute accuracy
+
+
+getFolderAccuracy("../results/imputationTests/testFAIR_Area_RF/","imputeTest_*")
+
+# RF with bigger number of trees (same as above with 100 trees)
+getFolderAccuracy("../results/imputationTests/test_FAIR_plus/","imputeTest_*")
+
+
+getFolderAccuracy("../results/imputationTests/testFAIR_RF_NoArea/","imputeTest_*")
+
+# single tree with tuned parameters
+getFolderAccuracy("../results/imputationTests/testFAIR_tuned/","imputeTest_*")
+

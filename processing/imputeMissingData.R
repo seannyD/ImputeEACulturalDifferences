@@ -49,6 +49,7 @@ for(i in 2:ncol(eadx)){
 }
 
 # eadx = eadx[sample(1:nrow(eadx),100),c(2,3,4,ncol(eadx))]
+save(eadx, file="../data/EA_imputed/preImputed.Rdat")
 
 # impute 5 datasets
 #  (missing soc id column)

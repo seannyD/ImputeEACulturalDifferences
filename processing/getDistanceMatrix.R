@@ -14,44 +14,52 @@ eav = read.csv("../data/dplace-data-1.0/csv/EAVariableList.csv", stringsAsFactor
 # Load language data
 l = read.csv("../data/FAIR_langauges_glotto_xdid.csv", stringsAsFactors = F)
 
-makeDistanceMatrix = function(filename){
-# Load imputed Ethnogrpahic Atlas data
-eadx = read.csv(filename, stringsAsFactors = F)
-
-# Remove one variable that still has missing data
-eadx = eadx[,apply(eadx,2,function(X){sum(is.na(X))==0})]
-#eadx = eadx[,names(eadx)!="X69"]
-
-# Convert to factor
-for(i in 1:ncol(eadx)){
-  eadx[,i] = as.factor(eadx[,i])
+makeDistanceMatrix = function(filename, variables=c()){
+  # Load imputed Ethnogrpahic Atlas data
+  eadx = read.csv(filename, stringsAsFactors = F)
+  
+  # Keep only FAIR langauges
+  eadx = eadx[eadx$soc_id %in% l$soc.id,]
+  
+  # Remove family and area data
+  eadx = eadx[,!names(eadx) %in% c("Family","autotyp.area")]
+  
+  # Optionally only keep some variables
+  if(length(variables)>0){
+    eadx = eadx[,names(eadx) %in% variables]
+  }
+  
+  # Remove any variables that still have missing data
+  eadx = eadx[,apply(eadx,2,function(X){sum(is.na(X))==0})]
+  #eadx = eadx[,names(eadx)!="X69"]
+  
+  # Convert to factor
+  for(i in 1:ncol(eadx)){
+    eadx[,i] = as.factor(eadx[,i])
+  }
+  # Convert soc_id back to character
+  eadx$soc_id = as.character(eadx$soc_id)
+  
+  # names of languages according to Facebook
+  nx = l[match(eadx$soc_id,l$soc.id),]$Language
+  rownames(eadx) = nx
+  
+  # Make distance matrix from factors
+  #dist = dist(eadx[,2:ncol(eadx)])
+  dist = daisy(eadx[,-which(names(eadx)=="soc_id")], metric = "gower")
+  
+  # Convert to regular matrix
+  dist.m = as.matrix(dist)
+  rownames(dist.m) = nx
+  colnames(dist.m) = nx
+  return(dist.m)
 }
-# Convert soc_id back to character
-eadx$soc_id = as.character(eadx$soc_id)
-eadx = eadx[,-which(names(eadx)=="Family")]
 
-
-
-eadx = eadx[eadx$soc_id %in% l$soc.id,]
-
-# names of languages according to Facebook
-nx = l[match(eadx$soc_id,l$soc.id),]$Language
-rownames(eadx) = nx
-
-# Make distance matrix from factors
-#dist = dist(eadx[,2:ncol(eadx)])
-dist = daisy(eadx[,-which(names(eadx)=="soc_id")], metric = "gower")
-
-# Convert to regular matrix
-dist.m = as.matrix(dist)
-rownames(dist.m) = nx
-colnames(dist.m) = nx
-return(dist.m)
-}
-
+files = list.files("../data/EA_imputed/completeDataframes/","*.csv")
 dists = list()
-for(i in 1:5){
-  dists[[i]] = makeDistanceMatrix(paste0("../data/EA_imputed/EADX_Imputed_Complete_",i,".csv"))
+for(i in 1:length(files)){
+  print(files[i])
+  dists[[i]] = makeDistanceMatrix(paste0("../data/EA_imputed/completeDataframes/",files[i]))
 }
 
 # Check corelation
@@ -60,8 +68,39 @@ plot(dists[[2]],dists[[3]])
 plot(dists[[3]],dists[[4]])
 plot(dists[[4]],dists[[5]])
 
+# Mean correlation between sets
+cbx = combn(1:50,2)
+cor.x = c()
+upperx = upper.tri(dists[[1]],diag = F)
+for(cx in 1:ncol(cbx)){
+  cor.x = c(cor.x,
+    cor(dists[[cbx[1,cx]]][upperx],
+        dists[[cbx[2,cx]]][upperx]))
+}
+mean(cor.x)
+
+# Get mean values of each cell across imputations
 dist.m = Reduce('+', dists)
 dist.m = dist.m / length(dists)
+
+# get variation
+var = apply(simplify2array(dists), 1:2, sd)
+hist(var[upper.tri(var,diag = F)])
+
+# variation over mean distance
+hist((var/dist.m)[upper.tri(var,diag=F)])
+quantile((var/dist.m)[upper.tri(var,diag=F)], probs = c(0.95))
+
+
+# tests of normality
+norm.test = apply(simplify2array(dists), 1:2, 
+  function(X){
+    if(length(unique(as.vector(X)))>3){
+      return(shapiro.test(X)$p.value)}
+    else{
+      return(NA)
+    }
+  })
 
 # Write distance matrix
 write.csv(dist.m, "../results/EA_distances/CulturalDistances.csv")
@@ -74,7 +113,7 @@ write.csv(dist.long, file="../results/EA_distances/CulturalDistances_Long.csv", 
 # Visualise the distances
 library(mclust)
 
-hc = hclust(dist)
+hc = hclust(dist(dist.m))
 pdf("../results/CulturalDistance.pdf", width=20, height=10)
 plot(hc)
 dev.off()
@@ -97,11 +136,17 @@ for(i in 1:nrow(c2ea)){
   }
   eavars = unique(eavars)
   #distx = dist(eadx[,names(eadx) %in% paste0("X",eavars)])
-  distx = daisy(eadx[,names(eadx) %in% paste0("X",eavars)],
-               metric = "gower")
-  distx.m = as.matrix(distx)
-  rownames(distx.m) = nx
-  colnames(distx.m) = nx
+  distsC = list()
+  for(j in 1:length(files)){
+    print(files[j])
+    distsC[[j]] = makeDistanceMatrix(
+      paste0("../data/EA_imputed/completeDataframes/",files[j]),
+      variables=c(paste0("X",eavars),"soc_id"))
+  }
+  
+  distx.m = Reduce('+', distsC)
+  distx.m = distx.m / length(distsC)
+    
   filenamex = gsub(' ',"_",c2ea[i,]$concepticon)
   write.csv(
     distx.m,
@@ -113,7 +158,7 @@ for(i in 1:nrow(c2ea)){
             file=paste0("../results/EA_distances/",filenamex,'_long.csv'), row.names = F)
   
   
-  hcx = hclust(distx)
+  hcx = hclust(as.dist(distx.m))
   pdf(
     paste0("../results/CulturalDistance_",filenamex,".pdf"),
     width=20, height=10)
@@ -150,3 +195,5 @@ distx = daisy(eadx.kinship,
 distx.m = as.matrix(distx)
 rownames(distx.m) = eadx.full$soc_id
 colnames(distx.m)= eadx.full$soc_id
+
+write.csv(distx.m, "../results/EA_distances/Kinship_AllSocieties.csv")
