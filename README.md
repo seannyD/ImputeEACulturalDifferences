@@ -1,6 +1,6 @@
 # Imputing missing values in the Ethnographic Atlas
 
-The aim is to produce a set of distances between societies based on their cultural traits.  The ethnographic atlas as made available in D-PLACE could do this, but there is about 10% missing data, which means that distances can't be computed easily.  One approach is to impute the missing data (guess their values based on existing data).  It's unlikely that any imputation method will be completely accurate, but for our purposes we don't need to be accurate, just *unbiased*.  That is, the imputed values should not bias the estimates of the distances between cultures.
+The aim is to produce a set of distances between societies based on their cultural traits.  The ethnographic atlas as made available in D-PLACE could do this, but there is a lot of missing data (about 25% in the whole dataset), which means that distances can't be computed easily.  One approach is to impute the missing data (guess their values based on existing data).  It's unlikely that any imputation method will be completely accurate, but for our purposes we don't need to be accurate, just *unbiased*.  That is, the imputed values should not bias the estimates of the distances between cultures.
 
 In this case, we use multiple imputation: calculating many possible alternative imputations and taking the mean distances over all imputations.  Note that this can break ties between otherwise identical distances.
 
@@ -8,7 +8,9 @@ We use the imputation package `mice` for R.  We can test the imputation by takin
 
 CART works by building a decision tree: an optimal set of yes-no questions to ask about predictor variables in order to guess the value of a target variable.  The tree divides the data into partitions which look similar.  The algorithm works out which partition a missing data point would belong to, then samples the target variable distribution from that partition.  To account for historical relationships, we included language family according to Glottolog and geographic area according to Autotyp as additional factors on which the imputation process could draw.
 
-CART imputation guessed the correct value of missing data 69% of the time on average.  This is reasonably good, considering that most variables have between 4 and 8 possible values (median = 6).  For example, this is 12 standard deviations better than sampling randomly from the whole distribution of the target variable (accuracy = 38% on the same missing data).  This is not good enough to use in analyses that look at individual traits, but serves our purposes to estimate overall distances between 
+We ran CART multiple imputation on the ethnographic atlas.  We excluded population size, one more variable that was coded for less than 33% of societies, and any societies that had fewer than 20 variables coded.  This left 95 variables for 677 languages with 11.9% missing data.
+
+CART imputation guessed the correct value of missing data 69% of the time on average for FAIR languages.  This is reasonably good, considering that most variables have between 4 and 8 possible values (median = 6).  For example, this is 12 standard deviations better than sampling randomly from the whole distribution of the target variable (accuracy = 38% on the same missing data).  This is not good enough to use in analyses that look at individual traits, but serves our purposes to estimate overall distances between 
 
 We produced 50 imputation sets with the final settings.  These were then used to create distance matrices using gower distance between discrete traits (mean correlation between sets r = 0.96, estimates of distance vary by around 1.9% on average).
 
