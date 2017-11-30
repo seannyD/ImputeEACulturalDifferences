@@ -1,6 +1,6 @@
 ---
 title: "Cultural distances: controlling for history"
-output: html_document
+output: pdf_document
 ---
 
 ```{r echo=F, eval=F}
@@ -22,23 +22,23 @@ library(ecodist)
 Read the tree:
 
 ```{r}
-t = read.tree("../data/trees/FAIR_tree.nwk")
+t = read.tree("../data/trees/FAIR_tree_IndoEuropean.nwk")
 ```
 
-Read the cultural distances and limit the data to societies that exist in both sources:
+Read the cultural distances:
 
 ```{r}
 cult = read.csv("../results/EA_distances/CulturalDistances.csv", stringsAsFactors = F)
 rownames(cult) = cult[,1]
 cult = cult[,2:ncol(cult)]
+```
 
-langs = unique(rownames(cult))
+Read the historical distances for Indo-European, based on the phylogenetic distances.
 
-t = drop.tip(t,t$tip.label[!t$tip.label %in% langs])
-
-cult = cult[t$tip.label,t$tip.label]
-
-t.dist = cophenetic(t)
+```{r}
+hist = read.csv("../data/trees/IndoEuropean_historical_distances.csv", stringsAsFactors = F)
+rownames(hist) = hist[,1]
+hist = hist[,2:ncol(hist)]
 ```
 
 Until we have the real linguistic distances, just make something up:
