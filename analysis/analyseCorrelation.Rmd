@@ -1,0 +1,74 @@
+---
+title: "Cultural distances: controlling for history"
+output: html_document
+---
+
+```{r echo=F, eval=F}
+setwd("~/Documents/Bristol/word2vec/word2vec_DPLACE/analysis/")
+```
+
+# Introduction
+
+We compare cultural distances between socieites with linguistic distances between societies in Indo-European languages, controlling for history using a phylogenetic tree.  The tree comes from Bouckaert et al. (2012).  Patristic distances between languages are used as a measure of historical distance between societies. There is no easy way to do such a regression due to the main measures are in the form of distance matrices.
+
+# Load libraries
+```{r warning=F, message=F}
+library(ape)
+library(ecodist)
+```
+
+# Load data
+
+Read the tree:
+
+```{r}
+t = read.tree("../data/trees/FAIR_tree.nwk")
+```
+
+Read the cultural distances and limit the data to societies that exist in both sources:
+
+```{r}
+cult = read.csv("../results/EA_distances/CulturalDistances.csv", stringsAsFactors = F)
+rownames(cult) = cult[,1]
+cult = cult[,2:ncol(cult)]
+
+langs = unique(rownames(cult))
+
+t = drop.tip(t,t$tip.label[!t$tip.label %in% langs])
+
+cult = cult[t$tip.label,t$tip.label]
+
+t.dist = cophenetic(t)
+```
+
+Until we have the real linguistic distances, just make something up:
+
+```{r}
+ling = cult
+ling = ling + matrix(rnorm(prod(dim(ling)))*0.1, nrow=nrow(ling))
+plot(unlist(cult),unlist(ling))
+```
+
+# Mantel test
+
+Simple correlation without control for history:
+
+```{r}
+ecodist::mantel(as.dist(cult) ~
+                  as.dist(ling),
+                nperm = 10000)
+```
+
+
+Run a mantel test comparing the linguistic distances to the cultural distances, controlling for the historical distance between languages.
+
+```{r}
+ecodist::mantel(as.dist(cult)~
+                  as.dist(ling) + 
+                  as.dist(t.dist),
+                nperm = 10000)
+```
+
+# References
+
+Bouckaert, Remco, Philippe Lemey, Michael Dunn, Simon J. Greenhill, Alexander V. Alekseyenko, Alexei J. Drummond, Russell D. Gray, Marc A. Suchard, and Quentin D. Atkinson (2012). Mapping the origins and expansion of the Indo-European language family. Science, 337(6097), 957-960.
