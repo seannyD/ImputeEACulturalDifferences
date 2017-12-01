@@ -19,19 +19,41 @@ library(ecodist)
 
 # Load data
 
-Read the tree:
-
-```{r}
-t = read.tree("../data/trees/FAIR_tree_IndoEuropean.nwk")
-```
-
 Read the cultural distances:
 
 ```{r}
-cult = read.csv("../results/EA_distances/CulturalDistances.csv", stringsAsFactors = F)
-rownames(cult) = cult[,1]
-cult = cult[,2:ncol(cult)]
+cult = read.csv("../results/EA_distances/CulturalDistances_Long.csv", stringsAsFactors = F)
 ```
+
+Add language family:
+
+```{r}
+l = read.csv("../data/FAIR_langauges_glotto_xdid.csv", stringsAsFactors = F)
+g = read.csv("../data/glottolog-languoid.csv/languoid.csv", stringsAsFactors = F)
+l$family = g[match(l$glotto,g$id),]$family_pk
+l$family = g[match(l$family,g$pk),]$name
+```
+
+Read the semantic distances
+
+```{r}
+ling = read.csv("../data/FAIR/semantic_distances_FAIR.csv", stringsAsFactors = F)
+ling$rho.center = scale(ling$rho)
+
+```
+
+# LMER models
+
+## Indo-European
+
+```{r}
+m0 = lmer(
+  rho.center ~
+    historical
+)
+```
+
+# Mantel tests
 
 Read the historical distances for Indo-European, based on the phylogenetic distances.
 
@@ -41,26 +63,27 @@ rownames(hist) = hist[,1]
 hist = hist[,2:ncol(hist)]
 ```
 
-Until we have the real linguistic distances, just make something up:
+Read the cultural distances as a matrix:
 
 ```{r}
-ling = cult
-ling = ling + matrix(rnorm(prod(dim(ling)))*0.1, nrow=nrow(ling))
-plot(unlist(cult),unlist(ling))
+cult.m = read.csv("../results/EA_distances/CulturalDistances.csv", stringsAsFactors = F)
+rownames(cult.m) = cult.m[,1]
+cult.m = cult.m[,2:ncol(cult.m)]
 ```
 
-# Mantel test
+
+## Indo-European
 
 Simple correlation without control for history:
 
 ```{r}
-ecodist::mantel(as.dist(cult) ~
-                  as.dist(ling),
+ecodist::mantel(as.dist(cult.m) ~
+                as.dist(ling),
                 nperm = 10000)
 ```
 
 
-Run a mantel test comparing the linguistic distances to the cultural distances, controlling for the historical distance between languages.
+Run a mantel test comparing the linguistic distances to the cultural distances, controlling for the historical distance between languages:
 
 ```{r}
 ecodist::mantel(as.dist(cult)~

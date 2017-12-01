@@ -1,3 +1,6 @@
+# Get historical distances between langauges from phylogentic trees, obtained from D-Place
+# Then match up the taxa names to FAIR langauge names
+
 setwd("~/Documents/Bristol/word2vec/word2vec_DPLACE/analysis/")
 
 library(ape)
