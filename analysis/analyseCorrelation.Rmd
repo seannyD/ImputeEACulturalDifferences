@@ -9,7 +9,7 @@ setwd("~/Documents/Bristol/word2vec/word2vec_DPLACE/analysis/")
 
 # Introduction
 
-We compare cultural distances between socieites with linguistic distances between societies, controlling for shared history in two ways.
+We compare cultural distances between socieites with Linguistic similaritys between societies, controlling for shared history in two ways.
 
 The first test uses mixed effects modelling.  The pairing of the langauge family of each language (according to Glottolog) is used as a random effect.  That means that the model can capture the likelihood that two languages from the Indo-European langauge family will be more similar to each other than two languages from different langauge families.  The same is done with geographic area according to Autotyp.
 
@@ -106,7 +106,7 @@ tail(ling[,c("l1","l2","rho",'area.group')])
 
 ## LMER models
 
-Mixed effects model, predicting linguistic distances from cultural distances, with random intercept for family and area and random slope for cultural distance for family and area.
+Mixed effects model, predicting Linguistic similaritys from cultural distances, with random intercept for family and area and random slope for cultural distance for family and area.
 
 We compare a null model to a model with a fixed effect for cultural distance, with random intercepts for family and area, and random slopes for cultural distance by both.
 
@@ -127,7 +127,7 @@ m1 = lmer(
 anova(m0,m1)
 ```
 
-Cultural distance is significantly correlated with linguistic distance.  Here are the model estimates:
+Cultural distance is significantly correlated with Linguistic similarity.  Here are the model estimates:
 
 ```{r}
 summary(m1)
@@ -165,7 +165,7 @@ ggplot(dx,aes(x,y)) +
                          y=as.numeric(rho))) +
   geom_line(mapping = aes(colour=grp)) +
   xlab("Cultural distance")+
-  ylab("Linguistic distance") +
+  ylab("Linguistic similarity") +
   ggtitle("Area pair random effects") +
   coord_cartesian(ylim=c(0.1,0.6),
                   xlim=c(0.2,0.8))
@@ -181,7 +181,7 @@ ggplot(dx,aes(x,y)) +
                          y=as.numeric(rho))) +
   geom_line(mapping = aes(colour=grp)) +
   xlab("Cultural distance")+
-  ylab("Linguistic distance") +
+  ylab("Linguistic similarity") +
   ggtitle("Family pair random effects") +
   coord_cartesian(ylim=c(0.1,0.6),
                   xlim=c(0.2,0.8))
@@ -346,7 +346,7 @@ ggplot(pdx,
        aes(x,y,colour=Domain)) +
   geom_line() +
   xlab("Cultural Distance") +
-  ylab("Linguistic distance (rho)")
+  ylab("Linguistic similarity (rho)")
 
 ```
 
@@ -380,7 +380,7 @@ rownames(cult.m) = cult.m[,1]
 cult.m = cult.m[,2:ncol(cult.m)]
 ```
 
-Convert the linguistic distances to a matrix.  This uses `igraph` to make an undirected graph from the long format with `rho` as the edge weights, then output a matrix of adjacencies.
+Convert the Linguistic similaritys to a matrix.  This uses `igraph` to make an undirected graph from the long format with `rho` as the edge weights, then output a matrix of adjacencies.
 
 ```{r}
 grph <- graph.data.frame(ling[,c("l1",'l2','rho')], directed=FALSE)
@@ -413,7 +413,7 @@ ecodist::mantel(as.dist(cult.m2) ~
 ```
 
 
-Run a mantel test comparing the linguistic distances to the cultural distances, controlling for the historical distance between languages:
+Run a mantel test comparing the Linguistic similaritys to the cultural distances, controlling for the historical distance between languages:
 
 ```{r}
 ecodist::mantel(as.dist(cult.m2)~
