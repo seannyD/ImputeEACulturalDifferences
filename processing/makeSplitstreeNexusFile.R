@@ -1,22 +1,24 @@
 setwd("/Users/sgroberts/Documents/Bristol/word2vec/word2vec_DPLACE/processing")
 
 makeSplitstree = function(dists, filename){
-header = paste("#nexus\n\nBEGIN Taxa;\nDIMENSIONS ntax=",nrow(dists),";\nTAXLABELS\n",collapse="")
-
-taxlabels= paste(paste("[",1:nrow(dists),"] '",rownames(dists),"'",sep=''),collapse='\n')
-
-header2 = paste("\n;\nEND;  [TAXA]\n\nBEGIN DISTANCES;\n        DIMENSIONS NTAX=" , nrow(dists),";  FORMAT  TRIANGLE=BOTH DIAGONAL LABELS=LEFT;\nMATRIX\n", collapse='')
-
-rnames = paste("'",rownames(dists),"'",sep='')
-
-mat = paste(paste(rnames,apply(dists,1,paste,collapse=' ')),collapse='\n')
-
-header3 = "\n;\nEND;\n"
-
-nexus = paste(header, taxlabels, header2, mat, header3, collapse='')
-
-cat(nexus,file = filename)
+  header = paste("#nexus\n\nBEGIN Taxa;\nDIMENSIONS ntax=",nrow(dists),";\nTAXLABELS\n",collapse="")
+  
+  taxlabels= paste(paste("[",1:nrow(dists),"] '",rownames(dists),"'",sep=''),collapse='\n')
+  
+  header2 = paste("\n;\nEND;  [TAXA]\n\nBEGIN DISTANCES;\n        DIMENSIONS NTAX=" , nrow(dists),";  FORMAT  TRIANGLE=BOTH DIAGONAL LABELS=LEFT;\nMATRIX\n", collapse='')
+  
+  rnames = paste("'",rownames(dists),"'",sep='')
+  
+  mat = paste(paste(rnames,apply(dists,1,paste,collapse=' ')),collapse='\n')
+  
+  header3 = "\n;\nEND;\n"
+  
+  nexus = paste(header, taxlabels, header2, mat, header3, collapse='')
+  
+  cat(nexus,file = filename)
 }
+
+# All FAIR langauges:
 
 dists = read.csv("../results/EA_distances/CulturalDistances.csv", stringsAsFactors = F)
 dists = dists[,2:ncol(dists)]
@@ -24,6 +26,21 @@ rownames(dists) = colnames(dists)
 dists = as.matrix(dists)
 
 makeSplitstree(dists, "../results/splitstree/CulturalDistances.nex")
+
+### Just for 16 langs in final analysis
+
+l = read.csv("../data/FAIR_langauges_glotto_xdid.csv", stringsAsFactors = F)
+
+ead = read.csv("../data/dplace-data-1.0/csv/EA_data.csv", stringsAsFactors = F)
+ead.socid = unique(ead$soc_id)
+
+final.langs = l[l$in.final.analysis & !is.na(l$soc.id) & l$soc.id %in% ead.socid,]$Language2
+
+final.langs = final.langs[final.langs %in% rownames(dists)]
+
+dists15 = dists[final.langs,final.langs]
+
+makeSplitstree(dists15, "../results/splitstree/CulturalDistances_Final15.nex")
 
 ####
 # Kinship, all cultures and variables

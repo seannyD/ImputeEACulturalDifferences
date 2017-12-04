@@ -10,12 +10,15 @@ eadx = eadx[,-1]
 getAccuracy = function(f){
   #print(f)
   load(f)
+  if(nrow(eadx2)==nrow(eadx)){
   test.arrInd = test.arrInd[test.arrInd[,1]!=0,]
   accuracy = sum(eadx2[test.arrInd] == eadx[test.arrInd])/nrow(test.arrInd)
   # baseline
-  baseline = replicate(10,getRandomBaseline(test.arrInd,eadx,eadx2))
+  baseline = replicate(100,getRandomBaseline(test.arrInd,eadx,eadx2))
   z = (accuracy - mean(baseline))/sd(baseline)
-  return(c(accuracy=accuracy, baseline=mean(baseline), z=z))
+  return(c(accuracy=accuracy, baseline=mean(baseline), z=z))} else{
+    print("Row numbers don't match")
+  }
 }
 
 getRandomBaseline = function(test.arrInd, eadx, eadx2){
@@ -37,9 +40,9 @@ getFolderAccuracy = function(folder,prefix){
     getAccuracy)
   
   accuracy.orig = as.data.frame(t(accuracy.orig))
-  return(c(mean(accuracy.orig$accuracy),
-          (mean(accuracy.orig$baseline)),
-          (mean(accuracy.orig$z))))
+  return(c(mean(accuracy.orig$accuracy,na.rm=T),
+          (mean(accuracy.orig$baseline,na.rm=T)),
+          (mean(accuracy.orig$z,na.rm=T))))
 }
 
 ########################
@@ -67,3 +70,8 @@ getFolderAccuracy("../results/imputationTests/testFAIR_RF_NoArea/","imputeTest_*
 # single tree with tuned parameters
 getFolderAccuracy("../results/imputationTests/testFAIR_tuned/","imputeTest_*")
 
+
+# Test on final 15 languages that can actually be analysed
+getFolderAccuracy("../results/imputationTests/testFAIR_15/","imputeTest_FAIR_15_*")
+# 100 reps
+# 0.7397059 0.3678412 5.6019036

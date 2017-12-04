@@ -39,10 +39,15 @@ numObs = apply(eadx,2,function(X){sum(!is.na(X))})
 eadx = eadx[,names(eadx) %in% names(numObs[numObs>60])]
 
 numLangs = apply(eadx,1,function(X){sum(is.na(X))})
-eadx = eadx[numLangs<20,]
+eadx = eadx[numLangs<31,]
 
-# missing data
+in.final.and.ea = eadx$soc_id %in% l[l$in.final.analysis & !is.na(l$soc.id),]$soc.id
+
+# missing data total
 sum(is.na(eadx[,2:(ncol(eadx)-2)])) / prod(dim(eadx[,2:(ncol(eadx)-2)]))
+
+# Missing data FAIR
+sum(is.na(eadx[in.final.and.ea,2:(ncol(eadx)-2)])) / prod(dim(eadx[in.final.and.ea,2:(ncol(eadx)-2)]))
 
 # Convert to factor
 for(i in 2:ncol(eadx)){

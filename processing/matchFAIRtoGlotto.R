@@ -5,27 +5,34 @@ l = read.delim("../data/FAIR_languages.tab", stringsAsFactors = F)
 l$Language2 = gsub("_"," ",l$Language)
 
 g = read.csv("../data/glottolog-languoid.csv/languoid.csv", stringsAsFactors = F)
+g$family = g[match(g$family_pk,g$pk),]$name
 
 l$glotto = g[match(l$Language2,g$name),]$id
 sum(is.na(l$glotto))
 
 l2 = l[is.na(l$glotto),]
 
+# Write missing langauges
 write.table(l2[,1], "../data/FAIR_languages_missing.tab", quote = F, row.names = F)
 
+# Manually coded mappings
 l3 = read.delim("../data/FAIR_languages_missing_edited.tab", sep='\t', quote = "", stringsAsFactors = F)
 
 l[is.na(l$glotto),]$glotto = l3[match(l[is.na(l$glotto),]$Language, l3$Lang),]$glotto
 
-l = l[!is.na(l$glotto),]
-l = l[l$glotto!="",]
+l$family = g[match(l$glotto,g$id),]$family
+# Isolates:
+l$family[is.na(l$family)] = l$Language2[is.na(l$family)]
+
+#l = l[!is.na(l$glotto),]
+#l = l[l$glotto!="",]
 
 dpid = read.csv("../data/dplace-data-1.0/csv/xd_id_to_language.csv", stringsAsFactors = F)
 
 l$xd.id = dpid[match(l$glotto,dpid$DialectLanguageGlottocode),]$xd_id
 #l$soc.id = dpid[match(l$glotto,dpid$DialectLanguageGlottocode),]$soc
 
-l = l[!is.na(l$xd.id),]
+#l = l[!is.na(l$xd.id),]
 
 # SCCS
 #sccs = read.csv("../data/dplace_SCCS/societies.csv", stringsAsFactors = F)
@@ -37,6 +44,11 @@ ea = read.csv("../data/dplace-data-1.0/csv/EA_societies.csv", stringsAsFactors =
 sum(ea$xd_id %in% l$xd.id)
 
 l$soc.id = ea[match(l$xd.id,ea$xd_id),]$soc_id
+
+l[l$Language2=="Georgian",]$soc.id = "Ci8"# Georgians
+l[l$Language2=="Georgian",]$soc.id = "Ce2"# Portuguese
+
+
 
 
 g2 = read.csv("../data/languages-and-dialects-geo.csv", stringsAsFactors = F)
@@ -63,8 +75,41 @@ l[l$glotto =="tahi1242",]$autotyp.area = "Oceania"
 l[l$glotto %in% c("sout2688",'cent1989'),]$autotyp.area = "Southeast Asia"
 l[l$glotto %in% c("mang1399"),]$autotyp.area ="African Savannah"
 
+# Get fair iso2 codes:
+library(stringr)
+htx = readLines("../data/FAIR/FAIR_langs2iso.html")
 
+res =str_match_all(htx,'<td>([^:]+):.+wiki\\.([a-z]+)\\.zip')
 
+res = sapply(res, function(X){
+  if(nrow(X)>0){
+    return(X[1,2:3])
+  }})
+
+res = unlist(res)
+res = as.data.frame(matrix(res,ncol=2,byrow = T),
+                    stringsAsFactors = F)
+names(res) = c("name","iso2")
+
+l$iso2 = res[match(l$Language2, res$name),]$iso2
+
+l[l$Language2=="Banyumasan",]$iso2 = "bms"
+l[l$Language2=="Serbo Croatian",]$iso2 = "sh"
+
+# Load final linguistic distance measures to see which langauges will go into the analysis
+
+ling = read.csv("../data/FAIR/semantic_distances_FAIR.csv", stringsAsFactors = F)
+
+ling.langs = unique(c(ling$l1, ling$l2))
+
+l$in.final.analysis = l$iso2 %in% ling.langs
+
+l[l$in.final.analysis,]
+
+sum(l$in.final.analysis & !is.na(l$soc.id) & l$soc.id %in% ea$soc_id)
+l[l$in.final.analysis & !is.na(l$soc.id),]$family
+
+# Write list of languages
 write.csv(l,"../data/FAIR_langauges_glotto_xdid.csv", row.names = F)
 
 ####

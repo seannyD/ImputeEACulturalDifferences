@@ -7,9 +7,12 @@ load("../data/EA_imputed/preImputed.Rdat")
 
 fairlangs = read.csv("../data/FAIR_langauges_glotto_xdid.csv",stringsAsFactors = F)
 
-numFairLangs = sum(eadx$soc_id %in% fairlangs$soc.id)
+eadx.in.final.analysis = fairlangs[match(eadx$soc_id, fairlangs$soc.id),]$in.final.analysis
+eadx.in.final.analysis[is.na(eadx.in.final.analysis)] = F
 
-non.fair.langs = which(!eadx$soc_id %in% fairlangs$soc.id)
+numFairLangs = sum(eadx.in.final.analysis)
+
+non.fair.langs = which(!eadx.in.final.analysis)
 eadx.soc.id = eadx[,1]
 # take out socid
 eadx = eadx[,-1]
@@ -46,4 +49,4 @@ eadx.imputed = mice(data = eadx,
                     m=1, method='cart')
 eadx2 = complete(eadx.imputed, 1)
 
-save(eadx2,test.arrInd, file=paste0("../results/imputationTests/imputeTest_FAIR_",sample(1:9999999,1),".rDat"))
+save(eadx2,test.arrInd, file=paste0("../results/imputationTests/imputeTest_FAIR_15_",sample(1:9999999,1),".rDat"))

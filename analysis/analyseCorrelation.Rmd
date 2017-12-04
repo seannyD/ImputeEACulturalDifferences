@@ -9,20 +9,33 @@ setwd("~/Documents/Bristol/word2vec/word2vec_DPLACE/analysis/")
 
 # Introduction
 
-We compare cultural distances between socieites with linguistic distances between societies in Indo-European languages, controlling for history using a phylogenetic tree.  The tree comes from Bouckaert et al. (2012).  Patristic distances between languages are used as a measure of historical distance between societies. There is no easy way to do such a regression due to the main measures are in the form of distance matrices.
+We compare cultural distances between socieites with linguistic distances between societies, controlling for shared history in two ways.
+
+The first test uses mixed effects modelling.  The pairing of the langauge family of each language (according to Glottolog) is used as a random effect.  That means that the model can capture the likelihood that two languages from the Indo-European langauge family will be more similar to each other than two languages from different langauge families.  The same is done with geographic area according to Autotyp.
+
+The second test controls for history using distances from a phylogenetic tree.  The tree comes from Bouckaert et al. (2012).  Patristic distances between languages are used as a measure of historical distance between societies in a Mantel test.  Note that the Mantel test assumes a strict distance metric, which is not necessarily the case with this data, but there are few other ways to deal with continuous pairwise distances. 
 
 # Load libraries
 ```{r warning=F, message=F}
 library(ape)
 library(ecodist)
+library(lme4)
+library(sjPlot)
+library(ggplot2)
+library(igraph)
+library(lattice)
 ```
 
-# Load data
+# All domains
+
+## Load data
 
 Read the cultural distances:
 
 ```{r}
 cult = read.csv("../results/EA_distances/CulturalDistances_Long.csv", stringsAsFactors = F)
+names(cult) = c("l1","l2","cult.dist")
+cultLangs = unique(c(cult$Var1,cult$Var2))
 ```
 
 Add language family:
@@ -38,29 +51,295 @@ Read the semantic distances
 
 ```{r}
 ling = read.csv("../data/FAIR/semantic_distances_FAIR.csv", stringsAsFactors = F)
+```
+
+Combine the lingusitic and cultural distances
+
+```{r}
+cult$l1.iso2 = l[match(cult$l1,l$Language2),]$iso2
+cult$l2.iso2 = l[match(cult$l2,l$Language2),]$iso2
+
+fairisos = unique(c(ling$l1,ling$l2))
+cultisos = unique(c(cult$l1.iso2, cult$l2.iso2))
+
+cult = cult[(cult$l1.iso2 %in% fairisos) & (cult$l2.iso2 %in% fairisos),]
+ling = ling[(ling$l1 %in% cultisos) & (ling$l2 %in% cultisos),]
+
+matches = sapply(1:nrow(ling), function(i){
+  which(cult$l1.iso2==ling$l1[i] & cult$l2.iso2==ling$l2[i])
+})
+
+ling$cult.dist = cult[matches,]$cult.dist
+ling$cult.dist.center = scale(ling$cult.dist)
+cdc.s = attr(ling$cult.dist.center,"scaled:scale")
+cdc.c = attr(ling$cult.dist.center,"scaled:center")
+ling$cult.dist.center = as.numeric(ling$cult.dist.center)
+
+ling$family1 = l[match(ling$l1, l$iso2),]$family
+ling$area1 = l[match(ling$l1, l$iso2),]$autotyp.area
+
+ling$family2 = l[match(ling$l2, l$iso2),]$family
+ling$area2 = l[match(ling$l2, l$iso2),]$autotyp.area
+
+ling$family.group = paste(ling$family1,ling$family2)
+ling$area.group = paste(ling$area1,ling$area2)
+
 ling$rho.center = scale(ling$rho)
 
 ```
 
-# LMER models
+Each observation is now assocaited with a langauge family pair:
 
-## Indo-European
+```{r}
+head(ling[,c("l1","l2","rho",'family.group')])
+```
+
+And the same is true for area:
+
+```{r}
+tail(ling[,c("l1","l2","rho",'area.group')])
+```
+
+## LMER models
+
+Mixed effects model, predicting linguistic distances from cultural distances, with random intercept for family and area and random slope for cultural distance for family and area.
+
+We compare a null model to a model with a fixed effect for cultural distance, with random intercepts for family and area, and random slopes for cultural distance by both.
 
 ```{r}
 m0 = lmer(
-  rho.center ~
-    historical
+  rho.center ~ 1 +
+    (1 + cult.dist.center | family.group) +
+    (1 + cult.dist.center | area.group),
+  data = ling
 )
+m1 = lmer(
+  rho.center ~ 1 +
+    cult.dist.center +
+    (1 + cult.dist.center | family.group) +
+    (1 + cult.dist.center | area.group),
+  data = ling
+)
+anova(m0,m1)
 ```
+
+Cultural distance is significantly correlated with linguistic distance.  Here are the model estimates:
+
+```{r}
+summary(m1)
+```
+
+Plot the estimates, rescaling the variables back to the original units:
+
+```{r}
+gx = sjp.lmer(m1,'pred','cult.dist.center', prnt.plot = F)
+gx$plot$data$y = gx$plot$data$y *
+  attr(ling$rho.center,"scaled:scale") +
+  attr(ling$rho.center,"scaled:center")
+gx$plot$data$resp.y = gx$plot$data$resp.y *
+  attr(ling$rho.center,"scaled:scale") +
+  attr(ling$rho.center,"scaled:center")
+gx$plot$data$x = gx$plot$data$x *
+  cdc.s +cdc.c
+gx$plot + coord_cartesian(ylim=c(0.1,0.6),
+                          xlim=c(0.2,0.8))
+```
+
+Plot the random effects.  There seems to be more variation by area:
+
+```{r}
+sjp.lmer(m1,'re', sort.est = "cult.dist.center")
+px = sjp.lmer(m1,'rs.ri', prnt.plot = F)
+dx = px$plot[[1]]$data
+dx$x = dx$x * cdc.s + cdc.c
+dx$y = dx$y * 
+  attr(ling$rho.center,"scaled:scale") +
+  attr(ling$rho.center,"scaled:center")
+ggplot(dx,aes(x,y)) +
+  geom_point(data=ling, 
+             mapping=aes(x=as.numeric(cult.dist),
+                         y=as.numeric(rho))) +
+  geom_line(mapping = aes(colour=grp)) +
+  xlab("Cultural distance")+
+  ylab("Linguistic distance") +
+  ggtitle("Area pair random effects") +
+  coord_cartesian(ylim=c(0.1,0.6),
+                  xlim=c(0.2,0.8))
+
+dx = px$plot[[2]]$data
+dx$x = dx$x * cdc.s + cdc.c
+dx$y = dx$y * 
+  attr(ling$rho.center,"scaled:scale") +
+  attr(ling$rho.center,"scaled:center")
+ggplot(dx,aes(x,y)) +
+  geom_point(data=ling, 
+             mapping=aes(x=as.numeric(cult.dist),
+                         y=as.numeric(rho))) +
+  geom_line(mapping = aes(colour=grp)) +
+  xlab("Cultural distance")+
+  ylab("Linguistic distance") +
+  ggtitle("Family pair random effects") +
+  coord_cartesian(ylim=c(0.1,0.6),
+                  xlim=c(0.2,0.8))
+```
+
+
+\newpage
+
+# Tests within domains
+
+Load distances for specific domains and match up to language family and area:
+
+```{r}
+ling.dom = read.csv(
+  "../results/EA_distances/All_Domains_with_ling.csv", 
+  stringsAsFactors = F)
+
+ling.dom = ling.dom[!is.na(ling.dom$cult.dist),]
+
+ling.dom$family1 = l[match(ling.dom$l1, l$iso2),]$family
+ling.dom$family2 = l[match(ling.dom$l2, l$iso2),]$family
+ling.dom$family.group = paste(ling.dom$family1,
+                              ling.dom$family2)
+
+ling.dom$area1 = l[match(ling.dom$l1, l$iso2),]$autotyp.area
+ling.dom$area2 = l[match(ling.dom$l2, l$iso2),]$autotyp.area
+ling.dom$area.group = paste(ling.dom$area1,
+                              ling.dom$area2)
+```
+
+Center the data:
+
+```{r}
+ling.dom$cult.dist.center = scale(ling.dom$cult.dist)
+ling.dom$rho.center = scale(ling.dom$rho)
+```
+
+## LMER models
+
+Test whether random slopes are warraneted for family:
+
+```{r}
+mD0 = lmer(
+  rho.center ~ 1 +
+    (1 | family.group) +
+    (1 | area.group) +
+    (1 | imputed_semantic_domain),
+  data = ling.dom)
+mD1 = lmer(
+  rho.center ~ 1 +
+    (1 | family.group) +
+    (0 + cult.dist.center | family.group) +
+    (1 | area.group) +
+    (1 | imputed_semantic_domain),
+  data = ling.dom)
+mD2 = lmer(
+  rho.center ~ 1 +
+    (1 + cult.dist.center | family.group) +
+    (1 | area.group) +
+    (1 | imputed_semantic_domain),
+  data = ling.dom)
+anova(mD0,mD1,mD2)
+```
+
+Random slopes for family improves the fit of the model, but adding the correlation coefficient does not.
+
+Test the same for area:
+
+```{r}
+mD3 = lmer(
+  rho.center ~ 1 +
+    (1 | family.group) +
+    (0 + cult.dist.center | family.group) +
+    (1 | area.group) +
+    (0 + cult.dist.center | area.group) +
+    (1 | imputed_semantic_domain),
+  data = ling.dom)
+anova(mD1,mD3)
+```
+
+Random slopes for area do not improve the fit of the model.
+
+```{r}
+mD4 = lmer(
+  rho.center ~ 1 +
+    (1 + cult.dist.center | family.group) +
+    (1 | area.group) +
+    (1 | imputed_semantic_domain),
+  data = ling.dom)
+```
+
+And, in fact, area random intercepts are all set to 0:
+```{r}
+ranef(mD4)$area.group
+```
+
+So we'll take them out.
+
+Now we test the main effect of cultural distance:
+
+```{r}
+mD5 = lmer(
+  rho.center ~ 1 +
+    (1 + cult.dist.center || family.group) +
+    (1 + cult.dist.center | imputed_semantic_domain),
+  data = ling.dom)
+mD6 = update(mD5, ~.+cult.dist.center)
+anova(mD5,mD6)
+```
+
+Summary of the final model, with random effects plot:
+
+```{r}
+summary(mD6)
+dotplot(ranef(mD6))
+```
+
+\newpage
+
+Plot the predicted relationships for each domain.  The domains in the legend are sorted by the slope for cultural distance (greatest negative slope to greatest positive slope):
+
+```{r}
+sjp.lmer(mD6,'eff', show.ci = T)
+dom.order = ranef(mD6)$imputed_semantic_domain
+dom.order = rownames(dom.order[order(dom.order$cult.dist.center),])
+px = sjp.lmer(mD6,'rs.ri', show.ci = T, prnt.plot = F)
+pdx = px$plot[[2]]$data
+pdx$Domain = factor(pdx$grp, levels = dom.order)
+pdx$x = pdx$x *
+  attr(ling.dom$cult.dist.center,"scaled:scale") +
+  attr(ling.dom$cult.dist.center,"scaled:center")
+pdx$y = pdx$y *
+  attr(ling.dom$rho.center,"scaled:scale") +
+  attr(ling.dom$rho.center,"scaled:center")
+ggplot(pdx,
+       aes(x,y,colour=Domain)) +
+  geom_line() +
+  xlab("Cultural Distance") +
+  ylab("Linguistic distance (rho)")
+
+```
+
+"Religion and beleif" seems to be working differently from the other domains.
+
+\newpage
 
 # Mantel tests
 
 Read the historical distances for Indo-European, based on the phylogenetic distances.
 
+## Data prep
+
+Load historical distances:
+
 ```{r}
 hist = read.csv("../data/trees/IndoEuropean_historical_distances.csv", stringsAsFactors = F)
+hist = hist[!duplicated(hist[,1]),!duplicated(hist[,1])]
 rownames(hist) = hist[,1]
 hist = hist[,2:ncol(hist)]
+hist.m = as.matrix(hist)
+colnames(hist.m) = rownames(hist.m)
+hist.m = hist.m/max(hist.m)
 ```
 
 Read the cultural distances as a matrix:
@@ -71,14 +350,35 @@ rownames(cult.m) = cult.m[,1]
 cult.m = cult.m[,2:ncol(cult.m)]
 ```
 
+Convert the linguistic distances to a matrix.  This uses `igraph` to make an undirected graph from the long format with `rho` as the edge weights, then output a matrix of adjacencies.
 
-## Indo-European
+```{r}
+grph <- graph.data.frame(ling[,c("l1",'l2','rho')], directed=FALSE)
+# add value as a weight attribute
+ling.m = get.adjacency(grph, attr="rho", sparse=FALSE)
+rownames(ling.m) = l[match(rownames(ling.m),l$iso2),]$Language2
+colnames(ling.m) = l[match(colnames(ling.m),l$iso2),]$Language2
+```
+
+Match the distance matrices
+
+```{r}
+in.analysis = intersect(rownames(ling.m),rownames(cult.m))
+in.analysis = intersect(in.analysis, rownames(hist.m))
+cult.m2 = cult.m[in.analysis,in.analysis]
+ling.m2 = ling.m[in.analysis,in.analysis]
+hist.m2 = hist.m[in.analysis,in.analysis]
+```
+
+Note that there are only `r length(in.analysis)` languages with data on lingusitic, cultural and historical distance.
+
+## Tests
 
 Simple correlation without control for history:
 
 ```{r}
-ecodist::mantel(as.dist(cult.m) ~
-                as.dist(ling),
+ecodist::mantel(as.dist(cult.m2) ~
+                as.dist(ling.m2),
                 nperm = 10000)
 ```
 
@@ -86,9 +386,9 @@ ecodist::mantel(as.dist(cult.m) ~
 Run a mantel test comparing the linguistic distances to the cultural distances, controlling for the historical distance between languages:
 
 ```{r}
-ecodist::mantel(as.dist(cult)~
-                  as.dist(ling) + 
-                  as.dist(t.dist),
+ecodist::mantel(as.dist(cult.m2)~
+                  as.dist(ling.m2) + 
+                  as.dist(hist.m2),
                 nperm = 10000)
 ```
 

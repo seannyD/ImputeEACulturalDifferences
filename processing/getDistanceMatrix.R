@@ -184,16 +184,16 @@ write.csv(longlong, "../results/EA_distances/All_Domains.csv", row.names = F)
 
 ####
 # Kinship full (all categorical variables)
-eadx.full = read.csv(filename, stringsAsFactors = F)
-eadx.full = as.data.frame(eadx.full)
-kinship.vars = eav$VarID[grepl("Kinship",eav$IndexCategory)]
-eadx.kinship = eadx.full[,names(eadx.full) %in% paste0("X",kinship.vars)]
-
-eadx.kinship =as.data.frame(apply(eadx.kinship,2,as.factor))
-distx = daisy(eadx.kinship,
-              metric = "gower")
-distx.m = as.matrix(distx)
-rownames(distx.m) = eadx.full$soc_id
-colnames(distx.m)= eadx.full$soc_id
-
-write.csv(distx.m, "../results/EA_distances/Kinship_AllSocieties.csv")
+# eadx.full = read.csv(filename, stringsAsFactors = F)
+# eadx.full = as.data.frame(eadx.full)
+# kinship.vars = eav$VarID[grepl("Kinship",eav$IndexCategory)]
+# eadx.kinship = eadx.full[,names(eadx.full) %in% paste0("X",kinship.vars)]
+# 
+# eadx.kinship =as.data.frame(apply(eadx.kinship,2,as.factor))
+# distx = daisy(eadx.kinship,
+#               metric = "gower")
+# distx.m = as.matrix(distx)
+# rownames(distx.m) = eadx.full$soc_id
+# colnames(distx.m)= eadx.full$soc_id
+# 
+# write.csv(distx.m, "../results/EA_distances/Kinship_AllSocieties.csv")
