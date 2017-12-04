@@ -306,6 +306,25 @@ ranef(mD4)$area.group
 
 So we'll take them out.
 
+Test random slopes for domain:
+
+```{r}
+mdom1 = lmer(
+  rho.center ~ 1 +
+    (1 +cult.dist.center| family.group) +
+    (1 | area.group) +
+    (1 | imputed_semantic_domain),
+  data = ling.dom)
+mdom2 = lmer(
+  rho.center ~ 1 +
+    (1 +cult.dist.center| family.group) +
+    (1 | area.group) +
+    (1 + cult.dist.center| imputed_semantic_domain),
+  data = ling.dom)
+anova(mdom1,mdom2)
+```
+
+
 Now we test the main effect of cultural distance:
 
 ```{r}
