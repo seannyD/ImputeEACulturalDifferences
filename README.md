@@ -8,11 +8,11 @@ We use the imputation package `mice` for R.  We can test the imputation by takin
 
 CART works by building a decision tree: an optimal set of yes-no questions to ask about predictor variables in order to guess the value of a target variable.  The tree divides the data into partitions which look similar.  The algorithm works out which partition a missing data point would belong to, then samples the target variable distribution from that partition.  To account for historical relationships, we included language family according to Glottolog and geographic area according to Autotyp as additional factors on which the imputation process could draw.
 
-We ran CART multiple imputation on the ethnographic atlas.  We excluded population size, one more variable that was coded for less than 33% of societies, and any societies that had fewer than 20 variables coded.  This left 95 variables for 677 languages with 11.9% missing data.
+We ran CART multiple imputation on the ethnographic atlas.  We excluded population size, one more variable that was coded for less than 33% of societies, and any societies that had fewer than 33% variables coded.  This left 92 variables for 962 languages with 16% missing data.
 
-CART imputation guessed the correct value of missing data 69% of the time on average for FAIR languages.  This is reasonably good, considering that most variables have between 4 and 8 possible values (median = 6).  For example, this is 12 standard deviations better than sampling randomly from the whole distribution of the target variable (accuracy = 38% on the same missing data).  This is not good enough to use in analyses that look at individual traits, but serves our purposes to estimate overall distances between 
+CART imputation guessed the correct value of missing data 74% of the time on average for the 15 FAIR languages where data was available.  This is reasonably good, considering that most variables have between 4 and 8 possible values (median = 6).  For example, this is 5.6 standard deviations better than sampling randomly from the whole distribution of the target variable (accuracy = 37% on the same missing data).  This is not good enough to use in analyses that look at individual traits, but serves our purposes to estimate overall distances between 
 
-We produced 50 imputation sets with the final settings.  These were then used to create distance matrices using gower distance between discrete traits (mean correlation between sets r = 0.96, estimates of distance vary by around 1.9% on average).
+We produced 50 imputation sets with the final settings.  These were then used to create distance matrices using gower distance between discrete traits (mean correlation between sets r = 0.94, estimates of distance vary by around 2% on average).
 
 The same was done for sub-domains of the data.  The file `data/Concepticon_to_EA.csv` shows the mapping between Concepticon domains and Ethnographic Atlas domains (which are categorised in D-PLACE).
 
@@ -33,6 +33,8 @@ The file `data/FAIR_langauges_glotto_xdid.csv` shows how the FAIR languages were
 `processing/getCompleteImputedDataframes.R`: Take the output of `mice` from above, and create full dataframes.  Saved to `data/EA_imputed/completeDataframes/*.csv`.
 
 `processing/getDistanceMatrix.R`:  Create distance matrices from the imputed datasets for FAIR languages.  Also produces distances for sub-sets of the variables and creates some graphs (hierarchical clustering, not as good as the splitstrees below).  Stored in `results/EA_distances/*.csv`
+
+`processing/combineCultAndLingDistances.R`: Combine the data from the cultural and linguistic data from different domains into a single long-form csv.  Outputs to `results/EA_distances/All_Domains.csv`.
 
 `processing/makeSplitstreeNexusFile.R`:  This creates a nexus file format for the distance matrix which can be read by splitstree.  Outputs to `results/splitstree/CulturalDistances_Kinship_AllSocieties.nex`.
 
