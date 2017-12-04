@@ -16,7 +16,13 @@ getAccuracy = function(f){
   # baseline
   baseline = replicate(100,getRandomBaseline(test.arrInd,eadx,eadx2))
   z = (accuracy - mean(baseline))/sd(baseline)
-  return(c(accuracy=accuracy, baseline=mean(baseline), z=z))} else{
+  
+  baseline2 = replicate(100,getRandomBaseline_totallyRandom(test.arrInd,eadx,eadx2))
+  z2 = (accuracy - mean(baseline2))/sd(baseline2)
+  
+  return(c(accuracy=accuracy, baseline=mean(baseline), z=z,
+         baseline2 = mean(baseline2), z2 = z2))
+  } else{
     print("Row numbers don't match")
   }
 }
@@ -32,6 +38,17 @@ getRandomBaseline = function(test.arrInd, eadx, eadx2){
   sum(randomBaseline == eadx[test.arrInd])/nrow(test.arrInd)
 }
 
+getRandomBaseline_totallyRandom = function(test.arrInd, eadx, eadx2){
+  # imputation by random sampling of set (no frequencies)
+  randomBaseline = 
+    sapply(test.arrInd[,2], function(X){
+      sx = eadx2[,X]
+      sx = sx[!is.na(sx)]
+      sample(unique(sx),1)
+    })
+  sum(randomBaseline == eadx[test.arrInd])/nrow(test.arrInd)
+}
+
 
 getFolderAccuracy = function(folder,prefix){
   accuracy.orig = sapply( 
@@ -42,7 +59,9 @@ getFolderAccuracy = function(folder,prefix){
   accuracy.orig = as.data.frame(t(accuracy.orig))
   return(c(mean(accuracy.orig$accuracy,na.rm=T),
           (mean(accuracy.orig$baseline,na.rm=T)),
-          (mean(accuracy.orig$z,na.rm=T))))
+          (mean(accuracy.orig$z,na.rm=T)),
+          (mean(accuracy.orig$baseline2,na.rm=T)),
+          (mean(accuracy.orig$z2,na.rm=T))))
 }
 
 ########################

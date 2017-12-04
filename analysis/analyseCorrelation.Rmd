@@ -76,13 +76,17 @@ cdc.c = attr(ling$cult.dist.center,"scaled:center")
 ling$cult.dist.center = as.numeric(ling$cult.dist.center)
 
 ling$family1 = l[match(ling$l1, l$iso2),]$family
-ling$area1 = l[match(ling$l1, l$iso2),]$autotyp.area
-
 ling$family2 = l[match(ling$l2, l$iso2),]$family
+ling$area1 = l[match(ling$l1, l$iso2),]$autotyp.area
 ling$area2 = l[match(ling$l2, l$iso2),]$autotyp.area
 
-ling$family.group = paste(ling$family1,ling$family2)
-ling$area.group = paste(ling$area1,ling$area2)
+
+fgroup = cbind(ling$family1,ling$family2)
+fgroup = apply(fgroup,1,sort)
+ling$family.group = apply(fgroup,2,paste,collapse=":")
+agroup = cbind(ling$area1,ling$area2)
+agroup = apply(agroup,1,sort)
+ling$area.group = apply(agroup,2,paste,collapse=":")
 
 ling$rho.center = scale(ling$rho)
 
@@ -145,7 +149,7 @@ gx$plot + coord_cartesian(ylim=c(0.1,0.6),
                           xlim=c(0.2,0.8))
 ```
 
-Plot the random effects.  There seems to be more variation by area:
+Plot the random effects:
 
 ```{r}
 sjp.lmer(m1,'re', sort.est = "cult.dist.center")
@@ -183,6 +187,26 @@ ggplot(dx,aes(x,y)) +
                   xlim=c(0.2,0.8))
 ```
 
+Note that the random slopes for family are set to 0.  We can check whether taking language family out makes a difference:
+
+```{r}
+m0b = lmer(
+  rho.center ~ 1 +
+    (1 + cult.dist.center | area.group),
+  data = ling
+)
+m1b = lmer(
+  rho.center ~ 1 +
+    cult.dist.center +
+    (1 + cult.dist.center | area.group),
+  data = ling
+)
+anova(m0b,m1b)
+summary(m1b)
+```
+
+The model is numerically almost exactly the same, so the p-value from the model comparison is just lower.
+
 
 \newpage
 
@@ -199,13 +223,19 @@ ling.dom = ling.dom[!is.na(ling.dom$cult.dist),]
 
 ling.dom$family1 = l[match(ling.dom$l1, l$iso2),]$family
 ling.dom$family2 = l[match(ling.dom$l2, l$iso2),]$family
-ling.dom$family.group = paste(ling.dom$family1,
-                              ling.dom$family2)
-
 ling.dom$area1 = l[match(ling.dom$l1, l$iso2),]$autotyp.area
 ling.dom$area2 = l[match(ling.dom$l2, l$iso2),]$autotyp.area
-ling.dom$area.group = paste(ling.dom$area1,
-                              ling.dom$area2)
+
+
+# Paste language family names together,
+# but order shouldn't matter, so sort first
+fgroup = cbind(ling.dom$family1,ling.dom$family2)
+fgroup = apply(fgroup,1,sort)
+ling.dom$family.group = apply(fgroup,2,paste,collapse=":")
+
+agroup = cbind(ling.dom$area1,ling.dom$area2)
+agroup = apply(agroup,1,sort)
+ling.dom$area.group = apply(agroup,2,paste,collapse=":")
 ```
 
 Center the data:

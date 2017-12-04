@@ -10,9 +10,9 @@ CART works by building a decision tree: an optimal set of yes-no questions to as
 
 We ran CART multiple imputation on the ethnographic atlas.  We excluded population size, one more variable that was coded for less than 33% of societies, and any societies that had fewer than 33% variables coded.  This left 92 variables for 962 languages with 16% missing data.
 
-CART imputation guessed the correct value of missing data 74% of the time on average for the 15 FAIR languages where data was available.  This is reasonably good, considering that most variables have between 4 and 8 possible values (median = 6).  For example, this is 5.6 standard deviations better than sampling randomly from the whole distribution of the target variable (accuracy = 37% on the same missing data).  This is not good enough to use in analyses that look at individual traits, but serves our purposes to estimate overall distances between 
+CART imputation guessed the correct value of missing data 74% of the time (average over 100 imputations) for the 15 FAIR languages where data was available.  This is reasonably good, considering that most variables have between 4 and 8 possible values (median = 6).  For example, this is 5.6 standard deviations better than sampling randomly from the whole distribution of the target variable (accuracy = 37% on the same missing data).  This is not good enough to use in analyses that look at individual traits, but serves our purposes to estimate overall distances between 
 
-We produced 50 imputation sets with the final settings.  These were then used to create distance matrices using gower distance between discrete traits (mean correlation between sets r = 0.94, estimates of distance vary by around 2% on average).
+We produced 100 imputation sets with the final settings.  These were then used to create distance matrices using gower distance between discrete traits (mean correlation between sets r = 0.94, estimates of distance vary by around 2% on average).
 
 The same was done for sub-domains of the data.  The file `data/Concepticon_to_EA.csv` shows the mapping between Concepticon domains and Ethnographic Atlas domains (which are categorised in D-PLACE).
 
