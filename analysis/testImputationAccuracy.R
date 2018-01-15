@@ -93,4 +93,4 @@ getFolderAccuracy("../results/imputationTests/testFAIR_tuned/","imputeTest_*")
 # Test on final 15 languages that can actually be analysed
 getFolderAccuracy("../results/imputationTests/testFAIR_15/","imputeTest_FAIR_15_*")
 # 100 reps
-# 0.7397059 0.3678412 5.6019036
+# 0.7397059 0.3676176 5.5958611 0.1856618 8.6267473
