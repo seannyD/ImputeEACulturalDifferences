@@ -6,7 +6,7 @@ setwd("~/Documents/Bristol/word2vec/word2vec_DPLACE/processing/")
 l = read.csv("../data/FAIR_langauges_glotto_xdid.csv", 
              stringsAsFactors = F)
 
-ling.domain = read.csv("../data/FAIR/semantic_distances_by_domain.csv", stringsAsFactors = F)
+ling.domain = read.csv("../data/FAIR/semantic_distances_by_domain_extended.csv", stringsAsFactors = F)
 ling.domain$cult.dist = NA
 
 ling.langs = unique(c(ling.domain$l1,

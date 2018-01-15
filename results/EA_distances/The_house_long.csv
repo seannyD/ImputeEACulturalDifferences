@@ -23,14 +23,17 @@
 "Wolof","Herero",0.640909090909091
 "Egyptian Arabic","Herero",0.752727272727272
 "Kabyle","Herero",0.73
+"Albanian","Herero",0.938181818181818
 "Latin","Herero",0.919999999999999
 "Neapolitan","Herero",0.874545454545454
 "Spanish","Herero",0.879999999999999
+"Greek","Herero",0.783636363636363
 "English","Herero",0.903636363636363
 "French","Herero",0.864545454545454
 "Dutch","Herero",0.889999999999999
 "Icelandic","Herero",0.822727272727272
 "Irish","Herero",0.769090909090909
+"Northern Sami","Herero",0.660909090909091
 "Serbian","Herero",0.889999999999999
 "Russian","Herero",0.847272727272726
 "Bashkir","Herero",0.787272727272727
@@ -38,12 +41,14 @@
 "Erzya","Herero",0.809090909090909
 "Estonian","Herero",0.771818181818181
 "Gagauz","Herero",0.818181818181818
+"Tatar","Herero",0.857272727272727
 "Latvian","Herero",0.785454545454545
 "Vepsian","Herero",0.807272727272726
 "Czech","Herero",0.771818181818182
 "Meadow Mari","Herero",0.752727272727273
 "Bulgarian","Herero",0.749090909090909
 "Belarusian","Herero",0.779090909090909
+"Ukrainian","Herero",0.757272727272727
 "Hungarian","Herero",0.761818181818181
 "Lithuanian","Herero",0.748181818181818
 "Kalmyk","Herero",0.646363636363636
@@ -87,6 +92,7 @@
 "Hawaiian","Herero",0.889090909090908
 "Tahitian","Herero",0.755454545454545
 "Inupiak","Herero",0.665454545454545
+"Greenlandic","Herero",0.748181818181818
 "Cheyenne","Herero",0.456363636363637
 "Choctaw","Herero",0.612727272727272
 "Muscogee","Herero",0.677272727272727
@@ -119,14 +125,17 @@
 "Wolof","Zulu",0.54
 "Egyptian Arabic","Zulu",0.736363636363637
 "Kabyle","Zulu",0.712727272727273
+"Albanian","Zulu",0.848181818181818
 "Latin","Zulu",0.835454545454545
 "Neapolitan","Zulu",0.872727272727272
 "Spanish","Zulu",0.869090909090908
+"Greek","Zulu",0.768181818181818
 "English","Zulu",0.884545454545454
 "French","Zulu",0.851818181818181
 "Dutch","Zulu",0.884545454545454
 "Icelandic","Zulu",0.80090909090909
 "Irish","Zulu",0.575454545454545
+"Northern Sami","Zulu",0.744545454545454
 "Serbian","Zulu",0.867272727272727
 "Russian","Zulu",0.756363636363636
 "Bashkir","Zulu",0.759090909090909
@@ -134,12 +143,14 @@
 "Erzya","Zulu",0.789090909090909
 "Estonian","Zulu",0.577272727272727
 "Gagauz","Zulu",0.72
+"Tatar","Zulu",0.773636363636363
 "Latvian","Zulu",0.689090909090909
 "Vepsian","Zulu",0.773636363636363
 "Czech","Zulu",0.746363636363636
 "Meadow Mari","Zulu",0.629999999999999
 "Bulgarian","Zulu",0.733636363636363
 "Belarusian","Zulu",0.672727272727272
+"Ukrainian","Zulu",0.699090909090909
 "Hungarian","Zulu",0.708181818181818
 "Lithuanian","Zulu",0.713636363636364
 "Kalmyk","Zulu",0.640909090909091
@@ -183,6 +194,7 @@
 "Hawaiian","Zulu",0.788181818181818
 "Tahitian","Zulu",0.643636363636363
 "Inupiak","Zulu",0.656363636363636
+"Greenlandic","Zulu",0.758181818181818
 "Cheyenne","Zulu",0.539090909090909
 "Choctaw","Zulu",0.492727272727273
 "Muscogee","Zulu",0.598181818181818
@@ -215,14 +227,17 @@
 "Wolof","Tswana",0.447272727272727
 "Egyptian Arabic","Tswana",0.729090909090909
 "Kabyle","Tswana",0.71090909090909
+"Albanian","Tswana",0.933636363636363
 "Latin","Tswana",0.836363636363636
 "Neapolitan","Tswana",0.768181818181818
 "Spanish","Tswana",0.853636363636363
+"Greek","Tswana",0.765454545454545
 "English","Tswana",0.804545454545454
 "French","Tswana",0.864545454545454
 "Dutch","Tswana",0.888181818181817
 "Icelandic","Tswana",0.822727272727272
 "Irish","Tswana",0.675454545454545
+"Northern Sami","Tswana",0.761818181818182
 "Serbian","Tswana",0.779090909090909
 "Russian","Tswana",0.753636363636363
 "Bashkir","Tswana",0.773636363636364
@@ -230,12 +245,14 @@
 "Erzya","Tswana",0.771818181818182
 "Estonian","Tswana",0.668181818181818
 "Gagauz","Tswana",0.716363636363636
+"Tatar","Tswana",0.759090909090909
 "Latvian","Tswana",0.767272727272727
 "Vepsian","Tswana",0.789090909090909
 "Czech","Tswana",0.734545454545454
 "Meadow Mari","Tswana",0.636363636363636
 "Bulgarian","Tswana",0.626363636363636
 "Belarusian","Tswana",0.668181818181818
+"Ukrainian","Tswana",0.684545454545454
 "Hungarian","Tswana",0.688181818181818
 "Lithuanian","Tswana",0.717272727272727
 "Kalmyk","Tswana",0.628181818181818
@@ -279,6 +296,7 @@
 "Hawaiian","Tswana",0.785454545454545
 "Tahitian","Tswana",0.66
 "Inupiak","Tswana",0.668181818181818
+"Greenlandic","Tswana",0.757272727272727
 "Cheyenne","Tswana",0.561818181818181
 "Choctaw","Tswana",0.504545454545455
 "Muscogee","Tswana",0.641818181818181
@@ -311,14 +329,17 @@
 "Wolof","Shona",0.444545454545454
 "Egyptian Arabic","Shona",0.72
 "Kabyle","Shona",0.653636363636363
+"Albanian","Shona",0.906363636363636
 "Latin","Shona",0.829090909090908
 "Neapolitan","Shona",0.859090909090908
 "Spanish","Shona",0.856363636363636
+"Greek","Shona",0.754545454545454
 "English","Shona",0.866363636363636
 "French","Shona",0.864545454545454
 "Dutch","Shona",0.867272727272727
 "Icelandic","Shona",0.815454545454545
 "Irish","Shona",0.656363636363636
+"Northern Sami","Shona",0.749090909090909
 "Serbian","Shona",0.802727272727273
 "Russian","Shona",0.723636363636363
 "Bashkir","Shona",0.775454545454545
@@ -326,12 +347,14 @@
 "Erzya","Shona",0.763636363636363
 "Estonian","Shona",0.644545454545454
 "Gagauz","Shona",0.657272727272727
+"Tatar","Shona",0.737272727272727
 "Latvian","Shona",0.752727272727272
 "Vepsian","Shona",0.763636363636363
 "Czech","Shona",0.728181818181818
 "Meadow Mari","Shona",0.529090909090909
 "Bulgarian","Shona",0.700909090909091
 "Belarusian","Shona",0.661818181818181
+"Ukrainian","Shona",0.682727272727272
 "Hungarian","Shona",0.697272727272727
 "Lithuanian","Shona",0.714545454545454
 "Kalmyk","Shona",0.628181818181818
@@ -375,6 +398,7 @@
 "Hawaiian","Shona",0.774545454545454
 "Tahitian","Shona",0.652727272727272
 "Inupiak","Shona",0.679090909090909
+"Greenlandic","Shona",0.735454545454545
 "Cheyenne","Shona",0.57090909090909
 "Choctaw","Shona",0.440909090909091
 "Muscogee","Shona",0.610909090909091
@@ -407,14 +431,17 @@
 "Wolof","Ndonga",0.453636363636364
 "Egyptian Arabic","Ndonga",0.729090909090909
 "Kabyle","Ndonga",0.708181818181818
+"Albanian","Ndonga",0.733636363636364
 "Latin","Ndonga",0.842727272727272
 "Neapolitan","Ndonga",0.839090909090909
 "Spanish","Ndonga",0.839090909090908
+"Greek","Ndonga",0.754545454545454
 "English","Ndonga",0.776363636363636
 "French","Ndonga",0.748181818181818
 "Dutch","Ndonga",0.877272727272727
 "Icelandic","Ndonga",0.811818181818181
 "Irish","Ndonga",0.573636363636363
+"Northern Sami","Ndonga",0.752727272727272
 "Serbian","Ndonga",0.872727272727272
 "Russian","Ndonga",0.623636363636363
 "Bashkir","Ndonga",0.702727272727273
@@ -422,12 +449,14 @@
 "Erzya","Ndonga",0.667272727272727
 "Estonian","Ndonga",0.48
 "Gagauz","Ndonga",0.717272727272727
+"Tatar","Ndonga",0.628181818181818
 "Latvian","Ndonga",0.544545454545454
 "Vepsian","Ndonga",0.653636363636363
 "Czech","Ndonga",0.682727272727272
 "Meadow Mari","Ndonga",0.539090909090909
 "Bulgarian","Ndonga",0.714545454545455
 "Belarusian","Ndonga",0.564545454545454
+"Ukrainian","Ndonga",0.653636363636363
 "Hungarian","Ndonga",0.683636363636363
 "Lithuanian","Ndonga",0.666363636363636
 "Kalmyk","Ndonga",0.648181818181818
@@ -471,6 +500,7 @@
 "Hawaiian","Ndonga",0.760909090909091
 "Tahitian","Ndonga",0.663636363636363
 "Inupiak","Ndonga",0.678181818181818
+"Greenlandic","Ndonga",0.642727272727272
 "Cheyenne","Ndonga",0.558181818181818
 "Choctaw","Ndonga",0.384545454545455
 "Muscogee","Ndonga",0.687272727272727
@@ -503,14 +533,17 @@
 "Wolof","Swati",0.512727272727273
 "Egyptian Arabic","Swati",0.729090909090909
 "Kabyle","Swati",0.700909090909091
+"Albanian","Swati",1
 "Latin","Swati",0.844545454545454
 "Neapolitan","Swati",0.909090909090908
 "Spanish","Swati",0.873636363636363
+"Greek","Swati",0.787272727272727
 "English","Swati",0.91090909090909
 "French","Swati",0.88090909090909
 "Dutch","Swati",0.904545454545454
 "Icelandic","Swati",0.809090909090909
 "Irish","Swati",0.695454545454545
+"Northern Sami","Swati",0.723636363636363
 "Serbian","Swati",0.881818181818181
 "Russian","Swati",0.818181818181818
 "Bashkir","Swati",0.727272727272728
@@ -518,12 +551,14 @@
 "Erzya","Swati",0.818181818181818
 "Estonian","Swati",0.681818181818181
 "Gagauz","Swati",0.727272727272728
+"Tatar","Swati",0.818181818181818
 "Latvian","Swati",0.818181818181818
 "Vepsian","Swati",0.818181818181818
 "Czech","Swati",0.753636363636363
 "Meadow Mari","Swati",0.541818181818182
 "Bulgarian","Swati",0.747272727272727
 "Belarusian","Swati",0.679090909090909
+"Ukrainian","Swati",0.701818181818182
 "Hungarian","Swati",0.717272727272727
 "Lithuanian","Swati",0.733636363636364
 "Kalmyk","Swati",0.626363636363636
@@ -567,6 +602,7 @@
 "Hawaiian","Swati",0.818181818181818
 "Tahitian","Swati",0.65090909090909
 "Inupiak","Swati",0.636363636363635
+"Greenlandic","Swati",0.818181818181818
 "Cheyenne","Swati",0.511818181818182
 "Choctaw","Swati",0.614545454545454
 "Muscogee","Swati",0.454545454545454
@@ -599,14 +635,17 @@
 "Wolof","Tsonga",0.333636363636364
 "Egyptian Arabic","Tsonga",0.619999999999999
 "Kabyle","Tsonga",0.514545454545455
+"Albanian","Tsonga",0.908181818181817
 "Latin","Tsonga",0.742727272727273
 "Neapolitan","Tsonga",0.847272727272727
 "Spanish","Tsonga",0.746363636363636
+"Greek","Tsonga",0.640909090909091
 "English","Tsonga",0.859999999999999
 "French","Tsonga",0.747272727272727
 "Dutch","Tsonga",0.759090909090909
 "Icelandic","Tsonga",0.703636363636364
 "Irish","Tsonga",0.645454545454545
+"Northern Sami","Tsonga",0.763636363636364
 "Serbian","Tsonga",0.758181818181817
 "Russian","Tsonga",0.633636363636363
 "Bashkir","Tsonga",0.699090909090909
@@ -614,12 +653,14 @@
 "Erzya","Tsonga",0.659090909090909
 "Estonian","Tsonga",0.638181818181818
 "Gagauz","Tsonga",0.513636363636364
+"Tatar","Tsonga",0.647272727272727
 "Latvian","Tsonga",0.741818181818181
 "Vepsian","Tsonga",0.649090909090909
 "Czech","Tsonga",0.610909090909091
 "Meadow Mari","Tsonga",0.62
 "Bulgarian","Tsonga",0.626363636363636
 "Belarusian","Tsonga",0.553636363636363
+"Ukrainian","Tsonga",0.561818181818182
 "Hungarian","Tsonga",0.582727272727273
 "Lithuanian","Tsonga",0.597272727272727
 "Kalmyk","Tsonga",0.641818181818181
@@ -663,6 +704,7 @@
 "Hawaiian","Tsonga",0.661818181818181
 "Tahitian","Tsonga",0.550909090909091
 "Inupiak","Tsonga",0.685454545454545
+"Greenlandic","Tsonga",0.724545454545454
 "Cheyenne","Tsonga",0.566363636363636
 "Choctaw","Tsonga",0.366363636363636
 "Muscogee","Tsonga",0.450909090909091
@@ -695,14 +737,17 @@
 "Wolof","Venda",0.351818181818182
 "Egyptian Arabic","Venda",0.637272727272727
 "Kabyle","Venda",0.522727272727273
+"Albanian","Venda",0.913636363636363
 "Latin","Venda",0.745454545454546
 "Neapolitan","Venda",0.827272727272726
 "Spanish","Venda",0.749090909090909
+"Greek","Venda",0.663636363636363
 "English","Venda",0.859999999999999
 "French","Venda",0.771818181818182
 "Dutch","Venda",0.779090909090909
 "Icelandic","Venda",0.722727272727273
 "Irish","Venda",0.660909090909091
+"Northern Sami","Venda",0.757272727272727
 "Serbian","Venda",0.768181818181818
 "Russian","Venda",0.647272727272726
 "Bashkir","Venda",0.705454545454545
@@ -710,12 +755,14 @@
 "Erzya","Venda",0.672727272727273
 "Estonian","Venda",0.662727272727272
 "Gagauz","Venda",0.5
+"Tatar","Venda",0.653636363636363
 "Latvian","Venda",0.75
 "Vepsian","Venda",0.673636363636363
 "Czech","Venda",0.627272727272727
 "Meadow Mari","Venda",0.626363636363636
 "Bulgarian","Venda",0.639999999999999
 "Belarusian","Venda",0.573636363636363
+"Ukrainian","Venda",0.589090909090909
 "Hungarian","Venda",0.594545454545454
 "Lithuanian","Venda",0.601818181818181
 "Kalmyk","Venda",0.637272727272727
@@ -759,6 +806,7 @@
 "Hawaiian","Venda",0.67
 "Tahitian","Venda",0.57
 "Inupiak","Venda",0.69
+"Greenlandic","Venda",0.740909090909091
 "Cheyenne","Venda",0.571818181818181
 "Choctaw","Venda",0.386363636363636
 "Muscogee","Venda",0.471818181818182
@@ -791,14 +839,17 @@
 "Wolof","Kongo",0.516363636363637
 "Egyptian Arabic","Kongo",0.588181818181818
 "Kabyle","Kongo",0.483636363636364
+"Albanian","Kongo",0.636363636363635
 "Latin","Kongo",0.587272727272727
 "Neapolitan","Kongo",0.818181818181818
 "Spanish","Kongo",0.560909090909091
+"Greek","Kongo",0.560909090909091
 "English","Kongo",0.641818181818182
 "French","Kongo",0.547272727272727
 "Dutch","Kongo",0.56
 "Icelandic","Kongo",0.577272727272727
 "Irish","Kongo",0.480909090909091
+"Northern Sami","Kongo",0.627272727272727
 "Serbian","Kongo",0.845454545454545
 "Russian","Kongo",0.454545454545454
 "Bashkir","Kongo",0.636363636363635
@@ -806,12 +857,14 @@
 "Erzya","Kongo",0.545454545454546
 "Estonian","Kongo",0.580909090909091
 "Gagauz","Kongo",0.545454545454546
+"Tatar","Kongo",0.454545454545454
 "Latvian","Kongo",0.636363636363635
 "Vepsian","Kongo",0.454545454545454
 "Czech","Kongo",0.473636363636364
 "Meadow Mari","Kongo",0.468181818181818
 "Bulgarian","Kongo",0.540909090909091
 "Belarusian","Kongo",0.379090909090909
+"Ukrainian","Kongo",0.458181818181818
 "Hungarian","Kongo",0.473636363636364
 "Lithuanian","Kongo",0.475454545454545
 "Kalmyk","Kongo",0.796363636363636
@@ -855,6 +908,7 @@
 "Hawaiian","Kongo",0.454545454545454
 "Tahitian","Kongo",0.33
 "Inupiak","Kongo",0.909090909090908
+"Greenlandic","Kongo",0.545454545454546
 "Cheyenne","Kongo",0.839090909090908
 "Choctaw","Kongo",0.627272727272726
 "Muscogee","Kongo",0.545454545454546
@@ -887,14 +941,17 @@
 "Wolof","Tumbuka",0.353636363636364
 "Egyptian Arabic","Tumbuka",0.645454545454545
 "Kabyle","Tumbuka",0.562727272727273
+"Albanian","Tumbuka",0.908181818181817
 "Latin","Tumbuka",0.732727272727273
 "Neapolitan","Tumbuka",0.855454545454544
 "Spanish","Tumbuka",0.756363636363636
+"Greek","Tumbuka",0.666363636363636
 "English","Tumbuka",0.857272727272727
 "French","Tumbuka",0.753636363636363
 "Dutch","Tumbuka",0.78
 "Icelandic","Tumbuka",0.711818181818182
 "Irish","Tumbuka",0.655454545454545
+"Northern Sami","Tumbuka",0.748181818181818
 "Serbian","Tumbuka",0.828181818181817
 "Russian","Tumbuka",0.629999999999999
 "Bashkir","Tumbuka",0.695454545454546
@@ -902,12 +959,14 @@
 "Erzya","Tumbuka",0.671818181818182
 "Estonian","Tumbuka",0.652727272727272
 "Gagauz","Tumbuka",0.573636363636363
+"Tatar","Tumbuka",0.654545454545454
 "Latvian","Tumbuka",0.756363636363637
 "Vepsian","Tumbuka",0.657272727272727
 "Czech","Tumbuka",0.620909090909091
 "Meadow Mari","Tumbuka",0.633636363636363
 "Bulgarian","Tumbuka",0.593636363636363
 "Belarusian","Tumbuka",0.555454545454545
+"Ukrainian","Tumbuka",0.587272727272727
 "Hungarian","Tumbuka",0.590909090909091
 "Lithuanian","Tumbuka",0.608181818181818
 "Kalmyk","Tumbuka",0.626363636363636
@@ -951,6 +1010,7 @@
 "Hawaiian","Tumbuka",0.675454545454545
 "Tahitian","Tumbuka",0.543636363636363
 "Inupiak","Tumbuka",0.684545454545455
+"Greenlandic","Tumbuka",0.732727272727273
 "Cheyenne","Tumbuka",0.556363636363636
 "Choctaw","Tumbuka",0.429090909090909
 "Muscogee","Tumbuka",0.516363636363636
@@ -983,14 +1043,17 @@
 "Wolof","Kikuyu",0.603636363636363
 "Egyptian Arabic","Kikuyu",0.292727272727273
 "Kabyle","Kikuyu",0.518181818181818
+"Albanian","Kikuyu",0.909090909090908
 "Latin","Kikuyu",0.637272727272727
 "Neapolitan","Kikuyu",0.654545454545453
 "Spanish","Kikuyu",0.619090909090909
+"Greek","Kikuyu",0.532727272727273
 "English","Kikuyu",0.819999999999999
 "French","Kikuyu",0.699090909090909
 "Dutch","Kikuyu",0.65
 "Icelandic","Kikuyu",0.554545454545454
 "Irish","Kikuyu",0.622727272727272
+"Northern Sami","Kikuyu",0.626363636363636
 "Serbian","Kikuyu",0.88090909090909
 "Russian","Kikuyu",0.727272727272728
 "Bashkir","Kikuyu",0.545454545454546
@@ -998,12 +1061,14 @@
 "Erzya","Kikuyu",0.636363636363635
 "Estonian","Kikuyu",0.681818181818181
 "Gagauz","Kikuyu",0.635454545454544
+"Tatar","Kikuyu",0.727272727272728
 "Latvian","Kikuyu",0.727272727272728
 "Vepsian","Kikuyu",0.636363636363635
 "Czech","Kikuyu",0.537272727272727
 "Meadow Mari","Kikuyu",0.632727272727272
 "Bulgarian","Kikuyu",0.554545454545454
 "Belarusian","Kikuyu",0.588181818181818
+"Ukrainian","Kikuyu",0.533636363636364
 "Hungarian","Kikuyu",0.535454545454545
 "Lithuanian","Kikuyu",0.533636363636364
 "Kalmyk","Kikuyu",0.710909090909091
@@ -1047,6 +1112,7 @@
 "Hawaiian","Kikuyu",0.727272727272728
 "Tahitian","Kikuyu",0.56
 "Inupiak","Kikuyu",0.727272727272728
+"Greenlandic","Kikuyu",0.727272727272728
 "Cheyenne","Kikuyu",0.693636363636363
 "Choctaw","Kikuyu",0.704545454545454
 "Muscogee","Kikuyu",0.271818181818182
@@ -1079,14 +1145,17 @@
 "Wolof","Luganda",0.449090909090909
 "Egyptian Arabic","Luganda",0.630909090909091
 "Kabyle","Luganda",0.624545454545454
+"Albanian","Luganda",0.919090909090908
 "Latin","Luganda",0.732727272727273
 "Neapolitan","Luganda",0.858181818181817
 "Spanish","Luganda",0.743636363636363
+"Greek","Luganda",0.66
 "English","Luganda",0.869090909090909
 "French","Luganda",0.771818181818182
 "Dutch","Luganda",0.780909090909091
 "Icelandic","Luganda",0.727272727272727
 "Irish","Luganda",0.65090909090909
+"Northern Sami","Luganda",0.752727272727273
 "Serbian","Luganda",0.866363636363636
 "Russian","Luganda",0.651818181818181
 "Bashkir","Luganda",0.685454545454545
@@ -1094,12 +1163,14 @@
 "Erzya","Luganda",0.679090909090909
 "Estonian","Luganda",0.649999999999999
 "Gagauz","Luganda",0.634545454545454
+"Tatar","Luganda",0.673636363636363
 "Latvian","Luganda",0.77
 "Vepsian","Luganda",0.664545454545454
 "Czech","Luganda",0.626363636363636
 "Meadow Mari","Luganda",0.629090909090909
 "Bulgarian","Luganda",0.624545454545454
 "Belarusian","Luganda",0.561818181818182
+"Ukrainian","Luganda",0.599090909090909
 "Hungarian","Luganda",0.605454545454545
 "Lithuanian","Luganda",0.609090909090909
 "Kalmyk","Luganda",0.644545454545454
@@ -1143,6 +1214,7 @@
 "Hawaiian","Luganda",0.677272727272727
 "Tahitian","Luganda",0.550909090909091
 "Inupiak","Luganda",0.677272727272727
+"Greenlandic","Luganda",0.746363636363636
 "Cheyenne","Luganda",0.542727272727272
 "Choctaw","Luganda",0.564545454545454
 "Muscogee","Luganda",0.520909090909091
@@ -1175,14 +1247,17 @@
 "Wolof","Kinyarwanda",0.538181818181818
 "Egyptian Arabic","Kinyarwanda",0.751818181818181
 "Kabyle","Kinyarwanda",0.720909090909091
+"Albanian","Kinyarwanda",0.827272727272726
 "Latin","Kinyarwanda",0.842727272727272
 "Neapolitan","Kinyarwanda",0.859999999999999
 "Spanish","Kinyarwanda",0.867272727272726
+"Greek","Kinyarwanda",0.776363636363636
 "English","Kinyarwanda",0.879090909090908
 "French","Kinyarwanda",0.875454545454545
 "Dutch","Kinyarwanda",0.88090909090909
 "Icelandic","Kinyarwanda",0.82090909090909
 "Irish","Kinyarwanda",0.591818181818181
+"Northern Sami","Kinyarwanda",0.763636363636364
 "Serbian","Kinyarwanda",0.88090909090909
 "Russian","Kinyarwanda",0.739090909090908
 "Bashkir","Kinyarwanda",0.785454545454546
@@ -1190,12 +1265,14 @@
 "Erzya","Kinyarwanda",0.801818181818181
 "Estonian","Kinyarwanda",0.57090909090909
 "Gagauz","Kinyarwanda",0.698181818181818
+"Tatar","Kinyarwanda",0.76
 "Latvian","Kinyarwanda",0.689090909090909
 "Vepsian","Kinyarwanda",0.786363636363635
 "Czech","Kinyarwanda",0.740909090909091
 "Meadow Mari","Kinyarwanda",0.657272727272727
 "Bulgarian","Kinyarwanda",0.742727272727273
 "Belarusian","Kinyarwanda",0.665454545454545
+"Ukrainian","Kinyarwanda",0.686363636363636
 "Hungarian","Kinyarwanda",0.704545454545455
 "Lithuanian","Kinyarwanda",0.726363636363636
 "Kalmyk","Kinyarwanda",0.644545454545454
@@ -1239,6 +1316,7 @@
 "Hawaiian","Kinyarwanda",0.783636363636363
 "Tahitian","Kinyarwanda",0.654545454545454
 "Inupiak","Kinyarwanda",0.673636363636363
+"Greenlandic","Kinyarwanda",0.754545454545454
 "Cheyenne","Kinyarwanda",0.573636363636363
 "Choctaw","Kinyarwanda",0.503636363636364
 "Muscogee","Kinyarwanda",0.64
@@ -1271,14 +1349,17 @@
 "Wolof","Lingala",0.516363636363636
 "Egyptian Arabic","Lingala",0.586363636363636
 "Kabyle","Lingala",0.48
+"Albanian","Lingala",0.636363636363635
 "Latin","Lingala",0.581818181818181
 "Neapolitan","Lingala",0.818181818181818
 "Spanish","Lingala",0.559090909090909
+"Greek","Lingala",0.556363636363636
 "English","Lingala",0.64
 "French","Lingala",0.547272727272727
 "Dutch","Lingala",0.555454545454545
 "Icelandic","Lingala",0.577272727272727
 "Irish","Lingala",0.479090909090909
+"Northern Sami","Lingala",0.629999999999999
 "Serbian","Lingala",0.843636363636363
 "Russian","Lingala",0.454545454545454
 "Bashkir","Lingala",0.636363636363635
@@ -1286,12 +1367,14 @@
 "Erzya","Lingala",0.545454545454546
 "Estonian","Lingala",0.581818181818182
 "Gagauz","Lingala",0.545454545454546
+"Tatar","Lingala",0.454545454545454
 "Latvian","Lingala",0.636363636363635
 "Vepsian","Lingala",0.454545454545454
 "Czech","Lingala",0.47
 "Meadow Mari","Lingala",0.469090909090909
 "Bulgarian","Lingala",0.538181818181818
 "Belarusian","Lingala",0.384545454545455
+"Ukrainian","Lingala",0.457272727272727
 "Hungarian","Lingala",0.477272727272727
 "Lithuanian","Lingala",0.475454545454546
 "Kalmyk","Lingala",0.8
@@ -1335,6 +1418,7 @@
 "Hawaiian","Lingala",0.454545454545454
 "Tahitian","Lingala",0.332727272727273
 "Inupiak","Lingala",0.909090909090908
+"Greenlandic","Lingala",0.545454545454546
 "Cheyenne","Lingala",0.839090909090908
 "Choctaw","Lingala",0.632727272727271
 "Muscogee","Lingala",0.545454545454546
@@ -1367,14 +1451,17 @@
 "Wolof","Kirundi",0.532727272727273
 "Egyptian Arabic","Kirundi",0.729090909090909
 "Kabyle","Kirundi",0.713636363636363
+"Albanian","Kirundi",0.817272727272727
 "Latin","Kirundi",0.83
 "Neapolitan","Kirundi",0.857272727272727
 "Spanish","Kirundi",0.851818181818181
+"Greek","Kirundi",0.763636363636363
 "English","Kirundi",0.867272727272727
 "French","Kirundi",0.851818181818181
 "Dutch","Kirundi",0.873636363636363
 "Icelandic","Kirundi",0.808181818181818
 "Irish","Kirundi",0.576363636363636
+"Northern Sami","Kirundi",0.77
 "Serbian","Kirundi",0.878181818181817
 "Russian","Kirundi",0.739090909090909
 "Bashkir","Kirundi",0.781818181818182
@@ -1382,12 +1469,14 @@
 "Erzya","Kirundi",0.787272727272727
 "Estonian","Kirundi",0.564545454545454
 "Gagauz","Kirundi",0.721818181818182
+"Tatar","Kirundi",0.753636363636364
 "Latvian","Kirundi",0.68
 "Vepsian","Kirundi",0.78
 "Czech","Kirundi",0.729090909090909
 "Meadow Mari","Kirundi",0.640909090909091
 "Bulgarian","Kirundi",0.724545454545455
 "Belarusian","Kirundi",0.670909090909091
+"Ukrainian","Kirundi",0.701818181818181
 "Hungarian","Kirundi",0.693636363636364
 "Lithuanian","Kirundi",0.714545454545454
 "Kalmyk","Kirundi",0.659090909090909
@@ -1431,6 +1520,7 @@
 "Hawaiian","Kirundi",0.77
 "Tahitian","Kirundi",0.658181818181818
 "Inupiak","Kirundi",0.678181818181818
+"Greenlandic","Kirundi",0.755454545454545
 "Cheyenne","Kirundi",0.556363636363636
 "Choctaw","Kirundi",0.495454545454546
 "Muscogee","Kirundi",0.644545454545454
@@ -1463,14 +1553,17 @@
 "Wolof","Igbo",0.624545454545454
 "Egyptian Arabic","Igbo",0.63090909090909
 "Kabyle","Igbo",0.430909090909091
+"Albanian","Igbo",0.732727272727273
 "Latin","Igbo",0.685454545454545
 "Neapolitan","Igbo",0.762727272727273
 "Spanish","Igbo",0.670909090909091
+"Greek","Igbo",0.665454545454545
 "English","Igbo",0.701818181818182
 "French","Igbo",0.664545454545454
 "Dutch","Igbo",0.687272727272727
 "Icelandic","Igbo",0.629090909090908
 "Irish","Igbo",0.487272727272727
+"Northern Sami","Igbo",0.565454545454545
 "Serbian","Igbo",0.782727272727272
 "Russian","Igbo",0.648181818181818
 "Bashkir","Igbo",0.608181818181818
@@ -1478,12 +1571,14 @@
 "Erzya","Igbo",0.579090909090909
 "Estonian","Igbo",0.575454545454545
 "Gagauz","Igbo",0.542727272727273
+"Tatar","Igbo",0.549090909090909
 "Latvian","Igbo",0.565454545454545
 "Vepsian","Igbo",0.588181818181818
 "Czech","Igbo",0.571818181818182
 "Meadow Mari","Igbo",0.331818181818182
 "Bulgarian","Igbo",0.641818181818181
 "Belarusian","Igbo",0.48
+"Ukrainian","Igbo",0.529090909090909
 "Hungarian","Igbo",0.575454545454545
 "Lithuanian","Igbo",0.567272727272727
 "Kalmyk","Igbo",0.731818181818181
@@ -1527,6 +1622,7 @@
 "Hawaiian","Igbo",0.556363636363636
 "Tahitian","Igbo",0.463636363636364
 "Inupiak","Igbo",0.775454545454546
+"Greenlandic","Igbo",0.57
 "Cheyenne","Igbo",0.750909090909091
 "Choctaw","Igbo",0.579090909090909
 "Muscogee","Igbo",0.38
@@ -1559,14 +1655,17 @@
 "Wolof","Bambara",0.590909090909091
 "Egyptian Arabic","Bambara",0.429090909090909
 "Kabyle","Bambara",0.623636363636363
+"Albanian","Bambara",1
 "Latin","Bambara",0.780909090909091
 "Neapolitan","Bambara",0.818181818181818
 "Spanish","Bambara",0.759090909090909
+"Greek","Bambara",0.686363636363636
 "English","Bambara",0.903636363636363
 "French","Bambara",0.786363636363636
 "Dutch","Bambara",0.792727272727273
 "Icelandic","Bambara",0.705454545454545
 "Irish","Bambara",0.769090909090909
+"Northern Sami","Bambara",0.723636363636363
 "Serbian","Bambara",0.796363636363636
 "Russian","Bambara",0.818181818181818
 "Bashkir","Bambara",0.636363636363635
@@ -1574,12 +1673,14 @@
 "Erzya","Bambara",0.636363636363635
 "Estonian","Bambara",0.759090909090909
 "Gagauz","Bambara",0.818181818181818
+"Tatar","Bambara",0.818181818181818
 "Latvian","Bambara",0.818181818181818
 "Vepsian","Bambara",0.727272727272728
 "Czech","Bambara",0.639090909090909
 "Meadow Mari","Bambara",0.721818181818182
 "Bulgarian","Bambara",0.522727272727272
 "Belarusian","Bambara",0.67090909090909
+"Ukrainian","Bambara",0.63
 "Hungarian","Bambara",0.618181818181818
 "Lithuanian","Bambara",0.623636363636363
 "Kalmyk","Bambara",0.703636363636364
@@ -1623,6 +1724,7 @@
 "Hawaiian","Bambara",0.818181818181818
 "Tahitian","Bambara",0.648181818181818
 "Inupiak","Bambara",0.727272727272728
+"Greenlandic","Bambara",0.818181818181818
 "Cheyenne","Bambara",0.686363636363636
 "Choctaw","Bambara",0.715454545454545
 "Muscogee","Bambara",0.454545454545454
@@ -1655,14 +1757,17 @@
 "Wolof","Tigrinya",0.36
 "Egyptian Arabic","Tigrinya",0.615454545454545
 "Kabyle","Tigrinya",0.632727272727272
+"Albanian","Tigrinya",0.901818181818181
 "Latin","Tigrinya",0.735454545454546
 "Neapolitan","Tigrinya",0.83
 "Spanish","Tigrinya",0.750909090909091
+"Greek","Tigrinya",0.650909090909091
 "English","Tigrinya",0.876363636363636
 "French","Tigrinya",0.768181818181818
 "Dutch","Tigrinya",0.779090909090909
 "Icelandic","Tigrinya",0.721818181818182
 "Irish","Tigrinya",0.654545454545454
+"Northern Sami","Tigrinya",0.751818181818182
 "Serbian","Tigrinya",0.872727272727272
 "Russian","Tigrinya",0.649999999999999
 "Bashkir","Tigrinya",0.701818181818182
@@ -1670,12 +1775,14 @@
 "Erzya","Tigrinya",0.649090909090909
 "Estonian","Tigrinya",0.641818181818181
 "Gagauz","Tigrinya",0.638181818181818
+"Tatar","Tigrinya",0.654545454545454
 "Latvian","Tigrinya",0.757272727272727
 "Vepsian","Tigrinya",0.689090909090909
 "Czech","Tigrinya",0.618181818181818
 "Meadow Mari","Tigrinya",0.633636363636363
 "Bulgarian","Tigrinya",0.530909090909091
 "Belarusian","Tigrinya",0.550909090909091
+"Ukrainian","Tigrinya",0.582727272727273
 "Hungarian","Tigrinya",0.58
 "Lithuanian","Tigrinya",0.601818181818181
 "Kalmyk","Tigrinya",0.642727272727272
@@ -1719,6 +1826,7 @@
 "Hawaiian","Tigrinya",0.666363636363636
 "Tahitian","Tigrinya",0.585454545454545
 "Inupiak","Tigrinya",0.680909090909091
+"Greenlandic","Tigrinya",0.748181818181818
 "Cheyenne","Tigrinya",0.562727272727272
 "Choctaw","Tigrinya",0.499090909090909
 "Muscogee","Tigrinya",0.603636363636363
@@ -1751,14 +1859,17 @@
 "Wolof","Afar",0.576363636363636
 "Egyptian Arabic","Afar",0.676363636363636
 "Kabyle","Afar",0.686363636363636
+"Albanian","Afar",0.909090909090908
 "Latin","Afar",0.887272727272726
 "Neapolitan","Afar",0.818181818181818
 "Spanish","Afar",0.799090909090909
+"Greek","Afar",0.72
 "English","Afar",0.844545454545454
 "French","Afar",0.823636363636363
 "Dutch","Afar",0.834545454545454
 "Icelandic","Afar",0.764545454545454
 "Irish","Afar",0.709090909090909
+"Northern Sami","Afar",0.744545454545455
 "Serbian","Afar",0.844545454545454
 "Russian","Afar",0.818181818181818
 "Bashkir","Afar",0.818181818181818
@@ -1766,12 +1877,14 @@
 "Erzya","Afar",0.636363636363635
 "Estonian","Afar",0.717272727272727
 "Gagauz","Afar",0.818181818181818
+"Tatar","Afar",0.818181818181818
 "Latvian","Afar",0.727272727272728
 "Vepsian","Afar",0.727272727272728
 "Czech","Afar",0.716363636363637
 "Meadow Mari","Afar",0.681818181818181
 "Bulgarian","Afar",0.653636363636364
 "Belarusian","Afar",0.716363636363636
+"Ukrainian","Afar",0.709090909090909
 "Hungarian","Afar",0.695454545454545
 "Lithuanian","Afar",0.698181818181818
 "Kalmyk","Afar",0.422727272727273
@@ -1815,6 +1928,7 @@
 "Hawaiian","Afar",0.818181818181818
 "Tahitian","Afar",0.705454545454545
 "Inupiak","Afar",0.636363636363635
+"Greenlandic","Afar",0.727272727272728
 "Cheyenne","Afar",0.540909090909091
 "Choctaw","Afar",0.533636363636364
 "Muscogee","Afar",0.636363636363635
@@ -1847,14 +1961,17 @@
 "Wolof","Amharic",0.473636363636364
 "Egyptian Arabic","Amharic",0.737272727272727
 "Kabyle","Amharic",0.653636363636363
+"Albanian","Amharic",0.806363636363636
 "Latin","Amharic",0.804545454545454
 "Neapolitan","Amharic",0.824545454545454
 "Spanish","Amharic",0.812727272727272
+"Greek","Amharic",0.714545454545454
 "English","Amharic",0.845454545454545
 "French","Amharic",0.846363636363636
 "Dutch","Amharic",0.836363636363636
 "Icelandic","Amharic",0.833636363636363
 "Irish","Amharic",0.619090909090909
+"Northern Sami","Amharic",0.787272727272727
 "Serbian","Amharic",0.739090909090909
 "Russian","Amharic",0.67090909090909
 "Bashkir","Amharic",0.828181818181817
@@ -1862,12 +1979,14 @@
 "Erzya","Amharic",0.804545454545455
 "Estonian","Amharic",0.652727272727272
 "Gagauz","Amharic",0.614545454545454
+"Tatar","Amharic",0.705454545454545
 "Latvian","Amharic",0.762727272727273
 "Vepsian","Amharic",0.786363636363636
 "Czech","Amharic",0.691818181818182
 "Meadow Mari","Amharic",0.559090909090909
 "Bulgarian","Amharic",0.733636363636364
 "Belarusian","Amharic",0.660909090909091
+"Ukrainian","Amharic",0.660909090909091
 "Hungarian","Amharic",0.674545454545454
 "Lithuanian","Amharic",0.676363636363637
 "Kalmyk","Amharic",0.679090909090909
@@ -1911,6 +2030,7 @@
 "Hawaiian","Amharic",0.732727272727272
 "Tahitian","Amharic",0.663636363636363
 "Inupiak","Amharic",0.721818181818182
+"Greenlandic","Amharic",0.738181818181818
 "Cheyenne","Amharic",0.625454545454545
 "Choctaw","Amharic",0.419090909090909
 "Muscogee","Amharic",0.671818181818182
@@ -1943,14 +2063,17 @@
 "Wolof","Kanuri",0.442727272727273
 "Egyptian Arabic","Kanuri",0.730909090909091
 "Kabyle","Kanuri",0.721818181818182
+"Albanian","Kanuri",1
 "Latin","Kanuri",0.840909090909091
 "Neapolitan","Kanuri",0.818181818181818
 "Spanish","Kanuri",0.874545454545454
+"Greek","Kanuri",0.788181818181818
 "English","Kanuri",0.818181818181818
 "French","Kanuri",0.883636363636363
 "Dutch","Kanuri",0.903636363636363
 "Icelandic","Kanuri",0.82090909090909
 "Irish","Kanuri",0.698181818181818
+"Northern Sami","Kanuri",0.718181818181818
 "Serbian","Kanuri",0.808181818181817
 "Russian","Kanuri",0.818181818181818
 "Bashkir","Kanuri",0.727272727272728
@@ -1958,12 +2081,14 @@
 "Erzya","Kanuri",0.818181818181818
 "Estonian","Kanuri",0.674545454545454
 "Gagauz","Kanuri",0.818181818181818
+"Tatar","Kanuri",0.818181818181818
 "Latvian","Kanuri",0.818181818181818
 "Vepsian","Kanuri",0.818181818181818
 "Czech","Kanuri",0.747272727272727
 "Meadow Mari","Kanuri",0.634545454545454
 "Bulgarian","Kanuri",0.659090909090909
 "Belarusian","Kanuri",0.68
+"Ukrainian","Kanuri",0.694545454545454
 "Hungarian","Kanuri",0.711818181818182
 "Lithuanian","Kanuri",0.730909090909091
 "Kalmyk","Kanuri",0.629999999999999
@@ -2007,6 +2132,7 @@
 "Hawaiian","Kanuri",0.818181818181818
 "Tahitian","Kanuri",0.652727272727272
 "Inupiak","Kanuri",0.636363636363635
+"Greenlandic","Kanuri",0.818181818181818
 "Cheyenne","Kanuri",0.507272727272727
 "Choctaw","Kanuri",0.541818181818183
 "Muscogee","Kanuri",0.545454545454546
@@ -2039,14 +2165,17 @@
 "Wolof","Wolof",0
 "Egyptian Arabic","Wolof",0.620909090909091
 "Kabyle","Wolof",0.64090909090909
+"Albanian","Wolof",0.898181818181818
 "Latin","Wolof",0.756363636363637
 "Neapolitan","Wolof",0.845454545454545
 "Spanish","Wolof",0.744545454545454
+"Greek","Wolof",0.670909090909091
 "English","Wolof",0.881818181818181
 "French","Wolof",0.770909090909091
 "Dutch","Wolof",0.777272727272727
 "Icelandic","Wolof",0.719090909090909
 "Irish","Wolof",0.65
+"Northern Sami","Wolof",0.774545454545454
 "Serbian","Wolof",0.868181818181818
 "Russian","Wolof",0.637272727272727
 "Bashkir","Wolof",0.697272727272727
@@ -2054,12 +2183,14 @@
 "Erzya","Wolof",0.687272727272727
 "Estonian","Wolof",0.643636363636363
 "Gagauz","Wolof",0.622727272727272
+"Tatar","Wolof",0.649999999999999
 "Latvian","Wolof",0.756363636363636
 "Vepsian","Wolof",0.71
 "Czech","Wolof",0.639999999999999
 "Meadow Mari","Wolof",0.641818181818181
 "Bulgarian","Wolof",0.636363636363636
 "Belarusian","Wolof",0.596363636363636
+"Ukrainian","Wolof",0.592727272727273
 "Hungarian","Wolof",0.605454545454545
 "Lithuanian","Wolof",0.629090909090909
 "Kalmyk","Wolof",0.664545454545454
@@ -2103,6 +2234,7 @@
 "Hawaiian","Wolof",0.7
 "Tahitian","Wolof",0.585454545454545
 "Inupiak","Wolof",0.678181818181817
+"Greenlandic","Wolof",0.752727272727272
 "Cheyenne","Wolof",0.563636363636363
 "Choctaw","Wolof",0.520909090909091
 "Muscogee","Wolof",0.603636363636363
@@ -2135,14 +2267,17 @@
 "Wolof","Egyptian Arabic",0.620909090909091
 "Egyptian Arabic","Egyptian Arabic",0
 "Kabyle","Egyptian Arabic",0.536363636363636
+"Albanian","Egyptian Arabic",0.781818181818182
 "Latin","Egyptian Arabic",0.597272727272727
 "Neapolitan","Egyptian Arabic",0.547272727272727
 "Spanish","Egyptian Arabic",0.561818181818182
+"Greek","Egyptian Arabic",0.467272727272727
 "English","Egyptian Arabic",0.778181818181818
 "French","Egyptian Arabic",0.683636363636363
 "Dutch","Egyptian Arabic",0.579090909090909
 "Icelandic","Egyptian Arabic",0.546363636363636
 "Irish","Egyptian Arabic",0.550909090909091
+"Northern Sami","Egyptian Arabic",0.678181818181818
 "Serbian","Egyptian Arabic",0.865454545454545
 "Russian","Egyptian Arabic",0.627272727272727
 "Bashkir","Egyptian Arabic",0.609090909090908
@@ -2150,12 +2285,14 @@
 "Erzya","Egyptian Arabic",0.585454545454545
 "Estonian","Egyptian Arabic",0.654545454545454
 "Gagauz","Egyptian Arabic",0.649999999999999
+"Tatar","Egyptian Arabic",0.637272727272727
 "Latvian","Egyptian Arabic",0.655454545454545
 "Vepsian","Egyptian Arabic",0.6
 "Czech","Egyptian Arabic",0.488181818181818
 "Meadow Mari","Egyptian Arabic",0.638181818181817
 "Bulgarian","Egyptian Arabic",0.542727272727273
 "Belarusian","Egyptian Arabic",0.58
+"Ukrainian","Egyptian Arabic",0.526363636363636
 "Hungarian","Egyptian Arabic",0.511818181818182
 "Lithuanian","Egyptian Arabic",0.503636363636364
 "Kalmyk","Egyptian Arabic",0.751818181818182
@@ -2199,6 +2336,7 @@
 "Hawaiian","Egyptian Arabic",0.657272727272727
 "Tahitian","Egyptian Arabic",0.58
 "Inupiak","Egyptian Arabic",0.791818181818181
+"Greenlandic","Egyptian Arabic",0.658181818181818
 "Cheyenne","Egyptian Arabic",0.756363636363636
 "Choctaw","Egyptian Arabic",0.694545454545454
 "Muscogee","Egyptian Arabic",0.547272727272727
@@ -2231,14 +2369,17 @@
 "Wolof","Kabyle",0.64090909090909
 "Egyptian Arabic","Kabyle",0.536363636363636
 "Kabyle","Kabyle",0
+"Albanian","Kabyle",0.689090909090909
 "Latin","Kabyle",0.636363636363636
 "Neapolitan","Kabyle",0.734545454545455
 "Spanish","Kabyle",0.482727272727273
+"Greek","Kabyle",0.474545454545455
 "English","Kabyle",0.683636363636363
 "French","Kabyle",0.575454545454545
 "Dutch","Kabyle",0.486363636363636
 "Icelandic","Kabyle",0.531818181818182
 "Irish","Kabyle",0.558181818181818
+"Northern Sami","Kabyle",0.595454545454545
 "Serbian","Kabyle",0.678181818181818
 "Russian","Kabyle",0.620909090909091
 "Bashkir","Kabyle",0.512727272727273
@@ -2246,12 +2387,14 @@
 "Erzya","Kabyle",0.510909090909091
 "Estonian","Kabyle",0.662727272727272
 "Gagauz","Kabyle",0.534545454545454
+"Tatar","Kabyle",0.55
 "Latvian","Kabyle",0.565454545454545
 "Vepsian","Kabyle",0.495454545454545
 "Czech","Kabyle",0.482727272727273
 "Meadow Mari","Kabyle",0.535454545454545
 "Bulgarian","Kabyle",0.453636363636364
 "Belarusian","Kabyle",0.488181818181818
+"Ukrainian","Kabyle",0.495454545454545
 "Hungarian","Kabyle",0.5
 "Lithuanian","Kabyle",0.505454545454545
 "Kalmyk","Kabyle",0.74
@@ -2295,6 +2438,7 @@
 "Hawaiian","Kabyle",0.568181818181818
 "Tahitian","Kabyle",0.473636363636364
 "Inupiak","Kabyle",0.781818181818181
+"Greenlandic","Kabyle",0.550909090909091
 "Cheyenne","Kabyle",0.746363636363636
 "Choctaw","Kabyle",0.579090909090909
 "Muscogee","Kabyle",0.337272727272727
@@ -2303,6 +2447,108 @@
 "Haitian","Kabyle",0.355454545454545
 "Aymara","Kabyle",0.46
 "Guarani","Kabyle",0.37
+"Herero","Albanian",0.938181818181818
+"Zulu","Albanian",0.848181818181818
+"Tswana","Albanian",0.933636363636363
+"Shona","Albanian",0.906363636363636
+"Ndonga","Albanian",0.733636363636364
+"Swati","Albanian",1
+"Tsonga","Albanian",0.908181818181817
+"Venda","Albanian",0.913636363636363
+"Kongo","Albanian",0.636363636363635
+"Tumbuka","Albanian",0.908181818181817
+"Kikuyu","Albanian",0.909090909090908
+"Luganda","Albanian",0.919090909090908
+"Kinyarwanda","Albanian",0.827272727272726
+"Lingala","Albanian",0.636363636363635
+"Kirundi","Albanian",0.817272727272727
+"Igbo","Albanian",0.732727272727273
+"Bambara","Albanian",1
+"Tigrinya","Albanian",0.901818181818181
+"Afar","Albanian",0.909090909090908
+"Amharic","Albanian",0.806363636363636
+"Kanuri","Albanian",1
+"Wolof","Albanian",0.898181818181818
+"Egyptian Arabic","Albanian",0.781818181818182
+"Kabyle","Albanian",0.689090909090909
+"Albanian","Albanian",0
+"Latin","Albanian",0.60090909090909
+"Neapolitan","Albanian",0.636363636363635
+"Spanish","Albanian",0.526363636363636
+"Greek","Albanian",0.700909090909091
+"English","Albanian",0.334545454545455
+"French","Albanian",0.349090909090909
+"Dutch","Albanian",0.524545454545455
+"Icelandic","Albanian",0.525454545454545
+"Irish","Albanian",0.535454545454546
+"Northern Sami","Albanian",0.765454545454545
+"Serbian","Albanian",0.706363636363636
+"Russian","Albanian",0.545454545454546
+"Bashkir","Albanian",0.636363636363635
+"Chuvash","Albanian",0.636363636363635
+"Erzya","Albanian",0.454545454545454
+"Estonian","Albanian",0.585454545454545
+"Gagauz","Albanian",0.818181818181818
+"Tatar","Albanian",0.545454545454546
+"Latvian","Albanian",0.454545454545454
+"Vepsian","Albanian",0.363636363636364
+"Czech","Albanian",0.625454545454545
+"Meadow Mari","Albanian",0.599090909090909
+"Bulgarian","Albanian",0.76
+"Belarusian","Albanian",0.587272727272727
+"Ukrainian","Albanian",0.651818181818182
+"Hungarian","Albanian",0.68
+"Lithuanian","Albanian",0.627272727272727
+"Kalmyk","Albanian",0.926363636363636
+"Armenian","Albanian",0.770909090909091
+"Kurdish (Sorani)","Albanian",0.727272727272728
+"Abkhazian","Albanian",0.707272727272727
+"Kabardian","Albanian",0.727272727272727
+"Turkish","Albanian",0.646363636363636
+"Ossetian","Albanian",0.909999999999999
+"Hebrew","Albanian",0.775454545454545
+"Sindhi","Albanian",0.69090909090909
+"Eastern Punjabi","Albanian",0.909090909090908
+"Kazakh","Albanian",1
+"Sakha","Albanian",0.909090909090908
+"Korean","Albanian",0.636363636363635
+"Chinese","Albanian",0.624545454545454
+"Nuosu","Albanian",0.553636363636363
+"Japanese","Albanian",0.636363636363635
+"Tibetan","Albanian",0.761818181818182
+"Bengali","Albanian",0.545454545454546
+"Kashmiri","Albanian",0.51
+"Gujarati","Albanian",0.654545454545454
+"Telugu","Albanian",0.454545454545454
+"Tamil","Albanian",0.635454545454545
+"Malayalam","Albanian",0.454545454545454
+"Sinhalese","Albanian",0.545454545454546
+"Burmese","Albanian",0.562727272727273
+"Vietnamese","Albanian",0.454545454545454
+"Khmer","Albanian",0.559090909090909
+"Malay","Albanian",0.645454545454545
+"Thai","Albanian",0.454545454545454
+"Cebuano","Albanian",0.539090909090909
+"Banyumasan","Albanian",0.682727272727273
+"Minangkabau","Albanian",0.574545454545455
+"Tetum","Albanian",0.584545454545454
+"Nauruan","Albanian",0.63090909090909
+"Chamorro","Albanian",0.572727272727272
+"Samoan","Albanian",0.621818181818181
+"Tongan","Albanian",0.690909090909091
+"Maori","Albanian",0.784545454545455
+"Hawaiian","Albanian",0.454545454545454
+"Tahitian","Albanian",0.672727272727273
+"Inupiak","Albanian",1
+"Greenlandic","Albanian",0.454545454545454
+"Cheyenne","Albanian",0.959090909090909
+"Choctaw","Albanian",0.725454545454546
+"Muscogee","Albanian",0.818181818181818
+"Cherokee","Albanian",0.727272727272728
+"Navajo","Albanian",0.914545454545454
+"Haitian","Albanian",0.647272727272727
+"Aymara","Albanian",0.724545454545454
+"Guarani","Albanian",0.727272727272727
 "Herero","Latin",0.919999999999999
 "Zulu","Latin",0.835454545454545
 "Tswana","Latin",0.836363636363636
@@ -2327,14 +2573,17 @@
 "Wolof","Latin",0.756363636363637
 "Egyptian Arabic","Latin",0.597272727272727
 "Kabyle","Latin",0.636363636363636
+"Albanian","Latin",0.60090909090909
 "Latin","Latin",0
 "Neapolitan","Latin",0.635454545454545
 "Spanish","Latin",0.407272727272727
+"Greek","Latin",0.598181818181818
 "English","Latin",0.606363636363636
 "French","Latin",0.510909090909091
 "Dutch","Latin",0.412727272727273
 "Icelandic","Latin",0.465454545454545
 "Irish","Latin",0.551818181818182
+"Northern Sami","Latin",0.771818181818181
 "Serbian","Latin",0.755454545454545
 "Russian","Latin",0.628181818181818
 "Bashkir","Latin",0.700909090909091
@@ -2342,12 +2591,14 @@
 "Erzya","Latin",0.532727272727272
 "Estonian","Latin",0.74
 "Gagauz","Latin",0.710909090909091
+"Tatar","Latin",0.59090909090909
 "Latvian","Latin",0.766363636363637
 "Vepsian","Latin",0.52
 "Czech","Latin",0.590909090909091
 "Meadow Mari","Latin",0.675454545454545
 "Bulgarian","Latin",0.690909090909091
 "Belarusian","Latin",0.579090909090909
+"Ukrainian","Latin",0.601818181818181
 "Hungarian","Latin",0.582727272727273
 "Lithuanian","Latin",0.600909090909091
 "Kalmyk","Latin",0.916363636363636
@@ -2391,6 +2642,7 @@
 "Hawaiian","Latin",0.440909090909091
 "Tahitian","Latin",0.566363636363636
 "Inupiak","Latin",0.941818181818181
+"Greenlandic","Latin",0.751818181818182
 "Cheyenne","Latin",0.932727272727272
 "Choctaw","Latin",0.872727272727272
 "Muscogee","Latin",0.659090909090909
@@ -2423,14 +2675,17 @@
 "Wolof","Neapolitan",0.845454545454545
 "Egyptian Arabic","Neapolitan",0.547272727272727
 "Kabyle","Neapolitan",0.734545454545455
+"Albanian","Neapolitan",0.636363636363635
 "Latin","Neapolitan",0.635454545454545
 "Neapolitan","Neapolitan",0
 "Spanish","Neapolitan",0.572727272727272
+"Greek","Neapolitan",0.645454545454545
 "English","Neapolitan",0.597272727272727
 "French","Neapolitan",0.685454545454545
 "Dutch","Neapolitan",0.590909090909091
 "Icelandic","Neapolitan",0.562727272727273
 "Irish","Neapolitan",0.639999999999999
+"Northern Sami","Neapolitan",0.802727272727272
 "Serbian","Neapolitan",0.700909090909091
 "Russian","Neapolitan",0.818181818181818
 "Bashkir","Neapolitan",0.818181818181818
@@ -2438,12 +2693,14 @@
 "Erzya","Neapolitan",0.636363636363635
 "Estonian","Neapolitan",0.756363636363636
 "Gagauz","Neapolitan",0.727272727272728
+"Tatar","Neapolitan",0.818181818181818
 "Latvian","Neapolitan",0.727272727272728
 "Vepsian","Neapolitan",0.636363636363635
 "Czech","Neapolitan",0.693636363636364
 "Meadow Mari","Neapolitan",0.739090909090909
 "Bulgarian","Neapolitan",0.745454545454546
 "Belarusian","Neapolitan",0.774545454545455
+"Ukrainian","Neapolitan",0.714545454545454
 "Hungarian","Neapolitan",0.701818181818182
 "Lithuanian","Neapolitan",0.705454545454546
 "Kalmyk","Neapolitan",0.851818181818181
@@ -2487,6 +2744,7 @@
 "Hawaiian","Neapolitan",0.636363636363635
 "Tahitian","Neapolitan",0.802727272727272
 "Inupiak","Neapolitan",0.909090909090908
+"Greenlandic","Neapolitan",0.727272727272728
 "Cheyenne","Neapolitan",0.874545454545453
 "Choctaw","Neapolitan",0.816363636363636
 "Muscogee","Neapolitan",0.818181818181818
@@ -2519,14 +2777,17 @@
 "Wolof","Spanish",0.744545454545454
 "Egyptian Arabic","Spanish",0.561818181818182
 "Kabyle","Spanish",0.482727272727273
+"Albanian","Spanish",0.526363636363636
 "Latin","Spanish",0.407272727272727
 "Neapolitan","Spanish",0.572727272727272
 "Spanish","Spanish",0
+"Greek","Spanish",0.458181818181818
 "English","Spanish",0.539090909090909
 "French","Spanish",0.434545454545455
 "Dutch","Spanish",0.27
 "Icelandic","Spanish",0.383636363636364
 "Irish","Spanish",0.566363636363636
+"Northern Sami","Spanish",0.710909090909091
 "Serbian","Spanish",0.647272727272727
 "Russian","Spanish",0.640909090909091
 "Bashkir","Spanish",0.659999999999999
@@ -2534,12 +2795,14 @@
 "Erzya","Spanish",0.442727272727273
 "Estonian","Spanish",0.77090909090909
 "Gagauz","Spanish",0.73
+"Tatar","Spanish",0.588181818181818
 "Latvian","Spanish",0.683636363636363
 "Vepsian","Spanish",0.421818181818182
 "Czech","Spanish",0.525454545454546
 "Meadow Mari","Spanish",0.652727272727272
 "Bulgarian","Spanish",0.543636363636363
 "Belarusian","Spanish",0.593636363636364
+"Ukrainian","Spanish",0.57
 "Hungarian","Spanish",0.557272727272727
 "Lithuanian","Spanish",0.549090909090909
 "Kalmyk","Spanish",0.882727272727272
@@ -2583,6 +2846,7 @@
 "Hawaiian","Spanish",0.432727272727273
 "Tahitian","Spanish",0.568181818181818
 "Inupiak","Spanish",0.927272727272726
+"Greenlandic","Spanish",0.656363636363636
 "Cheyenne","Spanish",0.887272727272726
 "Choctaw","Spanish",0.784545454545455
 "Muscogee","Spanish",0.600909090909091
@@ -2591,6 +2855,108 @@
 "Haitian","Spanish",0.558181818181818
 "Aymara","Spanish",0.564545454545454
 "Guarani","Spanish",0.582727272727272
+"Herero","Greek",0.783636363636363
+"Zulu","Greek",0.768181818181818
+"Tswana","Greek",0.765454545454545
+"Shona","Greek",0.754545454545454
+"Ndonga","Greek",0.754545454545454
+"Swati","Greek",0.787272727272727
+"Tsonga","Greek",0.640909090909091
+"Venda","Greek",0.663636363636363
+"Kongo","Greek",0.560909090909091
+"Tumbuka","Greek",0.666363636363636
+"Kikuyu","Greek",0.532727272727273
+"Luganda","Greek",0.66
+"Kinyarwanda","Greek",0.776363636363636
+"Lingala","Greek",0.556363636363636
+"Kirundi","Greek",0.763636363636363
+"Igbo","Greek",0.665454545454545
+"Bambara","Greek",0.686363636363636
+"Tigrinya","Greek",0.650909090909091
+"Afar","Greek",0.72
+"Amharic","Greek",0.714545454545454
+"Kanuri","Greek",0.788181818181818
+"Wolof","Greek",0.670909090909091
+"Egyptian Arabic","Greek",0.467272727272727
+"Kabyle","Greek",0.474545454545455
+"Albanian","Greek",0.700909090909091
+"Latin","Greek",0.598181818181818
+"Neapolitan","Greek",0.645454545454545
+"Spanish","Greek",0.458181818181818
+"Greek","Greek",0
+"English","Greek",0.737272727272727
+"French","Greek",0.648181818181818
+"Dutch","Greek",0.447272727272727
+"Icelandic","Greek",0.552727272727273
+"Irish","Greek",0.532727272727273
+"Northern Sami","Greek",0.711818181818182
+"Serbian","Greek",0.638181818181818
+"Russian","Greek",0.458181818181818
+"Bashkir","Greek",0.658181818181817
+"Chuvash","Greek",0.54
+"Erzya","Greek",0.626363636363636
+"Estonian","Greek",0.561818181818182
+"Gagauz","Greek",0.536363636363636
+"Tatar","Greek",0.584545454545454
+"Latvian","Greek",0.660909090909091
+"Vepsian","Greek",0.595454545454545
+"Czech","Greek",0.440909090909091
+"Meadow Mari","Greek",0.655454545454545
+"Bulgarian","Greek",0.358181818181818
+"Belarusian","Greek",0.567272727272727
+"Ukrainian","Greek",0.507272727272727
+"Hungarian","Greek",0.453636363636364
+"Lithuanian","Greek",0.493636363636364
+"Kalmyk","Greek",0.773636363636363
+"Armenian","Greek",0.459090909090909
+"Kurdish (Sorani)","Greek",0.552727272727272
+"Abkhazian","Greek",0.658181818181818
+"Kabardian","Greek",0.614545454545454
+"Turkish","Greek",0.453636363636364
+"Ossetian","Greek",0.581818181818181
+"Hebrew","Greek",0.475454545454546
+"Sindhi","Greek",0.548181818181818
+"Eastern Punjabi","Greek",0.805454545454545
+"Kazakh","Greek",0.824545454545454
+"Sakha","Greek",0.737272727272727
+"Korean","Greek",0.621818181818181
+"Chinese","Greek",0.55
+"Nuosu","Greek",0.55
+"Japanese","Greek",0.554545454545455
+"Tibetan","Greek",0.474545454545455
+"Bengali","Greek",0.605454545454545
+"Kashmiri","Greek",0.564545454545454
+"Gujarati","Greek",0.499090909090909
+"Telugu","Greek",0.504545454545455
+"Tamil","Greek",0.542727272727273
+"Malayalam","Greek",0.696363636363636
+"Sinhalese","Greek",0.530909090909091
+"Burmese","Greek",0.649999999999999
+"Vietnamese","Greek",0.768181818181818
+"Khmer","Greek",0.640909090909091
+"Malay","Greek",0.616363636363636
+"Thai","Greek",0.640909090909091
+"Cebuano","Greek",0.659090909090909
+"Banyumasan","Greek",0.651818181818182
+"Minangkabau","Greek",0.634545454545454
+"Tetum","Greek",0.655454545454546
+"Nauruan","Greek",0.724545454545454
+"Chamorro","Greek",0.654545454545454
+"Samoan","Greek",0.753636363636363
+"Tongan","Greek",0.720909090909091
+"Maori","Greek",0.58
+"Hawaiian","Greek",0.614545454545454
+"Tahitian","Greek",0.577272727272727
+"Inupiak","Greek",0.834545454545454
+"Greenlandic","Greek",0.645454545454545
+"Cheyenne","Greek",0.807272727272727
+"Choctaw","Greek",0.69
+"Muscogee","Greek",0.605454545454545
+"Cherokee","Greek",0.642727272727272
+"Navajo","Greek",0.765454545454545
+"Haitian","Greek",0.537272727272727
+"Aymara","Greek",0.569090909090909
+"Guarani","Greek",0.573636363636363
 "Herero","English",0.903636363636363
 "Zulu","English",0.884545454545454
 "Tswana","English",0.804545454545454
@@ -2615,14 +2981,17 @@
 "Wolof","English",0.881818181818181
 "Egyptian Arabic","English",0.778181818181818
 "Kabyle","English",0.683636363636363
+"Albanian","English",0.334545454545455
 "Latin","English",0.606363636363636
 "Neapolitan","English",0.597272727272727
 "Spanish","English",0.539090909090909
+"Greek","English",0.737272727272727
 "English","English",0
 "French","English",0.341818181818182
 "Dutch","English",0.533636363636363
 "Icelandic","English",0.51
 "Irish","English",0.654545454545454
+"Northern Sami","English",0.732727272727273
 "Serbian","English",0.650909090909091
 "Russian","English",0.581818181818181
 "Bashkir","English",0.589090909090908
@@ -2630,12 +2999,14 @@
 "Erzya","English",0.387272727272727
 "Estonian","English",0.67
 "Gagauz","English",0.812727272727273
+"Tatar","English",0.531818181818182
 "Latvian","English",0.473636363636364
 "Vepsian","English",0.311818181818182
 "Czech","English",0.631818181818182
 "Meadow Mari","English",0.571818181818181
 "Bulgarian","English",0.754545454545455
 "Belarusian","English",0.56
+"Ukrainian","English",0.656363636363636
 "Hungarian","English",0.672727272727272
 "Lithuanian","English",0.629090909090909
 "Kalmyk","English",0.896363636363636
@@ -2679,6 +3050,7 @@
 "Hawaiian","English",0.526363636363636
 "Tahitian","English",0.662727272727272
 "Inupiak","English",0.955454545454545
+"Greenlandic","English",0.480909090909091
 "Cheyenne","English",0.928181818181818
 "Choctaw","English",0.801818181818182
 "Muscogee","English",0.729090909090909
@@ -2711,14 +3083,17 @@
 "Wolof","French",0.770909090909091
 "Egyptian Arabic","French",0.683636363636363
 "Kabyle","French",0.575454545454545
+"Albanian","French",0.349090909090909
 "Latin","French",0.510909090909091
 "Neapolitan","French",0.685454545454545
 "Spanish","French",0.434545454545455
+"Greek","French",0.648181818181818
 "English","French",0.341818181818182
 "French","French",0
 "Dutch","French",0.454545454545455
 "Icelandic","French",0.398181818181818
 "Irish","French",0.659090909090909
+"Northern Sami","French",0.719090909090909
 "Serbian","French",0.748181818181818
 "Russian","French",0.509090909090909
 "Bashkir","French",0.487272727272727
@@ -2726,12 +3101,14 @@
 "Erzya","French",0.276363636363636
 "Estonian","French",0.652727272727272
 "Gagauz","French",0.73
+"Tatar","French",0.455454545454545
 "Latvian","French",0.463636363636364
 "Vepsian","French",0.205454545454546
 "Czech","French",0.537272727272727
 "Meadow Mari","French",0.556363636363636
 "Bulgarian","French",0.650909090909091
 "Belarusian","French",0.458181818181818
+"Ukrainian","French",0.561818181818182
 "Hungarian","French",0.577272727272727
 "Lithuanian","French",0.517272727272727
 "Kalmyk","French",0.88090909090909
@@ -2775,6 +3152,7 @@
 "Hawaiian","French",0.439090909090909
 "Tahitian","French",0.558181818181818
 "Inupiak","French",0.929999999999999
+"Greenlandic","French",0.469090909090909
 "Cheyenne","French",0.896363636363636
 "Choctaw","French",0.783636363636364
 "Muscogee","French",0.608181818181818
@@ -2807,14 +3185,17 @@
 "Wolof","Dutch",0.777272727272727
 "Egyptian Arabic","Dutch",0.579090909090909
 "Kabyle","Dutch",0.486363636363636
+"Albanian","Dutch",0.524545454545455
 "Latin","Dutch",0.412727272727273
 "Neapolitan","Dutch",0.590909090909091
 "Spanish","Dutch",0.27
+"Greek","Dutch",0.447272727272727
 "English","Dutch",0.533636363636363
 "French","Dutch",0.454545454545455
 "Dutch","Dutch",0
 "Icelandic","Dutch",0.397272727272727
 "Irish","Dutch",0.573636363636363
+"Northern Sami","Dutch",0.725454545454545
 "Serbian","Dutch",0.652727272727273
 "Russian","Dutch",0.626363636363636
 "Bashkir","Dutch",0.671818181818181
@@ -2822,12 +3203,14 @@
 "Erzya","Dutch",0.467272727272727
 "Estonian","Dutch",0.785454545454545
 "Gagauz","Dutch",0.721818181818182
+"Tatar","Dutch",0.576363636363636
 "Latvian","Dutch",0.698181818181818
 "Vepsian","Dutch",0.441818181818182
 "Czech","Dutch",0.527272727272727
 "Meadow Mari","Dutch",0.67
 "Bulgarian","Dutch",0.564545454545454
 "Belarusian","Dutch",0.579090909090909
+"Ukrainian","Dutch",0.583636363636363
 "Hungarian","Dutch",0.561818181818182
 "Lithuanian","Dutch",0.577272727272727
 "Kalmyk","Dutch",0.889999999999999
@@ -2871,6 +3254,7 @@
 "Hawaiian","Dutch",0.43
 "Tahitian","Dutch",0.569090909090909
 "Inupiak","Dutch",0.945454545454545
+"Greenlandic","Dutch",0.676363636363636
 "Cheyenne","Dutch",0.917272727272727
 "Choctaw","Dutch",0.81
 "Muscogee","Dutch",0.631818181818181
@@ -2903,14 +3287,17 @@
 "Wolof","Icelandic",0.719090909090909
 "Egyptian Arabic","Icelandic",0.546363636363636
 "Kabyle","Icelandic",0.531818181818182
+"Albanian","Icelandic",0.525454545454545
 "Latin","Icelandic",0.465454545454545
 "Neapolitan","Icelandic",0.562727272727273
 "Spanish","Icelandic",0.383636363636364
+"Greek","Icelandic",0.552727272727273
 "English","Icelandic",0.51
 "French","Icelandic",0.398181818181818
 "Dutch","Icelandic",0.397272727272727
 "Icelandic","Icelandic",0
 "Irish","Icelandic",0.564545454545454
+"Northern Sami","Icelandic",0.683636363636364
 "Serbian","Icelandic",0.775454545454546
 "Russian","Icelandic",0.705454545454545
 "Bashkir","Icelandic",0.517272727272727
@@ -2918,12 +3305,14 @@
 "Erzya","Icelandic",0.31
 "Estonian","Icelandic",0.756363636363636
 "Gagauz","Icelandic",0.724545454545455
+"Tatar","Icelandic",0.632727272727272
 "Latvian","Icelandic",0.550909090909091
 "Vepsian","Icelandic",0.31
 "Czech","Icelandic",0.552727272727272
 "Meadow Mari","Icelandic",0.635454545454545
 "Bulgarian","Icelandic",0.626363636363636
 "Belarusian","Icelandic",0.564545454545454
+"Ukrainian","Icelandic",0.560909090909091
 "Hungarian","Icelandic",0.584545454545454
 "Lithuanian","Icelandic",0.521818181818182
 "Kalmyk","Icelandic",0.822727272727272
@@ -2967,6 +3356,7 @@
 "Hawaiian","Icelandic",0.5
 "Tahitian","Icelandic",0.580909090909091
 "Inupiak","Icelandic",0.863636363636362
+"Greenlandic","Icelandic",0.537272727272727
 "Cheyenne","Icelandic",0.837272727272726
 "Choctaw","Icelandic",0.761818181818181
 "Muscogee","Icelandic",0.536363636363636
@@ -2999,14 +3389,17 @@
 "Wolof","Irish",0.65
 "Egyptian Arabic","Irish",0.550909090909091
 "Kabyle","Irish",0.558181818181818
+"Albanian","Irish",0.535454545454546
 "Latin","Irish",0.551818181818182
 "Neapolitan","Irish",0.639999999999999
 "Spanish","Irish",0.566363636363636
+"Greek","Irish",0.532727272727273
 "English","Irish",0.654545454545454
 "French","Irish",0.659090909090909
 "Dutch","Irish",0.573636363636363
 "Icelandic","Irish",0.564545454545454
 "Irish","Irish",0
+"Northern Sami","Irish",0.603636363636363
 "Serbian","Irish",0.860909090909091
 "Russian","Irish",0.573636363636363
 "Bashkir","Irish",0.642727272727272
@@ -3014,12 +3407,14 @@
 "Erzya","Irish",0.607272727272727
 "Estonian","Irish",0.473636363636364
 "Gagauz","Irish",0.621818181818181
+"Tatar","Irish",0.506363636363636
 "Latvian","Irish",0.468181818181818
 "Vepsian","Irish",0.598181818181818
 "Czech","Irish",0.507272727272727
 "Meadow Mari","Irish",0.459090909090909
 "Bulgarian","Irish",0.643636363636363
 "Belarusian","Irish",0.471818181818182
+"Ukrainian","Irish",0.488181818181818
 "Hungarian","Irish",0.507272727272727
 "Lithuanian","Irish",0.529090909090909
 "Kalmyk","Irish",0.78
@@ -3063,6 +3458,7 @@
 "Hawaiian","Irish",0.543636363636364
 "Tahitian","Irish",0.485454545454546
 "Inupiak","Irish",0.82090909090909
+"Greenlandic","Irish",0.549090909090909
 "Cheyenne","Irish",0.795454545454545
 "Choctaw","Irish",0.6
 "Muscogee","Irish",0.604545454545454
@@ -3071,6 +3467,108 @@
 "Haitian","Irish",0.442727272727273
 "Aymara","Irish",0.478181818181818
 "Guarani","Irish",0.479090909090909
+"Herero","Northern Sami",0.660909090909091
+"Zulu","Northern Sami",0.744545454545454
+"Tswana","Northern Sami",0.761818181818182
+"Shona","Northern Sami",0.749090909090909
+"Ndonga","Northern Sami",0.752727272727272
+"Swati","Northern Sami",0.723636363636363
+"Tsonga","Northern Sami",0.763636363636364
+"Venda","Northern Sami",0.757272727272727
+"Kongo","Northern Sami",0.627272727272727
+"Tumbuka","Northern Sami",0.748181818181818
+"Kikuyu","Northern Sami",0.626363636363636
+"Luganda","Northern Sami",0.752727272727273
+"Kinyarwanda","Northern Sami",0.763636363636364
+"Lingala","Northern Sami",0.629999999999999
+"Kirundi","Northern Sami",0.77
+"Igbo","Northern Sami",0.565454545454545
+"Bambara","Northern Sami",0.723636363636363
+"Tigrinya","Northern Sami",0.751818181818182
+"Afar","Northern Sami",0.744545454545455
+"Amharic","Northern Sami",0.787272727272727
+"Kanuri","Northern Sami",0.718181818181818
+"Wolof","Northern Sami",0.774545454545454
+"Egyptian Arabic","Northern Sami",0.678181818181818
+"Kabyle","Northern Sami",0.595454545454545
+"Albanian","Northern Sami",0.765454545454545
+"Latin","Northern Sami",0.771818181818181
+"Neapolitan","Northern Sami",0.802727272727272
+"Spanish","Northern Sami",0.710909090909091
+"Greek","Northern Sami",0.711818181818182
+"English","Northern Sami",0.732727272727273
+"French","Northern Sami",0.719090909090909
+"Dutch","Northern Sami",0.725454545454545
+"Icelandic","Northern Sami",0.683636363636364
+"Irish","Northern Sami",0.603636363636363
+"Northern Sami","Northern Sami",0
+"Serbian","Northern Sami",0.909999999999999
+"Russian","Northern Sami",0.758181818181818
+"Bashkir","Northern Sami",0.597272727272727
+"Chuvash","Northern Sami",0.571818181818181
+"Erzya","Northern Sami",0.669090909090909
+"Estonian","Northern Sami",0.706363636363636
+"Gagauz","Northern Sami",0.756363636363636
+"Tatar","Northern Sami",0.671818181818181
+"Latvian","Northern Sami",0.609090909090909
+"Vepsian","Northern Sami",0.658181818181818
+"Czech","Northern Sami",0.645454545454545
+"Meadow Mari","Northern Sami",0.574545454545454
+"Bulgarian","Northern Sami",0.684545454545454
+"Belarusian","Northern Sami",0.599090909090909
+"Ukrainian","Northern Sami",0.629999999999999
+"Hungarian","Northern Sami",0.643636363636363
+"Lithuanian","Northern Sami",0.637272727272727
+"Kalmyk","Northern Sami",0.573636363636364
+"Armenian","Northern Sami",0.686363636363636
+"Kurdish (Sorani)","Northern Sami",0.705454545454546
+"Abkhazian","Northern Sami",0.681818181818182
+"Kabardian","Northern Sami",0.645454545454545
+"Turkish","Northern Sami",0.599090909090908
+"Ossetian","Northern Sami",0.750909090909091
+"Hebrew","Northern Sami",0.68
+"Sindhi","Northern Sami",0.611818181818181
+"Eastern Punjabi","Northern Sami",0.829999999999999
+"Kazakh","Northern Sami",0.638181818181817
+"Sakha","Northern Sami",0.681818181818182
+"Korean","Northern Sami",0.844545454545453
+"Chinese","Northern Sami",0.639090909090909
+"Nuosu","Northern Sami",0.608181818181818
+"Japanese","Northern Sami",0.725454545454545
+"Tibetan","Northern Sami",0.684545454545454
+"Bengali","Northern Sami",0.818181818181818
+"Kashmiri","Northern Sami",0.717272727272727
+"Gujarati","Northern Sami",0.628181818181818
+"Telugu","Northern Sami",0.611818181818181
+"Tamil","Northern Sami",0.602727272727272
+"Malayalam","Northern Sami",0.818181818181818
+"Sinhalese","Northern Sami",0.613636363636363
+"Burmese","Northern Sami",0.699090909090909
+"Vietnamese","Northern Sami",0.884545454545453
+"Khmer","Northern Sami",0.699090909090909
+"Malay","Northern Sami",0.680909090909091
+"Thai","Northern Sami",0.72
+"Cebuano","Northern Sami",0.719090909090909
+"Banyumasan","Northern Sami",0.594545454545454
+"Minangkabau","Northern Sami",0.675454545454545
+"Tetum","Northern Sami",0.600909090909091
+"Nauruan","Northern Sami",0.681818181818182
+"Chamorro","Northern Sami",0.695454545454546
+"Samoan","Northern Sami",0.789999999999999
+"Tongan","Northern Sami",0.74
+"Maori","Northern Sami",0.663636363636363
+"Hawaiian","Northern Sami",0.73
+"Tahitian","Northern Sami",0.581818181818181
+"Inupiak","Northern Sami",0.702727272727273
+"Greenlandic","Northern Sami",0.543636363636364
+"Cheyenne","Northern Sami",0.629090909090909
+"Choctaw","Northern Sami",0.741818181818182
+"Muscogee","Northern Sami",0.541818181818182
+"Cherokee","Northern Sami",0.506363636363636
+"Navajo","Northern Sami",0.764545454545454
+"Haitian","Northern Sami",0.605454545454545
+"Aymara","Northern Sami",0.59
+"Guarani","Northern Sami",0.576363636363636
 "Herero","Serbian",0.889999999999999
 "Zulu","Serbian",0.867272727272727
 "Tswana","Serbian",0.779090909090909
@@ -3095,14 +3593,17 @@
 "Wolof","Serbian",0.868181818181818
 "Egyptian Arabic","Serbian",0.865454545454545
 "Kabyle","Serbian",0.678181818181818
+"Albanian","Serbian",0.706363636363636
 "Latin","Serbian",0.755454545454545
 "Neapolitan","Serbian",0.700909090909091
 "Spanish","Serbian",0.647272727272727
+"Greek","Serbian",0.638181818181818
 "English","Serbian",0.650909090909091
 "French","Serbian",0.748181818181818
 "Dutch","Serbian",0.652727272727273
 "Icelandic","Serbian",0.775454545454546
 "Irish","Serbian",0.860909090909091
+"Northern Sami","Serbian",0.909999999999999
 "Serbian","Serbian",0
 "Russian","Serbian",0.728181818181818
 "Bashkir","Serbian",0.949090909090909
@@ -3110,12 +3611,14 @@
 "Erzya","Serbian",0.756363636363636
 "Estonian","Serbian",0.775454545454546
 "Gagauz","Serbian",0.718181818181818
+"Tatar","Serbian",0.85
 "Latvian","Serbian",0.89090909090909
 "Vepsian","Serbian",0.732727272727273
 "Czech","Serbian",0.79
 "Meadow Mari","Serbian",0.872727272727272
 "Bulgarian","Serbian",0.66
 "Belarusian","Serbian",0.862727272727272
+"Ukrainian","Serbian",0.827272727272727
 "Hungarian","Serbian",0.805454545454545
 "Lithuanian","Serbian",0.829999999999999
 "Kalmyk","Serbian",0.890909090909091
@@ -3159,6 +3662,7 @@
 "Hawaiian","Serbian",0.712727272727273
 "Tahitian","Serbian",0.85090909090909
 "Inupiak","Serbian",0.939999999999999
+"Greenlandic","Serbian",0.865454545454545
 "Cheyenne","Serbian",0.926363636363636
 "Choctaw","Serbian",0.736363636363636
 "Muscogee","Serbian",0.790909090909091
@@ -3191,14 +3695,17 @@
 "Wolof","Russian",0.637272727272727
 "Egyptian Arabic","Russian",0.627272727272727
 "Kabyle","Russian",0.620909090909091
+"Albanian","Russian",0.545454545454546
 "Latin","Russian",0.628181818181818
 "Neapolitan","Russian",0.818181818181818
 "Spanish","Russian",0.640909090909091
+"Greek","Russian",0.458181818181818
 "English","Russian",0.581818181818181
 "French","Russian",0.509090909090909
 "Dutch","Russian",0.626363636363636
 "Icelandic","Russian",0.705454545454545
 "Irish","Russian",0.573636363636363
+"Northern Sami","Russian",0.758181818181818
 "Serbian","Russian",0.728181818181818
 "Russian","Russian",0
 "Bashkir","Russian",0.636363636363635
@@ -3206,12 +3713,14 @@
 "Erzya","Russian",0.636363636363635
 "Estonian","Russian",0.388181818181818
 "Gagauz","Russian",0.363636363636364
+"Tatar","Russian",0.181818181818182
 "Latvian","Russian",0.454545454545454
 "Vepsian","Russian",0.454545454545454
 "Czech","Russian",0.486363636363636
 "Meadow Mari","Russian",0.480909090909091
 "Bulgarian","Russian",0.504545454545455
 "Belarusian","Russian",0.369090909090909
+"Ukrainian","Russian",0.446363636363636
 "Hungarian","Russian",0.484545454545454
 "Lithuanian","Russian",0.47
 "Kalmyk","Russian",0.824545454545454
@@ -3255,6 +3764,7 @@
 "Hawaiian","Russian",0.545454545454546
 "Tahitian","Russian",0.487272727272727
 "Inupiak","Russian",0.909090909090908
+"Greenlandic","Russian",0.545454545454546
 "Cheyenne","Russian",0.869999999999999
 "Choctaw","Russian",0.718181818181818
 "Muscogee","Russian",0.727272727272728
@@ -3287,14 +3797,17 @@
 "Wolof","Bashkir",0.697272727272727
 "Egyptian Arabic","Bashkir",0.609090909090908
 "Kabyle","Bashkir",0.512727272727273
+"Albanian","Bashkir",0.636363636363635
 "Latin","Bashkir",0.700909090909091
 "Neapolitan","Bashkir",0.818181818181818
 "Spanish","Bashkir",0.659999999999999
+"Greek","Bashkir",0.658181818181817
 "English","Bashkir",0.589090909090908
 "French","Bashkir",0.487272727272727
 "Dutch","Bashkir",0.671818181818181
 "Icelandic","Bashkir",0.517272727272727
 "Irish","Bashkir",0.642727272727272
+"Northern Sami","Bashkir",0.597272727272727
 "Serbian","Bashkir",0.949090909090909
 "Russian","Bashkir",0.636363636363635
 "Bashkir","Bashkir",0
@@ -3302,12 +3815,14 @@
 "Erzya","Bashkir",0.454545454545454
 "Estonian","Bashkir",0.627272727272727
 "Gagauz","Bashkir",0.727272727272728
+"Tatar","Bashkir",0.545454545454546
 "Latvian","Bashkir",0.454545454545454
 "Vepsian","Bashkir",0.454545454545454
 "Czech","Bashkir",0.549090909090909
 "Meadow Mari","Bashkir",0.526363636363636
 "Bulgarian","Bashkir",0.629999999999999
 "Belarusian","Bashkir",0.466363636363636
+"Ukrainian","Bashkir",0.538181818181818
 "Hungarian","Bashkir",0.568181818181818
 "Lithuanian","Bashkir",0.510909090909091
 "Kalmyk","Bashkir",0.771818181818182
@@ -3351,6 +3866,7 @@
 "Hawaiian","Bashkir",0.727272727272728
 "Tahitian","Bashkir",0.570909090909091
 "Inupiak","Bashkir",0.636363636363635
+"Greenlandic","Bashkir",0.454545454545454
 "Cheyenne","Bashkir",0.743636363636363
 "Choctaw","Bashkir",0.817272727272727
 "Muscogee","Bashkir",0.454545454545454
@@ -3383,14 +3899,17 @@
 "Wolof","Chuvash",0.540909090909091
 "Egyptian Arabic","Chuvash",0.519090909090909
 "Kabyle","Chuvash",0.424545454545455
+"Albanian","Chuvash",0.636363636363635
 "Latin","Chuvash",0.573636363636363
 "Neapolitan","Chuvash",0.727272727272728
 "Spanish","Chuvash",0.550909090909091
+"Greek","Chuvash",0.54
 "English","Chuvash",0.534545454545454
 "French","Chuvash",0.424545454545455
 "Dutch","Chuvash",0.573636363636363
 "Icelandic","Chuvash",0.51
 "Irish","Chuvash",0.44
+"Northern Sami","Chuvash",0.571818181818181
 "Serbian","Chuvash",0.854545454545453
 "Russian","Chuvash",0.363636363636364
 "Bashkir","Chuvash",0.454545454545454
@@ -3398,12 +3917,14 @@
 "Erzya","Chuvash",0.272727272727273
 "Estonian","Chuvash",0.413636363636364
 "Gagauz","Chuvash",0.545454545454546
+"Tatar","Chuvash",0.181818181818182
 "Latvian","Chuvash",0.272727272727273
 "Vepsian","Chuvash",0.272727272727273
 "Czech","Chuvash",0.42
 "Meadow Mari","Chuvash",0.294545454545455
 "Bulgarian","Chuvash",0.518181818181818
 "Belarusian","Chuvash",0.231818181818182
+"Ukrainian","Chuvash",0.373636363636364
 "Hungarian","Chuvash",0.410909090909091
 "Lithuanian","Chuvash",0.384545454545455
 "Kalmyk","Chuvash",0.723636363636363
@@ -3447,6 +3968,7 @@
 "Hawaiian","Chuvash",0.363636363636364
 "Tahitian","Chuvash",0.347272727272727
 "Inupiak","Chuvash",0.818181818181818
+"Greenlandic","Chuvash",0.454545454545454
 "Cheyenne","Chuvash",0.768181818181819
 "Choctaw","Chuvash",0.627272727272726
 "Muscogee","Chuvash",0.454545454545454
@@ -3479,14 +4001,17 @@
 "Wolof","Erzya",0.687272727272727
 "Egyptian Arabic","Erzya",0.585454545454545
 "Kabyle","Erzya",0.510909090909091
+"Albanian","Erzya",0.454545454545454
 "Latin","Erzya",0.532727272727272
 "Neapolitan","Erzya",0.636363636363635
 "Spanish","Erzya",0.442727272727273
+"Greek","Erzya",0.626363636363636
 "English","Erzya",0.387272727272727
 "French","Erzya",0.276363636363636
 "Dutch","Erzya",0.467272727272727
 "Icelandic","Erzya",0.31
 "Irish","Erzya",0.607272727272727
+"Northern Sami","Erzya",0.669090909090909
 "Serbian","Erzya",0.756363636363636
 "Russian","Erzya",0.636363636363635
 "Bashkir","Erzya",0.454545454545454
@@ -3494,12 +4019,14 @@
 "Erzya","Erzya",0
 "Estonian","Erzya",0.611818181818181
 "Gagauz","Erzya",0.727272727272728
+"Tatar","Erzya",0.454545454545454
 "Latvian","Erzya",0.363636363636364
 "Vepsian","Erzya",0.181818181818182
 "Czech","Erzya",0.513636363636364
 "Meadow Mari","Erzya",0.505454545454545
 "Bulgarian","Erzya",0.560909090909091
 "Belarusian","Erzya",0.438181818181818
+"Ukrainian","Erzya",0.528181818181818
 "Hungarian","Erzya",0.530909090909091
 "Lithuanian","Erzya",0.479090909090909
 "Kalmyk","Erzya",0.805454545454545
@@ -3543,6 +4070,7 @@
 "Hawaiian","Erzya",0.363636363636364
 "Tahitian","Erzya",0.534545454545454
 "Inupiak","Erzya",0.909090909090908
+"Greenlandic","Erzya",0.454545454545454
 "Cheyenne","Erzya",0.852727272727272
 "Choctaw","Erzya",0.715454545454545
 "Muscogee","Erzya",0.545454545454546
@@ -3575,14 +4103,17 @@
 "Wolof","Estonian",0.643636363636363
 "Egyptian Arabic","Estonian",0.654545454545454
 "Kabyle","Estonian",0.662727272727272
+"Albanian","Estonian",0.585454545454545
 "Latin","Estonian",0.74
 "Neapolitan","Estonian",0.756363636363636
 "Spanish","Estonian",0.77090909090909
+"Greek","Estonian",0.561818181818182
 "English","Estonian",0.67
 "French","Estonian",0.652727272727272
 "Dutch","Estonian",0.785454545454545
 "Icelandic","Estonian",0.756363636363636
 "Irish","Estonian",0.473636363636364
+"Northern Sami","Estonian",0.706363636363636
 "Serbian","Estonian",0.775454545454546
 "Russian","Estonian",0.388181818181818
 "Bashkir","Estonian",0.627272727272727
@@ -3590,12 +4121,14 @@
 "Erzya","Estonian",0.611818181818181
 "Estonian","Estonian",0
 "Gagauz","Estonian",0.542727272727273
+"Tatar","Estonian",0.487272727272727
 "Latvian","Estonian",0.435454545454546
 "Vepsian","Estonian",0.587272727272727
 "Czech","Estonian",0.592727272727272
 "Meadow Mari","Estonian",0.449090909090909
 "Bulgarian","Estonian",0.557272727272727
 "Belarusian","Estonian",0.465454545454545
+"Ukrainian","Estonian",0.529090909090909
 "Hungarian","Estonian",0.559090909090909
 "Lithuanian","Estonian",0.549090909090909
 "Kalmyk","Estonian",0.770909090909091
@@ -3639,6 +4172,7 @@
 "Hawaiian","Estonian",0.666363636363636
 "Tahitian","Estonian",0.580909090909091
 "Inupiak","Estonian",0.8
+"Greenlandic","Estonian",0.559090909090909
 "Cheyenne","Estonian",0.785454545454546
 "Choctaw","Estonian",0.610909090909091
 "Muscogee","Estonian",0.681818181818181
@@ -3671,14 +4205,17 @@
 "Wolof","Gagauz",0.622727272727272
 "Egyptian Arabic","Gagauz",0.649999999999999
 "Kabyle","Gagauz",0.534545454545454
+"Albanian","Gagauz",0.818181818181818
 "Latin","Gagauz",0.710909090909091
 "Neapolitan","Gagauz",0.727272727272728
 "Spanish","Gagauz",0.73
+"Greek","Gagauz",0.536363636363636
 "English","Gagauz",0.812727272727273
 "French","Gagauz",0.73
 "Dutch","Gagauz",0.721818181818182
 "Icelandic","Gagauz",0.724545454545455
 "Irish","Gagauz",0.621818181818181
+"Northern Sami","Gagauz",0.756363636363636
 "Serbian","Gagauz",0.718181818181818
 "Russian","Gagauz",0.363636363636364
 "Bashkir","Gagauz",0.727272727272728
@@ -3686,12 +4223,14 @@
 "Erzya","Gagauz",0.727272727272728
 "Estonian","Gagauz",0.542727272727273
 "Gagauz","Gagauz",0
+"Tatar","Gagauz",0.454545454545454
 "Latvian","Gagauz",0.636363636363635
 "Vepsian","Gagauz",0.727272727272728
 "Czech","Gagauz",0.557272727272727
 "Meadow Mari","Gagauz",0.633636363636363
 "Bulgarian","Gagauz",0.549090909090909
 "Belarusian","Gagauz",0.538181818181818
+"Ukrainian","Gagauz",0.526363636363636
 "Hungarian","Gagauz",0.537272727272727
 "Lithuanian","Gagauz",0.567272727272727
 "Kalmyk","Gagauz",0.834545454545454
@@ -3735,6 +4274,7 @@
 "Hawaiian","Gagauz",0.636363636363635
 "Tahitian","Gagauz",0.561818181818182
 "Inupiak","Gagauz",0.909090909090908
+"Greenlandic","Gagauz",0.727272727272728
 "Cheyenne","Gagauz",0.87090909090909
 "Choctaw","Gagauz",0.705454545454545
 "Muscogee","Gagauz",0.545454545454546
@@ -3743,6 +4283,108 @@
 "Haitian","Gagauz",0.430909090909091
 "Aymara","Gagauz",0.545454545454546
 "Guarani","Gagauz",0.447272727272728
+"Herero","Tatar",0.857272727272727
+"Zulu","Tatar",0.773636363636363
+"Tswana","Tatar",0.759090909090909
+"Shona","Tatar",0.737272727272727
+"Ndonga","Tatar",0.628181818181818
+"Swati","Tatar",0.818181818181818
+"Tsonga","Tatar",0.647272727272727
+"Venda","Tatar",0.653636363636363
+"Kongo","Tatar",0.454545454545454
+"Tumbuka","Tatar",0.654545454545454
+"Kikuyu","Tatar",0.727272727272728
+"Luganda","Tatar",0.673636363636363
+"Kinyarwanda","Tatar",0.76
+"Lingala","Tatar",0.454545454545454
+"Kirundi","Tatar",0.753636363636364
+"Igbo","Tatar",0.549090909090909
+"Bambara","Tatar",0.818181818181818
+"Tigrinya","Tatar",0.654545454545454
+"Afar","Tatar",0.818181818181818
+"Amharic","Tatar",0.705454545454545
+"Kanuri","Tatar",0.818181818181818
+"Wolof","Tatar",0.649999999999999
+"Egyptian Arabic","Tatar",0.637272727272727
+"Kabyle","Tatar",0.55
+"Albanian","Tatar",0.545454545454546
+"Latin","Tatar",0.59090909090909
+"Neapolitan","Tatar",0.818181818181818
+"Spanish","Tatar",0.588181818181818
+"Greek","Tatar",0.584545454545454
+"English","Tatar",0.531818181818182
+"French","Tatar",0.455454545454545
+"Dutch","Tatar",0.576363636363636
+"Icelandic","Tatar",0.632727272727272
+"Irish","Tatar",0.506363636363636
+"Northern Sami","Tatar",0.671818181818181
+"Serbian","Tatar",0.85
+"Russian","Tatar",0.181818181818182
+"Bashkir","Tatar",0.545454545454546
+"Chuvash","Tatar",0.181818181818182
+"Erzya","Tatar",0.454545454545454
+"Estonian","Tatar",0.487272727272727
+"Gagauz","Tatar",0.454545454545454
+"Tatar","Tatar",0
+"Latvian","Tatar",0.272727272727273
+"Vepsian","Tatar",0.454545454545454
+"Czech","Tatar",0.476363636363636
+"Meadow Mari","Tatar",0.414545454545455
+"Bulgarian","Tatar",0.633636363636363
+"Belarusian","Tatar",0.295454545454546
+"Ukrainian","Tatar",0.421818181818182
+"Hungarian","Tatar",0.483636363636364
+"Lithuanian","Tatar",0.468181818181818
+"Kalmyk","Tatar",0.838181818181818
+"Armenian","Tatar",0.632727272727272
+"Kurdish (Sorani)","Tatar",0.727272727272728
+"Abkhazian","Tatar",0.649999999999999
+"Kabardian","Tatar",0.589090909090909
+"Turkish","Tatar",0.465454545454545
+"Ossetian","Tatar",0.758181818181818
+"Hebrew","Tatar",0.639999999999999
+"Sindhi","Tatar",0.496363636363636
+"Eastern Punjabi","Tatar",0.909090909090908
+"Kazakh","Tatar",0.909090909090908
+"Sakha","Tatar",0.909090909090908
+"Korean","Tatar",0.363636363636364
+"Chinese","Tatar",0.409090909090909
+"Nuosu","Tatar",0.490909090909091
+"Japanese","Tatar",0.272727272727273
+"Tibetan","Tatar",0.603636363636363
+"Bengali","Tatar",0.636363636363635
+"Kashmiri","Tatar",0.501818181818182
+"Gujarati","Tatar",0.483636363636363
+"Telugu","Tatar",0.454545454545454
+"Tamil","Tatar",0.436363636363636
+"Malayalam","Tatar",0.727272727272728
+"Sinhalese","Tatar",0.454545454545454
+"Burmese","Tatar",0.409090909090909
+"Vietnamese","Tatar",0.636363636363635
+"Khmer","Tatar",0.393636363636364
+"Malay","Tatar",0.526363636363637
+"Thai","Tatar",0.363636363636364
+"Cebuano","Tatar",0.385454545454545
+"Banyumasan","Tatar",0.53
+"Minangkabau","Tatar",0.429090909090909
+"Tetum","Tatar",0.426363636363636
+"Nauruan","Tatar",0.63
+"Chamorro","Tatar",0.404545454545455
+"Samoan","Tatar",0.581818181818182
+"Tongan","Tatar",0.627272727272727
+"Maori","Tatar",0.544545454545454
+"Hawaiian","Tatar",0.363636363636364
+"Tahitian","Tatar",0.430909090909091
+"Inupiak","Tatar",0.909090909090908
+"Greenlandic","Tatar",0.545454545454546
+"Cheyenne","Tatar",0.88090909090909
+"Choctaw","Tatar",0.809090909090909
+"Muscogee","Tatar",0.636363636363635
+"Cherokee","Tatar",0.636363636363635
+"Navajo","Tatar",0.848181818181817
+"Haitian","Tatar",0.423636363636364
+"Aymara","Tatar",0.476363636363636
+"Guarani","Tatar",0.471818181818182
 "Herero","Latvian",0.785454545454545
 "Zulu","Latvian",0.689090909090909
 "Tswana","Latvian",0.767272727272727
@@ -3767,14 +4409,17 @@
 "Wolof","Latvian",0.756363636363636
 "Egyptian Arabic","Latvian",0.655454545454545
 "Kabyle","Latvian",0.565454545454545
+"Albanian","Latvian",0.454545454545454
 "Latin","Latvian",0.766363636363637
 "Neapolitan","Latvian",0.727272727272728
 "Spanish","Latvian",0.683636363636363
+"Greek","Latvian",0.660909090909091
 "English","Latvian",0.473636363636364
 "French","Latvian",0.463636363636364
 "Dutch","Latvian",0.698181818181818
 "Icelandic","Latvian",0.550909090909091
 "Irish","Latvian",0.468181818181818
+"Northern Sami","Latvian",0.609090909090909
 "Serbian","Latvian",0.89090909090909
 "Russian","Latvian",0.454545454545454
 "Bashkir","Latvian",0.454545454545454
@@ -3782,12 +4427,14 @@
 "Erzya","Latvian",0.363636363636364
 "Estonian","Latvian",0.435454545454546
 "Gagauz","Latvian",0.636363636363635
+"Tatar","Latvian",0.272727272727273
 "Latvian","Latvian",0
 "Vepsian","Latvian",0.363636363636364
 "Czech","Latvian",0.554545454545454
 "Meadow Mari","Latvian",0.436363636363636
 "Bulgarian","Latvian",0.664545454545454
 "Belarusian","Latvian",0.455454545454546
+"Ukrainian","Latvian",0.527272727272727
 "Hungarian","Latvian",0.58
 "Lithuanian","Latvian",0.51
 "Kalmyk","Latvian",0.756363636363636
@@ -3831,6 +4478,7 @@
 "Hawaiian","Latvian",0.636363636363635
 "Tahitian","Latvian",0.607272727272727
 "Inupiak","Latvian",0.818181818181818
+"Greenlandic","Latvian",0.363636363636364
 "Cheyenne","Latvian",0.796363636363636
 "Choctaw","Latvian",0.627272727272726
 "Muscogee","Latvian",0.636363636363635
@@ -3863,14 +4511,17 @@
 "Wolof","Vepsian",0.71
 "Egyptian Arabic","Vepsian",0.6
 "Kabyle","Vepsian",0.495454545454545
+"Albanian","Vepsian",0.363636363636364
 "Latin","Vepsian",0.52
 "Neapolitan","Vepsian",0.636363636363635
 "Spanish","Vepsian",0.421818181818182
+"Greek","Vepsian",0.595454545454545
 "English","Vepsian",0.311818181818182
 "French","Vepsian",0.205454545454546
 "Dutch","Vepsian",0.441818181818182
 "Icelandic","Vepsian",0.31
 "Irish","Vepsian",0.598181818181818
+"Northern Sami","Vepsian",0.658181818181818
 "Serbian","Vepsian",0.732727272727273
 "Russian","Vepsian",0.454545454545454
 "Bashkir","Vepsian",0.454545454545454
@@ -3878,12 +4529,14 @@
 "Erzya","Vepsian",0.181818181818182
 "Estonian","Vepsian",0.587272727272727
 "Gagauz","Vepsian",0.727272727272728
+"Tatar","Vepsian",0.454545454545454
 "Latvian","Vepsian",0.363636363636364
 "Vepsian","Vepsian",0
 "Czech","Vepsian",0.496363636363636
 "Meadow Mari","Vepsian",0.451818181818182
 "Bulgarian","Vepsian",0.570909090909091
 "Belarusian","Vepsian",0.396363636363637
+"Ukrainian","Vepsian",0.493636363636364
 "Hungarian","Vepsian",0.528181818181818
 "Lithuanian","Vepsian",0.44
 "Kalmyk","Vepsian",0.80090909090909
@@ -3927,6 +4580,7 @@
 "Hawaiian","Vepsian",0.454545454545454
 "Tahitian","Vepsian",0.494545454545454
 "Inupiak","Vepsian",0.909090909090908
+"Greenlandic","Vepsian",0.363636363636364
 "Cheyenne","Vepsian",0.848181818181817
 "Choctaw","Vepsian",0.627272727272726
 "Muscogee","Vepsian",0.545454545454546
@@ -3959,14 +4613,17 @@
 "Wolof","Czech",0.639999999999999
 "Egyptian Arabic","Czech",0.488181818181818
 "Kabyle","Czech",0.482727272727273
+"Albanian","Czech",0.625454545454545
 "Latin","Czech",0.590909090909091
 "Neapolitan","Czech",0.693636363636364
 "Spanish","Czech",0.525454545454546
+"Greek","Czech",0.440909090909091
 "English","Czech",0.631818181818182
 "French","Czech",0.537272727272727
 "Dutch","Czech",0.527272727272727
 "Icelandic","Czech",0.552727272727272
 "Irish","Czech",0.507272727272727
+"Northern Sami","Czech",0.645454545454545
 "Serbian","Czech",0.79
 "Russian","Czech",0.486363636363636
 "Bashkir","Czech",0.549090909090909
@@ -3974,12 +4631,14 @@
 "Erzya","Czech",0.513636363636364
 "Estonian","Czech",0.592727272727272
 "Gagauz","Czech",0.557272727272727
+"Tatar","Czech",0.476363636363636
 "Latvian","Czech",0.554545454545454
 "Vepsian","Czech",0.496363636363636
 "Czech","Czech",0
 "Meadow Mari","Czech",0.551818181818182
 "Bulgarian","Czech",0.498181818181818
 "Belarusian","Czech",0.463636363636364
+"Ukrainian","Czech",0.464545454545455
 "Hungarian","Czech",0.463636363636364
 "Lithuanian","Czech",0.426363636363636
 "Kalmyk","Czech",0.782727272727272
@@ -4023,6 +4682,7 @@
 "Hawaiian","Czech",0.544545454545454
 "Tahitian","Czech",0.500909090909091
 "Inupiak","Czech",0.829999999999999
+"Greenlandic","Czech",0.554545454545454
 "Cheyenne","Czech",0.802727272727272
 "Choctaw","Czech",0.689090909090909
 "Muscogee","Czech",0.535454545454545
@@ -4055,14 +4715,17 @@
 "Wolof","Meadow Mari",0.641818181818181
 "Egyptian Arabic","Meadow Mari",0.638181818181817
 "Kabyle","Meadow Mari",0.535454545454545
+"Albanian","Meadow Mari",0.599090909090909
 "Latin","Meadow Mari",0.675454545454545
 "Neapolitan","Meadow Mari",0.739090909090909
 "Spanish","Meadow Mari",0.652727272727272
+"Greek","Meadow Mari",0.655454545454545
 "English","Meadow Mari",0.571818181818181
 "French","Meadow Mari",0.556363636363636
 "Dutch","Meadow Mari",0.67
 "Icelandic","Meadow Mari",0.635454545454545
 "Irish","Meadow Mari",0.459090909090909
+"Northern Sami","Meadow Mari",0.574545454545454
 "Serbian","Meadow Mari",0.872727272727272
 "Russian","Meadow Mari",0.480909090909091
 "Bashkir","Meadow Mari",0.526363636363636
@@ -4070,12 +4733,14 @@
 "Erzya","Meadow Mari",0.505454545454545
 "Estonian","Meadow Mari",0.449090909090909
 "Gagauz","Meadow Mari",0.633636363636363
+"Tatar","Meadow Mari",0.414545454545455
 "Latvian","Meadow Mari",0.436363636363636
 "Vepsian","Meadow Mari",0.451818181818182
 "Czech","Meadow Mari",0.551818181818182
 "Meadow Mari","Meadow Mari",0
 "Bulgarian","Meadow Mari",0.634545454545454
 "Belarusian","Meadow Mari",0.349090909090909
+"Ukrainian","Meadow Mari",0.475454545454546
 "Hungarian","Meadow Mari",0.533636363636364
 "Lithuanian","Meadow Mari",0.510909090909091
 "Kalmyk","Meadow Mari",0.751818181818182
@@ -4119,6 +4784,7 @@
 "Hawaiian","Meadow Mari",0.566363636363636
 "Tahitian","Meadow Mari",0.467272727272727
 "Inupiak","Meadow Mari",0.788181818181818
+"Greenlandic","Meadow Mari",0.450909090909091
 "Cheyenne","Meadow Mari",0.756363636363636
 "Choctaw","Meadow Mari",0.668181818181818
 "Muscogee","Meadow Mari",0.541818181818182
@@ -4151,14 +4817,17 @@
 "Wolof","Bulgarian",0.636363636363636
 "Egyptian Arabic","Bulgarian",0.542727272727273
 "Kabyle","Bulgarian",0.453636363636364
+"Albanian","Bulgarian",0.76
 "Latin","Bulgarian",0.690909090909091
 "Neapolitan","Bulgarian",0.745454545454546
 "Spanish","Bulgarian",0.543636363636363
+"Greek","Bulgarian",0.358181818181818
 "English","Bulgarian",0.754545454545455
 "French","Bulgarian",0.650909090909091
 "Dutch","Bulgarian",0.564545454545454
 "Icelandic","Bulgarian",0.626363636363636
 "Irish","Bulgarian",0.643636363636363
+"Northern Sami","Bulgarian",0.684545454545454
 "Serbian","Bulgarian",0.66
 "Russian","Bulgarian",0.504545454545455
 "Bashkir","Bulgarian",0.629999999999999
@@ -4166,12 +4835,14 @@
 "Erzya","Bulgarian",0.560909090909091
 "Estonian","Bulgarian",0.557272727272727
 "Gagauz","Bulgarian",0.549090909090909
+"Tatar","Bulgarian",0.633636363636363
 "Latvian","Bulgarian",0.664545454545454
 "Vepsian","Bulgarian",0.570909090909091
 "Czech","Bulgarian",0.498181818181818
 "Meadow Mari","Bulgarian",0.634545454545454
 "Bulgarian","Bulgarian",0
 "Belarusian","Bulgarian",0.567272727272727
+"Ukrainian","Bulgarian",0.546363636363636
 "Hungarian","Bulgarian",0.484545454545454
 "Lithuanian","Bulgarian",0.512727272727273
 "Kalmyk","Bulgarian",0.756363636363636
@@ -4215,6 +4886,7 @@
 "Hawaiian","Bulgarian",0.654545454545454
 "Tahitian","Bulgarian",0.556363636363636
 "Inupiak","Bulgarian",0.800909090909091
+"Greenlandic","Bulgarian",0.624545454545454
 "Cheyenne","Bulgarian",0.770909090909091
 "Choctaw","Bulgarian",0.65
 "Muscogee","Bulgarian",0.565454545454545
@@ -4247,14 +4919,17 @@
 "Wolof","Belarusian",0.596363636363636
 "Egyptian Arabic","Belarusian",0.58
 "Kabyle","Belarusian",0.488181818181818
+"Albanian","Belarusian",0.587272727272727
 "Latin","Belarusian",0.579090909090909
 "Neapolitan","Belarusian",0.774545454545455
 "Spanish","Belarusian",0.593636363636364
+"Greek","Belarusian",0.567272727272727
 "English","Belarusian",0.56
 "French","Belarusian",0.458181818181818
 "Dutch","Belarusian",0.579090909090909
 "Icelandic","Belarusian",0.564545454545454
 "Irish","Belarusian",0.471818181818182
+"Northern Sami","Belarusian",0.599090909090909
 "Serbian","Belarusian",0.862727272727272
 "Russian","Belarusian",0.369090909090909
 "Bashkir","Belarusian",0.466363636363636
@@ -4262,12 +4937,14 @@
 "Erzya","Belarusian",0.438181818181818
 "Estonian","Belarusian",0.465454545454545
 "Gagauz","Belarusian",0.538181818181818
+"Tatar","Belarusian",0.295454545454546
 "Latvian","Belarusian",0.455454545454546
 "Vepsian","Belarusian",0.396363636363637
 "Czech","Belarusian",0.463636363636364
 "Meadow Mari","Belarusian",0.349090909090909
 "Bulgarian","Belarusian",0.567272727272727
 "Belarusian","Belarusian",0
+"Ukrainian","Belarusian",0.395454545454545
 "Hungarian","Belarusian",0.446363636363637
 "Lithuanian","Belarusian",0.432727272727273
 "Kalmyk","Belarusian",0.754545454545454
@@ -4311,6 +4988,7 @@
 "Hawaiian","Belarusian",0.459090909090909
 "Tahitian","Belarusian",0.395454545454545
 "Inupiak","Belarusian",0.818181818181818
+"Greenlandic","Belarusian",0.477272727272727
 "Cheyenne","Belarusian",0.782727272727272
 "Choctaw","Belarusian",0.695454545454545
 "Muscogee","Belarusian",0.497272727272727
@@ -4319,6 +4997,108 @@
 "Haitian","Belarusian",0.384545454545455
 "Aymara","Belarusian",0.369090909090909
 "Guarani","Belarusian",0.396363636363637
+"Herero","Ukrainian",0.757272727272727
+"Zulu","Ukrainian",0.699090909090909
+"Tswana","Ukrainian",0.684545454545454
+"Shona","Ukrainian",0.682727272727272
+"Ndonga","Ukrainian",0.653636363636363
+"Swati","Ukrainian",0.701818181818182
+"Tsonga","Ukrainian",0.561818181818182
+"Venda","Ukrainian",0.589090909090909
+"Kongo","Ukrainian",0.458181818181818
+"Tumbuka","Ukrainian",0.587272727272727
+"Kikuyu","Ukrainian",0.533636363636364
+"Luganda","Ukrainian",0.599090909090909
+"Kinyarwanda","Ukrainian",0.686363636363636
+"Lingala","Ukrainian",0.457272727272727
+"Kirundi","Ukrainian",0.701818181818181
+"Igbo","Ukrainian",0.529090909090909
+"Bambara","Ukrainian",0.63
+"Tigrinya","Ukrainian",0.582727272727273
+"Afar","Ukrainian",0.709090909090909
+"Amharic","Ukrainian",0.660909090909091
+"Kanuri","Ukrainian",0.694545454545454
+"Wolof","Ukrainian",0.592727272727273
+"Egyptian Arabic","Ukrainian",0.526363636363636
+"Kabyle","Ukrainian",0.495454545454545
+"Albanian","Ukrainian",0.651818181818182
+"Latin","Ukrainian",0.601818181818181
+"Neapolitan","Ukrainian",0.714545454545454
+"Spanish","Ukrainian",0.57
+"Greek","Ukrainian",0.507272727272727
+"English","Ukrainian",0.656363636363636
+"French","Ukrainian",0.561818181818182
+"Dutch","Ukrainian",0.583636363636363
+"Icelandic","Ukrainian",0.560909090909091
+"Irish","Ukrainian",0.488181818181818
+"Northern Sami","Ukrainian",0.629999999999999
+"Serbian","Ukrainian",0.827272727272727
+"Russian","Ukrainian",0.446363636363636
+"Bashkir","Ukrainian",0.538181818181818
+"Chuvash","Ukrainian",0.373636363636364
+"Erzya","Ukrainian",0.528181818181818
+"Estonian","Ukrainian",0.529090909090909
+"Gagauz","Ukrainian",0.526363636363636
+"Tatar","Ukrainian",0.421818181818182
+"Latvian","Ukrainian",0.527272727272727
+"Vepsian","Ukrainian",0.493636363636364
+"Czech","Ukrainian",0.464545454545455
+"Meadow Mari","Ukrainian",0.475454545454546
+"Bulgarian","Ukrainian",0.546363636363636
+"Belarusian","Ukrainian",0.395454545454545
+"Ukrainian","Ukrainian",0
+"Hungarian","Ukrainian",0.455454545454546
+"Lithuanian","Ukrainian",0.451818181818182
+"Kalmyk","Ukrainian",0.756363636363636
+"Armenian","Ukrainian",0.507272727272727
+"Kurdish (Sorani)","Ukrainian",0.596363636363636
+"Abkhazian","Ukrainian",0.591818181818181
+"Kabardian","Ukrainian",0.567272727272727
+"Turkish","Ukrainian",0.423636363636364
+"Ossetian","Ukrainian",0.62090909090909
+"Hebrew","Ukrainian",0.540909090909091
+"Sindhi","Ukrainian",0.444545454545454
+"Eastern Punjabi","Ukrainian",0.793636363636363
+"Kazakh","Ukrainian",0.799090909090909
+"Sakha","Ukrainian",0.775454545454546
+"Korean","Ukrainian",0.614545454545454
+"Chinese","Ukrainian",0.447272727272727
+"Nuosu","Ukrainian",0.486363636363636
+"Japanese","Ukrainian",0.552727272727273
+"Tibetan","Ukrainian",0.5
+"Bengali","Ukrainian",0.659090909090909
+"Kashmiri","Ukrainian",0.511818181818182
+"Gujarati","Ukrainian",0.446363636363636
+"Telugu","Ukrainian",0.396363636363636
+"Tamil","Ukrainian",0.425454545454545
+"Malayalam","Ukrainian",0.75
+"Sinhalese","Ukrainian",0.395454545454546
+"Burmese","Ukrainian",0.493636363636363
+"Vietnamese","Ukrainian",0.679090909090909
+"Khmer","Ukrainian",0.49
+"Malay","Ukrainian",0.51
+"Thai","Ukrainian",0.496363636363636
+"Cebuano","Ukrainian",0.512727272727272
+"Banyumasan","Ukrainian",0.529090909090909
+"Minangkabau","Ukrainian",0.487272727272727
+"Tetum","Ukrainian",0.516363636363636
+"Nauruan","Ukrainian",0.632727272727272
+"Chamorro","Ukrainian",0.515454545454545
+"Samoan","Ukrainian",0.630909090909091
+"Tongan","Ukrainian",0.62
+"Maori","Ukrainian",0.523636363636363
+"Hawaiian","Ukrainian",0.542727272727272
+"Tahitian","Ukrainian",0.456363636363636
+"Inupiak","Ukrainian",0.812727272727272
+"Greenlandic","Ukrainian",0.552727272727273
+"Cheyenne","Ukrainian",0.791818181818181
+"Choctaw","Ukrainian",0.699090909090909
+"Muscogee","Ukrainian",0.513636363636363
+"Cherokee","Ukrainian",0.531818181818182
+"Navajo","Ukrainian",0.748181818181818
+"Haitian","Ukrainian",0.42
+"Aymara","Ukrainian",0.434545454545455
+"Guarani","Ukrainian",0.438181818181818
 "Herero","Hungarian",0.761818181818181
 "Zulu","Hungarian",0.708181818181818
 "Tswana","Hungarian",0.688181818181818
@@ -4343,14 +5123,17 @@
 "Wolof","Hungarian",0.605454545454545
 "Egyptian Arabic","Hungarian",0.511818181818182
 "Kabyle","Hungarian",0.5
+"Albanian","Hungarian",0.68
 "Latin","Hungarian",0.582727272727273
 "Neapolitan","Hungarian",0.701818181818182
 "Spanish","Hungarian",0.557272727272727
+"Greek","Hungarian",0.453636363636364
 "English","Hungarian",0.672727272727272
 "French","Hungarian",0.577272727272727
 "Dutch","Hungarian",0.561818181818182
 "Icelandic","Hungarian",0.584545454545454
 "Irish","Hungarian",0.507272727272727
+"Northern Sami","Hungarian",0.643636363636363
 "Serbian","Hungarian",0.805454545454545
 "Russian","Hungarian",0.484545454545454
 "Bashkir","Hungarian",0.568181818181818
@@ -4358,12 +5141,14 @@
 "Erzya","Hungarian",0.530909090909091
 "Estonian","Hungarian",0.559090909090909
 "Gagauz","Hungarian",0.537272727272727
+"Tatar","Hungarian",0.483636363636364
 "Latvian","Hungarian",0.58
 "Vepsian","Hungarian",0.528181818181818
 "Czech","Hungarian",0.463636363636364
 "Meadow Mari","Hungarian",0.533636363636364
 "Bulgarian","Hungarian",0.484545454545454
 "Belarusian","Hungarian",0.446363636363637
+"Ukrainian","Hungarian",0.455454545454546
 "Hungarian","Hungarian",0
 "Lithuanian","Hungarian",0.460909090909091
 "Kalmyk","Hungarian",0.761818181818182
@@ -4407,6 +5192,7 @@
 "Hawaiian","Hungarian",0.555454545454545
 "Tahitian","Hungarian",0.477272727272727
 "Inupiak","Hungarian",0.81090909090909
+"Greenlandic","Hungarian",0.58
 "Cheyenne","Hungarian",0.792727272727272
 "Choctaw","Hungarian",0.690909090909091
 "Muscogee","Hungarian",0.533636363636364
@@ -4439,14 +5225,17 @@
 "Wolof","Lithuanian",0.629090909090909
 "Egyptian Arabic","Lithuanian",0.503636363636364
 "Kabyle","Lithuanian",0.505454545454545
+"Albanian","Lithuanian",0.627272727272727
 "Latin","Lithuanian",0.600909090909091
 "Neapolitan","Lithuanian",0.705454545454546
 "Spanish","Lithuanian",0.549090909090909
+"Greek","Lithuanian",0.493636363636364
 "English","Lithuanian",0.629090909090909
 "French","Lithuanian",0.517272727272727
 "Dutch","Lithuanian",0.577272727272727
 "Icelandic","Lithuanian",0.521818181818182
 "Irish","Lithuanian",0.529090909090909
+"Northern Sami","Lithuanian",0.637272727272727
 "Serbian","Lithuanian",0.829999999999999
 "Russian","Lithuanian",0.47
 "Bashkir","Lithuanian",0.510909090909091
@@ -4454,12 +5243,14 @@
 "Erzya","Lithuanian",0.479090909090909
 "Estonian","Lithuanian",0.549090909090909
 "Gagauz","Lithuanian",0.567272727272727
+"Tatar","Lithuanian",0.468181818181818
 "Latvian","Lithuanian",0.51
 "Vepsian","Lithuanian",0.44
 "Czech","Lithuanian",0.426363636363636
 "Meadow Mari","Lithuanian",0.510909090909091
 "Bulgarian","Lithuanian",0.512727272727273
 "Belarusian","Lithuanian",0.432727272727273
+"Ukrainian","Lithuanian",0.451818181818182
 "Hungarian","Lithuanian",0.460909090909091
 "Lithuanian","Lithuanian",0
 "Kalmyk","Lithuanian",0.754545454545455
@@ -4503,6 +5294,7 @@
 "Hawaiian","Lithuanian",0.564545454545454
 "Tahitian","Lithuanian",0.496363636363636
 "Inupiak","Lithuanian",0.812727272727272
+"Greenlandic","Lithuanian",0.519090909090909
 "Cheyenne","Lithuanian",0.779090909090909
 "Choctaw","Lithuanian",0.671818181818182
 "Muscogee","Lithuanian",0.523636363636364
@@ -4535,14 +5327,17 @@
 "Wolof","Kalmyk",0.664545454545454
 "Egyptian Arabic","Kalmyk",0.751818181818182
 "Kabyle","Kalmyk",0.74
+"Albanian","Kalmyk",0.926363636363636
 "Latin","Kalmyk",0.916363636363636
 "Neapolitan","Kalmyk",0.851818181818181
 "Spanish","Kalmyk",0.882727272727272
+"Greek","Kalmyk",0.773636363636363
 "English","Kalmyk",0.896363636363636
 "French","Kalmyk",0.88090909090909
 "Dutch","Kalmyk",0.889999999999999
 "Icelandic","Kalmyk",0.822727272727272
 "Irish","Kalmyk",0.78
+"Northern Sami","Kalmyk",0.573636363636364
 "Serbian","Kalmyk",0.890909090909091
 "Russian","Kalmyk",0.824545454545454
 "Bashkir","Kalmyk",0.771818181818182
@@ -4550,12 +5345,14 @@
 "Erzya","Kalmyk",0.805454545454545
 "Estonian","Kalmyk",0.770909090909091
 "Gagauz","Kalmyk",0.834545454545454
+"Tatar","Kalmyk",0.838181818181818
 "Latvian","Kalmyk",0.756363636363636
 "Vepsian","Kalmyk",0.80090909090909
 "Czech","Kalmyk",0.782727272727272
 "Meadow Mari","Kalmyk",0.751818181818182
 "Bulgarian","Kalmyk",0.756363636363636
 "Belarusian","Kalmyk",0.754545454545454
+"Ukrainian","Kalmyk",0.756363636363636
 "Hungarian","Kalmyk",0.761818181818182
 "Lithuanian","Kalmyk",0.754545454545455
 "Kalmyk","Kalmyk",0
@@ -4599,6 +5396,7 @@
 "Hawaiian","Kalmyk",0.899999999999999
 "Tahitian","Kalmyk",0.761818181818181
 "Inupiak","Kalmyk",0.565454545454545
+"Greenlandic","Kalmyk",0.724545454545454
 "Cheyenne","Kalmyk",0.66090909090909
 "Choctaw","Kalmyk",0.619090909090909
 "Muscogee","Kalmyk",0.717272727272727
@@ -4631,14 +5429,17 @@
 "Wolof","Armenian",0.634545454545454
 "Egyptian Arabic","Armenian",0.291818181818182
 "Kabyle","Armenian",0.539090909090909
+"Albanian","Armenian",0.770909090909091
 "Latin","Armenian",0.606363636363636
 "Neapolitan","Armenian",0.543636363636364
 "Spanish","Armenian",0.564545454545454
+"Greek","Armenian",0.459090909090909
 "English","Armenian",0.764545454545454
 "French","Armenian",0.680909090909091
 "Dutch","Armenian",0.551818181818182
 "Icelandic","Armenian",0.537272727272727
 "Irish","Armenian",0.556363636363636
+"Northern Sami","Armenian",0.686363636363636
 "Serbian","Armenian",0.854545454545454
 "Russian","Armenian",0.61
 "Bashkir","Armenian",0.615454545454545
@@ -4646,12 +5447,14 @@
 "Erzya","Armenian",0.60090909090909
 "Estonian","Armenian",0.65090909090909
 "Gagauz","Armenian",0.626363636363636
+"Tatar","Armenian",0.632727272727272
 "Latvian","Armenian",0.658181818181818
 "Vepsian","Armenian",0.592727272727272
 "Czech","Armenian",0.495454545454546
 "Meadow Mari","Armenian",0.628181818181818
 "Bulgarian","Armenian",0.532727272727273
 "Belarusian","Armenian",0.574545454545454
+"Ukrainian","Armenian",0.507272727272727
 "Hungarian","Armenian",0.502727272727272
 "Lithuanian","Armenian",0.507272727272727
 "Kalmyk","Armenian",0.747272727272727
@@ -4695,6 +5498,7 @@
 "Hawaiian","Armenian",0.659090909090908
 "Tahitian","Armenian",0.568181818181818
 "Inupiak","Armenian",0.79090909090909
+"Greenlandic","Armenian",0.632727272727272
 "Cheyenne","Armenian",0.784545454545454
 "Choctaw","Armenian",0.683636363636363
 "Muscogee","Armenian",0.56
@@ -4727,14 +5531,17 @@
 "Wolof","Kurdish (Sorani)",0.755454545454545
 "Egyptian Arabic","Kurdish (Sorani)",0.378181818181818
 "Kabyle","Kurdish (Sorani)",0.639090909090909
+"Albanian","Kurdish (Sorani)",0.727272727272728
 "Latin","Kurdish (Sorani)",0.724545454545455
 "Neapolitan","Kurdish (Sorani)",0.545454545454546
 "Spanish","Kurdish (Sorani)",0.655454545454545
+"Greek","Kurdish (Sorani)",0.552727272727272
 "English","Kurdish (Sorani)",0.749090909090909
 "French","Kurdish (Sorani)",0.747272727272727
 "Dutch","Kurdish (Sorani)",0.670909090909091
 "Icelandic","Kurdish (Sorani)",0.636363636363636
 "Irish","Kurdish (Sorani)",0.542727272727272
+"Northern Sami","Kurdish (Sorani)",0.705454545454546
 "Serbian","Kurdish (Sorani)",0.869090909090908
 "Russian","Kurdish (Sorani)",0.636363636363635
 "Bashkir","Kurdish (Sorani)",0.545454545454546
@@ -4742,12 +5549,14 @@
 "Erzya","Kurdish (Sorani)",0.727272727272728
 "Estonian","Kurdish (Sorani)",0.646363636363636
 "Gagauz","Kurdish (Sorani)",0.727272727272728
+"Tatar","Kurdish (Sorani)",0.727272727272728
 "Latvian","Kurdish (Sorani)",0.636363636363635
 "Vepsian","Kurdish (Sorani)",0.636363636363635
 "Czech","Kurdish (Sorani)",0.592727272727272
 "Meadow Mari","Kurdish (Sorani)",0.636363636363636
 "Bulgarian","Kurdish (Sorani)",0.623636363636363
 "Belarusian","Kurdish (Sorani)",0.662727272727272
+"Ukrainian","Kurdish (Sorani)",0.596363636363636
 "Hungarian","Kurdish (Sorani)",0.597272727272727
 "Lithuanian","Kurdish (Sorani)",0.586363636363636
 "Kalmyk","Kurdish (Sorani)",0.749090909090909
@@ -4791,6 +5600,7 @@
 "Hawaiian","Kurdish (Sorani)",0.818181818181818
 "Tahitian","Kurdish (Sorani)",0.679090909090909
 "Inupiak","Kurdish (Sorani)",0.818181818181818
+"Greenlandic","Kurdish (Sorani)",0.454545454545454
 "Cheyenne","Kurdish (Sorani)",0.783636363636364
 "Choctaw","Kurdish (Sorani)",0.635454545454544
 "Muscogee","Kurdish (Sorani)",0.727272727272728
@@ -4823,14 +5633,17 @@
 "Wolof","Abkhazian",0.452727272727273
 "Egyptian Arabic","Abkhazian",0.629090909090909
 "Kabyle","Abkhazian",0.629999999999999
+"Albanian","Abkhazian",0.707272727272727
 "Latin","Abkhazian",0.732727272727273
 "Neapolitan","Abkhazian",0.738181818181818
 "Spanish","Abkhazian",0.745454545454545
+"Greek","Abkhazian",0.658181818181818
 "English","Abkhazian",0.775454545454546
 "French","Abkhazian",0.750909090909091
 "Dutch","Abkhazian",0.76
 "Icelandic","Abkhazian",0.716363636363636
 "Irish","Abkhazian",0.48
+"Northern Sami","Abkhazian",0.681818181818182
 "Serbian","Abkhazian",0.869090909090909
 "Russian","Abkhazian",0.634545454545454
 "Bashkir","Abkhazian",0.7
@@ -4838,12 +5651,14 @@
 "Erzya","Abkhazian",0.67
 "Estonian","Abkhazian",0.470909090909091
 "Gagauz","Abkhazian",0.639090909090908
+"Tatar","Abkhazian",0.649999999999999
 "Latvian","Abkhazian",0.572727272727272
 "Vepsian","Abkhazian",0.68
 "Czech","Abkhazian",0.626363636363636
 "Meadow Mari","Abkhazian",0.537272727272727
 "Bulgarian","Abkhazian",0.615454545454545
 "Belarusian","Abkhazian",0.566363636363636
+"Ukrainian","Abkhazian",0.591818181818181
 "Hungarian","Abkhazian",0.585454545454545
 "Lithuanian","Abkhazian",0.622727272727272
 "Kalmyk","Abkhazian",0.729090909090909
@@ -4887,6 +5702,7 @@
 "Hawaiian","Abkhazian",0.663636363636363
 "Tahitian","Abkhazian",0.565454545454545
 "Inupiak","Abkhazian",0.771818181818182
+"Greenlandic","Abkhazian",0.639999999999999
 "Cheyenne","Abkhazian",0.660909090909091
 "Choctaw","Abkhazian",0.488181818181818
 "Muscogee","Abkhazian",0.624545454545454
@@ -4919,14 +5735,17 @@
 "Wolof","Kabardian",0.646363636363636
 "Egyptian Arabic","Kabardian",0.62
 "Kabyle","Kabardian",0.505454545454545
+"Albanian","Kabardian",0.727272727272727
 "Latin","Kabardian",0.693636363636363
 "Neapolitan","Kabardian",0.737272727272727
 "Spanish","Kabardian",0.697272727272727
+"Greek","Kabardian",0.614545454545454
 "English","Kabardian",0.711818181818182
 "French","Kabardian",0.71
 "Dutch","Kabardian",0.730909090909091
 "Icelandic","Kabardian",0.691818181818181
 "Irish","Kabardian",0.52
+"Northern Sami","Kabardian",0.645454545454545
 "Serbian","Kabardian",0.748181818181818
 "Russian","Kabardian",0.595454545454545
 "Bashkir","Kabardian",0.672727272727273
@@ -4934,12 +5753,14 @@
 "Erzya","Kabardian",0.659090909090909
 "Estonian","Kabardian",0.558181818181818
 "Gagauz","Kabardian",0.519090909090909
+"Tatar","Kabardian",0.589090909090909
 "Latvian","Kabardian",0.634545454545454
 "Vepsian","Kabardian",0.647272727272727
 "Czech","Kabardian",0.573636363636363
 "Meadow Mari","Kabardian",0.412727272727273
 "Bulgarian","Kabardian",0.629999999999999
 "Belarusian","Kabardian",0.523636363636364
+"Ukrainian","Kabardian",0.567272727272727
 "Hungarian","Kabardian",0.569090909090909
 "Lithuanian","Kabardian",0.576363636363636
 "Kalmyk","Kabardian",0.756363636363636
@@ -4983,6 +5804,7 @@
 "Hawaiian","Kabardian",0.612727272727272
 "Tahitian","Kabardian",0.54
 "Inupiak","Kabardian",0.794545454545454
+"Greenlandic","Kabardian",0.612727272727272
 "Cheyenne","Kabardian",0.76090909090909
 "Choctaw","Kabardian",0.585454545454545
 "Muscogee","Kabardian",0.5
@@ -5015,14 +5837,17 @@
 "Wolof","Turkish",0.572727272727273
 "Egyptian Arabic","Turkish",0.443636363636364
 "Kabyle","Turkish",0.44
+"Albanian","Turkish",0.646363636363636
 "Latin","Turkish",0.491818181818182
 "Neapolitan","Turkish",0.624545454545454
 "Spanish","Turkish",0.457272727272727
+"Greek","Turkish",0.453636363636364
 "English","Turkish",0.653636363636363
 "French","Turkish",0.573636363636363
 "Dutch","Turkish",0.472727272727273
 "Icelandic","Turkish",0.466363636363636
 "Irish","Turkish",0.387272727272727
+"Northern Sami","Turkish",0.599090909090908
 "Serbian","Turkish",0.851818181818181
 "Russian","Turkish",0.540909090909091
 "Bashkir","Turkish",0.534545454545455
@@ -5030,12 +5855,14 @@
 "Erzya","Turkish",0.504545454545455
 "Estonian","Turkish",0.597272727272727
 "Gagauz","Turkish",0.565454545454545
+"Tatar","Turkish",0.465454545454545
 "Latvian","Turkish",0.551818181818182
 "Vepsian","Turkish",0.496363636363636
 "Czech","Turkish",0.447272727272727
 "Meadow Mari","Turkish",0.481818181818182
 "Bulgarian","Turkish",0.533636363636363
 "Belarusian","Turkish",0.438181818181818
+"Ukrainian","Turkish",0.423636363636364
 "Hungarian","Turkish",0.456363636363637
 "Lithuanian","Turkish",0.450909090909091
 "Kalmyk","Turkish",0.767272727272727
@@ -5079,6 +5906,7 @@
 "Hawaiian","Turkish",0.487272727272727
 "Tahitian","Turkish",0.411818181818182
 "Inupiak","Turkish",0.803636363636363
+"Greenlandic","Turkish",0.549090909090909
 "Cheyenne","Turkish",0.790909090909091
 "Choctaw","Turkish",0.688181818181818
 "Muscogee","Turkish",0.48
@@ -5111,14 +5939,17 @@
 "Wolof","Ossetian",0.646363636363635
 "Egyptian Arabic","Ossetian",0.378181818181818
 "Kabyle","Ossetian",0.648181818181817
+"Albanian","Ossetian",0.909999999999999
 "Latin","Ossetian",0.700909090909091
 "Neapolitan","Ossetian",0.669090909090909
 "Spanish","Ossetian",0.677272727272727
+"Greek","Ossetian",0.581818181818181
 "English","Ossetian",0.885454545454545
 "French","Ossetian",0.782727272727273
 "Dutch","Ossetian",0.702727272727273
 "Icelandic","Ossetian",0.633636363636363
 "Irish","Ossetian",0.682727272727272
+"Northern Sami","Ossetian",0.750909090909091
 "Serbian","Ossetian",0.792727272727272
 "Russian","Ossetian",0.743636363636364
 "Bashkir","Ossetian",0.681818181818181
@@ -5126,12 +5957,14 @@
 "Erzya","Ossetian",0.72
 "Estonian","Ossetian",0.758181818181818
 "Gagauz","Ossetian",0.743636363636364
+"Tatar","Ossetian",0.758181818181818
 "Latvian","Ossetian",0.772727272727273
 "Vepsian","Ossetian",0.712727272727273
 "Czech","Ossetian",0.613636363636363
 "Meadow Mari","Ossetian",0.749090909090909
 "Bulgarian","Ossetian",0.654545454545454
 "Belarusian","Ossetian",0.68
+"Ukrainian","Ossetian",0.62090909090909
 "Hungarian","Ossetian",0.611818181818181
 "Lithuanian","Ossetian",0.613636363636363
 "Kalmyk","Ossetian",0.75
@@ -5175,6 +6008,7 @@
 "Hawaiian","Ossetian",0.789090909090909
 "Tahitian","Ossetian",0.665454545454545
 "Inupiak","Ossetian",0.749090909090909
+"Greenlandic","Ossetian",0.746363636363637
 "Cheyenne","Ossetian",0.748181818181818
 "Choctaw","Ossetian",0.708181818181818
 "Muscogee","Ossetian",0.602727272727272
@@ -5207,14 +6041,17 @@
 "Wolof","Hebrew",0.66090909090909
 "Egyptian Arabic","Hebrew",0.372727272727273
 "Kabyle","Hebrew",0.554545454545454
+"Albanian","Hebrew",0.775454545454545
 "Latin","Hebrew",0.609090909090909
 "Neapolitan","Hebrew",0.570909090909091
 "Spanish","Hebrew",0.58
+"Greek","Hebrew",0.475454545454546
 "English","Hebrew",0.77
 "French","Hebrew",0.678181818181818
 "Dutch","Hebrew",0.6
 "Icelandic","Hebrew",0.568181818181818
 "Irish","Hebrew",0.550909090909091
+"Northern Sami","Hebrew",0.68
 "Serbian","Hebrew",0.870909090909091
 "Russian","Hebrew",0.625454545454545
 "Bashkir","Hebrew",0.615454545454545
@@ -5222,12 +6059,14 @@
 "Erzya","Hebrew",0.63
 "Estonian","Hebrew",0.689090909090909
 "Gagauz","Hebrew",0.648181818181817
+"Tatar","Hebrew",0.639999999999999
 "Latvian","Hebrew",0.687272727272727
 "Vepsian","Hebrew",0.632727272727272
 "Czech","Hebrew",0.514545454545455
 "Meadow Mari","Hebrew",0.672727272727272
 "Bulgarian","Hebrew",0.571818181818181
 "Belarusian","Hebrew",0.573636363636363
+"Ukrainian","Hebrew",0.540909090909091
 "Hungarian","Hebrew",0.520909090909091
 "Lithuanian","Hebrew",0.515454545454545
 "Kalmyk","Hebrew",0.758181818181818
@@ -5271,6 +6110,7 @@
 "Hawaiian","Hebrew",0.665454545454545
 "Tahitian","Hebrew",0.596363636363636
 "Inupiak","Hebrew",0.783636363636363
+"Greenlandic","Hebrew",0.675454545454545
 "Cheyenne","Hebrew",0.761818181818181
 "Choctaw","Hebrew",0.722727272727273
 "Muscogee","Hebrew",0.54
@@ -5303,14 +6143,17 @@
 "Wolof","Sindhi",0.553636363636363
 "Egyptian Arabic","Sindhi",0.52
 "Kabyle","Sindhi",0.48
+"Albanian","Sindhi",0.69090909090909
 "Latin","Sindhi",0.61
 "Neapolitan","Sindhi",0.723636363636364
 "Spanish","Sindhi",0.571818181818182
+"Greek","Sindhi",0.548181818181818
 "English","Sindhi",0.687272727272727
 "French","Sindhi",0.598181818181818
 "Dutch","Sindhi",0.591818181818181
 "Icelandic","Sindhi",0.551818181818182
 "Irish","Sindhi",0.512727272727272
+"Northern Sami","Sindhi",0.611818181818181
 "Serbian","Sindhi",0.853636363636363
 "Russian","Sindhi",0.518181818181818
 "Bashkir","Sindhi",0.546363636363636
@@ -5318,12 +6161,14 @@
 "Erzya","Sindhi",0.512727272727273
 "Estonian","Sindhi",0.564545454545454
 "Gagauz","Sindhi",0.552727272727273
+"Tatar","Sindhi",0.496363636363636
 "Latvian","Sindhi",0.585454545454545
 "Vepsian","Sindhi",0.511818181818182
 "Czech","Sindhi",0.478181818181818
 "Meadow Mari","Sindhi",0.492727272727273
 "Bulgarian","Sindhi",0.411818181818182
 "Belarusian","Sindhi",0.423636363636364
+"Ukrainian","Sindhi",0.444545454545454
 "Hungarian","Sindhi",0.463636363636363
 "Lithuanian","Sindhi",0.466363636363636
 "Kalmyk","Sindhi",0.742727272727273
@@ -5367,6 +6212,7 @@
 "Hawaiian","Sindhi",0.535454545454545
 "Tahitian","Sindhi",0.427272727272727
 "Inupiak","Sindhi",0.782727272727273
+"Greenlandic","Sindhi",0.551818181818181
 "Cheyenne","Sindhi",0.757272727272727
 "Choctaw","Sindhi",0.662727272727272
 "Muscogee","Sindhi",0.487272727272727
@@ -5399,14 +6245,17 @@
 "Wolof","Eastern Punjabi",0.8
 "Egyptian Arabic","Eastern Punjabi",0.68090909090909
 "Kabyle","Eastern Punjabi",0.696363636363636
+"Albanian","Eastern Punjabi",0.909090909090908
 "Latin","Eastern Punjabi",0.816363636363636
 "Neapolitan","Eastern Punjabi",0.545454545454546
 "Spanish","Eastern Punjabi",0.909090909090908
+"Greek","Eastern Punjabi",0.805454545454545
 "English","Eastern Punjabi",0.845454545454545
 "French","Eastern Punjabi",0.933636363636363
 "Dutch","Eastern Punjabi",0.915454545454545
 "Icelandic","Eastern Punjabi",0.887272727272726
 "Irish","Eastern Punjabi",0.797272727272727
+"Northern Sami","Eastern Punjabi",0.829999999999999
 "Serbian","Eastern Punjabi",0.664545454545454
 "Russian","Eastern Punjabi",0.909090909090908
 "Bashkir","Eastern Punjabi",0.818181818181818
@@ -5414,12 +6263,14 @@
 "Erzya","Eastern Punjabi",0.909090909090908
 "Estonian","Eastern Punjabi",0.814545454545454
 "Gagauz","Eastern Punjabi",0.727272727272728
+"Tatar","Eastern Punjabi",0.909090909090908
 "Latvian","Eastern Punjabi",0.818181818181818
 "Vepsian","Eastern Punjabi",0.909090909090908
 "Czech","Eastern Punjabi",0.779090909090909
 "Meadow Mari","Eastern Punjabi",0.796363636363636
 "Bulgarian","Eastern Punjabi",0.809090909090909
 "Belarusian","Eastern Punjabi",0.828181818181818
+"Ukrainian","Eastern Punjabi",0.793636363636363
 "Hungarian","Eastern Punjabi",0.778181818181818
 "Lithuanian","Eastern Punjabi",0.776363636363636
 "Kalmyk","Eastern Punjabi",0.791818181818182
@@ -5463,6 +6314,7 @@
 "Hawaiian","Eastern Punjabi",0.909090909090908
 "Tahitian","Eastern Punjabi",0.859999999999999
 "Inupiak","Eastern Punjabi",0.818181818181818
+"Greenlandic","Eastern Punjabi",0.818181818181818
 "Cheyenne","Eastern Punjabi",0.806363636363636
 "Choctaw","Eastern Punjabi",0.725454545454546
 "Muscogee","Eastern Punjabi",0.727272727272728
@@ -5495,14 +6347,17 @@
 "Wolof","Kazakh",0.665454545454545
 "Egyptian Arabic","Kazakh",0.768181818181818
 "Kabyle","Kazakh",0.799090909090909
+"Albanian","Kazakh",1
 "Latin","Kazakh",0.826363636363636
 "Neapolitan","Kazakh",0.818181818181818
 "Spanish","Kazakh",0.909090909090908
+"Greek","Kazakh",0.824545454545454
 "English","Kazakh",0.942727272727272
 "French","Kazakh",0.937272727272727
 "Dutch","Kazakh",0.916363636363635
 "Icelandic","Kazakh",0.859999999999999
 "Irish","Kazakh",0.798181818181818
+"Northern Sami","Kazakh",0.638181818181817
 "Serbian","Kazakh",0.934545454545454
 "Russian","Kazakh",0.909090909090908
 "Bashkir","Kazakh",0.818181818181818
@@ -5510,12 +6365,14 @@
 "Erzya","Kazakh",0.818181818181818
 "Estonian","Kazakh",0.799090909090909
 "Gagauz","Kazakh",0.818181818181818
+"Tatar","Kazakh",0.909090909090908
 "Latvian","Kazakh",0.818181818181818
 "Vepsian","Kazakh",0.909090909090908
 "Czech","Kazakh",0.813636363636363
 "Meadow Mari","Kazakh",0.797272727272727
 "Bulgarian","Kazakh",0.762727272727272
 "Belarusian","Kazakh",0.822727272727273
+"Ukrainian","Kazakh",0.799090909090909
 "Hungarian","Kazakh",0.773636363636363
 "Lithuanian","Kazakh",0.785454545454545
 "Kalmyk","Kazakh",0.319090909090909
@@ -5559,6 +6416,7 @@
 "Hawaiian","Kazakh",1
 "Tahitian","Kazakh",0.853636363636363
 "Inupiak","Kazakh",0.545454545454546
+"Greenlandic","Kazakh",0.818181818181818
 "Cheyenne","Kazakh",0.704545454545455
 "Choctaw","Kazakh",0.715454545454545
 "Muscogee","Kazakh",0.818181818181818
@@ -5591,14 +6449,17 @@
 "Wolof","Sakha",0.85090909090909
 "Egyptian Arabic","Sakha",0.691818181818182
 "Kabyle","Sakha",0.773636363636363
+"Albanian","Sakha",0.909090909090908
 "Latin","Sakha",0.842727272727272
 "Neapolitan","Sakha",0.818181818181818
 "Spanish","Sakha",0.826363636363636
+"Greek","Sakha",0.737272727272727
 "English","Sakha",0.855454545454544
 "French","Sakha",0.834545454545454
 "Dutch","Sakha",0.859090909090908
 "Icelandic","Sakha",0.766363636363636
 "Irish","Sakha",0.824545454545454
+"Northern Sami","Sakha",0.681818181818182
 "Serbian","Sakha",0.838181818181817
 "Russian","Sakha",0.818181818181818
 "Bashkir","Sakha",0.727272727272728
@@ -5606,12 +6467,14 @@
 "Erzya","Sakha",0.818181818181818
 "Estonian","Sakha",0.713636363636363
 "Gagauz","Sakha",0.818181818181818
+"Tatar","Sakha",0.909090909090908
 "Latvian","Sakha",0.818181818181818
 "Vepsian","Sakha",0.818181818181818
 "Czech","Sakha",0.798181818181818
 "Meadow Mari","Sakha",0.780909090909091
 "Bulgarian","Sakha",0.712727272727273
 "Belarusian","Sakha",0.814545454545454
+"Ukrainian","Sakha",0.775454545454546
 "Hungarian","Sakha",0.771818181818181
 "Lithuanian","Sakha",0.783636363636364
 "Kalmyk","Sakha",0.727272727272727
@@ -5655,6 +6518,7 @@
 "Hawaiian","Sakha",0.909090909090908
 "Tahitian","Sakha",0.799090909090909
 "Inupiak","Sakha",0.636363636363635
+"Greenlandic","Sakha",0.727272727272728
 "Cheyenne","Sakha",0.650909090909091
 "Choctaw","Sakha",0.896363636363635
 "Muscogee","Sakha",0.636363636363635
@@ -5687,14 +6551,17 @@
 "Wolof","Korean",0.753636363636364
 "Egyptian Arabic","Korean",0.723636363636363
 "Kabyle","Korean",0.735454545454546
+"Albanian","Korean",0.636363636363635
 "Latin","Korean",0.429090909090909
 "Neapolitan","Korean",0.818181818181818
 "Spanish","Korean",0.607272727272727
+"Greek","Korean",0.621818181818181
 "English","Korean",0.567272727272727
 "French","Korean",0.480909090909091
 "Dutch","Korean",0.591818181818181
 "Icelandic","Korean",0.641818181818181
 "Irish","Korean",0.726363636363636
+"Northern Sami","Korean",0.844545454545453
 "Serbian","Korean",0.685454545454545
 "Russian","Korean",0.363636363636364
 "Bashkir","Korean",0.727272727272728
@@ -5702,12 +6569,14 @@
 "Erzya","Korean",0.454545454545454
 "Estonian","Korean",0.523636363636364
 "Gagauz","Korean",0.636363636363635
+"Tatar","Korean",0.363636363636364
 "Latvian","Korean",0.636363636363635
 "Vepsian","Korean",0.454545454545454
 "Czech","Korean",0.631818181818182
 "Meadow Mari","Korean",0.602727272727272
 "Bulgarian","Korean",0.639999999999999
 "Belarusian","Korean",0.490909090909091
+"Ukrainian","Korean",0.614545454545454
 "Hungarian","Korean",0.615454545454545
 "Lithuanian","Korean",0.605454545454545
 "Kalmyk","Korean",0.93090909090909
@@ -5751,6 +6620,7 @@
 "Hawaiian","Korean",0.363636363636364
 "Tahitian","Korean",0.591818181818181
 "Inupiak","Korean",1
+"Greenlandic","Korean",0.818181818181818
 "Cheyenne","Korean",0.967272727272727
 "Choctaw","Korean",0.899999999999998
 "Muscogee","Korean",0.727272727272728
@@ -5783,14 +6653,17 @@
 "Wolof","Chinese",0.556363636363637
 "Egyptian Arabic","Chinese",0.514545454545455
 "Kabyle","Chinese",0.487272727272727
+"Albanian","Chinese",0.624545454545454
 "Latin","Chinese",0.593636363636364
 "Neapolitan","Chinese",0.728181818181818
 "Spanish","Chinese",0.591818181818181
+"Greek","Chinese",0.55
 "English","Chinese",0.616363636363636
 "French","Chinese",0.520909090909091
 "Dutch","Chinese",0.594545454545454
 "Icelandic","Chinese",0.582727272727273
 "Irish","Chinese",0.511818181818182
+"Northern Sami","Chinese",0.639090909090909
 "Serbian","Chinese",0.85090909090909
 "Russian","Chinese",0.43
 "Bashkir","Chinese",0.505454545454545
@@ -5798,12 +6671,14 @@
 "Erzya","Chinese",0.480909090909091
 "Estonian","Chinese",0.503636363636363
 "Gagauz","Chinese",0.548181818181818
+"Tatar","Chinese",0.409090909090909
 "Latvian","Chinese",0.510909090909091
 "Vepsian","Chinese",0.445454545454546
 "Czech","Chinese",0.469090909090909
 "Meadow Mari","Chinese",0.442727272727273
 "Bulgarian","Chinese",0.521818181818182
 "Belarusian","Chinese",0.358181818181818
+"Ukrainian","Chinese",0.447272727272727
 "Hungarian","Chinese",0.468181818181818
 "Lithuanian","Chinese",0.465454545454545
 "Kalmyk","Chinese",0.750909090909091
@@ -5847,6 +6722,7 @@
 "Hawaiian","Chinese",0.530909090909091
 "Tahitian","Chinese",0.440909090909091
 "Inupiak","Chinese",0.801818181818181
+"Greenlandic","Chinese",0.509090909090909
 "Cheyenne","Chinese",0.77
 "Choctaw","Chinese",0.669090909090909
 "Muscogee","Chinese",0.496363636363636
@@ -5879,14 +6755,17 @@
 "Wolof","Nuosu",0.648181818181818
 "Egyptian Arabic","Nuosu",0.537272727272727
 "Kabyle","Nuosu",0.476363636363636
+"Albanian","Nuosu",0.553636363636363
 "Latin","Nuosu",0.663636363636363
 "Neapolitan","Nuosu",0.737272727272728
 "Spanish","Nuosu",0.598181818181818
+"Greek","Nuosu",0.55
 "English","Nuosu",0.526363636363636
 "French","Nuosu",0.430909090909091
 "Dutch","Nuosu",0.619090909090909
 "Icelandic","Nuosu",0.456363636363636
 "Irish","Nuosu",0.585454545454545
+"Northern Sami","Nuosu",0.608181818181818
 "Serbian","Nuosu",0.871818181818181
 "Russian","Nuosu",0.527272727272727
 "Bashkir","Nuosu",0.369090909090909
@@ -5894,12 +6773,14 @@
 "Erzya","Nuosu",0.381818181818182
 "Estonian","Nuosu",0.579090909090909
 "Gagauz","Nuosu",0.634545454545454
+"Tatar","Nuosu",0.490909090909091
 "Latvian","Nuosu",0.418181818181818
 "Vepsian","Nuosu",0.348181818181818
 "Czech","Nuosu",0.477272727272728
 "Meadow Mari","Nuosu",0.49
 "Bulgarian","Nuosu",0.539090909090909
 "Belarusian","Nuosu",0.427272727272727
+"Ukrainian","Nuosu",0.486363636363636
 "Hungarian","Nuosu",0.511818181818182
 "Lithuanian","Nuosu",0.450909090909091
 "Kalmyk","Nuosu",0.76
@@ -5943,6 +6824,7 @@
 "Hawaiian","Nuosu",0.618181818181818
 "Tahitian","Nuosu",0.511818181818182
 "Inupiak","Nuosu",0.773636363636363
+"Greenlandic","Nuosu",0.4
 "Cheyenne","Nuosu",0.75
 "Choctaw","Nuosu",0.685454545454545
 "Muscogee","Nuosu",0.475454545454546
@@ -5975,14 +6857,17 @@
 "Wolof","Japanese",0.707272727272727
 "Egyptian Arabic","Japanese",0.682727272727272
 "Kabyle","Japanese",0.681818181818182
+"Albanian","Japanese",0.636363636363635
 "Latin","Japanese",0.701818181818182
 "Neapolitan","Japanese",0.727272727272728
 "Spanish","Japanese",0.728181818181818
+"Greek","Japanese",0.554545454545455
 "English","Japanese",0.501818181818182
 "French","Japanese",0.598181818181818
 "Dutch","Japanese",0.724545454545454
 "Icelandic","Japanese",0.773636363636363
 "Irish","Japanese",0.569090909090909
+"Northern Sami","Japanese",0.725454545454545
 "Serbian","Japanese",0.631818181818181
 "Russian","Japanese",0.272727272727273
 "Bashkir","Japanese",0.727272727272728
@@ -5990,12 +6875,14 @@
 "Erzya","Japanese",0.545454545454546
 "Estonian","Japanese",0.374545454545455
 "Gagauz","Japanese",0.545454545454546
+"Tatar","Japanese",0.272727272727273
 "Latvian","Japanese",0.454545454545454
 "Vepsian","Japanese",0.545454545454546
 "Czech","Japanese",0.566363636363636
 "Meadow Mari","Japanese",0.454545454545455
 "Bulgarian","Japanese",0.578181818181818
 "Belarusian","Japanese",0.435454545454546
+"Ukrainian","Japanese",0.552727272727273
 "Hungarian","Japanese",0.558181818181818
 "Lithuanian","Japanese",0.550909090909091
 "Kalmyk","Japanese",0.805454545454545
@@ -6039,6 +6926,7 @@
 "Hawaiian","Japanese",0.454545454545454
 "Tahitian","Japanese",0.534545454545454
 "Inupiak","Japanese",0.909090909090908
+"Greenlandic","Japanese",0.636363636363635
 "Cheyenne","Japanese",0.852727272727272
 "Choctaw","Japanese",0.718181818181818
 "Muscogee","Japanese",0.727272727272728
@@ -6071,14 +6959,17 @@
 "Wolof","Tibetan",0.656363636363636
 "Egyptian Arabic","Tibetan",0.289090909090909
 "Kabyle","Tibetan",0.559090909090909
+"Albanian","Tibetan",0.761818181818182
 "Latin","Tibetan",0.602727272727272
 "Neapolitan","Tibetan",0.577272727272727
 "Spanish","Tibetan",0.57
+"Greek","Tibetan",0.474545454545455
 "English","Tibetan",0.763636363636363
 "French","Tibetan",0.677272727272727
 "Dutch","Tibetan",0.571818181818182
 "Icelandic","Tibetan",0.555454545454545
 "Irish","Tibetan",0.555454545454545
+"Northern Sami","Tibetan",0.684545454545454
 "Serbian","Tibetan",0.855454545454545
 "Russian","Tibetan",0.58090909090909
 "Bashkir","Tibetan",0.633636363636363
@@ -6086,12 +6977,14 @@
 "Erzya","Tibetan",0.63
 "Estonian","Tibetan",0.669090909090909
 "Gagauz","Tibetan",0.629090909090909
+"Tatar","Tibetan",0.603636363636363
 "Latvian","Tibetan",0.662727272727272
 "Vepsian","Tibetan",0.612727272727272
 "Czech","Tibetan",0.508181818181818
 "Meadow Mari","Tibetan",0.648181818181818
 "Bulgarian","Tibetan",0.578181818181818
 "Belarusian","Tibetan",0.560909090909091
+"Ukrainian","Tibetan",0.5
 "Hungarian","Tibetan",0.514545454545455
 "Lithuanian","Tibetan",0.492727272727273
 "Kalmyk","Tibetan",0.752727272727272
@@ -6135,6 +7028,7 @@
 "Hawaiian","Tibetan",0.653636363636363
 "Tahitian","Tibetan",0.568181818181818
 "Inupiak","Tibetan",0.815454545454545
+"Greenlandic","Tibetan",0.662727272727272
 "Cheyenne","Tibetan",0.780909090909091
 "Choctaw","Tibetan",0.709090909090909
 "Muscogee","Tibetan",0.561818181818182
@@ -6167,14 +7061,17 @@
 "Wolof","Bengali",0.75
 "Egyptian Arabic","Bengali",0.739090909090909
 "Kabyle","Bengali",0.566363636363636
+"Albanian","Bengali",0.545454545454546
 "Latin","Bengali",0.575454545454545
 "Neapolitan","Bengali",0.818181818181818
 "Spanish","Bengali",0.4
+"Greek","Bengali",0.605454545454545
 "English","Bengali",0.586363636363636
 "French","Bengali",0.503636363636364
 "Dutch","Bengali",0.395454545454545
 "Icelandic","Bengali",0.555454545454545
 "Irish","Bengali",0.712727272727272
+"Northern Sami","Bengali",0.818181818181818
 "Serbian","Bengali",0.502727272727273
 "Russian","Bengali",0.636363636363635
 "Bashkir","Bengali",0.818181818181818
@@ -6182,12 +7079,14 @@
 "Erzya","Bengali",0.454545454545454
 "Estonian","Bengali",0.837272727272727
 "Gagauz","Bengali",0.818181818181818
+"Tatar","Bengali",0.636363636363635
 "Latvian","Bengali",0.818181818181818
 "Vepsian","Bengali",0.454545454545454
 "Czech","Bengali",0.622727272727273
 "Meadow Mari","Bengali",0.731818181818182
 "Bulgarian","Bengali",0.491818181818182
 "Belarusian","Bengali",0.624545454545454
+"Ukrainian","Bengali",0.659090909090909
 "Hungarian","Bengali",0.642727272727272
 "Lithuanian","Bengali",0.648181818181818
 "Kalmyk","Bengali",0.873636363636363
@@ -6231,6 +7130,7 @@
 "Hawaiian","Bengali",0.454545454545454
 "Tahitian","Bengali",0.596363636363636
 "Inupiak","Bengali",1
+"Greenlandic","Bengali",0.727272727272728
 "Cheyenne","Bengali",0.926363636363636
 "Choctaw","Bengali",0.715454545454545
 "Muscogee","Bengali",0.727272727272728
@@ -6263,14 +7163,17 @@
 "Wolof","Kashmiri",0.655454545454545
 "Egyptian Arabic","Kashmiri",0.569090909090909
 "Kabyle","Kashmiri",0.569090909090909
+"Albanian","Kashmiri",0.51
 "Latin","Kashmiri",0.357272727272727
 "Neapolitan","Kashmiri",0.598181818181818
 "Spanish","Kashmiri",0.366363636363636
+"Greek","Kashmiri",0.564545454545454
 "English","Kashmiri",0.553636363636363
 "French","Kashmiri",0.467272727272727
 "Dutch","Kashmiri",0.36
 "Icelandic","Kashmiri",0.399090909090909
 "Irish","Kashmiri",0.458181818181818
+"Northern Sami","Kashmiri",0.717272727272727
 "Serbian","Kashmiri",0.732727272727273
 "Russian","Kashmiri",0.549090909090909
 "Bashkir","Kashmiri",0.66
@@ -6278,12 +7181,14 @@
 "Erzya","Kashmiri",0.457272727272727
 "Estonian","Kashmiri",0.664545454545454
 "Gagauz","Kashmiri",0.649999999999999
+"Tatar","Kashmiri",0.501818181818182
 "Latvian","Kashmiri",0.696363636363636
 "Vepsian","Kashmiri",0.430909090909091
 "Czech","Kashmiri",0.522727272727272
 "Meadow Mari","Kashmiri",0.584545454545454
 "Bulgarian","Kashmiri",0.639090909090908
 "Belarusian","Kashmiri",0.480909090909091
+"Ukrainian","Kashmiri",0.511818181818182
 "Hungarian","Kashmiri",0.532727272727273
 "Lithuanian","Kashmiri",0.54
 "Kalmyk","Kashmiri",0.879090909090908
@@ -6327,6 +7232,7 @@
 "Hawaiian","Kashmiri",0.351818181818182
 "Tahitian","Kashmiri",0.477272727272728
 "Inupiak","Kashmiri",0.931818181818181
+"Greenlandic","Kashmiri",0.663636363636363
 "Cheyenne","Kashmiri",0.899090909090909
 "Choctaw","Kashmiri",0.797272727272728
 "Muscogee","Kashmiri",0.604545454545454
@@ -6359,14 +7265,17 @@
 "Wolof","Gujarati",0.562727272727273
 "Egyptian Arabic","Gujarati",0.474545454545455
 "Kabyle","Gujarati",0.454545454545455
+"Albanian","Gujarati",0.654545454545454
 "Latin","Gujarati",0.554545454545454
 "Neapolitan","Gujarati",0.667272727272727
 "Spanish","Gujarati",0.544545454545454
+"Greek","Gujarati",0.499090909090909
 "English","Gujarati",0.679090909090908
 "French","Gujarati",0.567272727272727
 "Dutch","Gujarati",0.548181818181818
 "Icelandic","Gujarati",0.540909090909091
 "Irish","Gujarati",0.469090909090909
+"Northern Sami","Gujarati",0.628181818181818
 "Serbian","Gujarati",0.82090909090909
 "Russian","Gujarati",0.499090909090909
 "Bashkir","Gujarati",0.56
@@ -6374,12 +7283,14 @@
 "Erzya","Gujarati",0.538181818181818
 "Estonian","Gujarati",0.560909090909091
 "Gagauz","Gujarati",0.538181818181818
+"Tatar","Gujarati",0.483636363636363
 "Latvian","Gujarati",0.585454545454545
 "Vepsian","Gujarati",0.505454545454545
 "Czech","Gujarati",0.460909090909091
 "Meadow Mari","Gujarati",0.497272727272727
 "Bulgarian","Gujarati",0.512727272727273
 "Belarusian","Gujarati",0.423636363636364
+"Ukrainian","Gujarati",0.446363636363636
 "Hungarian","Gujarati",0.459090909090909
 "Lithuanian","Gujarati",0.461818181818182
 "Kalmyk","Gujarati",0.76
@@ -6423,6 +7334,7 @@
 "Hawaiian","Gujarati",0.515454545454545
 "Tahitian","Gujarati",0.446363636363636
 "Inupiak","Gujarati",0.809090909090909
+"Greenlandic","Gujarati",0.560909090909091
 "Cheyenne","Gujarati",0.779090909090909
 "Choctaw","Gujarati",0.658181818181818
 "Muscogee","Gujarati",0.488181818181818
@@ -6455,14 +7367,17 @@
 "Wolof","Telugu",0.55
 "Egyptian Arabic","Telugu",0.527272727272727
 "Kabyle","Telugu",0.340909090909091
+"Albanian","Telugu",0.454545454545454
 "Latin","Telugu",0.563636363636363
 "Neapolitan","Telugu",0.636363636363635
 "Spanish","Telugu",0.530909090909091
+"Greek","Telugu",0.504545454545455
 "English","Telugu",0.639999999999999
 "French","Telugu",0.539090909090909
 "Dutch","Telugu",0.555454545454545
 "Icelandic","Telugu",0.534545454545454
 "Irish","Telugu",0.406363636363637
+"Northern Sami","Telugu",0.611818181818181
 "Serbian","Telugu",0.747272727272727
 "Russian","Telugu",0.454545454545454
 "Bashkir","Telugu",0.545454545454546
@@ -6470,12 +7385,14 @@
 "Erzya","Telugu",0.545454545454546
 "Estonian","Telugu",0.533636363636364
 "Gagauz","Telugu",0.454545454545454
+"Tatar","Telugu",0.454545454545454
 "Latvian","Telugu",0.545454545454546
 "Vepsian","Telugu",0.454545454545454
 "Czech","Telugu",0.433636363636364
 "Meadow Mari","Telugu",0.439090909090909
 "Bulgarian","Telugu",0.518181818181818
 "Belarusian","Telugu",0.383636363636364
+"Ukrainian","Telugu",0.396363636363636
 "Hungarian","Telugu",0.430909090909091
 "Lithuanian","Telugu",0.44
 "Kalmyk","Telugu",0.753636363636363
@@ -6519,6 +7436,7 @@
 "Hawaiian","Telugu",0.454545454545454
 "Tahitian","Telugu",0.394545454545455
 "Inupiak","Telugu",0.818181818181818
+"Greenlandic","Telugu",0.454545454545454
 "Cheyenne","Telugu",0.783636363636363
 "Choctaw","Telugu",0.543636363636364
 "Muscogee","Telugu",0.454545454545454
@@ -6551,14 +7469,17 @@
 "Wolof","Tamil",0.546363636363636
 "Egyptian Arabic","Tamil",0.535454545454545
 "Kabyle","Tamil",0.37
+"Albanian","Tamil",0.635454545454545
 "Latin","Tamil",0.57
 "Neapolitan","Tamil",0.730909090909091
 "Spanish","Tamil",0.556363636363636
+"Greek","Tamil",0.542727272727273
 "English","Tamil",0.678181818181818
 "French","Tamil",0.58090909090909
 "Dutch","Tamil",0.569090909090909
 "Icelandic","Tamil",0.542727272727273
 "Irish","Tamil",0.467272727272727
+"Northern Sami","Tamil",0.602727272727272
 "Serbian","Tamil",0.754545454545455
 "Russian","Tamil",0.498181818181818
 "Bashkir","Tamil",0.541818181818182
@@ -6566,12 +7487,14 @@
 "Erzya","Tamil",0.528181818181818
 "Estonian","Tamil",0.589090909090909
 "Gagauz","Tamil",0.438181818181818
+"Tatar","Tamil",0.436363636363636
 "Latvian","Tamil",0.560909090909091
 "Vepsian","Tamil",0.5
 "Czech","Tamil",0.457272727272727
 "Meadow Mari","Tamil",0.453636363636364
 "Bulgarian","Tamil",0.554545454545454
 "Belarusian","Tamil",0.401818181818182
+"Ukrainian","Tamil",0.425454545454545
 "Hungarian","Tamil",0.468181818181818
 "Lithuanian","Tamil",0.474545454545455
 "Kalmyk","Tamil",0.759999999999999
@@ -6615,6 +7538,7 @@
 "Hawaiian","Tamil",0.474545454545455
 "Tahitian","Tamil",0.4
 "Inupiak","Tamil",0.806363636363636
+"Greenlandic","Tamil",0.546363636363636
 "Cheyenne","Tamil",0.789090909090908
 "Choctaw","Tamil",0.595454545454545
 "Muscogee","Tamil",0.38
@@ -6647,14 +7571,17 @@
 "Wolof","Malayalam",0.840909090909091
 "Egyptian Arabic","Malayalam",0.83
 "Kabyle","Malayalam",0.657272727272727
+"Albanian","Malayalam",0.454545454545454
 "Latin","Malayalam",0.666363636363636
 "Neapolitan","Malayalam",0.818181818181818
 "Spanish","Malayalam",0.490909090909091
+"Greek","Malayalam",0.696363636363636
 "English","Malayalam",0.586363636363636
 "French","Malayalam",0.594545454545454
 "Dutch","Malayalam",0.486363636363636
 "Icelandic","Malayalam",0.646363636363636
 "Irish","Malayalam",0.621818181818181
+"Northern Sami","Malayalam",0.818181818181818
 "Serbian","Malayalam",0.502727272727273
 "Russian","Malayalam",0.727272727272728
 "Bashkir","Malayalam",0.909090909090908
@@ -6662,12 +7589,14 @@
 "Erzya","Malayalam",0.545454545454546
 "Estonian","Malayalam",0.746363636363637
 "Gagauz","Malayalam",0.909090909090908
+"Tatar","Malayalam",0.727272727272728
 "Latvian","Malayalam",0.727272727272728
 "Vepsian","Malayalam",0.545454545454546
 "Czech","Malayalam",0.713636363636364
 "Meadow Mari","Malayalam",0.731818181818182
 "Bulgarian","Malayalam",0.582727272727273
 "Belarusian","Malayalam",0.715454545454545
+"Ukrainian","Malayalam",0.75
 "Hungarian","Malayalam",0.733636363636364
 "Lithuanian","Malayalam",0.739090909090909
 "Kalmyk","Malayalam",0.873636363636363
@@ -6711,6 +7640,7 @@
 "Hawaiian","Malayalam",0.545454545454546
 "Tahitian","Malayalam",0.687272727272727
 "Inupiak","Malayalam",1
+"Greenlandic","Malayalam",0.727272727272728
 "Cheyenne","Malayalam",0.926363636363636
 "Choctaw","Malayalam",0.624545454545454
 "Muscogee","Malayalam",0.818181818181818
@@ -6743,14 +7673,17 @@
 "Wolof","Sinhalese",0.521818181818182
 "Egyptian Arabic","Sinhalese",0.528181818181818
 "Kabyle","Sinhalese",0.359090909090909
+"Albanian","Sinhalese",0.545454545454546
 "Latin","Sinhalese",0.570909090909091
 "Neapolitan","Sinhalese",0.727272727272728
 "Spanish","Sinhalese",0.536363636363636
+"Greek","Sinhalese",0.530909090909091
 "English","Sinhalese",0.649999999999999
 "French","Sinhalese",0.55
 "Dutch","Sinhalese",0.561818181818181
 "Icelandic","Sinhalese",0.517272727272727
 "Irish","Sinhalese",0.417272727272727
+"Northern Sami","Sinhalese",0.613636363636363
 "Serbian","Sinhalese",0.75
 "Russian","Sinhalese",0.454545454545454
 "Bashkir","Sinhalese",0.545454545454546
@@ -6758,12 +7691,14 @@
 "Erzya","Sinhalese",0.454545454545454
 "Estonian","Sinhalese",0.530909090909091
 "Gagauz","Sinhalese",0.454545454545454
+"Tatar","Sinhalese",0.454545454545454
 "Latvian","Sinhalese",0.545454545454546
 "Vepsian","Sinhalese",0.454545454545454
 "Czech","Sinhalese",0.446363636363636
 "Meadow Mari","Sinhalese",0.447272727272727
 "Bulgarian","Sinhalese",0.484545454545454
 "Belarusian","Sinhalese",0.384545454545455
+"Ukrainian","Sinhalese",0.395454545454546
 "Hungarian","Sinhalese",0.42
 "Lithuanian","Sinhalese",0.440909090909091
 "Kalmyk","Sinhalese",0.740909090909091
@@ -6807,6 +7742,7 @@
 "Hawaiian","Sinhalese",0.545454545454546
 "Tahitian","Sinhalese",0.392727272727273
 "Inupiak","Sinhalese",0.818181818181818
+"Greenlandic","Sinhalese",0.454545454545454
 "Cheyenne","Sinhalese",0.779090909090909
 "Choctaw","Sinhalese",0.533636363636364
 "Muscogee","Sinhalese",0.454545454545454
@@ -6839,14 +7775,17 @@
 "Wolof","Burmese",0.652727272727272
 "Egyptian Arabic","Burmese",0.645454545454545
 "Kabyle","Burmese",0.559090909090909
+"Albanian","Burmese",0.562727272727273
 "Latin","Burmese",0.553636363636363
 "Neapolitan","Burmese",0.746363636363636
 "Spanish","Burmese",0.559090909090909
+"Greek","Burmese",0.649999999999999
 "English","Burmese",0.545454545454545
 "French","Burmese",0.458181818181818
 "Dutch","Burmese",0.583636363636363
 "Icelandic","Burmese",0.567272727272727
 "Irish","Burmese",0.546363636363636
+"Northern Sami","Burmese",0.699090909090909
 "Serbian","Burmese",0.858181818181818
 "Russian","Burmese",0.475454545454545
 "Bashkir","Burmese",0.538181818181818
@@ -6854,12 +7793,14 @@
 "Erzya","Burmese",0.429090909090909
 "Estonian","Burmese",0.567272727272727
 "Gagauz","Burmese",0.641818181818181
+"Tatar","Burmese",0.409090909090909
 "Latvian","Burmese",0.54
 "Vepsian","Burmese",0.394545454545455
 "Czech","Burmese",0.548181818181818
 "Meadow Mari","Burmese",0.449090909090909
 "Bulgarian","Burmese",0.625454545454545
 "Belarusian","Burmese",0.386363636363636
+"Ukrainian","Burmese",0.493636363636363
 "Hungarian","Burmese",0.532727272727273
 "Lithuanian","Burmese",0.535454545454545
 "Kalmyk","Burmese",0.863636363636363
@@ -6903,6 +7844,7 @@
 "Hawaiian","Burmese",0.478181818181818
 "Tahitian","Burmese",0.480909090909091
 "Inupiak","Burmese",0.893636363636362
+"Greenlandic","Burmese",0.553636363636363
 "Cheyenne","Burmese",0.879999999999999
 "Choctaw","Burmese",0.78090909090909
 "Muscogee","Burmese",0.582727272727273
@@ -6935,14 +7877,17 @@
 "Wolof","Vietnamese",0.762727272727273
 "Egyptian Arabic","Vietnamese",0.822727272727272
 "Kabyle","Vietnamese",0.651818181818181
+"Albanian","Vietnamese",0.454545454545454
 "Latin","Vietnamese",0.449090909090909
 "Neapolitan","Vietnamese",0.818181818181818
 "Spanish","Vietnamese",0.587272727272727
+"Greek","Vietnamese",0.768181818181818
 "English","Vietnamese",0.672727272727272
 "French","Vietnamese",0.595454545454545
 "Dutch","Vietnamese",0.573636363636363
 "Icelandic","Vietnamese",0.666363636363636
 "Irish","Vietnamese",0.692727272727273
+"Northern Sami","Vietnamese",0.884545454545453
 "Serbian","Vietnamese",0.578181818181818
 "Russian","Vietnamese",0.636363636363635
 "Bashkir","Vietnamese",0.818181818181818
@@ -6950,12 +7895,14 @@
 "Erzya","Vietnamese",0.727272727272728
 "Estonian","Vietnamese",0.825454545454545
 "Gagauz","Vietnamese",0.727272727272728
+"Tatar","Vietnamese",0.636363636363635
 "Latvian","Vietnamese",0.909090909090908
 "Vepsian","Vietnamese",0.636363636363635
 "Czech","Vietnamese",0.702727272727273
 "Meadow Mari","Vietnamese",0.747272727272727
 "Bulgarian","Vietnamese",0.821818181818181
 "Belarusian","Vietnamese",0.642727272727272
+"Ukrainian","Vietnamese",0.679090909090909
 "Hungarian","Vietnamese",0.708181818181818
 "Lithuanian","Vietnamese",0.72
 "Kalmyk","Vietnamese",0.96090909090909
@@ -6999,6 +7946,7 @@
 "Hawaiian","Vietnamese",0.454545454545454
 "Tahitian","Vietnamese",0.639090909090908
 "Inupiak","Vietnamese",1
+"Greenlandic","Vietnamese",0.818181818181818
 "Cheyenne","Vietnamese",0.982727272727272
 "Choctaw","Vietnamese",0.816363636363636
 "Muscogee","Vietnamese",0.727272727272728
@@ -7031,14 +7979,17 @@
 "Wolof","Khmer",0.66
 "Egyptian Arabic","Khmer",0.650909090909091
 "Kabyle","Khmer",0.559090909090909
+"Albanian","Khmer",0.559090909090909
 "Latin","Khmer",0.550909090909091
 "Neapolitan","Khmer",0.774545454545455
 "Spanish","Khmer",0.558181818181818
+"Greek","Khmer",0.640909090909091
 "English","Khmer",0.559090909090909
 "French","Khmer",0.446363636363636
 "Dutch","Khmer",0.581818181818181
 "Icelandic","Khmer",0.555454545454545
 "Irish","Khmer",0.539090909090909
+"Northern Sami","Khmer",0.699090909090909
 "Serbian","Khmer",0.846363636363636
 "Russian","Khmer",0.455454545454545
 "Bashkir","Khmer",0.561818181818182
@@ -7046,12 +7997,14 @@
 "Erzya","Khmer",0.443636363636363
 "Estonian","Khmer",0.561818181818182
 "Gagauz","Khmer",0.637272727272727
+"Tatar","Khmer",0.393636363636364
 "Latvian","Khmer",0.55
 "Vepsian","Khmer",0.384545454545455
 "Czech","Khmer",0.521818181818182
 "Meadow Mari","Khmer",0.454545454545455
 "Bulgarian","Khmer",0.654545454545454
 "Belarusian","Khmer",0.389090909090909
+"Ukrainian","Khmer",0.49
 "Hungarian","Khmer",0.531818181818182
 "Lithuanian","Khmer",0.529090909090909
 "Kalmyk","Khmer",0.879999999999999
@@ -7095,6 +8048,7 @@
 "Hawaiian","Khmer",0.463636363636364
 "Tahitian","Khmer",0.476363636363636
 "Inupiak","Khmer",0.916363636363635
+"Greenlandic","Khmer",0.563636363636363
 "Cheyenne","Khmer",0.887272727272727
 "Choctaw","Khmer",0.780909090909091
 "Muscogee","Khmer",0.583636363636363
@@ -7127,14 +8081,17 @@
 "Wolof","Malay",0.547272727272727
 "Egyptian Arabic","Malay",0.631818181818182
 "Kabyle","Malay",0.531818181818182
+"Albanian","Malay",0.645454545454545
 "Latin","Malay",0.562727272727273
 "Neapolitan","Malay",0.749090909090909
 "Spanish","Malay",0.547272727272727
+"Greek","Malay",0.616363636363636
 "English","Malay",0.655454545454545
 "French","Malay",0.561818181818181
 "Dutch","Malay",0.546363636363636
 "Icelandic","Malay",0.533636363636364
 "Irish","Malay",0.529090909090909
+"Northern Sami","Malay",0.680909090909091
 "Serbian","Malay",0.836363636363636
 "Russian","Malay",0.57
 "Bashkir","Malay",0.641818181818181
@@ -7142,12 +8099,14 @@
 "Erzya","Malay",0.487272727272727
 "Estonian","Malay",0.652727272727272
 "Gagauz","Malay",0.63090909090909
+"Tatar","Malay",0.526363636363637
 "Latvian","Malay",0.663636363636363
 "Vepsian","Malay",0.457272727272727
 "Czech","Malay",0.549090909090909
 "Meadow Mari","Malay",0.522727272727273
 "Bulgarian","Malay",0.600909090909091
 "Belarusian","Malay",0.457272727272727
+"Ukrainian","Malay",0.51
 "Hungarian","Malay",0.530909090909091
 "Lithuanian","Malay",0.538181818181818
 "Kalmyk","Malay",0.844545454545454
@@ -7191,6 +8150,7 @@
 "Hawaiian","Malay",0.447272727272727
 "Tahitian","Malay",0.461818181818182
 "Inupiak","Malay",0.915454545454544
+"Greenlandic","Malay",0.623636363636364
 "Cheyenne","Malay",0.867272727272727
 "Choctaw","Malay",0.731818181818181
 "Muscogee","Malay",0.550909090909091
@@ -7223,14 +8183,17 @@
 "Wolof","Thai",0.7
 "Egyptian Arabic","Thai",0.672727272727272
 "Kabyle","Thai",0.568181818181818
+"Albanian","Thai",0.454545454545454
 "Latin","Thai",0.485454545454546
 "Neapolitan","Thai",0.727272727272728
 "Spanish","Thai",0.460909090909091
+"Greek","Thai",0.640909090909091
 "English","Thai",0.418181818181818
 "French","Thai",0.325454545454546
 "Dutch","Thai",0.46
 "Icelandic","Thai",0.48
 "Irish","Thai",0.564545454545454
+"Northern Sami","Thai",0.72
 "Serbian","Thai",0.748181818181818
 "Russian","Thai",0.363636363636364
 "Bashkir","Thai",0.636363636363635
@@ -7238,12 +8201,14 @@
 "Erzya","Thai",0.363636363636364
 "Estonian","Thai",0.559090909090909
 "Gagauz","Thai",0.636363636363635
+"Tatar","Thai",0.363636363636364
 "Latvian","Thai",0.545454545454546
 "Vepsian","Thai",0.181818181818182
 "Czech","Thai",0.521818181818182
 "Meadow Mari","Thai",0.436363636363636
 "Bulgarian","Thai",0.631818181818181
 "Belarusian","Thai",0.350909090909091
+"Ukrainian","Thai",0.496363636363636
 "Hungarian","Thai",0.539090909090909
 "Lithuanian","Thai",0.502727272727273
 "Kalmyk","Thai",0.882727272727272
@@ -7287,6 +8252,7 @@
 "Hawaiian","Thai",0.363636363636364
 "Tahitian","Thai",0.413636363636364
 "Inupiak","Thai",1
+"Greenlandic","Thai",0.545454545454546
 "Cheyenne","Thai",0.933636363636363
 "Choctaw","Thai",0.718181818181818
 "Muscogee","Thai",0.636363636363635
@@ -7319,14 +8285,17 @@
 "Wolof","Cebuano",0.684545454545454
 "Egyptian Arabic","Cebuano",0.671818181818181
 "Kabyle","Cebuano",0.58090909090909
+"Albanian","Cebuano",0.539090909090909
 "Latin","Cebuano",0.555454545454545
 "Neapolitan","Cebuano",0.782727272727273
 "Spanish","Cebuano",0.55
+"Greek","Cebuano",0.659090909090909
 "English","Cebuano",0.533636363636363
 "French","Cebuano",0.459090909090909
 "Dutch","Cebuano",0.578181818181818
 "Icelandic","Cebuano",0.594545454545454
 "Irish","Cebuano",0.558181818181818
+"Northern Sami","Cebuano",0.719090909090909
 "Serbian","Cebuano",0.852727272727272
 "Russian","Cebuano",0.427272727272727
 "Bashkir","Cebuano",0.586363636363636
@@ -7334,12 +8303,14 @@
 "Erzya","Cebuano",0.468181818181818
 "Estonian","Cebuano",0.551818181818182
 "Gagauz","Cebuano",0.632727272727272
+"Tatar","Cebuano",0.385454545454545
 "Latvian","Cebuano",0.567272727272727
 "Vepsian","Cebuano",0.383636363636364
 "Czech","Cebuano",0.536363636363636
 "Meadow Mari","Cebuano",0.450909090909091
 "Bulgarian","Cebuano",0.639090909090909
 "Belarusian","Cebuano",0.377272727272727
+"Ukrainian","Cebuano",0.512727272727272
 "Hungarian","Cebuano",0.536363636363636
 "Lithuanian","Cebuano",0.530909090909091
 "Kalmyk","Cebuano",0.891818181818181
@@ -7383,6 +8354,7 @@
 "Hawaiian","Cebuano",0.462727272727273
 "Tahitian","Cebuano",0.474545454545455
 "Inupiak","Cebuano",0.946363636363636
+"Greenlandic","Cebuano",0.566363636363636
 "Cheyenne","Cebuano",0.908181818181817
 "Choctaw","Cebuano",0.783636363636363
 "Muscogee","Cebuano",0.611818181818181
@@ -7415,14 +8387,17 @@
 "Wolof","Banyumasan",0.579090909090909
 "Egyptian Arabic","Banyumasan",0.658181818181818
 "Kabyle","Banyumasan",0.547272727272727
+"Albanian","Banyumasan",0.682727272727273
 "Latin","Banyumasan",0.638181818181818
 "Neapolitan","Banyumasan",0.689090909090909
 "Spanish","Banyumasan",0.648181818181818
+"Greek","Banyumasan",0.651818181818182
 "English","Banyumasan",0.57
 "French","Banyumasan",0.671818181818182
 "Dutch","Banyumasan",0.663636363636363
 "Icelandic","Banyumasan",0.666363636363636
 "Irish","Banyumasan",0.46
+"Northern Sami","Banyumasan",0.594545454545454
 "Serbian","Banyumasan",0.770909090909091
 "Russian","Banyumasan",0.600909090909091
 "Bashkir","Banyumasan",0.632727272727272
@@ -7430,12 +8405,14 @@
 "Erzya","Banyumasan",0.61
 "Estonian","Banyumasan",0.596363636363636
 "Gagauz","Banyumasan",0.656363636363636
+"Tatar","Banyumasan",0.53
 "Latvian","Banyumasan",0.600909090909091
 "Vepsian","Banyumasan",0.604545454545454
 "Czech","Banyumasan",0.558181818181818
 "Meadow Mari","Banyumasan",0.456363636363636
 "Bulgarian","Banyumasan",0.661818181818181
 "Belarusian","Banyumasan",0.47
+"Ukrainian","Banyumasan",0.529090909090909
 "Hungarian","Banyumasan",0.557272727272727
 "Lithuanian","Banyumasan",0.554545454545454
 "Kalmyk","Banyumasan",0.757272727272727
@@ -7479,6 +8456,7 @@
 "Hawaiian","Banyumasan",0.545454545454545
 "Tahitian","Banyumasan",0.462727272727273
 "Inupiak","Banyumasan",0.801818181818181
+"Greenlandic","Banyumasan",0.586363636363636
 "Cheyenne","Banyumasan",0.771818181818182
 "Choctaw","Banyumasan",0.7
 "Muscogee","Banyumasan",0.543636363636364
@@ -7511,14 +8489,17 @@
 "Wolof","Minangkabau",0.64090909090909
 "Egyptian Arabic","Minangkabau",0.645454545454545
 "Kabyle","Minangkabau",0.525454545454545
+"Albanian","Minangkabau",0.574545454545455
 "Latin","Minangkabau",0.572727272727273
 "Neapolitan","Minangkabau",0.742727272727273
 "Spanish","Minangkabau",0.549090909090909
+"Greek","Minangkabau",0.634545454545454
 "English","Minangkabau",0.560909090909091
 "French","Minangkabau",0.444545454545455
 "Dutch","Minangkabau",0.571818181818182
 "Icelandic","Minangkabau",0.523636363636364
 "Irish","Minangkabau",0.55
+"Northern Sami","Minangkabau",0.675454545454545
 "Serbian","Minangkabau",0.857272727272727
 "Russian","Minangkabau",0.469090909090909
 "Bashkir","Minangkabau",0.546363636363637
@@ -7526,12 +8507,14 @@
 "Erzya","Minangkabau",0.400909090909091
 "Estonian","Minangkabau",0.545454545454545
 "Gagauz","Minangkabau",0.639999999999999
+"Tatar","Minangkabau",0.429090909090909
 "Latvian","Minangkabau",0.544545454545454
 "Vepsian","Minangkabau",0.336363636363636
 "Czech","Minangkabau",0.539090909090909
 "Meadow Mari","Minangkabau",0.417272727272727
 "Bulgarian","Minangkabau",0.611818181818181
 "Belarusian","Minangkabau",0.360909090909091
+"Ukrainian","Minangkabau",0.487272727272727
 "Hungarian","Minangkabau",0.516363636363636
 "Lithuanian","Minangkabau",0.5
 "Kalmyk","Minangkabau",0.819999999999999
@@ -7575,6 +8558,7 @@
 "Hawaiian","Minangkabau",0.474545454545455
 "Tahitian","Minangkabau",0.443636363636364
 "Inupiak","Minangkabau",0.891818181818181
+"Greenlandic","Minangkabau",0.520909090909091
 "Cheyenne","Minangkabau",0.851818181818181
 "Choctaw","Minangkabau",0.723636363636364
 "Muscogee","Minangkabau",0.554545454545455
@@ -7607,14 +8591,17 @@
 "Wolof","Tetum",0.67
 "Egyptian Arabic","Tetum",0.671818181818181
 "Kabyle","Tetum",0.57
+"Albanian","Tetum",0.584545454545454
 "Latin","Tetum",0.650909090909091
 "Neapolitan","Tetum",0.789090909090909
 "Spanish","Tetum",0.648181818181818
+"Greek","Tetum",0.655454545454546
 "English","Tetum",0.565454545454545
 "French","Tetum",0.556363636363636
 "Dutch","Tetum",0.667272727272727
 "Icelandic","Tetum",0.639999999999999
 "Irish","Tetum",0.470909090909091
+"Northern Sami","Tetum",0.600909090909091
 "Serbian","Tetum",0.855454545454544
 "Russian","Tetum",0.469090909090909
 "Bashkir","Tetum",0.564545454545454
@@ -7622,12 +8609,14 @@
 "Erzya","Tetum",0.52
 "Estonian","Tetum",0.487272727272727
 "Gagauz","Tetum",0.645454545454545
+"Tatar","Tetum",0.426363636363636
 "Latvian","Tetum",0.491818181818182
 "Vepsian","Tetum",0.463636363636364
 "Czech","Tetum",0.542727272727273
 "Meadow Mari","Tetum",0.259090909090909
 "Bulgarian","Tetum",0.647272727272727
 "Belarusian","Tetum",0.384545454545455
+"Ukrainian","Tetum",0.516363636363636
 "Hungarian","Tetum",0.54
 "Lithuanian","Tetum",0.517272727272727
 "Kalmyk","Tetum",0.767272727272727
@@ -7671,6 +8660,7 @@
 "Hawaiian","Tetum",0.560909090909091
 "Tahitian","Tetum",0.45
 "Inupiak","Tetum",0.823636363636363
+"Greenlandic","Tetum",0.462727272727273
 "Cheyenne","Tetum",0.78090909090909
 "Choctaw","Tetum",0.662727272727272
 "Muscogee","Tetum",0.565454545454545
@@ -7703,14 +8693,17 @@
 "Wolof","Nauruan",0.646363636363636
 "Egyptian Arabic","Nauruan",0.726363636363636
 "Kabyle","Nauruan",0.659090909090909
+"Albanian","Nauruan",0.63090909090909
 "Latin","Nauruan",0.71
 "Neapolitan","Nauruan",0.8
 "Spanish","Nauruan",0.710909090909091
+"Greek","Nauruan",0.724545454545454
 "English","Nauruan",0.693636363636363
 "French","Nauruan",0.691818181818182
 "Dutch","Nauruan",0.718181818181818
 "Icelandic","Nauruan",0.707272727272727
 "Irish","Nauruan",0.503636363636364
+"Northern Sami","Nauruan",0.681818181818182
 "Serbian","Nauruan",0.832727272727272
 "Russian","Nauruan",0.639090909090909
 "Bashkir","Nauruan",0.738181818181818
@@ -7718,12 +8711,14 @@
 "Erzya","Nauruan",0.655454545454545
 "Estonian","Nauruan",0.537272727272727
 "Gagauz","Nauruan",0.715454545454545
+"Tatar","Nauruan",0.63
 "Latvian","Nauruan",0.603636363636364
 "Vepsian","Nauruan",0.613636363636364
 "Czech","Nauruan",0.653636363636363
 "Meadow Mari","Nauruan",0.547272727272727
 "Bulgarian","Nauruan",0.697272727272727
 "Belarusian","Nauruan",0.574545454545454
+"Ukrainian","Nauruan",0.632727272727272
 "Hungarian","Nauruan",0.649090909090909
 "Lithuanian","Nauruan",0.65
 "Kalmyk","Nauruan",0.765454545454545
@@ -7767,6 +8762,7 @@
 "Hawaiian","Nauruan",0.596363636363636
 "Tahitian","Nauruan",0.555454545454545
 "Inupiak","Nauruan",0.813636363636363
+"Greenlandic","Nauruan",0.645454545454545
 "Cheyenne","Nauruan",0.734545454545454
 "Choctaw","Nauruan",0.575454545454545
 "Muscogee","Nauruan",0.648181818181818
@@ -7799,14 +8795,17 @@
 "Wolof","Chamorro",0.670909090909091
 "Egyptian Arabic","Chamorro",0.66090909090909
 "Kabyle","Chamorro",0.568181818181818
+"Albanian","Chamorro",0.572727272727272
 "Latin","Chamorro",0.573636363636363
 "Neapolitan","Chamorro",0.790909090909091
 "Spanish","Chamorro",0.558181818181818
+"Greek","Chamorro",0.654545454545454
 "English","Chamorro",0.539090909090909
 "French","Chamorro",0.457272727272727
 "Dutch","Chamorro",0.555454545454545
 "Icelandic","Chamorro",0.558181818181818
 "Irish","Chamorro",0.558181818181818
+"Northern Sami","Chamorro",0.695454545454546
 "Serbian","Chamorro",0.849999999999999
 "Russian","Chamorro",0.456363636363636
 "Bashkir","Chamorro",0.58090909090909
@@ -7814,12 +8813,14 @@
 "Erzya","Chamorro",0.451818181818182
 "Estonian","Chamorro",0.576363636363636
 "Gagauz","Chamorro",0.643636363636363
+"Tatar","Chamorro",0.404545454545455
 "Latvian","Chamorro",0.584545454545454
 "Vepsian","Chamorro",0.379090909090909
 "Czech","Chamorro",0.532727272727272
 "Meadow Mari","Chamorro",0.453636363636364
 "Bulgarian","Chamorro",0.646363636363636
 "Belarusian","Chamorro",0.366363636363636
+"Ukrainian","Chamorro",0.515454545454545
 "Hungarian","Chamorro",0.541818181818182
 "Lithuanian","Chamorro",0.531818181818182
 "Kalmyk","Chamorro",0.871818181818181
@@ -7863,6 +8864,7 @@
 "Hawaiian","Chamorro",0.447272727272727
 "Tahitian","Chamorro",0.461818181818182
 "Inupiak","Chamorro",0.93090909090909
+"Greenlandic","Chamorro",0.576363636363636
 "Cheyenne","Chamorro",0.89090909090909
 "Choctaw","Chamorro",0.774545454545454
 "Muscogee","Chamorro",0.576363636363636
@@ -7895,14 +8897,17 @@
 "Wolof","Samoan",0.602727272727272
 "Egyptian Arabic","Samoan",0.772727272727273
 "Kabyle","Samoan",0.667272727272727
+"Albanian","Samoan",0.621818181818181
 "Latin","Samoan",0.544545454545454
 "Neapolitan","Samoan",0.808181818181818
 "Spanish","Samoan",0.53
+"Greek","Samoan",0.753636363636363
 "English","Samoan",0.634545454545454
 "French","Samoan",0.535454545454545
 "Dutch","Samoan",0.544545454545454
 "Icelandic","Samoan",0.573636363636363
 "Irish","Samoan",0.661818181818182
+"Northern Sami","Samoan",0.789999999999999
 "Serbian","Samoan",0.744545454545454
 "Russian","Samoan",0.612727272727272
 "Bashkir","Samoan",0.770909090909091
@@ -7910,12 +8915,14 @@
 "Erzya","Samoan",0.541818181818182
 "Estonian","Samoan",0.77
 "Gagauz","Samoan",0.745454545454545
+"Tatar","Samoan",0.581818181818182
 "Latvian","Samoan",0.790909090909091
 "Vepsian","Samoan",0.467272727272727
 "Czech","Samoan",0.656363636363636
 "Meadow Mari","Samoan",0.646363636363636
 "Bulgarian","Samoan",0.736363636363636
 "Belarusian","Samoan",0.557272727272727
+"Ukrainian","Samoan",0.630909090909091
 "Hungarian","Samoan",0.671818181818181
 "Lithuanian","Samoan",0.651818181818182
 "Kalmyk","Samoan",0.87090909090909
@@ -7959,6 +8966,7 @@
 "Hawaiian","Samoan",0.422727272727273
 "Tahitian","Samoan",0.523636363636364
 "Inupiak","Samoan",0.93090909090909
+"Greenlandic","Samoan",0.729999999999999
 "Cheyenne","Samoan",0.883636363636363
 "Choctaw","Samoan",0.749090909090909
 "Muscogee","Samoan",0.683636363636363
@@ -7991,14 +8999,17 @@
 "Wolof","Tongan",0.558181818181818
 "Egyptian Arabic","Tongan",0.731818181818182
 "Kabyle","Tongan",0.64
+"Albanian","Tongan",0.690909090909091
 "Latin","Tongan",0.560909090909091
 "Neapolitan","Tongan",0.782727272727272
 "Spanish","Tongan",0.567272727272727
+"Greek","Tongan",0.720909090909091
 "English","Tongan",0.67
 "French","Tongan",0.565454545454545
 "Dutch","Tongan",0.571818181818182
 "Icelandic","Tongan",0.535454545454545
 "Irish","Tongan",0.65
+"Northern Sami","Tongan",0.74
 "Serbian","Tongan",0.760909090909091
 "Russian","Tongan",0.68
 "Bashkir","Tongan",0.726363636363636
@@ -8006,12 +9017,14 @@
 "Erzya","Tongan",0.510909090909091
 "Estonian","Tongan",0.733636363636364
 "Gagauz","Tongan",0.757272727272727
+"Tatar","Tongan",0.627272727272727
 "Latvian","Tongan",0.765454545454545
 "Vepsian","Tongan",0.46
 "Czech","Tongan",0.654545454545454
 "Meadow Mari","Tongan",0.618181818181818
 "Bulgarian","Tongan",0.718181818181818
 "Belarusian","Tongan",0.542727272727273
+"Ukrainian","Tongan",0.62
 "Hungarian","Tongan",0.646363636363636
 "Lithuanian","Tongan",0.643636363636363
 "Kalmyk","Tongan",0.834545454545454
@@ -8055,6 +9068,7 @@
 "Hawaiian","Tongan",0.463636363636364
 "Tahitian","Tongan",0.519090909090909
 "Inupiak","Tongan",0.882727272727272
+"Greenlandic","Tongan",0.722727272727273
 "Cheyenne","Tongan",0.839999999999999
 "Choctaw","Tongan",0.744545454545454
 "Muscogee","Tongan",0.614545454545454
@@ -8087,14 +9101,17 @@
 "Wolof","Maori",0.574545454545454
 "Egyptian Arabic","Maori",0.586363636363636
 "Kabyle","Maori",0.56
+"Albanian","Maori",0.784545454545455
 "Latin","Maori",0.636363636363636
 "Neapolitan","Maori",0.795454545454545
 "Spanish","Maori",0.650909090909091
+"Greek","Maori",0.58
 "English","Maori",0.753636363636363
 "French","Maori",0.653636363636363
 "Dutch","Maori",0.666363636363636
 "Icelandic","Maori",0.653636363636363
 "Irish","Maori",0.575454545454545
+"Northern Sami","Maori",0.663636363636363
 "Serbian","Maori",0.853636363636363
 "Russian","Maori",0.501818181818181
 "Bashkir","Maori",0.655454545454545
@@ -8102,12 +9119,14 @@
 "Erzya","Maori",0.629999999999999
 "Estonian","Maori",0.580909090909091
 "Gagauz","Maori",0.561818181818182
+"Tatar","Maori",0.544545454545454
 "Latvian","Maori",0.694545454545455
 "Vepsian","Maori",0.575454545454545
 "Czech","Maori",0.539090909090909
 "Meadow Mari","Maori",0.553636363636363
 "Bulgarian","Maori",0.549090909090909
 "Belarusian","Maori",0.48
+"Ukrainian","Maori",0.523636363636363
 "Hungarian","Maori",0.519090909090909
 "Lithuanian","Maori",0.535454545454545
 "Kalmyk","Maori",0.772727272727273
@@ -8151,6 +9170,7 @@
 "Hawaiian","Maori",0.479090909090909
 "Tahitian","Maori",0.436363636363637
 "Inupiak","Maori",0.807272727272726
+"Greenlandic","Maori",0.646363636363636
 "Cheyenne","Maori",0.770909090909091
 "Choctaw","Maori",0.675454545454546
 "Muscogee","Maori",0.550909090909091
@@ -8183,14 +9203,17 @@
 "Wolof","Hawaiian",0.7
 "Egyptian Arabic","Hawaiian",0.657272727272727
 "Kabyle","Hawaiian",0.568181818181818
+"Albanian","Hawaiian",0.454545454545454
 "Latin","Hawaiian",0.440909090909091
 "Neapolitan","Hawaiian",0.636363636363635
 "Spanish","Hawaiian",0.432727272727273
+"Greek","Hawaiian",0.614545454545454
 "English","Hawaiian",0.526363636363636
 "French","Hawaiian",0.439090909090909
 "Dutch","Hawaiian",0.43
 "Icelandic","Hawaiian",0.5
 "Irish","Hawaiian",0.543636363636364
+"Northern Sami","Hawaiian",0.73
 "Serbian","Hawaiian",0.712727272727273
 "Russian","Hawaiian",0.545454545454546
 "Bashkir","Hawaiian",0.727272727272728
@@ -8198,12 +9221,14 @@
 "Erzya","Hawaiian",0.363636363636364
 "Estonian","Hawaiian",0.666363636363636
 "Gagauz","Hawaiian",0.636363636363635
+"Tatar","Hawaiian",0.363636363636364
 "Latvian","Hawaiian",0.636363636363635
 "Vepsian","Hawaiian",0.454545454545454
 "Czech","Hawaiian",0.544545454545454
 "Meadow Mari","Hawaiian",0.566363636363636
 "Bulgarian","Hawaiian",0.654545454545454
 "Belarusian","Hawaiian",0.459090909090909
+"Ukrainian","Hawaiian",0.542727272727272
 "Hungarian","Hawaiian",0.555454545454545
 "Lithuanian","Hawaiian",0.564545454545454
 "Kalmyk","Hawaiian",0.899999999999999
@@ -8247,6 +9272,7 @@
 "Hawaiian","Hawaiian",0
 "Tahitian","Hawaiian",0.450909090909091
 "Inupiak","Hawaiian",1
+"Greenlandic","Hawaiian",0.727272727272728
 "Cheyenne","Hawaiian",0.941818181818181
 "Choctaw","Hawaiian",0.816363636363636
 "Muscogee","Hawaiian",0.636363636363635
@@ -8279,14 +9305,17 @@
 "Wolof","Tahitian",0.585454545454545
 "Egyptian Arabic","Tahitian",0.58
 "Kabyle","Tahitian",0.473636363636364
+"Albanian","Tahitian",0.672727272727273
 "Latin","Tahitian",0.566363636363636
 "Neapolitan","Tahitian",0.802727272727272
 "Spanish","Tahitian",0.568181818181818
+"Greek","Tahitian",0.577272727272727
 "English","Tahitian",0.662727272727272
 "French","Tahitian",0.558181818181818
 "Dutch","Tahitian",0.569090909090909
 "Icelandic","Tahitian",0.580909090909091
 "Irish","Tahitian",0.485454545454546
+"Northern Sami","Tahitian",0.581818181818181
 "Serbian","Tahitian",0.85090909090909
 "Russian","Tahitian",0.487272727272727
 "Bashkir","Tahitian",0.570909090909091
@@ -8294,12 +9323,14 @@
 "Erzya","Tahitian",0.534545454545454
 "Estonian","Tahitian",0.580909090909091
 "Gagauz","Tahitian",0.561818181818182
+"Tatar","Tahitian",0.430909090909091
 "Latvian","Tahitian",0.607272727272727
 "Vepsian","Tahitian",0.494545454545454
 "Czech","Tahitian",0.500909090909091
 "Meadow Mari","Tahitian",0.467272727272727
 "Bulgarian","Tahitian",0.556363636363636
 "Belarusian","Tahitian",0.395454545454545
+"Ukrainian","Tahitian",0.456363636363636
 "Hungarian","Tahitian",0.477272727272727
 "Lithuanian","Tahitian",0.496363636363636
 "Kalmyk","Tahitian",0.761818181818181
@@ -8343,6 +9374,7 @@
 "Hawaiian","Tahitian",0.450909090909091
 "Tahitian","Tahitian",0
 "Inupiak","Tahitian",0.811818181818181
+"Greenlandic","Tahitian",0.560909090909091
 "Cheyenne","Tahitian",0.798181818181818
 "Choctaw","Tahitian",0.683636363636363
 "Muscogee","Tahitian",0.469090909090909
@@ -8375,14 +9407,17 @@
 "Wolof","Inupiak",0.678181818181817
 "Egyptian Arabic","Inupiak",0.791818181818181
 "Kabyle","Inupiak",0.781818181818181
+"Albanian","Inupiak",1
 "Latin","Inupiak",0.941818181818181
 "Neapolitan","Inupiak",0.909090909090908
 "Spanish","Inupiak",0.927272727272726
+"Greek","Inupiak",0.834545454545454
 "English","Inupiak",0.955454545454545
 "French","Inupiak",0.929999999999999
 "Dutch","Inupiak",0.945454545454545
 "Icelandic","Inupiak",0.863636363636362
 "Irish","Inupiak",0.82090909090909
+"Northern Sami","Inupiak",0.702727272727273
 "Serbian","Inupiak",0.939999999999999
 "Russian","Inupiak",0.909090909090908
 "Bashkir","Inupiak",0.636363636363635
@@ -8390,12 +9425,14 @@
 "Erzya","Inupiak",0.909090909090908
 "Estonian","Inupiak",0.8
 "Gagauz","Inupiak",0.909090909090908
+"Tatar","Inupiak",0.909090909090908
 "Latvian","Inupiak",0.818181818181818
 "Vepsian","Inupiak",0.909090909090908
 "Czech","Inupiak",0.829999999999999
 "Meadow Mari","Inupiak",0.788181818181818
 "Bulgarian","Inupiak",0.800909090909091
 "Belarusian","Inupiak",0.818181818181818
+"Ukrainian","Inupiak",0.812727272727272
 "Hungarian","Inupiak",0.81090909090909
 "Lithuanian","Inupiak",0.812727272727272
 "Kalmyk","Inupiak",0.565454545454545
@@ -8439,6 +9476,7 @@
 "Hawaiian","Inupiak",1
 "Tahitian","Inupiak",0.811818181818181
 "Inupiak","Inupiak",0
+"Greenlandic","Inupiak",0.727272727272728
 "Cheyenne","Inupiak",0.491818181818182
 "Choctaw","Inupiak",0.714545454545455
 "Muscogee","Inupiak",0.727272727272728
@@ -8447,6 +9485,108 @@
 "Haitian","Inupiak",0.811818181818181
 "Aymara","Inupiak",0.771818181818182
 "Guarani","Inupiak",0.751818181818181
+"Herero","Greenlandic",0.748181818181818
+"Zulu","Greenlandic",0.758181818181818
+"Tswana","Greenlandic",0.757272727272727
+"Shona","Greenlandic",0.735454545454545
+"Ndonga","Greenlandic",0.642727272727272
+"Swati","Greenlandic",0.818181818181818
+"Tsonga","Greenlandic",0.724545454545454
+"Venda","Greenlandic",0.740909090909091
+"Kongo","Greenlandic",0.545454545454546
+"Tumbuka","Greenlandic",0.732727272727273
+"Kikuyu","Greenlandic",0.727272727272728
+"Luganda","Greenlandic",0.746363636363636
+"Kinyarwanda","Greenlandic",0.754545454545454
+"Lingala","Greenlandic",0.545454545454546
+"Kirundi","Greenlandic",0.755454545454545
+"Igbo","Greenlandic",0.57
+"Bambara","Greenlandic",0.818181818181818
+"Tigrinya","Greenlandic",0.748181818181818
+"Afar","Greenlandic",0.727272727272728
+"Amharic","Greenlandic",0.738181818181818
+"Kanuri","Greenlandic",0.818181818181818
+"Wolof","Greenlandic",0.752727272727272
+"Egyptian Arabic","Greenlandic",0.658181818181818
+"Kabyle","Greenlandic",0.550909090909091
+"Albanian","Greenlandic",0.454545454545454
+"Latin","Greenlandic",0.751818181818182
+"Neapolitan","Greenlandic",0.727272727272728
+"Spanish","Greenlandic",0.656363636363636
+"Greek","Greenlandic",0.645454545454545
+"English","Greenlandic",0.480909090909091
+"French","Greenlandic",0.469090909090909
+"Dutch","Greenlandic",0.676363636363636
+"Icelandic","Greenlandic",0.537272727272727
+"Irish","Greenlandic",0.549090909090909
+"Northern Sami","Greenlandic",0.543636363636364
+"Serbian","Greenlandic",0.865454545454545
+"Russian","Greenlandic",0.545454545454546
+"Bashkir","Greenlandic",0.454545454545454
+"Chuvash","Greenlandic",0.454545454545454
+"Erzya","Greenlandic",0.454545454545454
+"Estonian","Greenlandic",0.559090909090909
+"Gagauz","Greenlandic",0.727272727272728
+"Tatar","Greenlandic",0.545454545454546
+"Latvian","Greenlandic",0.363636363636364
+"Vepsian","Greenlandic",0.363636363636364
+"Czech","Greenlandic",0.554545454545454
+"Meadow Mari","Greenlandic",0.450909090909091
+"Bulgarian","Greenlandic",0.624545454545454
+"Belarusian","Greenlandic",0.477272727272727
+"Ukrainian","Greenlandic",0.552727272727273
+"Hungarian","Greenlandic",0.58
+"Lithuanian","Greenlandic",0.519090909090909
+"Kalmyk","Greenlandic",0.724545454545454
+"Armenian","Greenlandic",0.632727272727272
+"Kurdish (Sorani)","Greenlandic",0.454545454545454
+"Abkhazian","Greenlandic",0.639999999999999
+"Kabardian","Greenlandic",0.612727272727272
+"Turkish","Greenlandic",0.549090909090909
+"Ossetian","Greenlandic",0.746363636363637
+"Hebrew","Greenlandic",0.675454545454545
+"Sindhi","Greenlandic",0.551818181818181
+"Eastern Punjabi","Greenlandic",0.818181818181818
+"Kazakh","Greenlandic",0.818181818181818
+"Sakha","Greenlandic",0.727272727272728
+"Korean","Greenlandic",0.818181818181818
+"Chinese","Greenlandic",0.509090909090909
+"Nuosu","Greenlandic",0.4
+"Japanese","Greenlandic",0.636363636363635
+"Tibetan","Greenlandic",0.662727272727272
+"Bengali","Greenlandic",0.727272727272728
+"Kashmiri","Greenlandic",0.663636363636363
+"Gujarati","Greenlandic",0.560909090909091
+"Telugu","Greenlandic",0.454545454545454
+"Tamil","Greenlandic",0.546363636363636
+"Malayalam","Greenlandic",0.727272727272728
+"Sinhalese","Greenlandic",0.454545454545454
+"Burmese","Greenlandic",0.553636363636363
+"Vietnamese","Greenlandic",0.818181818181818
+"Khmer","Greenlandic",0.563636363636363
+"Malay","Greenlandic",0.623636363636364
+"Thai","Greenlandic",0.545454545454546
+"Cebuano","Greenlandic",0.566363636363636
+"Banyumasan","Greenlandic",0.586363636363636
+"Minangkabau","Greenlandic",0.520909090909091
+"Tetum","Greenlandic",0.462727272727273
+"Nauruan","Greenlandic",0.645454545454545
+"Chamorro","Greenlandic",0.576363636363636
+"Samoan","Greenlandic",0.729999999999999
+"Tongan","Greenlandic",0.722727272727273
+"Maori","Greenlandic",0.646363636363636
+"Hawaiian","Greenlandic",0.727272727272728
+"Tahitian","Greenlandic",0.560909090909091
+"Inupiak","Greenlandic",0.727272727272728
+"Greenlandic","Greenlandic",0
+"Cheyenne","Greenlandic",0.688181818181818
+"Choctaw","Greenlandic",0.623636363636362
+"Muscogee","Greenlandic",0.636363636363635
+"Cherokee","Greenlandic",0.454545454545454
+"Navajo","Greenlandic",0.635454545454545
+"Haitian","Greenlandic",0.545454545454545
+"Aymara","Greenlandic",0.56
+"Guarani","Greenlandic",0.546363636363636
 "Herero","Cheyenne",0.456363636363637
 "Zulu","Cheyenne",0.539090909090909
 "Tswana","Cheyenne",0.561818181818181
@@ -8471,14 +9611,17 @@
 "Wolof","Cheyenne",0.563636363636363
 "Egyptian Arabic","Cheyenne",0.756363636363636
 "Kabyle","Cheyenne",0.746363636363636
+"Albanian","Cheyenne",0.959090909090909
 "Latin","Cheyenne",0.932727272727272
 "Neapolitan","Cheyenne",0.874545454545453
 "Spanish","Cheyenne",0.887272727272726
+"Greek","Cheyenne",0.807272727272727
 "English","Cheyenne",0.928181818181818
 "French","Cheyenne",0.896363636363636
 "Dutch","Cheyenne",0.917272727272727
 "Icelandic","Cheyenne",0.837272727272726
 "Irish","Cheyenne",0.795454545454545
+"Northern Sami","Cheyenne",0.629090909090909
 "Serbian","Cheyenne",0.926363636363636
 "Russian","Cheyenne",0.869999999999999
 "Bashkir","Cheyenne",0.743636363636363
@@ -8486,12 +9629,14 @@
 "Erzya","Cheyenne",0.852727272727272
 "Estonian","Cheyenne",0.785454545454546
 "Gagauz","Cheyenne",0.87090909090909
+"Tatar","Cheyenne",0.88090909090909
 "Latvian","Cheyenne",0.796363636363636
 "Vepsian","Cheyenne",0.848181818181817
 "Czech","Cheyenne",0.802727272727272
 "Meadow Mari","Cheyenne",0.756363636363636
 "Bulgarian","Cheyenne",0.770909090909091
 "Belarusian","Cheyenne",0.782727272727272
+"Ukrainian","Cheyenne",0.791818181818181
 "Hungarian","Cheyenne",0.792727272727272
 "Lithuanian","Cheyenne",0.779090909090909
 "Kalmyk","Cheyenne",0.66090909090909
@@ -8535,6 +9680,7 @@
 "Hawaiian","Cheyenne",0.941818181818181
 "Tahitian","Cheyenne",0.798181818181818
 "Inupiak","Cheyenne",0.491818181818182
+"Greenlandic","Cheyenne",0.688181818181818
 "Cheyenne","Cheyenne",0
 "Choctaw","Cheyenne",0.564545454545454
 "Muscogee","Cheyenne",0.693636363636363
@@ -8567,14 +9713,17 @@
 "Wolof","Choctaw",0.520909090909091
 "Egyptian Arabic","Choctaw",0.694545454545454
 "Kabyle","Choctaw",0.579090909090909
+"Albanian","Choctaw",0.725454545454546
 "Latin","Choctaw",0.872727272727272
 "Neapolitan","Choctaw",0.816363636363636
 "Spanish","Choctaw",0.784545454545455
+"Greek","Choctaw",0.69
 "English","Choctaw",0.801818181818182
 "French","Choctaw",0.783636363636364
 "Dutch","Choctaw",0.81
 "Icelandic","Choctaw",0.761818181818181
 "Irish","Choctaw",0.6
+"Northern Sami","Choctaw",0.741818181818182
 "Serbian","Choctaw",0.736363636363636
 "Russian","Choctaw",0.718181818181818
 "Bashkir","Choctaw",0.817272727272727
@@ -8582,12 +9731,14 @@
 "Erzya","Choctaw",0.715454545454545
 "Estonian","Choctaw",0.610909090909091
 "Gagauz","Choctaw",0.705454545454545
+"Tatar","Choctaw",0.809090909090909
 "Latvian","Choctaw",0.627272727272726
 "Vepsian","Choctaw",0.627272727272726
 "Czech","Choctaw",0.689090909090909
 "Meadow Mari","Choctaw",0.668181818181818
 "Bulgarian","Choctaw",0.65
 "Belarusian","Choctaw",0.695454545454545
+"Ukrainian","Choctaw",0.699090909090909
 "Hungarian","Choctaw",0.690909090909091
 "Lithuanian","Choctaw",0.671818181818182
 "Kalmyk","Choctaw",0.619090909090909
@@ -8631,6 +9782,7 @@
 "Hawaiian","Choctaw",0.816363636363636
 "Tahitian","Choctaw",0.683636363636363
 "Inupiak","Choctaw",0.714545454545455
+"Greenlandic","Choctaw",0.623636363636362
 "Cheyenne","Choctaw",0.564545454545454
 "Choctaw","Choctaw",0
 "Muscogee","Choctaw",0.523636363636364
@@ -8663,14 +9815,17 @@
 "Wolof","Muscogee",0.603636363636363
 "Egyptian Arabic","Muscogee",0.547272727272727
 "Kabyle","Muscogee",0.337272727272727
+"Albanian","Muscogee",0.818181818181818
 "Latin","Muscogee",0.659090909090909
 "Neapolitan","Muscogee",0.818181818181818
 "Spanish","Muscogee",0.600909090909091
+"Greek","Muscogee",0.605454545454545
 "English","Muscogee",0.729090909090909
 "French","Muscogee",0.608181818181818
 "Dutch","Muscogee",0.631818181818181
 "Icelandic","Muscogee",0.536363636363636
 "Irish","Muscogee",0.604545454545454
+"Northern Sami","Muscogee",0.541818181818182
 "Serbian","Muscogee",0.790909090909091
 "Russian","Muscogee",0.727272727272728
 "Bashkir","Muscogee",0.454545454545454
@@ -8678,12 +9833,14 @@
 "Erzya","Muscogee",0.545454545454546
 "Estonian","Muscogee",0.681818181818181
 "Gagauz","Muscogee",0.545454545454546
+"Tatar","Muscogee",0.636363636363635
 "Latvian","Muscogee",0.636363636363635
 "Vepsian","Muscogee",0.545454545454546
 "Czech","Muscogee",0.535454545454545
 "Meadow Mari","Muscogee",0.541818181818182
 "Bulgarian","Muscogee",0.565454545454545
 "Belarusian","Muscogee",0.497272727272727
+"Ukrainian","Muscogee",0.513636363636363
 "Hungarian","Muscogee",0.533636363636364
 "Lithuanian","Muscogee",0.523636363636364
 "Kalmyk","Muscogee",0.717272727272727
@@ -8727,6 +9884,7 @@
 "Hawaiian","Muscogee",0.636363636363635
 "Tahitian","Muscogee",0.469090909090909
 "Inupiak","Muscogee",0.727272727272728
+"Greenlandic","Muscogee",0.636363636363635
 "Cheyenne","Muscogee",0.693636363636363
 "Choctaw","Muscogee",0.523636363636364
 "Muscogee","Muscogee",0
@@ -8759,14 +9917,17 @@
 "Wolof","Cherokee",0.652727272727272
 "Egyptian Arabic","Cherokee",0.596363636363636
 "Kabyle","Cherokee",0.404545454545454
+"Albanian","Cherokee",0.727272727272728
 "Latin","Cherokee",0.688181818181818
 "Neapolitan","Cherokee",0.818181818181818
 "Spanish","Cherokee",0.64090909090909
+"Greek","Cherokee",0.642727272727272
 "English","Cherokee",0.672727272727272
 "French","Cherokee",0.555454545454545
 "Dutch","Cherokee",0.674545454545454
 "Icelandic","Cherokee",0.487272727272728
 "Irish","Cherokee",0.633636363636363
+"Northern Sami","Cherokee",0.506363636363636
 "Serbian","Cherokee",0.839999999999999
 "Russian","Cherokee",0.727272727272728
 "Bashkir","Cherokee",0.363636363636364
@@ -8774,12 +9935,14 @@
 "Erzya","Cherokee",0.545454545454546
 "Estonian","Cherokee",0.701818181818182
 "Gagauz","Cherokee",0.636363636363635
+"Tatar","Cherokee",0.636363636363635
 "Latvian","Cherokee",0.545454545454546
 "Vepsian","Cherokee",0.545454545454546
 "Czech","Cherokee",0.560909090909091
 "Meadow Mari","Cherokee",0.593636363636363
 "Bulgarian","Cherokee",0.612727272727272
 "Belarusian","Cherokee",0.537272727272727
+"Ukrainian","Cherokee",0.531818181818182
 "Hungarian","Cherokee",0.561818181818182
 "Lithuanian","Cherokee",0.531818181818182
 "Kalmyk","Cherokee",0.727272727272727
@@ -8823,6 +9986,7 @@
 "Hawaiian","Cherokee",0.727272727272728
 "Tahitian","Cherokee",0.522727272727273
 "Inupiak","Cherokee",0.545454545454546
+"Greenlandic","Cherokee",0.454545454545454
 "Cheyenne","Cherokee",0.649090909090909
 "Choctaw","Cherokee",0.714545454545455
 "Muscogee","Cherokee",0.272727272727273
@@ -8855,14 +10019,17 @@
 "Wolof","Navajo",0.642727272727272
 "Egyptian Arabic","Navajo",0.653636363636363
 "Kabyle","Navajo",0.730909090909091
+"Albanian","Navajo",0.914545454545454
 "Latin","Navajo",0.904545454545454
 "Neapolitan","Navajo",0.836363636363636
 "Spanish","Navajo",0.854545454545454
+"Greek","Navajo",0.765454545454545
 "English","Navajo",0.870909090909091
 "French","Navajo",0.858181818181818
 "Dutch","Navajo",0.876363636363635
 "Icelandic","Navajo",0.818181818181818
 "Irish","Navajo",0.768181818181818
+"Northern Sami","Navajo",0.764545454545454
 "Serbian","Navajo",0.881818181818181
 "Russian","Navajo",0.833636363636363
 "Bashkir","Navajo",0.776363636363636
@@ -8870,12 +10037,14 @@
 "Erzya","Navajo",0.784545454545454
 "Estonian","Navajo",0.754545454545454
 "Gagauz","Navajo",0.825454545454545
+"Tatar","Navajo",0.848181818181817
 "Latvian","Navajo",0.768181818181818
 "Vepsian","Navajo",0.80090909090909
 "Czech","Navajo",0.75
 "Meadow Mari","Navajo",0.744545454545454
 "Bulgarian","Navajo",0.72
 "Belarusian","Navajo",0.76
+"Ukrainian","Navajo",0.748181818181818
 "Hungarian","Navajo",0.74
 "Lithuanian","Navajo",0.748181818181818
 "Kalmyk","Navajo",0.572727272727272
@@ -8919,6 +10088,7 @@
 "Hawaiian","Navajo",0.885454545454545
 "Tahitian","Navajo",0.78
 "Inupiak","Navajo",0.658181818181818
+"Greenlandic","Navajo",0.635454545454545
 "Cheyenne","Navajo",0.537272727272727
 "Choctaw","Navajo",0.609090909090909
 "Muscogee","Navajo",0.708181818181818
@@ -8951,14 +10121,17 @@
 "Wolof","Haitian",0.565454545454545
 "Egyptian Arabic","Haitian",0.553636363636364
 "Kabyle","Haitian",0.355454545454545
+"Albanian","Haitian",0.647272727272727
 "Latin","Haitian",0.560909090909091
 "Neapolitan","Haitian",0.724545454545454
 "Spanish","Haitian",0.558181818181818
+"Greek","Haitian",0.537272727272727
 "English","Haitian",0.666363636363636
 "French","Haitian",0.57
 "Dutch","Haitian",0.566363636363636
 "Icelandic","Haitian",0.552727272727272
 "Irish","Haitian",0.442727272727273
+"Northern Sami","Haitian",0.605454545454545
 "Serbian","Haitian",0.769090909090908
 "Russian","Haitian",0.490909090909091
 "Bashkir","Haitian",0.553636363636364
@@ -8966,12 +10139,14 @@
 "Erzya","Haitian",0.506363636363636
 "Estonian","Haitian",0.571818181818182
 "Gagauz","Haitian",0.430909090909091
+"Tatar","Haitian",0.423636363636364
 "Latvian","Haitian",0.554545454545455
 "Vepsian","Haitian",0.493636363636364
 "Czech","Haitian",0.449090909090909
 "Meadow Mari","Haitian",0.463636363636364
 "Bulgarian","Haitian",0.542727272727272
 "Belarusian","Haitian",0.384545454545455
+"Ukrainian","Haitian",0.42
 "Hungarian","Haitian",0.441818181818182
 "Lithuanian","Haitian",0.452727272727273
 "Kalmyk","Haitian",0.757272727272727
@@ -9015,6 +10190,7 @@
 "Hawaiian","Haitian",0.456363636363637
 "Tahitian","Haitian",0.384545454545455
 "Inupiak","Haitian",0.811818181818181
+"Greenlandic","Haitian",0.545454545454545
 "Cheyenne","Haitian",0.781818181818181
 "Choctaw","Haitian",0.581818181818182
 "Muscogee","Haitian",0.4
@@ -9047,14 +10223,17 @@
 "Wolof","Aymara",0.54
 "Egyptian Arabic","Aymara",0.547272727272727
 "Kabyle","Aymara",0.46
+"Albanian","Aymara",0.724545454545454
 "Latin","Aymara",0.59090909090909
 "Neapolitan","Aymara",0.763636363636364
 "Spanish","Aymara",0.564545454545454
+"Greek","Aymara",0.569090909090909
 "English","Aymara",0.689090909090909
 "French","Aymara",0.592727272727272
 "Dutch","Aymara",0.603636363636363
 "Icelandic","Aymara",0.528181818181818
 "Irish","Aymara",0.478181818181818
+"Northern Sami","Aymara",0.59
 "Serbian","Aymara",0.889090909090909
 "Russian","Aymara",0.545454545454545
 "Bashkir","Aymara",0.521818181818182
@@ -9062,12 +10241,14 @@
 "Erzya","Aymara",0.485454545454545
 "Estonian","Aymara",0.572727272727272
 "Gagauz","Aymara",0.545454545454546
+"Tatar","Aymara",0.476363636363636
 "Latvian","Aymara",0.588181818181818
 "Vepsian","Aymara",0.5
 "Czech","Aymara",0.486363636363636
 "Meadow Mari","Aymara",0.452727272727273
 "Bulgarian","Aymara",0.443636363636364
 "Belarusian","Aymara",0.369090909090909
+"Ukrainian","Aymara",0.434545454545455
 "Hungarian","Aymara",0.46
 "Lithuanian","Aymara",0.475454545454546
 "Kalmyk","Aymara",0.737272727272727
@@ -9111,6 +10292,7 @@
 "Hawaiian","Aymara",0.497272727272727
 "Tahitian","Aymara",0.385454545454545
 "Inupiak","Aymara",0.771818181818182
+"Greenlandic","Aymara",0.56
 "Cheyenne","Aymara",0.75
 "Choctaw","Aymara",0.676363636363636
 "Muscogee","Aymara",0.435454545454545
@@ -9143,14 +10325,17 @@
 "Wolof","Guarani",0.554545454545455
 "Egyptian Arabic","Guarani",0.543636363636363
 "Kabyle","Guarani",0.37
+"Albanian","Guarani",0.727272727272727
 "Latin","Guarani",0.594545454545454
 "Neapolitan","Guarani",0.757272727272727
 "Spanish","Guarani",0.582727272727272
+"Greek","Guarani",0.573636363636363
 "English","Guarani",0.696363636363636
 "French","Guarani",0.585454545454545
 "Dutch","Guarani",0.592727272727272
 "Icelandic","Guarani",0.534545454545454
 "Irish","Guarani",0.479090909090909
+"Northern Sami","Guarani",0.576363636363636
 "Serbian","Guarani",0.795454545454545
 "Russian","Guarani",0.543636363636363
 "Bashkir","Guarani",0.522727272727273
@@ -9158,12 +10343,14 @@
 "Erzya","Guarani",0.519090909090909
 "Estonian","Guarani",0.572727272727273
 "Gagauz","Guarani",0.447272727272728
+"Tatar","Guarani",0.471818181818182
 "Latvian","Guarani",0.579090909090909
 "Vepsian","Guarani",0.5
 "Czech","Guarani",0.484545454545454
 "Meadow Mari","Guarani",0.451818181818182
 "Bulgarian","Guarani",0.546363636363636
 "Belarusian","Guarani",0.396363636363637
+"Ukrainian","Guarani",0.438181818181818
 "Hungarian","Guarani",0.464545454545455
 "Lithuanian","Guarani",0.470909090909091
 "Kalmyk","Guarani",0.745454545454546
@@ -9207,6 +10394,7 @@
 "Hawaiian","Guarani",0.507272727272727
 "Tahitian","Guarani",0.370909090909091
 "Inupiak","Guarani",0.751818181818181
+"Greenlandic","Guarani",0.546363636363636
 "Cheyenne","Guarani",0.738181818181818
 "Choctaw","Guarani",0.582727272727272
 "Muscogee","Guarani",0.330909090909091

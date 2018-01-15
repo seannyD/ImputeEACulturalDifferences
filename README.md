@@ -38,7 +38,7 @@ The file `data/FAIR_langauges_glotto_xdid.csv` shows how the FAIR languages were
 
 `processing/makeSplitstreeNexusFile.R`:  This creates a nexus file format for the distance matrix which can be read by splitstree.  Outputs to `results/splitstree/CulturalDistances_Kinship_AllSocieties.nex`.
 
-
+`processing/getIndoEuropeanFAIRTree.R`:  Extract tree distances for indo european.
 
 ## Results
 

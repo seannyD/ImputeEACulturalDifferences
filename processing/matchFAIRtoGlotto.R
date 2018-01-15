@@ -45,8 +45,24 @@ sum(ea$xd_id %in% l$xd.id)
 
 l$soc.id = ea[match(l$xd.id,ea$xd_id),]$soc_id
 
+# Extra fixes
 l[l$Language2=="Georgian",]$soc.id = "Ci8"# Georgians
-l[l$Language2=="Georgian",]$soc.id = "Ce2"# Portuguese
+l[l$Language2=="Portuguese",]$soc.id = "Ce2"# Portuguese
+l[l$Language2=="Portuguese",]$xd.id = "xd529"
+l[l$Language2=="Albanian",]$soc.id = "Ce1"
+l[l$Language2=="Albanian",]$xd.id = "xd528"
+l[l$Language2=="Greek",]$soc.id = "Ce7"
+l[l$Language2=="Greek",]$xd.id = "xd534"
+l[l$Language2=="Greenlandic",]$soc.id = "Na25"
+l[l$Language2=="Greenlandic",]$xd.id = "xd1041"
+l[l$Language2=="Northern Sami",]$soc.id = "Cg4"
+l[l$Language2=="Northern Sami",]$xd.id = "xd544"
+l[l$Language2=="Romanian",]$soc.id = "Ch10"
+l[l$Language2=="Romanian",]$xd.id = "xd547"
+l[l$Language2=="Ukrainian",]$soc.id = "Ch7"
+l[l$Language2=="Ukrainian",]$xd.id = "xd571"
+l[l$Language2=="Tatar",]$soc.id = "ch20"
+l[l$Language2=="Tatar",]$xd.id = "xd558"
 
 
 
@@ -56,8 +72,9 @@ g2 = read.csv("../data/languages-and-dialects-geo.csv", stringsAsFactors = F)
 l$iso3 = g2[match(l$glotto,g2$glottocode),]$isocodes
 
 l[l$Language=="Khmer",]$iso3 = "khm"
-
 l[l$Language=="Inupiak",]$soc.id = "Na12"
+
+
 
 
 # Get geographic area:
@@ -74,6 +91,8 @@ l[l$glotto %in% c("neap1235",'serb1264','wall1255'),]$autotyp.area = "Europe"
 l[l$glotto =="tahi1242",]$autotyp.area = "Oceania"
 l[l$glotto %in% c("sout2688",'cent1989'),]$autotyp.area = "Southeast Asia"
 l[l$glotto %in% c("mang1399"),]$autotyp.area ="African Savannah"
+l[l$glotto %in% c("alba1267"),]$autotyp.area ="Europe"
+l[l$glotto %in% c("gree1276"),]$autotyp.area ="Europe"
 
 # Get fair iso2 codes:
 library(stringr)
@@ -96,9 +115,11 @@ l$iso2 = res[match(l$Language2, res$name),]$iso2
 l[l$Language2=="Banyumasan",]$iso2 = "bms"
 l[l$Language2=="Serbo Croatian",]$iso2 = "sh"
 
+
+
 # Load final linguistic distance measures to see which langauges will go into the analysis
 
-ling = read.csv("../data/FAIR/semantic_distances_FAIR.csv", stringsAsFactors = F)
+ling = read.csv("../data/FAIR/semantic_distances_FAIR_extended.csv", stringsAsFactors = F)
 
 ling.langs = unique(c(ling$l1, ling$l2))
 

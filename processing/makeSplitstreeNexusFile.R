@@ -27,7 +27,7 @@ dists = as.matrix(dists)
 
 makeSplitstree(dists, "../results/splitstree/CulturalDistances.nex")
 
-### Just for 16 langs in final analysis
+### Just for langs in final analysis
 
 l = read.csv("../data/FAIR_langauges_glotto_xdid.csv", stringsAsFactors = F)
 

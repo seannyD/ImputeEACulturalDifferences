@@ -9,9 +9,9 @@ setwd("~/Documents/Bristol/word2vec/word2vec_DPLACE/analysis/")
 
 # Introduction
 
-We compare cultural distances between socieites with Linguistic similaritys between societies, controlling for shared history in two ways.
+We compare cultural distances between socieites with linguistic similarities between societies, controlling for shared history in two ways.
 
-The first test uses mixed effects modelling.  The pairing of the langauge family of each language (according to Glottolog) is used as a random effect.  That means that the model can capture the likelihood that two languages from the Indo-European langauge family will be more similar to each other than two languages from different langauge families.  The same is done with geographic area according to Autotyp.
+The first test uses mixed effects modelling.  The pairing of the language family of each language (according to Glottolog) is used as a random effect.  That means that the model can capture the likelihood that two languages from the Indo-European language family will be more similar to each other than two languages from different language families.  The same is done with geographic area according to Autotyp.
 
 The second test controls for history using distances from a phylogenetic tree.  The tree comes from Bouckaert et al. (2012).  Patristic distances between languages are used as a measure of historical distance between societies in a Mantel test.  Note that the Mantel test assumes a strict distance metric, which is not necessarily the case with this data, but there are few other ways to deal with continuous pairwise distances. 
 
@@ -50,7 +50,7 @@ l$family = g[match(l$family,g$pk),]$name
 Read the semantic distances
 
 ```{r}
-ling = read.csv("../data/FAIR/semantic_distances_FAIR.csv", stringsAsFactors = F)
+ling = read.csv("../data/FAIR/semantic_distances_FAIR_extended.csv", stringsAsFactors = F)
 ```
 
 Combine the lingusitic and cultural distances
@@ -92,7 +92,7 @@ ling$rho.center = scale(ling$rho)
 
 ```
 
-Each observation is now assocaited with a langauge family pair:
+Each observation is now assocaited with a language family pair:
 
 ```{r}
 head(ling[,c("l1","l2","rho",'family.group')])
@@ -166,7 +166,7 @@ ggplot(dx,aes(x,y)) +
   geom_line(mapping = aes(colour=grp)) +
   xlab("Cultural distance")+
   ylab("Linguistic similarity") +
-  ggtitle("Area pair random effects") +
+  ggtitle("Language family pair random effects") +
   coord_cartesian(ylim=c(0.1,0.6),
                   xlim=c(0.2,0.8))
 
@@ -182,7 +182,7 @@ ggplot(dx,aes(x,y)) +
   geom_line(mapping = aes(colour=grp)) +
   xlab("Cultural distance")+
   ylab("Linguistic similarity") +
-  ggtitle("Family pair random effects") +
+  ggtitle("Area pair random effects") +
   coord_cartesian(ylim=c(0.1,0.6),
                   xlim=c(0.2,0.8))
 ```
@@ -272,39 +272,29 @@ mD2 = lmer(
 anova(mD0,mD1,mD2)
 ```
 
-Random slopes for family improves the fit of the model, but adding the correlation coefficient does not.
+Random slopes (and the correlation coefficient) for family improves the fit of the model.
 
 Test the same for area:
 
 ```{r}
 mD3 = lmer(
   rho.center ~ 1 +
-    (1 | family.group) +
-    (0 + cult.dist.center | family.group) +
+    (1 + cult.dist.center | family.group) +
     (1 | area.group) +
     (0 + cult.dist.center | area.group) +
     (1 | imputed_semantic_domain),
   data = ling.dom)
-anova(mD1,mD3)
-```
-
-Random slopes for area do not improve the fit of the model.
-
-```{r}
 mD4 = lmer(
   rho.center ~ 1 +
     (1 + cult.dist.center | family.group) +
     (1 | area.group) +
     (1 | imputed_semantic_domain),
   data = ling.dom)
+anova(mD2,mD3,mD4)
 ```
 
-And, in fact, area random intercepts are all set to 0:
-```{r}
-ranef(mD4)$area.group
-```
+Random slopes for area do not improve the fit of the model.
 
-So we'll take them out.
 
 Test random slopes for domain:
 
@@ -325,12 +315,15 @@ anova(mdom1,mdom2)
 ```
 
 
+Random slope for domains significantly improves model.
+
 Now we test the main effect of cultural distance:
 
 ```{r}
 mD5 = lmer(
   rho.center ~ 1 +
-    (1 + cult.dist.center || family.group) +
+    (1 + cult.dist.center | family.group) +
+    (1 | area.group) +
     (1 + cult.dist.center | imputed_semantic_domain),
   data = ling.dom)
 mD6 = update(mD5, ~.+cult.dist.center)
@@ -369,7 +362,7 @@ ggplot(pdx,
 
 ```
 
-"Religion and beleif" seems to be working differently from the other domains.
+"Agriculture and vegetation" seems to be working differently from "Kinship".
 
 \newpage
 
@@ -399,7 +392,7 @@ rownames(cult.m) = cult.m[,1]
 cult.m = cult.m[,2:ncol(cult.m)]
 ```
 
-Convert the Linguistic similaritys to a matrix.  This uses `igraph` to make an undirected graph from the long format with `rho` as the edge weights, then output a matrix of adjacencies.
+Convert the linguistic similarities to a matrix.  This uses `igraph` to make an undirected graph from the long format with `rho` as the edge weights, then output a matrix of adjacencies.
 
 ```{r}
 grph <- graph.data.frame(ling[,c("l1",'l2','rho')], directed=FALSE)
@@ -421,24 +414,42 @@ hist.m2 = hist.m[in.analysis,in.analysis]
 
 Note that there are only `r length(in.analysis)` languages with data on lingusitic, cultural and historical distance.
 
+```{r}
+plot(as.dist(cult.m2),as.dist(ling.m2),
+     xlab="Cultural distance",
+     ylab="Linguistic similarity")
+plot(as.dist(cult.m2),as.dist(hist.m2),
+     xlab="Cultural distance",
+     ylab="Historical distance")
+plot(as.dist(ling.m2),as.dist(hist.m2),
+     xlab="Linguistic similarity",
+     ylab="Historical distance")
+```
+
+
 ## Tests
 
 Simple correlation without control for history:
 
 ```{r}
+set.seed(1498)
+```
+
+
+```{r}
 ecodist::mantel(as.dist(cult.m2) ~
                 as.dist(ling.m2),
-                nperm = 10000)
+                nperm = 100000)
 ```
 
 
 Run a mantel test comparing the Linguistic similaritys to the cultural distances, controlling for the historical distance between languages:
 
 ```{r}
-ecodist::mantel(as.dist(cult.m2)~
-                  as.dist(ling.m2) + 
+ecodist::mantel(as.dist(ling.m2)~
+                  as.dist(cult.m2) + 
                   as.dist(hist.m2),
-                nperm = 10000)
+                nperm = 100000)
 ```
 
 # References

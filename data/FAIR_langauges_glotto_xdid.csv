@@ -1,11 +1,11 @@
 "Language","Language2","glotto","family","xd.id","soc.id","iso3","autotyp.area","iso2","in.final.analysis"
-"Abkhazian","Abkhazian","abkh1244","Abkhaz-Adyge","xd577","Ci12","abk","Greater Mesopotamia","ab",FALSE
+"Abkhazian","Abkhazian","abkh1244","Abkhaz-Adyge","xd577","Ci12","abk","Greater Mesopotamia","ab",TRUE
 "Acehnese","Acehnese"," ","Acehnese",NA,NA,NA,NA,"ace",FALSE
 "Adyghe","Adyghe","adyg1241","Abkhaz-Adyge",NA,NA,"ady","Greater Mesopotamia","ady",FALSE
 "Afar","Afar","afar1241","Afro-Asiatic","xd454","Ca6","aar","Greater Abyssinia","aa",FALSE
 "Afrikaans","Afrikaans","afri1274","Indo-European","xd537","Cf2","afr","S Africa","af",FALSE
 "Akan","Akan","akan1250","Atlantic-Congo",NA,NA,"aka","African Savannah","ak",FALSE
-"Albanian","Albanian","alba1267","Indo-European",NA,NA,NA,NA,"sq",FALSE
+"Albanian","Albanian","alba1267","Indo-European","xd528","Ce1",NA,"Europe","sq",TRUE
 "Alemannic","Alemannic","alem1243","Indo-European",NA,NA,NA,NA,"als",FALSE
 "Amharic","Amharic","amha1245","Afro-Asiatic","xd455","Ca7","amh","Greater Abyssinia","am",FALSE
 "Anglo_Saxon","Anglo Saxon","","Anglo Saxon",NA,NA,NA,NA,NA,FALSE
@@ -16,22 +16,22 @@
 "Aromanian","Aromanian","arom1237","Indo-European",NA,NA,"rup",NA,NA,FALSE
 "Assamese","Assamese","assa1263","Indo-European",NA,NA,"asm","Indic","as",FALSE
 "Asturian","Asturian","astu1245","Indo-European",NA,NA,"ast","Europe","ast",FALSE
-"Avar","Avar","avar1256","Nakh-Daghestanian",NA,NA,"ava","Greater Mesopotamia","av",FALSE
+"Avar","Avar","avar1256","Nakh-Daghestanian",NA,NA,"ava","Greater Mesopotamia","av",TRUE
 "Aymara","Aymara","cent2142","Aymaran","xd1375","Sf2","ayr","Andean","ay",FALSE
 "Azerbaijani","Azerbaijani","azer1255","Turkic",NA,NA,NA,"Greater Mesopotamia","az",FALSE
 "Bambara","Bambara","bamb1269","Mande","xd244","Ag1","bam","African Savannah","bm",FALSE
 "Banjar","Banjar","banj1239","Austronesian",NA,NA,"bjn",NA,"bjn",FALSE
 "Banyumasan","Banyumasan","java1254","Austronesian","xd751","Ib2","jav","Southeast Asia","bms",FALSE
-"Bashkir","Bashkir","bash1264","Turkic","xd549","ch12","bak","Inner Asia","ba",FALSE
+"Bashkir","Bashkir","bash1264","Turkic","xd549","ch12","bak","Inner Asia","ba",TRUE
 "Basque","Basque","basq1248","Basque",NA,NA,"eus","Europe","eu",TRUE
 "Bavarian","Bavarian","bava1246","Indo-European",NA,NA,"bar","Europe","bar",FALSE
 "Belarusian","Belarusian","bela1254","Indo-European","xd570","Ch6","bel","Inner Asia","be",TRUE
-"Bengali","Bengali","beng1280","Indo-European","xd664","Ef2","ben","Indic","bn",FALSE
+"Bengali","Bengali","beng1280","Indo-European","xd664","Ef2","ben","Indic","bn",TRUE
 "Bihari","Bihari","biha1245","Indo-European",NA,NA,NA,NA,"bh",FALSE
 "Bishnupriya Manipuri","Bishnupriya Manipuri","bish1244","Indo-European",NA,NA,"bpy",NA,"bpy",FALSE
 "Bislama","Bislama","bisl1239","Indo-European",NA,NA,"bis","Oceania","bi",FALSE
 "Bosnian","Bosnian","bosn1245","Indo-European",NA,NA,"bos","Europe","bs",FALSE
-"Breton","Breton","bret1244","Indo-European",NA,NA,"bre","Europe","br",FALSE
+"Breton","Breton","bret1244","Indo-European",NA,NA,"bre","Europe","br",TRUE
 "Buginese","Buginese","bugi1244","Austronesian",NA,NA,"bug","Oceania","bug",FALSE
 "Bulgarian","Bulgarian","bulg1262","Indo-European","xd569","Ch5","bul","Europe","bg",TRUE
 "Burmese","Burmese","nucl1310","Sino-Tibetan","xd709","Ei3","mya","Southeast Asia","my",FALSE
@@ -42,13 +42,13 @@
 "Central Bicolano","Central Bicolano","irig1242","Austronesian",NA,NA,"bto",NA,"bcl",FALSE
 "Chamorro","Chamorro","cham1312","Austronesian","xd839","If8","cha","Oceania","ch",FALSE
 "Chavacano","Chavacano","chav1241","Indo-European",NA,NA,"cbk","Oceania",NA,FALSE
-"Chechen","Chechen","chec1245","Nakh-Daghestanian","xd583","Ci7","che","Greater Mesopotamia","ce",FALSE
+"Chechen","Chechen","chec1245","Nakh-Daghestanian","xd583","Ci7","che","Greater Mesopotamia","ce",TRUE
 "Cherokee","Cherokee","cher1273","Iroquoian","xd1254","Ng5","chr","E North America","chr",FALSE
 "Cheyenne","Cheyenne","chey1247","Algic","xd1224","Ne5","chy","Basin and Plains","chy",FALSE
 "Chichewa","Chichewa","nyan1308","Atlantic-Congo",NA,NA,"nya","S Africa","ny",FALSE
 "Chinese","Chinese","mand1415","Sino-Tibetan","xd639","Ed10","cmn","Southeast Asia","zh",FALSE
 "Choctaw","Choctaw","choc1276","Muskogean","xd1247","Ng12","cho","E North America","cho",FALSE
-"Chuvash","Chuvash","chuv1255","Turkic","xd551","ch14","chv","Inner Asia","cv",FALSE
+"Chuvash","Chuvash","chuv1255","Turkic","xd551","ch14","chv","Inner Asia","cv",TRUE
 "Classical Chinese","Classical Chinese","lite1248","Sino-Tibetan",NA,NA,"lzh",NA,NA,FALSE
 "Cornish","Cornish","corn1251","Indo-European",NA,NA,"cor","Europe","kw",FALSE
 "Corsican","Corsican","cors1241","Indo-European",NA,NA,"cos","Alaska-Oregon","co",FALSE
@@ -81,13 +81,13 @@
 "Gagauz","Gagauz","gaga1249","Turkic","xd554","ch17","gag","Europe","gag",FALSE
 "Galician","Galician","gali1258","Indo-European",NA,NA,"glg","Europe","gl",FALSE
 "Gan","Gan","ganc1239","Sino-Tibetan",NA,NA,"gan",NA,"gan",FALSE
-"Georgian","Georgian","nucl1302","Kartvelian",NA,"Ce2","kat","Greater Mesopotamia","ka",TRUE
+"Georgian","Georgian","nucl1302","Kartvelian",NA,"Ci8","kat","Greater Mesopotamia","ka",TRUE
 "German","German","stan1295","Indo-European",NA,NA,"deu","Europe","de",TRUE
 "Gilaki","Gilaki","gila1241","Indo-European",NA,NA,"glk","Greater Mesopotamia","glk",FALSE
 "Goan Konkani","Goan Konkani","goan1235","Indo-European",NA,NA,"gom",NA,"gom",FALSE
 "Gothic","Gothic","goth1244","Indo-European",NA,NA,"got","Europe","got",FALSE
-"Greek","Greek","gree1276","Indo-European",NA,NA,NA,NA,"el",FALSE
-"Greenlandic","Greenlandic","kala1399","Eskimo-Aleut",NA,NA,"kal","E North America","kl",FALSE
+"Greek","Greek","gree1276","Indo-European","xd534","Ce7",NA,"Europe","el",TRUE
+"Greenlandic","Greenlandic","kala1399","Eskimo-Aleut","xd1041","Na25","kal","E North America","kl",TRUE
 "Guarani","Guarani","east2555","Tupian","xd1394","Sh7","gui","SE South America","gn",FALSE
 "Gujarati","Gujarati","guja1252","Indo-European","xd671","Ef9","guj","Indic","gu",FALSE
 "Haitian","Haitian","hait1244","Indo-European","xd1334","Sb9","hat","Mesoamerica","ht",FALSE
@@ -100,7 +100,7 @@
 "Hindi","Hindi","hind1269","Indo-European",NA,NA,"hin","Indic","hi",TRUE
 "Hiri Motu","Hiri Motu","hiri1237","Pidgin",NA,NA,"hmo",NA,"ho",FALSE
 "Hungarian","Hungarian","hung1274","Uralic","xd572","Ch8","hun","Europe","hu",TRUE
-"Icelandic","Icelandic","icel1247","Indo-European","xd542","Cg2","isl","Europe","is",FALSE
+"Icelandic","Icelandic","icel1247","Indo-European","xd542","Cg2","isl","Europe","is",TRUE
 "Ido","Ido","","Ido",NA,NA,NA,NA,"io",FALSE
 "Igbo","Igbo","nucl1417","Atlantic-Congo","xd187","Af10","ibo","African Savannah","ig",FALSE
 "Ilokano","Ilokano","ilok1237","Austronesian",NA,NA,"ilo","Oceania","ilo",FALSE
@@ -109,7 +109,7 @@
 "Interlingue","Interlingue","","Interlingue",NA,NA,NA,NA,"ie",FALSE
 "Inuktitut","Inuktitut"," ","Inuktitut",NA,NA,NA,NA,"iu",FALSE
 "Inupiak","Inupiak","nort2945","Eskimo-Aleut","xd1018","Na12","esk","Alaska-Oregon","ik",FALSE
-"Irish","Irish","iris1253","Indo-European","xd543","Cg3","gle","Europe","ga",FALSE
+"Irish","Irish","iris1253","Indo-European","xd543","Cg3","gle","Europe","ga",TRUE
 "Italian","Italian","ital1282","Indo-European",NA,NA,"ita","Europe","it",TRUE
 "Jamaican Patois","Jamaican Patois","jama1262","Indo-European",NA,NA,"jam","Mesoamerica","jam",FALSE
 "Japanese","Japanese","nucl1643","Japonic","xd648","Ed5","jpn","N Coast Asia","ja",TRUE
@@ -117,7 +117,7 @@
 "Kabardian","Kabardian","kaba1278","Abkhaz-Adyge","xd580","Ci4","kbd","Greater Mesopotamia","kbd",FALSE
 "Kabyle","Kabyle","kaby1243","Afro-Asiatic","xd522","Cd4","kab","N Africa","kab",FALSE
 "Kalmyk","Kalmyk","kalm1243","Mongolic","xd574","Ci1","xal","Inner Asia","xal",FALSE
-"Kannada","Kannada","nucl1305","Dravidian",NA,NA,"kan","Indic","kn",FALSE
+"Kannada","Kannada","nucl1305","Dravidian",NA,NA,"kan","Indic","kn",TRUE
 "Kanuri","Kanuri","mang1399","Saharan","xd468","Cb19","kby","African Savannah","kr",FALSE
 "Kapampangan","Kapampangan","pamp1243","Austronesian",NA,NA,"pam","Oceania","pam",FALSE
 "Karachay_Balkar","Karachay Balkar","kara1465","Turkic",NA,NA,"krc","Greater Mesopotamia",NA,FALSE
@@ -133,7 +133,7 @@
 "Komi","Komi","komi1267","Uralic",NA,NA,NA,NA,"kv",FALSE
 "Komi_Permyak","Komi Permyak","komi1269","Uralic",NA,NA,"koi","Inner Asia",NA,FALSE
 "Kongo","Kongo","sans1272","Atlantic-Congo","xd38","Ac14","kwy","S Africa","kg",FALSE
-"Korean","Korean","kore1280","Koreanic","xd638","Ed1","kor","N Coast Asia","ko",FALSE
+"Korean","Korean","kore1280","Koreanic","xd638","Ed1","kor","N Coast Asia","ko",TRUE
 "Kuanyama","Kuanyama","kuan1247","Atlantic-Congo",NA,NA,"kua",NA,"kj",FALSE
 "Kurdish (Kurmanji)","Kurdish (Kurmanji)","nort2641","Indo-European",NA,NA,"kmr",NA,"ku",FALSE
 "Kurdish (Sorani)","Kurdish (Sorani)","cent1972","Indo-European","xd576","Ci11","ckb","Greater Mesopotamia","ckb",FALSE
@@ -142,7 +142,7 @@
 "Lao","Lao","laoo1244","Tai-Kadai",NA,NA,"lao","Southeast Asia","lo",FALSE
 "Latgalian","Latgalian","","Latgalian",NA,NA,NA,NA,"ltg",FALSE
 "Latin","Latin","lati1261","Indo-European","xd530","Ce3","lat","Europe","la",TRUE
-"Latvian","Latvian","latv1249","Indo-European","xd559","ch21","lav","Inner Asia","lv",FALSE
+"Latvian","Latvian","latv1249","Indo-European","xd559","ch21","lav","Inner Asia","lv",TRUE
 "Lezgian","Lezgian","lezg1247","Nakh-Daghestanian",NA,NA,"lez","Greater Mesopotamia","lez",FALSE
 "Ligurian","Ligurian","ligu1248","Indo-European",NA,NA,"lij",NA,"lij",FALSE
 "Limburgish","Limburgish","limb1263","Indo-European",NA,NA,"lim",NA,"li",FALSE
@@ -159,7 +159,7 @@
 "Maithili","Maithili","mait1250","Indo-European","xd662","Ef10","mai","Indic","mai",FALSE
 "Malagasy","Malagasy","mala1537","Austronesian",NA,NA,NA,"Southeast Asia","mg",FALSE
 "Malay","Malay","mala1479","Austronesian","xd730","Ej8","zlm","Southeast Asia","ms",FALSE
-"Malayalam","Malayalam","mala1464","Dravidian","xd682","Eg6","mal","Indic","ml",FALSE
+"Malayalam","Malayalam","mala1464","Dravidian","xd682","Eg6","mal","Indic","ml",TRUE
 "Maltese","Maltese","malt1254","Afro-Asiatic",NA,NA,"mlt","Europe","mt",FALSE
 "Manx","Manx","manx1243","Indo-European",NA,NA,"glv","Europe","gv",FALSE
 "Maori","Maori","maor1246","Austronesian","xd891","Ij2","mri","Oceania","mi",FALSE
@@ -187,7 +187,7 @@
 "Norman","Norman","norm1245","Indo-European",NA,NA,"",NA,"nrm",FALSE
 "North Frisian","North Frisian","nort2626","Indo-European",NA,NA,"frr","Europe","frr",FALSE
 "Northern Luri","Northern Luri","nort2645","Indo-European",NA,NA,"lrc",NA,"lrc",FALSE
-"Northern Sami","Northern Sami","nort2671","Uralic",NA,NA,"sme","Inner Asia","se",FALSE
+"Northern Sami","Northern Sami","nort2671","Uralic","xd544","Cg4","sme","Inner Asia","se",TRUE
 "Northern Sotho","Northern Sotho","nort3233","Atlantic-Congo",NA,NA,NA,NA,"nso",FALSE
 "Norwegian (Bokmål)","Norwegian (Bokmål)","norw1258","Indo-European",NA,NA,"nor","Europe","no",TRUE
 "Norwegian (Nynorsk)","Norwegian (Nynorsk)","norw1258","Indo-European",NA,NA,"nor","Europe","nn",FALSE
@@ -197,7 +197,7 @@
 "Old Church Slavonic","Old Church Slavonic","chur1257","Indo-European",NA,NA,"chu",NA,"cu",FALSE
 "Oriya","Oriya","oriy1255","Indo-European",NA,NA,"ory",NA,"or",FALSE
 "Oromo","Oromo","nucl1736","Afro-Asiatic",NA,NA,NA,NA,"om",FALSE
-"Ossetian","Ossetian","osse1243","Indo-European","xd582","Ci6","oss","Greater Mesopotamia","os",FALSE
+"Ossetian","Ossetian","osse1243","Indo-European","xd582","Ci6","oss","Greater Mesopotamia","os",TRUE
 "Palatinate German","Palatinate German","","Palatinate German",NA,NA,NA,NA,"pfl",FALSE
 "Pali","Pali","pali1273","Indo-European",NA,NA,"pli","Indic","pi",FALSE
 "Pangasinan","Pangasinan","pang1290","Austronesian",NA,NA,"pag","Oceania","pag",FALSE
@@ -209,11 +209,11 @@
 "Piedmontese","Piedmontese","piem1238","Indo-European",NA,NA,"pms",NA,"pms",FALSE
 "Polish","Polish","poli1260","Indo-European",NA,NA,"pol","Europe","pl",TRUE
 "Pontic","Pontic","pont1253","Indo-European",NA,NA,"pnt",NA,"pnt",FALSE
-"Portuguese","Portuguese","port1283","Indo-European",NA,NA,"por","Europe","pt",TRUE
+"Portuguese","Portuguese","port1283","Indo-European","xd529","Ce2","por","Europe","pt",TRUE
 "Quechua","Quechua"," ","Quechua",NA,NA,NA,NA,"qu",FALSE
 "Ripuarian","Ripuarian","ripu1236","Indo-European",NA,NA,NA,NA,"ksh",FALSE
 "Romani","Romani","roma1329","Indo-European",NA,NA,NA,"Inner Asia","rmy",FALSE
-"Romanian","Romanian","roma1327","Indo-European",NA,NA,"ron","Europe","ro",TRUE
+"Romanian","Romanian","roma1327","Indo-European","xd547","Ch10","ron","Europe","ro",TRUE
 "Romansh","Romansh","roma1326","Indo-European",NA,NA,"roh","Europe","rm",FALSE
 "Russian","Russian","russ1263","Indo-European","xd548","Ch11","rus","Inner Asia","ru",TRUE
 "Rusyn","Rusyn","rusy1239","Indo-European",NA,NA,"rue",NA,"rue",FALSE
@@ -236,7 +236,7 @@
 "Sindhi","Sindhi","sind1272","Indo-European","xd596","Ea1","snd","Indic","sd",FALSE
 "Sinhalese","Sinhalese","sinh1246","Indo-European","xd692","Eh6","sin","Indic","si",FALSE
 "Slovak","Slovak","slov1269","Indo-European",NA,NA,"slk","Europe","sk",TRUE
-"Slovenian","Slovenian","slov1268","Indo-European",NA,NA,"slv","Europe","sl",FALSE
+"Slovenian","Slovenian","slov1268","Indo-European",NA,NA,"slv","Europe","sl",TRUE
 "Somali","Somali","soma1255","Afro-Asiatic",NA,NA,"som","Greater Abyssinia","so",FALSE
 "Southern Azerbaijani","Southern Azerbaijani","sout2697","Turkic",NA,NA,"azb","Greater Mesopotamia","azb",FALSE
 "Spanish","Spanish","stan1288","Indo-European","xd533","Ce6","spa","Europe","es",TRUE
@@ -244,14 +244,14 @@
 "Sundanese","Sundanese","sund1252","Austronesian",NA,NA,"sun","Southeast Asia","su",FALSE
 "Swahili","Swahili","swah1253","Atlantic-Congo",NA,NA,"swh","S Africa","sw",FALSE
 "Swati","Swati","swat1243","Atlantic-Congo","xd21","Ab2","ssw","S Africa","ss",FALSE
-"Swedish","Swedish","swed1254","Indo-European",NA,NA,"swe","Europe","sv",FALSE
+"Swedish","Swedish","swed1254","Indo-European",NA,NA,"swe","Europe","sv",TRUE
 "Tagalog","Tagalog","taga1270","Austronesian",NA,NA,"tgl","Oceania","tl",FALSE
 "Tahitian","Tahitian","tahi1242","Austronesian","xd897","Ij8","tah","Oceania","ty",FALSE
 "Tajik","Tajik","taji1245","Indo-European",NA,NA,"tgk","Inner Asia","tg",FALSE
-"Tamil","Tamil","tami1289","Dravidian","xd678","Eg2","tam","Indic","ta",FALSE
+"Tamil","Tamil","tami1289","Dravidian","xd678","Eg2","tam","Indic","ta",TRUE
 "Tarantino","Tarantino","","Tarantino",NA,NA,NA,NA,NA,FALSE
-"Tatar","Tatar","tata1255","Turkic",NA,NA,"tat","Inner Asia","tt",FALSE
-"Telugu","Telugu","telu1262","Dravidian","xd673","Eg10","tel","Indic","te",FALSE
+"Tatar","Tatar","tata1255","Turkic","xd558","ch20","tat","Inner Asia","tt",TRUE
+"Telugu","Telugu","telu1262","Dravidian","xd673","Eg10","tel","Indic","te",TRUE
 "Tetum","Tetum","tetu1245","Austronesian","xd765","Ic3","tet","Oceania","tet",FALSE
 "Thai","Thai","thai1261","Tai-Kadai","xd731","Ej9","tha","Southeast Asia","th",FALSE
 "Tibetan","Tibetan","tibe1272","Sino-Tibetan","xd656","Ee4","bod","Inner Asia","bo",FALSE
@@ -262,12 +262,12 @@
 "Tswana","Tswana","tswa1253","Atlantic-Congo","xd14","Ab13","tsn","S Africa","tn",FALSE
 "Tulu","Tulu","tulu1258","Dravidian",NA,NA,"tcy","Indic","tcy",FALSE
 "Tumbuka","Tumbuka","tumb1250","Atlantic-Congo","xd62","Ac36","tum","S Africa","tum",FALSE
-"Turkish","Turkish","nucl1301","Turkic","xd581","Ci5","tur","Greater Mesopotamia","tr",FALSE
+"Turkish","Turkish","nucl1301","Turkic","xd581","Ci5","tur","Greater Mesopotamia","tr",TRUE
 "Turkmen","Turkmen","turk1304","Turkic","xd613","Eb5","tuk","Inner Asia","tk",FALSE
 "Tuvan","Tuvan","tuvi1240","Turkic",NA,NA,"tyv","Inner Asia","tyv",FALSE
 "Twi","Twi","twii1234","Atlantic-Congo",NA,NA,"twi",NA,"tw",FALSE
 "Udmurt","Udmurt","udmu1245","Uralic",NA,NA,"udm","Inner Asia","udm",FALSE
-"Ukrainian","Ukrainian","ukra1253","Indo-European",NA,NA,"ukr","Inner Asia","uk",FALSE
+"Ukrainian","Ukrainian","ukra1253","Indo-European","xd571","Ch7","ukr","Inner Asia","uk",TRUE
 "Upper Sorbian","Upper Sorbian","uppe1395","Indo-European",NA,NA,"hsb","Europe","hsb",FALSE
 "Urdu","Urdu","urdu1245","Indo-European",NA,NA,"urd","Indic","ur",FALSE
 "Uyghur","Uyghur","uygh1240","Turkic",NA,NA,NA,NA,"ug",FALSE
@@ -280,7 +280,7 @@
 "Võro","Võro","sout2679","Uralic",NA,NA,"vro",NA,NA,FALSE
 "Walloon","Walloon","wall1255","Indo-European","xd545","Cg5","wln","Europe","wa",FALSE
 "Waray","Waray","wara1247","Austronesian",NA,NA,"",NA,"war",FALSE
-"Welsh","Welsh","wels1247","Indo-European",NA,NA,"cym","Europe","cy",FALSE
+"Welsh","Welsh","wels1247","Indo-European",NA,NA,"cym","Europe","cy",TRUE
 "West Flemish","West Flemish","vlaa1240","Indo-European",NA,NA,"vls",NA,"vls",FALSE
 "West Frisian","West Frisian","west2354","Indo-European",NA,NA,"fry","Europe","fy",FALSE
 "Western Punjabi","Western Punjabi","west2386","Indo-European",NA,NA,"pnb",NA,"pnb",FALSE
