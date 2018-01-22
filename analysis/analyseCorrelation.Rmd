@@ -429,12 +429,11 @@ plot(as.dist(ling.m2),as.dist(hist.m2),
 
 ## Tests
 
-Simple correlation without control for history:
-
 ```{r}
 set.seed(1498)
 ```
 
+Correlation between cultural and linguistic distances:
 
 ```{r}
 ecodist::mantel(as.dist(cult.m2) ~
@@ -442,6 +441,21 @@ ecodist::mantel(as.dist(cult.m2) ~
                 nperm = 100000)
 ```
 
+Correlation between cultural and historical distances:
+
+```{r}
+ecodist::mantel(as.dist(cult.m2) ~
+                as.dist(hist.m2),
+                nperm = 100000)
+```
+
+Correlation between linguistic and historical distances:
+
+```{r}
+ecodist::mantel(as.dist(ling.m2) ~
+                as.dist(hist.m2),
+                nperm = 100000)
+```
 
 Run a mantel test comparing the Linguistic similaritys to the cultural distances, controlling for the historical distance between languages:
 
@@ -449,6 +463,16 @@ Run a mantel test comparing the Linguistic similaritys to the cultural distances
 ecodist::mantel(as.dist(ling.m2)~
                   as.dist(cult.m2) + 
                   as.dist(hist.m2),
+                nperm = 100000)
+```
+
+
+Run a mantel test comparing the linguistic similarities to the historical similarities, controlling for cultural distance:
+
+```{r}
+ecodist::mantel(as.dist(ling.m2)~
+                  as.dist(hist.m2) + 
+                  as.dist(cult.m2),
                 nperm = 100000)
 ```
 
