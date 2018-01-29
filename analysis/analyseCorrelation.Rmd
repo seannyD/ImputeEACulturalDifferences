@@ -136,7 +136,8 @@ summary(m1)
 Plot the estimates, rescaling the variables back to the original units:
 
 ```{r}
-gx = sjp.lmer(m1,'pred','cult.dist.center', prnt.plot = F)
+gx = sjp.lmer(m1,'pred','cult.dist.center', 
+              prnt.plot = F)
 gx$plot$data$y = gx$plot$data$y *
   attr(ling$rho.center,"scaled:scale") +
   attr(ling$rho.center,"scaled:center")
@@ -145,8 +146,15 @@ gx$plot$data$resp.y = gx$plot$data$resp.y *
   attr(ling$rho.center,"scaled:center")
 gx$plot$data$x = gx$plot$data$x *
   cdc.s +cdc.c
-gx$plot + coord_cartesian(ylim=c(0.1,0.6),
-                          xlim=c(0.2,0.8))
+gx = gx$plot + coord_cartesian(ylim=c(0.1,0.6),
+                          xlim=c(0.2,0.8)) +
+  xlab("Cultural distance") +
+  ylab("Semantic similarity") +
+  ggtitle("")
+pdf("../results/CulturalDistance_Rho_Graph.pdf",
+    height=2.5, width=2.5)
+gx
+dev.off()
 ```
 
 Plot the random effects:

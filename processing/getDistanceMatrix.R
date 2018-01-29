@@ -33,6 +33,8 @@ makeDistanceMatrix = function(filename, variables=c()){
   eadx = eadx[,apply(eadx,2,function(X){sum(is.na(X))==0})]
   #eadx = eadx[,names(eadx)!="X69"]
   
+  eadx = eadx[names(eadx)!="X",]
+  
   # Convert to factor
   for(i in 1:ncol(eadx)){
     eadx[,i] = as.factor(eadx[,i])
