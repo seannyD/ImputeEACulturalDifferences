@@ -1,5 +1,6 @@
 # Take a cultural database and make a distance matrix between societies
 
+
 library(cluster)
 
 setwd("~/Documents/Bristol/word2vec/word2vec_DPLACE/processing/")
@@ -116,7 +117,7 @@ write.csv(dist.long, file="../results/EA_distances/CulturalDistances_Long.csv", 
 library(mclust)
 
 hc = hclust(dist(dist.m))
-pdf("../results/CulturalDistance.pdf", width=20, height=10)
+pdf("../results/CulturalDistanceTrees/CulturalDistance.pdf", width=20, height=10)
 plot(hc)
 dev.off()
 
@@ -162,7 +163,7 @@ for(i in 1:nrow(c2ea)){
   
   hcx = hclust(as.dist(distx.m))
   pdf(
-    paste0("../results/CulturalDistance_",filenamex,".pdf"),
+    paste0("../results/CulturalDistanceTrees/CulturalDistance_",filenamex,".pdf"),
     width=20, height=10)
   plot(hcx, main = c2ea[i,]$concepticon)
   dev.off()

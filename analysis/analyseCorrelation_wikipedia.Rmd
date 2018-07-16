@@ -1,6 +1,8 @@
 ---
-title: "Cultural distances: controlling for history"
-output: pdf_document
+title: "Cultural distances: Wikipedia data"
+output: 
+  pdf_document:
+    toc: true
 ---
 
 ```{r echo=F, eval=F}
@@ -26,6 +28,17 @@ library(igraph)
 library(lattice)
 ```
 
+Parameters:
+
+```{r}
+datasetName = "wikipedia"
+lingDistancesFile = "../data/FAIR/wikipedia-by-language-pair-mean-rho.csv"
+lingDistancesByDomainFile = "../results/EA_distances/All_Domains_with_ling.csv"
+```
+
+\newpage
+
+
 # All domains
 
 ## Load data
@@ -50,7 +63,7 @@ l$family = g[match(l$family,g$pk),]$name
 Read the semantic distances
 
 ```{r}
-ling = read.csv("../data/FAIR/semantic_distances_FAIR_extended.csv", stringsAsFactors = F)
+ling = read.csv(lingDistancesFile, stringsAsFactors = F)
 ```
 
 Combine the lingusitic and cultural distances
@@ -104,6 +117,8 @@ And the same is true for area:
 tail(ling[,c("l1","l2","rho",'area.group')])
 ```
 
+\newpage
+
 ## LMER models
 
 Mixed effects model, predicting Linguistic similaritys from cultural distances, with random intercept for family and area and random slope for cultural distance for family and area.
@@ -149,9 +164,10 @@ gx$plot$data$x = gx$plot$data$x *
 gx = gx$plot + coord_cartesian(ylim=c(0.1,0.6),
                           xlim=c(0.2,0.8)) +
   xlab("Cultural distance") +
-  ylab("Semantic similarity") +
+  ylab("Semantic alignment") +
   ggtitle("")
-pdf("../results/CulturalDistance_Rho_Graph.pdf",
+gx
+pdf(paste0("../results/stats/",datasetName,"/CulturalDistance_Rho_Graph.pdf"),
     height=2.5, width=2.5)
 gx
 dev.off()
@@ -224,7 +240,7 @@ Load distances for specific domains and match up to language family and area:
 
 ```{r}
 ling.dom = read.csv(
-  "../results/EA_distances/All_Domains_with_ling.csv", 
+  lingDistancesByDomainFile, 
   stringsAsFactors = F)
 
 ling.dom = ling.dom[!is.na(ling.dom$cult.dist),]
