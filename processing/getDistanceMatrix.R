@@ -3,7 +3,7 @@
 
 library(cluster)
 
-setwd("~/Documents/Bristol/word2vec/word2vec_DPLACE/processing/")
+try(setwd("~/Documents/Bristol/word2vec/word2vec_DPLACE/processing/"))
 
 
 # Load society data
@@ -121,7 +121,7 @@ pdf("../results/CulturalDistanceTrees/CulturalDistance.pdf", width=20, height=10
 plot(hc)
 dev.off()
 
-
+#####################################
 # Make sub-domain distance matrices:
 # Load mappings between concepticon and Ethnographic Atlas
 c2ea = read.csv("../data/Concepticon_to_EA.csv", stringsAsFactors = F)
@@ -130,8 +130,11 @@ c2ea = read.csv("../data/Concepticon_to_EA.csv", stringsAsFactors = F)
 c2ea = c2ea[!is.na(c2ea$ea),]
 c2ea = c2ea[c2ea$ea!="",]
 
+c2ea.for.printing = data.frame()
+
 # For each sub-domain, make a distance matrix and visualisation
 for(i in 1:nrow(c2ea)){
+  print(c2ea$concepticon[i])
   cats = strsplit(c2ea[i,]$ea,"-")[[1]]
   eavars = c()
   for(cx in cats){
@@ -139,6 +142,16 @@ for(i in 1:nrow(c2ea)){
   }
   eavars = unique(eavars)
   #distx = dist(eadx[,names(eadx) %in% paste0("X",eavars)])
+  
+  c2ea.for.printing = rbind(c2ea.for.printing,
+      data.frame(
+        Concepticon.Domain =c2ea$concepticon[i],
+        EA.VarID = eavars,
+        EA.IndexCategory = eav[match(eavars,eav$VarID),]$IndexCategory,
+        EA.VarTitle = eav[match(eavars,eav$VarID),]$VarTitle,
+        stringsAsFactors = F
+      ))
+  
   distsC = list()
   for(j in 1:length(files)){
     print(files[j])
@@ -184,6 +197,9 @@ for(f in fs){
 
 write.csv(longlong, "../results/EA_distances/All_Domains.csv", row.names = F)
 
+
+write.csv(c2ea.for.printing,
+          "../data/Concepticon_to_EA_FullVariableList.csv",row.names = F)
 
 ####
 # Kinship full (all categorical variables)

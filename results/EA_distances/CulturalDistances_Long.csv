@@ -1,107 +1,4 @@
 "Var1","Var2","value"
-"Herero","Herero",0
-"Zulu","Herero",0.546129032258065
-"Tswana","Herero",0.612043010752688
-"Shona","Herero",0.637849462365591
-"Ndonga","Herero",0.560752688172043
-"Swati","Herero",0.51741935483871
-"Tsonga","Herero",0.628817204301075
-"Venda","Herero",0.531827956989247
-"Kongo","Herero",0.609677419354838
-"Tumbuka","Herero",0.585806451612903
-"Kikuyu","Herero",0.560537634408602
-"Luganda","Herero",0.609354838709677
-"Kinyarwanda","Herero",0.553763440860215
-"Lingala","Herero",0.621182795698924
-"Kirundi","Herero",0.606344086021505
-"Igbo","Herero",0.63752688172043
-"Bambara","Herero",0.620860215053763
-"Tigrinya","Herero",0.68752688172043
-"Afar","Herero",0.556451612903226
-"Amharic","Herero",0.726451612903225
-"Kanuri","Herero",0.625376344086021
-"Wolof","Herero",0.594731182795699
-"Egyptian Arabic","Herero",0.770215053763441
-"Kabyle","Herero",0.660215053763441
-"Albanian","Herero",0.66010752688172
-"Latin","Herero",0.766881720430107
-"Neapolitan","Herero",0.80483870967742
-"Spanish","Herero",0.783655913978495
-"Greek","Herero",0.804516129032258
-"English","Herero",0.829032258064516
-"French","Herero",0.805913978494624
-"Dutch","Herero",0.816344086021506
-"Icelandic","Herero",0.699032258064516
-"Irish","Herero",0.719247311827957
-"Northern Sami","Herero",0.609354838709677
-"Serbian","Herero",0.730752688172042
-"Russian","Herero",0.75505376344086
-"Bashkir","Herero",0.747096774193548
-"Chuvash","Herero",0.757311827956989
-"Erzya","Herero",0.743655913978495
-"Estonian","Herero",0.744408602150538
-"Gagauz","Herero",0.745806451612903
-"Tatar","Herero",0.769569892473118
-"Latvian","Herero",0.74258064516129
-"Vepsian","Herero",0.706344086021505
-"Czech","Herero",0.745376344086021
-"Meadow Mari","Herero",0.726881720430107
-"Bulgarian","Herero",0.700860215053763
-"Belarusian","Herero",0.743225806451612
-"Ukrainian","Herero",0.718709677419354
-"Hungarian","Herero",0.734193548387096
-"Lithuanian","Herero",0.727956989247312
-"Kalmyk","Herero",0.586989247311828
-"Armenian","Herero",0.692795698924731
-"Kurdish (Sorani)","Herero",0.710860215053763
-"Abkhazian","Herero",0.63
-"Kabardian","Herero",0.62752688172043
-"Turkish","Herero",0.723118279569892
-"Ossetian","Herero",0.648064516129032
-"Hebrew","Herero",0.708064516129032
-"Sindhi","Herero",0.706344086021505
-"Eastern Punjabi","Herero",0.746666666666666
-"Kazakh","Herero",0.583225806451613
-"Sakha","Herero",0.654193548387097
-"Korean","Herero",0.739032258064516
-"Chinese","Herero",0.754731182795699
-"Nuosu","Herero",0.621182795698925
-"Japanese","Herero",0.768279569892473
-"Tibetan","Herero",0.73236559139785
-"Bengali","Herero",0.813548387096774
-"Kashmiri","Herero",0.738817204301075
-"Gujarati","Herero",0.732043010752688
-"Telugu","Herero",0.71010752688172
-"Tamil","Herero",0.735806451612903
-"Malayalam","Herero",0.711935483870968
-"Sinhalese","Herero",0.739892473118279
-"Burmese","Herero",0.82505376344086
-"Vietnamese","Herero",0.755806451612903
-"Khmer","Herero",0.760430107526881
-"Malay","Herero",0.719892473118279
-"Thai","Herero",0.754731182795699
-"Cebuano","Herero",0.782150537634409
-"Banyumasan","Herero",0.73752688172043
-"Minangkabau","Herero",0.66752688172043
-"Tetum","Herero",0.674408602150537
-"Nauruan","Herero",0.699677419354838
-"Chamorro","Herero",0.784408602150537
-"Samoan","Herero",0.800860215053763
-"Tongan","Herero",0.725268817204301
-"Maori","Herero",0.747311827956989
-"Hawaiian","Herero",0.773440860215053
-"Tahitian","Herero",0.776021505376344
-"Inupiak","Herero",0.643333333333334
-"Greenlandic","Herero",0.656881720430107
-"Cheyenne","Herero",0.629139784946236
-"Choctaw","Herero",0.74010752688172
-"Muscogee","Herero",0.748494623655914
-"Cherokee","Herero",0.696451612903226
-"Navajo","Herero",0.574516129032258
-"Haitian","Herero",0.732903225806452
-"Aymara","Herero",0.720537634408602
-"Guarani","Herero",0.686774193548387
-"Herero","Zulu",0.546129032258065
 "Zulu","Zulu",0
 "Tswana","Zulu",0.379247311827957
 "Shona","Zulu",0.42741935483871
@@ -195,7 +92,6 @@
 "Tahitian","Zulu",0.590752688172043
 "Inupiak","Zulu",0.668494623655914
 "Greenlandic","Zulu",0.669354838709677
-"Cheyenne","Zulu",0.586344086021505
 "Choctaw","Zulu",0.586774193548387
 "Muscogee","Zulu",0.586559139784946
 "Cherokee","Zulu",0.586881720430107
@@ -203,7 +99,6 @@
 "Haitian","Zulu",0.610215053763441
 "Aymara","Zulu",0.488924731182796
 "Guarani","Zulu",0.571290322580645
-"Herero","Tswana",0.612043010752688
 "Zulu","Tswana",0.379247311827957
 "Tswana","Tswana",0
 "Shona","Tswana",0.491075268817204
@@ -297,7 +192,6 @@
 "Tahitian","Tswana",0.64752688172043
 "Inupiak","Tswana",0.707311827956989
 "Greenlandic","Tswana",0.705268817204301
-"Cheyenne","Tswana",0.651612903225807
 "Choctaw","Tswana",0.683655913978494
 "Muscogee","Tswana",0.683225806451613
 "Cherokee","Tswana",0.664408602150538
@@ -305,7 +199,6 @@
 "Haitian","Tswana",0.632150537634408
 "Aymara","Tswana",0.58752688172043
 "Guarani","Tswana",0.558817204301075
-"Herero","Shona",0.637849462365591
 "Zulu","Shona",0.42741935483871
 "Tswana","Shona",0.491075268817204
 "Shona","Shona",0
@@ -399,7 +292,6 @@
 "Tahitian","Shona",0.643118279569892
 "Inupiak","Shona",0.69763440860215
 "Greenlandic","Shona",0.636989247311828
-"Cheyenne","Shona",0.66
 "Choctaw","Shona",0.638064516129032
 "Muscogee","Shona",0.650752688172043
 "Cherokee","Shona",0.650215053763441
@@ -407,7 +299,6 @@
 "Haitian","Shona",0.686881720430107
 "Aymara","Shona",0.557204301075269
 "Guarani","Shona",0.583118279569892
-"Herero","Ndonga",0.560752688172043
 "Zulu","Ndonga",0.541397849462365
 "Tswana","Ndonga",0.55741935483871
 "Shona","Ndonga",0.522795698924731
@@ -501,7 +392,6 @@
 "Tahitian","Ndonga",0.650215053763441
 "Inupiak","Ndonga",0.687849462365591
 "Greenlandic","Ndonga",0.685483870967742
-"Cheyenne","Ndonga",0.65
 "Choctaw","Ndonga",0.580860215053763
 "Muscogee","Ndonga",0.626774193548387
 "Cherokee","Ndonga",0.58247311827957
@@ -509,7 +399,6 @@
 "Haitian","Ndonga",0.703763440860215
 "Aymara","Ndonga",0.636559139784946
 "Guarani","Ndonga",0.548924731182796
-"Herero","Swati",0.51741935483871
 "Zulu","Swati",0.294623655913979
 "Tswana","Swati",0.465161290322581
 "Shona","Swati",0.400645161290323
@@ -603,7 +492,6 @@
 "Tahitian","Swati",0.65763440860215
 "Inupiak","Swati",0.695376344086021
 "Greenlandic","Swati",0.689032258064516
-"Cheyenne","Swati",0.587311827956989
 "Choctaw","Swati",0.633225806451613
 "Muscogee","Swati",0.638064516129032
 "Cherokee","Swati",0.637311827956989
@@ -611,7 +499,6 @@
 "Haitian","Swati",0.696559139784946
 "Aymara","Swati",0.550967741935484
 "Guarani","Swati",0.570752688172043
-"Herero","Tsonga",0.628817204301075
 "Zulu","Tsonga",0.369139784946237
 "Tswana","Tsonga",0.519354838709677
 "Shona","Tsonga",0.335591397849462
@@ -705,7 +592,6 @@
 "Tahitian","Tsonga",0.571290322580645
 "Inupiak","Tsonga",0.636666666666667
 "Greenlandic","Tsonga",0.654731182795699
-"Cheyenne","Tsonga",0.627096774193548
 "Choctaw","Tsonga",0.576236559139785
 "Muscogee","Tsonga",0.54494623655914
 "Cherokee","Tsonga",0.519892473118279
@@ -713,7 +599,6 @@
 "Haitian","Tsonga",0.684408602150537
 "Aymara","Tsonga",0.485376344086022
 "Guarani","Tsonga",0.595376344086022
-"Herero","Venda",0.531827956989247
 "Zulu","Venda",0.482795698924731
 "Tswana","Venda",0.468709677419355
 "Shona","Venda",0.497849462365592
@@ -807,7 +692,6 @@
 "Tahitian","Venda",0.716559139784946
 "Inupiak","Venda",0.756559139784946
 "Greenlandic","Venda",0.718602150537634
-"Cheyenne","Venda",0.64010752688172
 "Choctaw","Venda",0.711935483870967
 "Muscogee","Venda",0.657741935483871
 "Cherokee","Venda",0.658602150537634
@@ -815,7 +699,6 @@
 "Haitian","Venda",0.624838709677419
 "Aymara","Venda",0.615698924731182
 "Guarani","Venda",0.629677419354839
-"Herero","Kongo",0.609677419354838
 "Zulu","Kongo",0.549569892473118
 "Tswana","Kongo",0.652258064516129
 "Shona","Kongo",0.546344086021506
@@ -909,7 +792,6 @@
 "Tahitian","Kongo",0.571935483870967
 "Inupiak","Kongo",0.696451612903225
 "Greenlandic","Kongo",0.664086021505376
-"Cheyenne","Kongo",0.710215053763441
 "Choctaw","Kongo",0.577956989247312
 "Muscogee","Kongo",0.56258064516129
 "Cherokee","Kongo",0.53989247311828
@@ -917,7 +799,6 @@
 "Haitian","Kongo",0.656774193548387
 "Aymara","Kongo",0.609892473118279
 "Guarani","Kongo",0.57258064516129
-"Herero","Tumbuka",0.585806451612903
 "Zulu","Tumbuka",0.40247311827957
 "Tswana","Tumbuka",0.462150537634409
 "Shona","Tumbuka",0.470752688172043
@@ -1011,7 +892,6 @@
 "Tahitian","Tumbuka",0.599354838709677
 "Inupiak","Tumbuka",0.711397849462365
 "Greenlandic","Tumbuka",0.667956989247312
-"Cheyenne","Tumbuka",0.65258064516129
 "Choctaw","Tumbuka",0.615698924731182
 "Muscogee","Tumbuka",0.60247311827957
 "Cherokee","Tumbuka",0.601397849462365
@@ -1019,7 +899,6 @@
 "Haitian","Tumbuka",0.649139784946236
 "Aymara","Tumbuka",0.563118279569892
 "Guarani","Tumbuka",0.584086021505376
-"Herero","Kikuyu",0.560537634408602
 "Zulu","Kikuyu",0.32494623655914
 "Tswana","Kikuyu",0.448387096774193
 "Shona","Kikuyu",0.517311827956989
@@ -1113,7 +992,6 @@
 "Tahitian","Kikuyu",0.657849462365591
 "Inupiak","Kikuyu",0.687204301075268
 "Greenlandic","Kikuyu",0.674301075268817
-"Cheyenne","Kikuyu",0.622795698924731
 "Choctaw","Kikuyu",0.666451612903226
 "Muscogee","Kikuyu",0.605376344086021
 "Cherokee","Kikuyu",0.634086021505376
@@ -1121,7 +999,6 @@
 "Haitian","Kikuyu",0.613118279569892
 "Aymara","Kikuyu",0.525591397849462
 "Guarani","Kikuyu",0.647741935483871
-"Herero","Luganda",0.609354838709677
 "Zulu","Luganda",0.432258064516129
 "Tswana","Luganda",0.581182795698925
 "Shona","Luganda",0.539569892473118
@@ -1215,7 +1092,6 @@
 "Tahitian","Luganda",0.619354838709677
 "Inupiak","Luganda",0.714301075268817
 "Greenlandic","Luganda",0.692150537634408
-"Cheyenne","Luganda",0.67516129032258
 "Choctaw","Luganda",0.686344086021505
 "Muscogee","Luganda",0.700752688172043
 "Cherokee","Luganda",0.705591397849462
@@ -1223,7 +1099,6 @@
 "Haitian","Luganda",0.510430107526882
 "Aymara","Luganda",0.562795698924731
 "Guarani","Luganda",0.669569892473118
-"Herero","Kinyarwanda",0.553763440860215
 "Zulu","Kinyarwanda",0.335483870967742
 "Tswana","Kinyarwanda",0.49236559139785
 "Shona","Kinyarwanda",0.501075268817204
@@ -1317,7 +1192,6 @@
 "Tahitian","Kinyarwanda",0.646774193548387
 "Inupiak","Kinyarwanda",0.690322580645161
 "Greenlandic","Kinyarwanda",0.678709677419355
-"Cheyenne","Kinyarwanda",0.629569892473118
 "Choctaw","Kinyarwanda",0.625698924731183
 "Muscogee","Kinyarwanda",0.612688172043011
 "Cherokee","Kinyarwanda",0.609139784946236
@@ -1325,7 +1199,6 @@
 "Haitian","Kinyarwanda",0.571397849462366
 "Aymara","Kinyarwanda",0.486344086021506
 "Guarani","Kinyarwanda",0.589569892473118
-"Herero","Lingala",0.621182795698924
 "Zulu","Lingala",0.430967741935484
 "Tswana","Lingala",0.575268817204301
 "Shona","Lingala",0.51505376344086
@@ -1419,7 +1292,6 @@
 "Tahitian","Lingala",0.570537634408602
 "Inupiak","Lingala",0.675913978494624
 "Greenlandic","Lingala",0.619139784946236
-"Cheyenne","Lingala",0.646021505376344
 "Choctaw","Lingala",0.578387096774193
 "Muscogee","Lingala",0.584193548387097
 "Cherokee","Lingala",0.597096774193548
@@ -1427,7 +1299,6 @@
 "Haitian","Lingala",0.652795698924731
 "Aymara","Lingala",0.495591397849462
 "Guarani","Lingala",0.541612903225806
-"Herero","Kirundi",0.606344086021505
 "Zulu","Kirundi",0.422795698924731
 "Tswana","Kirundi",0.54
 "Shona","Kirundi",0.575591397849462
@@ -1521,7 +1392,6 @@
 "Tahitian","Kirundi",0.676344086021505
 "Inupiak","Kirundi",0.744946236559139
 "Greenlandic","Kirundi",0.703440860215054
-"Cheyenne","Kirundi",0.704086021505376
 "Choctaw","Kirundi",0.69
 "Muscogee","Kirundi",0.713655913978494
 "Cherokee","Kirundi",0.706344086021505
@@ -1529,7 +1399,6 @@
 "Haitian","Kirundi",0.639354838709677
 "Aymara","Kirundi",0.528817204301075
 "Guarani","Kirundi",0.678387096774193
-"Herero","Igbo",0.63752688172043
 "Zulu","Igbo",0.460860215053763
 "Tswana","Igbo",0.520860215053763
 "Shona","Igbo",0.518602150537634
@@ -1623,7 +1492,6 @@
 "Tahitian","Igbo",0.531182795698925
 "Inupiak","Igbo",0.752258064516129
 "Greenlandic","Igbo",0.713440860215054
-"Cheyenne","Igbo",0.658064516129032
 "Choctaw","Igbo",0.651075268817204
 "Muscogee","Igbo",0.589784946236559
 "Cherokee","Igbo",0.637741935483871
@@ -1631,7 +1499,6 @@
 "Haitian","Igbo",0.510215053763441
 "Aymara","Igbo",0.483333333333334
 "Guarani","Igbo",0.574731182795699
-"Herero","Bambara",0.620860215053763
 "Zulu","Bambara",0.546881720430108
 "Tswana","Bambara",0.593440860215054
 "Shona","Bambara",0.546236559139785
@@ -1725,7 +1592,6 @@
 "Tahitian","Bambara",0.686236559139785
 "Inupiak","Bambara",0.739892473118279
 "Greenlandic","Bambara",0.763010752688172
-"Cheyenne","Bambara",0.712473118279569
 "Choctaw","Bambara",0.740215053763441
 "Muscogee","Bambara",0.656774193548387
 "Cherokee","Bambara",0.691827956989247
@@ -1733,7 +1599,6 @@
 "Haitian","Bambara",0.630430107526882
 "Aymara","Bambara",0.589569892473118
 "Guarani","Bambara",0.668602150537634
-"Herero","Tigrinya",0.68752688172043
 "Zulu","Tigrinya",0.562258064516129
 "Tswana","Tigrinya",0.520537634408602
 "Shona","Tigrinya",0.596989247311828
@@ -1827,7 +1692,6 @@
 "Tahitian","Tigrinya",0.678602150537634
 "Inupiak","Tigrinya",0.68752688172043
 "Greenlandic","Tigrinya",0.728602150537634
-"Cheyenne","Tigrinya",0.670645161290323
 "Choctaw","Tigrinya",0.703978494623656
 "Muscogee","Tigrinya",0.694301075268817
 "Cherokee","Tigrinya",0.729999999999999
@@ -1835,7 +1699,6 @@
 "Haitian","Tigrinya",0.521827956989247
 "Aymara","Tigrinya",0.530322580645161
 "Guarani","Tigrinya",0.618817204301075
-"Herero","Afar",0.556451612903226
 "Zulu","Afar",0.487849462365591
 "Tswana","Afar",0.584301075268817
 "Shona","Afar",0.484516129032258
@@ -1929,7 +1792,6 @@
 "Tahitian","Afar",0.660322580645161
 "Inupiak","Afar",0.647741935483871
 "Greenlandic","Afar",0.667849462365591
-"Cheyenne","Afar",0.618924731182796
 "Choctaw","Afar",0.676021505376344
 "Muscogee","Afar",0.658064516129032
 "Cherokee","Afar",0.630430107526881
@@ -1937,7 +1799,6 @@
 "Haitian","Afar",0.653548387096774
 "Aymara","Afar",0.560537634408602
 "Guarani","Afar",0.598279569892473
-"Herero","Amharic",0.726451612903225
 "Zulu","Amharic",0.606774193548387
 "Tswana","Amharic",0.63505376344086
 "Shona","Amharic",0.573010752688172
@@ -2031,7 +1892,6 @@
 "Tahitian","Amharic",0.661612903225806
 "Inupiak","Amharic",0.699139784946237
 "Greenlandic","Amharic",0.606236559139784
-"Cheyenne","Amharic",0.646129032258065
 "Choctaw","Amharic",0.661505376344086
 "Muscogee","Amharic",0.682903225806451
 "Cherokee","Amharic",0.700537634408602
@@ -2039,7 +1899,6 @@
 "Haitian","Amharic",0.470537634408602
 "Aymara","Amharic",0.546021505376344
 "Guarani","Amharic",0.616989247311828
-"Herero","Kanuri",0.625376344086021
 "Zulu","Kanuri",0.568064516129032
 "Tswana","Kanuri",0.571182795698925
 "Shona","Kanuri",0.530107526881721
@@ -2133,7 +1992,6 @@
 "Tahitian","Kanuri",0.683978494623656
 "Inupiak","Kanuri",0.659892473118279
 "Greenlandic","Kanuri",0.656021505376344
-"Cheyenne","Kanuri",0.626559139784946
 "Choctaw","Kanuri",0.63516129032258
 "Muscogee","Kanuri",0.632365591397849
 "Cherokee","Kanuri",0.63247311827957
@@ -2141,7 +1999,6 @@
 "Haitian","Kanuri",0.575376344086022
 "Aymara","Kanuri",0.565913978494624
 "Guarani","Kanuri",0.538387096774193
-"Herero","Wolof",0.594731182795699
 "Zulu","Wolof",0.562043010752688
 "Tswana","Wolof",0.555913978494624
 "Shona","Wolof",0.527956989247312
@@ -2235,7 +2092,6 @@
 "Tahitian","Wolof",0.711612903225806
 "Inupiak","Wolof",0.821612903225807
 "Greenlandic","Wolof",0.79494623655914
-"Cheyenne","Wolof",0.753010752688172
 "Choctaw","Wolof",0.725591397849462
 "Muscogee","Wolof",0.722365591397849
 "Cherokee","Wolof",0.69516129032258
@@ -2243,7 +2099,6 @@
 "Haitian","Wolof",0.624623655913979
 "Aymara","Wolof",0.553440860215054
 "Guarani","Wolof",0.63752688172043
-"Herero","Egyptian Arabic",0.770215053763441
 "Zulu","Egyptian Arabic",0.651935483870968
 "Tswana","Egyptian Arabic",0.642150537634409
 "Shona","Egyptian Arabic",0.74010752688172
@@ -2337,7 +2192,6 @@
 "Tahitian","Egyptian Arabic",0.712043010752688
 "Inupiak","Egyptian Arabic",0.78752688172043
 "Greenlandic","Egyptian Arabic",0.8
-"Cheyenne","Egyptian Arabic",0.830645161290323
 "Choctaw","Egyptian Arabic",0.790430107526882
 "Muscogee","Egyptian Arabic",0.756881720430107
 "Cherokee","Egyptian Arabic",0.758172043010752
@@ -2345,7 +2199,6 @@
 "Haitian","Egyptian Arabic",0.528924731182796
 "Aymara","Egyptian Arabic",0.584623655913978
 "Guarani","Egyptian Arabic",0.680752688172043
-"Herero","Kabyle",0.660215053763441
 "Zulu","Kabyle",0.52505376344086
 "Tswana","Kabyle",0.606451612903226
 "Shona","Kabyle",0.584086021505377
@@ -2439,7 +2292,6 @@
 "Tahitian","Kabyle",0.659677419354839
 "Inupiak","Kabyle",0.726236559139785
 "Greenlandic","Kabyle",0.695268817204301
-"Cheyenne","Kabyle",0.677311827956989
 "Choctaw","Kabyle",0.663548387096774
 "Muscogee","Kabyle",0.576559139784946
 "Cherokee","Kabyle",0.60258064516129
@@ -2447,7 +2299,6 @@
 "Haitian","Kabyle",0.507096774193548
 "Aymara","Kabyle",0.514408602150537
 "Guarani","Kabyle",0.589569892473118
-"Herero","Albanian",0.66010752688172
 "Zulu","Albanian",0.509569892473118
 "Tswana","Albanian",0.605268817204301
 "Shona","Albanian",0.605913978494624
@@ -2541,7 +2392,6 @@
 "Tahitian","Albanian",0.637849462365592
 "Inupiak","Albanian",0.755483870967742
 "Greenlandic","Albanian",0.671720430107527
-"Cheyenne","Albanian",0.668494623655914
 "Choctaw","Albanian",0.711075268817204
 "Muscogee","Albanian",0.67268817204301
 "Cherokee","Albanian",0.657634408602151
@@ -2549,7 +2399,6 @@
 "Haitian","Albanian",0.540860215053763
 "Aymara","Albanian",0.537634408602151
 "Guarani","Albanian",0.619139784946237
-"Herero","Latin",0.766881720430107
 "Zulu","Latin",0.646451612903226
 "Tswana","Latin",0.68258064516129
 "Shona","Latin",0.701935483870967
@@ -2643,7 +2492,6 @@
 "Tahitian","Latin",0.607096774193548
 "Inupiak","Latin",0.64247311827957
 "Greenlandic","Latin",0.662795698924731
-"Cheyenne","Latin",0.693225806451613
 "Choctaw","Latin",0.698279569892473
 "Muscogee","Latin",0.657311827956989
 "Cherokee","Latin",0.633870967741936
@@ -2651,7 +2499,6 @@
 "Haitian","Latin",0.403548387096774
 "Aymara","Latin",0.535913978494623
 "Guarani","Latin",0.577096774193548
-"Herero","Neapolitan",0.80483870967742
 "Zulu","Neapolitan",0.638924731182796
 "Tswana","Neapolitan",0.681827956989247
 "Shona","Neapolitan",0.663548387096774
@@ -2745,7 +2592,6 @@
 "Tahitian","Neapolitan",0.661182795698925
 "Inupiak","Neapolitan",0.641827956989248
 "Greenlandic","Neapolitan",0.595913978494624
-"Cheyenne","Neapolitan",0.686344086021505
 "Choctaw","Neapolitan",0.673010752688172
 "Muscogee","Neapolitan",0.691075268817204
 "Cherokee","Neapolitan",0.663333333333333
@@ -2753,7 +2599,6 @@
 "Haitian","Neapolitan",0.45247311827957
 "Aymara","Neapolitan",0.546021505376344
 "Guarani","Neapolitan",0.643118279569892
-"Herero","Spanish",0.783655913978495
 "Zulu","Spanish",0.608924731182795
 "Tswana","Spanish",0.633763440860215
 "Shona","Spanish",0.698709677419354
@@ -2847,7 +2692,6 @@
 "Tahitian","Spanish",0.610860215053763
 "Inupiak","Spanish",0.645483870967742
 "Greenlandic","Spanish",0.575591397849462
-"Cheyenne","Spanish",0.679139784946236
 "Choctaw","Spanish",0.645591397849462
 "Muscogee","Spanish",0.666559139784946
 "Cherokee","Spanish",0.651612903225807
@@ -2855,7 +2699,6 @@
 "Haitian","Spanish",0.406666666666667
 "Aymara","Spanish",0.512043010752688
 "Guarani","Spanish",0.583763440860215
-"Herero","Greek",0.804516129032258
 "Zulu","Greek",0.640322580645161
 "Tswana","Greek",0.710645161290322
 "Shona","Greek",0.69494623655914
@@ -2949,7 +2792,6 @@
 "Tahitian","Greek",0.655161290322581
 "Inupiak","Greek",0.668064516129032
 "Greenlandic","Greek",0.628494623655914
-"Cheyenne","Greek",0.699784946236559
 "Choctaw","Greek",0.636881720430107
 "Muscogee","Greek",0.692150537634408
 "Cherokee","Greek",0.708387096774193
@@ -2957,7 +2799,6 @@
 "Haitian","Greek",0.474623655913978
 "Aymara","Greek",0.554408602150538
 "Guarani","Greek",0.635376344086022
-"Herero","English",0.829032258064516
 "Zulu","English",0.661720430107527
 "Tswana","English",0.664731182795699
 "Shona","English",0.708924731182795
@@ -3051,7 +2892,6 @@
 "Tahitian","English",0.650967741935484
 "Inupiak","English",0.669677419354839
 "Greenlandic","English",0.601612903225806
-"Cheyenne","English",0.686881720430107
 "Choctaw","English",0.693763440860215
 "Muscogee","English",0.724516129032258
 "Cherokee","English",0.696129032258064
@@ -3059,7 +2899,6 @@
 "Haitian","English",0.43258064516129
 "Aymara","English",0.549354838709677
 "Guarani","English",0.65741935483871
-"Herero","French",0.805913978494624
 "Zulu","French",0.634516129032258
 "Tswana","French",0.708279569892473
 "Shona","French",0.659139784946236
@@ -3153,7 +2992,6 @@
 "Tahitian","French",0.654516129032258
 "Inupiak","French",0.639247311827957
 "Greenlandic","French",0.554838709677419
-"Cheyenne","French",0.63741935483871
 "Choctaw","French",0.646236559139785
 "Muscogee","French",0.660645161290323
 "Cherokee","French",0.675806451612904
@@ -3161,7 +2999,6 @@
 "Haitian","French",0.495591397849463
 "Aymara","French",0.568387096774194
 "Guarani","French",0.638279569892473
-"Herero","Dutch",0.816344086021506
 "Zulu","Dutch",0.672795698924731
 "Tswana","Dutch",0.703870967741935
 "Shona","Dutch",0.756021505376344
@@ -3255,7 +3092,6 @@
 "Tahitian","Dutch",0.588924731182796
 "Inupiak","Dutch",0.698709677419354
 "Greenlandic","Dutch",0.670967741935484
-"Cheyenne","Dutch",0.730322580645161
 "Choctaw","Dutch",0.715698924731182
 "Muscogee","Dutch",0.729247311827957
 "Cherokee","Dutch",0.696451612903225
@@ -3263,7 +3099,6 @@
 "Haitian","Dutch",0.421612903225806
 "Aymara","Dutch",0.557634408602151
 "Guarani","Dutch",0.623333333333333
-"Herero","Icelandic",0.699032258064516
 "Zulu","Icelandic",0.55494623655914
 "Tswana","Icelandic",0.590430107526881
 "Shona","Icelandic",0.603870967741935
@@ -3357,7 +3192,6 @@
 "Tahitian","Icelandic",0.618602150537635
 "Inupiak","Icelandic",0.67
 "Greenlandic","Icelandic",0.610752688172043
-"Cheyenne","Icelandic",0.652043010752688
 "Choctaw","Icelandic",0.645161290322581
 "Muscogee","Icelandic",0.582258064516129
 "Cherokee","Icelandic",0.591505376344086
@@ -3365,7 +3199,6 @@
 "Haitian","Icelandic",0.538817204301075
 "Aymara","Icelandic",0.516236559139785
 "Guarani","Icelandic",0.488924731182796
-"Herero","Irish",0.719247311827957
 "Zulu","Irish",0.523440860215053
 "Tswana","Irish",0.577849462365591
 "Shona","Irish",0.60752688172043
@@ -3459,7 +3292,6 @@
 "Tahitian","Irish",0.628279569892473
 "Inupiak","Irish",0.633763440860215
 "Greenlandic","Irish",0.590967741935484
-"Cheyenne","Irish",0.640967741935484
 "Choctaw","Irish",0.611182795698924
 "Muscogee","Irish",0.652688172043011
 "Cherokee","Irish",0.67268817204301
@@ -3467,7 +3299,6 @@
 "Haitian","Irish",0.507956989247312
 "Aymara","Irish",0.531505376344086
 "Guarani","Irish",0.530322580645161
-"Herero","Northern Sami",0.609354838709677
 "Zulu","Northern Sami",0.693118279569892
 "Tswana","Northern Sami",0.707956989247312
 "Shona","Northern Sami",0.653870967741936
@@ -3561,7 +3392,6 @@
 "Tahitian","Northern Sami",0.604516129032258
 "Inupiak","Northern Sami",0.456344086021505
 "Greenlandic","Northern Sami",0.438494623655914
-"Cheyenne","Northern Sami",0.574301075268817
 "Choctaw","Northern Sami",0.613548387096774
 "Muscogee","Northern Sami",0.576129032258064
 "Cherokee","Northern Sami",0.578494623655914
@@ -3569,7 +3399,6 @@
 "Haitian","Northern Sami",0.625698924731182
 "Aymara","Northern Sami",0.598172043010752
 "Guarani","Northern Sami",0.543225806451613
-"Herero","Serbian",0.730752688172042
 "Zulu","Serbian",0.519139784946236
 "Tswana","Serbian",0.602258064516129
 "Shona","Serbian",0.654838709677419
@@ -3663,7 +3492,6 @@
 "Tahitian","Serbian",0.730752688172043
 "Inupiak","Serbian",0.74989247311828
 "Greenlandic","Serbian",0.718924731182795
-"Cheyenne","Serbian",0.678172043010753
 "Choctaw","Serbian",0.679892473118279
 "Muscogee","Serbian",0.677096774193548
 "Cherokee","Serbian",0.699677419354838
@@ -3671,7 +3499,6 @@
 "Haitian","Serbian",0.526989247311828
 "Aymara","Serbian",0.475806451612903
 "Guarani","Serbian",0.63989247311828
-"Herero","Russian",0.75505376344086
 "Zulu","Russian",0.65483870967742
 "Tswana","Russian",0.626666666666666
 "Shona","Russian",0.738924731182796
@@ -3765,7 +3592,6 @@
 "Tahitian","Russian",0.616881720430107
 "Inupiak","Russian",0.636666666666666
 "Greenlandic","Russian",0.632365591397849
-"Cheyenne","Russian",0.655161290322581
 "Choctaw","Russian",0.723333333333333
 "Muscogee","Russian",0.726666666666667
 "Cherokee","Russian",0.736129032258064
@@ -3773,7 +3599,6 @@
 "Haitian","Russian",0.457096774193548
 "Aymara","Russian",0.607419354838709
 "Guarani","Russian",0.634408602150538
-"Herero","Bashkir",0.747096774193548
 "Zulu","Bashkir",0.630645161290322
 "Tswana","Bashkir",0.682795698924731
 "Shona","Bashkir",0.656881720430108
@@ -3867,7 +3692,6 @@
 "Tahitian","Bashkir",0.643225806451613
 "Inupiak","Bashkir",0.61505376344086
 "Greenlandic","Bashkir",0.685376344086021
-"Cheyenne","Bashkir",0.659462365591398
 "Choctaw","Bashkir",0.694516129032258
 "Muscogee","Bashkir",0.614516129032257
 "Cherokee","Bashkir",0.61774193548387
@@ -3875,7 +3699,6 @@
 "Haitian","Bashkir",0.628387096774194
 "Aymara","Bashkir",0.555268817204301
 "Guarani","Bashkir",0.601075268817204
-"Herero","Chuvash",0.757311827956989
 "Zulu","Chuvash",0.671397849462366
 "Tswana","Chuvash",0.70279569892473
 "Shona","Chuvash",0.69774193548387
@@ -3969,7 +3792,6 @@
 "Tahitian","Chuvash",0.608064516129032
 "Inupiak","Chuvash",0.610860215053763
 "Greenlandic","Chuvash",0.650537634408602
-"Cheyenne","Chuvash",0.660860215053763
 "Choctaw","Chuvash",0.65247311827957
 "Muscogee","Chuvash",0.57989247311828
 "Cherokee","Chuvash",0.623978494623656
@@ -3977,7 +3799,6 @@
 "Haitian","Chuvash",0.553870967741936
 "Aymara","Chuvash",0.576344086021505
 "Guarani","Chuvash",0.570967741935484
-"Herero","Erzya",0.743655913978495
 "Zulu","Erzya",0.616989247311828
 "Tswana","Erzya",0.696666666666667
 "Shona","Erzya",0.614301075268817
@@ -4071,7 +3892,6 @@
 "Tahitian","Erzya",0.634838709677419
 "Inupiak","Erzya",0.634731182795699
 "Greenlandic","Erzya",0.631612903225806
-"Cheyenne","Erzya",0.675591397849462
 "Choctaw","Erzya",0.650860215053764
 "Muscogee","Erzya",0.599032258064516
 "Cherokee","Erzya",0.632150537634409
@@ -4079,7 +3899,6 @@
 "Haitian","Erzya",0.50989247311828
 "Aymara","Erzya",0.495913978494624
 "Guarani","Erzya",0.581612903225806
-"Herero","Estonian",0.744408602150538
 "Zulu","Estonian",0.608494623655914
 "Tswana","Estonian",0.66010752688172
 "Shona","Estonian",0.608387096774194
@@ -4173,7 +3992,6 @@
 "Tahitian","Estonian",0.640430107526881
 "Inupiak","Estonian",0.620322580645161
 "Greenlandic","Estonian",0.537956989247312
-"Cheyenne","Estonian",0.670752688172043
 "Choctaw","Estonian",0.651612903225806
 "Muscogee","Estonian",0.676559139784946
 "Cherokee","Estonian",0.675483870967742
@@ -4181,7 +3999,6 @@
 "Haitian","Estonian",0.562795698924731
 "Aymara","Estonian",0.54010752688172
 "Guarani","Estonian",0.616881720430107
-"Herero","Gagauz",0.745806451612903
 "Zulu","Gagauz",0.610752688172043
 "Tswana","Gagauz",0.62516129032258
 "Shona","Gagauz",0.693655913978494
@@ -4275,7 +4092,6 @@
 "Tahitian","Gagauz",0.603333333333333
 "Inupiak","Gagauz",0.641290322580645
 "Greenlandic","Gagauz",0.664838709677419
-"Cheyenne","Gagauz",0.670967741935484
 "Choctaw","Gagauz",0.719569892473118
 "Muscogee","Gagauz",0.656881720430107
 "Cherokee","Gagauz",0.682150537634408
@@ -4283,7 +4099,6 @@
 "Haitian","Gagauz",0.470322580645161
 "Aymara","Gagauz",0.516344086021505
 "Guarani","Gagauz",0.600860215053763
-"Herero","Tatar",0.769569892473118
 "Zulu","Tatar",0.667311827956989
 "Tswana","Tatar",0.622258064516129
 "Shona","Tatar",0.667204301075269
@@ -4377,7 +4192,6 @@
 "Tahitian","Tatar",0.591182795698925
 "Inupiak","Tatar",0.640967741935484
 "Greenlandic","Tatar",0.663225806451613
-"Cheyenne","Tatar",0.702043010752687
 "Choctaw","Tatar",0.704193548387097
 "Muscogee","Tatar",0.681935483870968
 "Cherokee","Tatar",0.691612903225806
@@ -4385,7 +4199,6 @@
 "Haitian","Tatar",0.496559139784946
 "Aymara","Tatar",0.56494623655914
 "Guarani","Tatar",0.562795698924731
-"Herero","Latvian",0.74258064516129
 "Zulu","Latvian",0.645913978494624
 "Tswana","Latvian",0.669677419354838
 "Shona","Latvian",0.65494623655914
@@ -4479,7 +4292,6 @@
 "Tahitian","Latvian",0.636021505376344
 "Inupiak","Latvian",0.678279569892473
 "Greenlandic","Latvian",0.641290322580645
-"Cheyenne","Latvian",0.711290322580645
 "Choctaw","Latvian",0.706236559139785
 "Muscogee","Latvian",0.698172043010753
 "Cherokee","Latvian",0.683333333333333
@@ -4487,7 +4299,6 @@
 "Haitian","Latvian",0.446129032258064
 "Aymara","Latvian",0.575698924731183
 "Guarani","Latvian",0.638924731182796
-"Herero","Vepsian",0.706344086021505
 "Zulu","Vepsian",0.590967741935484
 "Tswana","Vepsian",0.643333333333334
 "Shona","Vepsian",0.628494623655914
@@ -4581,7 +4392,6 @@
 "Tahitian","Vepsian",0.662688172043011
 "Inupiak","Vepsian",0.636236559139785
 "Greenlandic","Vepsian",0.599569892473118
-"Cheyenne","Vepsian",0.681720430107527
 "Choctaw","Vepsian",0.671720430107526
 "Muscogee","Vepsian",0.617419354838709
 "Cherokee","Vepsian",0.632150537634408
@@ -4589,7 +4399,6 @@
 "Haitian","Vepsian",0.49258064516129
 "Aymara","Vepsian",0.503333333333333
 "Guarani","Vepsian",0.56258064516129
-"Herero","Czech",0.745376344086021
 "Zulu","Czech",0.589462365591398
 "Tswana","Czech",0.639032258064516
 "Shona","Czech",0.665268817204301
@@ -4683,7 +4492,6 @@
 "Tahitian","Czech",0.666559139784946
 "Inupiak","Czech",0.663010752688172
 "Greenlandic","Czech",0.623440860215054
-"Cheyenne","Czech",0.667741935483871
 "Choctaw","Czech",0.648172043010753
 "Muscogee","Czech",0.683225806451613
 "Cherokee","Czech",0.67989247311828
@@ -4691,7 +4499,6 @@
 "Haitian","Czech",0.47
 "Aymara","Czech",0.531182795698925
 "Guarani","Czech",0.59258064516129
-"Herero","Meadow Mari",0.726881720430107
 "Zulu","Meadow Mari",0.557096774193548
 "Tswana","Meadow Mari",0.603118279569892
 "Shona","Meadow Mari",0.631505376344086
@@ -4785,7 +4592,6 @@
 "Tahitian","Meadow Mari",0.581182795698925
 "Inupiak","Meadow Mari",0.587311827956989
 "Greenlandic","Meadow Mari",0.550215053763441
-"Cheyenne","Meadow Mari",0.60494623655914
 "Choctaw","Meadow Mari",0.605698924731183
 "Muscogee","Meadow Mari",0.593225806451613
 "Cherokee","Meadow Mari",0.596666666666666
@@ -4793,7 +4599,6 @@
 "Haitian","Meadow Mari",0.495698924731183
 "Aymara","Meadow Mari",0.498494623655914
 "Guarani","Meadow Mari",0.558064516129032
-"Herero","Bulgarian",0.700860215053763
 "Zulu","Bulgarian",0.571290322580645
 "Tswana","Bulgarian",0.620645161290323
 "Shona","Bulgarian",0.643548387096774
@@ -4887,7 +4692,6 @@
 "Tahitian","Bulgarian",0.637956989247312
 "Inupiak","Bulgarian",0.663118279569893
 "Greenlandic","Bulgarian",0.589677419354839
-"Cheyenne","Bulgarian",0.639139784946237
 "Choctaw","Bulgarian",0.60505376344086
 "Muscogee","Bulgarian",0.625913978494623
 "Cherokee","Bulgarian",0.617956989247312
@@ -4895,7 +4699,6 @@
 "Haitian","Bulgarian",0.471290322580645
 "Aymara","Bulgarian",0.46258064516129
 "Guarani","Bulgarian",0.506559139784946
-"Herero","Belarusian",0.743225806451612
 "Zulu","Belarusian",0.605698924731183
 "Tswana","Belarusian",0.64247311827957
 "Shona","Belarusian",0.639354838709677
@@ -4989,7 +4792,6 @@
 "Tahitian","Belarusian",0.568924731182796
 "Inupiak","Belarusian",0.61505376344086
 "Greenlandic","Belarusian",0.558387096774194
-"Cheyenne","Belarusian",0.65
 "Choctaw","Belarusian",0.636989247311828
 "Muscogee","Belarusian",0.631720430107527
 "Cherokee","Belarusian",0.609032258064516
@@ -4997,7 +4799,6 @@
 "Haitian","Belarusian",0.500215053763441
 "Aymara","Belarusian",0.444731182795699
 "Guarani","Belarusian",0.542043010752688
-"Herero","Ukrainian",0.718709677419354
 "Zulu","Ukrainian",0.588172043010753
 "Tswana","Ukrainian",0.656881720430107
 "Shona","Ukrainian",0.608494623655914
@@ -5091,7 +4892,6 @@
 "Tahitian","Ukrainian",0.64741935483871
 "Inupiak","Ukrainian",0.618387096774193
 "Greenlandic","Ukrainian",0.584731182795699
-"Cheyenne","Ukrainian",0.620322580645161
 "Choctaw","Ukrainian",0.603118279569892
 "Muscogee","Ukrainian",0.606774193548387
 "Cherokee","Ukrainian",0.621827956989247
@@ -5099,7 +4899,6 @@
 "Haitian","Ukrainian",0.516559139784946
 "Aymara","Ukrainian",0.461075268817204
 "Guarani","Ukrainian",0.536881720430108
-"Herero","Hungarian",0.734193548387096
 "Zulu","Hungarian",0.561827956989247
 "Tswana","Hungarian",0.635913978494624
 "Shona","Hungarian",0.636774193548387
@@ -5193,7 +4992,6 @@
 "Tahitian","Hungarian",0.631182795698925
 "Inupiak","Hungarian",0.680537634408602
 "Greenlandic","Hungarian",0.603870967741935
-"Cheyenne","Hungarian",0.638924731182796
 "Choctaw","Hungarian",0.628924731182796
 "Muscogee","Hungarian",0.607311827956989
 "Cherokee","Hungarian",0.647741935483871
@@ -5201,7 +4999,6 @@
 "Haitian","Hungarian",0.478602150537635
 "Aymara","Hungarian",0.468817204301075
 "Guarani","Hungarian",0.51494623655914
-"Herero","Lithuanian",0.727956989247312
 "Zulu","Lithuanian",0.571935483870968
 "Tswana","Lithuanian",0.634516129032258
 "Shona","Lithuanian",0.607956989247312
@@ -5295,7 +5092,6 @@
 "Tahitian","Lithuanian",0.623440860215054
 "Inupiak","Lithuanian",0.669139784946236
 "Greenlandic","Lithuanian",0.593010752688172
-"Cheyenne","Lithuanian",0.655806451612904
 "Choctaw","Lithuanian",0.629354838709677
 "Muscogee","Lithuanian",0.649892473118279
 "Cherokee","Lithuanian",0.626559139784946
@@ -5303,7 +5099,6 @@
 "Haitian","Lithuanian",0.480752688172043
 "Aymara","Lithuanian",0.482688172043011
 "Guarani","Lithuanian",0.52494623655914
-"Herero","Kalmyk",0.586989247311828
 "Zulu","Kalmyk",0.462688172043011
 "Tswana","Kalmyk",0.613870967741936
 "Shona","Kalmyk",0.528064516129032
@@ -5397,7 +5192,6 @@
 "Tahitian","Kalmyk",0.711290322580645
 "Inupiak","Kalmyk",0.643655913978495
 "Greenlandic","Kalmyk",0.670537634408602
-"Cheyenne","Kalmyk",0.580967741935484
 "Choctaw","Kalmyk",0.638172043010753
 "Muscogee","Kalmyk",0.63516129032258
 "Cherokee","Kalmyk",0.690430107526882
@@ -5405,7 +5199,6 @@
 "Haitian","Kalmyk",0.677096774193548
 "Aymara","Kalmyk",0.597849462365591
 "Guarani","Kalmyk",0.603225806451613
-"Herero","Armenian",0.692795698924731
 "Zulu","Armenian",0.54236559139785
 "Tswana","Armenian",0.610537634408602
 "Shona","Armenian",0.631397849462366
@@ -5499,7 +5292,6 @@
 "Tahitian","Armenian",0.641182795698925
 "Inupiak","Armenian",0.616666666666666
 "Greenlandic","Armenian",0.555591397849462
-"Cheyenne","Armenian",0.57247311827957
 "Choctaw","Armenian",0.611720430107527
 "Muscogee","Armenian",0.600537634408602
 "Cherokee","Armenian",0.636236559139785
@@ -5507,7 +5299,6 @@
 "Haitian","Armenian",0.480537634408602
 "Aymara","Armenian",0.500322580645161
 "Guarani","Armenian",0.531397849462366
-"Herero","Kurdish (Sorani)",0.710860215053763
 "Zulu","Kurdish (Sorani)",0.519892473118279
 "Tswana","Kurdish (Sorani)",0.516344086021505
 "Shona","Kurdish (Sorani)",0.559354838709677
@@ -5601,7 +5392,6 @@
 "Tahitian","Kurdish (Sorani)",0.601182795698925
 "Inupiak","Kurdish (Sorani)",0.734516129032258
 "Greenlandic","Kurdish (Sorani)",0.680537634408602
-"Cheyenne","Kurdish (Sorani)",0.697956989247311
 "Choctaw","Kurdish (Sorani)",0.685483870967741
 "Muscogee","Kurdish (Sorani)",0.670430107526882
 "Cherokee","Kurdish (Sorani)",0.65236559139785
@@ -5609,7 +5399,6 @@
 "Haitian","Kurdish (Sorani)",0.585161290322581
 "Aymara","Kurdish (Sorani)",0.51010752688172
 "Guarani","Kurdish (Sorani)",0.55494623655914
-"Herero","Abkhazian",0.63
 "Zulu","Abkhazian",0.558602150537635
 "Tswana","Abkhazian",0.656129032258065
 "Shona","Abkhazian",0.571612903225807
@@ -5703,7 +5492,6 @@
 "Tahitian","Abkhazian",0.680322580645161
 "Inupiak","Abkhazian",0.674193548387097
 "Greenlandic","Abkhazian",0.703333333333333
-"Cheyenne","Abkhazian",0.664838709677419
 "Choctaw","Abkhazian",0.676129032258064
 "Muscogee","Abkhazian",0.661182795698924
 "Cherokee","Abkhazian",0.683655913978494
@@ -5711,7 +5499,6 @@
 "Haitian","Abkhazian",0.588709677419355
 "Aymara","Abkhazian",0.567849462365591
 "Guarani","Abkhazian",0.597849462365591
-"Herero","Kabardian",0.62752688172043
 "Zulu","Kabardian",0.442043010752688
 "Tswana","Kabardian",0.544838709677419
 "Shona","Kabardian",0.543978494623656
@@ -5805,7 +5592,6 @@
 "Tahitian","Kabardian",0.641290322580645
 "Inupiak","Kabardian",0.75494623655914
 "Greenlandic","Kabardian",0.71763440860215
-"Cheyenne","Kabardian",0.671075268817204
 "Choctaw","Kabardian",0.662688172043011
 "Muscogee","Kabardian",0.710645161290322
 "Cherokee","Kabardian",0.696129032258064
@@ -5813,7 +5599,6 @@
 "Haitian","Kabardian",0.536129032258064
 "Aymara","Kabardian",0.55516129032258
 "Guarani","Kabardian",0.501720430107527
-"Herero","Turkish",0.723118279569892
 "Zulu","Turkish",0.551505376344086
 "Tswana","Turkish",0.581827956989247
 "Shona","Turkish",0.693870967741935
@@ -5907,7 +5692,6 @@
 "Tahitian","Turkish",0.600860215053763
 "Inupiak","Turkish",0.746559139784946
 "Greenlandic","Turkish",0.75247311827957
-"Cheyenne","Turkish",0.733440860215054
 "Choctaw","Turkish",0.750967741935484
 "Muscogee","Turkish",0.685806451612903
 "Cherokee","Turkish",0.709247311827956
@@ -5915,7 +5699,6 @@
 "Haitian","Turkish",0.478172043010753
 "Aymara","Turkish",0.533225806451613
 "Guarani","Turkish",0.614731182795699
-"Herero","Ossetian",0.648064516129032
 "Zulu","Ossetian",0.438064516129032
 "Tswana","Ossetian",0.583225806451613
 "Shona","Ossetian",0.541935483870968
@@ -6009,7 +5792,6 @@
 "Tahitian","Ossetian",0.648064516129032
 "Inupiak","Ossetian",0.694516129032258
 "Greenlandic","Ossetian",0.703440860215053
-"Cheyenne","Ossetian",0.658279569892473
 "Choctaw","Ossetian",0.651182795698925
 "Muscogee","Ossetian",0.600752688172043
 "Cherokee","Ossetian",0.636881720430107
@@ -6017,7 +5799,6 @@
 "Haitian","Ossetian",0.607741935483871
 "Aymara","Ossetian",0.50763440860215
 "Guarani","Ossetian",0.57989247311828
-"Herero","Hebrew",0.708064516129032
 "Zulu","Hebrew",0.554623655913979
 "Tswana","Hebrew",0.591182795698925
 "Shona","Hebrew",0.636559139784946
@@ -6111,7 +5892,6 @@
 "Tahitian","Hebrew",0.657634408602151
 "Inupiak","Hebrew",0.768172043010753
 "Greenlandic","Hebrew",0.726344086021505
-"Cheyenne","Hebrew",0.796451612903226
 "Choctaw","Hebrew",0.744086021505377
 "Muscogee","Hebrew",0.681505376344086
 "Cherokee","Hebrew",0.682795698924731
@@ -6119,7 +5899,6 @@
 "Haitian","Hebrew",0.53
 "Aymara","Hebrew",0.546881720430108
 "Guarani","Hebrew",0.651397849462365
-"Herero","Sindhi",0.706344086021505
 "Zulu","Sindhi",0.528279569892473
 "Tswana","Sindhi",0.572150537634409
 "Shona","Sindhi",0.612258064516129
@@ -6213,7 +5992,6 @@
 "Tahitian","Sindhi",0.635698924731183
 "Inupiak","Sindhi",0.729462365591398
 "Greenlandic","Sindhi",0.709462365591398
-"Cheyenne","Sindhi",0.720860215053763
 "Choctaw","Sindhi",0.699354838709677
 "Muscogee","Sindhi",0.644516129032258
 "Cherokee","Sindhi",0.625698924731183
@@ -6221,7 +5999,6 @@
 "Haitian","Sindhi",0.53236559139785
 "Aymara","Sindhi",0.437634408602151
 "Guarani","Sindhi",0.561612903225806
-"Herero","Eastern Punjabi",0.746666666666666
 "Zulu","Eastern Punjabi",0.584301075268817
 "Tswana","Eastern Punjabi",0.551612903225807
 "Shona","Eastern Punjabi",0.699569892473118
@@ -6315,7 +6092,6 @@
 "Tahitian","Eastern Punjabi",0.717956989247312
 "Inupiak","Eastern Punjabi",0.776129032258064
 "Greenlandic","Eastern Punjabi",0.769247311827957
-"Cheyenne","Eastern Punjabi",0.764731182795699
 "Choctaw","Eastern Punjabi",0.763548387096774
 "Muscogee","Eastern Punjabi",0.720967741935484
 "Cherokee","Eastern Punjabi",0.724516129032258
@@ -6323,7 +6099,6 @@
 "Haitian","Eastern Punjabi",0.598279569892473
 "Aymara","Eastern Punjabi",0.579677419354839
 "Guarani","Eastern Punjabi",0.626559139784946
-"Herero","Kazakh",0.583225806451613
 "Zulu","Kazakh",0.459247311827957
 "Tswana","Kazakh",0.591720430107527
 "Shona","Kazakh",0.589784946236559
@@ -6417,7 +6192,6 @@
 "Tahitian","Kazakh",0.723655913978495
 "Inupiak","Kazakh",0.693548387096773
 "Greenlandic","Kazakh",0.754516129032258
-"Cheyenne","Kazakh",0.651935483870968
 "Choctaw","Kazakh",0.768817204301075
 "Muscogee","Kazakh",0.736666666666666
 "Cherokee","Kazakh",0.746559139784946
@@ -6425,7 +6199,6 @@
 "Haitian","Kazakh",0.641182795698925
 "Aymara","Kazakh",0.620752688172043
 "Guarani","Kazakh",0.673333333333333
-"Herero","Sakha",0.654193548387097
 "Zulu","Sakha",0.507419354838709
 "Tswana","Sakha",0.664193548387097
 "Shona","Sakha",0.583978494623656
@@ -6519,7 +6292,6 @@
 "Tahitian","Sakha",0.715376344086021
 "Inupiak","Sakha",0.600215053763441
 "Greenlandic","Sakha",0.67763440860215
-"Cheyenne","Sakha",0.669139784946236
 "Choctaw","Sakha",0.683763440860215
 "Muscogee","Sakha",0.599139784946236
 "Cherokee","Sakha",0.555483870967742
@@ -6527,7 +6299,6 @@
 "Haitian","Sakha",0.707419354838709
 "Aymara","Sakha",0.589784946236559
 "Guarani","Sakha",0.6
-"Herero","Korean",0.739032258064516
 "Zulu","Korean",0.537204301075269
 "Tswana","Korean",0.650430107526882
 "Shona","Korean",0.562688172043011
@@ -6621,7 +6392,6 @@
 "Tahitian","Korean",0.63505376344086
 "Inupiak","Korean",0.718172043010752
 "Greenlandic","Korean",0.676236559139785
-"Cheyenne","Korean",0.707849462365591
 "Choctaw","Korean",0.670967741935484
 "Muscogee","Korean",0.649354838709678
 "Cherokee","Korean",0.676666666666666
@@ -6629,7 +6399,6 @@
 "Haitian","Korean",0.530322580645161
 "Aymara","Korean",0.486451612903226
 "Guarani","Korean",0.610430107526881
-"Herero","Chinese",0.754731182795699
 "Zulu","Chinese",0.547849462365592
 "Tswana","Chinese",0.672150537634408
 "Shona","Chinese",0.629032258064516
@@ -6723,7 +6492,6 @@
 "Tahitian","Chinese",0.608709677419355
 "Inupiak","Chinese",0.72516129032258
 "Greenlandic","Chinese",0.686451612903225
-"Cheyenne","Chinese",0.728709677419355
 "Choctaw","Chinese",0.709247311827957
 "Muscogee","Chinese",0.631290322580645
 "Cherokee","Chinese",0.643225806451613
@@ -6731,7 +6499,6 @@
 "Haitian","Chinese",0.499569892473118
 "Aymara","Chinese",0.441075268817205
 "Guarani","Chinese",0.626989247311828
-"Herero","Nuosu",0.621182795698925
 "Zulu","Nuosu",0.50236559139785
 "Tswana","Nuosu",0.58236559139785
 "Shona","Nuosu",0.60505376344086
@@ -6825,7 +6592,6 @@
 "Tahitian","Nuosu",0.618494623655914
 "Inupiak","Nuosu",0.685483870967742
 "Greenlandic","Nuosu",0.693440860215054
-"Cheyenne","Nuosu",0.71989247311828
 "Choctaw","Nuosu",0.720860215053763
 "Muscogee","Nuosu",0.680322580645161
 "Cherokee","Nuosu",0.676774193548387
@@ -6833,7 +6599,6 @@
 "Haitian","Nuosu",0.551505376344086
 "Aymara","Nuosu",0.530215053763441
 "Guarani","Nuosu",0.567204301075269
-"Herero","Japanese",0.768279569892473
 "Zulu","Japanese",0.637849462365592
 "Tswana","Japanese",0.631505376344086
 "Shona","Japanese",0.676666666666667
@@ -6927,7 +6692,6 @@
 "Tahitian","Japanese",0.659247311827957
 "Inupiak","Japanese",0.736559139784946
 "Greenlandic","Japanese",0.669677419354838
-"Cheyenne","Japanese",0.707096774193548
 "Choctaw","Japanese",0.703763440860215
 "Muscogee","Japanese",0.721612903225807
 "Cherokee","Japanese",0.744193548387097
@@ -6935,7 +6699,6 @@
 "Haitian","Japanese",0.568602150537635
 "Aymara","Japanese",0.604193548387096
 "Guarani","Japanese",0.586236559139785
-"Herero","Tibetan",0.73236559139785
 "Zulu","Tibetan",0.514623655913978
 "Tswana","Tibetan",0.643870967741936
 "Shona","Tibetan",0.633118279569892
@@ -7029,7 +6792,6 @@
 "Tahitian","Tibetan",0.683978494623656
 "Inupiak","Tibetan",0.712043010752688
 "Greenlandic","Tibetan",0.699677419354839
-"Cheyenne","Tibetan",0.721075268817204
 "Choctaw","Tibetan",0.713225806451613
 "Muscogee","Tibetan",0.703978494623656
 "Cherokee","Tibetan",0.694301075268817
@@ -7037,7 +6799,6 @@
 "Haitian","Tibetan",0.59741935483871
 "Aymara","Tibetan",0.512688172043011
 "Guarani","Tibetan",0.676881720430107
-"Herero","Bengali",0.813548387096774
 "Zulu","Bengali",0.591397849462366
 "Tswana","Bengali",0.649139784946237
 "Shona","Bengali",0.663870967741935
@@ -7131,7 +6892,6 @@
 "Tahitian","Bengali",0.612795698924731
 "Inupiak","Bengali",0.736236559139785
 "Greenlandic","Bengali",0.757311827956989
-"Cheyenne","Bengali",0.739462365591397
 "Choctaw","Bengali",0.72516129032258
 "Muscogee","Bengali",0.651290322580645
 "Cherokee","Bengali",0.718494623655914
@@ -7139,7 +6899,6 @@
 "Haitian","Bengali",0.536666666666667
 "Aymara","Bengali",0.49258064516129
 "Guarani","Bengali",0.660430107526882
-"Herero","Kashmiri",0.738817204301075
 "Zulu","Kashmiri",0.586129032258064
 "Tswana","Kashmiri",0.640322580645161
 "Shona","Kashmiri",0.621827956989247
@@ -7233,7 +6992,6 @@
 "Tahitian","Kashmiri",0.631720430107527
 "Inupiak","Kashmiri",0.722795698924731
 "Greenlandic","Kashmiri",0.69516129032258
-"Cheyenne","Kashmiri",0.753440860215054
 "Choctaw","Kashmiri",0.723333333333333
 "Muscogee","Kashmiri",0.63741935483871
 "Cherokee","Kashmiri",0.663978494623656
@@ -7241,7 +6999,6 @@
 "Haitian","Kashmiri",0.497634408602151
 "Aymara","Kashmiri",0.531182795698925
 "Guarani","Kashmiri",0.598924731182796
-"Herero","Gujarati",0.732043010752688
 "Zulu","Gujarati",0.581935483870968
 "Tswana","Gujarati",0.632688172043011
 "Shona","Gujarati",0.667956989247311
@@ -7335,7 +7092,6 @@
 "Tahitian","Gujarati",0.620752688172043
 "Inupiak","Gujarati",0.780537634408602
 "Greenlandic","Gujarati",0.775806451612903
-"Cheyenne","Gujarati",0.781720430107527
 "Choctaw","Gujarati",0.753548387096774
 "Muscogee","Gujarati",0.70516129032258
 "Cherokee","Gujarati",0.724516129032258
@@ -7343,7 +7099,6 @@
 "Haitian","Gujarati",0.481720430107527
 "Aymara","Gujarati",0.506129032258064
 "Guarani","Gujarati",0.66
-"Herero","Telugu",0.71010752688172
 "Zulu","Telugu",0.526559139784946
 "Tswana","Telugu",0.609139784946236
 "Shona","Telugu",0.668817204301075
@@ -7437,7 +7192,6 @@
 "Tahitian","Telugu",0.633010752688172
 "Inupiak","Telugu",0.746774193548387
 "Greenlandic","Telugu",0.718279569892473
-"Cheyenne","Telugu",0.76752688172043
 "Choctaw","Telugu",0.708172043010752
 "Muscogee","Telugu",0.675268817204301
 "Cherokee","Telugu",0.676236559139785
@@ -7445,7 +7199,6 @@
 "Haitian","Telugu",0.465806451612903
 "Aymara","Telugu",0.498602150537635
 "Guarani","Telugu",0.605698924731182
-"Herero","Tamil",0.735806451612903
 "Zulu","Tamil",0.556989247311828
 "Tswana","Tamil",0.607311827956989
 "Shona","Tamil",0.653763440860215
@@ -7539,7 +7292,6 @@
 "Tahitian","Tamil",0.618602150537634
 "Inupiak","Tamil",0.752365591397849
 "Greenlandic","Tamil",0.743655913978495
-"Cheyenne","Tamil",0.78
 "Choctaw","Tamil",0.72258064516129
 "Muscogee","Tamil",0.665806451612903
 "Cherokee","Tamil",0.685806451612903
@@ -7547,7 +7299,6 @@
 "Haitian","Tamil",0.466559139784946
 "Aymara","Tamil",0.48741935483871
 "Guarani","Tamil",0.613978494623656
-"Herero","Malayalam",0.711935483870968
 "Zulu","Malayalam",0.646881720430107
 "Tswana","Malayalam",0.649569892473118
 "Shona","Malayalam",0.73010752688172
@@ -7641,7 +7392,6 @@
 "Tahitian","Malayalam",0.678387096774193
 "Inupiak","Malayalam",0.767419354838709
 "Greenlandic","Malayalam",0.724946236559139
-"Cheyenne","Malayalam",0.764086021505376
 "Choctaw","Malayalam",0.658709677419355
 "Muscogee","Malayalam",0.643763440860215
 "Cherokee","Malayalam",0.641720430107527
@@ -7649,7 +7399,6 @@
 "Haitian","Malayalam",0.60247311827957
 "Aymara","Malayalam",0.580860215053763
 "Guarani","Malayalam",0.722365591397849
-"Herero","Sinhalese",0.739892473118279
 "Zulu","Sinhalese",0.617956989247312
 "Tswana","Sinhalese",0.637956989247312
 "Shona","Sinhalese",0.663440860215054
@@ -7743,7 +7492,6 @@
 "Tahitian","Sinhalese",0.605806451612903
 "Inupiak","Sinhalese",0.69247311827957
 "Greenlandic","Sinhalese",0.560967741935484
-"Cheyenne","Sinhalese",0.694516129032257
 "Choctaw","Sinhalese",0.652795698924731
 "Muscogee","Sinhalese",0.677849462365591
 "Cherokee","Sinhalese",0.654838709677419
@@ -7751,7 +7499,6 @@
 "Haitian","Sinhalese",0.501505376344086
 "Aymara","Sinhalese",0.52989247311828
 "Guarani","Sinhalese",0.603225806451613
-"Herero","Burmese",0.82505376344086
 "Zulu","Burmese",0.661827956989247
 "Tswana","Burmese",0.670645161290322
 "Shona","Burmese",0.714193548387097
@@ -7845,7 +7592,6 @@
 "Tahitian","Burmese",0.628064516129032
 "Inupiak","Burmese",0.668602150537634
 "Greenlandic","Burmese",0.676774193548387
-"Cheyenne","Burmese",0.675806451612903
 "Choctaw","Burmese",0.731612903225806
 "Muscogee","Burmese",0.703118279569892
 "Cherokee","Burmese",0.706129032258064
@@ -7853,7 +7599,6 @@
 "Haitian","Burmese",0.391397849462366
 "Aymara","Burmese",0.590752688172043
 "Guarani","Burmese",0.583763440860215
-"Herero","Vietnamese",0.755806451612903
 "Zulu","Vietnamese",0.582688172043011
 "Tswana","Vietnamese",0.726559139784946
 "Shona","Vietnamese",0.64247311827957
@@ -7947,7 +7692,6 @@
 "Tahitian","Vietnamese",0.593870967741935
 "Inupiak","Vietnamese",0.704838709677419
 "Greenlandic","Vietnamese",0.75763440860215
-"Cheyenne","Vietnamese",0.72763440860215
 "Choctaw","Vietnamese",0.715806451612903
 "Muscogee","Vietnamese",0.65247311827957
 "Cherokee","Vietnamese",0.647849462365591
@@ -7955,7 +7699,6 @@
 "Haitian","Vietnamese",0.459139784946237
 "Aymara","Vietnamese",0.528279569892473
 "Guarani","Vietnamese",0.634731182795699
-"Herero","Khmer",0.760430107526881
 "Zulu","Khmer",0.675806451612903
 "Tswana","Khmer",0.660537634408602
 "Shona","Khmer",0.640645161290323
@@ -8049,7 +7792,6 @@
 "Tahitian","Khmer",0.595806451612903
 "Inupiak","Khmer",0.556774193548387
 "Greenlandic","Khmer",0.635591397849462
-"Cheyenne","Khmer",0.677311827956989
 "Choctaw","Khmer",0.652150537634408
 "Muscogee","Khmer",0.61258064516129
 "Cherokee","Khmer",0.643978494623656
@@ -8057,7 +7799,6 @@
 "Haitian","Khmer",0.451935483870968
 "Aymara","Khmer",0.593440860215054
 "Guarani","Khmer",0.492688172043011
-"Herero","Malay",0.719892473118279
 "Zulu","Malay",0.596344086021505
 "Tswana","Malay",0.61752688172043
 "Shona","Malay",0.604086021505376
@@ -8151,7 +7892,6 @@
 "Tahitian","Malay",0.56752688172043
 "Inupiak","Malay",0.646881720430108
 "Greenlandic","Malay",0.66010752688172
-"Cheyenne","Malay",0.681290322580645
 "Choctaw","Malay",0.645161290322581
 "Muscogee","Malay",0.614408602150537
 "Cherokee","Malay",0.612258064516129
@@ -8159,7 +7899,6 @@
 "Haitian","Malay",0.501182795698925
 "Aymara","Malay",0.52
 "Guarani","Malay",0.42
-"Herero","Thai",0.754731182795699
 "Zulu","Thai",0.611075268817204
 "Tswana","Thai",0.634408602150538
 "Shona","Thai",0.688387096774193
@@ -8253,7 +7992,6 @@
 "Tahitian","Thai",0.496236559139785
 "Inupiak","Thai",0.562150537634409
 "Greenlandic","Thai",0.609139784946236
-"Cheyenne","Thai",0.630860215053763
 "Choctaw","Thai",0.610322580645161
 "Muscogee","Thai",0.581075268817204
 "Cherokee","Thai",0.586989247311828
@@ -8261,7 +7999,6 @@
 "Haitian","Thai",0.426559139784946
 "Aymara","Thai",0.489677419354839
 "Guarani","Thai",0.479569892473118
-"Herero","Cebuano",0.782150537634409
 "Zulu","Cebuano",0.611827956989247
 "Tswana","Cebuano",0.675591397849462
 "Shona","Cebuano",0.623118279569892
@@ -8355,7 +8092,6 @@
 "Tahitian","Cebuano",0.540645161290323
 "Inupiak","Cebuano",0.595806451612903
 "Greenlandic","Cebuano",0.559032258064516
-"Cheyenne","Cebuano",0.667849462365591
 "Choctaw","Cebuano",0.623870967741936
 "Muscogee","Cebuano",0.561612903225806
 "Cherokee","Cebuano",0.596881720430107
@@ -8363,7 +8099,6 @@
 "Haitian","Cebuano",0.413440860215054
 "Aymara","Cebuano",0.498387096774194
 "Guarani","Cebuano",0.540752688172043
-"Herero","Banyumasan",0.73752688172043
 "Zulu","Banyumasan",0.633763440860215
 "Tswana","Banyumasan",0.61010752688172
 "Shona","Banyumasan",0.720645161290322
@@ -8457,7 +8192,6 @@
 "Tahitian","Banyumasan",0.518602150537634
 "Inupiak","Banyumasan",0.599784946236559
 "Greenlandic","Banyumasan",0.658924731182796
-"Cheyenne","Banyumasan",0.616021505376344
 "Choctaw","Banyumasan",0.669032258064516
 "Muscogee","Banyumasan",0.689247311827957
 "Cherokee","Banyumasan",0.659032258064516
@@ -8465,7 +8199,6 @@
 "Haitian","Banyumasan",0.430645161290323
 "Aymara","Banyumasan",0.643225806451613
 "Guarani","Banyumasan",0.58752688172043
-"Herero","Minangkabau",0.66752688172043
 "Zulu","Minangkabau",0.720215053763441
 "Tswana","Minangkabau",0.724408602150537
 "Shona","Minangkabau",0.678924731182795
@@ -8559,7 +8292,6 @@
 "Tahitian","Minangkabau",0.647419354838709
 "Inupiak","Minangkabau",0.754623655913978
 "Greenlandic","Minangkabau",0.651182795698925
-"Cheyenne","Minangkabau",0.730967741935484
 "Choctaw","Minangkabau",0.656236559139785
 "Muscogee","Minangkabau",0.575698924731183
 "Cherokee","Minangkabau",0.604516129032258
@@ -8567,7 +8299,6 @@
 "Haitian","Minangkabau",0.603548387096774
 "Aymara","Minangkabau",0.608279569892473
 "Guarani","Minangkabau",0.655376344086022
-"Herero","Tetum",0.674408602150537
 "Zulu","Tetum",0.636344086021505
 "Tswana","Tetum",0.653333333333334
 "Shona","Tetum",0.670752688172043
@@ -8661,7 +8392,6 @@
 "Tahitian","Tetum",0.653118279569892
 "Inupiak","Tetum",0.727096774193548
 "Greenlandic","Tetum",0.684838709677419
-"Cheyenne","Tetum",0.665268817204301
 "Choctaw","Tetum",0.589354838709677
 "Muscogee","Tetum",0.529677419354839
 "Cherokee","Tetum",0.563118279569892
@@ -8669,7 +8399,6 @@
 "Haitian","Tetum",0.615698924731182
 "Aymara","Tetum",0.59
 "Guarani","Tetum",0.634301075268817
-"Herero","Nauruan",0.699677419354838
 "Zulu","Nauruan",0.606989247311828
 "Tswana","Nauruan",0.660645161290323
 "Shona","Nauruan",0.713870967741935
@@ -8763,7 +8492,6 @@
 "Tahitian","Nauruan",0.461935483870968
 "Inupiak","Nauruan",0.599462365591398
 "Greenlandic","Nauruan",0.607849462365591
-"Cheyenne","Nauruan",0.64
 "Choctaw","Nauruan",0.49752688172043
 "Muscogee","Nauruan",0.542688172043011
 "Cherokee","Nauruan",0.485268817204301
@@ -8771,7 +8499,6 @@
 "Haitian","Nauruan",0.636774193548387
 "Aymara","Nauruan",0.607419354838709
 "Guarani","Nauruan",0.582043010752688
-"Herero","Chamorro",0.784408602150537
 "Zulu","Chamorro",0.583010752688172
 "Tswana","Chamorro",0.646774193548387
 "Shona","Chamorro",0.642688172043011
@@ -8865,7 +8592,6 @@
 "Tahitian","Chamorro",0.495591397849462
 "Inupiak","Chamorro",0.568387096774194
 "Greenlandic","Chamorro",0.542688172043011
-"Cheyenne","Chamorro",0.640322580645161
 "Choctaw","Chamorro",0.590215053763441
 "Muscogee","Chamorro",0.595376344086021
 "Cherokee","Chamorro",0.609462365591397
@@ -8873,7 +8599,6 @@
 "Haitian","Chamorro",0.438387096774193
 "Aymara","Chamorro",0.477634408602151
 "Guarani","Chamorro",0.601935483870967
-"Herero","Samoan",0.800860215053763
 "Zulu","Samoan",0.597741935483871
 "Tswana","Samoan",0.674301075268817
 "Shona","Samoan",0.705483870967742
@@ -8967,7 +8692,6 @@
 "Tahitian","Samoan",0.340967741935484
 "Inupiak","Samoan",0.578602150537634
 "Greenlandic","Samoan",0.675268817204301
-"Cheyenne","Samoan",0.640215053763441
 "Choctaw","Samoan",0.621290322580645
 "Muscogee","Samoan",0.567849462365592
 "Cherokee","Samoan",0.607849462365591
@@ -8975,7 +8699,6 @@
 "Haitian","Samoan",0.592903225806451
 "Aymara","Samoan",0.572258064516129
 "Guarani","Samoan",0.56494623655914
-"Herero","Tongan",0.725268817204301
 "Zulu","Tongan",0.59763440860215
 "Tswana","Tongan",0.630967741935484
 "Shona","Tongan",0.619784946236559
@@ -9069,7 +8792,6 @@
 "Tahitian","Tongan",0.304193548387097
 "Inupiak","Tongan",0.599677419354839
 "Greenlandic","Tongan",0.661720430107527
-"Cheyenne","Tongan",0.62505376344086
 "Choctaw","Tongan",0.60021505376344
 "Muscogee","Tongan",0.581290322580645
 "Cherokee","Tongan",0.565053763440861
@@ -9077,7 +8799,6 @@
 "Haitian","Tongan",0.566989247311828
 "Aymara","Tongan",0.536881720430108
 "Guarani","Tongan",0.526774193548387
-"Herero","Maori",0.747311827956989
 "Zulu","Maori",0.614301075268817
 "Tswana","Maori",0.679892473118279
 "Shona","Maori",0.660967741935484
@@ -9171,7 +8892,6 @@
 "Tahitian","Maori",0.455268817204301
 "Inupiak","Maori",0.621075268817204
 "Greenlandic","Maori",0.632043010752688
-"Cheyenne","Maori",0.673010752688172
 "Choctaw","Maori",0.581612903225806
 "Muscogee","Maori",0.518709677419355
 "Cherokee","Maori",0.498817204301076
@@ -9179,7 +8899,6 @@
 "Haitian","Maori",0.64483870967742
 "Aymara","Maori",0.58494623655914
 "Guarani","Maori",0.466666666666667
-"Herero","Hawaiian",0.773440860215053
 "Zulu","Hawaiian",0.675913978494624
 "Tswana","Hawaiian",0.701290322580644
 "Shona","Hawaiian",0.676021505376344
@@ -9273,7 +8992,6 @@
 "Tahitian","Hawaiian",0.340215053763441
 "Inupiak","Hawaiian",0.623010752688172
 "Greenlandic","Hawaiian",0.672043010752688
-"Cheyenne","Hawaiian",0.690752688172042
 "Choctaw","Hawaiian",0.690322580645161
 "Muscogee","Hawaiian",0.63731182795699
 "Cherokee","Hawaiian",0.575161290322581
@@ -9281,7 +8999,6 @@
 "Haitian","Hawaiian",0.566451612903226
 "Aymara","Hawaiian",0.674408602150538
 "Guarani","Hawaiian",0.628817204301075
-"Herero","Tahitian",0.776021505376344
 "Zulu","Tahitian",0.590752688172043
 "Tswana","Tahitian",0.64752688172043
 "Shona","Tahitian",0.643118279569892
@@ -9375,7 +9092,6 @@
 "Tahitian","Tahitian",0
 "Inupiak","Tahitian",0.560967741935484
 "Greenlandic","Tahitian",0.624086021505376
-"Cheyenne","Tahitian",0.644731182795699
 "Choctaw","Tahitian",0.608924731182795
 "Muscogee","Tahitian",0.591505376344086
 "Cherokee","Tahitian",0.55741935483871
@@ -9383,7 +9099,6 @@
 "Haitian","Tahitian",0.494408602150537
 "Aymara","Tahitian",0.563333333333333
 "Guarani","Tahitian",0.521827956989247
-"Herero","Inupiak",0.643333333333334
 "Zulu","Inupiak",0.668494623655914
 "Tswana","Inupiak",0.707311827956989
 "Shona","Inupiak",0.69763440860215
@@ -9477,7 +9192,6 @@
 "Tahitian","Inupiak",0.560967741935484
 "Inupiak","Inupiak",0
 "Greenlandic","Inupiak",0.458064516129032
-"Cheyenne","Inupiak",0.460645161290323
 "Choctaw","Inupiak",0.532365591397849
 "Muscogee","Inupiak",0.526344086021505
 "Cherokee","Inupiak",0.527419354838709
@@ -9485,7 +9199,6 @@
 "Haitian","Inupiak",0.658709677419355
 "Aymara","Inupiak",0.661720430107527
 "Guarani","Inupiak",0.544301075268817
-"Herero","Greenlandic",0.656881720430107
 "Zulu","Greenlandic",0.669354838709677
 "Tswana","Greenlandic",0.705268817204301
 "Shona","Greenlandic",0.636989247311828
@@ -9579,7 +9292,6 @@
 "Tahitian","Greenlandic",0.624086021505376
 "Inupiak","Greenlandic",0.458064516129032
 "Greenlandic","Greenlandic",0
-"Cheyenne","Greenlandic",0.571612903225807
 "Choctaw","Greenlandic",0.509569892473118
 "Muscogee","Greenlandic",0.589032258064516
 "Cherokee","Greenlandic",0.534731182795699
@@ -9587,109 +9299,6 @@
 "Haitian","Greenlandic",0.676666666666667
 "Aymara","Greenlandic",0.618817204301075
 "Guarani","Greenlandic",0.596129032258065
-"Herero","Cheyenne",0.629139784946236
-"Zulu","Cheyenne",0.586344086021505
-"Tswana","Cheyenne",0.651612903225807
-"Shona","Cheyenne",0.66
-"Ndonga","Cheyenne",0.65
-"Swati","Cheyenne",0.587311827956989
-"Tsonga","Cheyenne",0.627096774193548
-"Venda","Cheyenne",0.64010752688172
-"Kongo","Cheyenne",0.710215053763441
-"Tumbuka","Cheyenne",0.65258064516129
-"Kikuyu","Cheyenne",0.622795698924731
-"Luganda","Cheyenne",0.67516129032258
-"Kinyarwanda","Cheyenne",0.629569892473118
-"Lingala","Cheyenne",0.646021505376344
-"Kirundi","Cheyenne",0.704086021505376
-"Igbo","Cheyenne",0.658064516129032
-"Bambara","Cheyenne",0.712473118279569
-"Tigrinya","Cheyenne",0.670645161290323
-"Afar","Cheyenne",0.618924731182796
-"Amharic","Cheyenne",0.646129032258065
-"Kanuri","Cheyenne",0.626559139784946
-"Wolof","Cheyenne",0.753010752688172
-"Egyptian Arabic","Cheyenne",0.830645161290323
-"Kabyle","Cheyenne",0.677311827956989
-"Albanian","Cheyenne",0.668494623655914
-"Latin","Cheyenne",0.693225806451613
-"Neapolitan","Cheyenne",0.686344086021505
-"Spanish","Cheyenne",0.679139784946236
-"Greek","Cheyenne",0.699784946236559
-"English","Cheyenne",0.686881720430107
-"French","Cheyenne",0.63741935483871
-"Dutch","Cheyenne",0.730322580645161
-"Icelandic","Cheyenne",0.652043010752688
-"Irish","Cheyenne",0.640967741935484
-"Northern Sami","Cheyenne",0.574301075268817
-"Serbian","Cheyenne",0.678172043010753
-"Russian","Cheyenne",0.655161290322581
-"Bashkir","Cheyenne",0.659462365591398
-"Chuvash","Cheyenne",0.660860215053763
-"Erzya","Cheyenne",0.675591397849462
-"Estonian","Cheyenne",0.670752688172043
-"Gagauz","Cheyenne",0.670967741935484
-"Tatar","Cheyenne",0.702043010752687
-"Latvian","Cheyenne",0.711290322580645
-"Vepsian","Cheyenne",0.681720430107527
-"Czech","Cheyenne",0.667741935483871
-"Meadow Mari","Cheyenne",0.60494623655914
-"Bulgarian","Cheyenne",0.639139784946237
-"Belarusian","Cheyenne",0.65
-"Ukrainian","Cheyenne",0.620322580645161
-"Hungarian","Cheyenne",0.638924731182796
-"Lithuanian","Cheyenne",0.655806451612904
-"Kalmyk","Cheyenne",0.580967741935484
-"Armenian","Cheyenne",0.57247311827957
-"Kurdish (Sorani)","Cheyenne",0.697956989247311
-"Abkhazian","Cheyenne",0.664838709677419
-"Kabardian","Cheyenne",0.671075268817204
-"Turkish","Cheyenne",0.733440860215054
-"Ossetian","Cheyenne",0.658279569892473
-"Hebrew","Cheyenne",0.796451612903226
-"Sindhi","Cheyenne",0.720860215053763
-"Eastern Punjabi","Cheyenne",0.764731182795699
-"Kazakh","Cheyenne",0.651935483870968
-"Sakha","Cheyenne",0.669139784946236
-"Korean","Cheyenne",0.707849462365591
-"Chinese","Cheyenne",0.728709677419355
-"Nuosu","Cheyenne",0.71989247311828
-"Japanese","Cheyenne",0.707096774193548
-"Tibetan","Cheyenne",0.721075268817204
-"Bengali","Cheyenne",0.739462365591397
-"Kashmiri","Cheyenne",0.753440860215054
-"Gujarati","Cheyenne",0.781720430107527
-"Telugu","Cheyenne",0.76752688172043
-"Tamil","Cheyenne",0.78
-"Malayalam","Cheyenne",0.764086021505376
-"Sinhalese","Cheyenne",0.694516129032257
-"Burmese","Cheyenne",0.675806451612903
-"Vietnamese","Cheyenne",0.72763440860215
-"Khmer","Cheyenne",0.677311827956989
-"Malay","Cheyenne",0.681290322580645
-"Thai","Cheyenne",0.630860215053763
-"Cebuano","Cheyenne",0.667849462365591
-"Banyumasan","Cheyenne",0.616021505376344
-"Minangkabau","Cheyenne",0.730967741935484
-"Tetum","Cheyenne",0.665268817204301
-"Nauruan","Cheyenne",0.64
-"Chamorro","Cheyenne",0.640322580645161
-"Samoan","Cheyenne",0.640215053763441
-"Tongan","Cheyenne",0.62505376344086
-"Maori","Cheyenne",0.673010752688172
-"Hawaiian","Cheyenne",0.690752688172042
-"Tahitian","Cheyenne",0.644731182795699
-"Inupiak","Cheyenne",0.460645161290323
-"Greenlandic","Cheyenne",0.571612903225807
-"Cheyenne","Cheyenne",0
-"Choctaw","Cheyenne",0.502258064516129
-"Muscogee","Cheyenne",0.523655913978495
-"Cherokee","Cheyenne",0.56494623655914
-"Navajo","Cheyenne",0.493870967741936
-"Haitian","Cheyenne",0.669569892473118
-"Aymara","Cheyenne",0.672258064516129
-"Guarani","Cheyenne",0.562903225806452
-"Herero","Choctaw",0.74010752688172
 "Zulu","Choctaw",0.586774193548387
 "Tswana","Choctaw",0.683655913978494
 "Shona","Choctaw",0.638064516129032
@@ -9783,7 +9392,6 @@
 "Tahitian","Choctaw",0.608924731182795
 "Inupiak","Choctaw",0.532365591397849
 "Greenlandic","Choctaw",0.509569892473118
-"Cheyenne","Choctaw",0.502258064516129
 "Choctaw","Choctaw",0
 "Muscogee","Choctaw",0.306666666666667
 "Cherokee","Choctaw",0.365483870967742
@@ -9791,7 +9399,6 @@
 "Haitian","Choctaw",0.679569892473118
 "Aymara","Choctaw",0.636774193548387
 "Guarani","Choctaw",0.490645161290323
-"Herero","Muscogee",0.748494623655914
 "Zulu","Muscogee",0.586559139784946
 "Tswana","Muscogee",0.683225806451613
 "Shona","Muscogee",0.650752688172043
@@ -9885,7 +9492,6 @@
 "Tahitian","Muscogee",0.591505376344086
 "Inupiak","Muscogee",0.526344086021505
 "Greenlandic","Muscogee",0.589032258064516
-"Cheyenne","Muscogee",0.523655913978495
 "Choctaw","Muscogee",0.306666666666667
 "Muscogee","Muscogee",0
 "Cherokee","Muscogee",0.250645161290323
@@ -9893,7 +9499,6 @@
 "Haitian","Muscogee",0.656666666666667
 "Aymara","Muscogee",0.556774193548387
 "Guarani","Muscogee",0.488172043010753
-"Herero","Cherokee",0.696451612903226
 "Zulu","Cherokee",0.586881720430107
 "Tswana","Cherokee",0.664408602150538
 "Shona","Cherokee",0.650215053763441
@@ -9987,7 +9592,6 @@
 "Tahitian","Cherokee",0.55741935483871
 "Inupiak","Cherokee",0.527419354838709
 "Greenlandic","Cherokee",0.534731182795699
-"Cheyenne","Cherokee",0.56494623655914
 "Choctaw","Cherokee",0.365483870967742
 "Muscogee","Cherokee",0.250645161290323
 "Cherokee","Cherokee",0
@@ -9995,7 +9599,6 @@
 "Haitian","Cherokee",0.646129032258065
 "Aymara","Cherokee",0.561505376344086
 "Guarani","Cherokee",0.47247311827957
-"Herero","Navajo",0.574516129032258
 "Zulu","Navajo",0.569677419354839
 "Tswana","Navajo",0.64494623655914
 "Shona","Navajo",0.667741935483871
@@ -10089,7 +9692,6 @@
 "Tahitian","Navajo",0.704838709677419
 "Inupiak","Navajo",0.626666666666666
 "Greenlandic","Navajo",0.664623655913979
-"Cheyenne","Navajo",0.493870967741936
 "Choctaw","Navajo",0.516236559139785
 "Muscogee","Navajo",0.486881720430108
 "Cherokee","Navajo",0.53741935483871
@@ -10097,7 +9699,6 @@
 "Haitian","Navajo",0.601827956989247
 "Aymara","Navajo",0.661935483870968
 "Guarani","Navajo",0.528817204301075
-"Herero","Haitian",0.732903225806452
 "Zulu","Haitian",0.610215053763441
 "Tswana","Haitian",0.632150537634408
 "Shona","Haitian",0.686881720430107
@@ -10191,7 +9792,6 @@
 "Tahitian","Haitian",0.494408602150537
 "Inupiak","Haitian",0.658709677419355
 "Greenlandic","Haitian",0.676666666666667
-"Cheyenne","Haitian",0.669569892473118
 "Choctaw","Haitian",0.679569892473118
 "Muscogee","Haitian",0.656666666666667
 "Cherokee","Haitian",0.646129032258065
@@ -10199,7 +9799,6 @@
 "Haitian","Haitian",0
 "Aymara","Haitian",0.54
 "Guarani","Haitian",0.575268817204301
-"Herero","Aymara",0.720537634408602
 "Zulu","Aymara",0.488924731182796
 "Tswana","Aymara",0.58752688172043
 "Shona","Aymara",0.557204301075269
@@ -10293,7 +9892,6 @@
 "Tahitian","Aymara",0.563333333333333
 "Inupiak","Aymara",0.661720430107527
 "Greenlandic","Aymara",0.618817204301075
-"Cheyenne","Aymara",0.672258064516129
 "Choctaw","Aymara",0.636774193548387
 "Muscogee","Aymara",0.556774193548387
 "Cherokee","Aymara",0.561505376344086
@@ -10301,7 +9899,6 @@
 "Haitian","Aymara",0.54
 "Aymara","Aymara",0
 "Guarani","Aymara",0.545268817204301
-"Herero","Guarani",0.686774193548387
 "Zulu","Guarani",0.571290322580645
 "Tswana","Guarani",0.558817204301075
 "Shona","Guarani",0.583118279569892
@@ -10395,7 +9992,6 @@
 "Tahitian","Guarani",0.521827956989247
 "Inupiak","Guarani",0.544301075268817
 "Greenlandic","Guarani",0.596129032258065
-"Cheyenne","Guarani",0.562903225806452
 "Choctaw","Guarani",0.490645161290323
 "Muscogee","Guarani",0.488172043010753
 "Cherokee","Guarani",0.47247311827957

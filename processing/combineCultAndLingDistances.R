@@ -13,7 +13,7 @@ combineCultAndLingDistances = function(inputFile,outputFile){
   
   ling.langs = unique(c(ling.domain$l1,
                         ling.domain$l2))
-  
+  names(ling.domain)[names(ling.domain)=="IDS_SEMANTICFIELD_l1"] = "imputed_semantic_domain"
   domains = unique(ling.domain$imputed_semantic_domain)
   
   for(dom in domains){
@@ -44,5 +44,5 @@ combineCultAndLingDistances = function(inputFile,outputFile){
 #"../results/EA_distances/All_Domains_with_ling.csv")
 
 combineCultAndLingDistances(
-"../data/FAIR/wikipedia-by-language-pair-mean-rho.csv",
+"../data/FAIR/main-data-nel-wikipedia-k100-by-language-pair-and-domain.csv",
 "../results/EA_distances/wikipedia_All_Domains_with_ling.csv")
