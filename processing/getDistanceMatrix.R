@@ -2,6 +2,8 @@
 
 
 library(cluster)
+library(reshape2)
+library(mclust)
 
 try(setwd("~/Documents/Bristol/word2vec/word2vec_DPLACE/processing/"))
 
@@ -109,12 +111,10 @@ norm.test = apply(simplify2array(dists), 1:2,
 write.csv(dist.m, "../results/EA_distances/CulturalDistances.csv")
 
 # convert to long form
-library(reshape2)
 dist.long = melt(dist.m)
 write.csv(dist.long, file="../results/EA_distances/CulturalDistances_Long.csv", row.names = F)
 
 # Visualise the distances
-library(mclust)
 
 hc = hclust(dist(dist.m))
 pdf("../results/CulturalDistanceTrees/CulturalDistance.pdf", width=20, height=10)
@@ -197,6 +197,8 @@ for(f in fs){
 
 write.csv(longlong, "../results/EA_distances/All_Domains.csv", row.names = F)
 
+
+c2ea.for.printing = c2ea.for.printing[order(c2ea.for.printing$Concepticon.Domain, c2ea.for.printing$EA.IndexCategory, c2ea.for.printing$EA.VarID),]
 
 write.csv(c2ea.for.printing,
           "../data/Concepticon_to_EA_FullVariableList.csv",row.names = F)

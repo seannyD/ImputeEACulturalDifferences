@@ -67,6 +67,14 @@ Read the semantic distances
 ling = read.csv(lingDistancesFile, stringsAsFactors = F)
 ```
 
+There are very few possible comparisons for Slovenian and Northern Sami, so we'll remove these:
+
+```{r}
+ling = ling[!(ling$l1=="se" || ling$l2 == "se"),]
+ling = ling[!(ling$l1=="sl" || ling$l2 == "sl"),]
+```
+
+
 Combine the lingusitic and cultural distances
 
 ```{r}
@@ -118,6 +126,32 @@ And the same is true for area:
 tail(ling[,c("l1","l2","local_alignment",'area.group')])
 ```
 
+Number of observations:
+
+```{r}
+# Number of datapoints:
+nrow(ling)
+# Number of unique languages:
+length(unique(unlist(ling[,c("l1","l2")])))
+# Number of unique langauge families:
+uniqueFamilies = unique(unlist(ling[,c("family1","family2")]))
+length(uniqueFamilies)
+# Number of unique areas:
+uniqueAreas = unique(unlist(ling[,c("area1","area2")]))
+length(uniqueAreas)
+```
+
+Cross-over between language famlies and areas:
+
+```{r}
+tx = data.frame(lang= c(ling$l1,ling$l2),
+           fam = c(ling$family1,ling$family2),
+           area= c(ling$area1,ling$area2))
+tx = tx[!duplicated(tx),]
+table(tx$fam,tx$area)
+```
+
+
 \newpage
 
 ## LMER models
@@ -162,8 +196,8 @@ gx$plot$data$resp.y = gx$plot$data$resp.y *
   attr(ling$rho.center,"scaled:center")
 gx$plot$data$x = gx$plot$data$x *
   cdc.s +cdc.c
-gx = gx$plot + coord_cartesian(ylim=c(0.1,0.6),
-                          xlim=c(0.2,0.8)) +
+gx = gx$plot + coord_cartesian(ylim=c(-0.05,0.5),
+                          xlim=c(0.15,0.85)) +
   xlab("Cultural distance") +
   ylab("Semantic alignment") +
   ggtitle("")
@@ -238,6 +272,10 @@ The model is numerically almost exactly the same.
 
 # Tests within domains
 
+\newpage
+
+## Load data
+
 Load distances for specific domains and match up to language family and area:
 
 ```{r withinDomains}
@@ -247,6 +285,20 @@ ling.dom = read.csv(
 
 ling.dom = ling.dom[!is.na(ling.dom$cult.dist),]
 
+ling.dom = ling.dom[(ling.dom$l1 %in% cultisos) & 
+                      (ling.dom$l2 %in% cultisos),]
+```
+
+There are very few possible comparisons for Slovenian and Northern Sami, so we'll remove these:
+
+```{r}
+ling.dom = ling.dom[!(ling.dom$l1=="se" || ling.dom$l2 == "se"),]
+ling.dom = ling.dom[!(ling.dom$l1=="sl" || ling.dom$l2 == "sl"),]
+```
+
+Match family and area data:
+
+```{r}
 ling.dom$family1 = l[match(ling.dom$l1, l$iso2),]$family
 ling.dom$family2 = l[match(ling.dom$l2, l$iso2),]$family
 ling.dom$area1 = l[match(ling.dom$l1, l$iso2),]$autotyp.area
@@ -388,6 +440,15 @@ ggplot(pdx,
 
 ```
 
+Overall slope estimate for each domain:
+
+```{r}
+ref.slopes.dom = data.frame(
+  domain = rownames(ranef(mD6)$imputed_semantic_domain),
+  slope = (fixef(mD6)["cult.dist.center"] +
+  ranef(mD6)$imputed_semantic_domain[,2]))
+ref.slopes.dom[order(ref.slopes.dom$slope),]
+```
 
 \newpage
 
@@ -500,6 +561,44 @@ ecodist::mantel(as.dist(ling.m2)~
                   as.dist(cult.m2),
                 nperm = 100000)
 ```
+
+\newpage
+
+## Are the relevant D-place features most predictive?
+
+Long format to line up comparisons:
+
+```{r}
+ling.dom.wide = ling.dom[,c("l1",'l2',
+            'imputed_semantic_domain',
+            "local_alignment","cult.dist")]
+ling.dom.wide = reshape(ling.dom.wide, 
+                        idvar = c("l1","l2"), 
+                        timevar = "imputed_semantic_domain",
+                        direction = "wide")
+ling.dom.wide = cbind(ling.dom.wide[,1:2],
+                      ling.dom.wide[,3:ncol(ling.dom.wide)][
+                        order(names(ling.dom.wide[,3:ncol(ling.dom.wide)]))
+                      ])
+snames = c("Agri","Tech","Emot","Kin","Poss","Soc","Hous","Wrld")
+names(ling.dom.wide) = c("l1","l2",
+                         paste0("L.",snames),
+                         paste0("C.",snames))
+```
+
+Raw correlation between each pair of domains
+
+```{r}
+compareAllDomains = 
+  cor(ling.dom.wide[,
+      grepl("L\\.",names(ling.dom.wide))],
+    ling.dom.wide[,
+      grepl("C\\.",names(ling.dom.wide))],
+    use="complete.obs")
+
+round(compareAllDomains,2)
+```
+
 
 # References
 
