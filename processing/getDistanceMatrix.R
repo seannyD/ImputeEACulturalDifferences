@@ -121,8 +121,44 @@ pdf("../results/CulturalDistanceTrees/CulturalDistance.pdf", width=20, height=10
 plot(hc)
 dev.off()
 
+####################################
+# Make sub-domain distance matrices according to the original D-PLACE domains:
+
+dpCultDistLong = data.frame()
+
+for(dom in unique(eav$MainCategory)){
+  print(dom)
+  eavars = eav[eav$MainCategory==dom,]$VarID
+  
+  if(length(eavars)>1){
+    distsC = list()
+    for(j in 1:length(files)){
+      #print(files[j])
+      distsC[[j]] = makeDistanceMatrix(
+        paste0("../data/EA_imputed/completeDataframes/",files[j]),
+        variables=c(paste0("X",eavars),"soc_id"))
+    }
+    
+    distx.m = Reduce('+', distsC)
+    distx.m = distx.m / length(distsC)
+    
+    distx.long = melt(distx.m)
+    names(distx.long) = c("l1","l2","cult.dist")
+    distx.long$domain = dom
+    distx.long$numCultVars = length(eavars)
+    
+    dpCultDistLong = rbind(dpCultDistLong,distx.long)
+    #filenamex = gsub(' ',"_",dom)
+    #write.csv(distx.long, 
+    #          file=paste0("../results/EA_distances_DPlaceDomains/",filenamex,'_long.csv'), row.names = F)
+  }
+}
+
+write.csv(dpCultDistLong, file="../results/EA_distances_DPlaceDomains/CultDistancesByDPlaceMainDomain.csv",row.names = F)
+
+
 #####################################
-# Make sub-domain distance matrices:
+# Make sub-domain distance matrices according to the mapping to Concepticon:
 # Load mappings between concepticon and Ethnographic Atlas
 c2ea = read.csv("../data/Concepticon_to_EA.csv", stringsAsFactors = F)
 

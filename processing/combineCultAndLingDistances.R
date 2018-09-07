@@ -1,7 +1,7 @@
 # combine the distances for linguistic and cultural
 # features for each domain
 
-setwd("~/Documents/Bristol/word2vec/word2vec_DPLACE/processing/")
+try(setwd("~/Documents/Bristol/word2vec/word2vec_DPLACE/processing/"))
 
 l = read.csv("../data/FAIR_langauges_glotto_xdid.csv", 
              stringsAsFactors = F)
@@ -44,5 +44,9 @@ combineCultAndLingDistances = function(inputFile,outputFile){
 #"../results/EA_distances/All_Domains_with_ling.csv")
 
 combineCultAndLingDistances(
-"../data/FAIR/main-data-nel-wikipedia-k100-by-language-pair-and-domain.csv",
-"../results/EA_distances/wikipedia_All_Domains_with_ling.csv")
+"../data/FAIR/nel-wiki-k100-alignments-clean-by-language-pair-and-domain.csv",
+"../results/EA_distances/nel-wiki-k100-clean_with_ling.csv")
+
+combineCultAndLingDistances(
+  "../data/FAIR/nel-wiki-k100-alignments-by-language-pair-and-domain.csv",
+  "../results/EA_distances/nel-wiki-k100_with_ling.csv")
