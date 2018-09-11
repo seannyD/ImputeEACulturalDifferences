@@ -265,7 +265,9 @@ ggplot(dx,aes(x,y)) +
 
 ## Without Kinship data
 
-The analyses below show that the strongest relationship is with Kinship.  Here we run the analysis as above, but using semantic distances computed without concepts that relate to kinship.  Code for constructing the data is hidden, but it is the same as above and available in the Rmd file:
+The analyses below show that the strongest relationship is with Kinship.  Here we run the analysis as above, but using semantic distances computed without concepts that relate to kinship.  Note that the local alignment values correlate with r > 0.99.
+
+Code for constructing the data is hidden, but it is the same as above and available in the Rmd file:
 
 ```{r echo=F,warning=F}
 

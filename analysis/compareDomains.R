@@ -1,9 +1,12 @@
 # Part 1: Compare each linguistic domain to the overall cultural similarity
 # Part 2: Compare each linguistic domain to the cultural similarity of each original D-PLACE domain
-
+# Part 3: Compare each linguistic domain to the phylogenetic and geographic distance
 
 library(lme4)
 library(gplots)
+library(igraph)
+library(ecodist)
+library(RColorBrewer)
 
 try(setwd("~/Documents/Bristol/word2vec/word2vec_DPLACE/analysis/"))
 
@@ -296,3 +299,162 @@ my_colors = c(redCols,blueCols)
 
 # TODO: The colours aren't mapping properly?
 plotcorr(mat.beta2/0.5, col=my_colors[mat.p2*100] , mar=c(1,1,1,1)  )
+
+
+
+
+#############################
+# Part 3: Compare each linguistic domain to the phylogenetic and geographic distance
+
+# Load historical data
+
+hist = read.csv("../data/trees/IndoEuropean_historical_distances.csv", stringsAsFactors = F)
+hist = hist[!duplicated(hist[,1]),!duplicated(hist[,1])]
+rownames(hist) = hist[,1]
+hist = hist[,2:ncol(hist)]
+hist.m = as.matrix(hist)
+colnames(hist.m) = rownames(hist.m)
+hist.m = hist.m/max(hist.m)
+# Flip to proximity
+hist.m = max(hist.m)-hist.m
+
+
+#Read the cultural distance as a matrix:
+  
+cult.m = read.csv("../results/EA_distances/CulturalDistances.csv", stringsAsFactors = F)
+rownames(cult.m) = cult.m[,1]
+cult.m = cult.m[,2:ncol(cult.m)]
+# Flip the cultural distance into a cultural similarity measure:
+cult.m = 1-cult.m
+
+# Load the geographic distances:
+  
+geoDist = read.csv("../data/GeographicDistances.csv",stringsAsFactors = F)
+geoDist.m = as.matrix(geoDist)
+# Convert to log distance
+geoDist.m = log(geoDist.m)
+geoDist.m[is.infinite(geoDist.m)] = 0
+rownames(geoDist.m) = colnames(geoDist.m)
+# Flip to proximity
+geoDist.m = max(geoDist.m) - geoDist.m
+
+
+# Convert the linguistic similarities to a matrix.  This uses `igraph` to make an undirected graph from the long format with `local_alignment` as the edge weights, then output a matrix of adjacencies.
+
+convertLingSimilaritiesToMatrix = function(lingX){
+  grph <- graph.data.frame(lingX[,c("l1",'l2','local_alignment')], directed=FALSE)
+  # add value as a weight attribute
+  ling.m = get.adjacency(grph, attr="local_alignment", sparse=FALSE)
+  rownames(ling.m) = l[match(rownames(ling.m),l$iso2),]$Language2
+  colnames(ling.m) = l[match(colnames(ling.m),l$iso2),]$Language2
+  return(ling.m)
+}
+
+
+# Run the analysis
+
+runMatrixAnalyses = function(ling.m){
+  in.analysis = intersect(rownames(ling.m),rownames(cult.m))
+  in.analysis = intersect(in.analysis, rownames(hist.m))
+  cult.m2 = cult.m[in.analysis,in.analysis]
+  ling.m2 = ling.m[in.analysis,in.analysis]
+  hist.m2 = hist.m[in.analysis,in.analysis]
+  geo.m2 = geoDist.m[in.analysis,in.analysis]
+  
+  lingVCult = ecodist::mantel(as.dist(ling.m2)~
+                    as.dist(cult.m2)+
+                      as.dist(hist.m2)+
+                      as.dist(geo.m2),
+                  nperm = 100000)
+  lingVHist = ecodist::mantel(as.dist(ling.m2)~
+                                as.dist(hist.m2)+
+                                as.dist(geo.m2)+
+                                as.dist(cult.m2),
+                              nperm = 100000)
+  lingVGeo = ecodist::mantel(as.dist(ling.m2)~
+                                as.dist(geo.m2)+
+                                as.dist(hist.m2)+
+                                as.dist(cult.m2),
+                              nperm = 100000)
+  
+  res = as.data.frame(rbind(
+    lingVCult,
+    lingVHist,
+    lingVGeo
+  ))
+  return(res)
+}
+
+res.part3 = data.frame()
+set.seed(3784)
+for(lingDom in unique(ling.dom$imputed_semantic_domain)){
+  ling.m = convertLingSimilaritiesToMatrix(
+    ling.dom[ling.dom$imputed_semantic_domain==lingDom,]
+  )
+  res = runMatrixAnalyses(ling.m)
+  res$domain = lingDom
+  res$comparison = rownames(res)
+  res.part3 = rbind(res.part3,res)
+}
+
+names(res.part3)[names(res.part3)=="llim.2.5%"] = "lower"
+names(res.part3)[names(res.part3)=="ulim.97.5%"] = "upper"
+
+write.csv("../results/stats/wikipedia-main/Cor_LingAlignmentByDomains_vs_HistoricalAndGeographicalDistance.csv")
+
+# Flip historical and geographic distance measures:
+#res.part3[res.part3$comparison != "lingVCult",
+#          c("mantelr","lower","upper")] = 
+#  - res.part3[res.part3$comparison != "lingVCult",
+#              c("mantelr","lower","upper")]
+
+domainOrder = res.part3[res.part3$comparison=="lingVCult",]
+domainOrder = domainOrder[order(domainOrder$mantelr),]$domain
+res.part3$domain = factor(res.part3$domain,
+                          levels = domainOrder)
+
+res.part3.plot = 
+  ggplot(res.part3, aes(y=mantelr,
+                        color=comparison,
+                        shape=comparison,
+                        x=domain)) +
+  geom_point(position = position_dodge(width=0.8)) +
+  geom_errorbar(aes(ymin=lower, ymax=upper),
+                position = position_dodge(width=0.8)) +
+  geom_vline(xintercept=seq(1.5, length(unique(res.part3$domain))-0.5, 1), 
+             lwd=1, colour="white") +
+  theme(panel.grid.major.y = element_blank(),
+        panel.grid.minor.y = element_blank(),
+        legend.position = "top")+
+  scale_color_manual(
+    breaks=c("lingVGeo","lingVHist","lingVCult"),
+    labels=c("Geographic proximity","Historical proximity","Cultural similarity"),
+    values=brewer.pal(3,"Set2")[c(2,1,3)],
+    name="Correlation between linguistic alignment and ...") +
+  scale_shape_manual(
+    breaks=c("lingVGeo","lingVHist","lingVCult"),
+    labels=c("Geographic proximity","Historical proximity","Cultural similarity"),
+    values=c(15,17,16),
+    name="Correlation between linguistic alignment and ...")+
+  ylab("Mantel r") +
+  xlab("") + 
+  coord_flip()
+
+
+pdf("../results/stats/wikipedia-main/LingAlignmentByDomains_vs_HistoricalAndGeographicalProximity.pdf",
+    height=6,width=10)
+res.part3.plot
+dev.off()
+
+
+# Apparent trade-off between Geo and Cult:
+
+geo.r = res.part3[res.part3$comparison=="lingVGeo",]$mantelr
+cult.r = res.part3[res.part3$comparison=="lingVCult",]$mantelr
+hist.r = res.part3[res.part3$comparison=="lingVHist",]$mantelr
+
+plot(geo.r,cult.r)
+cor.test(geo.r,cult.r)
+
+plot(hist.r,cult.r)
+cor.test(hist.r,cult.r)
