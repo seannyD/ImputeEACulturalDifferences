@@ -14,8 +14,8 @@ f = read.csv("../data/FAIR_langauges_glotto_xdid.csv", stringsAsFactors = F)
 t = read.nexus("../data/trees/bouckaert_et_al2012-d-place_2.NEXUS")
 treenames = read.csv("../data/trees/taxa.csv", stringsAsFactors = F)
 # These are not necessarily the right glottocode, but they do link the right data
-treenames[treenames$taxon=="Albanian_G",]$glottocode = "alba1267"
-treenames[treenames$taxon=="Greek_Mod",]$glottocode = "gree1276"
+treenames[treenames$taxon=="Albanian_G",]$glottocode = "gheg1238"
+treenames[treenames$taxon=="Greek_Mod",]$glottocode = "mode1248"
 
 # convert tip labels to glotto codes
 t$tip.label = treenames[match(t$tip.label,treenames$taxon),]$glottocode
@@ -28,7 +28,7 @@ t = drop.tip(t,t$tip.label[!t$tip.label %in% keepTip])
 
 t$tip.label = f[match(t$tip.label,f$glotto),]$Language2
 
-write.tree(t, "../data/trees/FAIR_tree_IndoEuropean.nwk")
+write.tree(t, "../data/trees/FAIR_tree_IndoEuropean.nwk",enco)
 t.dist = cophenetic(t)
 write.csv(t.dist, file="../data/trees/IndoEuropean_historical_distances.csv", row.names = T)
 

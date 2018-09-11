@@ -1,3 +1,7 @@
+# Part 1: Compare each linguistic domain to the overall cultural similarity
+# Part 2: Compare each linguistic domain to the cultural similarity of each original D-PLACE domain
+
+
 library(lme4)
 library(gplots)
 
@@ -23,8 +27,6 @@ cultisos = unique(c(cult$l1.iso2, cult$l2.iso2))
 ling.dom = read.csv(
   lingDistancesByDomainFile, 
   stringsAsFactors = F)
-
-ling.dom = ling.dom[!is.na(ling.dom$cult.dist),]
 
 ling.dom = ling.dom[(ling.dom$l1 %in% cultisos) & 
                       (ling.dom$l2 %in% cultisos),]
@@ -114,7 +116,11 @@ res = res[!is.na(res$r),]
 write.csv(res,file=paste0(outputFolder,"Cor_LingAlignmentByDomains_vs_OverallCulturalSimilarity.csv"))
 
 
+
+
 # Part 2: Compare each linguistic domain to the cultural similarity of each original D-PLACE domain
+
+
 
 # Load data
 cult.DP = read.csv("../results/EA_distances_DPlaceDomains/CultDistancesByDPlaceMainDomain.csv",stringsAsFactors = F)
@@ -164,6 +170,35 @@ for(lingDom in lingDomains){
     data = d.ling
   )
   m1 =  update(m0, ~.+cult.similarity.DP)
+  convergenceWarnings = paste(m1@optinfo$conv$lme4$messages,m0@optinfo$conv$lme4$messages,sep=";",collapse=";")
+  
+  if(nchar(convergenceWarnings)>0){
+    # Attempt to fix convergence warnings:
+    # Change optimiser
+    m0 = lmer(
+      rho.center ~ 1 +
+        comparison_count.center +
+        (1 + cult.similarity.DP | family.group) +
+        (1 + cult.similarity.DP | area.group),
+      data = d.ling, 
+      control=lmerControl(optimizer = "Nelder_Mead"))
+    m1 =  update(m0, ~.+cult.similarity.DP,
+                 control=lmerControl(optimizer = "Nelder_Mead"))
+    convergenceWarnings = paste(m1@optinfo$conv$lme4$messages,m0@optinfo$conv$lme4$messages,sep=";",collapse=";")
+  }
+  
+  if(nchar(convergenceWarnings)>0){
+    # 2nd attempt to fix convergence warnings
+    # Remove correlation between random intercept and slope
+    m0 = lmer(
+      rho.center ~ 1 +
+        comparison_count.center +
+        (1 + cult.similarity.DP || family.group) +
+        (1 + cult.similarity.DP || area.group),
+      data = d.ling)
+    m1 =  update(m0, ~.+cult.similarity.DP)
+    convergenceWarnings = paste(m1@optinfo$conv$lme4$messages,m0@optinfo$conv$lme4$messages,sep=";",collapse=";")
+  }
   
   modelComparison = anova(m0,m1)
   r = cor(d.ling$cult.distance.DP,
@@ -173,7 +208,7 @@ for(lingDom in lingDomains){
   df = modelComparison$`Chi Df`[2]
   p = modelComparison$`Pr(>Chisq)`[2]
   beta = summary(m1)$coef["cult.similarity.DP",1]
-  convergenceWarnings = paste(m1@optinfo$conv$lme4$messages,m0@optinfo$conv$lme4$messages,sep=";",collapse=";")
+  
   
   res2 = rbind(res2,
               c(lingDom, cultDom,convergenceWarnings,
@@ -197,30 +232,67 @@ write.csv(res2,file=paste0(outputFolder,"Cor_LingAlignmentByDomains_vs_DPlaceCul
 makeMat = function(stat){
   statx = res2[,stat]
   statx[nchar(res2$convergenceWarnings)>1] = NA
-  mat = matrix(statx,nrow=length(lingDomains),ncol=length(cultDomains))
+  mat = matrix(statx,ncol=length(lingDomains),nrow=length(cultDomains))
   rownames(mat) = cultDomains
   colnames(mat) = lingDomains
   return(mat)
 }
 
+mat.beta = makeMat("lmeModel.CultSimilarity.Beta")
+hm.beta = heatmap.2(mat.beta,col=cm.colors(20),
+                    margins=c(14,14),srtCol=45,trace="none",
+                    key.title="",key.par = list(mar=c(3,2,1,2)),
+                    key.xlab = "Beta",na.color = "gray",
+                    xlab = "Concepticon domains",
+                    ylab = "D-Place domains")
+
+
+
 mat.p = makeMat("lmeModel.CultSimilarity.p")
 signifColours = c("dark red","red",rep("blue",40))
 pdf(paste0(outputFolder,"LingAlignmentByDomains_vs_DPlaceCulturalDomains_ModelComparisonP.pdf"), width = 8.5, height = 8)
-heatmap.2(mat.p,col = signifColours,
+hm.p = heatmap.2(mat.p,col = signifColours,
           margins=c(14,14),srtCol=45,trace="none",
           key.title="",key.par = list(mar=c(3,2,1,2)),
           key.xlab = "Model comparison p",
           xlab = "Concepticon domains",
-          ylab = "D-Place domains")
+          ylab = "D-Place domains",
+          Rowv = hm.beta$rowDendrogram,
+          Colv = hm.beta$colDendrogram)
 dev.off()
+
 
 pdf(paste0(outputFolder,"LingAlignmentByDomains_vs_DPlaceCulturalDomains_Beta.pdf"), 
     width = 8.5, height = 8)
-mat.beta = makeMat("lmeModel.CultSimilarity.Beta")
 heatmap.2(mat.beta,col=cm.colors(20),
           margins=c(14,14),srtCol=45,trace="none",
           key.title="",key.par = list(mar=c(3,2,1,2)),
           key.xlab = "Beta",na.color = "gray",
           xlab = "Concepticon domains",
           ylab = "D-Place domains")
+x = expand.grid(
+  seq(0.25,0.74, length.out=length(cultDomains)),
+  seq(0.22,0.725,length.out=length(lingDomains)))
+nonSig = t(hm.p$carpet)>0.05
+points(x[,2],x[,1],
+       pch=c(NA,4)[as.numeric(nonSig)+1])
 dev.off()
+
+mat.beta2 = mat.beta[hm.beta$rowInd,]
+mat.beta2 = mat.beta2[,hm.beta$colInd]
+mat.p2 = mat.p[hm.beta$rowInd,]
+mat.p2 = mat.p2[,hm.beta$colInd]
+
+library(ellipse)
+library(RColorBrewer)
+
+# Build a Pannel of 100 colors with Rcolor Brewer
+my_colors <- brewer.pal(4, "Spectral")
+
+redCols = brewer.pal(9,"YlOrRd")[9:5]
+blueCols = brewer.pal(9,"YlGnBu")[2:9]
+blueCols = colorRampPalette(blueCols)(95)
+my_colors = c(redCols,blueCols)
+
+# TODO: The colours aren't mapping properly?
+plotcorr(mat.beta2/0.5, col=my_colors[mat.p2*100] , mar=c(1,1,1,1)  )

@@ -15,7 +15,7 @@ eas = read.csv("../data/dplace-data-1.0/csv/EA_societies.csv", stringsAsFactors 
 eav = read.csv("../data/dplace-data-1.0/csv/EAVariableList.csv", stringsAsFactors = F)
 
 # Load language data
-l = read.csv("../data/FAIR_langauges_glotto_xdid.csv", stringsAsFactors = F)
+l = read.csv("../data/FAIR_langauges_glotto_xdid.csv", stringsAsFactors = F,encoding = "UTF-8",fileEncoding = "UTF-8")
 
 makeDistanceMatrix = function(filename, variables=c()){
   # Load imputed Ethnogrpahic Atlas data
@@ -120,6 +120,23 @@ hc = hclust(dist(dist.m))
 pdf("../results/CulturalDistanceTrees/CulturalDistance.pdf", width=20, height=10)
 plot(hc)
 dev.off()
+
+
+#################
+# Make geographic distances
+g = read.csv("../data/glottolog-languoid.csv/languoid.csv",stringsAsFactors = F,encoding = "UTF-8",fileEncoding = "UTF-8")
+
+l$lat = g[match(l$glotto,g$id),]$latitude
+l$long = g[match(l$glotto,g$id),]$longitude
+
+library(fields)
+
+geoDist = fields::rdist.earth(l[,c("long","lat")],miles=F)
+rownames(geoDist) = l$Language
+colnames(geoDist) = l$Language
+diag(geoDist) =0
+geoDist = geoDist[l$in.final.analysis,l$in.final.analysis]
+write.csv(geoDist,file="../data/GeographicDistances.csv",row.names = F,fileEncoding = "UTF-8")
 
 ####################################
 # Make sub-domain distance matrices according to the original D-PLACE domains:

@@ -1,0 +1,64 @@
+
+Graph page 10 : add main effect
+
+DONE.  Do analysis without kinship words.
+
+
+DONE: Predict specific linguistic domain from all of d-place.
+
+DONE: Analysis with overall d-place distances:
+	Check that all domains are being included
+	Did I skip some out at the compilation stage?
+
+DONE: Add geographic distance to Mantel test.
+
+Analysis: Compare each ling domain to a regression with:
+	-  Overall D-place distance
+	-  Phylogenetic distance
+	-  Geographic distance?
+	Prediction: domains that seem more "cultural" will have stronger link to D-PLACE
+
+Plots for the paper:
+	Splitstrees
+	
+Phylogenetic tree:
+	Come up with graph.
+	
+Example of actual differences in cult~ling correlation
+	e.g. "plough" in industrial/agricultural cultures	
+
+
+---
+
+Human similarity datasets:
+
+RELSIM/SIMLEX:
+	Average similarity scores is low, 
+	Not systematic about which pairs are sampled
+	FacebookMuse ~ correlations are there (weak), but not all langs (and not robust).
+
+SmallWorldOfWords
+	Dutch/English. Small correlations, but not robust.
+	
+Lexical Norms (concreteness, valence)
+	Some similarity
+	[send Indonesian and Dutch data?]
+
+Age of acquisition
+	Small correlation. 
+	
+Translation norms
+	Correlation
+	
+WordBank
+	Translations are aligned.
+	(on github)
+
+
+---
+
+Different versions:
+
+k = num neighbours 
+Unfiltered = no controls for how many language pairs appear, not taking out bot-constructed 
+
