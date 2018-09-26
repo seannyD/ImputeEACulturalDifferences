@@ -116,6 +116,9 @@ for(dom in unique(ling.dom$imputed_semantic_domain)){
 
 res = res[!is.na(res$r),]
 
+res$lmeModel.CultSimilarity.p.adjusted = 
+  p.adjust(res$lmeModel.CultSimilarity.p,method="bonferroni")
+
 write.csv(res,file=paste0(outputFolder,"Cor_LingAlignmentByDomains_vs_OverallCulturalSimilarity.csv"))
 
 
@@ -229,8 +232,12 @@ for(i in 4:ncol(res2)){
   res2[,i] = as.numeric(res2[,i])
 }
 
+res2$lmeModel.CultSimilarity.p.adjusted = 
+  p.adjust(res2$lmeModel.CultSimilarity.p,method = "bonferroni")
+
 write.csv(res2,file=paste0(outputFolder,"Cor_LingAlignmentByDomains_vs_DPlaceCulturalDomains.csv"))
 
+#res2 = read.csv(paste0(outputFolder,"Cor_LingAlignmentByDomains_vs_DPlaceCulturalDomains.csv"),stringsAsFactors = F)
 
 makeMat = function(stat){
   statx = res2[,stat]
@@ -249,9 +256,7 @@ hm.beta = heatmap.2(mat.beta,col=cm.colors(20),
                     xlab = "Concepticon domains",
                     ylab = "D-Place domains")
 
-
-
-mat.p = makeMat("lmeModel.CultSimilarity.p")
+mat.p = makeMat("lmeModel.CultSimilarity.p.adjusted")
 signifColours = c("dark red","red",rep("blue",40))
 pdf(paste0(outputFolder,"LingAlignmentByDomains_vs_DPlaceCulturalDomains_ModelComparisonP.pdf"), width = 8.5, height = 8)
 hm.p = heatmap.2(mat.p,col = signifColours,
@@ -276,9 +281,9 @@ heatmap.2(mat.beta,col=cm.colors(20),
 x = expand.grid(
   seq(0.25,0.74, length.out=length(cultDomains)),
   seq(0.22,0.725,length.out=length(lingDomains)))
-nonSig = t(hm.p$carpet)>0.05
+significant= t(hm.p$carpet)<0.05
 points(x[,2],x[,1],
-       pch=c(NA,4)[as.numeric(nonSig)+1])
+       pch=c(NA,8)[as.numeric(significant)+1])
 dev.off()
 
 mat.beta2 = mat.beta[hm.beta$rowInd,]
@@ -400,7 +405,14 @@ for(lingDom in unique(ling.dom$imputed_semantic_domain)){
 names(res.part3)[names(res.part3)=="llim.2.5%"] = "lower"
 names(res.part3)[names(res.part3)=="ulim.97.5%"] = "upper"
 
+res.part3$p.adjusted = NA
+for(comp in unique(res.part3$comparison)){
+  sel = res.part3$comparison==comp
+  res.part3$p.adjusted[sel] = p.adjust(res.part3$pval3[sel],method="bonferroni")
+}
+
 write.csv(res.part3,"../results/stats/wikipedia-main/Cor_LingAlignmentByDomains_vs_HistoricalAndGeographicalDistance.csv")
+
 
 # Flip historical and geographic distance measures:
 #res.part3[res.part3$comparison != "lingVCult",
@@ -421,6 +433,7 @@ res.part3.plot =
   geom_point(position = position_dodge(width=0.8)) +
   geom_errorbar(aes(ymin=lower, ymax=upper),
                 position = position_dodge(width=0.8)) +
+  #geom_hline(yintercept = 0,colour="gray") +
   geom_vline(xintercept=seq(1.5, length(unique(res.part3$domain))-0.5, 1), 
              lwd=1, colour="white") +
   theme(panel.grid.major.y = element_blank(),

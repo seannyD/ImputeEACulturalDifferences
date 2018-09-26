@@ -1,5 +1,5 @@
 
-Graph page 10 : add main effect
+DONE. Graph page 10 : add main effect
 
 DONE.  Do analysis without kinship words.
 

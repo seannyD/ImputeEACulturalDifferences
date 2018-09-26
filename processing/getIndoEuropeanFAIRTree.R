@@ -32,6 +32,8 @@ write.tree(t, "../data/trees/FAIR_tree_IndoEuropean.nwk",enco)
 t.dist = cophenetic(t)
 write.csv(t.dist, file="../data/trees/IndoEuropean_historical_distances.csv", row.names = T)
 
+tree
+
 # # Afro-Asiatic
 # t2 = read.nexus("../data/trees/Grollemund_summary.trees")
 # treenames2 = read.csv("../data/trees/Grollemund_taxa.csv", stringsAsFactors = F)
