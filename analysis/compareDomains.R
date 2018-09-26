@@ -400,7 +400,7 @@ for(lingDom in unique(ling.dom$imputed_semantic_domain)){
 names(res.part3)[names(res.part3)=="llim.2.5%"] = "lower"
 names(res.part3)[names(res.part3)=="ulim.97.5%"] = "upper"
 
-write.csv("../results/stats/wikipedia-main/Cor_LingAlignmentByDomains_vs_HistoricalAndGeographicalDistance.csv")
+write.csv(res.part3,"../results/stats/wikipedia-main/Cor_LingAlignmentByDomains_vs_HistoricalAndGeographicalDistance.csv")
 
 # Flip historical and geographic distance measures:
 #res.part3[res.part3$comparison != "lingVCult",

@@ -31,16 +31,68 @@ makeSplitstree(dists, "../results/splitstree/CulturalDistances.nex")
 
 l = read.csv("../data/FAIR_langauges_glotto_xdid.csv", stringsAsFactors = F)
 
-ead = read.csv("../data/dplace-data-1.0/csv/EA_data.csv", stringsAsFactors = F)
-ead.socid = unique(ead$soc_id)
 
-final.langs = l[l$in.final.analysis & !is.na(l$soc.id) & l$soc.id %in% ead.socid,]$Language2
+cult = read.csv("../results/EA_distances/CulturalDistances_Long.csv", stringsAsFactors = F)
+names(cult) = c("l1","l2","cult.dist")
+cultLangs = unique(c(cult$Var1,cult$Var2))
+
+l = read.csv("../data/FAIR_langauges_glotto_xdid.csv", stringsAsFactors = F)
+g = read.csv("../data/glottolog-languoid.csv/languoid.csv", stringsAsFactors = F)
+l$family = g[match(l$glotto,g$id),]$family_pk
+l$family = g[match(l$family,g$pk),]$name
+
+lingDistancesFile = "../data/FAIR/nel-wiki-k100-alignments-by-language-pair.csv"
+ling = read.csv(lingDistancesFile, stringsAsFactors = F)
+
+ling = ling[!(ling$l1=="se" || ling$l2 == "se"),]
+ling = ling[!(ling$l1=="sl" || ling$l2 == "sl"),]
+
+cult$l1.iso2 = l[match(cult$l1,l$Language2),]$iso2
+cult$l2.iso2 = l[match(cult$l2,l$Language2),]$iso2
+
+fairisos = unique(c(ling$l1,ling$l2))
+cultisos = unique(c(cult$l1.iso2, cult$l2.iso2))
+
+cult = cult[(cult$l1.iso2 %in% fairisos) & (cult$l2.iso2 %in% fairisos),]
+ling = ling[(ling$l1 %in% cultisos) & (ling$l2 %in% cultisos),]
+
+final.langs = l[l$iso2 %in% unique(c(ling$l1,ling$l2)),]$Language2
 
 final.langs = final.langs[final.langs %in% rownames(dists)]
 
 dists15 = dists[final.langs,final.langs]
 
 makeSplitstree(dists15, "../results/splitstree/CulturalDistances_Final15.nex")
+
+
+# Add colours:
+nodeColours =read.csv("../results/splitstree/nodeColours.txt",sep="\t",stringsAsFactors = F)
+areas = l[match(gsub("'","",nodeColours$L),l$Language),]$family
+
+library(RColorBrewer)
+colours = brewer.pal(length(unique(areas)),"Set1")
+names(colours) = unique(areas)
+areas.colours = colours[areas]
+areas.colours.text = apply(col2rgb(areas.colours),2,paste,collapse=" ")
+
+vlabels = data.frame(
+  num = 1:ncol(dists15),
+  L= paste0("'",nodeColours$L,"'"),
+  lc = paste0("lc=",areas.colours.text)
+)
+vlables.text = apply(vlabels,1,paste,collapse=" ")
+
+vlables.text = paste0(
+  "\nVLABELS\n",
+  paste(vlables.text,collapse=",\n"),
+  "\n;"
+)
+
+plot(1:2,type='n',xaxt='n',yaxt='n',bty='n',xlab='',ylab='')
+legend(1,2,legend=names(colours),text.col=colours)
+
+cat(vlables.text,file="../results/splitstree/nodeColours2.txt",append = F)
+
 
 ####
 # Kinship, all cultures and variables

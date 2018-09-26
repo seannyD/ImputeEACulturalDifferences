@@ -214,7 +214,7 @@ gx = gx$plot + coord_cartesian(ylim=c(-0.05,0.5),
                           xlim=c(0.15,0.85)) +
   xlab("Cultural similarity") +
   ylab("Semantic alignment") +
-  ggtitle("")
+  ggtitle("") 
 gx
 pdf(paste0("../results/stats/",datasetName,"/CulturalDistance_Rho_Graph.pdf"),
     height=2.5, width=2.5)
@@ -232,27 +232,33 @@ dx$x = dx$x * cdc.s + cdc.c
 dx$y = dx$y * 
   attr(ling$rho.center,"scaled:scale") +
   attr(ling$rho.center,"scaled:center")
+
 ggplot(dx,aes(x,y)) +
   geom_point(data=ling, 
-             mapping=aes(x=as.numeric(cult.dist),
-                         y=as.numeric(local_alignment))) +
+   mapping=aes(x=as.numeric(cult.dist),
+               y=as.numeric(local_alignment))) +
+  stat_smooth(data=gx$data,method="lm",colour="black",
+              se=F)+
   geom_line(mapping = aes(colour=grp)) +
   xlab("Cultural similarity")+
   ylab("Linguistic similarity") +
   ggtitle("Language family pair random effects") +
-  coord_cartesian(ylim=c(0.1,0.6),
+  coord_cartesian(ylim=c(0.0,0.6),
                   xlim=c(0.2,0.8)) + 
-  theme(legend.position = "none")
+  theme(legend.position = "none") 
 
 dx = px$plot[[2]]$data
 dx$x = dx$x * cdc.s + cdc.c
 dx$y = dx$y * 
   attr(ling$rho.center,"scaled:scale") +
   attr(ling$rho.center,"scaled:center")
+
 ggplot(dx,aes(x,y)) +
   geom_point(data=ling, 
              mapping=aes(x=as.numeric(cult.dist),
                          y=as.numeric(local_alignment))) +
+  stat_smooth(data=gx$data,method="lm",colour="black",
+              se=F)+
   geom_line(mapping = aes(colour=grp)) +
   xlab("Cultural similarity")+
   ylab("Linguistic similarity") +
@@ -643,6 +649,21 @@ plot(as.dist(ling.m2),as.dist(hist.m2),
      ylab="Historical distance")
 ```
 
+```{r warning=F,echo=F}
+t = read.nexus("../data/trees/bouckaert_et_al2012-d-place_2.NEXUS")
+treenames = read.csv("../data/trees/taxa.csv", stringsAsFactors = F)
+# These are not necessarily the right glottocode, but they do link the right data
+treenames[treenames$taxon=="Albanian_G",]$glottocode = "gheg1238"
+treenames[treenames$taxon=="Greek_Mod",]$glottocode = "mode1248"
+
+# convert tip labels to glotto codes
+t$tip.label = treenames[match(t$tip.label,treenames$taxon),]$glottocode
+t2 = drop.tip(t,t$tip.label[!t$tip.label %in% l[match(in.analysis,l$Language),]$glotto])
+t2$tip.label = l[match(t2$tip.label,l$glotto),]$Language
+plot(t2)
+```
+
+\newpage
 
 ## Tests
 

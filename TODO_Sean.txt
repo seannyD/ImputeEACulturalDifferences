@@ -12,7 +12,7 @@ DONE: Analysis with overall d-place distances:
 
 DONE: Add geographic distance to Mantel test.
 
-Analysis: Compare each ling domain to a regression with:
+DONE: Analysis: Compare each ling domain to a regression with:
 	-  Overall D-place distance
 	-  Phylogenetic distance
 	-  Geographic distance?
