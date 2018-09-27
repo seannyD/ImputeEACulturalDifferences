@@ -22,7 +22,7 @@ Plots for the paper:
 	Splitstrees
 	
 Phylogenetic tree:
-	Come up with graph.
+	Check "Armenian" and "Czech" are included twice?
 	
 Example of actual differences in cult~ling correlation
 	e.g. "plough" in industrial/agricultural cultures	

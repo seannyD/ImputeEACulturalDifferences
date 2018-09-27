@@ -29,9 +29,6 @@ makeSplitstree(dists, "../results/splitstree/CulturalDistances.nex")
 
 ### Just for langs in final analysis
 
-l = read.csv("../data/FAIR_langauges_glotto_xdid.csv", stringsAsFactors = F)
-
-
 cult = read.csv("../results/EA_distances/CulturalDistances_Long.csv", stringsAsFactors = F)
 names(cult) = c("l1","l2","cult.dist")
 cultLangs = unique(c(cult$Var1,cult$Var2))
@@ -92,6 +89,22 @@ plot(1:2,type='n',xaxt='n',yaxt='n',bty='n',xlab='',ylab='')
 legend(1,2,legend=names(colours),text.col=colours)
 
 cat(vlables.text,file="../results/splitstree/nodeColours2.txt",append = F)
+
+
+####
+# Splitstree for linguistic distances
+library(igraph)
+
+grph <- graph.data.frame(ling[,c("l1",'l2','local_alignment')], directed=FALSE)
+# add value as a weight attribute
+ling.m = get.adjacency(grph, attr="local_alignment", sparse=FALSE)
+rownames(ling.m) = l[match(rownames(ling.m),l$iso2),]$Language2
+colnames(ling.m) = l[match(colnames(ling.m),l$iso2),]$Language2
+ling.m = ling.m[final.langs,final.langs]
+# flip to distance
+ling.m = max(ling.m)-ling.m
+ling.m = ling.m/max(ling.m)
+makeSplitstree(ling.m, "../results/splitstree/LinguisticDistances.nex")
 
 
 ####
