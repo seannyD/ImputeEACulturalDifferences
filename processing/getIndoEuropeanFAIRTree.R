@@ -28,11 +28,14 @@ t = drop.tip(t,t$tip.label[!t$tip.label %in% keepTip])
 
 t$tip.label = f[match(t$tip.label,f$glotto),]$Language2
 
-write.tree(t, "../data/trees/FAIR_tree_IndoEuropean.nwk",enco)
+write.tree(t, "../data/trees/FAIR_tree_IndoEuropean.nwk")
 t.dist = cophenetic(t)
 write.csv(t.dist, file="../data/trees/IndoEuropean_historical_distances.csv", row.names = T)
 
-tree
+
+t.dist.long = melt(t.dist)
+write.csv(dist.long, file="../data/trees/IndoEuropean_historical_distances_long.csv", row.names = F)
+
 
 # # Afro-Asiatic
 # t2 = read.nexus("../data/trees/Grollemund_summary.trees")

@@ -303,3 +303,6 @@ write.csv(c2ea.for.printing,
 # colnames(distx.m)= eadx.full$soc_id
 # 
 # write.csv(distx.m, "../results/EA_distances/Kinship_AllSocieties.csv")
+
+
+
