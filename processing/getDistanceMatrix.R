@@ -17,12 +17,13 @@ eav = read.csv("../data/dplace-data-1.0/csv/EAVariableList.csv", stringsAsFactor
 # Load language data
 l = read.csv("../data/FAIR_langauges_glotto_xdid.csv", stringsAsFactors = F,encoding = "UTF-8",fileEncoding = "UTF-8")
 
-makeDistanceMatrix = function(filename, variables=c()){
+makeDistanceMatrix = function(filename, variables=c(),keepOnlyFAIRLangs=T){
   # Load imputed Ethnogrpahic Atlas data
   eadx = read.csv(filename, stringsAsFactors = F)
-  
-  # Keep only FAIR langauges
-  eadx = eadx[eadx$soc_id %in% l$soc.id,]
+  if(keepOnlyFAIRLangs){
+    # Keep only FAIR langauges
+    eadx = eadx[eadx$soc_id %in% l$soc.id,]
+  }
   
   # Remove family and area data
   eadx = eadx[,!names(eadx) %in% c("Family","autotyp.area")]
@@ -46,8 +47,16 @@ makeDistanceMatrix = function(filename, variables=c()){
   eadx$soc_id = as.character(eadx$soc_id)
   
   # names of languages according to Facebook
-  nx = l[match(eadx$soc_id,l$soc.id),]$Language
-  rownames(eadx) = nx
+  if(keepOnlyFAIRLangs){
+    nx = l[match(eadx$soc_id,l$soc.id),]$Language
+    rownames(eadx) = nx
+  } else{
+    nx = xdid2lang[match(eadx$soc_id,xdid2lang$soc_id),]$DialectLanguageGlottocode
+    nx[duplicated(nx)] = NA
+    eadx = eadx[!is.na(nx),]
+    nx = nx[!is.na(nx)]
+    rownames(eadx) = nx
+  }
   
   # Make distance matrix from factors
   #dist = dist(eadx[,2:ncol(eadx)])
@@ -59,6 +68,8 @@ makeDistanceMatrix = function(filename, variables=c()){
   colnames(dist.m) = nx
   return(dist.m)
 }
+
+###############
 
 files = list.files("../data/EA_imputed/completeDataframes/","*.csv")
 dists = list()
@@ -120,6 +131,27 @@ hc = hclust(dist(dist.m))
 pdf("../results/CulturalDistanceTrees/CulturalDistance.pdf", width=20, height=10)
 plot(hc)
 dev.off()
+
+###########
+# Distances for all langs in D-place
+
+xdid2lang = read.csv("../data/dplace-data-1.0/csv/xd_id_to_language.csv",stringsAsFactors = F,fileEncoding = "utf-8",encoding = 'utf-8')
+socid2xdid = read.csv("../data/dplace-data-1.0/csv/EA_societies.csv",stringsAsFactors = F,fileEncoding = "utf-8",encoding = 'utf-8')
+
+xdid2lang$soc_id = socid2xdid[match(xdid2lang$xd_id,socid2xdid$xd_id),]$soc_id
+
+files = list.files("../data/EA_imputed/completeDataframes/","*.csv")
+distsALL = list()
+for(i in 1:length(files)){
+  print(files[i])
+  distsALL[[i]] = makeDistanceMatrix(paste0("../data/EA_imputed/completeDataframes/",files[i]), keepOnlyFAIRLangs = F)
+}
+
+distALL.m = Reduce('+', distsALL)
+distALL.m = distALL.m / length(distsALL)
+
+distALL.long = melt(distALL.m)
+write.csv(distALL.long, file="../results/EA_distances/CulturalDistances_AllDPlaceLangs_Long.csv", row.names = F)
 
 
 #################
