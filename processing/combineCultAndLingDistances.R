@@ -46,3 +46,11 @@ combineCultAndLingDistances = function(inputFile,outputFile){
 combineCultAndLingDistances(
   "../data/FAIR/nel-wiki-k100-alignments-by-language-pair-and-domain.csv",
   "../results/EA_distances/nel-wiki-k100_with_ling.csv")
+
+combineCultAndLingDistances(
+  "../data/FAIR/nel-k100-cc-alignments-by-language-pair-and-domain.csv",
+  "../results/EA_distances/nel-k100-cc_with_ling.csv")
+
+combineCultAndLingDistances(
+  "../data/FAIR/nel-k100-subs-alignments-by-language-pair-and-domain.csv",
+  "../results/EA_distances/nel-k100-subs_with_ling.csv")

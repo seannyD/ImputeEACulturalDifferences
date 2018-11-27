@@ -32,9 +32,9 @@ write.tree(t, "../data/trees/FAIR_tree_IndoEuropean.nwk")
 t.dist = cophenetic(t)
 write.csv(t.dist, file="../data/trees/IndoEuropean_historical_distances.csv", row.names = T)
 
-
+library(reshape2)
 t.dist.long = melt(t.dist)
-write.csv(dist.long, file="../data/trees/IndoEuropean_historical_distances_long.csv", row.names = F)
+write.csv(t.dist.long, file="../data/trees/IndoEuropean_historical_distances_long.csv", row.names = F)
 
 
 # # Afro-Asiatic
