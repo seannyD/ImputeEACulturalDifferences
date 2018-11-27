@@ -500,8 +500,6 @@ The code that produce the results of this section can be found in `analysis/comp
 
 We fit a mixed effects model to compare the linguistic similarity in a given domain to the overall cultural distance. The linguistic similarity for the given domain is the dependent variable.  There are random intercepts for language family and area pairs, and random slopes for overall cultural similarity by language family and by area.  The `comparison_count` variable is added as a fixed effect. This null model is compared to a model with an additional fixed effect for the overall cultural similairty.
 
-There are 21 linguistic domains with enough data. All correlations are positive and 16 are significant at the 0.05 level.
-
 The full results are in the file:
 
 `../results/stats/cc/Cor_LingAlignmentByDomains_vs_OverallCulturalSimilarity.csv`
