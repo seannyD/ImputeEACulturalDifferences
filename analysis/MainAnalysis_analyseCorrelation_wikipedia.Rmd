@@ -344,6 +344,49 @@ summary(m1NK)
 
 \newpage
 
+##  MRM
+
+Use multiple regression on distance matrices to do the same test as above.  Here, the distance between two languages in terms of family is just whether they are part of the same family.  Note that this does not take into account particular values for particular families, nor the rnadom slopes within families.
+
+```{r}
+# Use graph method to make distance matrix
+grph <- graph.data.frame(ling[,c("l1",'l2','local_alignment')], directed=FALSE)
+# add value as a weight attribute
+ling.m = get.adjacency(grph, attr="local_alignment", sparse=FALSE)
+rownames(ling.m) = l[match(rownames(ling.m),l$iso2),]$Language2
+colnames(ling.m) = l[match(colnames(ling.m),l$iso2),]$Language2
+# Same for comparison_count.center
+grph <- graph.data.frame(ling[,c("l1",'l2','comparison_count')], directed=FALSE)
+# add value as a weight attribute
+cc.m = get.adjacency(grph, attr="comparison_count", sparse=FALSE)
+rownames(cc.m) = l[match(rownames(cc.m),l$iso2),]$Language2
+colnames(cc.m) = l[match(colnames(cc.m),l$iso2),]$Language2
+
+cult.m = read.csv("../results/EA_distances/CulturalDistances.csv", stringsAsFactors = F)
+rownames(cult.m) = cult.m[,1]
+cult.m = cult.m[,2:ncol(cult.m)]
+cult.m = as.matrix(cult.m)
+# Flip cultural value to distance
+cult.m = 1-cult.m
+mx = match(rownames(ling.m),rownames(cult.m))
+cult.m = cult.m[mx,mx]
+
+family.matrix = l[match(rownames(ling.m),l$Language),]$family
+family.matrix = outer(family.matrix,family.matrix,"!=") *1
+
+# center and scale
+ling.m =  matrix(scale(as.vector(ling.m)),nrow=nrow(ling.m))
+cc.m =  matrix(scale(as.vector(cc.m)),nrow=nrow(cc.m))
+cult.m = matrix(scale(as.vector(cult.m)),nrow=nrow(cult.m))
+
+ecodist::MRM(as.dist(ling.m) ~
+               as.dist(cult.m) + as.dist(family.matrix) + 
+               as.dist(cc.m),nperm = 10000)
+
+```
+
+\newpage
+
 # Mantel tests
 
 Read the historical distances for Indo-European, based on the phylogenetic distances.
@@ -396,8 +439,6 @@ geoDist.m = log(geoDist.m)
 geoDist.m[is.infinite(geoDist.m)] = 0
 rownames(geoDist.m) = colnames(geoDist.m)
 ```
-
-
 
 Match the distance matrices
 
@@ -492,6 +533,18 @@ ecodist::mantel(as.dist(ling.m2)~
                 nperm = 100000)
 ```
 
+## MRM
+
+Perform the main test, but using multiple regression on distance matrices (MRM).
+
+Lichstein, J. W. (2007). Multiple regression on distance matrices: a multivariate spatial analysis tool. Plant Ecology, 188(2), 117-131.
+
+```{r}
+ecodist::MRM(as.dist(ling.m2)~
+                  as.dist(cult.m2) + 
+                  as.dist(hist.m2) +
+                  as.dist(geo.m2), nperm=10000)
+```
 
 
 \newpage
