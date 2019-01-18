@@ -188,7 +188,8 @@ m1 = lmer(
     (1 + cult.dist.center | area.group),
   data = ling
 )
-anova(m0,m0.5,m1)
+an1 = anova(m0,m0.5,m1)
+an1
 ```
 
 Cultural similarity is significantly correlated with Linguistic similarity.  Here are the model estimates:
@@ -196,6 +197,18 @@ Cultural similarity is significantly correlated with Linguistic similarity.  Her
 ```{r}
 summary(m1)
 ```
+
+```{r echo=F,message=F,warning=F}
+stat0 = sprintf("$\\beta$= %s, $\\chi^2$(%s)= %s, $p$=%s",
+  signif(fixef(m1)[3],2),
+  an1$`Chi Df`[3],
+  round(an1$Chisq[3],2),
+  format(signif(an1$`Pr(>Chisq)`[3],1),scientific=F))
+
+cat(stat0,file="../results/stats/tex/MEM_CulturalVsLinguistic.tex")
+
+```
+
 
 Plot the estimates, rescaling the variables back to the original units:
 
@@ -496,6 +509,8 @@ The results of the test list the following measures:
 set.seed(1498)
 ```
 
+Run tests between each pair of measures.
+
 ```{r}
 distms = list("Cultrual"= cult.m2,
               "Linguistic" = ling.m2,
@@ -503,11 +518,22 @@ distms = list("Cultrual"= cult.m2,
               "Geographic" = geo.m2)
 for(i in 1:3){
   for(j in (i+1):4){
+    var1 = names(distms)[i]
+    var2 = names(distms)[j]
     print(paste("Correlation between",
-                names(distms)[i],"and",names(distms)[j]))
-    print(ecodist::mantel(as.dist(distms[[i]]) ~
+                var1,"and",var2))
+    stat = ecodist::mantel(as.dist(distms[[i]]) ~
                 as.dist(distms[[j]]),
-                nperm = 100000))
+                nperm = 100000)
+    print(stat)
+    stat = round(stat,2)
+    stat2 = sprintf("$r$ = %s[%s,%s], one-tailed $p$ = %s",
+      stat[1],
+      stat[5],
+      stat[6],
+      min(c(stat[2],stat[3])))
+    cat(stat2,file=
+          paste0("../results/stats/tex/Mantel",var1,"Vs",var2,"Distance.tex"))
   }
 }
 ```
@@ -526,12 +552,26 @@ ecodist::mantel(as.dist(ling.m2)~
 *Main Test*: Run a mantel test comparing the Linguistic alignment to the cultural similarity, controlling for the historical distance and geographic distance between languages:
 
 ```{r}
-ecodist::mantel(as.dist(ling.m2)~
+mainMantel = ecodist::mantel(as.dist(ling.m2)~
                   as.dist(cult.m2) + 
                   as.dist(hist.m2) +
                   as.dist(geo.m2),
                 nperm = 100000)
+mainMantel
 ```
+
+```{r}
+mainMantel = round(mainMantel,2)
+mainMantel2 = sprintf("$r$ = %s[%s,%s], one-tailed $p$ = %s",
+        mainMantel[1],
+        mainMantel[5],
+        mainMantel[6],
+        mainMantel[2]
+      )
+cat(mainMantel2,
+    file="../results/stats/tex/MantelCultrualVsLinguisticDistance_Partial.tex")
+```
+
 
 ## MRM
 
@@ -540,10 +580,19 @@ Perform the main test, but using multiple regression on distance matrices (MRM).
 Lichstein, J. W. (2007). Multiple regression on distance matrices: a multivariate spatial analysis tool. Plant Ecology, 188(2), 117-131.
 
 ```{r}
-ecodist::MRM(as.dist(ling.m2)~
+mainMRM = ecodist::MRM(as.dist(ling.m2)~
                   as.dist(cult.m2) + 
                   as.dist(hist.m2) +
                   as.dist(geo.m2), nperm=10000)
+mainMRM
+```
+
+```{r}
+mainMRM2 = sprintf("$\\beta= $%s, $p=$%s",
+                   round(mainMRM$coef[2,1],2),
+                   round(mainMRM$coef[2,2],2))
+cat(mainMRM2,
+    file="../results/stats/tex/MRMCultrualVsLinguisticDistance_Partial.tex")
 ```
 
 
