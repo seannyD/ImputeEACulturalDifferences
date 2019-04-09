@@ -1,0 +1,695 @@
+---
+title: "Semantic alignments in number words"
+author: "Bill Thompson, Seán Roberts & Gary Lupyan"
+header-includes: 
+  - \usepackage[utf8]{inputenc}
+output: 
+  pdf_document:
+    toc: true
+---
+
+```{r echo=F,eval=F}
+try(setwd("~/Documents/Bristol/word2vec/word2vec_DPLACE/analysis/numbers/"))
+```
+
+# Introduction
+
+What predicts the semantic alignment of number words?
+
+Although translations may be more direct for number words, there are still differences between languages regarding their semantic associations. Numerals in 16 languages were analysed using binary decision trees to find coherent clusters then a Generalised Additive Model to explain differences in alignment.
+
+## Variables:
+
+-  *l1*: Iso2 code for language 1
+-  *l2*: Iso2 code for language 2
+-  *wordform_l1*: Orthogaphic word form for language 1
+-  *wordform_l2*: Orthogaphic word form for language 2
+-  *local_alignment*: Local semantic alignment
+-  *global_alignment*: Global semantic alignment
+-  *freq_l1*: Frequency of orthographic form in l1 
+-  *freq_l2*: Frequency of orthographic form in l1 
+-  *neighbour_overlap*: Number of neighbours in common
+-  *global_density_l1*: Density
+-  *global_density_l2*: Density
+-  *local_density_l1*: Density
+-  *local_density_l2*: Density
+-  *editdistance*: Edit distance between orthographic forms
+-  *k*: Parameter for number of neighbours (constant at k=100).
+-  *n*: Number of possible comparisons
+-  *number*: Number concept
+-  *number_numeric*: Numeric value of number
+-  *name_l1*: Name of langauge l1
+-  *family_l1*: Family of language l1
+-  *name_l2*: Name of langauge l2
+-  *family_l2*: Family of language l2
+-  *same.family*: Compared langauges are part of same family?
+-  *hist.dist*: Historical distance according to phylogenetic tree.
+-  *l1_typology*: Number line typology according to Calude & Verkerk (2016)
+-  *l2_typology*: : Number line typology according to Calude & Verkerk (2016)
+-  *sameNumeralTypology*: Comparison of number line typology.
+-  *seven*
+-  *homophone*: Word has a homophone in the North Euralex database.
+-  *freqDiff*: Difference in orthographic frequency (absolute, log scale)
+
+## A note on EDF values and random effects in Generalised Additive Models
+
+(This note taken from Monaghan & Roberts (2019) Cognitive influences in language evolution: Psycholinguistic predictors of loan word borrowing. _Cognition_, 186, 147-158.)
+
+The Estimated Degrees of Freedom (EDF) is an indication of how non-linear a smooth term is (higher = less linear). It is intended as a diagnostic measure of the shape of the curve, rather than a value used in estimating significance. The EDF is not the same as a simple polynomial curve’s degree. Instead of a single polynomial curve, each smooth term is a collection of underlying basis functions (simpler curves). When each basis function is weighted by a coefficient, they add up to fit the data. The model attempts to find a collection of basis functions and weighting coefficients that add up to fit the data. Smaller collections of basis functions (simpler models) are preferred and larger (more complex) collections are penalised.
+
+When the model converges on a solution, each smooth term is a collection of simpler curves. Each curve might have a polynomial degree, but it is also useful to have an estimate of the linearity/non-linearity of the whole smooth term.  This is what the EDF provides: an EDF of 1 indicates a linear relationship, and higher values indicate more non-linear relationship. The definition of EDF in the implementaion we use is described in Wood (2008):
+
+> "Associated with each smooth function is one or more measures of function 'wiggliness' $\beta_T^j \tilde{S}_j \beta_j$ where $\tilde{S}_j$
+is a matrix of known coefficients. Typically the wiggliness measure evaluates something like the univariate spline penalty."
+
+That is, an EDF value is a combination of non-linearity measures of the basis functions, weighted by the weighting coefficient of each basis function. So, in general, a curve with an EDF of around 2 will look like a quadratic curve, and an EDF of around 3 will look like a cubic curve. However, this does not have to be the case: a smooth term could have a strong linear term, and a very weak non-linear term. The EDF captures this possibility as a continuous value. The simplest way to actually assess the smooth term is to plot it.
+
+Random effects in the GAM implementation we use are treated just like a smooth term with the identity matrix as the penalty coefficient matrix. When entering a language pair as a random (intercept) effect, coefficients are created for each pair, modelled as independent and identically distributed normal random variables. The values are defined as discrete points along a smooth function. So, just like in a mixed effects model, the predicted alignment can be adjusted by a random intercept (the coefficients), e.g. the model can represent the alignment between English and French as higher overall, and the alignment between English and Bulgarian as being slightly lower etc. Stronger differences between levels of the random effect would need be represented by more complex functions, which would be penalised (similar to how a linear mixed effect model penalises random effect coefficient estimates which deviate from a normal distribution). The EDF value for the random effects relates to the ‘wiggliness’ of these coefficients when plotted in a regular space. This makes the EDF difficult to interpret.  A random effect where there were no differences between levels would have an EDF of 1 (a flat line), but it would also be 1 when there were consistent distances between each level. So a high EDF would indicate something like an imbalance in the distribution of coefficients, e.g. a range of values that does not fit a normal distribution. In fact, there are several language pairs with lower alignment (pairs from different language families), and few with very high alignment (possibly a ceiling effect).
+
+\newpage
+
+# Load libraries, graphing theme
+```{r message=FALSE, warning=FALSE}
+library(mgcv) # for gam
+library(lmtest) # for model comparison
+source("GAM_derivaties.R") # for derivitives plot
+library(lme4)
+library(tidyverse)
+#library(langcog)
+library(boot)
+library(ggplot2)
+library(lazyeval)
+library(data.table)
+library(MuMIn)
+library(REEMtree)
+library(rpart)
+library(rpart.plot)
+library(gridExtra)
+library(grid)
+library(gridBase)
+
+
+myThemeBasic =   
+  theme_bw()+
+  theme(panel.grid.minor=element_blank(), 
+        panel.grid.major=element_blank(), 
+        panel.background=element_blank())+
+  theme(axis.text.x=element_text(size=13), 
+        axis.text.y=element_text(size=13), 
+        axis.title.x=element_text(size=12), 
+        axis.title.y=element_text(size=12))+
+  theme(legend.background = element_rect(fill="transparent"))+
+  theme(legend.text = element_text(size=13))+
+  theme(legend.title = element_text(size=13))+
+  theme(axis.title.y=element_text(vjust=0.9,size=20))+
+  theme(axis.title.x=element_text(vjust=0.9,size=20))+
+  theme(axis.title.y=element_text(vjust=0))+
+  theme(axis.title.x=element_text(vjust=0))
+
+```
+
+# Load data
+```{r warning=F}
+PATH <- "../../data/numbers"
+numbers <- read.csv(file.path(PATH,"number-alignments.csv"),
+                    encoding = "UTF-8",fileEncoding = "UTF-8") %>%
+	left_join(read.csv(file.path(PATH,"word_to_number.csv")),by=c("Number"="number"))
+
+data.table::setnames(numbers,tolower(names(numbers))) #lowercase column names for consistency
+
+language_info <- read.csv("../../data/FAIR_langauges_glotto_xdid.csv",
+                          encoding = "UTF-8",fileEncoding = "UTF-8")
+
+numbers <- left_join(numbers,select(language_info,Language,family,iso2),by=c("l1"="iso2"))
+
+numbers <- numbers %>% rename(name_l1=Language,family_l1=family)
+
+
+numbers <- left_join(numbers,select(language_info,Language,family,iso2),by=c("l2"="iso2")) 
+
+numbers <- numbers %>% rename(name_l2=Language,family_l2=family)
+
+irreg_in_danish = c(50,60,70,80,90)
+numbers <- numbers %>% mutate(
+  same.family = family_l1==family_l2,
+	is_danish = l1=="da" | l2=="da",
+	is_single = (number_numeric < 10),
+	is_decade = (number_numeric < 100 & number_numeric %% 10 ==0),
+	is_hundred = (number_numeric == 100),
+	is_thousand = (number_numeric == 1000),
+	irreg_in_danish = (number_numeric %in% irreg_in_danish),
+	lang_pair = paste(pmax(l1,l2),pmin(l1,l2),sep="-"))
+
+histDistance = read.csv("../../data/trees/IndoEuropean_historical_distances_long.csv",
+                        stringsAsFactors = F,encoding = "UTF-8",fileEncoding = "UTF-8")
+numbers$hist.dist = histDistance[match(paste(numbers$name_l1,numbers$name_l2),
+                             paste(histDistance$Var1,histDistance$Var2)),]$value
+
+# Refactorise to get rid of non-existant categories
+numbers$family_l1 = factor(numbers$family_l1)
+numbers$family_l2 = factor(numbers$family_l2)
+
+# Add typology data
+cnv = read.csv("../../data/numbers/Calude_Verkerk_NumberData.csv",stringsAsFactors = F)
+numbers <- left_join(numbers,cnv,by=c('l1','l2','number_numeric'))
+
+numbers$isUralic = numbers$family_l1 == "Uralic" | numbers$family_l2 == "Uralic"
+numbers$danish_irregular = (numbers$number_numeric %in% irreg_in_danish) &
+                                     (numbers$name_l1=="Danish" | numbers$name_l2=="Danish")
+
+# historic distance, setting Uralic languages to maximum
+numbers$hist.dist2 = numbers$hist.dist
+numbers$hist.dist2[is.na(numbers$hist.dist2)] = max(numbers$hist.dist,na.rm = T)
+numbers$seven = numbers$number_numeric==7
+
+#some rows got duplicated; remove
+numbers <- distinct(numbers)
+
+# Data on homophones
+h = read.csv("../../data/numbers/NumberHomophones.csv",
+             stringsAsFactors = F,encoding = "UTF-8",fileEncoding = "UTF-8")
+h$code = paste(h$l,h$word)
+numbers$homophone = (paste(numbers$l1,numbers$wordform_l1) %in% h$code) |
+                    (paste(numbers$l2,numbers$wordform_l2) %in% h$code)
+
+numbers$lang_pair.f = factor(numbers$lang_pair)
+
+# Frequency difference (already in log scale)
+numbers$freqDiff = abs(numbers$freq_l1-numbers$freq_l2)
+# 78 frequency observations (3%) are missing, so impute:
+freqM = bam(I(1+freqDiff)~ 
+              #s(number_numeric) + 
+              s(lang_pair.f,bs='re') + 
+              s(editdistance) + 
+              s(hist.dist2),
+            family = Gamma(link="identity"),
+            data = numbers[!is.na(numbers$freqDiff),])
+freqMPred = predict(freqM,newdata=numbers)-1
+#plot(freqMPred,numbers$freqDiff)
+#abline(0,1)
+numbers[is.na(numbers$freqDiff),]$freqDiff = 
+  freqMPred[is.na(numbers$freqDiff)]
+
+```
+
+Group data by language:
+
+```{r}
+langAverages = data.frame()
+for(l in unique(c(numbers$l1,numbers$l2))){
+  dx = numbers[numbers$l1==l | numbers$l2==l,]
+  langAverages = rbind(langAverages,
+                  data.frame(
+                   local_alignment = dx$local_alignment,
+                    number_numeric = dx$number_numeric,
+                    l = l,
+                    l1 = dx$name_l1,
+                    l2 = dx$name_l2))
+}
+langAverages$l = factor(langAverages$l,
+     levels = names(sort(tapply(langAverages$local_alignment,langAverages$l,mean))))
+```
+
+
+# Overview
+
+## Numeric value
+
+Plot by numeric value:
+
+```{r}
+ggplot(numbers,aes(x=factor(number_numeric),y=local_alignment)) + geom_boxplot()
+```
+
+-  1 has a low numeric alignment.
+-  Alignment rises 2-3.
+-  7 has a lower alignment.
+-  Drop in alignment for 100, 1000.
+-  Outliers for 9.
+
+1 and 2 are often sources for grammaticalised indefinite/duel markers (Givón, 1981).
+
+The slight decline from 10 to 1000 could be due to the declining frequency of occurances of these numbers (Dehaene & Mehler, 1992), which might affect convergence on meanings, but more direcly would affect the co-occurance statistics.
+
+What's driving the difference with 7 and 9? 7 might be linked to there being 7 days in the week, so semantic differences in time might be reflected. Let's look at individual languages:
+
+```{r}
+la7 = langAverages[langAverages$number_numeric==7,]
+la7$l = factor(la7$l,levels=names(sort(tapply(
+         la7$local_alignment,la7$l,mean))))
+ggplot(la7,aes(x=l,y=local_alignment)) + geom_boxplot()
+```
+
+The plot above shows that the main difference is being driven by comparisons with Hungarian. All the outliers around 0.25 are comparisons with Hungarian. This might be because Hungarian is a Uralic language, but maybe also because the Hungarian word for '7' also directly means "week".
+
+Ukrainian is also low. We note that forms for 7 and 8 are very similar in Ukrainian (7 = sim and 8 = visim).
+
+What are the outliers for 9? These all include comparisons to French:
+
+```{r}
+numbers[numbers$number_numeric==9 & numbers$local_alignment<0.25,c("l1",'l2',"local_alignment")]
+```
+
+This may be because French 9 ("neuf") can mean '9' or "new".  We used the North Euralex dictionary to find numbers which have homophones.  See the file `NumberHomophones.csv`. This also includes the Hungarian '7' discussed below.
+
+```{r}
+h[,c("l","number","otherMeanings")]
+```
+
+The plot below shows the distribution of non-homophones, with homophones drawn as dots. For 7 and 9, these fall outside of the general distribution, but there are several other cases where homophones look similar to the rest of the distribution:
+
+```{r}
+ggplot(numbers[!numbers$homophone,],
+       aes(y=local_alignment,
+           x=factor(number_numeric))) +
+  geom_violin() +
+  geom_point(data=numbers[numbers$homophone,],
+             aes(y=local_alignment,
+           x=factor(number_numeric)),
+           colour="red") +
+  myThemeBasic
+```
+
+
+
+## Number line
+
+We can look at the importance of the different ways that numeral systems are compased. We use data from Calude & Verkerk (2016), and identify whether two languages have the same system for forming a particular numeral.
+
+In our sample, all numbers below 10 are atoms, so there are only differences above 10. For example, English uses a unique atom to represent 12 (/twelv/), while Bulgarian uses a form that is composed of "2+10" (2 = dve, 10 = deset, 12 = dvanadeset).
+
+It looks like there's an interaction between numeral typoogy and numeric value:
+
+```{r}
+ggplot(numbers[numbers$number_numeric>10,],
+       aes(y=local_alignment,
+           x=factor(number_numeric),
+           colour=sameNumeralTypology)) +
+  geom_boxplot()
+```
+
+## Variation by language
+
+The plot below shows the overview of comparisons by language:
+
+```{r}
+ggplot(langAverages,aes(x=l,y=local_alignment)) + geom_boxplot()
+```
+
+Danish seems to have a lower average.  We note that some Danish 'crowns' are irregular (50,60,70,80,90).  These pick out the outliers (dots are danish, blue dots are irregualr, violin plots are the rest of the data):
+
+```{r}
+ggplot(numbers[!numbers$is_danish,],
+       aes(x=factor(number_numeric),y=local_alignment)) +
+  geom_violin() + myThemeBasic +
+  geom_point(data=numbers[numbers$is_danish,],
+             aes(colour=danish_irregular))
+```
+
+
+## Variation by frequency
+
+Semantic alignment by frequency (brighter colours are higher numeri vlaues):
+
+```{r}
+ggplot(numbers,
+       aes(x=freqDiff,y=local_alignment,colour=log10(number_numeric))) +
+  geom_point() +
+  stat_smooth() +
+  theme(legend.position = 'none') +
+  myThemeBasic + xlab("Frequency difference") +
+  ylab("Local alignment")
+```
+
+There appears to be a slight effect for larger frequency differences to be associated with lower alignment.
+
+\newpage
+
+
+# Decision tree
+
+We use a decision tree to explore the data and find coherent clusters in the data.  We try to predict local alignment based on various properties.  
+
+First we show that Uralic "7s" are a coherent cluster:  A decision tree divides the data into categories that represent '1', '1000', and then combines divisions in the numeric value with 'isUralic' to find the cluster of Uralic 7s:
+
+```{r}
+rt = REEMtree(local_alignment~
+                number_numeric + isUralic, 
+              random = ~1|lang_pair,
+              data=numbers)
+rp.rt = tree(rt)
+rp.rt$model = numbers
+rpart.plot(rp.rt, type=4, branch.lty=1, clip.facs = F, box.palette="RdYlGn")
+```
+
+To help this, we include an explicit factor for seven. The final factors in the mode are:
+
+-  numeric value
+-  is a Uralic language
+-  is a Danish irregular
+-  is '7'
+-  has a homophone
+-  the 'n' variable: number of comparisons possible between language pairs in the whole corpus
+-  whether the numbers have the same underling compositional structure
+
+```{r eval=F}
+set.seed(1283)
+rt = REEMtree(local_alignment~
+                number_numeric + isUralic + 
+                danish_irregular + hist.dist2 + 
+                seven + n + sameNumeralTypology + homophone, 
+              random = ~1|lang_pair,
+              data=numbers,
+              MaxIterations=1000000)
+rp.rt = tree(rt)
+rp.rt$model = numbers
+plot1 = rpart.plot(rp.rt, type=4, branch.lty=1, clip.facs = F, box.palette="RdYlGn")
+
+cluster = factor(rp.rt$where,
+                labels = c("One",
+                           "Hungarian 7",
+                           "French 9",
+                           "Small\nhomophones",
+                           "Large\nhomophones",
+                           "100,1000",
+                           "Danish\nirregulars",
+                           "Two",
+                           "3-90"))
+
+plot2 = ggplot(numbers,aes(y=local_alignment,
+                   x=cluster)) +
+  geom_violin() + myThemeBasic +
+  xlab("") + ylab("Semantic alginment")
+
+pdf("rDecisionTree.pdf",width=12,height=8)
+  layout(t(t(c(1,2))), heights=c(2.5,1))
+  par(mar=c(1,10,1,1))
+  rpart.plot(rp.rt, type=4, branch.lty=2, 
+             clip.facs = F, box.palette="RdYlGn",
+             mar=c(1,4,1,1.5),cex = 1.2,split.yshift=1)
+  plot.new()             
+  vps <- baseViewports()
+  pushViewport(vps$figure) 
+  vp1 <-plotViewport(c(0,0,0,0))
+  print(plot2,vp = vp1) 
+dev.off()
+
+varimp = sort(rt$Tree$variable.importance)
+varimp.plot = ggplot(data.frame(importance=varimp,
+                  variable=factor(names(varimp),levels = names(varimp))),
+       aes(y=importance,x=variable))+
+  geom_col() + coord_flip()
+pdf("../../results/numbers/VarImp.pdf")
+varimp.plot
+dev.off()
+```
+
+![](../../results/numbers/DecisionTree.pdf)
+
+![](../../results/numbers/VarImp.pdf)
+
+
+# Run a GAM
+
+Convert lang_pair to factor and scale variables:
+
+```{r}
+numbers$lang_pair = factor(numbers$lang_pair)
+
+numbers$number_numeric.log = log(numbers$number_numeric)
+numbers$number_numeric.log.scaled = scale(numbers$number_numeric.log)
+
+numbers$local_alignment.center = scale(numbers$local_alignment,scale=F)
+
+numbers$isUralic = factor(numbers$family_l1 == "Uralic" | numbers$family_l2 == "Uralic")
+numbers$differentNumeralTypology = factor(!numbers$sameNumeralTypology)
+numbers$seven = factor(numbers$seven)
+numbers$danish_irregular = factor(numbers$danish_irregular)
+numbers$homophone = factor(numbers$homophone)
+```
+
+
+We start by looking at a simple model that has a random effect for langauge pair and a main smooth term for number. Note that since this is a non-linear model, a random effect for numeric value is very similar to a fully articulated smooth slope, so we just model numeric as a fixed effect. 
+
+```{r}
+m0 = bam(local_alignment.center ~
+           s(lang_pair,bs='re') +
+           s(number_numeric.log.scaled),
+         data = numbers)
+```
+
+
+We plot the fit of the model below:
+
+```{r echo=F}
+modelToPlot = m0
+plot.new()
+px = plotGAMSignificantSlopes(
+                m0,
+               'number_numeric.log.scaled',
+               'Number')
+# Model is in scaled space, so transform back:
+# Undo scale
+px$curve.x = px$curve.x * 
+  attr(numbers$number_numeric.log.scaled,"scaled:scale") +
+  attr(numbers$number_numeric.log.scaled,"scaled:center")
+# Undo log
+px$curve.x = exp(px$curve.x)
+
+# Function to do the same for y
+transform_y = function(y){
+  y + attr(numbers$local_alignment.center,"scaled:center")
+}
+intercept = coef(modelToPlot)[1]
+px$curve.y = transform_y(px$curve.y + intercept)
+px$curve.y.upper = transform_y(px$curve.y.upper+ intercept)
+px$curve.y.lower = transform_y(px$curve.y.lower + intercept)
+px$m2.dsig.incr = transform_y(px$m2.dsig.incr + intercept)
+px$m2.dsig.decr = transform_y(px$m2.dsig.decr + intercept)
+
+# Plot the slopes alongside the raw data
+gamPlot <- ggplot(px, aes(x=curve.x,y=curve.y))+
+    geom_violin(data=numbers,
+                draw_quantiles = c(0.05, 0.5, 0.95),
+                fill = "grey80",scale="area",
+                aes(x=number_numeric,
+                    y=local_alignment,
+                    group=number_numeric))+
+    geom_ribbon(
+      aes(ymin=curve.y.lower,
+          ymax=curve.y.upper), alpha=0.3)+
+    geom_line(size=0.5,linetype=3) +
+    geom_line(aes(x=curve.x,y=m2.dsig.incr), 
+              colour = "blue", size = 2) +
+    geom_line(aes(x=curve.x,y=m2.dsig.decr), 
+              colour = "red", size = 2) +
+    xlab("Number")+
+    ylab("Local alignment") +
+    scale_x_continuous(trans = "log10", 
+            breaks = c(1,2,3,4,5,6,7,8,10,
+                     12,20,30,40,50,70,100,1000)) +
+  myThemeBasic+
+  xlab("Number")+ylab("Semantic Alignment")
+gamPlot
+```
+
+This shows the difference for 1, a dip for 7 (which the analyses above suggest is due to Uralic languages) and a decrease for 1000.
+
+We now fit a full model with many other controls:
+
+-  Number typology
+-  Interaction between numeric value and typology
+-  Historical distance (assuming Uralic is maximum distance)
+-  Whether the comparison is with a Uralic language
+-  Whether the number is 7
+-  Interaction between Uralic and 7
+-  Whether the number is a Danish irregular
+-  Whether the numbers word has a frequent homophone
+-  The frequency difference between the forms
+
+```{r}
+
+m1 = bam(local_alignment.center~
+           s(number_numeric.log.scaled, by=differentNumeralTypology) +
+           s(hist.dist2) + 
+           s(lang_pair,bs='re') +
+           isUralic*seven + danish_irregular + 
+           differentNumeralTypology +
+           homophone +
+           s(hist.dist2) +
+           s(freqDiff),
+        data = numbers)
+```
+
+Compare models. Adding the extra factors makes a difference.
+
+```{r}
+lrtest(m0,m1)
+```
+
+Summary of main model: The EDF for `number_numeric` is high, indicating strong non-linearities. The main model explains `round(summary(m1)$dev.expl*100,2)`% of the deviance, compared to `round(summary(m0)$dev.expl*100,2)`% in the baseline model.
+
+```{r}
+summary(m1)
+```
+
+The code below detects significantly steep slopes in the GAM curve.  Thick line segments indicate significant rises or decreases.  We see that 1 and 2 have lower alignment, then numbers 3-20 are fairly constant. Beyond 20, there is a decrease in alignment, especially for numbers with different numeral typologies. Various outliers captured by the model are drawn on top:
+
+```{r echo=F,fig.show="hide",results="hide"}
+makeFancyGam = function(modelToPlot){
+  plot.new()
+  px = plotGAMSignificantSlopes(
+                  modelToPlot,
+                 'number_numeric.log.scaled',
+                 'Number',termPlot=1, interactionTermValue = F)
+  pxDT = plotGAMSignificantSlopes(
+                  modelToPlot,
+                 'number_numeric.log.scaled',
+                 'Number',termPlot=2,subPlot = 2,subPlotB=1, interactionTermValue = F,
+                 interactionTermValueByVar= list(differentNumeralTypology=T))
+  transformScale = function(px){
+    # Model is in scaled space, so transform back:
+    # Undo scale
+    px$curve.x = px$curve.x * 
+      attr(numbers$number_numeric.log.scaled,"scaled:scale") +
+      attr(numbers$number_numeric.log.scaled,"scaled:center")
+    # Undo log
+    px$curve.x = exp(px$curve.x)
+    
+    # Function to do the same for y
+    transform_y = function(y){
+      y + attr(numbers$local_alignment.center,"scaled:center")
+    }
+    intercept = coef(modelToPlot)[1]
+    px$curve.y = transform_y(px$curve.y + intercept)
+    px$curve.y.upper = transform_y(px$curve.y.upper+ intercept)
+    px$curve.y.lower = transform_y(px$curve.y.lower + intercept)
+    px$m2.dsig.incr = transform_y(px$m2.dsig.incr + intercept)
+    px$m2.dsig.decr = transform_y(px$m2.dsig.decr + intercept)
+    return(px)
+  }
+  px = transformScale(px)
+  pxDT = transformScale(pxDT)
+  
+  # Plot the slopes alongside the raw data
+  px$type = "Same numeral typology"
+  pxDT$type = "Different numeral typology"
+  pxAll = rbind(px,pxDT)
+  pxAll$type = factor(pxAll$type)
+  gamPlot <- ggplot(pxAll, aes(x=curve.x,y=curve.y,group=type))+
+      geom_violin(data=numbers[
+                    numbers$danish_irregular=="FALSE" &
+                    !((numbers$l1=="hu"| numbers$l2=="hu") & numbers$seven=="TRUE") &
+                    !(numbers$homophone=="TRUE"),],
+                  draw_quantiles = c(0.05, 0.5, 0.95),
+                  fill = "grey80",scale="area",
+                  aes(x=number_numeric,
+                      y=local_alignment,
+                      group=number_numeric))+
+      # 2nd curve
+      geom_ribbon(
+        aes(ymin=curve.y.lower,
+            ymax=curve.y.upper,
+            fill=type), alpha=0.2)+
+      geom_line(aes(x=curve.x,y=curve.y,colour=type),size=0.5,linetype=3) +
+      geom_line(aes(x=curve.x,y=m2.dsig.incr,colour=type), size = 2) +
+      geom_line(aes(x=curve.x,y=m2.dsig.decr,colour=type), size = 2) +  
+      # Danish irregulars
+      geom_point(data=numbers[numbers$danish_irregular=="TRUE",],
+                 aes(x=number_numeric,y=local_alignment,group=NULL),
+                 colour='blue',alpha=0.5) +
+      # Uralic 7s
+      geom_point(data=numbers[(numbers$l1=="hu"| numbers$l2=="hu") & numbers$seven=="TRUE",],
+                 aes(x=number_numeric,y=local_alignment,group=NULL),
+                 colour='red',alpha=0.5) +
+      # Homophones
+      geom_point(data=numbers[numbers$homophone=="TRUE" & 
+                                (numbers$l1=="fr"| numbers$l2=="fr"),],
+                 aes(x=number_numeric,y=local_alignment,group=NULL),
+                 colour='green',alpha=0.5) +
+      # looks
+      xlab("Number")+
+      ylab("Local alignment") +
+      scale_x_continuous(trans = "log10", 
+              breaks = c(1,2,3,4,5,6,7,8,10,
+                       12,20,30,40,50,70,100,1000)) +
+      scale_color_manual(values=c("#e66101",'#5e3c99'),name=element_blank())+
+      scale_fill_manual(values=c("#fdb863", "#b2abd2"), name="fill") +
+    myThemeBasic+ guides(fill=F) + theme(legend.position = "top") +
+    xlab("Number")+ylab("Semantic Alignment") +
+    annotate("text",x=6,y=0.4,label="Hungarian 7",colour="red")+
+    annotate("text",x=70,y=0.4,label="Danish irregulars",colour="blue") +
+    annotate("text",x=14,y=0.2,label="Homophones",colour="green")
+  return(gamPlot)
+}
+gamPlot = makeFancyGam(m1)
+# Optionally save to file
+#pdf("SemanticAlignment_Numbers.pdf")
+#gamPlot
+#dev.off()
+```
+
+```{r}
+gamPlot
+pdf("../../results/numbers/FinalGamModel.pdf", width=8,height=6)
+gamPlot
+dev.off()
+```
+
+\newpage
+
+
+## Controlling for linguistic history
+
+In the model above, the effects of historical distance are minimal: the fit is lienar and not significant.  This might be because there are random effects for language pairs which are taking up the variance.  In the section below, we use only historical distance:
+
+```{r}
+m1.phylo = bam(local_alignment.center~
+           s(number_numeric.log.scaled, by=differentNumeralTypology) +
+           s(hist.dist2) + 
+           seven + danish_irregular + 
+           homophone + 
+           differentNumeralTypology +
+           s(freqDiff),
+         data = numbers[!is.na(numbers$hist.dist),])
+# Model with numeric
+summary(m1.phylo)
+```
+
+The effects are very similar. The effect of history is significant, but not large. Semantic alignment is lower for more distantly related languages:
+
+```{r}
+plot(m1.phylo,select=3)
+```
+
+Plot the main effects, which look much like the main graph above.
+
+```{r echo=F, fig.show="hide",results="hide"}
+gamPlot.phylo = makeFancyGam(m1.phylo)
+```
+
+```{r echo=F}
+gamPlot.phylo
+```
+
+\newpage
+
+# Conclusion
+
+Semantic alignment for number words is generally high, though there are some differences that can be explained.  1 and 2 have lower alignment due to often being grammaticalised as indefinite or dual marker (Givon, 1981). Numbers 3-12 generally have high alignment (mean local alignment = 0.87), and higher numbers decline in alignment up to 1000. There are also language-specific differences due to how number lines are constructed (e.g. base, combination rules, see Calude & Verkerk, 2016), or for irregular forms (e.g. 50, 60, 70, 80 and 90 in Danish). Some number words have  alternative associations due to homophones (e.g. the Hungarian 7 is used directly to mean 'week', and 'neuf' in French means '9' or 'new'). The historical distance between languages did not predict much of the variation.
+
+The differences in semantic alignment may appear either because (A) the semantic associations are different for different languages, or (B) as a a side-effect of numbers appearing with different words skewing the alignment metric. Effects that support (B) could include:
+
+-  Difference in frequency. Lower frequency terms will appear to have narrower semantic relations.  
+-  Homophones. Different meanings will contribute different semantic relations.
+
+However, it is more difficult to explain why different number line typologies would lead to semantic differences, unless the way numbers are constructed affects the way people think about the numbers.
+
+
+# References
+
+Calude, A. S., & Verkerk, A. (2016). The typology and diachrony of higher numerals in Indo-European: a phylogenetic comparative study. Journal of Language Evolution, 1(2), 91-108.
+
+Dehaene, S., & Mehler, J. (1992). Cross-linguistic regularities in the frequency of number words. Cognition, 43(1), 1-29.
+
+Givón, T. (1981). On the development of the numeral ‘one’as an indefinite marker. Folia Linguistica Historica, 15(Historica vol. 2, 1), 35-54.
