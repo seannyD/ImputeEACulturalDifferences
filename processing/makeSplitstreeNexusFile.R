@@ -74,7 +74,7 @@ areas.colours.text = apply(col2rgb(areas.colours),2,paste,collapse=" ")
 
 vlabels = data.frame(
   num = 1:ncol(dists15),
-  L= paste0("'",nodeColours$L,"'"),
+  L= paste0("'",colnames(dists15),"'"),
   lc = paste0("lc=",areas.colours.text)
 )
 vlables.text = apply(vlabels,1,paste,collapse=" ")

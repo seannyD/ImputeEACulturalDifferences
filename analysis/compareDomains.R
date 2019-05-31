@@ -7,13 +7,9 @@ library(gplots)
 library(igraph)
 library(ecodist)
 library(RColorBrewer)
+library(ellipse)
 
 try(setwd("~/Documents/Bristol/word2vec/word2vec_DPLACE/analysis/"))
-
-# Parameters
-
-lingDistancesByDomainFile = "../results/EA_distances/nel-wiki-k100_with_ling.csv"
-outputFolder = "../results/stats/wikipedia-main/"
 
 # Load language details
 l = read.csv("../data/FAIR_langauges_glotto_xdid.csv", stringsAsFactors = F)
@@ -26,6 +22,11 @@ cult$l1.iso2 = l[match(cult$l1,l$Language2),]$iso2
 cult$l2.iso2 = l[match(cult$l2,l$Language2),]$iso2
 cultisos = unique(c(cult$l1.iso2, cult$l2.iso2))
 
+
+###
+# Re-usable function for running the analysis
+compareDomains = function(lingDistancesByDomainFile,outputFolder){
+
 # Load linguistic distances
 ling.dom = read.csv(
   lingDistancesByDomainFile, 
@@ -37,6 +38,8 @@ ling.dom = ling.dom[(ling.dom$l1 %in% cultisos) &
 
 ling.dom = ling.dom[!(ling.dom$l1=="se" || ling.dom$l2 == "se"),]
 ling.dom = ling.dom[!(ling.dom$l1=="sl" || ling.dom$l2 == "sl"),]
+
+names(ling.dom)[names(ling.dom)=="IDS_SEMANTICFIELD_l1"] = "imputed_semantic_domain"
 
 ling.dom$cult.similarity = 1-ling.dom$cult.dist
 
@@ -177,6 +180,7 @@ for(lingDom in lingDomains){
   )
   m1 =  update(m0, ~.+cult.similarity.DP)
   convergenceWarnings = paste(m1@optinfo$conv$lme4$messages,m0@optinfo$conv$lme4$messages,sep=";",collapse=";")
+  convergenceWarnings = gsub("boundary \\(singular\\) fit: see \\?isSingular;","",convergenceWarnings)
   
   if(nchar(convergenceWarnings)>0){
     # Attempt to fix convergence warnings:
@@ -239,73 +243,73 @@ write.csv(res2,file=paste0(outputFolder,"Cor_LingAlignmentByDomains_vs_DPlaceCul
 
 #res2 = read.csv(paste0(outputFolder,"Cor_LingAlignmentByDomains_vs_DPlaceCulturalDomains.csv"),stringsAsFactors = F)
 
-makeMat = function(stat){
-  statx = res2[,stat]
-  statx[nchar(res2$convergenceWarnings)>1] = NA
-  mat = matrix(statx,ncol=length(lingDomains),nrow=length(cultDomains))
-  rownames(mat) = cultDomains
-  colnames(mat) = lingDomains
-  return(mat)
+if(TRUE){#outputFolder=="../results/stats/wikipedia-main/"){
+  makeMat = function(stat, probVal=0){
+    statx = res2[,stat]
+    convergenceW = res2$convergenceWarnings
+    convergenceW = gsub("boundary \\(singular\\) fit: see \\?isSingular","",convergenceW)
+    statx[nchar(convergenceW)>3] = probVal
+    mat = matrix(statx,ncol=length(lingDomains),nrow=length(cultDomains))
+    rownames(mat) = cultDomains
+    colnames(mat) = lingDomains
+    return(mat)
+  }
+  
+  mat.beta = makeMat("lmeModel.CultSimilarity.Beta")
+  hm.beta = heatmap.2(mat.beta,col=cm.colors(20),
+                      margins=c(14,14),srtCol=45,trace="none",
+                      key.title="",key.par = list(mar=c(3,2,1,2)),
+                      key.xlab = "Beta",na.color = "gray",
+                      xlab = "Concepticon domains",
+                      ylab = "D-Place domains")
+  
+  mat.p = makeMat("lmeModel.CultSimilarity.p.adjusted",1)
+  signifColours = c("dark red","red",rep("blue",40))
+  pdf(paste0(outputFolder,"LingAlignmentByDomains_vs_DPlaceCulturalDomains_ModelComparisonP.pdf"), width = 8.5, height = 8)
+  hm.p = heatmap.2(mat.p,col = signifColours,
+            margins=c(14,14),srtCol=45,trace="none",
+            key.title="",key.par = list(mar=c(3,2,1,2)),
+            key.xlab = "Model comparison p",
+            xlab = "Concepticon domains",
+            ylab = "D-Place domains",
+            Rowv = hm.beta$rowDendrogram,
+            Colv = hm.beta$colDendrogram)
+  dev.off()
+  
+  
+  pdf(paste0(outputFolder,"LingAlignmentByDomains_vs_DPlaceCulturalDomains_Beta.pdf"), 
+      width = 8.5, height = 8)
+  heatmap.2(mat.beta,col=cm.colors(20),
+            margins=c(14,14),srtCol=45,trace="none",
+            key.title="",key.par = list(mar=c(3,2,1,2)),
+            key.xlab = "Beta",na.color = "gray",
+            xlab = "Concepticon domains",
+            ylab = "D-Place domains")
+  x = expand.grid(
+    seq(0.25,0.74, length.out=length(cultDomains)),
+    seq(0.22,0.725,length.out=length(lingDomains)))
+  significant= t(hm.p$carpet)<0.05
+  points(x[,2],x[,1],
+         pch=c(NA,8)[as.numeric(significant)+1])
+  dev.off()
+  
+  mat.beta2 = mat.beta[hm.beta$rowInd,]
+  mat.beta2 = mat.beta2[,hm.beta$colInd]
+  mat.p2 = mat.p[hm.beta$rowInd,]
+  mat.p2 = mat.p2[,hm.beta$colInd]
+  
+  
+  # Build a Pannel of 100 colors with Rcolor Brewer
+  my_colors <- brewer.pal(4, "Spectral")
+  
+  redCols = brewer.pal(9,"YlOrRd")[9:5]
+  blueCols = brewer.pal(9,"YlGnBu")[2:9]
+  blueCols = colorRampPalette(blueCols)(95)
+  my_colors = c(redCols,blueCols)
+  
+  # TODO: The colours aren't mapping properly?
+  plotcorr(mat.beta2/0.5, col=my_colors[mat.p2*100] , mar=c(1,1,1,1)  )
 }
-
-mat.beta = makeMat("lmeModel.CultSimilarity.Beta")
-hm.beta = heatmap.2(mat.beta,col=cm.colors(20),
-                    margins=c(14,14),srtCol=45,trace="none",
-                    key.title="",key.par = list(mar=c(3,2,1,2)),
-                    key.xlab = "Beta",na.color = "gray",
-                    xlab = "Concepticon domains",
-                    ylab = "D-Place domains")
-
-mat.p = makeMat("lmeModel.CultSimilarity.p.adjusted")
-signifColours = c("dark red","red",rep("blue",40))
-pdf(paste0(outputFolder,"LingAlignmentByDomains_vs_DPlaceCulturalDomains_ModelComparisonP.pdf"), width = 8.5, height = 8)
-hm.p = heatmap.2(mat.p,col = signifColours,
-          margins=c(14,14),srtCol=45,trace="none",
-          key.title="",key.par = list(mar=c(3,2,1,2)),
-          key.xlab = "Model comparison p",
-          xlab = "Concepticon domains",
-          ylab = "D-Place domains",
-          Rowv = hm.beta$rowDendrogram,
-          Colv = hm.beta$colDendrogram)
-dev.off()
-
-
-pdf(paste0(outputFolder,"LingAlignmentByDomains_vs_DPlaceCulturalDomains_Beta.pdf"), 
-    width = 8.5, height = 8)
-heatmap.2(mat.beta,col=cm.colors(20),
-          margins=c(14,14),srtCol=45,trace="none",
-          key.title="",key.par = list(mar=c(3,2,1,2)),
-          key.xlab = "Beta",na.color = "gray",
-          xlab = "Concepticon domains",
-          ylab = "D-Place domains")
-x = expand.grid(
-  seq(0.25,0.74, length.out=length(cultDomains)),
-  seq(0.22,0.725,length.out=length(lingDomains)))
-significant= t(hm.p$carpet)<0.05
-points(x[,2],x[,1],
-       pch=c(NA,8)[as.numeric(significant)+1])
-dev.off()
-
-mat.beta2 = mat.beta[hm.beta$rowInd,]
-mat.beta2 = mat.beta2[,hm.beta$colInd]
-mat.p2 = mat.p[hm.beta$rowInd,]
-mat.p2 = mat.p2[,hm.beta$colInd]
-
-library(ellipse)
-library(RColorBrewer)
-
-# Build a Pannel of 100 colors with Rcolor Brewer
-my_colors <- brewer.pal(4, "Spectral")
-
-redCols = brewer.pal(9,"YlOrRd")[9:5]
-blueCols = brewer.pal(9,"YlGnBu")[2:9]
-blueCols = colorRampPalette(blueCols)(95)
-my_colors = c(redCols,blueCols)
-
-# TODO: The colours aren't mapping properly?
-plotcorr(mat.beta2/0.5, col=my_colors[mat.p2*100] , mar=c(1,1,1,1)  )
-
-
 
 
 #############################
@@ -411,7 +415,7 @@ for(comp in unique(res.part3$comparison)){
   res.part3$p.adjusted[sel] = p.adjust(res.part3$pval3[sel],method="bonferroni")
 }
 
-write.csv(res.part3,"../results/stats/wikipedia-main/Cor_LingAlignmentByDomains_vs_HistoricalAndGeographicalDistance.csv")
+write.csv(res.part3,paste0(outputFolder,"Cor_LingAlignmentByDomains_vs_HistoricalAndGeographicalDistance.csv"))
 
 
 # Flip historical and geographic distance measures:
@@ -454,7 +458,8 @@ res.part3.plot =
   coord_flip()
 
 
-pdf("../results/stats/wikipedia-main/LingAlignmentByDomains_vs_HistoricalAndGeographicalProximity.pdf",
+pdf(paste0(outputFolder,
+           "LingAlignmentByDomains_vs_HistoricalAndGeographicalProximity.pdf"),
     height=6,width=10)
 res.part3.plot
 dev.off()
@@ -467,7 +472,45 @@ cult.r = res.part3[res.part3$comparison=="lingVCult",]$mantelr
 hist.r = res.part3[res.part3$comparison=="lingVHist",]$mantelr
 
 plot(geo.r,cult.r)
-cor.test(geo.r,cult.r)
+geoCultTradeOff = cor.test(geo.r,cult.r)
+
+geoCultTradeOffText = 
+  paste0("$r$ = ",
+       signif(geoCultTradeOff$estimate,2),
+      ", $p$ = ",
+      signif(geoCultTradeOff$p.value,2)
+      )
+if(outputFolder=="../results/stats/wikipedia-main/"){
+  cat(geoCultTradeOffText,file="../results/stats/tex/TradeOff_GeoCult.tex")
+}
+
 
 plot(hist.r,cult.r)
-cor.test(hist.r,cult.r)
+histCultTradeOff = cor.test(hist.r,cult.r)
+
+histCultTradeOffText = 
+  paste0("$r$ = ",
+         signif(histCultTradeOff$estimate,2),
+         ", $p$ = ",
+         signif(histCultTradeOff$p.value,2)
+  )
+if(outputFolder=="../results/stats/wikipedia-main/"){
+  cat(histCultTradeOffText,file="../results/stats/tex/TradeOff_HistCult.tex")
+}
+
+} # end of analysis function
+
+
+# Run on different data sets
+
+compareDomains(
+  lingDistancesByDomainFile = "../results/EA_distances/nel-wiki-k100_with_ling.csv",
+  outputFolder = "../results/stats/wikipedia-main/")
+
+compareDomains(
+  lingDistancesByDomainFile = "../results/EA_distances/nel-k100-cc_with_ling.csv",
+  outputFolder = "../results/stats/cc/")
+
+compareDomains(
+  lingDistancesByDomainFile = "../results/EA_distances/nel-k100-subs_with_ling.csv",
+  outputFolder = "../results/stats/subs/")

@@ -32,13 +32,28 @@ The file `data/FAIR_langauges_glotto_xdid.csv` shows how the FAIR languages were
 
 `processing/getCompleteImputedDataframes.R`: Take the output of `mice` from above, and create full dataframes.  Saved to `data/EA_imputed/completeDataframes/*.csv`.
 
-`processing/getDistanceMatrix.R`:  Create distance matrices from the imputed datasets for FAIR languages.  Also produces distances for sub-sets of the variables and creates some graphs (hierarchical clustering, not as good as the splitstrees below).  Stored in `results/EA_distances/*.csv`
+`processing/getDistanceMatrix.R`:  Create (cultural) distance matrices from the imputed datasets for FAIR languages.  Also produces distances for sub-sets of the variables and creates some graphs (hierarchical clustering, not as good as the splitstrees below).  Stored in `results/EA_distances/*.csv`
+
+By this point, all the cultural distances are calculated.
+
+`processing/alignment_merged_to_meanCSVs.R`: Take the main semantic alignment data file and make individual files for the rest of the analyses.
+
 
 `processing/combineCultAndLingDistances.R`: Combine the data from the cultural and linguistic data from different domains into a single long-form csv.  Outputs to `results/EA_distances/All_Domains.csv`.
+
+Scripts for creating data for visualisation:
 
 `processing/makeSplitstreeNexusFile.R`:  This creates a nexus file format for the distance matrix which can be read by splitstree.  Outputs to `results/splitstree/CulturalDistances_Kinship_AllSocieties.nex`.
 
 `processing/getIndoEuropeanFAIRTree.R`:  Extract tree distances for indo european.
+
+
+## Analysis
+
+`analysis/compreDomains.R`: Run the 3 tests for comparisons between the domains.
+
+`analysis/MainAnalysis_analyseCorrelation_wikipedia.Rmd`: Main R markdown file for comparing semantic and cultural distance.
+
 
 ## Results
 

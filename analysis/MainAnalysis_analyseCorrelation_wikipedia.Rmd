@@ -1,5 +1,5 @@
 ---
-title: "Cultural distances: Wikipedia data"
+title: "Predicting semantic alignment by cultural similarity"
 output: 
   pdf_document:
     toc: true
@@ -26,6 +26,7 @@ library(sjPlot)
 library(ggplot2)
 library(igraph)
 library(lattice)
+library(dplyr)
 ```
 
 Parameters (using data from Northuralex and Wikipedia, k=100, unfiltered):
@@ -50,7 +51,6 @@ Read the cultural distances:
 ```{r}
 cult = read.csv("../results/EA_distances/CulturalDistances_Long.csv", stringsAsFactors = F)
 names(cult) = c("l1","l2","cult.dist")
-cultLangs = unique(c(cult$Var1,cult$Var2))
 ```
 
 Add language family:
@@ -71,8 +71,8 @@ ling = read.csv(lingDistancesFile, stringsAsFactors = F)
 There are very few possible comparisons for Slovenian and Northern Sami, so we'll remove these:
 
 ```{r}
-ling = ling[!(ling$l1=="se" || ling$l2 == "se"),]
-ling = ling[!(ling$l1=="sl" || ling$l2 == "sl"),]
+ling = ling[!(ling$l1=="se" | ling$l2 == "se"),]
+ling = ling[!(ling$l1=="sl" | ling$l2 == "sl"),]
 ```
 
 
@@ -105,6 +105,8 @@ ling$comparison_count.center =
 
 ling$family1 = l[match(ling$l1, l$iso2),]$family
 ling$family2 = l[match(ling$l2, l$iso2),]$family
+l[l$Language=="Arabic",]$autotyp.area= "Greater Mesopotamia"
+l[l$Language=="Persian",]$autotyp.area= "Greater Mesopotamia"
 ling$area1 = l[match(ling$l1, l$iso2),]$autotyp.area
 ling$area2 = l[match(ling$l2, l$iso2),]$autotyp.area
 
@@ -192,7 +194,7 @@ an1 = anova(m0,m0.5,m1)
 an1
 ```
 
-Cultural similarity is significantly correlated with Linguistic similarity.  Here are the model estimates:
+Cultural similarity is not significantly correlated with Linguistic similarity.  Here are the model estimates:
 
 ```{r}
 summary(m1)
@@ -213,21 +215,23 @@ cat(stat0,file="../results/stats/tex/MEM_CulturalVsLinguistic.tex")
 Plot the estimates, rescaling the variables back to the original units:
 
 ```{r}
-gx = sjp.lmer(m1,'pred','cult.dist.center', 
-              prnt.plot = F)
-gx$plot$data$y = gx$plot$data$y *
-  attr(ling$rho.center,"scaled:scale") +
+trans = function(X){
+  X * attr(ling$rho.center,"scaled:scale") +
   attr(ling$rho.center,"scaled:center")
-gx$plot$data$resp.y = gx$plot$data$resp.y *
-  attr(ling$rho.center,"scaled:scale") +
-  attr(ling$rho.center,"scaled:center")
-gx$plot$data$x = gx$plot$data$x *
+}
+
+gx = plot_model(m1,'pred',terms='cult.dist.center')
+gx$data$predicted = trans(gx$data$predicted)
+gx$data$conf.low = trans(gx$data$conf.low)
+gx$data$conf.high = trans(gx$data$conf.high)
+gx$data$x = gx$data$x *
   cdc.s +cdc.c
-gx = gx$plot + coord_cartesian(ylim=c(-0.05,0.5),
-                          xlim=c(0.15,0.85)) +
+gx = gx + #coord_cartesian(ylim=c(0,0.5),
+          #                xlim=c(0.15,0.85)) +
   xlab("Cultural similarity") +
   ylab("Semantic alignment") +
-  ggtitle("") 
+  ggtitle("") +
+  geom_point(data=ling,aes(x=cult.dist,y=local_alignment))
 gx
 pdf(paste0("../results/stats/",datasetName,"/CulturalDistance_Rho_Graph.pdf"),
     height=2.5, width=2.5)
@@ -238,46 +242,7 @@ dev.off()
 Plot the random effects:
 
 ```{r}
-sjp.lmer(m1,'re', sort.est = "cult.dist.center")
-px = sjp.lmer(m1,'rs.ri', prnt.plot = F)
-dx = px$plot[[1]]$data
-dx$x = dx$x * cdc.s + cdc.c
-dx$y = dx$y * 
-  attr(ling$rho.center,"scaled:scale") +
-  attr(ling$rho.center,"scaled:center")
-
-ggplot(dx,aes(x,y)) +
-  geom_point(data=ling, 
-   mapping=aes(x=as.numeric(cult.dist),
-               y=as.numeric(local_alignment))) +
-  stat_smooth(data=gx$data,method="lm",colour="black",
-              se=F)+
-  geom_line(mapping = aes(colour=grp)) +
-  xlab("Cultural similarity")+
-  ylab("Linguistic similarity") +
-  ggtitle("Language family pair random effects") +
-  coord_cartesian(ylim=c(0.0,0.6),
-                  xlim=c(0.2,0.8)) + 
-  theme(legend.position = "none") 
-
-dx = px$plot[[2]]$data
-dx$x = dx$x * cdc.s + cdc.c
-dx$y = dx$y * 
-  attr(ling$rho.center,"scaled:scale") +
-  attr(ling$rho.center,"scaled:center")
-
-ggplot(dx,aes(x,y)) +
-  geom_point(data=ling, 
-             mapping=aes(x=as.numeric(cult.dist),
-                         y=as.numeric(local_alignment))) +
-  stat_smooth(data=gx$data,method="lm",colour="black",
-              se=F)+
-  geom_line(mapping = aes(colour=grp)) +
-  xlab("Cultural similarity")+
-  ylab("Linguistic similarity") +
-  ggtitle("Area pair random effects") +
-  coord_cartesian(ylim=c(0.1,0.6),
-                  xlim=c(0.2,0.8))
+plot_model(m1,'re', sort.est = "cult.dist.center")
 ```
 
 \newpage
@@ -291,8 +256,8 @@ Code for constructing the data is hidden, but it is the same as above and availa
 ```{r echo=F,warning=F}
 
 lingNK = read.csv(lingDistancesFileNK, stringsAsFactors = F)
-lingNK = lingNK[!(lingNK$l1=="se" || lingNK$l2 == "se"),]
-lingNK = lingNK[!(lingNK$l1=="sl" || lingNK$l2 == "sl"),]
+lingNK = lingNK[!(lingNK$l1=="se" | lingNK$l2 == "se"),]
+lingNK = lingNK[!(lingNK$l1=="sl" | lingNK$l2 == "sl"),]
 
 lingNK = ling[(ling$l1 %in% cultisos) & (ling$l2 %in% cultisos),]
 
@@ -359,7 +324,7 @@ summary(m1NK)
 
 ##  MRM
 
-Use multiple regression on distance matrices to do the same test as above.  Here, the distance between two languages in terms of family is just whether they are part of the same family.  Note that this does not take into account particular values for particular families, nor the rnadom slopes within families.
+Use multiple regression on distance matrices (Lichstein, 2007) to do the same test as above.  The code below loads the data into a matrix format:
 
 ```{r}
 # Use graph method to make distance matrix
@@ -383,20 +348,94 @@ cult.m = as.matrix(cult.m)
 cult.m = 1-cult.m
 mx = match(rownames(ling.m),rownames(cult.m))
 cult.m = cult.m[mx,mx]
+colnames(cult.m) = rownames(cult.m)
 
+# Same/different matrix for language family
 family.matrix = l[match(rownames(ling.m),l$Language),]$family
 family.matrix = outer(family.matrix,family.matrix,"!=") *1
 
-# center and scale
+# Load ASJP distances for second test
+asjp = readRDS("../data/ASJP/asjp17-dists_FAIR.RData")
+ling.m.glotto = l[match(rownames(cult.m),l$Language2),]$glotto
+ling.m.glotto = ling.m.glotto[ling.m.glotto %in% rownames(asjp)]
+asjp.m = asjp[ling.m.glotto,ling.m.glotto]
+asjp.lang.names = l[match(rownames(asjp.m),l$glotto),]$Language2
+# Matrices for second analysis with asjp
+ling.m2 = ling.m[asjp.lang.names,asjp.lang.names]
+cult.m2 = cult.m[asjp.lang.names,asjp.lang.names]
+cc.m2 =  cc.m[asjp.lang.names,asjp.lang.names]
+
+# Load the geographic distances:
+geoDist = read.csv("../data/GeographicDistances.csv",stringsAsFactors = F)
+geoDist.m = as.matrix(geoDist)
+geoDist.m = geoDist.m[!is.na(geoDist.m[,1]),!is.na(geoDist.m[1,])]
+# Convert to log distance in thousand km
+geoDist.m = log10(geoDist.m/1000)
+geoDist.m[is.infinite(geoDist.m)] = 0
+colnames(geoDist.m) = gsub("\\."," ",colnames(geoDist.m))
+rownames(geoDist.m) = colnames(geoDist.m)
+geoDist.m1 = geoDist.m[rownames(ling.m),rownames(ling.m)]
+geoDist.m2 = geoDist.m[rownames(ling.m2),rownames(ling.m2)]
+
+# center and scale values
 ling.m =  matrix(scale(as.vector(ling.m)),nrow=nrow(ling.m))
 cc.m =  matrix(scale(as.vector(cc.m)),nrow=nrow(cc.m))
 cult.m = matrix(scale(as.vector(cult.m)),nrow=nrow(cult.m))
+geoDist.m1 = matrix(scale(as.vector(geoDist.m1)),nrow=nrow(geoDist.m1))
 
-ecodist::MRM(as.dist(ling.m) ~
-               as.dist(cult.m) + as.dist(family.matrix) + 
-               as.dist(cc.m),nperm = 10000)
-
+asjp.m = matrix(scale(as.vector(asjp.m)),nrow=nrow(asjp.m))
+ling.m2 = matrix(scale(as.vector(ling.m2)),nrow=nrow(ling.m2))
+cc.m2 =  matrix(scale(as.vector(cc.m2)),nrow=nrow(cc.m2))
+cult.m2 = matrix(scale(as.vector(cult.m2)),nrow=nrow(cult.m2))
+geoDist.m2 = matrix(scale(as.vector(geoDist.m2)),nrow=nrow(geoDist.m2))
 ```
+
+\newpage
+
+Run the MRM model, predicting semantic alignment by cultural distance, controlling for family distance, geographic ditance, and the comparison count (number of observations). Here, the family distance between two languages is just whether they are part of the same family.  Note that this does not take into account particular values for particular families, nor the random slopes within families.
+
+```{r}
+set.seed(1282)
+ecodist::MRM(as.dist(ling.m) ~
+               as.dist(cult.m) + 
+               as.dist(family.matrix) + 
+               as.dist(geoDist.m1)  +
+               as.dist(cc.m),nperm = 10000)
+```
+
+Semantic alignment is significantly correlated with cultural distance.
+
+In the result above, geographic distance is not correlated with semantic distance. Geographic distance turns out to be moderately correlated with cultural distance:
+
+```{r}
+ecodist::MRM(as.dist(geoDist.m1) ~
+               as.dist(cult.m),
+             nperm = 10000)
+```
+
+Even when testing for non-linear geographic effects, the main result still holds:
+
+```{r}
+ecodist::MRM(as.dist(ling.m) ~
+               as.dist(cult.m) + 
+               as.dist(family.matrix) + 
+               as.dist(geoDist.m1)  +
+               as.dist(geoDist.m1^2)  +
+               as.dist(geoDist.m1^3)  +
+               as.dist(cc.m),nperm = 10000)
+```
+
+
+Below, we run the same test, but using average string distances in basic vocabulary from the ASJP (Wichmann, Holman & Brown, 2018) as controls for history. We used the distances as calculated in Jäger (2018), which used them to construct historical phylogenies.
+
+```{r}
+ecodist::MRM(as.dist(ling.m2) ~
+               as.dist(cult.m2) + 
+               as.dist(asjp.m) + 
+               as.dist(geoDist.m2) +
+               as.dist(cc.m2),nperm = 10000)
+```
+
 
 \newpage
 
@@ -405,6 +444,8 @@ ecodist::MRM(as.dist(ling.m) ~
 Read the historical distances for Indo-European, based on the phylogenetic distances.
 
 ## Data prep
+
+The geographic distances are loaded above (from "../data/GeographicDistances.csv").
 
 Load historical distances:
 
@@ -442,17 +483,6 @@ rownames(ling.m) = l[match(rownames(ling.m),l$iso2),]$Language2
 colnames(ling.m) = l[match(colnames(ling.m),l$iso2),]$Language2
 ```
 
-Load the geographic distances:
-
-```{r}
-geoDist = read.csv("../data/GeographicDistances.csv",stringsAsFactors = F)
-geoDist.m = as.matrix(geoDist)
-# Convert to log distance
-geoDist.m = log(geoDist.m)
-geoDist.m[is.infinite(geoDist.m)] = 0
-rownames(geoDist.m) = colnames(geoDist.m)
-```
-
 Match the distance matrices
 
 ```{r}
@@ -488,6 +518,7 @@ treenames[treenames$taxon=="Greek_Mod",]$glottocode = "mode1248"
 # convert tip labels to glotto codes
 t$tip.label = treenames[match(t$tip.label,treenames$taxon),]$glottocode
 t2 = drop.tip(t,t$tip.label[!t$tip.label %in% l[match(in.analysis,l$Language),]$glotto])
+t2 = drop.tip(t2,which(duplicated(t2$tip.label)))
 t2$tip.label = l[match(t2$tip.label,l$glotto),]$Language
 plot(t2)
 ```
@@ -539,7 +570,6 @@ for(i in 1:3){
 ```
 
 
-
 Run a mantel test comparing the Linguistic alignment to the cultural similarity, controlling for the historical distance between languages:
 
 ```{r}
@@ -577,9 +607,8 @@ cat(mainMantel2,
 
 Perform the main test, but using multiple regression on distance matrices (MRM).
 
-Lichstein, J. W. (2007). Multiple regression on distance matrices: a multivariate spatial analysis tool. Plant Ecology, 188(2), 117-131.
-
 ```{r}
+set.seed(21889)
 mainMRM = ecodist::MRM(as.dist(ling.m2)~
                   as.dist(cult.m2) + 
                   as.dist(hist.m2) +
@@ -598,6 +627,105 @@ cat(mainMRM2,
 
 \newpage
 
+# Analysis of filtered data
+
+The 
+
+
+```{r}
+ling.filtered = readRDS("../data/FAIR/alignment_merged.RDS")
+
+ling.filtered <- ling.filtered %>% group_by(name_l1,name_l2) %>%
+  summarise(rho = mean(local_alignment),
+            family1=head(language_family_l1,n=1),
+            family2=head(language_family_l2,n=1),
+            comparison_count = n(),
+            iso2_l1 = head(l1,n=1),
+            iso2_l2 = head(l2,n=1)
+  )
+```
+
+Note that the semantic alignment for the filtered and unfiltered data are essentially exactly the same, but for fewer languages:
+
+```{r}
+ling.filtered$unfiltered.rho = 
+  apply(ling.filtered[,
+      c("iso2_l1","iso2_l2")],1,
+  function(X){
+    ling[(ling$l1==X[1] & ling$l2==X[2]) | 
+           (ling$l1==X[2] & ling$l2==X[1]),]$local_alignment[1]
+  })
+cor(ling.filtered$unfiltered.rho,ling.filtered$rho,use = "complete.obs")
+```
+
+Continue to build data for replication:
+
+```{r}
+ling.filtered$area1 = l[match(ling.filtered$name_l1,l$Language),]$autotyp.area
+ling.filtered$area2 = l[match(ling.filtered$name_l2,l$Language),]$autotyp.area
+
+fgroup = cbind(ling.filtered$family1,ling.filtered$family2)
+fgroup = apply(fgroup,1,sort)
+ling.filtered$family.group = apply(fgroup,2,paste,collapse=":")
+agroup = cbind(ling.filtered$area1,ling.filtered$area2)
+agroup = apply(agroup,1,sort)
+ling.filtered$area.group = apply(agroup,2,paste,collapse=":")
+
+ling.filtered$rho.center = scale(ling.filtered$rho)
+ling.filtered$comparison_count.center = scale(ling.filtered$comparison_count)
+
+matches = sapply(1:nrow(ling.filtered), function(i){
+  x = which((cult$l1==ling.filtered$name_l1[i] & 
+          cult$l2==ling.filtered$name_l2[i]) |
+            (cult$l2==ling.filtered$name_l1[i] & 
+          cult$l1==ling.filtered$name_l2[i]))
+  x[1]
+})
+
+ling.filtered$cult.dist = cult[matches,]$cult.dist
+# flip
+ling.filtered$cult.dist = 1 - ling.filtered$cult.dist
+ling.filtered = ling.filtered[!is.na(ling.filtered$cult.dist),]
+
+ling.filtered$cult.dist.center = scale(ling.filtered$cult.dist)
+```
+
+
+```{r}
+m0F = lmer(
+  rho.center ~ 1 +
+    (1 + cult.dist.center | family.group) +
+    (1 + cult.dist.center | area.group),
+  data = ling.filtered
+)
+m0.5F = lmer(
+  rho.center ~ 1 +
+    comparison_count.center +
+    (1 + cult.dist.center | family.group) +
+    (1 + cult.dist.center | area.group),
+  data = ling.filtered
+)
+m1F = lmer(
+  rho.center ~ 1 +
+    comparison_count.center +
+    cult.dist.center +
+    (1 + cult.dist.center | family.group) +
+    (1 + cult.dist.center | area.group),
+  data = ling.filtered
+)
+an1F = anova(m0F,m0.5F,m1F)
+an1F
+```
+
+Cultural similarity is significantly correlated with Linguistic similarity, even in the filtered data.  Here are the model estimates:
+
+```{r}
+summary(m1F)
+```
+
+
+\newpage
+
 # Comparison between domains
 
 The code that produce the results of this section can be found in `analysis/compareDomains.R`.
@@ -606,7 +734,7 @@ The code that produce the results of this section can be found in `analysis/comp
 
 We fit a mixed effects model to compare the linguistic similarity in a given domain to the overall cultural distance. The linguistic similarity for the given domain is the dependent variable.  There are random intercepts for language family and area pairs, and random slopes for overall cultural similarity by language family and by area.  The `comparison_count` variable is added as a fixed effect. This null model is compared to a model with an additional fixed effect for the overall cultural similairty.
 
-There are 21 linguistic domains with enough data. All correlations are positive and 16 are significant at the 0.05 level.
+There are 21 linguistic domains with enough data. All correlations are positive and 11 are significant at the 0.05 level (adjusted for multiple comparisons).
 
 The full results are in the file:
 
@@ -685,7 +813,51 @@ p3res = read.csv("../results/stats/wikipedia-main/Cor_LingAlignmentByDomains_vs_
 p3res[p3res$p.adjusted<0.05,c("domain","comparison","mantelr","lower","upper","pval3","p.adjusted")]
 ```
 
+\newpage
+
+# Summary of alternative data sources
+
+The github repository also includes the main tests in this document, but applied to data where the alignments are done according to the Common Crawl or Subtitles databases.
+
+## Common Crawl
+
+Mixed effects model: The correlation between semantic alignment and cultural similarity was significant (\input{"../results/stats/tex/MEM_CulturalVsLinguistic_CC.tex"}).  See figure 4.
+
+![Semantic alignment and cultural similarity for data using the Common Crawl alignments](../results/stats/cc/CulturalDistance_Rho_Graph.pdf)
+
+MRM results:
+\input{../results/stats/tex/MRM_family_CC.tex}
+
+\input{../results/stats/tex/MRM_ASJP_CC.tex}
+
+Mantel tests:
+
+\input{../results/stats/tex/Mantel_CC.tex}
+
+## Subtitles
+
+Mixed effects model: The correlation between semantic alignment and cultural similarity was not significant (\input{"../results/stats/tex/MEM_CulturalVsLinguistic_SUBS.tex"}).  See figure 5
+
+![Semantic alignment and cultural similarity for data using the Subtitles alignments](../results/stats/subs/CulturalDistance_Rho_Graph.pdf)
+
+MRM results:
+\input{../results/stats/tex/MRM_family_SUBS.tex}
+
+\input{../results/stats/tex/MRM_ASJP_SUBS.tex}
+
+Mantel tests:
+
+\input{../results/stats/tex/Mantel_SUBS.tex}
+
+\clearpage
+\newpage
 
 # References
 
 Bouckaert, Remco, Philippe Lemey, Michael Dunn, Simon J. Greenhill, Alexander V. Alekseyenko, Alexei J. Drummond, Russell D. Gray, Marc A. Suchard, and Quentin D. Atkinson (2012). Mapping the origins and expansion of the Indo-European language family. Science, 337(6097), 957-960.
+
+Lichstein, J. W. (2007). Multiple regression on distance matrices: a multivariate spatial analysis tool. Plant Ecology, 188(2), 117-131.
+
+Jäger, G. (2018). Global-scale phylogenetic linguistic inference from lexical resources. Scientific data, 5, 180189.
+
+Wichmann, Søren, Eric W. Holman, and Cecil H. Brown (eds.). 2018. The ASJP Database (version 17). 

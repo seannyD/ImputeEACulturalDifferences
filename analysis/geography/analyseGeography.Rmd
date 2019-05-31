@@ -1,0 +1,85 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+```{r}
+library(ggplot2)
+
+try(setwd("~/Documents/Bristol/word2vec/word2vec_DPLACE/analysis/geography/"))
+
+d = read.csv("../../data/geography/geographic-terms-nel.csv",stringsAsFactors = F, fileEncoding = "UTF-8",encoding = "UTF-8")
+
+g = read.csv("../../data/glottolog-languoid.csv/languoid.csv",stringsAsFactors = F, fileEncoding = "UTF-8",encoding = "UTF-8")
+
+d$latl1 = g[match(d$Glottocode_l1,g$id),]$latitude
+d$latl2 = g[match(d$Glottocode_l2,g$id),]$latitude
+d$longl1 = g[match(d$Glottocode_l1,g$id),]$longitude
+d$longl2 = g[match(d$Glottocode_l2,g$id),]$longitude
+
+d$latitude_diff = abs(d$latl1 - d$latl2)
+d$longitude_diff = abs(d$longl1 - d$longl2)
+
+coordPlot = geom_point()
+
+ggplot(d[d$Concept_ID %in% c("Osten::N"),],
+       aes(longitude_diff,local_alignment)) +
+  coordPlot + ggtitle("East")
+ggplot(d[d$Concept_ID %in% c("Westen::N"),],
+       aes(longitude_diff,local_alignment)) +
+  coordPlot + ggtitle("West")
+ggplot(d[d$Concept_ID %in% c("Norden::N"),],
+       aes(latitude_diff,local_alignment)) +
+  coordPlot + ggtitle("North")
+ggplot(d[d$Concept_ID %in% c("Süden::N"),],
+       aes(latitude_diff,local_alignment)) +
+  coordPlot + ggtitle("South")
+
+
+  
+incline = read.csv("../../data/geography/MeanIncline.csv",stringsAsFactors = F, fileEncoding = "UTF-8",encoding = "UTF-8")
+
+d$inclinel1 = incline[match(d$Glottocode_l1,incline$language_glottocode),]$code
+d$inclinel2 = incline[match(d$Glottocode_l2,incline$language_glottocode),]$code
+
+d$incline_diff = abs(d$inclinel1-d$inclinel2)
+
+ggplot(d[d$Concept_ID=="Berg::N",],
+       aes(incline_diff,local_alignment)) +
+  geom_point() + ggtitle("Mountain")
+ggplot(d[d$Concept_ID=="Hügel::N",],
+       aes(incline_diff,local_alignment)) +
+  geom_point() + ggtitle("Hill")
+
+dM = d[d$Concept_ID =="Berg::N",]
+
+d$local_alignment_vs_mountain = 
+  abs(d$local_alignment - dM[match(paste(d$l1,d$l2),paste(dM$l1,dM$l2)),]$local_alignment)
+
+ggplot(d[d$Concept_ID=="Hügel::N",],
+       aes(incline_diff,local_alignment_vs_mountain)) + geom_point()
+
+# TODO: difference between snow and ice
+
+
+ggplot(d[d$Concept_ID=="Schnee::N",], aes(latitude_diff,local_alignment)) + geom_point()
+
+ggplot(d[d$Concept_ID=="Frost::N",], aes(latitude_diff,local_alignment)) + geom_point()
+
+
+# If I have a distance matrix of distances between languages and I want to plot each language as a point in a 2D space, how do I do that?
+
+dC = d[d$Concept_ID %in% c("Osten::N","Westen::N","Norden::N","Süden::N"),]
+
+# Convert to wide, by lang pair local laignment difference by concept
+library(dplyr)
+
+dC %>% group_by(l1,l2)
+
+# Distance matrix for each compass point
+
+# collapse N,E,S,W into 2 dimensions
+
+# plot
+
+```

@@ -162,12 +162,12 @@ l$lat = g[match(l$glotto,g$id),]$latitude
 l$long = g[match(l$glotto,g$id),]$longitude
 
 library(fields)
-
-geoDist = fields::rdist.earth(l[,c("long","lat")],miles=F)
-rownames(geoDist) = l$Language
-colnames(geoDist) = l$Language
+lx = l[!is.na(l$lat),]
+geoDist = fields::rdist.earth(lx[,c("long","lat")],miles=F)
+rownames(geoDist) = lx$Language
+colnames(geoDist) = lx$Language
 diag(geoDist) =0
-geoDist = geoDist[l$in.final.analysis,l$in.final.analysis]
+#geoDist = geoDist[l$in.final.analysis,l$in.final.analysis]
 write.csv(geoDist,file="../data/GeographicDistances.csv",row.names = F,fileEncoding = "UTF-8")
 
 ####################################

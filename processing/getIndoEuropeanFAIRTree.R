@@ -37,6 +37,33 @@ t.dist.long = melt(t.dist)
 write.csv(t.dist.long, file="../data/trees/IndoEuropean_historical_distances_long.csv", row.names = F)
 
 
+# ASJP distances
+
+asjp.langs = read.table("../data/ASJP/listss18_formatted.tab",stringsAsFactors = F,sep="\t",header=T,quote=c())
+fiso = f$iso3
+fiso = fiso[!is.na(fiso)]
+fiso = fiso[fiso!=""]
+fiso = fiso[fiso!=" "]
+asjpIDS = asjp.langs[asjp.langs$iso %in% fiso,]$names
+write.table(asjpIDS,file = "../data/ASJP/ASJPIDs_FAIR.txt",quote=F,row.names = F,col.names = F)
+
+# At this point, you should run /processing/whittleASJPData.py
+# to create ../data/ASJP/levenshteinLanguageDistances_FAIR.csv
+
+asjp = read.csv("../data/ASJP/levenshteinLanguageDistances_FAIR.csv",stringsAsFactors = F,header=F)
+names(asjp) = c("l1","l2","dist")
+asjp$l1 = asjp.langs[match(asjp$l1,asjp.langs$names),]$iso
+asjp$l2 = asjp.langs[match(asjp$l2,asjp.langs$names),]$iso
+asjp$l1 = f[match(asjp$l1,f$iso3),]$glotto
+asjp$l2 = f[match(asjp$l2,f$iso3),]$glotto
+
+# To matrix
+library(igraph)
+graph <- graph.data.frame(asjp, directed=FALSE)
+asjp = get.adjacency(graph, attr="dist", sparse=FALSE)
+
+saveRDS(asjp,file="../data/ASJP/asjp17-dists_FAIR.RData")
+
 # # Afro-Asiatic
 # t2 = read.nexus("../data/trees/Grollemund_summary.trees")
 # treenames2 = read.csv("../data/trees/Grollemund_taxa.csv", stringsAsFactors = F)
