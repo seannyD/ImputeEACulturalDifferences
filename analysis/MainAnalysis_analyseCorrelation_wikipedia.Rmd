@@ -792,6 +792,79 @@ Cultural similarity is significantly correlated with Linguistic similarity, even
 summary(m1F)
 ```
 
+\clearpage
+\newpage
+
+## Both filters
+
+Main test on data where both the wikipedia and semantic filter are on.
+
+```{r}
+ling.bothFiltered = read.csv(
+  "../data/FAIR/nel-wiki-k100-alignments-by-language-pair_BothFiltered.csv",
+  stringsAsFactors = F)
+
+ling.bothFiltered$area1 = l[match(ling.bothFiltered$name_l1,l$Language),]$autotyp.area
+ling.bothFiltered$area2 = l[match(ling.bothFiltered$name_l2,l$Language),]$autotyp.area
+
+fgroup = cbind(ling.bothFiltered$family1,ling.bothFiltered$family2)
+fgroup = apply(fgroup,1,sort)
+ling.bothFiltered$family.group = apply(fgroup,2,paste,collapse=":")
+agroup = cbind(ling.bothFiltered$area1,ling.bothFiltered$area2)
+agroup = apply(agroup,1,sort)
+ling.bothFiltered$area.group = apply(agroup,2,paste,collapse=":")
+
+ling.bothFiltered$rho.center = scale(ling.bothFiltered$rho)
+ling.bothFiltered$comparison_count.center = scale(ling.bothFiltered$comparison_count)
+
+matches = sapply(1:nrow(ling.bothFiltered), function(i){
+  x = which((cult$l1==ling.bothFiltered$name_l1[i] & 
+          cult$l2==ling.bothFiltered$name_l2[i]) |
+            (cult$l2==ling.bothFiltered$name_l1[i] & 
+          cult$l1==ling.bothFiltered$name_l2[i]))
+  x[1]
+})
+
+ling.bothFiltered$cult.dist = cult[matches,]$cult.dist
+# flip
+ling.bothFiltered$cult.dist = 1 - ling.bothFiltered$cult.dist
+ling.bothFiltered = ling.bothFiltered[!is.na(ling.bothFiltered$cult.dist),]
+
+ling.bothFiltered$cult.dist.center = scale(ling.bothFiltered$cult.dist)
+```
+
+
+```{r}
+m0F = lmer(
+  rho.center ~ 1 +
+    (1 + cult.dist.center | family.group) +
+    (1 + cult.dist.center | area.group),
+  data = ling.bothFiltered
+)
+m0.5F = lmer(
+  rho.center ~ 1 +
+    comparison_count.center +
+    (1 + cult.dist.center | family.group) +
+    (1 + cult.dist.center | area.group),
+  data = ling.bothFiltered
+)
+m1F = lmer(
+  rho.center ~ 1 +
+    comparison_count.center +
+    cult.dist.center +
+    (1 + cult.dist.center | family.group) +
+    (1 + cult.dist.center | area.group),
+  data = ling.bothFiltered
+)
+an1F = anova(m0F,m0.5F,m1F)
+an1F
+```
+
+Cultural similarity is significantly correlated with Linguistic similarity, even in the fully filtered data.  Here are the model estimates:
+
+```{r}
+summary(m1F)
+```
 
 
 \newpage

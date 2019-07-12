@@ -58,3 +58,17 @@ dSemFilter$name_l1 = l[match(dSemFilter$iso2_l1,l$iso2),]$Language2
 dSemFilter$name_l2 = l[match(dSemFilter$iso2_l2,l$iso2),]$Language2
 
 write.csv(dSemFilter,file="../data/FAIR/nel-wiki-k100-alignments-by-language-pair_SemanticFiltered.csv",row.names = F)
+
+dBothFilter <- d[d$PASSES.CONCEPT.FILTER=="True" & d$PASSES.WIKI.FILTER=="True",] %>% group_by(l1,l2) %>%
+  summarise(rho = mean(local_alignment),
+            family1=head(Language_Family_l1,n=1),
+            family2=head(Language_Family_l2,n=1),
+            comparison_count = n()
+  )
+names(dBothFilter)[names(dBothFilter)=="l1"] = "iso2_l1"
+names(dBothFilter)[names(dBothFilter)=="l2"] = "iso2_l2"
+
+dBothFilter$name_l1 = l[match(dBothFilter$iso2_l1,l$iso2),]$Language2
+dBothFilter$name_l2 = l[match(dBothFilter$iso2_l2,l$iso2),]$Language2
+
+write.csv(dBothFilter,file="../data/FAIR/nel-wiki-k100-alignments-by-language-pair_BothFiltered.csv",row.names = F)
