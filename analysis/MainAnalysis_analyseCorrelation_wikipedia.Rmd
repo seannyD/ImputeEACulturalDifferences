@@ -625,24 +625,21 @@ cat(mainMRM2,
 ```
 
 
+\clearpage
 \newpage
 
 # Analysis of filtered data
 
-The 
+The analyses in this section use local alignment values based on (a) data that passes the wikipedia filter, and (b) data that passes the semantic filter.
+
+
+## Wikipedia filter
 
 
 ```{r}
-ling.filtered = readRDS("../data/FAIR/alignment_merged.RDS")
-
-ling.filtered <- ling.filtered %>% group_by(name_l1,name_l2) %>%
-  summarise(rho = mean(local_alignment),
-            family1=head(language_family_l1,n=1),
-            family2=head(language_family_l2,n=1),
-            comparison_count = n(),
-            iso2_l1 = head(l1,n=1),
-            iso2_l2 = head(l2,n=1)
-  )
+ling.filtered = read.csv(
+  "../data/FAIR/nel-wiki-k100-alignments-by-language-pair_Filtered.csv",
+  stringsAsFactors = F)
 ```
 
 Note that the semantic alignment for the filtered and unfiltered data are essentially exactly the same, but for fewer languages:
@@ -722,6 +719,79 @@ Cultural similarity is significantly correlated with Linguistic similarity, even
 ```{r}
 summary(m1F)
 ```
+
+\clearpage
+\newpage
+
+## Semantic filter
+
+```{r}
+ling.semFiltered = read.csv(
+  "../data/FAIR/nel-wiki-k100-alignments-by-language-pair_SemanticFiltered.csv",
+  stringsAsFactors = F)
+
+ling.semFiltered$area1 = l[match(ling.semFiltered$name_l1,l$Language),]$autotyp.area
+ling.semFiltered$area2 = l[match(ling.semFiltered$name_l2,l$Language),]$autotyp.area
+
+fgroup = cbind(ling.semFiltered$family1,ling.semFiltered$family2)
+fgroup = apply(fgroup,1,sort)
+ling.semFiltered$family.group = apply(fgroup,2,paste,collapse=":")
+agroup = cbind(ling.semFiltered$area1,ling.semFiltered$area2)
+agroup = apply(agroup,1,sort)
+ling.semFiltered$area.group = apply(agroup,2,paste,collapse=":")
+
+ling.semFiltered$rho.center = scale(ling.semFiltered$rho)
+ling.semFiltered$comparison_count.center = scale(ling.semFiltered$comparison_count)
+
+matches = sapply(1:nrow(ling.semFiltered), function(i){
+  x = which((cult$l1==ling.semFiltered$name_l1[i] & 
+          cult$l2==ling.semFiltered$name_l2[i]) |
+            (cult$l2==ling.semFiltered$name_l1[i] & 
+          cult$l1==ling.semFiltered$name_l2[i]))
+  x[1]
+})
+
+ling.semFiltered$cult.dist = cult[matches,]$cult.dist
+# flip
+ling.semFiltered$cult.dist = 1 - ling.semFiltered$cult.dist
+ling.semFiltered = ling.semFiltered[!is.na(ling.semFiltered$cult.dist),]
+
+ling.semFiltered$cult.dist.center = scale(ling.semFiltered$cult.dist)
+```
+
+
+```{r}
+m0F = lmer(
+  rho.center ~ 1 +
+    (1 + cult.dist.center | family.group) +
+    (1 + cult.dist.center | area.group),
+  data = ling.semFiltered
+)
+m0.5F = lmer(
+  rho.center ~ 1 +
+    comparison_count.center +
+    (1 + cult.dist.center | family.group) +
+    (1 + cult.dist.center | area.group),
+  data = ling.semFiltered
+)
+m1F = lmer(
+  rho.center ~ 1 +
+    comparison_count.center +
+    cult.dist.center +
+    (1 + cult.dist.center | family.group) +
+    (1 + cult.dist.center | area.group),
+  data = ling.semFiltered
+)
+an1F = anova(m0F,m0.5F,m1F)
+an1F
+```
+
+Cultural similarity is significantly correlated with Linguistic similarity, even in the semantic filtered data.  Here are the model estimates:
+
+```{r}
+summary(m1F)
+```
+
 
 
 \newpage

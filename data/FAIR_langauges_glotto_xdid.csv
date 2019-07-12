@@ -130,12 +130,12 @@ Kikuyu,Kikuyu,kiku1240,Atlantic-Congo,xd109,Ad4,kik,S Africa,ki,FALSE
 Kinyarwanda,Kinyarwanda,kiny1244,Atlantic-Congo,xd128,Ae10,kin,S Africa,rw,FALSE
 Kirghiz,Kirghiz,kirg1245,Turkic,NA,NA,kir,Inner Asia,ky,FALSE
 Kirundi,Kirundi,rund1242,Atlantic-Congo,xd184,Ae8,run,S Africa,rn,FALSE
-Komi,Komi,komi1267,Uralic,NA,NA,NA,NA,kv,FALSE
+Komi,Komi,komi1267,Uralic,NA,NA,NA,N Coast Asia,kv,FALSE
 Komi_Permyak,Komi Permyak,komi1269,Uralic,NA,NA,koi,Inner Asia,NA,FALSE
 Kongo,Kongo,sans1272,Atlantic-Congo,xd38,Ac14,kwy,S Africa,kg,FALSE
 Korean,Korean,kore1280,Koreanic,xd638,Ed1,kor,N Coast Asia,ko,TRUE
 Kuanyama,Kuanyama,kuan1247,Atlantic-Congo,NA,NA,kua,NA,kj,FALSE
-Kurdish (Kurmanji),Kurdish (Kurmanji),nort2641,Indo-European,NA,NA,kmr,NA,ku,FALSE
+Kurdish (Kurmanji),Kurdish (Kurmanji),nort2641,Indo-European,NA,NA,kmr,Greater Mesopotamia,ku,FALSE
 Kurdish (Sorani),Kurdish (Sorani),cent1972,Indo-European,xd576,Ci11,ckb,Greater Mesopotamia,ckb,FALSE
 Ladino,Ladino,ladi1251,Indo-European,NA,NA,lad,Greater Mesopotamia,lad,FALSE
 Lak,Lak,lakk1252,Nakh-Daghestanian,NA,NA,lbe,Greater Mesopotamia,lbe,FALSE
@@ -202,7 +202,7 @@ Palatinate German,Palatinate German,,Palatinate German,NA,NA,NA,NA,pfl,FALSE
 Pali,Pali,pali1273,Indo-European,NA,NA,pli,Indic,pi,FALSE
 Pangasinan,Pangasinan,pang1290,Austronesian,NA,NA,pag,Oceania,pag,FALSE
 Papiamentu,Papiamentu,papi1253,Indo-European,NA,NA,pap,NE South America,pap,FALSE
-Pashto,Pashto,pash1269,Indo-European,NA,NA,NA,NA,ps,FALSE
+Pashto,Pashto,pash1269,Indo-European,NA,NA,NA,Inner Asia,ps,FALSE
 Pennsylvania German,Pennsylvania German,penn1240,Indo-European,NA,NA,pdc,NA,pdc,FALSE
 Persian,Persian,west2369,Indo-European,NA,NA,NA,NA,fa,FALSE
 Picard,Picard,pica1241,Indo-European,NA,NA,pcd,NA,pcd,FALSE
