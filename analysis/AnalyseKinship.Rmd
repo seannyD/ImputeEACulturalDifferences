@@ -1,0 +1,142 @@
+---
+title: "Kinship terms"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+
+```{r}
+library(dplyr)
+```
+
+## Load data
+
+```{r}
+setwd("~/Documents/Bristol/word2vec/word2vec_DPLACE/processing/")
+
+d = read.csv("../data/FAIR/nel-wiki-k100-alignments-merged-long.csv",stringsAsFactors = F)
+
+```
+
+Mean local alignment is high for kinship:
+
+```{r}
+x = d %>% group_by(SEMANTICFIELD)%>% summarise(
+  local_alignment = mean(local_alignment)
+) 
+x$SEMANTICFIELD = factor(x$SEMANTICFIELD,levels=x$SEMANTICFIELD[order(x$local_alignment)])
+ggplot(x,aes(y=SEMANTICFIELD,x=local_alignment)) +
+  geom_point()
+```
+
+However, the "Kinship" category in the Concepticon includes many categories of word, including relational kin terms, kin groups, non-relational words for children, and pronouns:
+
+```{r}
+unique(d[d$l1=="en" & d$SEMANTICFIELD=="Kinship",]$Word_Form_l1)
+```
+
+
+If we plot the alignment by different type of words, it's clear that the kin terms are the most highly aligned. In fact, the mean alignment is higher than for Quantity.
+
+```{r}
+kinwords = c("Ehefrau::N","Bruder::N","Sohn::N","Ehemann::N",
+             "Onkel::N","Eltern::N","Tochter::N","Vater::N",
+             "Ehefrau::N","Mutter::N","Tante::N","Schwester::N",
+             "Großvater::N","Großmutter::N")
+pronounwords = c("ich::PRN", "er::PRN", "sie::PRN", "wir::PRN", "du::PRN", "ihr::PRN" )
+
+d$kinwords = "Other"
+d[d$Concept_ID %in% kinwords,]$kinwords = "Kin terms"
+d[d$Concept_ID %in% pronounwords,]$kinwords = "Pronouns"
+
+d$kinwords = factor(d$kinwords,levels=c("Kin terms","Pronouns","Other"))
+
+ggplot(d[d$SEMANTICFIELD=="Kinship",], aes(x=kinwords,y=local_alignment)) +
+  geom_violin() + geom_boxplot(width=0.3)
+
+```
+
+We can compare the alignment for the term "uncle" with the system of kin terms for uncles, from the Standard Cross-Cultural Sample:
+
+```{r}
+sccs = read.csv("../data/dplace_SCCS/data.csv",stringsAsFactors = F)
+s = read.csv("../data/dplace_SCCS/societies.csv",stringsAsFactors = F)
+sccs$glotto = s[match(sccs$soc_id,s$id),]$glottocode
+sccs = sccs[sccs$var_id=="SCCS639",]
+sccs = sccs[sccs$year>200,]
+
+uncle = d[d$Concept_ID=="Onkel::N",]
+
+v = read.csv("../data/dplace_SCCS/codes.csv",stringsAsFactors = F)
+v = v[v$var_id=="SCCS639",]
+sccs$uncleType = v[match(sccs$code,v$code),]$name
+
+uncle$uncleType.l1 = sccs[match(uncle$Glottocode_l1,sccs$glotto),]$uncleType
+uncle$uncleType.l2 = sccs[match(uncle$Glottocode_l2,sccs$glotto),]$uncleType
+
+uncle = uncle[!is.na(uncle$uncleType.l1),]
+uncle = uncle[!is.na(uncle$uncleType.l2),]
+
+uncle$uncleType.cat = apply(uncle[,c("uncleType.l1","uncleType.l2"),],
+                              1,function(X){paste(sort(X),collapse="/")})
+uncle$uncleType.same = uncle$uncleType.l1==uncle$uncleType.l2
+```
+
+The data has `r nrow(uncle)` observations between `r length(unique(c(uncle$l1,uncle$l2)))` languages
+
+```{r}
+ggplot(uncle,aes(y=local_alignment,x=uncleType.cat)) + 
+  geom_boxplot() + coord_flip()
+
+ggplot(uncle,aes(y=local_alignment,x=uncleType.same)) + 
+  geom_boxplot()
+```
+
+```{r}
+uncle$sameFam = uncle$Language_Family_l1==uncle$Language_Family_l2
+summary(lm(local_alignment ~ 1 + sameFam + uncleType.same, data = uncle))
+
+```
+
+
+```{r}
+ea = read.csv("../data/dplace-data-1.0/csv/EA_data.csv",stringsAsFactors = F)
+ea = ea[ea$VarID==12,]
+v = read.csv("../data/dplace-data-1.0/csv/EACodeDescriptions.csv",stringsAsFactors = F)
+v = v[v$VarID==12,]
+ea$cat = v[match(ea$Code,v$Code),]$ShortName
+ea$cat[ea$cat=="Missing data"] = NA
+
+ea$cat2 = ea$cat
+#ea$cat2 = factor(ea$cat2,levels=
+#        c("Ambi-viri",  "Ambilocal","Neolocal", "Patrilocal","Separate","Virilocal"),
+#        c("M",  "N","N", "M","N","M"))
+
+g = read.csv("../data/dplace-data-1.0/csv/xd_id_to_language.csv",stringsAsFactors = F)
+s = read.csv("../data/dplace-data-1.0/csv/ALL_soc_ids_to_xd_ids_24Feb2016.csv",stringsAsFactors = F)
+
+ea$xid = s[match(ea$soc_id,s$soc_id),]$xd_id
+ea$glotto = g[match(ea$xid,g$xd_id),]$DialectLanguageGlottocode
+
+husband = d[d$Concept_ID=="Ehemann::N" | d$Concept_ID=="Ehefrau::N",]
+
+ea = ea[ea$glotto %in% unique(c(uncle$Glottocode_l1,uncle$Glottocode_l2)),]
+husband$locality.l1 = ea[match(husband$Glottocode_l1,ea$glotto),]$cat2
+husband$locality.l2 = ea[match(husband$Glottocode_l2,ea$glotto),]$cat2
+
+husband = husband[!is.na(husband$locality.l1),]
+husband = husband[!is.na(husband$locality.l2),]
+
+husband$locality.same = husband$locality.l1 == husband$locality.l2
+
+ggplot(husband,aes(x=locality.same,y=local_alignment)) +
+  geom_boxplot()
+husband$sameFam = husband$Language_Family_l1==husband$Language_Family_l2
+summary(lm(local_alignment ~ 1 + sameFam + locality.same + Concept_ID, data = husband))
+
+```
+

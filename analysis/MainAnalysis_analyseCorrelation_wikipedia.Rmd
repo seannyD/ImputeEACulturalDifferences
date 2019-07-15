@@ -17,7 +17,30 @@ The first test uses mixed effects modelling.  The pairing of the language family
 
 The second test controls for history using distances from a phylogenetic tree.  The tree comes from Bouckaert et al. (2012).  Patristic distances between languages are used as a measure of historical distance between societies in a Mantel test.  Note that the Mantel test assumes a strict distance metric, which is not necessarily the case with this data, but there are few other ways to deal with continuous pairwise distances. 
 
-# Load libraries
+The first section describes how the cultural similarity measure was calculated.
+
+# Calculating cultural similarity
+
+The aim is to produce a set of distances between societies based on their cultural traits.  The Ethnographic Atlas as made available in D-PLACE could do this, but there is a lot of missing data (about 25% in the whole dataset), which means that distances can't be computed easily.  One approach is to impute the missing data (guess their values based on existing data).  It's unlikely that any imputation method will be completely accurate, but for our purposes we don't need to be accurate, just *unbiased*.  That is, the imputed values should not bias the estimates of the distances between cultures.
+
+In this case, we use multiple imputation: calculating many possible alternative imputations and taking the mean distances over all imputations.  Note that this can break ties between otherwise identical distances.
+
+## Imputing missing values in the Ethnographic Atlas
+
+We use the imputation package `mice` for R.  We compared various settings of the imputation method, and found that using classification and regression trees (CART) with the standard parameters produced the best results. CART works by building a decision tree: an optimal set of yes-no questions to ask about predictor variables in order to guess the value of a target variable.  The tree divides the data into partitions which look similar.  The algorithm works out which partition a missing data point would belong to, then samples the target variable distribution from that partition.  To account for historical relationships, we included language family according to Glottolog and geographic area according to Autotyp as additional factors on which the imputation process could draw.
+
+We ran CART multiple imputation on the Ethnographic Atlas.  We excluded population size, one more variable that was coded for less than 33% of societies, and any societies that had fewer than 33% variables coded.  This left 92 variables for 962 languages with 16% missing data.
+
+We tested the imputation by taking the full Ethnographic Atlas data, creating some new missing values in random places and then re-imputing those missing values. We can then asses how accurate the imputation was for those values. Since the main analysis would only be using a small sub-set of the data, it is important to assess performance on these in particular, rather than the entire set of languages. Missing data was only inserted for languages in the main analysis of semantic alignment below. CART imputation guessed the correct value of missing data 74% of the time (average over 100 imputations).  This is reasonably good, considering that most variables have between 4 and 8 possible values (median = 6).  For example, this is 8.6 standard deviations better than choosing randomly (accuracy = 19%) and 5.6 standard deviations better than sampling from the known distribution of the target variable (accuracy = 37% on the same missing data).  This is not good enough to use in analyses that look at individual traits, but serves our purposes to estimate overall distances between langauges.
+
+We produced 100 imputation sets with the final settings.  These were then used to create distance matrices using gower distance between discrete traits (mean correlation between sets r = 0.94, estimates of distance vary by around 2% on average). The final distance matrix was the mean of each of the 100 distance matrices. Distances were also calculate for sub-domains of the data.
+
+The full scripts and data can be found at [https://github.com/seannyD/ImputeEACulturalDifferences](https://github.com/seannyD/ImputeEACulturalDifferences).
+
+\newpage
+
+
+## Load libraries
 ```{r warning=F, message=F}
 library(ape)
 library(ecodist)
@@ -558,11 +581,14 @@ for(i in 1:3){
                 nperm = 100000)
     print(stat)
     stat = round(stat,2)
-    stat2 = sprintf("$r$ = %s[%s,%s], one-tailed $p$ = %s",
-      stat[1],
-      stat[5],
-      stat[6],
-      min(c(stat[2],stat[3])))
+    pval = round(min(c(stat[2],stat[3])),3)
+    if(pval==0){pval = "$<$ 0.001"}
+    stat2 = sprintf("$r$ = %s, 95\\%% CI = [%s,%s], one-tailed $p$ = %s",
+      round(stat[1],3),
+      round(stat[5],3),
+      round(stat[6],3),
+      pval)
+    stat2 = gsub("0\\.",".",stat2)
     cat(stat2,file=
           paste0("../results/stats/tex/Mantel",var1,"Vs",var2,"Distance.tex"))
   }
@@ -592,12 +618,13 @@ mainMantel
 
 ```{r}
 mainMantel = round(mainMantel,2)
-mainMantel2 = sprintf("$r$ = %s[%s,%s], one-tailed $p$ = %s",
-        mainMantel[1],
-        mainMantel[5],
-        mainMantel[6],
-        mainMantel[2]
+mainMantel2 = sprintf("$r$ = %s, 95\\%% CI = [%s,%s], one-tailed $p$ = %s",
+        round(mainMantel[1],3),
+        round(mainMantel[5],3),
+        round(mainMantel[6],3),
+        round(mainMantel[2],3)
       )
+mainMantel2 = gsub("0\\.",".",mainMantel2)
 cat(mainMantel2,
     file="../results/stats/tex/MantelCultrualVsLinguisticDistance_Partial.tex")
 ```
