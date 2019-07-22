@@ -1,11 +1,10 @@
 ---
 title: "Semantic alignments in number words"
 author: "Bill Thompson, Seán Roberts & Gary Lupyan"
-header-includes: 
-  - \usepackage[utf8]{inputenc}
 output: 
   pdf_document:
     toc: true
+    latex_engine: xelatex
 ---
 
 ```{r echo=F,eval=F}
@@ -47,7 +46,7 @@ Although translations may be more direct for number words, there are still diffe
 -  *l1_typology*: Number line typology according to Calude & Verkerk (2016)
 -  *l2_typology*: : Number line typology according to Calude & Verkerk (2016)
 -  *sameNumeralTypology*: Comparison of number line typology.
--  *seven*
+-  *seven*: True if the numeral is 7. (see below)
 -  *homophone*: Word has a homophone in the North Euralex database.
 -  *freqDiff*: Difference in orthographic frequency (absolute, log scale)
 
@@ -210,6 +209,7 @@ langAverages$l = factor(langAverages$l,
      levels = names(sort(tapply(langAverages$local_alignment,langAverages$l,mean))))
 ```
 
+\newpage
 
 # Overview
 
@@ -225,7 +225,8 @@ ggplot(numbers,aes(x=factor(number_numeric),y=local_alignment)) + geom_boxplot()
 -  Alignment rises 2-3.
 -  7 has a lower alignment.
 -  Drop in alignment for 100, 1000.
--  Outliers for 9.
+-  Outliers for 7 and 9.
+-  Outliers for 40 and 70?
 
 1 and 2 are often sources for grammaticalised indefinite/duel markers (Givón, 1981).
 
@@ -270,11 +271,11 @@ ggplot(numbers[!numbers$homophone,],
   myThemeBasic
 ```
 
-
+\newpage
 
 ## Number line
 
-We can look at the importance of the different ways that numeral systems are compased. We use data from Calude & Verkerk (2016), and identify whether two languages have the same system for forming a particular numeral.
+We can look at the importance of the different ways that numeral systems are compased. We use data from Calude & Verkerk (2016), and identify whether two languages have the same system for forming a particular numeral. Calude & Verkerk call this the 'number line'.
 
 In our sample, all numbers below 10 are atoms, so there are only differences above 10. For example, English uses a unique atom to represent 12 (/twelv/), while Bulgarian uses a form that is composed of "2+10" (2 = dve, 10 = deset, 12 = dvanadeset).
 
@@ -288,6 +289,8 @@ ggplot(numbers[numbers$number_numeric>10,],
   geom_boxplot()
 ```
 
+\newpage
+
 ## Variation by language
 
 The plot below shows the overview of comparisons by language:
@@ -296,7 +299,7 @@ The plot below shows the overview of comparisons by language:
 ggplot(langAverages,aes(x=l,y=local_alignment)) + geom_boxplot()
 ```
 
-Danish seems to have a lower average.  We note that some Danish 'crowns' are irregular (50,60,70,80,90).  These pick out the outliers (dots are danish, blue dots are irregualr, violin plots are the rest of the data):
+Danish seems to have a lower average.  We note that some Danish 'crowns' are irregular (50,60,70,80,90).  These pick out many outliers (dots are danish, blue dots are irregualr, violin plots are the rest of the data):
 
 ```{r}
 ggplot(numbers[!numbers$is_danish,],
@@ -306,17 +309,26 @@ ggplot(numbers[!numbers$is_danish,],
              aes(colour=danish_irregular))
 ```
 
+Formal test of effect of difference between regular and irregular numbers within Danish:
+
+```{r}
+summary(lm(local_alignment~irreg_in_danish, data=
+  numbers[numbers$is_danish,]))
+```
+
+\newpage
 
 ## Variation by frequency
 
-Semantic alignment by frequency (brighter colours are higher numeri vlaues):
+Semantic alignment by frequency (brighter colours are higher numeric values):
 
 ```{r}
 ggplot(numbers,
        aes(x=freqDiff,y=local_alignment,colour=log10(number_numeric))) +
   geom_point() +
   stat_smooth() +
-  theme(legend.position = 'none') +
+  scale_colour_gradient(name = "Numeral", trans = "log",
+                        breaks = log10(c(1,5,10,30,100,1000)), labels =c(1,5,10,30,100,1000)) +
   myThemeBasic + xlab("Frequency difference") +
   ylab("Local alignment")
 ```
@@ -495,7 +507,7 @@ gamPlot
 
 This shows the difference for 1, a dip for 7 (which the analyses above suggest is due to Uralic languages) and a decrease for 1000.
 
-We now fit a full model with many other controls:
+We now fit a full model with many other predictors:
 
 -  Number typology
 -  Interaction between numeric value and typology
@@ -527,16 +539,53 @@ Compare models. Adding the extra factors makes a difference.
 lrtest(m0,m1)
 ```
 
-Summary of main model: The EDF for `number_numeric` is high, indicating strong non-linearities. The main model explains `round(summary(m1)$dev.expl*100,2)`% of the deviance, compared to `round(summary(m0)$dev.expl*100,2)`% in the baseline model.
-
 ```{r}
 summary(m1)
 ```
 
-The code below detects significantly steep slopes in the GAM curve.  Thick line segments indicate significant rises or decreases.  We see that 1 and 2 have lower alignment, then numbers 3-20 are fairly constant. Beyond 20, there is a decrease in alignment, especially for numbers with different numeral typologies. Various outliers captured by the model are drawn on top:
+## Summary of main model
+
+```{r echo=F}
+mp = function(var){
+  p = round(summary(m1)$p.table[var,"Pr(>|t|)"],4)
+  if(p==0){ p = "< 0.001" }
+  paste("$\\beta$ =",
+        signif(summary(m1)$p.table[var,"Estimate"],3),
+        ", p =",p)
+}
+```
+
+
+The final model explains `r round(summary(m1)$dev.expl*100,2)`% of the deviance, compared to `r round(summary(m0)$dev.expl*100,2)`% in the baseline model.
+
+Parametric effects:
+
+-  Being an Uralic language is nota strong predictor.
+-  The number 7 has lower alignment in general (`r mp("sevenTRUE")`)
+-  Danish irregulars have lower alignment (`r mp("danish_irregularTRUE")`))
+-  Overall, there is no difference for comparisons between numbers with different numeral typologies (`r mp("differentNumeralTypologyTRUE")`)
+-  Alignment is lower for comparisons between words were at least one has a homophone (`r mp("homophoneTRUE")`)
+-  Comparisons with Uralic sevens are significantly lower in alignment (`r mp("isUralicTRUE:sevenTRUE")`)
+
+Smooth effects:
+
+-  The EDF for numeral is high, indicating strong non-linearities. 
+-  There is an interaction between numeral value and numeral typology. The graph below shows that alignment is lower for comparisons between numbers with different typologies for numbers above 50. Also note that there is a slight increase in the semantic alignment for number 20 if the two languages have the same numeral typology.
+-  There was no effect of historical distance.
+-  There were significant random effects for particular language pairs.
+-  There was a significant linear effect of frequency difference: Alignment was lower when the frequency difference was larger. 
+
+The hidden code below (see the Rmd file) detects significantly steep slopes in the GAM curve.  Thick line segments indicate significant rises or decreases.  We see that 1 and 2 have lower alignment, then numbers 3-20 are fairly constant. Beyond 20, there is a decrease in alignment, especially for numbers with different numeral typologies. Various outliers captured by the model are drawn on top.  Note that there are no numbers below 10 that have different numeral typologies, so we have truncated the curve accordingly.
 
 ```{r echo=F,fig.show="hide",results="hide"}
 makeFancyGam = function(modelToPlot){
+  mainCurveC = "#15a7e6"
+  mainCurveMutedC = "#bfe8f9"
+  curve2C = "#fc5084"
+  curve2MutedC = "#febace"
+  hung7C = "#9cd927"
+  danirC = "#25a06e"
+  homopC = "#235f7b"
   plot.new()
   px = plotGAMSignificantSlopes(
                   modelToPlot,
@@ -574,8 +623,15 @@ makeFancyGam = function(modelToPlot){
   # Plot the slopes alongside the raw data
   px$type = "Same numeral typology"
   pxDT$type = "Different numeral typology"
+  # Truncate curve for different numeral typology
+  pxDT[pxDT$curve.x<=10,]$curve.y = NA
+  pxDT[pxDT$curve.x<=10,]$m2.dsig.incr = NA
+  pxDT[pxDT$curve.x<=10,]$m2.dsig.decr = NA
+  pxDT[pxDT$curve.x<=10,]$curve.y.lower = NA
+  pxDT[pxDT$curve.x<=10,]$curve.y.upper = NA
+  
   pxAll = rbind(px,pxDT)
-  pxAll$type = factor(pxAll$type)
+  pxAll$type = factor(pxAll$type,levels = c("Same numeral typology","Different numeral typology"))
   gamPlot <- ggplot(pxAll, aes(x=curve.x,y=curve.y,group=type))+
       geom_violin(data=numbers[
                     numbers$danish_irregular=="FALSE" &
@@ -597,41 +653,42 @@ makeFancyGam = function(modelToPlot){
       # Danish irregulars
       geom_point(data=numbers[numbers$danish_irregular=="TRUE",],
                  aes(x=number_numeric,y=local_alignment,group=NULL),
-                 colour='blue',alpha=0.5) +
+                 colour=danirC,alpha=0.5) +
       # Uralic 7s
       geom_point(data=numbers[(numbers$l1=="hu"| numbers$l2=="hu") & numbers$seven=="TRUE",],
                  aes(x=number_numeric,y=local_alignment,group=NULL),
-                 colour='red',alpha=0.5) +
+                 colour=hung7C,alpha=0.5) +
       # Homophones
       geom_point(data=numbers[numbers$homophone=="TRUE" & 
                                 (numbers$l1=="fr"| numbers$l2=="fr"),],
                  aes(x=number_numeric,y=local_alignment,group=NULL),
-                 colour='green',alpha=0.5) +
+                 colour=homopC,alpha=0.5) +
       # looks
       xlab("Number")+
       ylab("Local alignment") +
       scale_x_continuous(trans = "log10", 
               breaks = c(1,2,3,4,5,6,7,8,10,
                        12,20,30,40,50,70,100,1000)) +
-      scale_color_manual(values=c("#e66101",'#5e3c99'),name=element_blank())+
-      scale_fill_manual(values=c("#fdb863", "#b2abd2"), name="fill") +
-    myThemeBasic+ guides(fill=F) + theme(legend.position = "top") +
-    xlab("Number")+ylab("Semantic Alignment") +
-    annotate("text",x=6,y=0.4,label="Hungarian 7",colour="red")+
-    annotate("text",x=70,y=0.4,label="Danish irregulars",colour="blue") +
-    annotate("text",x=14,y=0.2,label="Homophones",colour="green")
+      scale_color_manual(values=c(mainCurveC,curve2C),name="Comparisons between numbers with:")+
+      scale_fill_manual(values=c(mainCurveMutedC,curve2MutedC), name="fill") +
+    myThemeBasic+ guides(fill=F) + #labs(colour="XX") +
+    theme(legend.position = c(0.3,0.88),
+          axis.text.x = element_text(size=10),
+          axis.title.y = element_text(angle=0,vjust = 0.5)) +
+    xlab("Number")+ylab("Cross-\nlinguistic\nSemantic\nAlignment") +
+    annotate("text",x=3.75,y=0.2,label="Hungarian 7",colour=hung7C)+
+    annotate("text",x=70,y=0.4,label="Danish irregulars",colour=danirC) +
+    annotate("text",x=17.5,y=0.0,label="Homophones",colour=homopC) +
+    coord_cartesian(ylim=c(-0.1,1.25)) +
+    scale_y_continuous(breaks=c(0,0.5,1))
   return(gamPlot)
 }
 gamPlot = makeFancyGam(m1)
-# Optionally save to file
-#pdf("SemanticAlignment_Numbers.pdf")
-#gamPlot
-#dev.off()
 ```
 
 ```{r}
 gamPlot
-pdf("../../results/numbers/FinalGamModel.pdf", width=8,height=6)
+pdf("../../results/numbers/FinalGamModel.pdf", width=7.5,height=4.5)
 gamPlot
 dev.off()
 ```
@@ -659,7 +716,7 @@ summary(m1.phylo)
 The effects are very similar. The effect of history is significant, but not large. Semantic alignment is lower for more distantly related languages:
 
 ```{r}
-plot(m1.phylo,select=3)
+plot(m1.phylo,select=3,ylim=c(-0.2,0.2))
 ```
 
 Plot the main effects, which look much like the main graph above.
@@ -676,7 +733,7 @@ gamPlot.phylo
 
 # Conclusion
 
-Semantic alignment for number words is generally high, though there are some differences that can be explained.  1 and 2 have lower alignment due to often being grammaticalised as indefinite or dual marker (Givon, 1981). Numbers 3-12 generally have high alignment (mean local alignment = 0.87), and higher numbers decline in alignment up to 1000. There are also language-specific differences due to how number lines are constructed (e.g. base, combination rules, see Calude & Verkerk, 2016), or for irregular forms (e.g. 50, 60, 70, 80 and 90 in Danish). Some number words have  alternative associations due to homophones (e.g. the Hungarian 7 is used directly to mean 'week', and 'neuf' in French means '9' or 'new'). The historical distance between languages did not predict much of the variation.
+Semantic alignment for number words is generally high, though there are some differences that can be explained (the model explained `r round(summary(m1)$dev.expl*100,2)`% of the deviance).  1 and 2 have lower alignment due to often being grammaticalised as indefinite or dual marker (Givon, 1981). Numbers 3-12 generally have high alignment (mean local alignment = 0.87), and higher numbers decline in alignment up to 1000. There are also language-specific differences due to how number lines are constructed (e.g. base, combination rules, see Calude & Verkerk, 2016), or for irregular forms (e.g. 50, 60, 70, 80 and 90 in Danish). Some number words have  alternative associations due to homophones (e.g. the Hungarian 7 is used directly to mean 'week', and 'neuf' in French means '9' or 'new'). The historical distance between languages did not predict much of the variation.
 
 The differences in semantic alignment may appear either because (A) the semantic associations are different for different languages, or (B) as a a side-effect of numbers appearing with different words skewing the alignment metric. Effects that support (B) could include:
 

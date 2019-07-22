@@ -9,31 +9,44 @@ output:
 setwd("~/Documents/Bristol/word2vec/word2vec_DPLACE/analysis/")
 ```
 
+\newpage
+
+```{r echo=F,eval=F}
+#\subsection*{Testing the effects of culture, geography, and language-relatedness on semantic alignment}
+
+#The measure of cultural similarity was based on cultural traits from the Ethnographic Atlas as linked to languages in D-PLACE \cite{kirby2016d}. Missing values were imputed by multiple imputation using classification and regression trees \cite{buuren2010mice}, including language family as a conditioning factor. During testing, this method imputed the correct value for held-out data 74\% of the time, compared to a baseline of imputation by random choice of 19\%. Cultural distances between two language groups were calculated as the average Gower distances between traits in 100 imputed sets. The relationship between semantic alignment and cultural similarity was tested using a mixed-effects model with random effects for language family \cite{glottolog} and geographic area \cite{nichols2013autotyp} and a fixed effect for the number of lexical comparisons that went into the mean semantic alignment estimates. The effect was also confirmed using a partial Mantel test to control for historical and geographic distance on the sub-sample of Indo-European languages (\input{stats/MantelCultrualVsLinguisticDistance_Partial.tex}) and by a multiple regression on distance matrices \cite{lichstein2007multiple} (\input{stats/MRMCultrualVsLinguisticDistance_Partial.tex}). The results above were robustly replicated using the filtered data and also alternative sources for semantic alignment (common crawl). The correlation was not robust to all tests or for data derived from the subtitles dataset, possibly because there were only 20 languages available to analyse. The data and code for these analyses are available in SI XXXX.
+
+#Historic proximity was measured using patristic distances in a phylogenetic tree of 19 Indo-European languages \cite{bouckaert2012mapping}.  Geographic proximity was measured as the great circle distance between the cultural centres of each language as defined in Glottolog \cite{glottolog}. Mantel tests were used to test the relationship between semantic alignment and historical proximity and between semantic alignment and geographic proximity. For the analysis within domains, partial Mantel tests were used to estimate the correlation between the semantic alignment and the cultural/geographic/historical proximity while partialling out the effect of the other two proximity measures. 
+```
+
+
 # Introduction
 
 We compare cultural distances between socieites with linguistic similarities between societies, controlling for shared history in two ways.
 
-The first test uses mixed effects modelling.  The pairing of the language family of each language (according to Glottolog) is used as a random effect.  That means that the model can capture the likelihood that two languages from the Indo-European language family will be more similar to each other than two languages from different language families.  The same is done with geographic area according to Autotyp.
+The first test uses mixed effects modelling.  The pairing of the language family of each language (according to Glottolog, Hammarstrom et al., 2018) is used as a random effect.  That means that the model can capture the likelihood that two languages from the Indo-European language family will be more similar to each other than two languages from different language families.  The same is done with geographic area according to Autotyp (Nichols et al., 2013). The model also included a fixed effect for for the number of lexical comparisons that went into the mean semantic alignment estimates (generally, more available comparisons indicate more possible comparisons, i.e. more similar languages).
 
-The second test controls for history using distances from a phylogenetic tree.  The tree comes from Bouckaert et al. (2012).  Patristic distances between languages are used as a measure of historical distance between societies in a Mantel test.  Note that the Mantel test assumes a strict distance metric, which is not necessarily the case with this data, but there are few other ways to deal with continuous pairwise distances. 
+The second test controls for history using distances from a phylogenetic tree.  The tree comes from Bouckaert et al. (2012).  Patristic distances between languages are used as a measure of historical distance between societies in a Mantel test.  Note that the Mantel test assumes a strict distance metric, which is not necessarily the case with this data, but there are few other ways to deal with continuous pairwise distances. Mantel tests were used to test the relationship between semantic alignment and historical proximity and between semantic alignment and geographic proximity.  Geographic proximity was measured as the great circle distance between the cultural centres of each language as defined in Glottolog. For the analysis within domains, partial Mantel tests were used to estimate the correlation between the semantic alignment and the cultural/geographic/historical proximity while partialling out the effect of the other two proximity measures. 
 
-The first section describes how the cultural similarity measure was calculated.
+The effect was also confirmed using multiple regression on distance matrices (Lichstein, 2007). The results above were robustly replicated using the filtered data and also alternative sources for semantic alignment (common crawl, see file *AnalyseCorrelation_cc.pdf*). The correlation was not robust to all tests or for data derived from the subtitles dataset (see file *AnalyseCorrelation_subs.pdf*), possibly because there were only 20 languages available to analyse.
+
+The final section looks at relationships between sub-domains.  The first section describes how the cultural similarity measure was calculated.
 
 # Calculating cultural similarity
 
-The aim is to produce a set of distances between societies based on their cultural traits.  The Ethnographic Atlas as made available in D-PLACE could do this, but there is a lot of missing data (about 25% in the whole dataset), which means that distances can't be computed easily.  One approach is to impute the missing data (guess their values based on existing data).  It's unlikely that any imputation method will be completely accurate, but for our purposes we don't need to be accurate, just *unbiased*.  That is, the imputed values should not bias the estimates of the distances between cultures.
+The aim is to produce a set of distances between societies based on their cultural traits.  The Ethnographic Atlas (Murdock et al., 1999) as made available in D-PLACE (Kirby et al., 2016) could do this, but there is a lot of missing data (about 25% in the whole dataset), which means that distances can't be computed easily.  One approach is to impute the missing data (guess their values based on existing data).  It's unlikely that any imputation method will be completely accurate, but for our purposes we don't need to be accurate, just *unbiased*.  That is, the imputed values should not bias the estimates of the distances between cultures.
 
-In this case, we use multiple imputation: calculating many possible alternative imputations and taking the mean distances over all imputations.  Note that this can break ties between otherwise identical distances.
+In this case, we use multiple imputation: calculating many possible alternative imputations and taking the mean distances over all imputations. 
 
 ## Imputing missing values in the Ethnographic Atlas
 
-We use the imputation package `mice` for R.  We compared various settings of the imputation method, and found that using classification and regression trees (CART) with the standard parameters produced the best results. CART works by building a decision tree: an optimal set of yes-no questions to ask about predictor variables in order to guess the value of a target variable.  The tree divides the data into partitions which look similar.  The algorithm works out which partition a missing data point would belong to, then samples the target variable distribution from that partition.  To account for historical relationships, we included language family according to Glottolog and geographic area according to Autotyp as additional factors on which the imputation process could draw.
+We use the imputation package `mice` for R (van Buuren & Groothuis-Oudshoorn, 2011).  We compared various settings of the imputation method, and found that using classification and regression trees (CART) with the standard parameters produced the best results. CART works by building a decision tree: an optimal set of yes-no questions to ask about predictor variables in order to guess the value of a target variable.  The tree divides the data into partitions which look similar.  The algorithm works out which partition a missing data point would belong to, then samples the target variable distribution from that partition.  To account for historical relationships, we included language family according to Glottolog and geographic area according to Autotyp as additional factors on which the imputation process could draw.
 
 We ran CART multiple imputation on the Ethnographic Atlas.  We excluded population size, one more variable that was coded for less than 33% of societies, and any societies that had fewer than 33% variables coded.  This left 92 variables for 962 languages with 16% missing data.
 
 We tested the imputation by taking the full Ethnographic Atlas data, creating some new missing values in random places and then re-imputing those missing values. We can then asses how accurate the imputation was for those values. Since the main analysis would only be using a small sub-set of the data, it is important to assess performance on these in particular, rather than the entire set of languages. Missing data was only inserted for languages in the main analysis of semantic alignment below. CART imputation guessed the correct value of missing data 74% of the time (average over 100 imputations).  This is reasonably good, considering that most variables have between 4 and 8 possible values (median = 6).  For example, this is 8.6 standard deviations better than choosing randomly (accuracy = 19%) and 5.6 standard deviations better than sampling from the known distribution of the target variable (accuracy = 37% on the same missing data).  This is not good enough to use in analyses that look at individual traits, but serves our purposes to estimate overall distances between langauges.
 
-We produced 100 imputation sets with the final settings.  These were then used to create distance matrices using gower distance between discrete traits (mean correlation between sets r = 0.94, estimates of distance vary by around 2% on average). The final distance matrix was the mean of each of the 100 distance matrices. Distances were also calculate for sub-domains of the data.
+We produced 100 imputation sets with the final settings.  These were then used to create distance matrices using Gower distance between discrete traits (mean correlation between sets r = 0.94, estimates of distance vary by around 2% on average). The final distance matrix was the mean of each of the 100 distance matrices. Distances were also calculate for sub-domains of the data.
 
 The full scripts and data can be found at [https://github.com/seannyD/ImputeEACulturalDifferences](https://github.com/seannyD/ImputeEACulturalDifferences).
 
@@ -1026,8 +1039,20 @@ Mantel tests:
 
 Bouckaert, Remco, Philippe Lemey, Michael Dunn, Simon J. Greenhill, Alexander V. Alekseyenko, Alexei J. Drummond, Russell D. Gray, Marc A. Suchard, and Quentin D. Atkinson (2012). Mapping the origins and expansion of the Indo-European language family. Science, 337(6097), 957-960.
 
-Lichstein, J. W. (2007). Multiple regression on distance matrices: a multivariate spatial analysis tool. Plant Ecology, 188(2), 117-131.
+van Buuren, S. & Groothuis-Oudshoorn, K. (2011). mice: Multivariate Imputation by Chained Equations in R. Journal of Statistical Software, 45(3), 1-67. URL https://www.jstatsoft.org/v45/i03/.
+
+Hammarstrom, H. , R. Forkel, M. Haspelmath (2018) clld/glottolog: Glottolog database 3.3, Jena:
+Max Planck Institute for the Science of Human History.
 
 Jäger, G. (2018). Global-scale phylogenetic linguistic inference from lexical resources. Scientific data, 5, 180189.
+
+Kirby, Kathryn R., Russell D. Gray, Simon J. Greenhill, Fiona M. Jordan, Stephanie Gomes-Ng, Hans-Jörg Bibiko, Damián E. Blasi, Carlos A. Botero, Claire Bowern, Carol R. Ember, Dan Leehr, Bobbi S. Low, Joe McCarter, William Divale, and Michael C. Gavin. (2016). D-PLACE: A Global Database of Cultural, Linguistic and Environmental Diversity. PLoS ONE, 11(7): e0158391.
+
+Lichstein, J. W. (2007). Multiple regression on distance matrices: a multivariate spatial analysis tool. Plant Ecology, 188(2), 117-131.
+
+Murdock, G. P., R. Textor, H. Barry, III, D. R. White, J. P. Gray, and W. T. Divale. 1999. Ethnographic Atlas. World Cultures 10:24-136 (codebook)
+
+Nichols, J., Witzlack-Makarevich, A. & Bickel, B. (2013), The AUTOTYP genealogy and geography
+database: 2013 release, http://www.spw.uzh.ch/autotyp/.
 
 Wichmann, Søren, Eric W. Holman, and Cecil H. Brown (eds.). 2018. The ASJP Database (version 17). 
