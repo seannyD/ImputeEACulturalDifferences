@@ -49,7 +49,7 @@ We tested the imputation by taking the full Ethnographic Atlas data, creating so
 
 We produced 100 imputation sets with the final settings.  These were then used to create distance matrices using Gower distance between discrete traits (mean correlation between sets r = 0.94, estimates of distance vary by around 2% on average). The final distance matrix was the mean of each of the 100 distance matrices. Distances were also calculate for sub-domains of the data.
 
-The full scripts and data can be found at [https://github.com/seannyD/ImputeEACulturalDifferences](https://github.com/seannyD/ImputeEACulturalDifferences).
+The full scripts and data can be found at [https://github.com/seannyD/ImputeEACulturalDifferences](https://github.com/seannyD/ImputeEACulturalDifferences).  Reviewers can follow this link: [https://figshare.com/s/06378bc59a771d28b1d0](https://figshare.com/s/06378bc59a771d28b1d0)
 
 \newpage
 
