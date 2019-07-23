@@ -1,5 +1,6 @@
 ---
 title: "Predicting semantic alignment by cultural similarity"
+author: "Bill Thompson, Seán Roberts & Gary Lupyan"
 output: 
   pdf_document:
     toc: true
