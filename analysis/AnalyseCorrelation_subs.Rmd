@@ -1,5 +1,6 @@
 ---
-title: "Predicting semantic alignment by cultural similarit: Common crawl data"
+title: "Predicting semantic alignment by cultural similarity: Subtitles data"
+author: "Bill Thompson, Seán Roberts & Gary Lupyan"
 output: 
   pdf_document:
     toc: true
@@ -11,7 +12,7 @@ setwd("~/Documents/Bristol/word2vec/word2vec_DPLACE/analysis/")
 
 # Introduction
 
-This file replicates the tests for the main wikipedia data on the common crawl data. 
+This file replicates the tests for the main wikipedia data on the subtitles data. 
 
 # Load libraries
 ```{r warning=F, message=F}

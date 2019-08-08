@@ -1,5 +1,6 @@
 ---
-title: "Predicting semantic alignment by cultural similarit: Common crawl data"
+title: "Predicting semantic alignment by cultural similarity: Common crawl data"
+author: "Bill Thompson, Seán Roberts & Gary Lupyan"
 output: 
   pdf_document:
     toc: true

@@ -38,20 +38,22 @@ g = read.csv("../data/glottolog-languoid.csv/languoid.csv", stringsAsFactors = F
 l$family = g[match(l$glotto,g$id),]$family_pk
 l$family = g[match(l$family,g$pk),]$name
 
-lingDistancesFile = "../data/FAIR/nel-wiki-k100-alignments-by-language-pair.csv"
+lingDistancesFile = "../data/FAIR/nel-wiki-k100-alignments-by-language-pair_BothFiltered.csv"
 ling = read.csv(lingDistancesFile, stringsAsFactors = F)
 
-ling = ling[!(ling$l1=="se" || ling$l2 == "se"),]
-ling = ling[!(ling$l1=="sl" || ling$l2 == "sl"),]
+#ling = read.csv("../data/FAIR/nel-wiki-k100-alignments-merged-long.csv",stringsAsFactors = F)
+
+ling = ling[ling$iso2_l1!="sl",]
+ling = ling[ling$iso2_l2!="sl",]
 
 cult$l1.iso2 = l[match(cult$l1,l$Language2),]$iso2
 cult$l2.iso2 = l[match(cult$l2,l$Language2),]$iso2
 
-fairisos = unique(c(ling$l1,ling$l2))
+fairisos = unique(c(ling$iso2_l1,ling$iso2_l2))
 cultisos = unique(c(cult$l1.iso2, cult$l2.iso2))
 
 cult = cult[(cult$l1.iso2 %in% fairisos) & (cult$l2.iso2 %in% fairisos),]
-ling = ling[(ling$l1 %in% cultisos) & (ling$l2 %in% cultisos),]
+#ling = ling[(ling$l1 %in% cultisos) & (ling$l2 %in% cultisos),]
 
 final.langs = l[l$iso2 %in% unique(c(ling$l1,ling$l2)),]$Language2
 
@@ -93,18 +95,37 @@ cat(vlables.text,file="../results/splitstree/nodeColours2.txt",append = F)
 
 ####
 # Splitstree for linguistic distances
+install.packages("remotes")
+remotes::install_github("abrozzi/microbio")
+library("microbio")
 library(igraph)
-
+ling$l1 = ling$iso2_l1
+ling$l2 = ling$iso2_l2
+ling$local_alignment = ling$rho
 grph <- graph.data.frame(ling[,c("l1",'l2','local_alignment')], directed=FALSE)
 # add value as a weight attribute
 ling.m = get.adjacency(grph, attr="local_alignment", sparse=FALSE)
-rownames(ling.m) = l[match(rownames(ling.m),l$iso2),]$Language2
-colnames(ling.m) = l[match(colnames(ling.m),l$iso2),]$Language2
-ling.m = ling.m[final.langs,final.langs]
+x = l[match(rownames(ling.m),l$iso2),c("Language2","family"),]
+langNames = l[match(rownames(ling.m),l$iso2),]$Language2
+langNames[langNames=="Norwegian (Bokmål)"] = "Norwegian"
+rownames(ling.m) = langNames
+colnames(ling.m) = langNames
+#ling.m = ling.m[final.langs,final.langs]
 # flip to distance
 ling.m = max(ling.m)-ling.m
 ling.m = ling.m/max(ling.m)
+#ling.m = sqrt(ling.m)
 makeSplitstree(ling.m, "../results/splitstree/LinguisticDistances.nex")
+
+x[x$Language2=="Norwegian (Bokmål)",]$Language2 = "Norwegian"
+x$colour = brewer.pal(12,'Paired')[as.numeric(as.factor(x$family))]
+x$colour = apply(col2rgb(x$colour),2,paste,collapse=" ")
+x[x$Language2=="Basque",]$colour = "black"
+#custom_nexus(nexus.file="../results/splitstree/LinguisticDistances.nex", 
+#             tips=x$Language2, lc=x$colour,SplitsTree.exe="/Applications/SplitsTree/SplitsTree",
+#             outfile = "../results/splitstree/LinguisticDistances_colour.nex")
+
+
 
 
 ####

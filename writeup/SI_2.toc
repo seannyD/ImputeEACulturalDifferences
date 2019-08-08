@@ -1,0 +1,5 @@
+\contentsline {section}{\numberline {2.1}Main cross-cultural analysis (Wikipedia data)}{2}
+\contentsline {section}{\numberline {2.2}Analysis of numerals}{44}
+\contentsline {section}{\numberline {2.3}Neighbour net visualisation of semantic alignment}{71}
+\contentsline {section}{\numberline {2.4}Cross-cultural analysis (Common Crawl data)}{74}
+\contentsline {section}{\numberline {2.5}Cross-cultural analysis (Subtitles data)}{92}
