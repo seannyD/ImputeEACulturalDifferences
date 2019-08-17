@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.16)  8 AUG 2019 09:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.16)  17 AUG 2019 18:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2666,7 +2666,7 @@ fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
 1/public/lm/lmtk10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/l
 m/lmtt10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmtti10.
 pfb>
-Output written on SI_2.pdf (109 pages, 1864073 bytes).
+Output written on SI_2.pdf (109 pages, 1864076 bytes).
 PDF statistics:
  1087 PDF objects out of 1200 (max. 8388607)
  683 compressed objects within 7 object streams
