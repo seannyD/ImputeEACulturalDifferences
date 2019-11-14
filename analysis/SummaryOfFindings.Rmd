@@ -1,0 +1,60 @@
+---
+title: "Summary of findings"
+output: pdf_document
+---
+
+\setcounter{page}{110}
+
+## Main analyses of Wikipedia data.
+
+See the main text for a summary of the main analyses using the Wikipedia data.
+
+## Analyses of the estimates from the Common Crawl data
+
+Mixed effects model: The correlation between semantic alignment and cultural similarity was significant (\input{"../results/stats/tex/MEM_CulturalVsLinguistic_CC.tex"}).  See the figure 1 below:
+
+![Semantic alignment and cultural similarity for data using the Common Crawl alignments](../results/stats/cc/CulturalDistance_Rho_Graph.pdf)
+
+
+MRM results:
+\input{../results/stats/tex/MRM_family_CC.tex}
+
+\input{../results/stats/tex/MRM_ASJP_CC.tex}
+
+Mantel tests:
+
+\input{../results/stats/tex/Mantel_CC.tex}
+
+\clearpage
+\newpage
+
+## Analyses of the estimates from the Subtitles data
+
+Mixed effects model: The correlation between semantic alignment and cultural similarity was not significant (\input{"../results/stats/tex/MEM_CulturalVsLinguistic_SUBS.tex"}).  See the figure 2 below:
+
+
+MRM results:
+\input{../results/stats/tex/MRM_family_SUBS.tex}
+
+\input{../results/stats/tex/MRM_ASJP_SUBS.tex}
+
+Mantel tests:
+
+\input{../results/stats/tex/Mantel_SUBS.tex}
+
+![Semantic alignment and cultural similarity for data using the Subtitles alignments](../results/stats/subs/CulturalDistance_Rho_Graph.pdf)
+
+\clearpage
+\newpage
+
+## Analysis of numerals
+
+The analyses of numerals found:
+
+-  1 and 2 have lower alignment due to often being grammaticalised as indefinite or dual marker (Givon, 1981). 
+-  Numbers 3-12 generally have high alignment (mean local alignment = 0.87), and higher numbers decline in alignment up to 1000.
+-  There are also language-specific differences due to how numerals are constructed (e.g. base, combination rules, see Calude & Verkerk, 2016), or for irregular forms (e.g. 50, 60, 70, 80 and 90 in Danish).
+-  Some number words have alternative associations due to homophones (e.g. the Hungarian 7 is used directly to mean 'week', and 'neuf' in French means '9' or 'new').
+-  The historical distance between languages did not predict much of the variation.
+
+See the main text for a discussion.

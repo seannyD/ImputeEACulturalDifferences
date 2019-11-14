@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.16)  17 AUG 2019 18:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.16)  14 NOV 2019 09:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**SI_2.tex
-(./SI_2.tex
+**SI_4.tex
+(./SI_4.tex
 LaTeX2e <2015/01/01>
 Babel <3.9l> and hyphenation patterns for 79 languages loaded.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/report.cls
@@ -147,8 +147,8 @@ File: pppdftex.def 2015/05/11 v0.4x Pdfpages driver for pdfTeX (AM)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-) (./SI_2.aux)
-\openout1 = `SI_2.aux'.
+) (./SI_4.aux)
+\openout1 = `SI_4.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
 LaTeX Font Info:    ... okay on input line 16.
@@ -266,7 +266,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 24.
 
-(./SI_2.toc
+(./SI_4.toc
 Underfull \hbox (badness 10000) in paragraph at lines 23--1
 
  []
@@ -278,7 +278,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--1
 
 )
 \tf@toc=\write3
-\openout3 = `SI_2.toc'.
+\openout3 = `SI_4.toc'.
 
  [1
 
@@ -381,7 +381,7 @@ pdf, page2 used on input line 33.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 
 [4 <../analysis/MainAnalysis_analyseCorrelation_wikipedia.pdf>]
-<../analysis/MainAnalysis_analyseCorrelation_wikipedia.pdf, id=64, page=4, 614.
+<../analysis/MainAnalysis_analyseCorrelation_wikipedia.pdf, id=59, page=4, 614.
 295pt x 794.97pt>
 File: ../analysis/MainAnalysis_analyseCorrelation_wikipedia.pdf Graphic file (t
 ype pdf)
@@ -1256,22 +1256,6 @@ pdf, page37 used on input line 33.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 
 [39 <../analysis/MainAnalysis_analyseCorrelation_wikipedia.pdf>]
-<../analysis/MainAnalysis_analyseCorrelation_wikipedia.pdf, id=299, page=39, 61
-4.295pt x 794.97pt>
-File: ../analysis/MainAnalysis_analyseCorrelation_wikipedia.pdf Graphic file (t
-ype pdf)
-
-<use ../analysis/MainAnalysis_analyseCorrelation_wikipedia.pdf, page 39>
-Package pdftex.def Info: ../analysis/MainAnalysis_analyseCorrelation_wikipedia.
-pdf, page39 used on input line 33.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: ../analysis/MainAnalysis_analyseCorrelation_wikipedia.pdf Graphic file (t
-ype pdf)
-
-<use ../analysis/MainAnalysis_analyseCorrelation_wikipedia.pdf, page 39>
-Package pdftex.def Info: ../analysis/MainAnalysis_analyseCorrelation_wikipedia.
-pdf, page39 used on input line 33.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/MainAnalysis_analyseCorrelation_wikipedia.pdf Graphic file (t
 ype pdf)
 
@@ -1281,66 +1265,7 @@ pdf, page38 used on input line 33.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 
 [40 <../analysis/MainAnalysis_analyseCorrelation_wikipedia.pdf>]
-<../analysis/MainAnalysis_analyseCorrelation_wikipedia.pdf, id=323, page=40, 61
-4.295pt x 794.97pt>
-File: ../analysis/MainAnalysis_analyseCorrelation_wikipedia.pdf Graphic file (t
-ype pdf)
-
-<use ../analysis/MainAnalysis_analyseCorrelation_wikipedia.pdf, page 40>
-Package pdftex.def Info: ../analysis/MainAnalysis_analyseCorrelation_wikipedia.
-pdf, page40 used on input line 33.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: ../analysis/MainAnalysis_analyseCorrelation_wikipedia.pdf Graphic file (t
-ype pdf)
-
-<use ../analysis/MainAnalysis_analyseCorrelation_wikipedia.pdf, page 40>
-Package pdftex.def Info: ../analysis/MainAnalysis_analyseCorrelation_wikipedia.
-pdf, page40 used on input line 33.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: ../analysis/MainAnalysis_analyseCorrelation_wikipedia.pdf Graphic file (t
-ype pdf)
-
-<use ../analysis/MainAnalysis_analyseCorrelation_wikipedia.pdf, page 39>
-Package pdftex.def Info: ../analysis/MainAnalysis_analyseCorrelation_wikipedia.
-pdf, page39 used on input line 33.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-
-[41 <../analysis/MainAnalysis_analyseCorrelation_wikipedia.pdf>]
-<../analysis/MainAnalysis_analyseCorrelation_wikipedia.pdf, id=337, page=41, 61
-4.295pt x 794.97pt>
-File: ../analysis/MainAnalysis_analyseCorrelation_wikipedia.pdf Graphic file (t
-ype pdf)
-
-<use ../analysis/MainAnalysis_analyseCorrelation_wikipedia.pdf, page 41>
-Package pdftex.def Info: ../analysis/MainAnalysis_analyseCorrelation_wikipedia.
-pdf, page41 used on input line 33.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: ../analysis/MainAnalysis_analyseCorrelation_wikipedia.pdf Graphic file (t
-ype pdf)
-
-<use ../analysis/MainAnalysis_analyseCorrelation_wikipedia.pdf, page 41>
-Package pdftex.def Info: ../analysis/MainAnalysis_analyseCorrelation_wikipedia.
-pdf, page41 used on input line 33.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: ../analysis/MainAnalysis_analyseCorrelation_wikipedia.pdf Graphic file (t
-ype pdf)
-
-<use ../analysis/MainAnalysis_analyseCorrelation_wikipedia.pdf, page 40>
-Package pdftex.def Info: ../analysis/MainAnalysis_analyseCorrelation_wikipedia.
-pdf, page40 used on input line 33.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-
-[42 <../analysis/MainAnalysis_analyseCorrelation_wikipedia.pdf>]
-File: ../analysis/MainAnalysis_analyseCorrelation_wikipedia.pdf Graphic file (t
-ype pdf)
-
-<use ../analysis/MainAnalysis_analyseCorrelation_wikipedia.pdf, page 41>
-Package pdftex.def Info: ../analysis/MainAnalysis_analyseCorrelation_wikipedia.
-pdf, page41 used on input line 33.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-
-[43 <../analysis/MainAnalysis_analyseCorrelation_wikipedia.pdf>]
-<../analysis/numbers/number_alignment.pdf, id=345, 614.295pt x 794.97pt>
+<../analysis/numbers/number_alignment.pdf, id=302, 614.295pt x 794.97pt>
 File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
 
 <use ../analysis/numbers/number_alignment.pdf>
@@ -1354,7 +1279,7 @@ Package pdftex.def Info: ../analysis/numbers/number_alignment.pdf used on input
  line 38.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 
-<../analysis/numbers/number_alignment.pdf, id=348, page=1, 614.295pt x 794.97pt
+<../analysis/numbers/number_alignment.pdf, id=305, page=1, 614.295pt x 794.97pt
 >
 File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
  <use ../analysis/numbers/number_alignment.pdf, page 1>
@@ -1379,8 +1304,8 @@ File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../analysis/numbers/number_alignment.pdf, page1 used o
 n input line 38.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [44]
-<../analysis/numbers/number_alignment.pdf, id=352, page=2, 614.295pt x 794.97pt
+ [41]
+<../analysis/numbers/number_alignment.pdf, id=309, page=2, 614.295pt x 794.97pt
 >
 File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
  <use ../analysis/numbers/number_alignment.pdf, page 2>
@@ -1399,8 +1324,8 @@ File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../analysis/numbers/number_alignment.pdf, page1 used o
 n input line 38.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [45 <../analysis/numbers/number_alignment.pdf>]
-<../analysis/numbers/number_alignment.pdf, id=400, page=3, 614.295pt x 794.97pt
+ [42 <../analysis/numbers/number_alignment.pdf>]
+<../analysis/numbers/number_alignment.pdf, id=356, page=3, 614.295pt x 794.97pt
 >
 File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
  <use ../analysis/numbers/number_alignment.pdf, page 3>
@@ -1419,8 +1344,8 @@ File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../analysis/numbers/number_alignment.pdf, page2 used o
 n input line 38.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [46 <../analysis/numbers/number_alignment.pdf>]
-<../analysis/numbers/number_alignment.pdf, id=415, page=4, 614.295pt x 794.97pt
+ [43 <../analysis/numbers/number_alignment.pdf>]
+<../analysis/numbers/number_alignment.pdf, id=361, page=4, 614.295pt x 794.97pt
 >
 File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
  <use ../analysis/numbers/number_alignment.pdf, page 4>
@@ -1439,8 +1364,8 @@ File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../analysis/numbers/number_alignment.pdf, page3 used o
 n input line 38.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [47 <../analysis/numbers/number_alignment.pdf>]
-<../analysis/numbers/number_alignment.pdf, id=419, page=5, 614.295pt x 794.97pt
+ [44 <../analysis/numbers/number_alignment.pdf>]
+<../analysis/numbers/number_alignment.pdf, id=387, page=5, 614.295pt x 794.97pt
 >
 File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
  <use ../analysis/numbers/number_alignment.pdf, page 5>
@@ -1459,8 +1384,8 @@ File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../analysis/numbers/number_alignment.pdf, page4 used o
 n input line 38.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [48 <../analysis/numbers/number_alignment.pdf>]
-<../analysis/numbers/number_alignment.pdf, id=444, page=6, 614.295pt x 794.97pt
+ [45 <../analysis/numbers/number_alignment.pdf>]
+<../analysis/numbers/number_alignment.pdf, id=391, page=6, 614.295pt x 794.97pt
 >
 File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
  <use ../analysis/numbers/number_alignment.pdf, page 6>
@@ -1479,8 +1404,8 @@ File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../analysis/numbers/number_alignment.pdf, page5 used o
 n input line 38.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [49 <../analysis/numbers/number_alignment.pdf>]
-<../analysis/numbers/number_alignment.pdf, id=449, page=7, 614.295pt x 794.97pt
+ [46 <../analysis/numbers/number_alignment.pdf>]
+<../analysis/numbers/number_alignment.pdf, id=395, page=7, 614.295pt x 794.97pt
 >
 File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
  <use ../analysis/numbers/number_alignment.pdf, page 7>
@@ -1499,8 +1424,8 @@ File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../analysis/numbers/number_alignment.pdf, page6 used o
 n input line 38.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [50 <../analysis/numbers/number_alignment.pdf>]
-<../analysis/numbers/number_alignment.pdf, id=453, page=8, 614.295pt x 794.97pt
+ [47 <../analysis/numbers/number_alignment.pdf>]
+<../analysis/numbers/number_alignment.pdf, id=406, page=8, 614.295pt x 794.97pt
 >
 File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
  <use ../analysis/numbers/number_alignment.pdf, page 8>
@@ -1519,8 +1444,8 @@ File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../analysis/numbers/number_alignment.pdf, page7 used o
 n input line 38.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [51 <../analysis/numbers/number_alignment.pdf>]
-<../analysis/numbers/number_alignment.pdf, id=464, page=9, 614.295pt x 794.97pt
+ [48 <../analysis/numbers/number_alignment.pdf>]
+<../analysis/numbers/number_alignment.pdf, id=425, page=9, 614.295pt x 794.97pt
 >
 File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
  <use ../analysis/numbers/number_alignment.pdf, page 9>
@@ -1539,8 +1464,8 @@ File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../analysis/numbers/number_alignment.pdf, page8 used o
 n input line 38.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [52 <../analysis/numbers/number_alignment.pdf>]
-<../analysis/numbers/number_alignment.pdf, id=475, page=10, 614.295pt x 794.97p
+ [49 <../analysis/numbers/number_alignment.pdf>]
+<../analysis/numbers/number_alignment.pdf, id=430, page=10, 614.295pt x 794.97p
 t>
 File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
  <use ../analysis/numbers/number_alignment.pdf, page 10>
@@ -1559,8 +1484,8 @@ File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../analysis/numbers/number_alignment.pdf, page9 used o
 n input line 38.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [53 <../analysis/numbers/number_alignment.pdf>]
-<../analysis/numbers/number_alignment.pdf, id=486, page=11, 614.295pt x 794.97p
+ [50 <../analysis/numbers/number_alignment.pdf>]
+<../analysis/numbers/number_alignment.pdf, id=441, page=11, 614.295pt x 794.97p
 t>
 File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
  <use ../analysis/numbers/number_alignment.pdf, page 11>
@@ -1579,8 +1504,8 @@ File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../analysis/numbers/number_alignment.pdf, page10 used 
 on input line 38.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [54 <../analysis/numbers/number_alignment.pdf>]
-<../analysis/numbers/number_alignment.pdf, id=497, page=12, 614.295pt x 794.97p
+ [51 <../analysis/numbers/number_alignment.pdf>]
+<../analysis/numbers/number_alignment.pdf, id=452, page=12, 614.295pt x 794.97p
 t>
 File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
  <use ../analysis/numbers/number_alignment.pdf, page 12>
@@ -1599,8 +1524,8 @@ File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../analysis/numbers/number_alignment.pdf, page11 used 
 on input line 38.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [55 <../analysis/numbers/number_alignment.pdf>]
-<../analysis/numbers/number_alignment.pdf, id=509, page=13, 614.295pt x 794.97p
+ [52 <../analysis/numbers/number_alignment.pdf>]
+<../analysis/numbers/number_alignment.pdf, id=463, page=13, 614.295pt x 794.97p
 t>
 File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
  <use ../analysis/numbers/number_alignment.pdf, page 13>
@@ -1619,8 +1544,8 @@ File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../analysis/numbers/number_alignment.pdf, page12 used 
 on input line 38.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [56 <../analysis/numbers/number_alignment.pdf>]
-<../analysis/numbers/number_alignment.pdf, id=520, page=14, 614.295pt x 794.97p
+ [53 <../analysis/numbers/number_alignment.pdf>]
+<../analysis/numbers/number_alignment.pdf, id=474, page=14, 614.295pt x 794.97p
 t>
 File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
  <use ../analysis/numbers/number_alignment.pdf, page 14>
@@ -1639,8 +1564,8 @@ File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../analysis/numbers/number_alignment.pdf, page13 used 
 on input line 38.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [57 <../analysis/numbers/number_alignment.pdf>]
-<../analysis/numbers/number_alignment.pdf, id=535, page=15, 614.295pt x 794.97p
+ [54 <../analysis/numbers/number_alignment.pdf>]
+<../analysis/numbers/number_alignment.pdf, id=489, page=15, 614.295pt x 794.97p
 t>
 File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
  <use ../analysis/numbers/number_alignment.pdf, page 15>
@@ -1659,8 +1584,8 @@ File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../analysis/numbers/number_alignment.pdf, page14 used 
 on input line 38.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [58 <../analysis/numbers/number_alignment.pdf>]
-<../analysis/numbers/number_alignment.pdf, id=548, page=16, 614.295pt x 794.97p
+ [55 <../analysis/numbers/number_alignment.pdf>]
+<../analysis/numbers/number_alignment.pdf, id=502, page=16, 614.295pt x 794.97p
 t>
 File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
  <use ../analysis/numbers/number_alignment.pdf, page 16>
@@ -1679,8 +1604,8 @@ File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../analysis/numbers/number_alignment.pdf, page15 used 
 on input line 38.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [59 <../analysis/numbers/number_alignment.pdf>]
-<../analysis/numbers/number_alignment.pdf, id=552, page=17, 614.295pt x 794.97p
+ [56 <../analysis/numbers/number_alignment.pdf>]
+<../analysis/numbers/number_alignment.pdf, id=506, page=17, 614.295pt x 794.97p
 t>
 File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
  <use ../analysis/numbers/number_alignment.pdf, page 17>
@@ -1699,8 +1624,8 @@ File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../analysis/numbers/number_alignment.pdf, page16 used 
 on input line 38.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [60 <../analysis/numbers/number_alignment.pdf>]
-<../analysis/numbers/number_alignment.pdf, id=562, page=18, 614.295pt x 794.97p
+ [57 <../analysis/numbers/number_alignment.pdf>]
+<../analysis/numbers/number_alignment.pdf, id=516, page=18, 614.295pt x 794.97p
 t>
 File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
  <use ../analysis/numbers/number_alignment.pdf, page 18>
@@ -1719,8 +1644,8 @@ File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../analysis/numbers/number_alignment.pdf, page17 used 
 on input line 38.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [61 <../analysis/numbers/number_alignment.pdf>]
-<../analysis/numbers/number_alignment.pdf, id=572, page=19, 614.295pt x 794.97p
+ [58 <../analysis/numbers/number_alignment.pdf>]
+<../analysis/numbers/number_alignment.pdf, id=520, page=19, 614.295pt x 794.97p
 t>
 File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
  <use ../analysis/numbers/number_alignment.pdf, page 19>
@@ -1739,8 +1664,8 @@ File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../analysis/numbers/number_alignment.pdf, page18 used 
 on input line 38.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [62 <../analysis/numbers/number_alignment.pdf>]
-<../analysis/numbers/number_alignment.pdf, id=583, page=20, 614.295pt x 794.97p
+ [59 <../analysis/numbers/number_alignment.pdf>]
+<../analysis/numbers/number_alignment.pdf, id=529, page=20, 614.295pt x 794.97p
 t>
 File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
  <use ../analysis/numbers/number_alignment.pdf, page 20>
@@ -1759,8 +1684,8 @@ File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../analysis/numbers/number_alignment.pdf, page19 used 
 on input line 38.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [63 <../analysis/numbers/number_alignment.pdf>]
-<../analysis/numbers/number_alignment.pdf, id=597, page=21, 614.295pt x 794.97p
+ [60 <../analysis/numbers/number_alignment.pdf>]
+<../analysis/numbers/number_alignment.pdf, id=540, page=21, 614.295pt x 794.97p
 t>
 File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
  <use ../analysis/numbers/number_alignment.pdf, page 21>
@@ -1779,8 +1704,8 @@ File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../analysis/numbers/number_alignment.pdf, page20 used 
 on input line 38.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [64 <../analysis/numbers/number_alignment.pdf>]
-<../analysis/numbers/number_alignment.pdf, id=601, page=22, 614.295pt x 794.97p
+ [61 <../analysis/numbers/number_alignment.pdf>]
+<../analysis/numbers/number_alignment.pdf, id=555, page=22, 614.295pt x 794.97p
 t>
 File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
  <use ../analysis/numbers/number_alignment.pdf, page 22>
@@ -1799,8 +1724,8 @@ File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../analysis/numbers/number_alignment.pdf, page21 used 
 on input line 38.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [65 <../analysis/numbers/number_alignment.pdf>]
-<../analysis/numbers/number_alignment.pdf, id=605, page=23, 614.295pt x 794.97p
+ [62 <../analysis/numbers/number_alignment.pdf>]
+<../analysis/numbers/number_alignment.pdf, id=560, page=23, 614.295pt x 794.97p
 t>
 File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
  <use ../analysis/numbers/number_alignment.pdf, page 23>
@@ -1819,8 +1744,8 @@ File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../analysis/numbers/number_alignment.pdf, page22 used 
 on input line 38.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [66 <../analysis/numbers/number_alignment.pdf>]
-<../analysis/numbers/number_alignment.pdf, id=621, page=24, 614.295pt x 794.97p
+ [63 <../analysis/numbers/number_alignment.pdf>]
+<../analysis/numbers/number_alignment.pdf, id=569, page=24, 614.295pt x 794.97p
 t>
 File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
  <use ../analysis/numbers/number_alignment.pdf, page 24>
@@ -1839,8 +1764,8 @@ File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../analysis/numbers/number_alignment.pdf, page23 used 
 on input line 38.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [67 <../analysis/numbers/number_alignment.pdf>]
-<../analysis/numbers/number_alignment.pdf, id=626, page=25, 614.295pt x 794.97p
+ [64 <../analysis/numbers/number_alignment.pdf>]
+<../analysis/numbers/number_alignment.pdf, id=585, page=25, 614.295pt x 794.97p
 t>
 File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
  <use ../analysis/numbers/number_alignment.pdf, page 25>
@@ -1859,8 +1784,8 @@ File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../analysis/numbers/number_alignment.pdf, page24 used 
 on input line 38.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [68 <../analysis/numbers/number_alignment.pdf>]
-<../analysis/numbers/number_alignment.pdf, id=637, page=26, 614.295pt x 794.97p
+ [65 <../analysis/numbers/number_alignment.pdf>]
+<../analysis/numbers/number_alignment.pdf, id=589, page=26, 614.295pt x 794.97p
 t>
 File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
  <use ../analysis/numbers/number_alignment.pdf, page 26>
@@ -1879,797 +1804,949 @@ File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../analysis/numbers/number_alignment.pdf, page25 used 
 on input line 38.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [69 <../analysis/numbers/number_alignment.pdf>]
+ [66 <../analysis/numbers/number_alignment.pdf>]
+<../analysis/numbers/number_alignment.pdf, id=600, page=27, 614.295pt x 794.97p
+t>
+File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
+ <use ../analysis/numbers/number_alignment.pdf, page 27>
+Package pdftex.def Info: ../analysis/numbers/number_alignment.pdf, page27 used 
+on input line 38.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
+
+<use ../analysis/numbers/number_alignment.pdf, page 27>
+Package pdftex.def Info: ../analysis/numbers/number_alignment.pdf, page27 used 
+on input line 38.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
 
 <use ../analysis/numbers/number_alignment.pdf, page 26>
 Package pdftex.def Info: ../analysis/numbers/number_alignment.pdf, page26 used 
 on input line 38.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [70 <../analysis/numbers/number_alignment.pdf>]
-Overfull \hbox (11.24706pt too wide) in paragraph at lines 48--49
-[]\OT1/cmr/m/n/10 Figure 2.3.2[] shows the se-man-tic dis-tances for Indo-Europ
+ [67 <../analysis/numbers/number_alignment.pdf>]
+File: ../analysis/numbers/number_alignment.pdf Graphic file (type pdf)
+
+<use ../analysis/numbers/number_alignment.pdf, page 27>
+Package pdftex.def Info: ../analysis/numbers/number_alignment.pdf, page27 used 
+on input line 38.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+ [68 <../analysis/numbers/number_alignment.pdf>]
+Overfull \hbox (11.24706pt too wide) in paragraph at lines 51--52
+[]\OT1/cmr/m/n/10 Figure 4.3.2[] shows the se-man-tic dis-tances for Indo-Europ
 ean lan-guages vi-su-alised as a neighbour-
  []
 
+[69
+
+]
 Missing character: There is no ö in font cmr10!
-[71]
-<../results/splitstree/LinguisticDistances2.pdf, id=661, 1085.10484pt x 972.308
+Missing character: There is no å in font cmr10!
+
+<../results/splitstree/LinguisticDistances2.pdf, id=624, 1085.10484pt x 972.308
 01pt>
 File: ../results/splitstree/LinguisticDistances2.pdf Graphic file (type pdf)
  <use ../results/splitstree/LinguisticDistances2.pdf>
 Package pdftex.def Info: ../results/splitstree/LinguisticDistances2.pdf used on
- input line 73.
+ input line 80.
 (pdftex.def)             Requested size: 418.25368pt x 374.7774pt.
 
-<../results/splitstree/LinguisticDistances_IE_new2.pdf, id=662, 841.43265pt x 7
+<../results/splitstree/LinguisticDistances_IE_new2.pdf, id=625, 841.43265pt x 7
 88.8945pt>
 File: ../results/splitstree/LinguisticDistances_IE_new2.pdf Graphic file (type 
 pdf)
  <use ../results/splitstree/LinguisticDistances_IE_new2.pdf>
 Package pdftex.def Info: ../results/splitstree/LinguisticDistances_IE_new2.pdf 
-used on input line 81.
+used on input line 88.
 (pdftex.def)             Requested size: 418.25368pt x 392.14711pt.
- [72 <../results/splitstree/LinguisticDistances2.pdf>] [73 <../results/splitstr
-ee/LinguisticDistances_IE_new2.pdf>]
-<../analysis/AnalyseCorrelation_cc.pdf, id=698, 614.295pt x 794.97pt>
+ [70]
+[71 <../results/splitstree/LinguisticDistances2.pdf>] [72 <../results/splitstre
+e/LinguisticDistances_IE_new2.pdf>]
+<../analysis/AnalyseCorrelation_cc.pdf, id=664, 614.295pt x 794.97pt>
 File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_cc.pdf>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf used on input li
-ne 90.
+ne 98.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_cc.pdf>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf used on input li
-ne 90.
+ne 98.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 
-<../analysis/AnalyseCorrelation_cc.pdf, id=701, page=1, 614.295pt x 794.97pt>
+<../analysis/AnalyseCorrelation_cc.pdf, id=667, page=1, 614.295pt x 794.97pt>
 File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_cc.pdf, page 1>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page1 used on i
-nput line 90.
+nput line 98.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_cc.pdf, page 1>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page1 used on i
-nput line 90.
+nput line 98.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_cc.pdf, page 1>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page1 used on i
-nput line 90.
+nput line 98.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_cc.pdf, page 1>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page1 used on i
-nput line 90.
+nput line 98.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [74]
-<../analysis/AnalyseCorrelation_cc.pdf, id=705, page=2, 614.295pt x 794.97pt>
+ [73
+
+]
+<../analysis/AnalyseCorrelation_cc.pdf, id=672, page=2, 614.295pt x 794.97pt>
 File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_cc.pdf, page 2>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page2 used on i
-nput line 90.
+nput line 98.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_cc.pdf, page 2>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page2 used on i
-nput line 90.
+nput line 98.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_cc.pdf, page 1>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page1 used on i
-nput line 90.
+nput line 98.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+ [74 <../analysis/AnalyseCorrelation_cc.pdf>]
+<../analysis/AnalyseCorrelation_cc.pdf, id=701, page=3, 614.295pt x 794.97pt>
+File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
+
+<use ../analysis/AnalyseCorrelation_cc.pdf, page 3>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page3 used on i
+nput line 98.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
+
+<use ../analysis/AnalyseCorrelation_cc.pdf, page 3>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page3 used on i
+nput line 98.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
+
+<use ../analysis/AnalyseCorrelation_cc.pdf, page 2>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page2 used on i
+nput line 98.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [75 <../analysis/AnalyseCorrelation_cc.pdf>]
-<../analysis/AnalyseCorrelation_cc.pdf, id=735, page=3, 614.295pt x 794.97pt>
+<../analysis/AnalyseCorrelation_cc.pdf, id=705, page=4, 614.295pt x 794.97pt>
 File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
 
-<use ../analysis/AnalyseCorrelation_cc.pdf, page 3>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page3 used on i
-nput line 90.
+<use ../analysis/AnalyseCorrelation_cc.pdf, page 4>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page4 used on i
+nput line 98.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
+
+<use ../analysis/AnalyseCorrelation_cc.pdf, page 4>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page4 used on i
+nput line 98.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_cc.pdf, page 3>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page3 used on i
-nput line 90.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
-
-<use ../analysis/AnalyseCorrelation_cc.pdf, page 2>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page2 used on i
-nput line 90.
+nput line 98.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [76 <../analysis/AnalyseCorrelation_cc.pdf>]
-<../analysis/AnalyseCorrelation_cc.pdf, id=739, page=4, 614.295pt x 794.97pt>
+<../analysis/AnalyseCorrelation_cc.pdf, id=713, page=5, 614.295pt x 794.97pt>
 File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
 
-<use ../analysis/AnalyseCorrelation_cc.pdf, page 4>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page4 used on i
-nput line 90.
+<use ../analysis/AnalyseCorrelation_cc.pdf, page 5>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page5 used on i
+nput line 98.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
+
+<use ../analysis/AnalyseCorrelation_cc.pdf, page 5>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page5 used on i
+nput line 98.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_cc.pdf, page 4>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page4 used on i
-nput line 90.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
-
-<use ../analysis/AnalyseCorrelation_cc.pdf, page 3>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page3 used on i
-nput line 90.
+nput line 98.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [77 <../analysis/AnalyseCorrelation_cc.pdf>]
-<../analysis/AnalyseCorrelation_cc.pdf, id=746, page=5, 614.295pt x 794.97pt>
+<../analysis/AnalyseCorrelation_cc.pdf, id=717, page=6, 614.295pt x 794.97pt>
 File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
 
-<use ../analysis/AnalyseCorrelation_cc.pdf, page 5>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page5 used on i
-nput line 90.
+<use ../analysis/AnalyseCorrelation_cc.pdf, page 6>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page6 used on i
+nput line 98.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
+
+<use ../analysis/AnalyseCorrelation_cc.pdf, page 6>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page6 used on i
+nput line 98.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_cc.pdf, page 5>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page5 used on i
-nput line 90.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
-
-<use ../analysis/AnalyseCorrelation_cc.pdf, page 4>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page4 used on i
-nput line 90.
+nput line 98.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [78 <../analysis/AnalyseCorrelation_cc.pdf>]
-<../analysis/AnalyseCorrelation_cc.pdf, id=750, page=6, 614.295pt x 794.97pt>
+<../analysis/AnalyseCorrelation_cc.pdf, id=721, page=7, 614.295pt x 794.97pt>
 File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
 
-<use ../analysis/AnalyseCorrelation_cc.pdf, page 6>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page6 used on i
-nput line 90.
+<use ../analysis/AnalyseCorrelation_cc.pdf, page 7>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page7 used on i
+nput line 98.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
+
+<use ../analysis/AnalyseCorrelation_cc.pdf, page 7>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page7 used on i
+nput line 98.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_cc.pdf, page 6>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page6 used on i
-nput line 90.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
-
-<use ../analysis/AnalyseCorrelation_cc.pdf, page 5>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page5 used on i
-nput line 90.
+nput line 98.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [79 <../analysis/AnalyseCorrelation_cc.pdf>]
-<../analysis/AnalyseCorrelation_cc.pdf, id=755, page=7, 614.295pt x 794.97pt>
+<../analysis/AnalyseCorrelation_cc.pdf, id=726, page=8, 614.295pt x 794.97pt>
 File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
 
-<use ../analysis/AnalyseCorrelation_cc.pdf, page 7>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page7 used on i
-nput line 90.
+<use ../analysis/AnalyseCorrelation_cc.pdf, page 8>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page8 used on i
+nput line 98.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
+
+<use ../analysis/AnalyseCorrelation_cc.pdf, page 8>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page8 used on i
+nput line 98.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_cc.pdf, page 7>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page7 used on i
-nput line 90.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
-
-<use ../analysis/AnalyseCorrelation_cc.pdf, page 6>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page6 used on i
-nput line 90.
+nput line 98.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [80 <../analysis/AnalyseCorrelation_cc.pdf>]
-<../analysis/AnalyseCorrelation_cc.pdf, id=759, page=8, 614.295pt x 794.97pt>
+<../analysis/AnalyseCorrelation_cc.pdf, id=741, page=9, 614.295pt x 794.97pt>
 File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
 
-<use ../analysis/AnalyseCorrelation_cc.pdf, page 8>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page8 used on i
-nput line 90.
+<use ../analysis/AnalyseCorrelation_cc.pdf, page 9>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page9 used on i
+nput line 98.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
+
+<use ../analysis/AnalyseCorrelation_cc.pdf, page 9>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page9 used on i
+nput line 98.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_cc.pdf, page 8>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page8 used on i
-nput line 90.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
-
-<use ../analysis/AnalyseCorrelation_cc.pdf, page 7>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page7 used on i
-nput line 90.
+nput line 98.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [81 <../analysis/AnalyseCorrelation_cc.pdf>]
-<../analysis/AnalyseCorrelation_cc.pdf, id=774, page=9, 614.295pt x 794.97pt>
+<../analysis/AnalyseCorrelation_cc.pdf, id=753, page=10, 614.295pt x 794.97pt>
 File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
 
-<use ../analysis/AnalyseCorrelation_cc.pdf, page 9>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page9 used on i
-nput line 90.
+<use ../analysis/AnalyseCorrelation_cc.pdf, page 10>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page10 used on 
+input line 98.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
+
+<use ../analysis/AnalyseCorrelation_cc.pdf, page 10>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page10 used on 
+input line 98.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_cc.pdf, page 9>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page9 used on i
-nput line 90.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
-
-<use ../analysis/AnalyseCorrelation_cc.pdf, page 8>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page8 used on i
-nput line 90.
+nput line 98.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [82 <../analysis/AnalyseCorrelation_cc.pdf>]
-<../analysis/AnalyseCorrelation_cc.pdf, id=786, page=10, 614.295pt x 794.97pt>
+<../analysis/AnalyseCorrelation_cc.pdf, id=765, page=11, 614.295pt x 794.97pt>
 File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
 
-<use ../analysis/AnalyseCorrelation_cc.pdf, page 10>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page10 used on 
-input line 90.
+<use ../analysis/AnalyseCorrelation_cc.pdf, page 11>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page11 used on 
+input line 98.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
+
+<use ../analysis/AnalyseCorrelation_cc.pdf, page 11>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page11 used on 
+input line 98.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_cc.pdf, page 10>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page10 used on 
-input line 90.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
-
-<use ../analysis/AnalyseCorrelation_cc.pdf, page 9>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page9 used on i
-nput line 90.
+input line 98.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [83 <../analysis/AnalyseCorrelation_cc.pdf>]
-<../analysis/AnalyseCorrelation_cc.pdf, id=798, page=11, 614.295pt x 794.97pt>
+<../analysis/AnalyseCorrelation_cc.pdf, id=769, page=12, 614.295pt x 794.97pt>
 File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
 
-<use ../analysis/AnalyseCorrelation_cc.pdf, page 11>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page11 used on 
-input line 90.
+<use ../analysis/AnalyseCorrelation_cc.pdf, page 12>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page12 used on 
+input line 98.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
+
+<use ../analysis/AnalyseCorrelation_cc.pdf, page 12>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page12 used on 
+input line 98.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_cc.pdf, page 11>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page11 used on 
-input line 90.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
-
-<use ../analysis/AnalyseCorrelation_cc.pdf, page 10>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page10 used on 
-input line 90.
+input line 98.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [84 <../analysis/AnalyseCorrelation_cc.pdf>]
-<../analysis/AnalyseCorrelation_cc.pdf, id=802, page=12, 614.295pt x 794.97pt>
+<../analysis/AnalyseCorrelation_cc.pdf, id=773, page=13, 614.295pt x 794.97pt>
 File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
 
-<use ../analysis/AnalyseCorrelation_cc.pdf, page 12>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page12 used on 
-input line 90.
+<use ../analysis/AnalyseCorrelation_cc.pdf, page 13>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page13 used on 
+input line 98.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
+
+<use ../analysis/AnalyseCorrelation_cc.pdf, page 13>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page13 used on 
+input line 98.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_cc.pdf, page 12>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page12 used on 
-input line 90.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
-
-<use ../analysis/AnalyseCorrelation_cc.pdf, page 11>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page11 used on 
-input line 90.
+input line 98.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [85 <../analysis/AnalyseCorrelation_cc.pdf>]
-<../analysis/AnalyseCorrelation_cc.pdf, id=807, page=13, 614.295pt x 794.97pt>
+<../analysis/AnalyseCorrelation_cc.pdf, id=778, page=14, 614.295pt x 794.97pt>
 File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
 
-<use ../analysis/AnalyseCorrelation_cc.pdf, page 13>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page13 used on 
-input line 90.
+<use ../analysis/AnalyseCorrelation_cc.pdf, page 14>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page14 used on 
+input line 98.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
+
+<use ../analysis/AnalyseCorrelation_cc.pdf, page 14>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page14 used on 
+input line 98.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_cc.pdf, page 13>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page13 used on 
-input line 90.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
-
-<use ../analysis/AnalyseCorrelation_cc.pdf, page 12>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page12 used on 
-input line 90.
+input line 98.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [86 <../analysis/AnalyseCorrelation_cc.pdf>]
-<../analysis/AnalyseCorrelation_cc.pdf, id=811, page=14, 614.295pt x 794.97pt>
+<../analysis/AnalyseCorrelation_cc.pdf, id=798, page=15, 614.295pt x 794.97pt>
 File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
 
-<use ../analysis/AnalyseCorrelation_cc.pdf, page 14>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page14 used on 
-input line 90.
+<use ../analysis/AnalyseCorrelation_cc.pdf, page 15>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page15 used on 
+input line 98.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
+
+<use ../analysis/AnalyseCorrelation_cc.pdf, page 15>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page15 used on 
+input line 98.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_cc.pdf, page 14>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page14 used on 
-input line 90.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
-
-<use ../analysis/AnalyseCorrelation_cc.pdf, page 13>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page13 used on 
-input line 90.
+input line 98.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [87 <../analysis/AnalyseCorrelation_cc.pdf>]
-<../analysis/AnalyseCorrelation_cc.pdf, id=831, page=15, 614.295pt x 794.97pt>
+<../analysis/AnalyseCorrelation_cc.pdf, id=818, page=16, 614.295pt x 794.97pt>
 File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
 
-<use ../analysis/AnalyseCorrelation_cc.pdf, page 15>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page15 used on 
-input line 90.
+<use ../analysis/AnalyseCorrelation_cc.pdf, page 16>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page16 used on 
+input line 98.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
+
+<use ../analysis/AnalyseCorrelation_cc.pdf, page 16>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page16 used on 
+input line 98.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_cc.pdf, page 15>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page15 used on 
-input line 90.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
-
-<use ../analysis/AnalyseCorrelation_cc.pdf, page 14>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page14 used on 
-input line 90.
+input line 98.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [88 <../analysis/AnalyseCorrelation_cc.pdf>]
-<../analysis/AnalyseCorrelation_cc.pdf, id=851, page=16, 614.295pt x 794.97pt>
+<../analysis/AnalyseCorrelation_cc.pdf, id=825, page=17, 614.295pt x 794.97pt>
 File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
 
-<use ../analysis/AnalyseCorrelation_cc.pdf, page 16>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page16 used on 
-input line 90.
+<use ../analysis/AnalyseCorrelation_cc.pdf, page 17>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page17 used on 
+input line 98.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
+
+<use ../analysis/AnalyseCorrelation_cc.pdf, page 17>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page17 used on 
+input line 98.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_cc.pdf, page 16>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page16 used on 
-input line 90.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
-
-<use ../analysis/AnalyseCorrelation_cc.pdf, page 15>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page15 used on 
-input line 90.
+input line 98.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [89 <../analysis/AnalyseCorrelation_cc.pdf>]
-<../analysis/AnalyseCorrelation_cc.pdf, id=858, page=17, 614.295pt x 794.97pt>
-File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
-
-<use ../analysis/AnalyseCorrelation_cc.pdf, page 17>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page17 used on 
-input line 90.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
-
-<use ../analysis/AnalyseCorrelation_cc.pdf, page 17>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page17 used on 
-input line 90.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
-
-<use ../analysis/AnalyseCorrelation_cc.pdf, page 16>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page16 used on 
-input line 90.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [90 <../analysis/AnalyseCorrelation_cc.pdf>]
 File: ../analysis/AnalyseCorrelation_cc.pdf Graphic file (type pdf)
  <use ../analysis/AnalyseCorrelation_cc.pdf, page 17>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_cc.pdf, page17 used on 
-input line 90.
+input line 98.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 
-[91 <../analysis/AnalyseCorrelation_cc.pdf>]
-<../analysis/AnalyseCorrelation_subs.pdf, id=869, 614.295pt x 794.97pt>
+[90 <../analysis/AnalyseCorrelation_cc.pdf>]
+<../analysis/AnalyseCorrelation_subs.pdf, id=835, 614.295pt x 794.97pt>
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_subs.pdf>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf used on input 
-line 95.
+line 103.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_subs.pdf>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf used on input 
-line 95.
+line 103.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 
-<../analysis/AnalyseCorrelation_subs.pdf, id=872, page=1, 614.295pt x 794.97pt>
+<../analysis/AnalyseCorrelation_subs.pdf, id=838, page=1, 614.295pt x 794.97pt>
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
 <use ../analysis/AnalyseCorrelation_subs.pdf, page 1>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page1 used on
- input line 95.
+ input line 103.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_subs.pdf, page 1>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page1 used on
- input line 95.
+ input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_subs.pdf, page 1>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page1 used on
- input line 95.
+ input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_subs.pdf, page 1>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page1 used on
- input line 95.
+ input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [92]
-<../analysis/AnalyseCorrelation_subs.pdf, id=877, page=2, 614.295pt x 794.97pt>
+ [91]
+<../analysis/AnalyseCorrelation_subs.pdf, id=843, page=2, 614.295pt x 794.97pt>
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
 <use ../analysis/AnalyseCorrelation_subs.pdf, page 2>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page2 used on
- input line 95.
+ input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_subs.pdf, page 2>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page2 used on
- input line 95.
+ input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_subs.pdf, page 1>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page1 used on
- input line 95.
+ input line 103.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+ [92 <../analysis/AnalyseCorrelation_subs.pdf>]
+<../analysis/AnalyseCorrelation_subs.pdf, id=873, page=3, 614.295pt x 794.97pt>
+File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
+<use ../analysis/AnalyseCorrelation_subs.pdf, page 3>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page3 used on
+ input line 103.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
+
+<use ../analysis/AnalyseCorrelation_subs.pdf, page 3>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page3 used on
+ input line 103.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
+
+<use ../analysis/AnalyseCorrelation_subs.pdf, page 2>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page2 used on
+ input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [93 <../analysis/AnalyseCorrelation_subs.pdf>]
-<../analysis/AnalyseCorrelation_subs.pdf, id=906, page=3, 614.295pt x 794.97pt>
+<../analysis/AnalyseCorrelation_subs.pdf, id=877, page=4, 614.295pt x 794.97pt>
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
-<use ../analysis/AnalyseCorrelation_subs.pdf, page 3>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page3 used on
- input line 95.
+<use ../analysis/AnalyseCorrelation_subs.pdf, page 4>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page4 used on
+ input line 103.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
+
+<use ../analysis/AnalyseCorrelation_subs.pdf, page 4>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page4 used on
+ input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_subs.pdf, page 3>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page3 used on
- input line 95.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
-
-<use ../analysis/AnalyseCorrelation_subs.pdf, page 2>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page2 used on
- input line 95.
+ input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [94 <../analysis/AnalyseCorrelation_subs.pdf>]
-<../analysis/AnalyseCorrelation_subs.pdf, id=910, page=4, 614.295pt x 794.97pt>
+<../analysis/AnalyseCorrelation_subs.pdf, id=884, page=5, 614.295pt x 794.97pt>
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
-<use ../analysis/AnalyseCorrelation_subs.pdf, page 4>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page4 used on
- input line 95.
+<use ../analysis/AnalyseCorrelation_subs.pdf, page 5>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page5 used on
+ input line 103.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
+
+<use ../analysis/AnalyseCorrelation_subs.pdf, page 5>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page5 used on
+ input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_subs.pdf, page 4>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page4 used on
- input line 95.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
-
-<use ../analysis/AnalyseCorrelation_subs.pdf, page 3>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page3 used on
- input line 95.
+ input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [95 <../analysis/AnalyseCorrelation_subs.pdf>]
-<../analysis/AnalyseCorrelation_subs.pdf, id=917, page=5, 614.295pt x 794.97pt>
+<../analysis/AnalyseCorrelation_subs.pdf, id=888, page=6, 614.295pt x 794.97pt>
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
-<use ../analysis/AnalyseCorrelation_subs.pdf, page 5>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page5 used on
- input line 95.
+<use ../analysis/AnalyseCorrelation_subs.pdf, page 6>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page6 used on
+ input line 103.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
+
+<use ../analysis/AnalyseCorrelation_subs.pdf, page 6>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page6 used on
+ input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_subs.pdf, page 5>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page5 used on
- input line 95.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
-
-<use ../analysis/AnalyseCorrelation_subs.pdf, page 4>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page4 used on
- input line 95.
+ input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [96 <../analysis/AnalyseCorrelation_subs.pdf>]
-<../analysis/AnalyseCorrelation_subs.pdf, id=921, page=6, 614.295pt x 794.97pt>
+<../analysis/AnalyseCorrelation_subs.pdf, id=892, page=7, 614.295pt x 794.97pt>
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
-<use ../analysis/AnalyseCorrelation_subs.pdf, page 6>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page6 used on
- input line 95.
+<use ../analysis/AnalyseCorrelation_subs.pdf, page 7>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page7 used on
+ input line 103.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
+
+<use ../analysis/AnalyseCorrelation_subs.pdf, page 7>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page7 used on
+ input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_subs.pdf, page 6>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page6 used on
- input line 95.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
-
-<use ../analysis/AnalyseCorrelation_subs.pdf, page 5>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page5 used on
- input line 95.
+ input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [97 <../analysis/AnalyseCorrelation_subs.pdf>]
-<../analysis/AnalyseCorrelation_subs.pdf, id=926, page=7, 614.295pt x 794.97pt>
+<../analysis/AnalyseCorrelation_subs.pdf, id=897, page=8, 614.295pt x 794.97pt>
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
-<use ../analysis/AnalyseCorrelation_subs.pdf, page 7>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page7 used on
- input line 95.
+<use ../analysis/AnalyseCorrelation_subs.pdf, page 8>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page8 used on
+ input line 103.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
+
+<use ../analysis/AnalyseCorrelation_subs.pdf, page 8>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page8 used on
+ input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_subs.pdf, page 7>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page7 used on
- input line 95.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
-
-<use ../analysis/AnalyseCorrelation_subs.pdf, page 6>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page6 used on
- input line 95.
+ input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [98 <../analysis/AnalyseCorrelation_subs.pdf>]
-<../analysis/AnalyseCorrelation_subs.pdf, id=930, page=8, 614.295pt x 794.97pt>
+<../analysis/AnalyseCorrelation_subs.pdf, id=912, page=9, 614.295pt x 794.97pt>
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
-<use ../analysis/AnalyseCorrelation_subs.pdf, page 8>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page8 used on
- input line 95.
+<use ../analysis/AnalyseCorrelation_subs.pdf, page 9>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page9 used on
+ input line 103.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
+
+<use ../analysis/AnalyseCorrelation_subs.pdf, page 9>
+Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page9 used on
+ input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_subs.pdf, page 8>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page8 used on
- input line 95.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
-
-<use ../analysis/AnalyseCorrelation_subs.pdf, page 7>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page7 used on
- input line 95.
+ input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
  [99 <../analysis/AnalyseCorrelation_subs.pdf>]
-<../analysis/AnalyseCorrelation_subs.pdf, id=945, page=9, 614.295pt x 794.97pt>
-File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
-<use ../analysis/AnalyseCorrelation_subs.pdf, page 9>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page9 used on
- input line 95.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
-
-<use ../analysis/AnalyseCorrelation_subs.pdf, page 9>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page9 used on
- input line 95.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
-File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
-
-<use ../analysis/AnalyseCorrelation_subs.pdf, page 8>
-Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page8 used on
- input line 95.
-(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [100 <../analysis/AnalyseCorrelation_subs.pdf>]
-<../analysis/AnalyseCorrelation_subs.pdf, id=957, page=10, 614.295pt x 794.97pt
+<../analysis/AnalyseCorrelation_subs.pdf, id=924, page=10, 614.295pt x 794.97pt
 >
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
  <use ../analysis/AnalyseCorrelation_subs.pdf, page 10>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page10 used o
-n input line 95.
+n input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_subs.pdf, page 10>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page10 used o
-n input line 95.
+n input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_subs.pdf, page 9>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page9 used on
- input line 95.
+ input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [101 <../analysis/AnalyseCorrelation_subs.pdf>]
-<../analysis/AnalyseCorrelation_subs.pdf, id=969, page=11, 614.295pt x 794.97pt
+ [100 <../analysis/AnalyseCorrelation_subs.pdf>]
+<../analysis/AnalyseCorrelation_subs.pdf, id=936, page=11, 614.295pt x 794.97pt
 >
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
  <use ../analysis/AnalyseCorrelation_subs.pdf, page 11>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page11 used o
-n input line 95.
+n input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_subs.pdf, page 11>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page11 used o
-n input line 95.
+n input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_subs.pdf, page 10>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page10 used o
-n input line 95.
+n input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [102 <../analysis/AnalyseCorrelation_subs.pdf>]
-<../analysis/AnalyseCorrelation_subs.pdf, id=973, page=12, 614.295pt x 794.97pt
+ [101 <../analysis/AnalyseCorrelation_subs.pdf>]
+<../analysis/AnalyseCorrelation_subs.pdf, id=940, page=12, 614.295pt x 794.97pt
 >
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
  <use ../analysis/AnalyseCorrelation_subs.pdf, page 12>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page12 used o
-n input line 95.
+n input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_subs.pdf, page 12>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page12 used o
-n input line 95.
+n input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_subs.pdf, page 11>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page11 used o
-n input line 95.
+n input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [103 <../analysis/AnalyseCorrelation_subs.pdf>]
-<../analysis/AnalyseCorrelation_subs.pdf, id=978, page=13, 614.295pt x 794.97pt
+ [102 <../analysis/AnalyseCorrelation_subs.pdf>]
+<../analysis/AnalyseCorrelation_subs.pdf, id=944, page=13, 614.295pt x 794.97pt
 >
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
  <use ../analysis/AnalyseCorrelation_subs.pdf, page 13>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page13 used o
-n input line 95.
+n input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_subs.pdf, page 13>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page13 used o
-n input line 95.
+n input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_subs.pdf, page 12>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page12 used o
-n input line 95.
+n input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [104 <../analysis/AnalyseCorrelation_subs.pdf>]
-<../analysis/AnalyseCorrelation_subs.pdf, id=982, page=14, 614.295pt x 794.97pt
+ [103 <../analysis/AnalyseCorrelation_subs.pdf>]
+<../analysis/AnalyseCorrelation_subs.pdf, id=949, page=14, 614.295pt x 794.97pt
 >
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
  <use ../analysis/AnalyseCorrelation_subs.pdf, page 14>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page14 used o
-n input line 95.
+n input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_subs.pdf, page 14>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page14 used o
-n input line 95.
+n input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_subs.pdf, page 13>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page13 used o
-n input line 95.
+n input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [105 <../analysis/AnalyseCorrelation_subs.pdf>]
-<../analysis/AnalyseCorrelation_subs.pdf, id=1002, page=15, 614.295pt x 794.97p
-t>
+ [104 <../analysis/AnalyseCorrelation_subs.pdf>]
+<../analysis/AnalyseCorrelation_subs.pdf, id=969, page=15, 614.295pt x 794.97pt
+>
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
  <use ../analysis/AnalyseCorrelation_subs.pdf, page 15>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page15 used o
-n input line 95.
+n input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_subs.pdf, page 15>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page15 used o
-n input line 95.
+n input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_subs.pdf, page 14>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page14 used o
-n input line 95.
+n input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [106 <../analysis/AnalyseCorrelation_subs.pdf>]
-<../analysis/AnalyseCorrelation_subs.pdf, id=1022, page=16, 614.295pt x 794.97p
-t>
+ [105 <../analysis/AnalyseCorrelation_subs.pdf>]
+<../analysis/AnalyseCorrelation_subs.pdf, id=989, page=16, 614.295pt x 794.97pt
+>
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
  <use ../analysis/AnalyseCorrelation_subs.pdf, page 16>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page16 used o
-n input line 95.
+n input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_subs.pdf, page 16>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page16 used o
-n input line 95.
+n input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_subs.pdf, page 15>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page15 used o
-n input line 95.
+n input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [107 <../analysis/AnalyseCorrelation_subs.pdf>]
-<../analysis/AnalyseCorrelation_subs.pdf, id=1029, page=17, 614.295pt x 794.97p
-t>
+ [106 <../analysis/AnalyseCorrelation_subs.pdf>]
+<../analysis/AnalyseCorrelation_subs.pdf, id=996, page=17, 614.295pt x 794.97pt
+>
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
  <use ../analysis/AnalyseCorrelation_subs.pdf, page 17>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page17 used o
-n input line 95.
+n input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_subs.pdf, page 17>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page17 used o
-n input line 95.
+n input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
 
 <use ../analysis/AnalyseCorrelation_subs.pdf, page 16>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page16 used o
-n input line 95.
+n input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
- [108 <../analysis/AnalyseCorrelation_subs.pdf>]
+ [107 <../analysis/AnalyseCorrelation_subs.pdf>]
 File: ../analysis/AnalyseCorrelation_subs.pdf Graphic file (type pdf)
  <use ../analysis/AnalyseCorrelation_subs.pdf, page 17>
 Package pdftex.def Info: ../analysis/AnalyseCorrelation_subs.pdf, page17 used o
-n input line 95.
+n input line 103.
 (pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
 
-[109 <../analysis/AnalyseCorrelation_subs.pdf>] (./SI_2.aux) ) 
+[108 <../analysis/AnalyseCorrelation_subs.pdf>]
+<../analysis/SummaryOfFindings.pdf, id=1006, 614.295pt x 794.97pt>
+File: ../analysis/SummaryOfFindings.pdf Graphic file (type pdf)
+
+<use ../analysis/SummaryOfFindings.pdf>
+Package pdftex.def Info: ../analysis/SummaryOfFindings.pdf used on input line 1
+08.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+File: ../analysis/SummaryOfFindings.pdf Graphic file (type pdf)
+
+<use ../analysis/SummaryOfFindings.pdf>
+Package pdftex.def Info: ../analysis/SummaryOfFindings.pdf used on input line 1
+08.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+
+<../analysis/SummaryOfFindings.pdf, id=1009, page=1, 614.295pt x 794.97pt>
+File: ../analysis/SummaryOfFindings.pdf Graphic file (type pdf)
+
+<use ../analysis/SummaryOfFindings.pdf, page 1>
+Package pdftex.def Info: ../analysis/SummaryOfFindings.pdf, page1 used on input
+ line 108.
+(pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
+File: ../analysis/SummaryOfFindings.pdf Graphic file (type pdf)
+
+<use ../analysis/SummaryOfFindings.pdf, page 1>
+Package pdftex.def Info: ../analysis/SummaryOfFindings.pdf, page1 used on input
+ line 108.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ../analysis/SummaryOfFindings.pdf Graphic file (type pdf)
+
+<use ../analysis/SummaryOfFindings.pdf, page 1>
+Package pdftex.def Info: ../analysis/SummaryOfFindings.pdf, page1 used on input
+ line 108.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ../analysis/SummaryOfFindings.pdf Graphic file (type pdf)
+
+<use ../analysis/SummaryOfFindings.pdf, page 1>
+Package pdftex.def Info: ../analysis/SummaryOfFindings.pdf, page1 used on input
+ line 108.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+ [109]
+<../analysis/SummaryOfFindings.pdf, id=1014, page=2, 614.295pt x 794.97pt>
+File: ../analysis/SummaryOfFindings.pdf Graphic file (type pdf)
+
+<use ../analysis/SummaryOfFindings.pdf, page 2>
+Package pdftex.def Info: ../analysis/SummaryOfFindings.pdf, page2 used on input
+ line 108.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ../analysis/SummaryOfFindings.pdf Graphic file (type pdf)
+
+<use ../analysis/SummaryOfFindings.pdf, page 2>
+Package pdftex.def Info: ../analysis/SummaryOfFindings.pdf, page2 used on input
+ line 108.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ../analysis/SummaryOfFindings.pdf Graphic file (type pdf)
+
+<use ../analysis/SummaryOfFindings.pdf, page 1>
+Package pdftex.def Info: ../analysis/SummaryOfFindings.pdf, page1 used on input
+ line 108.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+ [110 <../analysis/SummaryOfFindings.pdf>]
+<../analysis/SummaryOfFindings.pdf, id=1037, page=3, 614.295pt x 794.97pt>
+File: ../analysis/SummaryOfFindings.pdf Graphic file (type pdf)
+
+<use ../analysis/SummaryOfFindings.pdf, page 3>
+Package pdftex.def Info: ../analysis/SummaryOfFindings.pdf, page3 used on input
+ line 108.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ../analysis/SummaryOfFindings.pdf Graphic file (type pdf)
+
+<use ../analysis/SummaryOfFindings.pdf, page 3>
+Package pdftex.def Info: ../analysis/SummaryOfFindings.pdf, page3 used on input
+ line 108.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ../analysis/SummaryOfFindings.pdf Graphic file (type pdf)
+
+<use ../analysis/SummaryOfFindings.pdf, page 2>
+Package pdftex.def Info: ../analysis/SummaryOfFindings.pdf, page2 used on input
+ line 108.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+ [111 <../analysis/SummaryOfFindings.pdf>]
+<../analysis/SummaryOfFindings.pdf, id=1051, page=4, 614.295pt x 794.97pt>
+File: ../analysis/SummaryOfFindings.pdf Graphic file (type pdf)
+
+<use ../analysis/SummaryOfFindings.pdf, page 4>
+Package pdftex.def Info: ../analysis/SummaryOfFindings.pdf, page4 used on input
+ line 108.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ../analysis/SummaryOfFindings.pdf Graphic file (type pdf)
+
+<use ../analysis/SummaryOfFindings.pdf, page 4>
+Package pdftex.def Info: ../analysis/SummaryOfFindings.pdf, page4 used on input
+ line 108.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ../analysis/SummaryOfFindings.pdf Graphic file (type pdf)
+
+<use ../analysis/SummaryOfFindings.pdf, page 3>
+Package pdftex.def Info: ../analysis/SummaryOfFindings.pdf, page3 used on input
+ line 108.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+ [112 <../analysis/SummaryOfFindings.pdf>]
+<../analysis/SummaryOfFindings.pdf, id=1055, page=5, 614.295pt x 794.97pt>
+File: ../analysis/SummaryOfFindings.pdf Graphic file (type pdf)
+
+<use ../analysis/SummaryOfFindings.pdf, page 5>
+Package pdftex.def Info: ../analysis/SummaryOfFindings.pdf, page5 used on input
+ line 108.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ../analysis/SummaryOfFindings.pdf Graphic file (type pdf)
+
+<use ../analysis/SummaryOfFindings.pdf, page 5>
+Package pdftex.def Info: ../analysis/SummaryOfFindings.pdf, page5 used on input
+ line 108.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+File: ../analysis/SummaryOfFindings.pdf Graphic file (type pdf)
+
+<use ../analysis/SummaryOfFindings.pdf, page 4>
+Package pdftex.def Info: ../analysis/SummaryOfFindings.pdf, page4 used on input
+ line 108.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+ [113 <../analysis/SummaryOfFindings.pdf>]
+File: ../analysis/SummaryOfFindings.pdf Graphic file (type pdf)
+ <use ../analysis/SummaryOfFindings.pdf, page 5>
+Package pdftex.def Info: ../analysis/SummaryOfFindings.pdf, page5 used on input
+ line 108.
+(pdftex.def)             Requested size: 597.78697pt x 773.60669pt.
+ [114 <../analysis/SummaryOfFindings.pdf>] (./SI_4.aux) ) 
 Here is how much of TeX's memory you used:
- 3982 strings out of 493089
- 69909 string characters out of 6134841
- 130212 words of memory out of 5000000
- 7411 multiletter control sequences out of 15000+600000
+ 3997 strings out of 493089
+ 70282 string characters out of 6134841
+ 131212 words of memory out of 5000000
+ 7424 multiletter control sequences out of 15000+600000
  8617 words of font info for 31 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,18n,46p,1204b,421s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texli
-ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texliv
-e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive
-/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2
-015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/201
-5/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2015/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2015/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2015/texmf
--dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2015/texmf-dist/font
-s/type1/public/lm/lmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pu
-blic/lm/lmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lm
-mi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr10.pfb></u
-sr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2015/t
-exmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2015/texmf-dist/
-fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
-1/public/lm/lmtk10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/l
-m/lmtt10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmtti10.
-pfb>
-Output written on SI_2.pdf (109 pages, 1864076 bytes).
+ 40i,18n,46p,1709b,421s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/20
+15/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/201
+5/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2015/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2015/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2015/texmf-dist
+/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/typ
+e1/public/lm/lmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
+lm/lmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr10.p
+fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/lo
+cal/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2015/texmf
+-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2015/texmf-dist/font
+s/type1/public/lm/lmtk10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pu
+blic/lm/lmtt10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lm
+tti10.pfb>
+Output written on SI_4.pdf (114 pages, 1776765 bytes).
 PDF statistics:
- 1087 PDF objects out of 1200 (max. 8388607)
- 683 compressed objects within 7 object streams
+ 1121 PDF objects out of 1200 (max. 8388607)
+ 703 compressed objects within 8 object streams
  0 named destinations out of 1000 (max. 500000)
- 576 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 606 words of extra memory for PDF output out of 10000 (max. 10000000)
 

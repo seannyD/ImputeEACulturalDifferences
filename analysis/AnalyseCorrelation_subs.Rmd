@@ -6,6 +6,8 @@ output:
     toc: true
 ---
 
+\setcounter{page}{92}
+
 ```{r echo=F, eval=F}
 setwd("~/Documents/Bristol/word2vec/word2vec_DPLACE/analysis/")
 ```
@@ -406,7 +408,7 @@ hist.m2 = hist.m[in.analysis,in.analysis]
 geo.m2 = geoDist.m[in.analysis,in.analysis]
 ```
 
-Note that there are only `r length(in.analysis)` languages with data on lingusitic, cultural and historical distance.
+Note that there are only `r length(in.analysis)` languages with data on lingusitic, cultural and historical distance. This is becasue the historical distances are derived from a tree of Indo-European languages (there are currently no reliable phylogentic trees constructed from cognates that span different language families). The languages in this test include: `r paste(sort(in.analysis),collapse=", ")`.
 
 ```{r}
 plot(as.dist(cult.m2),as.dist(ling.m2),

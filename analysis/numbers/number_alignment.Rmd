@@ -7,6 +7,8 @@ output:
     latex_engine: xelatex
 ---
 
+\setcounter{page}{42}
+
 ```{r echo=F,eval=F}
 try(setwd("~/Documents/Bristol/word2vec/word2vec_DPLACE/analysis/numbers/"))
 ```
@@ -43,27 +45,23 @@ Although translations may be more direct for number words, there are still diffe
 -  *family_l2*: Family of language l2
 -  *same.family*: Compared langauges are part of same family?
 -  *hist.dist*: Historical distance according to phylogenetic tree.
--  *l1_typology*: Number line typology according to Calude & Verkerk (2016)
--  *l2_typology*: : Number line typology according to Calude & Verkerk (2016)
--  *sameNumeralTypology*: Comparison of number line typology.
+-  *l1_typology*: Numeral typology for L1 according to Calude & Verkerk (2016) (see the section on "Number line" below). 
+-  *l2_typology*: Same as above for L2.
+-  *sameNumeralTypology*: Comparison of numeral typology. This is 1 if the typology is the same in L1 and L2 (i.e. both numbers are atoms or use the same composition), and zero if the typology is different.
 -  *seven*: True if the numeral is 7. (see below)
 -  *homophone*: Word has a homophone in the North Euralex database.
 -  *freqDiff*: Difference in orthographic frequency (absolute, log scale)
 
-## A note on EDF values and random effects in Generalised Additive Models
-
-(This note taken from Monaghan & Roberts (2019) Cognitive influences in language evolution: Psycholinguistic predictors of loan word borrowing. _Cognition_, 186, 147-158.)
-
-The Estimated Degrees of Freedom (EDF) is an indication of how non-linear a smooth term is (higher = less linear). It is intended as a diagnostic measure of the shape of the curve, rather than a value used in estimating significance. The EDF is not the same as a simple polynomial curve’s degree. Instead of a single polynomial curve, each smooth term is a collection of underlying basis functions (simpler curves). When each basis function is weighted by a coefficient, they add up to fit the data. The model attempts to find a collection of basis functions and weighting coefficients that add up to fit the data. Smaller collections of basis functions (simpler models) are preferred and larger (more complex) collections are penalised.
-
-When the model converges on a solution, each smooth term is a collection of simpler curves. Each curve might have a polynomial degree, but it is also useful to have an estimate of the linearity/non-linearity of the whole smooth term.  This is what the EDF provides: an EDF of 1 indicates a linear relationship, and higher values indicate more non-linear relationship. The definition of EDF in the implementaion we use is described in Wood (2008):
-
-> "Associated with each smooth function is one or more measures of function 'wiggliness' $\beta_T^j \tilde{S}_j \beta_j$ where $\tilde{S}_j$
-is a matrix of known coefficients. Typically the wiggliness measure evaluates something like the univariate spline penalty."
-
-That is, an EDF value is a combination of non-linearity measures of the basis functions, weighted by the weighting coefficient of each basis function. So, in general, a curve with an EDF of around 2 will look like a quadratic curve, and an EDF of around 3 will look like a cubic curve. However, this does not have to be the case: a smooth term could have a strong linear term, and a very weak non-linear term. The EDF captures this possibility as a continuous value. The simplest way to actually assess the smooth term is to plot it.
+The Estimated Degrees of Freedom (EDF) is an indication of how non-linear a smooth term is (higher = less linear, see e.g. Wood, 2008). In general, a curve with an EDF of around 2 will look like a quadratic curve, and an EDF of around 3 will look like a cubic curve. However, this does not have to be the case: a smooth term could have a strong linear term, and a very weak non-linear term. The EDF captures this possibility as a continuous value. The simplest way to actually assess the smooth term is to plot it.
 
 Random effects in the GAM implementation we use are treated just like a smooth term with the identity matrix as the penalty coefficient matrix. When entering a language pair as a random (intercept) effect, coefficients are created for each pair, modelled as independent and identically distributed normal random variables. The values are defined as discrete points along a smooth function. So, just like in a mixed effects model, the predicted alignment can be adjusted by a random intercept (the coefficients), e.g. the model can represent the alignment between English and French as higher overall, and the alignment between English and Bulgarian as being slightly lower etc. Stronger differences between levels of the random effect would need be represented by more complex functions, which would be penalised (similar to how a linear mixed effect model penalises random effect coefficient estimates which deviate from a normal distribution). The EDF value for the random effects relates to the ‘wiggliness’ of these coefficients when plotted in a regular space. This makes the EDF difficult to interpret.  A random effect where there were no differences between levels would have an EDF of 1 (a flat line), but it would also be 1 when there were consistent distances between each level. So a high EDF would indicate something like an imbalance in the distribution of coefficients, e.g. a range of values that does not fit a normal distribution. In fact, there are several language pairs with lower alignment (pairs from different language families), and few with very high alignment (possibly a ceiling effect).
+
+See the SI of Monaghan & Roberts (2019) for further explanation of EDF and random effects applied to lingusitic data.
+
+Monaghan & Roberts (2019) Cognitive influences in language evolution: Psycholinguistic predictors of loan word borrowing. _Cognition_, 186, 147-158.
+
+Wood, S. N. (2008). Fast stable direct fitting and smoothness selection for generalized additive models. _Journal of the Royal Statistical Society: Series B (Statistical Methodology)_, 70(3), 495-518.
+
 
 \newpage
 
@@ -238,12 +236,20 @@ What's driving the difference with 7 and 9? 7 might be linked to there being 7 d
 la7 = langAverages[langAverages$number_numeric==7,]
 la7$l = factor(la7$l,levels=names(sort(tapply(
          la7$local_alignment,la7$l,mean))))
-ggplot(la7,aes(x=l,y=local_alignment)) + geom_boxplot()
+ggplot(la7,aes(x=l,y=local_alignment)) + 
+  geom_boxplot() +
+  ggtitle("Local alignment comparisons for 7")
+
 ```
 
-The plot above shows that the main difference is being driven by comparisons with Hungarian. All the outliers around 0.25 are comparisons with Hungarian. This might be because Hungarian is a Uralic language, but maybe also because the Hungarian word for '7' also directly means "week".
+The plot above shows that the numeral 7 has lower alignment when it involves a comparison with Hungarian or Ukrainian. For example, all the outliers around 0.25 are comparisons with Hungarian. Also, the means are clearly different from the other languages, as shown by hierarchical clustering:
 
-Ukrainian is also low. We note that forms for 7 and 8 are very similar in Ukrainian (7 = sim and 8 = visim).
+```{r}
+hc = hclust(dist(sort(tapply(la7$local_alignment,la7$l,mean))))
+plot(hc,main="Cluster for mean local alignment",xlab="",sub = "")
+```
+
+This might be because Hungarian is a Uralic language, but maybe also because the Hungarian word for '7' also directly means "week". Ukrainian is also low. We note that forms for 7 and 8 are very similar in Ukrainian (7 = sim and 8 = visim).
 
 What are the outliers for 9? These all include comparisons to French:
 
@@ -268,16 +274,18 @@ ggplot(numbers[!numbers$homophone,],
              aes(y=local_alignment,
            x=factor(number_numeric)),
            colour="red") +
-  myThemeBasic
+  myThemeBasic +
+  xlab("Numeral") +
+  ggtitle("Non-homophones with homophones as red dots")
 ```
 
 \newpage
 
 ## Number line
 
-We can look at the importance of the different ways that numeral systems are compased. We use data from Calude & Verkerk (2016), and identify whether two languages have the same system for forming a particular numeral. Calude & Verkerk call this the 'number line'.
+We can look at the importance of the different ways that numeral systems are compased. We use data from Calude & Verkerk (2016)'s typology which describe the composition of numerals in many Indo-European langages (what Calude & Verkerk call the 'number line'). For example, the numeral 'four' in English is an 'atom' (it is not composable into smaller parts), while 'fourteen' is composed of two atoms (four + ten). There are differences between languages in terms of whether they use an atom or a composition of two atoms. For example, English uses a unique atom to represent 12 ('twelve'), while Bulgarian uses a form that is composed as "2 + 10" (2 = dve, 10 = deset, 12 = dvanadeset). There are also differences between languages in how they compose some numerals. For example, 'eighty' in English is constructed as 8 x 10 but in French 'quatre-vingts' is 4 x 20. We used this data to  identify whether two languages have the same system for forming a particular numeral. 
 
-In our sample, all numbers below 10 are atoms, so there are only differences above 10. For example, English uses a unique atom to represent 12 (/twelv/), while Bulgarian uses a form that is composed of "2+10" (2 = dve, 10 = deset, 12 = dvanadeset).
+We note that, in our sample, there are no differences between languages in the number line for numerals from 0 to ten. This is because all numbers below 10 for all languages in the sample are atoms. Therefore, the measure of numeral compostion is only informative for higher numerals.
 
 It looks like there's an interaction between numeral typoogy and numeric value:
 
@@ -406,6 +414,14 @@ pdf("rDecisionTree.pdf",width=12,height=8)
   print(plot2,vp = vp1) 
 dev.off()
 
+```
+
+![Decision tree predicting the semantic alignment of numerals (upper panel). Each node shows the average alignment of data under that node, and the proportion of data that is represented under that node. Each split in the tree splits the data according to the labelled criteria (e.g. the first split divides the number one from all other numbers). The lower panel shows the distribution of semantic alignment values for the data at each tip of the tree.](../../results/numbers/DecisionTree.pdf)
+
+\clearpage
+\newpage
+
+```{r}
 varimp = sort(rt$Tree$variable.importance)
 varimp.plot = ggplot(data.frame(importance=varimp,
                   variable=factor(names(varimp),levels = names(varimp))),
@@ -416,10 +432,11 @@ varimp.plot
 dev.off()
 ```
 
-![](../../results/numbers/DecisionTree.pdf)
+![Variable importance measures for the decision tree above ](../../results/numbers/VarImp.pdf)
 
-![](../../results/numbers/VarImp.pdf)
 
+\clearpage
+\newpage
 
 # Run a GAM
 
@@ -733,14 +750,14 @@ gamPlot.phylo
 
 # Conclusion
 
-Semantic alignment for number words is generally high, though there are some differences that can be explained (the model explained `r round(summary(m1)$dev.expl*100,2)`% of the deviance).  1 and 2 have lower alignment due to often being grammaticalised as indefinite or dual marker (Givon, 1981). Numbers 3-12 generally have high alignment (mean local alignment = 0.87), and higher numbers decline in alignment up to 1000. There are also language-specific differences due to how number lines are constructed (e.g. base, combination rules, see Calude & Verkerk, 2016), or for irregular forms (e.g. 50, 60, 70, 80 and 90 in Danish). Some number words have  alternative associations due to homophones (e.g. the Hungarian 7 is used directly to mean 'week', and 'neuf' in French means '9' or 'new'). The historical distance between languages did not predict much of the variation.
+Semantic alignment for number words is generally high, though there are some differences that can be explained (the model explained `r round(summary(m1)$dev.expl*100,2)`% of the deviance).  1 and 2 have lower alignment due to often being grammaticalised as indefinite or dual marker (Givon, 1981). Numbers 3-12 generally have high alignment (mean local alignment = 0.87), and higher numbers decline in alignment up to 1000. There are also language-specific differences due to how numerals are constructed (e.g. base, combination rules, see Calude & Verkerk, 2016), or for irregular forms (e.g. 50, 60, 70, 80 and 90 in Danish). Some number words have  alternative associations due to homophones (e.g. the Hungarian 7 is used directly to mean 'week', and 'neuf' in French means '9' or 'new'). The historical distance between languages did not predict much of the variation.
 
-The differences in semantic alignment may appear either because (A) the semantic associations are different for different languages, or (B) as a a side-effect of numbers appearing with different words skewing the alignment metric. Effects that support (B) could include:
+The differences in semantic alignment may appear either because (A) the semantic associations are different for different languages, or (B) as a side-effect of numbers appearing with different words skewing the alignment metric. Effects that support (B) could include:
 
--  Difference in frequency. Lower frequency terms will appear to have narrower semantic relations.  
+-  Difference in frequency. Lower frequency terms will appear in a smaller range of contexts and the semantic alignment estimates may be more stochastic.  
 -  Homophones. Different meanings will contribute different semantic relations.
 
-However, it is more difficult to explain why different number line typologies would lead to semantic differences, unless the way numbers are constructed affects the way people think about the numbers.
+However, it is more difficult to explain why different numeral typologies would lead to semantic differences, unless the way numbers are constructed affects the way people think about the numbers.
 
 
 # References

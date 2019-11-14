@@ -6,6 +6,8 @@ output:
     toc: true
 ---
 
+\setcounter{page}{3}
+
 ```{r echo=F, eval=F}
 setwd("~/Documents/Bristol/word2vec/word2vec_DPLACE/analysis/")
 ```
@@ -23,19 +25,27 @@ setwd("~/Documents/Bristol/word2vec/word2vec_DPLACE/analysis/")
 
 # Introduction
 
-We compare cultural distances between socieites with linguistic similarities between societies, controlling for shared history in two ways.
+We compare cultural distances between socieites with semantic alignment between societies, controlling for shared history in two ways.
 
-The first test uses mixed effects modelling.  The pairing of the language family of each language (according to Glottolog, Hammarstrom et al., 2018) is used as a random effect.  That means that the model can capture the likelihood that two languages from the Indo-European language family will be more similar to each other than two languages from different language families.  The same is done with geographic area according to Autotyp (Nichols et al., 2013). The model also included a fixed effect for for the number of lexical comparisons that went into the mean semantic alignment estimates (generally, more available comparisons indicate more possible comparisons, i.e. more similar languages).
+The first test uses mixed effects modelling.  The pairing of the language family of each language (according to Glottolog, Hammarstrom et al., 2018) is used as a random effect.  That means that the model can capture the likelihood that two languages from the same language family (e.g. Indo-European) will be more similar to each other than two languages from different language families. The same is done with geographic area according to Autotyp (Nichols et al., 2013), which reflect areas of known linguistic contact. The model also included a fixed effect for for the number of lexical comparisons that went into the mean semantic alignment estimates (generally, more available comparisons indicate more possible comparisons, i.e. more similar languages).
 
-The second test controls for history using distances from a phylogenetic tree.  The tree comes from Bouckaert et al. (2012).  Patristic distances between languages are used as a measure of historical distance between societies in a Mantel test.  Note that the Mantel test assumes a strict distance metric, which is not necessarily the case with this data, but there are few other ways to deal with continuous pairwise distances. Mantel tests were used to test the relationship between semantic alignment and historical proximity and between semantic alignment and geographic proximity.  Geographic proximity was measured as the great circle distance between the cultural centres of each language as defined in Glottolog. For the analysis within domains, partial Mantel tests were used to estimate the correlation between the semantic alignment and the cultural/geographic/historical proximity while partialling out the effect of the other two proximity measures. 
+The second and thrid test controls for history using distances from a phylogenetic tree.  The tree comes from Bouckaert et al. (2012), which was estimated by comapring the gain and loss of cognates in the lexicon of Indo-European languages. Patristic distances between languages are used as a measure of historical distance between languages. Patristic distance is the distance between two leaves on the tree following the shortest path (which will go through the most recent common ancestor). The branch lengths in the tree are scaled to reflect time, so the shortest distance between two leaves on the tree indicates the total amount of independent evolution between two languages. An alternative measure of historical distance was obtained from data from the Automated Similarity Judgement Program database (ASJP, Wichmann, Holman & Brown, 2018). This is a databse of basic vocabulary in a common phonetic format. We used the distances as calculated by Jäger (2018) which essentially measure the average edit distance between langauges (the number of changes to turn one vocabulary into the other), accounting for the likelihood of historical changes between sound segments. The measure is similar to calculating distances between sequences of DNA. Both of these measures of historical distance are based on the lexicon, but do not use measures of the semantic meanings of words.
 
-The effect was also confirmed using multiple regression on distance matrices (Lichstein, 2007). The results above were robustly replicated using the filtered data and also alternative sources for semantic alignment (common crawl, see file *AnalyseCorrelation_cc.pdf*). The correlation was not robust to all tests or for data derived from the subtitles dataset (see file *AnalyseCorrelation_subs.pdf*), possibly because there were only 20 languages available to analyse.
+The second test uses simple and partial Mantel tests (Mantel, 1967 and e.g. Smouse, Long & Sokal, 1986, Legendre, 2000; Castellano & Balletto, 2002, Goslee, 2010), using the implementation in the R package *ecodist* (Goslee & Urban, 2007). A Mantel test is a nonparemetric test that uses permutation to assess the strength of the relationship between two distance matrices. It compares the correlation between the values from two distance matrices with the correlation produced when the values of one of the matrices is permuted. This allows it to account for the dependencies between the distances. Note that the Mantel test assumes a strict distance metric, which is not necessarily the case with this data (see also e.g. Harmon & Glor, 2010), but there are few other ways to deal with continuous pairwise distances. 
+
+Mantel tests were used to test the relationship between semantic alignment and historical proximity, and between semantic alignment and geographic proximity. Geographic proximity was measured as the great circle distance between the cultural centres of each language as defined in Glottolog (Hammarstrom et al., 2018). For the analysis within domains, partial Mantel tests were used to estimate the correlation between the semantic alignment and the cultural/geographic/historical proximity while partialling out the effect of the other two proximity measures. 
+
+The third test uses multiple regression on distance matrices (Lichstein, 2007). This is a regression approach which uses distance matrices as dependent and independent variables.
+
+The results above were robustly replicated using the filtered data and also alternative sources for semantic alignment (common crawl, see file *AnalyseCorrelation_cc.pdf*). The correlation was not robust to all tests or for data derived from the subtitles dataset (see file *AnalyseCorrelation_subs.pdf*), possibly because there were only 20 languages available to analyse.
 
 The final section looks at relationships between sub-domains.  The first section describes how the cultural similarity measure was calculated.
 
 # Calculating cultural similarity
 
-The aim is to produce a set of distances between societies based on their cultural traits.  The Ethnographic Atlas (Murdock et al., 1999) as made available in D-PLACE (Kirby et al., 2016) could do this, but there is a lot of missing data (about 25% in the whole dataset), which means that distances can't be computed easily.  One approach is to impute the missing data (guess their values based on existing data).  It's unlikely that any imputation method will be completely accurate, but for our purposes we don't need to be accurate, just *unbiased*.  That is, the imputed values should not bias the estimates of the distances between cultures.
+The aim is to produce a set of distances between societies based on their cultural traits.  The Ethnographic Atlas (Murdock et al., 1999) is a database of (non-linguistic) cultural traits on many societies. For each variable, societies are assigned to one category (or value). For example, the variable 'EA011' classifies a society's norms for "Transfer of residence at marriage". Each society is assigned to one of the following groups: "Wife to husband's group", "Husband to wife's group" "Couple to either group", "Nonestablishment of a common household". The D-PLACE database (https://d-place.org/, Kirby et al., 2016) links societies in the Ethnogrpahic atlas to the languages they speak (through the Glottolog ID, Hammarstrom et al., 2018). D-PLACE also provides the data in an updated format, so we use this as our primary data source.
+
+However, there is a lot of missing data in the Ethnographic Atlas (about 25% in the whole dataset), which means that distances can't be computed easily.  One approach is to impute the missing data (guess their values based on existing data).  It's unlikely that any imputation method will be completely accurate, but for our purposes we don't need to be accurate, just *unbiased*.  That is, the imputed values should not bias the estimates of the distances between cultures.
 
 In this case, we use multiple imputation: calculating many possible alternative imputations and taking the mean distances over all imputations. 
 
@@ -201,7 +211,7 @@ table(tx$fam,tx$area)
 
 ## LMER models
 
-Mixed effects model, predicting Linguistic similaritys from cultural similarity, with random intercept for family and area and random slope for cultural similarity for family and area.
+Mixed effects model, predicting semantic alignment from cultural similarity, with random intercept for family and area and random slope for cultural similarity for family and area.
 
 We start with a null model with random intercepts for family and area, and random slopes for cultural similarity by both. We add a fixed effect of the number of comparisons made for each datapoint (number of concepts that were available to compare). Then we add a fixed effect of cultural similarity
 
@@ -231,7 +241,7 @@ an1 = anova(m0,m0.5,m1)
 an1
 ```
 
-Cultural similarity is not significantly correlated with Linguistic similarity.  Here are the model estimates:
+Cultural similarity is not significantly correlated with semantic alignment.  Here are the model estimates:
 
 ```{r}
 summary(m1)
@@ -484,7 +494,7 @@ Read the historical distances for Indo-European, based on the phylogenetic dista
 
 The geographic distances are loaded above (from "../data/GeographicDistances.csv").
 
-Load historical distances:
+Load historical distances (Indo-European tree patristic distances):
 
 ```{r}
 hist = read.csv("../data/trees/IndoEuropean_historical_distances.csv", stringsAsFactors = F)
@@ -510,7 +520,7 @@ Flip the cultural distance into a cultural similarity measure:
 cult.m = 1-cult.m
 ```
 
-Convert the linguistic similarities to a matrix.  This uses `igraph` to make an undirected graph from the long format with `local_alignment` as the edge weights, then output a matrix of adjacencies.
+Convert the semantic alignment to a matrix.  This uses `igraph` to make an undirected graph from the long format with `local_alignment` as the edge weights, then output a matrix of adjacencies.
 
 ```{r}
 grph <- graph.data.frame(ling[,c("l1",'l2','local_alignment')], directed=FALSE)
@@ -531,17 +541,17 @@ hist.m2 = hist.m[in.analysis,in.analysis]
 geo.m2 = geoDist.m[in.analysis,in.analysis]
 ```
 
-Note that there are only `r length(in.analysis)` languages with data on lingusitic, cultural and historical distance.
+Note that there are only `r length(in.analysis)` languages with data on lingusitic, cultural and historical distance. This is becasue the historical distances are derived from a tree of Indo-European languages (there are currently no reliable phylogentic trees constructed from cognates that span different language families). The languages in this test include: `r paste(sort(in.analysis),collapse=", ")`.
 
 ```{r}
 plot(as.dist(cult.m2),as.dist(ling.m2),
      xlab="Cultural similarity",
-     ylab="Linguistic similarity")
+     ylab="Semantic alignment")
 plot(as.dist(cult.m2),as.dist(hist.m2),
      xlab="Cultural similarity",
      ylab="Historical distance")
 plot(as.dist(ling.m2),as.dist(hist.m2),
-     xlab="Linguistic similarity",
+     xlab="Semantic alignment",
      ylab="Historical distance")
 ```
 
@@ -610,7 +620,7 @@ for(i in 1:3){
 ```
 
 
-Run a mantel test comparing the Linguistic alignment to the cultural similarity, controlling for the historical distance between languages:
+Run a mantel test comparing the semantic alignment to the cultural similarity, controlling for the historical distance between languages:
 
 ```{r}
 ecodist::mantel(as.dist(ling.m2)~
@@ -619,7 +629,7 @@ ecodist::mantel(as.dist(ling.m2)~
                 nperm = 100000)
 ```
 
-*Main Test*: Run a mantel test comparing the Linguistic alignment to the cultural similarity, controlling for the historical distance and geographic distance between languages:
+*Main Test*: Run a mantel test comparing the semantic alignment to the cultural similarity, controlling for the historical distance and geographic distance between languages:
 
 ```{r}
 mainMantel = ecodist::mantel(as.dist(ling.m2)~
@@ -755,7 +765,7 @@ an1F = anova(m0F,m0.5F,m1F)
 an1F
 ```
 
-Cultural similarity is significantly correlated with Linguistic similarity, even in the filtered data.  Here are the model estimates:
+Cultural similarity is significantly correlated with semantic alignment, even in the filtered data.  Here are the model estimates:
 
 ```{r}
 summary(m1F)
@@ -827,7 +837,7 @@ an1F = anova(m0F,m0.5F,m1F)
 an1F
 ```
 
-Cultural similarity is significantly correlated with Linguistic similarity, even in the semantic filtered data.  Here are the model estimates:
+Cultural similarity is significantly correlated with semantic alignment, even in the semantic filtered data.  Here are the model estimates:
 
 ```{r}
 summary(m1F)
@@ -901,7 +911,7 @@ an1F = anova(m0F,m0.5F,m1F)
 an1F
 ```
 
-Cultural similarity is significantly correlated with Linguistic similarity, even in the fully filtered data.  Here are the model estimates:
+Cultural similarity is significantly correlated with semantic alignment, even in the fully filtered data.  Here are the model estimates:
 
 ```{r}
 summary(m1F)
@@ -916,7 +926,7 @@ The code that produce the results of this section can be found in `analysis/comp
 
 ## Part 1: Compare each linguistic domain to the overall cultural similarity
 
-We fit a mixed effects model to compare the linguistic similarity in a given domain to the overall cultural distance. The linguistic similarity for the given domain is the dependent variable.  There are random intercepts for language family and area pairs, and random slopes for overall cultural similarity by language family and by area.  The `comparison_count` variable is added as a fixed effect. This null model is compared to a model with an additional fixed effect for the overall cultural similairty.
+We fit a mixed effects model to compare the semantic alignment in a given domain to the overall cultural distance. The semantic alignment for the given domain is the dependent variable.  There are random intercepts for language family and area pairs, and random slopes for overall cultural similarity by language family and by area.  The `comparison_count` variable is added as a fixed effect. This null model is compared to a model with an additional fixed effect for the overall cultural similairty.
 
 There are 21 linguistic domains with enough data. All correlations are positive and 11 are significant at the 0.05 level (adjusted for multiple comparisons).
 
@@ -977,7 +987,7 @@ p2resSig
 
 ## Part 3: Compare each linguistic domain to the phylogenetic and geographic distance
 
-This test compares each linguistic similarity scores to each of three target distances:  the cultural distance, the historical distance and the geographic distance.  We use a partial Mantel test (from the package `ecodist`) to estimate the strength of the relationship between the linguistic domain and the target distance, while controlling for the other two distances.  The test uses 100,000 permutations.
+This test compares each semantic alignment score to each of three target distances:  the cultural distance, the historical distance and the geographic distance.  We use a partial Mantel test (from the package `ecodist`) to estimate the strength of the relationship between the linguistic domain and the target distance, while controlling for the other two distances.  The test uses 100,000 permutations.
 
 The full results are in the file:
 
@@ -997,44 +1007,9 @@ p3res = read.csv("../results/stats/wikipedia-main/Cor_LingAlignmentByDomains_vs_
 p3res[p3res$p.adjusted<0.05,c("domain","comparison","mantelr","lower","upper","pval3","p.adjusted")]
 ```
 
-\newpage
-
-# Summary of alternative data sources
-
-The github repository also includes the main tests in this document, but applied to data where the alignments are done according to the Common Crawl or Subtitles databases.
-
-## Common Crawl
-
-Mixed effects model: The correlation between semantic alignment and cultural similarity was significant (\input{"../results/stats/tex/MEM_CulturalVsLinguistic_CC.tex"}).  See figure 4.
-
-![Semantic alignment and cultural similarity for data using the Common Crawl alignments](../results/stats/cc/CulturalDistance_Rho_Graph.pdf)
-
-MRM results:
-\input{../results/stats/tex/MRM_family_CC.tex}
-
-\input{../results/stats/tex/MRM_ASJP_CC.tex}
-
-Mantel tests:
-
-\input{../results/stats/tex/Mantel_CC.tex}
-
-## Subtitles
-
-Mixed effects model: The correlation between semantic alignment and cultural similarity was not significant (\input{"../results/stats/tex/MEM_CulturalVsLinguistic_SUBS.tex"}).  See figure 5
-
-![Semantic alignment and cultural similarity for data using the Subtitles alignments](../results/stats/subs/CulturalDistance_Rho_Graph.pdf)
-
-MRM results:
-\input{../results/stats/tex/MRM_family_SUBS.tex}
-
-\input{../results/stats/tex/MRM_ASJP_SUBS.tex}
-
-Mantel tests:
-
-\input{../results/stats/tex/Mantel_SUBS.tex}
-
 \clearpage
 \newpage
+
 
 # References
 
@@ -1042,18 +1017,33 @@ Bouckaert, Remco, Philippe Lemey, Michael Dunn, Simon J. Greenhill, Alexander V.
 
 van Buuren, S. & Groothuis-Oudshoorn, K. (2011). mice: Multivariate Imputation by Chained Equations in R. Journal of Statistical Software, 45(3), 1-67. URL https://www.jstatsoft.org/v45/i03/.
 
+Castellano, S., & Balletto, E. (2002). Is the partial Mantel test inadequate?. Evolution, 56(9), 1871-1873.
+
+Goslee, S.C. 2010. Correlation analysis of dissimilarity matrices. Plant Ecology 206(2):279-286.
+
+Goslee, S.C. & Urban, D.L. (2007). The ecodist package for dissimilarity-based analysis of ecological data. Journal of Statistical Software 22(7):1-19.
+
 Hammarstrom, H. , R. Forkel, M. Haspelmath (2018) clld/glottolog: Glottolog database 3.3, Jena:
 Max Planck Institute for the Science of Human History.
+
+Harmon, L. J., & Glor, R. E. (2010). Poor statistical performance of the Mantel test in phylogenetic comparative analyses. Evolution: International Journal of Organic Evolution, 64(7), 2173-2178.
 
 Jäger, G. (2018). Global-scale phylogenetic linguistic inference from lexical resources. Scientific data, 5, 180189.
 
 Kirby, Kathryn R., Russell D. Gray, Simon J. Greenhill, Fiona M. Jordan, Stephanie Gomes-Ng, Hans-Jörg Bibiko, Damián E. Blasi, Carlos A. Botero, Claire Bowern, Carol R. Ember, Dan Leehr, Bobbi S. Low, Joe McCarter, William Divale, and Michael C. Gavin. (2016). D-PLACE: A Global Database of Cultural, Linguistic and Environmental Diversity. PLoS ONE, 11(7): e0158391.
 
+Legendre, P. (2000). Comparison of permutation methods for the partial correlation and partial Mantel tests. Journal of Statistical Computation and Simulation, 67(1), 37-73.
+
 Lichstein, J. W. (2007). Multiple regression on distance matrices: a multivariate spatial analysis tool. Plant Ecology, 188(2), 117-131.
+
+Mantel, N. (1967). The detection of disease clustering and a generalized regression approach. Cancer research, 27(2 Part 1), 209-220.
 
 Murdock, G. P., R. Textor, H. Barry, III, D. R. White, J. P. Gray, and W. T. Divale. 1999. Ethnographic Atlas. World Cultures 10:24-136 (codebook)
 
 Nichols, J., Witzlack-Makarevich, A. & Bickel, B. (2013), The AUTOTYP genealogy and geography
 database: 2013 release, http://www.spw.uzh.ch/autotyp/.
+
+Smouse, P.E., Long, J.C. & Sokal, R.R. (1986). Multiple regression and correlation extensions of the Mantel test of matrix correspondence. Systematic Zoology 35:62 7-632.
+
 
 Wichmann, Søren, Eric W. Holman, and Cecil H. Brown (eds.). 2018. The ASJP Database (version 17). 
