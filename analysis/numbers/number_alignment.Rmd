@@ -285,7 +285,7 @@ ggplot(numbers[!numbers$homophone,],
 
 We can look at the importance of the different ways that numeral systems are compased. We use data from Calude & Verkerk (2016)'s typology which describe the composition of numerals in many Indo-European langages (what Calude & Verkerk call the 'number line'). For example, the numeral 'four' in English is an 'atom' (it is not composable into smaller parts), while 'fourteen' is composed of two atoms (four + ten). There are differences between languages in terms of whether they use an atom or a composition of two atoms. For example, English uses a unique atom to represent 12 ('twelve'), while Bulgarian uses a form that is composed as "2 + 10" (2 = dve, 10 = deset, 12 = dvanadeset). There are also differences between languages in how they compose some numerals. For example, 'eighty' in English is constructed as 8 x 10 but in French 'quatre-vingts' is 4 x 20. We used this data to  identify whether two languages have the same system for forming a particular numeral. 
 
-We note that, in our sample, there are no differences between languages in the number line for numerals from 0 to ten. This is because all numbers below 10 for all languages in the sample are atoms. Therefore, the measure of numeral compostion is only informative for higher numerals.
+We note that, in our sample, there are no differences between languages in the number line for numerals from 0 to ten. This is because all numbers below 10 for all languages in the sample are atoms. Therefore, the measure of numeral compostion is only explains variation for higher numerals.
 
 It looks like there's an interaction between numeral typoogy and numeric value:
 
@@ -421,7 +421,7 @@ dev.off()
 \clearpage
 \newpage
 
-```{r}
+```{r eval=F}
 varimp = sort(rt$Tree$variable.importance)
 varimp.plot = ggplot(data.frame(importance=varimp,
                   variable=factor(names(varimp),levels = names(varimp))),
