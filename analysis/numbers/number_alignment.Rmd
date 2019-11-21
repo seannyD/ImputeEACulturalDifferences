@@ -49,7 +49,7 @@ Although translations may be more direct for number words, there are still diffe
 -  *l2_typology*: Same as above for L2.
 -  *sameNumeralTypology*: Comparison of numeral typology. This is 1 if the typology is the same in L1 and L2 (i.e. both numbers are atoms or use the same composition), and zero if the typology is different.
 -  *seven*: True if the numeral is 7. (see below)
--  *homophone*: Word has a homophone in the North Euralex database.
+-  *homophone*: True if the form of the word has an alternative referential class in the North Euralex database. This includes mainly homophones (unrelated meanings) but also some synonyms (words with different but related meanings). For legacy reasons, the variable is named 'homophone'.
 -  *freqDiff*: Difference in orthographic frequency (absolute, log scale)
 
 The Estimated Degrees of Freedom (EDF) is an indication of how non-linear a smooth term is (higher = less linear, see e.g. Wood, 2008). In general, a curve with an EDF of around 2 will look like a quadratic curve, and an EDF of around 3 will look like a cubic curve. However, this does not have to be the case: a smooth term could have a strong linear term, and a very weak non-linear term. The EDF captures this possibility as a continuous value. The simplest way to actually assess the smooth term is to plot it.
@@ -257,7 +257,7 @@ What are the outliers for 9? These all include comparisons to French:
 numbers[numbers$number_numeric==9 & numbers$local_alignment<0.25,c("l1",'l2',"local_alignment")]
 ```
 
-This may be because French 9 ("neuf") can mean '9' or "new".  We used the North Euralex dictionary to find numbers which have homophones.  See the file `NumberHomophones.csv`. This also includes the Hungarian '7' discussed below.
+This may be because French 9 ("neuf") can mean '9' or "new".  We used the North Euralex dictionary to find numbers which have alternative referential classes (see the file `NumberHomophones.csv`). Some of these will have referential classes with no related meanings (e.g. Norwegian 'tre' meaning '3' or 'tree'), and are thus homonyms. Some of these cases will be polysemous (the different meanings are related), as in the case of Hungarian 'hét' meaning '7' or 'week' (see below). 
 
 ```{r}
 h[,c("l","number","otherMeanings")]
@@ -368,7 +368,7 @@ To help this, we include an explicit factor for seven. The final factors in the 
 -  is a Uralic language
 -  is a Danish irregular
 -  is '7'
--  has a homophone
+-  has a homophone (an alternative referential class)
 -  the 'n' variable: number of comparisons possible between language pairs in the whole corpus
 -  whether the numbers have the same underling compositional structure
 
@@ -533,7 +533,7 @@ We now fit a full model with many other predictors:
 -  Whether the number is 7
 -  Interaction between Uralic and 7
 -  Whether the number is a Danish irregular
--  Whether the numbers word has a frequent homophone
+-  Whether the number word has a frequent alternative referential class (homophone or synonym)
 -  The frequency difference between the forms
 
 ```{r}
@@ -581,7 +581,7 @@ Parametric effects:
 -  The number 7 has lower alignment in general (`r mp("sevenTRUE")`)
 -  Danish irregulars have lower alignment (`r mp("danish_irregularTRUE")`))
 -  Overall, there is no difference for comparisons between numbers with different numeral typologies (`r mp("differentNumeralTypologyTRUE")`)
--  Alignment is lower for comparisons between words were at least one has a homophone (`r mp("homophoneTRUE")`)
+-  Alignment is lower for comparisons between words were at least one has an alternative referential class (homophone or synonym) (`r mp("homophoneTRUE")`)
 -  Comparisons with Uralic sevens are significantly lower in alignment (`r mp("isUralicTRUE:sevenTRUE")`)
 
 Smooth effects:
@@ -750,12 +750,12 @@ gamPlot.phylo
 
 # Conclusion
 
-Semantic alignment for number words is generally high, though there are some differences that can be explained (the model explained `r round(summary(m1)$dev.expl*100,2)`% of the deviance).  1 and 2 have lower alignment due to often being grammaticalised as indefinite or dual marker (Givon, 1981). Numbers 3-12 generally have high alignment (mean local alignment = 0.87), and higher numbers decline in alignment up to 1000. There are also language-specific differences due to how numerals are constructed (e.g. base, combination rules, see Calude & Verkerk, 2016), or for irregular forms (e.g. 50, 60, 70, 80 and 90 in Danish). Some number words have  alternative associations due to homophones (e.g. the Hungarian 7 is used directly to mean 'week', and 'neuf' in French means '9' or 'new'). The historical distance between languages did not predict much of the variation.
+Semantic alignment for number words is generally high, though there are some differences that can be explained (the model explained `r round(summary(m1)$dev.expl*100,2)`% of the deviance).  1 and 2 have lower alignment due to often being grammaticalised as indefinite or dual marker (Givon, 1981). Numbers 3-12 generally have high alignment (mean local alignment = 0.87), and higher numbers decline in alignment up to 1000. There are also language-specific differences due to how numerals are constructed (e.g. base, combination rules, see Calude & Verkerk, 2016), or for irregular forms (e.g. 50, 60, 70, 80 and 90 in Danish). Some number words have  alternative associations due to homophones or polysemies (e.g. the Hungarian 7 is used directly to mean 'week', and 'neuf' in French means '9' or 'new'). The historical distance between languages did not predict much of the variation.
 
 The differences in semantic alignment may appear either because (A) the semantic associations are different for different languages, or (B) as a side-effect of numbers appearing with different words skewing the alignment metric. Effects that support (B) could include:
 
 -  Difference in frequency. Lower frequency terms will appear in a smaller range of contexts and the semantic alignment estimates may be more stochastic.  
--  Homophones. Different meanings will contribute different semantic relations.
+-  Alternative referential class (homophone or synonym). Different meanings will contribute different semantic relations.
 
 However, it is more difficult to explain why different numeral typologies would lead to semantic differences, unless the way numbers are constructed affects the way people think about the numbers.
 

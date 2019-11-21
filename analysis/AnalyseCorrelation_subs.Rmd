@@ -299,6 +299,12 @@ rownames(geoDist.m) = colnames(geoDist.m)
 geoDist.m1 = geoDist.m[rownames(ling.m),rownames(ling.m)]
 geoDist.m2 = geoDist.m[rownames(ling.m2),rownames(ling.m2)]
 
+# For missing comparisons, impute the mean:
+ling.m[ling.m==0] = mean(ling$local_alignment)
+diag(ling.m) = 0
+ling.m2[ling.m2==0] = mean(ling.m2[ling.m2!=0])
+diag(ling.m2) = 0
+
 # center and scale values
 ling.m =  matrix(scale(as.vector(ling.m)),nrow=nrow(ling.m))
 cc.m =  matrix(scale(as.vector(cc.m)),nrow=nrow(cc.m))
@@ -395,6 +401,9 @@ grph <- graph.data.frame(ling[,c("l1",'l2','local_alignment')], directed=FALSE)
 ling.m = get.adjacency(grph, attr="local_alignment", sparse=FALSE)
 rownames(ling.m) = l[match(rownames(ling.m),l$iso2),]$Language2
 colnames(ling.m) = l[match(colnames(ling.m),l$iso2),]$Language2
+# For missing comparisons, impute the mean:
+ling.m[ling.m==0] = mean(ling$local_alignment)
+diag(ling.m) = 0
 ```
 
 Match the distance matrices

@@ -1,0 +1,20 @@
+Test,Languages,Language pairs,language families,concepts,semantic domains
+"Mixed effects model, predicting semantic alignment from cultural similarity ",39,731,10,Varies between languages (median = 785),
+MRM with language family,39,731,10,,
+MRM with ASJP distances,36,620,10,,
+Mantel tests with phylogenetic distances,19,171,1 (Indo-European),,
+MRM with phylogenetic distances,19,171,1 (Indo-European),,
+Compare each linguistic domain to the overall cultural similarity,Between 38 and 40 depending on the domain,Between 694 and 733 depending on the domain,10,,21
+Compare each linguistic domain to the cultural similarity of each original D-PLACE domain,Between 38 and 40 depending on the domain,Between 694 and 733 depending on the domain,10,,21
+Compare each linguistic domain to the phylogenetic and geographic distance,19,171,1 (Indo-European),,21
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+CC data,18,,,,
+SUBS data,14,,,,

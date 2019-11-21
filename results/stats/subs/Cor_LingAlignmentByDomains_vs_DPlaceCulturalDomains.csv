@@ -18,7 +18,7 @@
 "18","The physical world","Subsistence","boundary (singular) fit: see ?isSingular;boundary (singular) fit: see ?isSingular",11,-0.284777558553589,0.129555373290055,2.1,4.25443260307725,0.0391480237048615,1
 "19","The physical world","Marriage and Kinship",";boundary (singular) fit: see ?isSingular",24,-0.077785313054858,0.0403258263800967,0.27,0.537150314498945,0.463616133859026,1
 "20","The physical world","Settlement","boundary (singular) fit: see ?isSingular;boundary (singular) fit: see ?isSingular",2,-0.185837091151815,0.10703586098846,1.4,2.70762749351556,0.0998694197198012,1
-"21","The physical world","Politics","unable to evaluate scaled gradient;boundary (singular) fit: see ?isSingular;Model failed to converge: degenerate  Hessian with 1 negative eigenvalues;boundary (singular) fit: see ?isSingular",12,-0.358446536671596,0.196489741749664,2.1,4.21228415595104,0.0401322618969712,1
+"21","The physical world","Politics","",12,-0.358446536671596,0.167639997493023,2.9,5.89660576963556,0.0151700918351431,1
 "22","The physical world","Ritual","boundary (singular) fit: see ?isSingular;boundary (singular) fit: see ?isSingular",7,-0.169807007275057,-0.0329867237559704,0.25,0.498438837832509,0.480186887603577,1
 "23","The physical world","Labour","Model failed to converge with max|grad| = 0.00701852 (tol = 0.002, component 1);",22,-0.0709456191904508,-0.0484858295993554,0.22,0.445405410114802,0.504524966403843,1
 "24","The physical world","Property","boundary (singular) fit: see ?isSingular;boundary (singular) fit: see ?isSingular",4,0.168996525770612,-0.142540102139455,2.9,5.8500825179616,0.0155763208169614,1
@@ -130,10 +130,10 @@
 "130","Spatial relations","Subsistence","boundary (singular) fit: see ?isSingular;boundary (singular) fit: see ?isSingular",11,-0.273733684230347,0.0365518991452482,0.63,1.2500879434827,0.263535681220483,1
 "131","Spatial relations","Marriage and Kinship","boundary (singular) fit: see ?isSingular;boundary (singular) fit: see ?isSingular",24,-0.0669150661271082,-0.0100517641387861,0.004,0.0079908708260632,0.928770642632183,1
 "132","Spatial relations","Settlement","boundary (singular) fit: see ?isSingular;boundary (singular) fit: see ?isSingular",2,-0.11780518751493,0.0135277505946178,0.13,0.252401099304564,0.615389441201016,1
-"133","Spatial relations","Politics","boundary (singular) fit: see ?isSingular;boundary (singular) fit: see ?isSingular",12,-0.266617019319012,0.0785556121756533,0.4,0.80104438054542,0.370781300251281,1
+"133","Spatial relations","Politics","",12,-0.266617019319012,0.0620210349636199,0.44,0.884643417785611,0.346933030903162,1
 "134","Spatial relations","Ritual","boundary (singular) fit: see ?isSingular;boundary (singular) fit: see ?isSingular",7,-0.225098632132419,-0.00220869571613588,0.02,0.0407672948732909,0.839987768054514,1
 "135","Spatial relations","Labour","boundary (singular) fit: see ?isSingular;boundary (singular) fit: see ?isSingular",22,-0.0289932156105643,-0.0171718766241984,0.07,0.140635667493569,0.707649888851834,1
-"136","Spatial relations","Property","boundary (singular) fit: see ?isSingular;boundary (singular) fit: see ?isSingular",4,0.0665346445145849,-0.0465099990233322,0.71,1.42021224677035,0.233368471462151,1
+"136","Spatial relations","Property","",4,0.0665346445145849,-0.0515420507683199,0.73,1.45634861163347,0.227511989553723,1
 "137","Spatial relations","Housing","boundary (singular) fit: see ?isSingular;boundary (singular) fit: see ?isSingular",10,-0.130617498981062,0.0571487019085969,1.4,2.73047075469634,0.0984502619352161,1
 "138","Time","Subsistence","Model failed to converge with max|grad| = 0.00791605 (tol = 0.002, component 1);boundary (singular) fit: see ?isSingular",11,-0.205897400503122,0.103117777302377,0.89,1.77864068483973,0.182316331131177,1
 "139","Time","Marriage and Kinship",";boundary (singular) fit: see ?isSingular",24,-0.0672623681870839,0.0219004827205322,0.089,0.178400401449778,0.672751529301774,1

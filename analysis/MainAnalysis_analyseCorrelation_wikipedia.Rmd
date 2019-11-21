@@ -37,7 +37,7 @@ Mantel tests were used to test the relationship between semantic alignment and h
 
 The third test uses multiple regression on distance matrices (Lichstein, 2007). This is a regression approach which uses distance matrices as dependent and independent variables.
 
-The results above were robustly replicated using the filtered data and also alternative sources for semantic alignment (common crawl, see file *AnalyseCorrelation_cc.pdf*). The correlation was not robust to all tests or for data derived from the subtitles dataset (see file *AnalyseCorrelation_subs.pdf*), possibly because there were only 20 languages available to analyse.
+The results above were robustly replicated using the filtered data. Results were also replicated using the 'Common Crawl' dataset to calculate  semantic alignment (see file *AnalyseCorrelation_cc.pdf*), except for the Mantel tests. The correlation was not robust when using data derived from the subtitles dataset (see file *AnalyseCorrelation_subs.pdf*), possibly because there were only 20 languages available to analyse.
 
 The final section looks at relationships between sub-domains.  The first section describes how the cultural similarity measure was calculated.
 
@@ -371,7 +371,7 @@ summary(m1NK)
 
 ##  MRM
 
-Use multiple regression on distance matrices (Lichstein, 2007) to do the same test as above.  The code below loads the data into a matrix format:
+Use multiple regression on distance matrices (Lichstein, 2007) to do the same test as above.  The code below uses the `igraph` package to make an undirected graph from the long format with `local_alignment` as the edge weights, then output a matrix of adjacencies.
 
 ```{r}
 # Use graph method to make distance matrix
@@ -386,7 +386,11 @@ grph <- graph.data.frame(ling[,c("l1",'l2','comparison_count')], directed=FALSE)
 cc.m = get.adjacency(grph, attr="comparison_count", sparse=FALSE)
 rownames(cc.m) = l[match(rownames(cc.m),l$iso2),]$Language2
 colnames(cc.m) = l[match(colnames(cc.m),l$iso2),]$Language2
+```
 
+Load the cultural distances as a matrix. 
+
+```{r}
 cult.m = read.csv("../results/EA_distances/CulturalDistances.csv", stringsAsFactors = F)
 rownames(cult.m) = cult.m[,1]
 cult.m = cult.m[,2:ncol(cult.m)]
@@ -396,12 +400,19 @@ cult.m = 1-cult.m
 mx = match(rownames(ling.m),rownames(cult.m))
 cult.m = cult.m[mx,mx]
 colnames(cult.m) = rownames(cult.m)
+```
 
+Make a matrix of same/different language family (1=different):
+
+```{r}
 # Same/different matrix for language family
 family.matrix = l[match(rownames(ling.m),l$Language),]$family
 family.matrix = outer(family.matrix,family.matrix,"!=") *1
+```
 
-# Load ASJP distances for second test
+Load ASJP distances for second test:
+
+```{r}
 asjp = readRDS("../data/ASJP/asjp17-dists_FAIR.RData")
 ling.m.glotto = l[match(rownames(cult.m),l$Language2),]$glotto
 ling.m.glotto = ling.m.glotto[ling.m.glotto %in% rownames(asjp)]
@@ -411,8 +422,11 @@ asjp.lang.names = l[match(rownames(asjp.m),l$glotto),]$Language2
 ling.m2 = ling.m[asjp.lang.names,asjp.lang.names]
 cult.m2 = cult.m[asjp.lang.names,asjp.lang.names]
 cc.m2 =  cc.m[asjp.lang.names,asjp.lang.names]
+```
 
-# Load the geographic distances:
+Load the geographic distances:
+
+```{r}
 geoDist = read.csv("../data/GeographicDistances.csv",stringsAsFactors = F)
 geoDist.m = as.matrix(geoDist)
 geoDist.m = geoDist.m[!is.na(geoDist.m[,1]),!is.na(geoDist.m[1,])]
@@ -423,8 +437,27 @@ colnames(geoDist.m) = gsub("\\."," ",colnames(geoDist.m))
 rownames(geoDist.m) = colnames(geoDist.m)
 geoDist.m1 = geoDist.m[rownames(ling.m),rownames(ling.m)]
 geoDist.m2 = geoDist.m[rownames(ling.m2),rownames(ling.m2)]
+```
 
-# center and scale values
+```{r echo=F}
+unobserved = (sum(ling.m==0)-nrow(ling.m))/2
+totalPossibleComparisons = (prod(dim(ling.m))-nrow(ling.m))/2
+```
+
+Some language pairs do not have observed semantic alignments (`r unobserved` out of `r totalPossibleComparisons`, `r round(100 * (unobserved/totalPossibleComparisons),1)`%). In this case, we impute the mean:
+
+```{r}
+# For missing comparisons, impute the mean:
+# (there are no zero values in the local alignment data)
+ling.m[ling.m==0] = mean(ling$local_alignment)
+diag(ling.m) = 0
+ling.m2[ling.m2==0] = mean(ling.m2[ling.m2!=0])
+diag(ling.m2) = 0
+```
+
+Center and scale values:
+
+```{r}
 ling.m =  matrix(scale(as.vector(ling.m)),nrow=nrow(ling.m))
 cc.m =  matrix(scale(as.vector(cc.m)),nrow=nrow(cc.m))
 cult.m = matrix(scale(as.vector(cult.m)),nrow=nrow(cult.m))
@@ -520,7 +553,7 @@ Flip the cultural distance into a cultural similarity measure:
 cult.m = 1-cult.m
 ```
 
-Convert the semantic alignment to a matrix.  This uses `igraph` to make an undirected graph from the long format with `local_alignment` as the edge weights, then output a matrix of adjacencies.
+Convert the semantic alignment to a matrix and impute the missing values with the mean. Note that in the final selection of langauges excludes any imputed values, but we perform the imputation just to be safe:
 
 ```{r}
 grph <- graph.data.frame(ling[,c("l1",'l2','local_alignment')], directed=FALSE)
@@ -528,6 +561,10 @@ grph <- graph.data.frame(ling[,c("l1",'l2','local_alignment')], directed=FALSE)
 ling.m = get.adjacency(grph, attr="local_alignment", sparse=FALSE)
 rownames(ling.m) = l[match(rownames(ling.m),l$iso2),]$Language2
 colnames(ling.m) = l[match(colnames(ling.m),l$iso2),]$Language2
+# For missing comparisons, impute the mean:
+# (there are no zero values in the local alignment data)
+ling.m[ling.m==0] = mean(ling$local_alignment)
+diag(ling.m) = 0
 ```
 
 Match the distance matrices
@@ -656,7 +693,7 @@ cat(mainMantel2,
 
 ## MRM
 
-Perform the main test, but using multiple regression on distance matrices (MRM).
+Perform the main test using the phylogenetic distance, but using multiple regression on distance matrices (MRM).
 
 ```{r}
 set.seed(21889)
@@ -995,6 +1032,11 @@ The full results are in the file:
 
 The graph below shows the results.  Point estimates are the estimated Mantel R. The error bars show the 95% confidence intervals from the permutation test.
 
+```{r echo=F}
+p3res = read.csv("../results/stats/wikipedia-main/Cor_LingAlignmentByDomains_vs_HistoricalAndGeographicalDistance.csv",stringsAsFactors = F)
+```
+
+
 ![](../results/stats/wikipedia-main/LingAlignmentByDomains_vs_HistoricalAndGeographicalProximity.pdf
 )
 
@@ -1003,7 +1045,6 @@ There appears to be a trade-off: The stronger the relationship with geographic d
 Note that, after controlling for multiple comparisons, only 2 domains are significant:  
 
 ```{r echo=F}
-p3res = read.csv("../results/stats/wikipedia-main/Cor_LingAlignmentByDomains_vs_HistoricalAndGeographicalDistance.csv",stringsAsFactors = F)
 p3res[p3res$p.adjusted<0.05,c("domain","comparison","mantelr","lower","upper","pval3","p.adjusted")]
 ```
 

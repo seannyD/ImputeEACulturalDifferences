@@ -47,7 +47,7 @@
 "47","Speech and language","Labour","",22,-0.000604643144693429,-0.0381655874817123,0.43,0.862515295833305,0.353035759958143,1
 "48","Speech and language","Property","boundary (singular) fit: see ?isSingular;boundary (singular) fit: see ?isSingular",4,-0.209682046209075,0.0360759851352449,0.52,1.0356115177334,0.308844317826,1
 "49","Speech and language","Housing","Model failed to converge with max|grad| = 0.00229132 (tol = 0.002, component 1);boundary (singular) fit: see ?isSingular",10,-0.0222634530733186,0.0476410928564376,0.71,1.41503497906785,0.234222353023257,1
-"50","Modern world","Subsistence","boundary (singular) fit: see ?isSingular;Model failed to converge with max|grad| = 0.00263321 (tol = 0.002, component 1)",11,-0.225961576369327,0.138923429784743,4,8.05110099695457,0.004547600860168,0.763996944508224
+"50","Modern world","Subsistence","",11,-0.225961576369327,0.14532551998949,3.7,7.46397925209641,0.00629457122395043,1
 "51","Modern world","Marriage and Kinship","boundary (singular) fit: see ?isSingular;boundary (singular) fit: see ?isSingular",24,-0.205337132144385,0.100762069229391,2.1,4.16314361570033,0.0413126613123824,1
 "52","Modern world","Settlement",";Model failed to converge with max|grad| = 0.00368315 (tol = 0.002, component 1)",2,-0.287548912508206,0.07152388223543,0.56,1.12835016072694,0.288127526331246,1
 "53","Modern world","Politics","boundary (singular) fit: see ?isSingular;boundary (singular) fit: see ?isSingular",12,-0.363782875112071,0.197605163813172,6.3,12.5450176967008,0.000397264104567897,0.0667403695674067

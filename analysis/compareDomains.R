@@ -4,6 +4,7 @@
 
 library(lme4)
 library(gplots)
+library(ggplot2)
 library(igraph)
 library(ecodist)
 library(RColorBrewer)
@@ -356,6 +357,9 @@ convertLingSimilaritiesToMatrix = function(lingX){
   ling.m = get.adjacency(grph, attr="local_alignment", sparse=FALSE)
   rownames(ling.m) = l[match(rownames(ling.m),l$iso2),]$Language2
   colnames(ling.m) = l[match(colnames(ling.m),l$iso2),]$Language2
+  # Impute missing data as mean:
+  ling.m[ling.m==0] = mean(lingX$local_alignment)
+  diag(ling.m) = 0
   return(ling.m)
 }
 
@@ -369,6 +373,7 @@ runMatrixAnalyses = function(ling.m){
   ling.m2 = ling.m[in.analysis,in.analysis]
   hist.m2 = hist.m[in.analysis,in.analysis]
   geo.m2 = geoDist.m[in.analysis,in.analysis]
+  print(nrow(ling.m2))
   
   lingVCult = ecodist::mantel(as.dist(ling.m2)~
                     as.dist(cult.m2)+
