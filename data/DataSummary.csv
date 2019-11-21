@@ -1,20 +1,15 @@
-Test,Languages,Language pairs,language families,concepts,semantic domains
-"Mixed effects model, predicting semantic alignment from cultural similarity ",39,731,10,Varies between languages (median = 785),
-MRM with language family,39,731,10,,
-MRM with ASJP distances,36,620,10,,
-Mantel tests with phylogenetic distances,19,171,1 (Indo-European),,
-MRM with phylogenetic distances,19,171,1 (Indo-European),,
-Compare each linguistic domain to the overall cultural similarity,Between 38 and 40 depending on the domain,Between 694 and 733 depending on the domain,10,,21
-Compare each linguistic domain to the cultural similarity of each original D-PLACE domain,Between 38 and 40 depending on the domain,Between 694 and 733 depending on the domain,10,,21
-Compare each linguistic domain to the phylogenetic and geographic distance,19,171,1 (Indo-European),,21
+Test,Languages,Language pairs,Langauge Families,Concepts,Semantic domains
+"Mixed effects model, predicting semantic alignment from cultural similarity ",39,731,10,Varies between languages (median = 785),21
+MRM with language family,39,731,10,Varies between languages (median = 785),21
+MRM with ASJP distances,36,620,10,Varies between languages (median = 770),21
+Mantel tests with phylogenetic distances,19,171,1 (Indo-European),Varies between languages (median = 971),21
+MRM with phylogenetic distances,19,171,1 (Indo-European),Varies between languages (median = 971),21
+Compare each linguistic domain to the overall cultural similarity,Between 38 and 40 depending on the domain,Between 694 and 733 depending on the domain,10,Varies between domains (mean = 35),21
+Compare each linguistic domain to the cultural similarity of each original D-PLACE domain,Between 38 and 40 depending on the domain,Between 694 and 733 depending on the domain,10,Varies between domains (mean = 35),21
+Compare each linguistic domain to the phylogenetic and geographic distance,19,171,1 (Indo-European),Varies between domains (mean = 35),21
 ,,,,,
+CC data mixed effects,34,308,7,Varies between languages (median = 909),21
+CC data Mantel tests with phylogenetic distances,18,153,1 (Indo-European),Varies between languages (median = 1071),21
 ,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-CC data,18,,,,
-SUBS data,14,,,,
+SUBS data mixed effects,20,190,6,Varies between languages (median = 1010),21
+SUBS data Mantel tests with phylogenetic distances,14,91,1 (Indo-European),Varies between languages (median = 1023),21
