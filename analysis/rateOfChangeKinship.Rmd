@@ -17,12 +17,14 @@ library(ggplot2)
 Read in data:
 
 ```{r}
-d = read.csv("../data/FAIR/nel-wiki-k100-alignments-merged-long.csv",encoding = "UTF-8",fileEncoding = "UTF-8",stringsAsFactors = F)
+d = read.csv("../data/FAIR/nel-wiki-k100-alignments-merged-long.csv",
+             encoding = "UTF-8",fileEncoding = "UTF-8",stringsAsFactors = F)
 # Data on languages
-l = read.csv("../data/FAIR_langauges_glotto_xdid.csv", stringsAsFactors = F)
+l = read.csv("../data/FAIR_langauges_glotto_xdid.csv",stringsAsFactors = F)
 
 # Read in kinship rate of change data
-r = read.csv("../data/RaczPassmoreSheardJordan_2019/supp-data-si.csv",encoding = "UTF-8",fileEncoding = "UTF-8",stringsAsFactors = F)
+r = read.csv("../data/RaczPassmoreSheardJordan_2019/supp-data-si.csv",
+             encoding = "UTF-8",fileEncoding = "UTF-8",stringsAsFactors = F)
 # Edit language isos
 r$language.iso = l[match(r$language,l$Language),]$iso2
 r[r$language=="Norwegian",]$language.iso = "no"
@@ -31,17 +33,12 @@ r[r$language=="Ossetic",]$language.iso = "os"
 rkin = r
 ```
 
-Calculate log frequency per million
-```{r}
-rkin$lfpm = log10(rkin$word.count / (rkin$corpora.size/1000000))
-```
-
 Merge the data:
 
 ```{r}
-rkin2 = left_join(d, rkin, by = c("Word_Form_l1" = "word", "l1" = "language.iso"))
+rkin2 = left_join(d,rkin,by = c("Word_Form_l1"="word","l1"="language.iso"))
 names(rkin) = paste0(names(rkin),".l2")
-rkin2 = left_join(rkin2, rkin, by = c("Word_Form_l2" = "word.l2", "l2" = "language.iso.l2"))
+rkin2 = left_join(rkin2,rkin,by = c("Word_Form_l2"="word.l2","l2"="language.iso.l2"))
 ```
 
 Exclude missing data:
@@ -49,16 +46,28 @@ Exclude missing data:
 ```{r}
 rkin2 = rkin2[!is.na(rkin2$mean.roc),]
 rkin2 = rkin2[!is.na(rkin2$mean.roc.l2),]
+```
+
+Calculate difference in log frequency per million words:
+```{r}
+rkin2$fpm.l1 = rkin2$word.count / (rkin2$corpora.size/1000000)
+rkin2$fpm.l2 = rkin2$word.count.l2 / (rkin2$corpora.size.l2/1000000)
+rkin2$freq_diff = log10(abs(rkin2$fpm.l1 - rkin2$fpm.l2))
+```
+
+Filter variables:
+
+```{r}
 rkin3 = rkin2[,c("l1","l2","meaning","Word_Form_l1","Word_Form_l2",
-                 "local_alignment","Concept_ID","lfpm","lfpm.l2",
+                 "local_alignment","Concept_ID","fpm.l1","fpm.l2",
                  "mean.roc","mean.roc.l2","lingpy.cognate","expert.cognate",
-                 "glottocode","glottocode.l2")]
+                 "glottocode","glottocode.l2","freq_diff")]
 ```
 
 Plot data:
 ```{r}
 ggplot(rkin3, aes(y=local_alignment,x=mean.roc,color=meaning)) +
-  geom_boxplot() 
+  geom_boxplot() +xlab("Rate of change") + ylab("Local alignment")
 ```
 
 Scale and center data
@@ -96,9 +105,9 @@ summary(m1)
 Same as above, but also control for frequency difference (part of speech is the same).
 
 ```{r}
-rkin3$freq_diff = abs(rkin3$lfpm - rkin3$lfpm.l2)
 rkin3Freq = rkin3[!is.na(rkin3$freq_diff),]
-m0.freq = lmer(local_alignment.scaled ~ freq_diff +
+rkin3Freq$freq_diff.scaled = scale(rkin3Freq$freq_diff)
+m0.freq = lmer(local_alignment.scaled ~ freq_diff.scaled +
             (1|lingpy.cognate/meaning) +
             (1|langPair), 
           data=rkin3Freq,
@@ -123,7 +132,6 @@ ggplot(rkin3, aes(y=local_alignment.scaled,
               intercept = fixef(m1.freq)[1],linetype = 2) +
   xlab("Rate of change (scaled and centered)") +
   ylab("Local alignment (scaled and centered)")
-
 ```
 
 ```{r echo=F,eval=F}
