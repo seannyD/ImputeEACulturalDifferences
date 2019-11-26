@@ -1,0 +1,828 @@
+"meaning","language","word","lingpy.cognate","expert.cognate","word.count","corpora.size","corpora.type","corpus","states","taxa","word.type","glottocode","source.ids","mean.roc","sd.roc"
+"B","Albanian","vëlla","FP","albanian",3027,16700000,"written","Albanian NC",9,"Albanian_Top","kinterm","alba1267","IE12(155);IE29(262);IE138(17,64)",1.26705793349218,0.00462901893746714
+"B","Albanian","vëlla","FP","albanian",770,16700000,"spoken","Albanian NC",9,"Albanian_Top","kinterm","alba1267","IE12(155);IE29(262);IE138(17,64)",1.26705793349218,0.00462901893746714
+"B","Czech","bratr","AI","i2",101975,4175089440,"web","Czech Web 2012 (czTenTen12 v8)",9,"Czech","kinterm","czec1258","IE146(527);IE143(78);IE288(105)",1.26705793349218,0.00462901893746714
+"B","Czech","bratr","AI","i2",16393,1700000,"written","UCNK:SYN2015 (written) ORAL2013 (spoken)",9,"Czech","kinterm","czec1258","IE146(527);IE143(78);IE288(105)",1.26705793349218,0.00462901893746714
+"B","Czech","bratr","AI","i2",64,1700000,"spoken","UCNK:SYN2015 (written) ORAL2013 (spoken)",9,"Czech","kinterm","czec1258","IE146(527);IE143(78);IE288(105)",1.26705793349218,0.00462901893746714
+"B","Marathi","bʱaːu","FZ","indian",NA,NA,NA,NA,9,"Marathi","kinterm","mara1378",NA,1.26705793349218,0.00462901893746714
+"B","Ossetic","ævsymær","HV","misc",NA,NA,NA,NA,9,"Iron_Ossetic","kinterm","osse1245","IE211(167)",1.26705793349218,0.00462901893746714
+"B","Hindi","bʱaːiː","FZ","indian",NA,NA,NA,NA,9,"Hindi","kinterm","hind1269",NA,1.26705793349218,0.00462901893746714
+"B","Russian","брат","AI","i2",460715,14553856113,"web","Russian Web 2011 (ruTenTen11)",9,"Russian","kinterm","russ1263",NA,1.26705793349218,0.00462901893746714
+"B","Russian","брат","AI","i2",1783378,14553856113,"web","Russian Web 2011 (ruTenTen11)",9,"Russian","kinterm","russ1263",NA,1.26705793349218,0.00462901893746714
+"B","Russian","брат","AI","i2",280.34,8200000,"spoken","Russian NC via Leeds",9,"Russian","kinterm","russ1263",NA,1.26705793349218,0.00462901893746714
+"B","Romanian","frate","DT","italian",2554,4.1e+07,"written","ROMBAC",9,"Romanian_List","kinterm","roma1327","IE12(161)",1.26705793349218,0.00462901893746714
+"B","Nepali","bhai","FZ","indian",NA,NA,NA,NA,9,"Nepali_List","kinterm","nepa1254","DR7(103);IE293(472)",1.26705793349218,0.00462901893746714
+"B","Romanian","frate","DT","italian",10995,44729032,"web","Romanian Web (roWaC)",9,"Romanian_List","kinterm","roma1327","IE12(161)",1.26705793349218,0.00462901893746714
+"B","Romanian","frate","DT","italian",2203,44729032,"web","Romanian Web (roWaC)",9,"Romanian_List","kinterm","roma1327","IE12(161)",1.26705793349218,0.00462901893746714
+"B","Icelandic","bróðir","DJ","i1",250,6.5e+07,"written","textasafn",9,"Icelandic_ST","kinterm","icel1247","IE89(91)",1.26705793349218,0.00462901893746714
+"B","Icelandic","bróðir","DJ","i1",55,6.5e+07,"spoken","textasafn",9,"Icelandic_ST","kinterm","icel1247","IE89(91)",1.26705793349218,0.00462901893746714
+"B","Frisian","broer","AA","i1",NA,NA,NA,NA,9,"Frisian","kinterm","fris1239","IE305;IE307;IE348",1.26705793349218,0.00462901893746714
+"B","Norwegian","bror","AA","i1",140706,1698481187,"web","Norwegian Web 2015 (noTenTen15) Bokmal and Nynorsk",9,"Riksmal","kinterm","norw1259","IE89(95)",1.26705793349218,0.00462901893746714
+"B","Norwegian","bror","AA","i1",47304,1698481187,"web","Norwegian Web 2015 (noTenTen15) Bokmal and Nynorsk",9,"Riksmal","kinterm","norw1259","IE89(95)",1.26705793349218,0.00462901893746714
+"B","Assamese","bhāi","FZ","indian",NA,NA,NA,NA,9,"Assamese","kinterm","assa1263","DR7(103);IE224(71);IE292",1.26705793349218,0.00462901893746714
+"B","French","frère","CN","italian",1330024,9889689889,"web","French Web 2012 (frTenTen12)",9,"French","kinterm","stan1290","IE80(156,167)",1.26705793349218,0.00462901893746714
+"B","French","frère","CN","italian",816281,9889689889,"web","French Web 2012 (frTenTen12)",9,"French","kinterm","stan1290","IE80(156,167)",1.26705793349218,0.00462901893746714
+"B","French","frère","CN","italian",142.36,1.5e+07,"written","lexique corpus",9,"French","kinterm","stan1290","IE80(156,167)",1.26705793349218,0.00462901893746714
+"B","Dutch","broer","AA","i1",84647,2576596803,"web","Dutch Web 2014 (nlTenTen14)",9,"Dutch_List","kinterm","dutc1256","IE73",1.26705793349218,0.00462901893746714
+"B","Lithuanian","brolis","DZ","baltic",NA,NA,NA,NA,9,"Lithuanian_ST","kinterm","lith1251","IE21(79);IE287(97);IE288(107)",1.26705793349218,0.00462901893746714
+"B","Breton","breur","AA","i1",NA,NA,NA,NA,9,"Breton_List","kinterm","bret1244","IE180(180);IE82(92,94);IE288(107); IE83",1.26705793349218,0.00462901893746714
+"B","Swedish","bror","AA","i1",NA,1e+06,"spoken","SUC",9,"Swedish_List","kinterm","swed1254","IE995;IE89(94)",1.26705793349218,0.00462901893746714
+"B","Avestan","brātar-","AI","i2",NA,NA,NA,NA,9,"Avestan","kinterm","aves1237","IE507",1.26705793349218,0.00462901893746714
+"B","Swedish","bror","AA","i1",126513,3411216955,"web","Swedish Web 2014 (svTenTen14)",9,"Swedish_List","kinterm","swed1254","IE995;IE89(94)",1.26705793349218,0.00462901893746714
+"B","Swedish","bror","AA","i1",177,1e+06,"written","SUC",9,"Swedish_List","kinterm","swed1254","IE995;IE89(94)",1.26705793349218,0.00462901893746714
+"B","Spanish","hermano","FC","iberian",1323,1e+08,"written","CoE",9,"Spanish","kinterm","stan1288","IE80(156-167)",1.26705793349218,0.00462901893746714
+"B","Croatian","brat","AI","i2",44013,1.21e+09,"web","hrWaC",9,"Serbocroatian_Croatia","kinterm","sout1528","IE20(47);IE65(25);IE63(46,47);IE12(146)",1.26705793349218,0.00462901893746714
+"B","Ukrainian","brat","AI","i2",NA,NA,NA,NA,9,"Ukrainian","kinterm","ukra1253","IE146(993);IE297(314);IE299)",1.26705793349218,0.00462901893746714
+"B","Russian","брат","AI","i2",16813.66,8200000,"written","Russian NC via Leeds",9,"Russian","kinterm","russ1263",NA,1.26705793349218,0.00462901893746714
+"B","Irish","brathir","DJ","i1",NA,NA,NA,NA,9,"Irish_A","kinterm","iris1253",NA,1.26705793349218,0.00462901893746714
+"B","Belarusian","brat","AI","i2",NA,NA,NA,NA,9,"Byelorussian","kinterm","bela1254","IE146(941);IE296(9,298)",1.26705793349218,0.00462901893746714
+"B","Dutch","broer","AA","i1",5425,42400000,"written","Dutch Instituut voor Nederlandse Lexicologie text corpora (written) (mysterious) Corpus Gesproken Nederlands (spoken)",9,"Dutch_List","kinterm","dutc1256","IE73",1.26705793349218,0.00462901893746714
+"B","Oriya","bhai","FZ","indian",NA,NA,NA,NA,9,"Oriya","kinterm","oriy1255","DR7(146);IE224(71);IE9(109)",1.26705793349218,0.00462901893746714
+"B","Serbian","brat",NA,"i2",15625,5.54e+08,"web","scWaC",9,"Serbocroatian","kinterm","sout1528","IE20(47);IE65(25);IE63(46,47);IE12(146)",1.26705793349218,0.00462901893746714
+"B","Gujarati","bhāi","FZ","indian",NA,NA,NA,NA,9,"Gujarati","kinterm","guja1252","IE9(109);IE155(93);IE108(167);IE96(211);DR7(146)",1.26705793349218,0.00462901893746714
+"B","Danish","bror","BN","i1",66852,2042601251,"web","Danish Web 2014 (daTenTen14)",9,"Danish","kinterm","dani1285","IE996;IE89(95)",1.26705793349218,0.00462901893746714
+"B","Danish","bror","BN","i1",56875,2042601251,"web","Danish Web 2014 (daTenTen14)",9,"Danish","kinterm","dani1285","IE996;IE89(95)",1.26705793349218,0.00462901893746714
+"B","Italian","fratello","DT","italian",17505,1.3e+08,"written","CORIS",9,"Italian","kinterm","ital1282","IE80(156,167)",1.26705793349218,0.00462901893746714
+"B","Bengali","bhāi","FZ","indian",NA,NA,NA,NA,9,"Bengali","kinterm","beng1280","DR7(103);IE224(71)",1.26705793349218,0.00462901893746714
+"B","Italian","fratello","DT","italian",248715,2588873046,"web","Italian Web 2010 (itTenTen)",9,"Italian","kinterm","ital1282","IE80(156,167)",1.26705793349218,0.00462901893746714
+"B","English","brother","CE","i1",63,17400000,"spoken","CELEX",9,"English_ST","kinterm","stan1293","IE72",1.26705793349218,0.00462901893746714
+"B","Bulgarian","брат","AI","i2",31437,704955109,"web","Bulgarian Web 2012 (bgTenTen12)",9,"Bulgarian","kinterm","bulg1262",NA,1.26705793349218,0.00462901893746714
+"B","Sindhi","bhāu","FZ","indian",NA,NA,NA,NA,9,"Sindhi","kinterm","sind1272","IE9(109);DR7(98);IE292)",1.26705793349218,0.00462901893746714
+"B","Bulgarian","брат","AI","i2",NA,1.95e+09,"spoken","Bulgarian NC",9,"Bulgarian","kinterm","bulg1262",NA,1.26705793349218,0.00462901893746714
+"B","Polish","brat","AI","i2",162,3e+08,"spoken","Polish NC written PELCRA spoken",9,"Polish","kinterm","poli1260","IE71(262);IE59(143);IE146(754)",1.26705793349218,0.00462901893746714
+"B","Lahnda","bhrā","HI","indian",NA,NA,NA,NA,9,"Lahnda","kinterm","lahn1241","IE337(133,6,9);IE292(9,18,69);IE293(472)",1.26705793349218,0.00462901893746714
+"B","Dutch","broer","AA","i1",28501,42400000,"spoken","Dutch Instituut voor Nederlandse Lexicologie text corpora (written) (mysterious) Corpus Gesproken Nederlands (spoken)",9,"Dutch_List","kinterm","dutc1256","IE73",1.26705793349218,0.00462901893746714
+"B","Polish","brat","AI","i2",975172,7796796565,"web","Polish Web 2012 (plTenTen12)",9,"Polish","kinterm","poli1260","IE71(262);IE59(143);IE146(754)",1.26705793349218,0.00462901893746714
+"B","Slovak","brat","AI","i2",NA,NA,NA,NA,9,"Slovak","kinterm","slov1269","IE146(587);IE177(101);IE301(36,42)",1.26705793349218,0.00462901893746714
+"B","Polish","brat","AI","i2",230195,7796796565,"web","Polish Web 2012 (plTenTen12)",9,"Polish","kinterm","poli1260","IE71(262);IE59(143);IE146(754)",1.26705793349218,0.00462901893746714
+"B","German","Bruder","CU","i1",1207834,16534176369,"web","German Web 2013 (deTenTen13)",9,"German_ST","kinterm","stan1295","IE74;IE234(268)",1.26705793349218,0.00462901893746714
+"B","German","Bruder","CU","i1",515,5400000,"written","CELEX",9,"German_ST","kinterm","stan1295","IE74;IE234(268)",1.26705793349218,0.00462901893746714
+"B","Macedonian","брат","AI","i2",NA,NA,NA,NA,9,"Macedonian","kinterm","mace1250",NA,1.26705793349218,0.00462901893746714
+"B","French","frère","CN","italian",311.45,1.5e+07,"spoken","lexique corpus",9,"French","kinterm","stan1290","IE80(156,167)",1.26705793349218,0.00462901893746714
+"B","English","brother","CE","i1",1626,39502648,"web","pukWaC (ukWaC parsed with MaltParser)",9,"English_ST","kinterm","stan1293","IE72",1.26705793349218,0.00462901893746714
+"B","Bulgarian","брат","AI","i2",91715,1.95e+09,"written","Bulgarian NC",9,"Bulgarian","kinterm","bulg1262",NA,1.26705793349218,0.00462901893746714
+"B","Catalan","germà","AS","iberian",6653,4189954719,"web","Catalan Web 2014 (caTenTen14)",9,"Catalan","kinterm","stan1289","IE285(5);IE286(416)",1.26705793349218,0.00462901893746714
+"B","German","Bruder","CU","i1",765636,16534176369,"web","German Web 2013 (deTenTen13)",9,"German_ST","kinterm","stan1295","IE74;IE234(268)",1.26705793349218,0.00462901893746714
+"B","German","Bruder","CU","i1",13,5400000,"spoken","CELEX",9,"German_ST","kinterm","stan1295","IE74;IE234(268)",1.26705793349218,0.00462901893746714
+"B","Latvian","bralis","DZ","baltic",NA,NA,NA,NA,9,"Latvian","kinterm","latv1249",NA,1.26705793349218,0.00462901893746714
+"B","Urdu","bhā'i","FZ","indian",NA,NA,NA,NA,9,"Urdu","kinterm","urdu1245","IE188(347);IE292",1.26705793349218,0.00462901893746714
+"B","Spanish","hermano","FC","iberian",366,1e+08,"spoken","CoE",9,"Spanish","kinterm","stan1288","IE80(156-167)",1.26705793349218,0.00462901893746714
+"B","Catalan","germà","AS","iberian",7772,4189954719,"web","Catalan Web 2014 (caTenTen14)",9,"Catalan","kinterm","stan1289","IE285(5);IE286(416)",1.26705793349218,0.00462901893746714
+"B","Czech","bratr","AI","i2",370815,4175089440,"web","Czech Web 2012 (czTenTen12 v8)",9,"Czech","kinterm","czec1258","IE146(527);IE143(78);IE288(105)",1.26705793349218,0.00462901893746714
+"B","Portuguese","irmão","EO","iberian",203,4.5e+07,"spoken","CoP",9,"Portuguese_ST","kinterm","port1283","IE80(166)",1.26705793349218,0.00462901893746714
+"B","English","brother","CE","i1",2319,39502648,"web","pukWaC (ukWaC parsed with MaltParser)",9,"English_ST","kinterm","stan1293","IE72",1.26705793349218,0.00462901893746714
+"B","Italian","fratello","DT","italian",3,1.3e+08,"spoken","CORIS",9,"Italian","kinterm","ital1282","IE80(156,167)",1.26705793349218,0.00462901893746714
+"B","English","brother","CE","i1",2415,17400000,"written","CELEX",9,"English_ST","kinterm","stan1293","IE72",1.26705793349218,0.00462901893746714
+"B","Dutch","broer","AA","i1",159790,2576596803,"web","Dutch Web 2014 (nlTenTen14)",9,"Dutch_List","kinterm","dutc1256","IE73",1.26705793349218,0.00462901893746714
+"B","Spanish","hermano","FC","iberian",1515056,9497402122,"web","Spanish Web 2011 (esTenTen11, Eu + Am, Freeling v4)",9,"Spanish","kinterm","stan1288","IE80(156-167)",1.26705793349218,0.00462901893746714
+"B","Italian","fratello","DT","italian",135501,2588873046,"web","Italian Web 2010 (itTenTen)",9,"Italian","kinterm","ital1282","IE80(156,167)",1.26705793349218,0.00462901893746714
+"B","Kashmiri","bōi","HA","indian",NA,NA,NA,NA,9,"Kashmiri","kinterm","kash1277","IE42(40);IE43(229);IE121(224,225);IE218(194)",1.26705793349218,0.00462901893746714
+"B","Portuguese","irmão","EO","iberian",557718,3900501097,"web","Portuguese Web 2011 (ptTenTen11, Freeling v3)",9,"Portuguese_ST","kinterm","port1283","IE80(166)",1.26705793349218,0.00462901893746714
+"B","Spanish","hermano","FC","iberian",517052,9497402122,"web","Spanish Web 2011 (esTenTen11, Eu + Am, Freeling v4)",9,"Spanish","kinterm","stan1288","IE80(156-167)",1.26705793349218,0.00462901893746714
+"B","Portuguese","irmão","EO","iberian",204809,3900501097,"web","Portuguese Web 2011 (ptTenTen11, Freeling v3)",9,"Portuguese_ST","kinterm","port1283","IE80(166)",1.26705793349218,0.00462901893746714
+"B","Welsh","brawd","FH","i1",NA,NA,NA,NA,9,"Welsh_C","kinterm","wels1247","IE174(42);IE173(111,117,119);IE180(59);IE288(107); IE339",1.26705793349218,0.00462901893746714
+"B","Portuguese","irmão","EO","iberian",3889,4.5e+07,"written","CoP",9,"Portuguese_ST","kinterm","port1283","IE80(166)",1.26705793349218,0.00462901893746714
+"B","Greek","αδελφός","CZ","greek",21436,1958348129,"web","Greek Web 2014 (elTenTen14)",9,"Greek_Mod","kinterm","mode1248",NA,1.26705793349218,0.00462901893746714
+"B","Romanian","frate","DT","italian",NA,4.1e+07,"spoken","ROMBAC",9,"Romanian_List","kinterm","roma1327","IE12(161)",1.26705793349218,0.00462901893746714
+"B","Swedish","bror","AA","i1",135115,3411216955,"web","Swedish Web 2014 (svTenTen14)",9,"Swedish_List","kinterm","swed1254","IE995;IE89(94)",1.26705793349218,0.00462901893746714
+"B","Tajik","dōdar","IK","i1",NA,NA,NA,NA,9,"Tadzik","kinterm","taji1245","IE253(168);IE208(478)",1.26705793349218,0.00462901893746714
+"B","Polish","brat","AI","i2",9189,3e+08,"written","Polish NC written PELCRA spoken",9,"Polish","kinterm","poli1260","IE71(262);IE59(143);IE146(754)",1.26705793349218,0.00462901893746714
+"D","Czech","dcera","BI","slavic",150186,4175089440,"web","Czech Web 2012 (czTenTen12 v8)",10,"Czech","kinterm","czec1258","IE146(527);IE143(77,78);IE288(105)",2.73187049748366,0.00819676789974682
+"D","Polish","córka","EL","i",95,3e+08,"spoken","Polish NC written PELCRA spoken",10,"Polish","kinterm","poli1260","IE71(261);IE59(143);IE146(754)",2.73187049748366,0.00819676789974682
+"D","Swedish","dotter","BO","i",116,1e+06,"written","SUC",10,"Swedish_List","kinterm","swed1254","IE995;IE89(94)",2.73187049748366,0.00819676789974682
+"D","German","Tochter","CV","i",41,5400000,"spoken","CELEX",10,"German_ST","kinterm","stan1295","IE74;IE234(268)",2.73187049748366,0.00819676789974682
+"D","Dutch","dochter","BW","i",33252,42400000,"spoken","Dutch Instituut voor Nederlandse Lexicologie text corpora (written) (mysterious) Corpus Gesproken Nederlands (spoken)",10,"Dutch_List","kinterm","dutc1256","IE73",2.73187049748366,0.00819676789974682
+"D","Swedish","dotter","BO","i",363522,3411216955,"web","Swedish Web 2014 (svTenTen14)",10,"Swedish_List","kinterm","swed1254","IE995;IE89(94)",2.73187049748366,0.00819676789974682
+"D","French","fille","CO","latin",2114917,9889689889,"web","French Web 2012 (frTenTen12)",10,"French","kinterm","stan1290","IE80(156,167)",2.73187049748366,0.00819676789974682
+"D","Italian","figlia","DU","latin",197941,2588873046,"web","Italian Web 2010 (itTenTen)",10,"Italian","kinterm","ital1282","IE80(156,167)",2.73187049748366,0.00819676789974682
+"D","Belarusian","dačká","GO","i",NA,NA,NA,NA,10,"Byelorussian","kinterm","bela1254","IE146(941);IE296(55,302);IE332(33)",2.73187049748366,0.00819676789974682
+"D","Swedish","dotter","BO","i",NA,1e+06,"spoken","SUC",10,"Swedish_List","kinterm","swed1254","IE995;IE89(94)",2.73187049748366,0.00819676789974682
+"D","Marathi","kan̪jaː","GR","bengali",NA,NA,NA,NA,10,"Marathi","kinterm","mara1378",NA,2.73187049748366,0.00819676789974682
+"D","Oriya","zia","GE","indian",NA,NA,NA,NA,10,"Oriya","kinterm","oriy1255","DR7(147);IE224(72);IE9(106)",2.73187049748366,0.00819676789974682
+"D","Sindhi","dhīa","IG","misc",NA,NA,NA,NA,10,"Sindhi","kinterm","sind1272","DR7(100);IE292);IE9(106)",2.73187049748366,0.00819676789974682
+"D","Czech","dcera","BI","slavic",67,1700000,"spoken","UCNK:SYN2015 (written) ORAL2013 (spoken)",10,"Czech","kinterm","czec1258","IE146(527);IE143(77,78);IE288(105)",2.73187049748366,0.00819676789974682
+"D","Frisian","dochter","BW","i",NA,NA,NA,NA,10,"Frisian","kinterm","fris1239","IE305;IE307;IE348",2.73187049748366,0.00819676789974682
+"D","Portuguese","filha","AT","latin",221,4.5e+07,"spoken","CoP",10,"Portuguese_ST","kinterm","port1283","IE80(165)",2.73187049748366,0.00819676789974682
+"D","Serbian","ćerka",NA,"slavic",6418,5.54e+08,"web","scWaC",10,"Serbocroatian","kinterm","sout1528","IE20(47);IE65(25);IE12(146)",2.73187049748366,0.00819676789974682
+"D","Macedonian","’ќерка","HO","i1",NA,NA,NA,NA,10,"Macedonian","kinterm","mace1250",NA,2.73187049748366,0.00819676789974682
+"D","Hindi","beʈiː","GY","indian2",NA,NA,NA,NA,10,"Hindi","kinterm","hind1269",NA,2.73187049748366,0.00819676789974682
+"D","Irish","inghean","DR","misc",NA,NA,NA,NA,10,"Irish_A","kinterm","iris1253","IE225(432);IE182(105);IE294(63)",2.73187049748366,0.00819676789974682
+"D","Slovak","dcéra","BI","slavic",NA,NA,NA,NA,10,"Slovak","kinterm","slov1269","IE146(588);IE177(101)",2.73187049748366,0.00819676789974682
+"D","Czech","dcera","BI","slavic",15980,1700000,"written","UCNK:SYN2015 (written) ORAL2013 (spoken)",10,"Czech","kinterm","czec1258","IE146(527);IE143(77,78);IE288(105)",2.73187049748366,0.00819676789974682
+"D","English","daughter","CF","i",2830,39502648,"web","pukWaC (ukWaC parsed with MaltParser)",10,"English_ST","kinterm","stan1293","IE72",2.73187049748366,0.00819676789974682
+"D","German","Tochter","CV","i",1181168,16534176369,"web","German Web 2013 (deTenTen13)",10,"German_ST","kinterm","stan1295","IE74;IE234(268)",2.73187049748366,0.00819676789974682
+"D","French","fille","CO","latin",627.59,1.5e+07,"spoken","lexique corpus",10,"French","kinterm","stan1290","IE80(156,167)",2.73187049748366,0.00819676789974682
+"D","Bulgarian","дъщеря","AJ","slavic",57694,1.95e+09,"written","Bulgarian NC",10,"Bulgarian","kinterm","bulg1262",NA,2.73187049748366,0.00819676789974682
+"D","Swedish","dotter","BO","i",226697,3411216955,"web","Swedish Web 2014 (svTenTen14)",10,"Swedish_List","kinterm","swed1254","IE995;IE89(94)",2.73187049748366,0.00819676789974682
+"D","Ukrainian","dočká","GO","i",NA,NA,NA,NA,10,"Ukrainian","kinterm","ukra1253","IE146(993);IE297(314);IE298(51);IE299)",2.73187049748366,0.00819676789974682
+"D","German","Tochter","CV","i",1355971,16534176369,"web","German Web 2013 (deTenTen13)",10,"German_ST","kinterm","stan1295","IE74;IE234(268)",2.73187049748366,0.00819676789974682
+"D","Croatian","kći","BC","slavic",87067,1.21e+09,"web","hrWaC",10,"Serbocroatian_Croatia","kinterm","sout1528",NA,2.73187049748366,0.00819676789974682
+"D","Spanish","hija","FD","latin",555,1e+08,"spoken","CoE",10,"Spanish","kinterm","stan1288","IE80(156-167)",2.73187049748366,0.00819676789974682
+"D","Bulgarian","дъщеря","AJ","slavic",NA,1.95e+09,"spoken","Bulgarian NC",10,"Bulgarian","kinterm","bulg1262",NA,2.73187049748366,0.00819676789974682
+"D","Spanish","hija","FD","latin",11807,9497402122,"web","Spanish Web 2011 (esTenTen11, Eu + Am, Freeling v4)",10,"Spanish","kinterm","stan1288","IE80(156-167)",2.73187049748366,0.00819676789974682
+"D","Russian","дочь","EZ","i",1237503,14553856113,"web","Russian Web 2011 (ruTenTen11)",10,"Russian","kinterm","russ1263",NA,2.73187049748366,0.00819676789974682
+"D","Bulgarian","дъщеря","AJ","slavic",38835,704955109,"web","Bulgarian Web 2012 (bgTenTen12)",10,"Bulgarian","kinterm","bulg1262",NA,2.73187049748366,0.00819676789974682
+"D","Urdu","bēṭī","GY","indian2",NA,NA,NA,NA,10,"Urdu","kinterm","urdu1245","IE188(350);IE363(26);IE292",2.73187049748366,0.00819676789974682
+"D","Albanian","vajzë","FU","misc",1371,16700000,"spoken","Albanian NC",10,"Albanian_Top","kinterm","alba1267","IE12(155);IE29(262);IE137(53)",2.73187049748366,0.00819676789974682
+"D","Bengali","kanyā","GR","bengali",NA,NA,NA,NA,10,"Bengali","kinterm","beng1280","IE508",2.73187049748366,0.00819676789974682
+"D","Italian","figlia","DU","latin",13,1.3e+08,"spoken","CORIS",10,"Italian","kinterm","ital1282","IE80(156,167)",2.73187049748366,0.00819676789974682
+"D","Romanian","fiică","AT","latin",3891,44729032,"web","Romanian Web (roWaC)",10,"Romanian_List","kinterm","roma1327",NA,2.73187049748366,0.00819676789974682
+"D","Czech","dcera","BI","slavic",469214,4175089440,"web","Czech Web 2012 (czTenTen12 v8)",10,"Czech","kinterm","czec1258","IE146(527);IE143(77,78);IE288(105)",2.73187049748366,0.00819676789974682
+"D","Italian","figlia","DU","latin",163136,2588873046,"web","Italian Web 2010 (itTenTen)",10,"Italian","kinterm","ital1282","IE80(156,167)",2.73187049748366,0.00819676789974682
+"D","French","fille","CO","latin",3268754,9889689889,"web","French Web 2012 (frTenTen12)",10,"French","kinterm","stan1290","IE80(156,167)",2.73187049748366,0.00819676789974682
+"D","Norwegian","datter","BO","i",193833,1698481187,"web","Norwegian Web 2015 (noTenTen15) Bokmal and Nynorsk",10,"Riksmal","kinterm","norw1259","IE89(95)",2.73187049748366,0.00819676789974682
+"D","Norwegian","datter","BO","i",102994,1698481187,"web","Norwegian Web 2015 (noTenTen15) Bokmal and Nynorsk",10,"Riksmal","kinterm","norw1259","IE89(95)",2.73187049748366,0.00819676789974682
+"D","Dutch","dochter","BW","i",199286,2576596803,"web","Dutch Web 2014 (nlTenTen14)",10,"Dutch_List","kinterm","dutc1256","IE73",2.73187049748366,0.00819676789974682
+"D","Polish","córka","EL","i",1237777,7796796565,"web","Polish Web 2012 (plTenTen12)",10,"Polish","kinterm","poli1260","IE71(261);IE59(143);IE146(754)",2.73187049748366,0.00819676789974682
+"D","Icelandic","dóttir","BO","i",18,6.5e+07,"spoken","textasafn",10,"Icelandic_ST","kinterm","icel1247","IE86(186);IE89(91)",2.73187049748366,0.00819676789974682
+"D","Portuguese","filha","AT","latin",6235,3900501097,"web","Portuguese Web 2011 (ptTenTen11, Freeling v3)",10,"Portuguese_ST","kinterm","port1283","IE80(165)",2.73187049748366,0.00819676789974682
+"D","Romanian","fiică","AT","latin",NA,4.1e+07,"spoken","ROMBAC",10,"Romanian_List","kinterm","roma1327",NA,2.73187049748366,0.00819676789974682
+"D","Romanian","fiică","AT","latin",1518,4.1e+07,"written","ROMBAC",10,"Romanian_List","kinterm","roma1327",NA,2.73187049748366,0.00819676789974682
+"D","Icelandic","dóttir","BO","i",169,6.5e+07,"written","textasafn",10,"Icelandic_ST","kinterm","icel1247","IE86(186);IE89(91)",2.73187049748366,0.00819676789974682
+"D","Spanish","hija","FD","latin",1435,1e+08,"written","CoE",10,"Spanish","kinterm","stan1288","IE80(156-167)",2.73187049748366,0.00819676789974682
+"D","German","Tochter","CV","i",535,5400000,"written","CELEX",10,"German_ST","kinterm","stan1295","IE74;IE234(268)",2.73187049748366,0.00819676789974682
+"D","Italian","figlia","DU","latin",12955,1.3e+08,"written","CORIS",10,"Italian","kinterm","ital1282","IE80(156,167)",2.73187049748366,0.00819676789974682
+"D","Gujarati","beṭī","GY","indian2",NA,NA,NA,NA,10,"Gujarati","kinterm","guja1252","IE155(31,92,164);IE108(169);IE96(212)",2.73187049748366,0.00819676789974682
+"D","Assamese","ziārī","GE","indian",NA,NA,NA,NA,10,"Assamese","kinterm","assa1263","IE9(105,106)",2.73187049748366,0.00819676789974682
+"D","Romanian","fiică","AT","latin",759,44729032,"web","Romanian Web (roWaC)",10,"Romanian_List","kinterm","roma1327",NA,2.73187049748366,0.00819676789974682
+"D","Avestan","dugədar-","GK","i",NA,NA,NA,NA,10,"Avestan","kinterm","aves1237","IE507",2.73187049748366,0.00819676789974682
+"D","Danish","datter","BO","i",135523,2042601251,"web","Danish Web 2014 (daTenTen14)",10,"Danish","kinterm","dani1285","IE996;IE89(95)",2.73187049748366,0.00819676789974682
+"D","Portuguese","filha","AT","latin",259130,3900501097,"web","Portuguese Web 2011 (ptTenTen11, Freeling v3)",10,"Portuguese_ST","kinterm","port1283","IE80(165)",2.73187049748366,0.00819676789974682
+"D","Danish","datter","BO","i",200472,2042601251,"web","Danish Web 2014 (daTenTen14)",10,"Danish","kinterm","dani1285","IE996;IE89(95)",2.73187049748366,0.00819676789974682
+"D","Portuguese","filha","AT","latin",10095,4.5e+07,"written","CoP",10,"Portuguese_ST","kinterm","port1283","IE80(165)",2.73187049748366,0.00819676789974682
+"D","Spanish","hija","FD","latin",561791,9497402122,"web","Spanish Web 2011 (esTenTen11, Eu + Am, Freeling v4)",10,"Spanish","kinterm","stan1288","IE80(156-167)",2.73187049748366,0.00819676789974682
+"D","Polish","córka","EL","i",9255,3e+08,"written","Polish NC written PELCRA spoken",10,"Polish","kinterm","poli1260","IE71(261);IE59(143);IE146(754)",2.73187049748366,0.00819676789974682
+"D","Russian","дочь","EZ","i",11923.73,8200000,"written","Russian NC via Leeds",10,"Russian","kinterm","russ1263",NA,2.73187049748366,0.00819676789974682
+"D","Kashmiri","kur","HF","pashto",NA,NA,NA,NA,10,"Kashmiri","kinterm","kash1277","IE43(232);IE42(40);IE121(224);IE218(194)",2.73187049748366,0.00819676789974682
+"D","Albanian","vajzë","FU","misc",4453,16700000,"written","Albanian NC",10,"Albanian_Top","kinterm","alba1267","IE12(155);IE29(262);IE137(53)",2.73187049748366,0.00819676789974682
+"D","Lithuanian","duktẽ","EC","i",NA,NA,NA,NA,10,"Lithuanian_ST","kinterm","lith1251","IE13(33);IE21(79);IE287(97,102);IE288(105)",2.73187049748366,0.00819676789974682
+"D","Greek","κόρη","DA","misc",76119,1958348129,"web","Greek Web 2014 (elTenTen14)",10,"Greek_Mod","kinterm","mode1248",NA,2.73187049748366,0.00819676789974682
+"D","Polish","córka","EL","i",188243,7796796565,"web","Polish Web 2012 (plTenTen12)",10,"Polish","kinterm","poli1260","IE71(261);IE59(143);IE146(754)",2.73187049748366,0.00819676789974682
+"D","Catalan","filla","AT","latin",8635,4189954719,"web","Catalan Web 2014 (caTenTen14)",10,"Catalan","kinterm","stan1289","IE285(4);IE286(416)",2.73187049748366,0.00819676789974682
+"D","Tajik","duhtar","IM","i",NA,NA,NA,NA,10,"Tadzik","kinterm","taji1245","IE207(33,34)",2.73187049748366,0.00819676789974682
+"D","English","daughter","CF","i",2321,39502648,"web","pukWaC (ukWaC parsed with MaltParser)",10,"English_ST","kinterm","stan1293","IE72",2.73187049748366,0.00819676789974682
+"D","Nepali","chori","DA","misc",NA,NA,NA,NA,10,"Nepali_List","kinterm","nepa1254","DR7(105);IE197(30);IE293(203);IE376(81)",2.73187049748366,0.00819676789974682
+"D","Lahnda","beṭī","GY","indian2",NA,NA,NA,NA,10,"Lahnda","kinterm","lahn1241","IE293(455)",2.73187049748366,0.00819676789974682
+"D","Catalan","filla","AT","latin",8259,4189954719,"web","Catalan Web 2014 (caTenTen14)",10,"Catalan","kinterm","stan1289","IE285(4);IE286(416)",2.73187049748366,0.00819676789974682
+"D","English","daughter","CF","i",2239,17400000,"written","CELEX",10,"English_ST","kinterm","stan1293","IE72",2.73187049748366,0.00819676789974682
+"D","Dutch","dochter","BW","i",156280,2576596803,"web","Dutch Web 2014 (nlTenTen14)",10,"Dutch_List","kinterm","dutc1256","IE73",2.73187049748366,0.00819676789974682
+"D","English","daughter","CF","i",66,17400000,"spoken","CELEX",10,"English_ST","kinterm","stan1293","IE72",2.73187049748366,0.00819676789974682
+"D","French","fille","CO","latin",417.03,1.5e+07,"written","lexique corpus",10,"French","kinterm","stan1290","IE80(156,167)",2.73187049748366,0.00819676789974682
+"D","Dutch","dochter","BW","i",338,42400000,"written","Dutch Instituut voor Nederlandse Lexicologie text corpora (written) (mysterious) Corpus Gesproken Nederlands (spoken)",10,"Dutch_List","kinterm","dutc1256","IE73",2.73187049748366,0.00819676789974682
+"D","Welsh","merch","FI","celtic",NA,NA,NA,NA,10,"Welsh_C","kinterm","wels1247","IE174(42);IE288(105); IE339",2.73187049748366,0.00819676789974682
+"D","Russian","дочь","EZ","i",113.27,8200000,"spoken","Russian NC via Leeds",10,"Russian","kinterm","russ1263",NA,2.73187049748366,0.00819676789974682
+"D","Breton","merc'h","AB","celtic",NA,NA,NA,NA,10,"Breton_List","kinterm","bret1244","IE182(366);IE82(93,96);IE288(105)",2.73187049748366,0.00819676789974682
+"D","Russian","дочь","EZ","i",589758,14553856113,"web","Russian Web 2011 (ruTenTen11)",10,"Russian","kinterm","russ1263",NA,2.73187049748366,0.00819676789974682
+"F","German","Vater","CW","i2",62,5400000,"spoken","CELEX",7,"German_ST","kinterm","stan1295","IE74;IE234(268)",2.58093634467001,0.00769609330977789
+"F","Belarusian","bác'ka","GN","bulgarian",NA,NA,NA,NA,7,"Byelorussian","kinterm","bela1254","IE146(941);IE296(319);IE332(13)",2.58093634467001,0.00769609330977789
+"F","Hindi","baːbuː","FR","indian1",NA,NA,NA,NA,7,"Hindi","kinterm","hind1269",NA,2.58093634467001,0.00769609330977789
+"F","Oriya","bappa","AK","bulgarian",NA,NA,NA,NA,7,"Oriya","kinterm","oriy1255","DR7(145);IE224(71);IE9(107)",2.58093634467001,0.00769609330977789
+"F","Serbian","otac",NA,"slavic",33524,5.54e+08,"web","scWaC",7,"Serbocroatian","kinterm","sout1528","IE20(47);IE65(25);IE63(46);IE12(146)",2.58093634467001,0.00769609330977789
+"F","Czech","otec","BD","slavic",133,1700000,"spoken","UCNK:SYN2015 (written) ORAL2013 (spoken)",7,"Czech","kinterm","czec1258","IE146(527);IE288(103)",2.58093634467001,0.00769609330977789
+"F","Sindhi","bābo","FR","indian1",NA,NA,NA,NA,7,"Sindhi","kinterm","sind1272","DR7(98);IE9(108)",2.58093634467001,0.00769609330977789
+"F","Spanish","padre","AU","i1",5321,1e+08,"written","CoE",7,"Spanish","kinterm","stan1288","IE80(156-167)",2.58093634467001,0.00769609330977789
+"F","Spanish","padre","AU","i1",2700891,9497402122,"web","Spanish Web 2011 (esTenTen11, Eu + Am, Freeling v4)",7,"Spanish","kinterm","stan1288","IE80(156-167)",2.58093634467001,0.00769609330977789
+"F","Irish","athair","DK","celtic",NA,NA,NA,NA,7,"Irish_A","kinterm","iris1253","IE180(144,145,209,229);IE225(432);IE182(103)",2.58093634467001,0.00769609330977789
+"F","Czech","otec","BD","slavic",38211,1700000,"written","UCNK:SYN2015 (written) ORAL2013 (spoken)",7,"Czech","kinterm","czec1258","IE146(527);IE288(103)",2.58093634467001,0.00769609330977789
+"F","German","Vater","CW","i2",1901338,16534176369,"web","German Web 2013 (deTenTen13)",7,"German_ST","kinterm","stan1295","IE74;IE234(268)",2.58093634467001,0.00769609330977789
+"F","Italian","padre","AU","i1",377817,2588873046,"web","Italian Web 2010 (itTenTen)",7,"Italian","kinterm","ital1282","IE80(156,167)",2.58093634467001,0.00769609330977789
+"F","Marathi","pit̪aː","GI","i1",NA,NA,NA,NA,7,"Marathi","kinterm","mara1378",NA,2.58093634467001,0.00769609330977789
+"F","Albanian","babë","FR","indian1",94,16700000,"spoken","Albanian NC",7,"Albanian_Top","kinterm","alba1267","IE12(155);IE20(69)",2.58093634467001,0.00769609330977789
+"F","German","Vater","CW","i2",2470267,16534176369,"web","German Web 2013 (deTenTen13)",7,"German_ST","kinterm","stan1295","IE74;IE234(268)",2.58093634467001,0.00769609330977789
+"F","Czech","otec","BD","slavic",723528,4175089440,"web","Czech Web 2012 (czTenTen12 v8)",7,"Czech","kinterm","czec1258","IE146(527);IE288(103)",2.58093634467001,0.00769609330977789
+"F","Macedonian","татко","ET","slavic",NA,NA,NA,NA,7,"Macedonian","kinterm","mace1250",NA,2.58093634467001,0.00769609330977789
+"F","Norwegian","far","BP","i2",270189,1698481187,"web","Norwegian Web 2015 (noTenTen15) Bokmal and Nynorsk",7,"Riksmal","kinterm","norw1259","IE89(95)",2.58093634467001,0.00769609330977789
+"F","Polish","ojciec","BD","slavic",31671,3e+08,"written","Polish NC written PELCRA spoken",7,"Polish","kinterm","poli1260","IE71(260);IE59(142);IE146(754)",2.58093634467001,0.00769609330977789
+"F","Swedish","far","BP","i2",264264,3411216955,"web","Swedish Web 2014 (svTenTen14)",7,"Swedish_List","kinterm","swed1254","IE995;IE89(94)",2.58093634467001,0.00769609330977789
+"F","Bulgarian","баща","AK","bulgarian",NA,1.95e+09,"spoken","Bulgarian NC",7,"Bulgarian","kinterm","bulg1262",NA,2.58093634467001,0.00769609330977789
+"F","Dutch","vader","BX","i2",265279,2576596803,"web","Dutch Web 2014 (nlTenTen14)",7,"Dutch_List","kinterm","dutc1256","IE73",2.58093634467001,0.00769609330977789
+"F","Portuguese","pai","EP","i1",1276533,3900501097,"web","Portuguese Web 2011 (ptTenTen11, Freeling v3)",7,"Portuguese_ST","kinterm","port1283","IE80(166)",2.58093634467001,0.00769609330977789
+"F","Polish","ojciec","BD","slavic",197,3e+08,"spoken","Polish NC written PELCRA spoken",7,"Polish","kinterm","poli1260","IE71(260);IE59(142);IE146(754)",2.58093634467001,0.00769609330977789
+"F","French","père","CP","i1",1709147,9889689889,"web","French Web 2012 (frTenTen12)",7,"French","kinterm","stan1290","IE80(156,167)",2.58093634467001,0.00769609330977789
+"F","Italian","padre","AU","i1",442085,2588873046,"web","Italian Web 2010 (itTenTen)",7,"Italian","kinterm","ital1282","IE80(156,167)",2.58093634467001,0.00769609330977789
+"F","Spanish","padre","AU","i1",1215,1e+08,"spoken","CoE",7,"Spanish","kinterm","stan1288","IE80(156-167)",2.58093634467001,0.00769609330977789
+"F","Spanish","padre","AU","i1",1107300,9497402122,"web","Spanish Web 2011 (esTenTen11, Eu + Am, Freeling v4)",7,"Spanish","kinterm","stan1288","IE80(156-167)",2.58093634467001,0.00769609330977789
+"F","Croatian","otac","BD","slavic",89894,1.21e+09,"web","hrWaC",7,"Serbocroatian_Croatia","kinterm","sout1528","IE20(47);IE65(25);IE63(46);IE12(146)",2.58093634467001,0.00769609330977789
+"F","Swedish","far","BP","i2",31147,3411216955,"web","Swedish Web 2014 (svTenTen14)",7,"Swedish_List","kinterm","swed1254","IE995;IE89(94)",2.58093634467001,0.00769609330977789
+"F","Catalan","pare","AU","i1",34785,4189954719,"web","Catalan Web 2014 (caTenTen14)",7,"Catalan","kinterm","stan1289","IE286(416)",2.58093634467001,0.00769609330977789
+"F","Dutch","vader","BX","i2",24408,42400000,"written","Dutch Instituut voor Nederlandse Lexicologie text corpora (written) (mysterious) Corpus Gesproken Nederlands (spoken)",7,"Dutch_List","kinterm","dutc1256","IE73",2.58093634467001,0.00769609330977789
+"F","German","Vater","CW","i2",1344,5400000,"written","CELEX",7,"German_ST","kinterm","stan1295","IE74;IE234(268)",2.58093634467001,0.00769609330977789
+"F","Urdu","bāp","GB","indian1",NA,NA,NA,NA,7,"Urdu","kinterm","urdu1245","IE188(344,345);IE292",2.58093634467001,0.00769609330977789
+"F","Swedish","far","BP","i2",NA,1e+06,"spoken","SUC",7,"Swedish_List","kinterm","swed1254","IE995;IE89(94)",2.58093634467001,0.00769609330977789
+"F","Assamese","āp","GB","indian1",NA,NA,NA,NA,7,"Assamese","kinterm","assa1263","DR7(103)",2.58093634467001,0.00769609330977789
+"F","Danish","far","BP","i2",293569,2042601251,"web","Danish Web 2014 (daTenTen14)",7,"Danish","kinterm","dani1285","IE996;IE89(95)",2.58093634467001,0.00769609330977789
+"F","Bengali","pitā","GI","i1",NA,NA,NA,NA,7,"Bengali","kinterm","beng1280","IE508",2.58093634467001,0.00769609330977789
+"F","Polish","ojciec","BD","slavic",2456770,7796796565,"web","Polish Web 2012 (plTenTen12)",7,"Polish","kinterm","poli1260","IE71(260);IE59(142);IE146(754)",2.58093634467001,0.00769609330977789
+"F","Portuguese","pai","EP","i1",15710,4.5e+07,"written","CoP",7,"Portuguese_ST","kinterm","port1283","IE80(166)",2.58093634467001,0.00769609330977789
+"F","Portuguese","pai","EP","i1",554342,3900501097,"web","Portuguese Web 2011 (ptTenTen11, Freeling v3)",7,"Portuguese_ST","kinterm","port1283","IE80(166)",2.58093634467001,0.00769609330977789
+"F","Italian","padre","AU","i1",7,1.3e+08,"spoken","CORIS",7,"Italian","kinterm","ital1282","IE80(156,167)",2.58093634467001,0.00769609330977789
+"F","Dutch","vader","BX","i2",65424,42400000,"spoken","Dutch Instituut voor Nederlandse Lexicologie text corpora (written) (mysterious) Corpus Gesproken Nederlands (spoken)",7,"Dutch_List","kinterm","dutc1256","IE73",2.58093634467001,0.00769609330977789
+"F","English","father","CG","i2",146,17400000,"spoken","CELEX",7,"English_ST","kinterm","stan1293","IE72",2.58093634467001,0.00769609330977789
+"F","Albanian","babë","FR","indian1",444,16700000,"written","Albanian NC",7,"Albanian_Top","kinterm","alba1267","IE12(155);IE20(69)",2.58093634467001,0.00769609330977789
+"F","Avestan","pitar-","GI","i1",NA,NA,NA,NA,7,"Avestan","kinterm","aves1237","IE507",2.58093634467001,0.00769609330977789
+"F","Slovak","otec","BD","slavic",NA,NA,NA,NA,7,"Slovak","kinterm","slov1269","IE146(587);IE177(100);IE301(36,40,41,49)",2.58093634467001,0.00769609330977789
+"F","Ossetic","fyd","HX","misc",NA,NA,NA,NA,7,"Iron_Ossetic","kinterm","osse1245","IE211(189,190);IE205(41)",2.58093634467001,0.00769609330977789
+"F","Ukrainian","oteć","BD","slavic",NA,NA,NA,NA,7,"Ukrainian","kinterm","ukra1253","IE297(314)",2.58093634467001,0.00769609330977789
+"F","Icelandic","faðir","DK","i2",212,6.5e+07,"written","textasafn",7,"Icelandic_ST","kinterm","icel1247",NA,2.58093634467001,0.00769609330977789
+"F","Romanian","tată","ET","misc",3741,4.1e+07,"written","ROMBAC",7,"Romanian_List","kinterm","roma1327",NA,2.58093634467001,0.00769609330977789
+"F","Portuguese","pai","EP","i1",802,4.5e+07,"spoken","CoP",7,"Portuguese_ST","kinterm","port1283","IE80(166)",2.58093634467001,0.00769609330977789
+"F","Icelandic","faðir","DK","i2",7,6.5e+07,"spoken","textasafn",7,"Icelandic_ST","kinterm","icel1247",NA,2.58093634467001,0.00769609330977789
+"F","Latvian","tevs","EA","slavic",NA,NA,NA,NA,7,"Latvian","kinterm","latv1249",NA,2.58093634467001,0.00769609330977789
+"F","Russian","отец","BD","slavic",3018176,14553856113,"web","Russian Web 2011 (ruTenTen11)",7,"Russian","kinterm","russ1263",NA,2.58093634467001,0.00769609330977789
+"F","Kashmiri","mol","HC","misc",NA,NA,NA,NA,7,"Kashmiri","kinterm","kash1277","IE43(231);IE42(40);IE121(224);IE218(194)",2.58093634467001,0.00769609330977789
+"F","Dutch","vader","BX","i2",338758,2576596803,"web","Dutch Web 2014 (nlTenTen14)",7,"Dutch_List","kinterm","dutc1256","IE73",2.58093634467001,0.00769609330977789
+"F","English","father","CG","i2",5240,17400000,"written","CELEX",7,"English_ST","kinterm","stan1293","IE72",2.58093634467001,0.00769609330977789
+"F","Russian","отец","BD","slavic",478.56,8200000,"spoken","Russian NC via Leeds",7,"Russian","kinterm","russ1263",NA,2.58093634467001,0.00769609330977789
+"F","English","father","CG","i2",3173,39502648,"web","pukWaC (ukWaC parsed with MaltParser)",7,"English_ST","kinterm","stan1293","IE72",2.58093634467001,0.00769609330977789
+"F","Romanian","tată","ET","misc",19883,44729032,"web","Romanian Web (roWaC)",7,"Romanian_List","kinterm","roma1327",NA,2.58093634467001,0.00769609330977789
+"F","Danish","far","BP","i2",394014,2042601251,"web","Danish Web 2014 (daTenTen14)",7,"Danish","kinterm","dani1285","IE996;IE89(95)",2.58093634467001,0.00769609330977789
+"F","Romanian","tată","ET","misc",NA,4.1e+07,"spoken","ROMBAC",7,"Romanian_List","kinterm","roma1327",NA,2.58093634467001,0.00769609330977789
+"F","Swedish","far","BP","i2",370,1e+06,"written","SUC",7,"Swedish_List","kinterm","swed1254","IE995;IE89(94)",2.58093634467001,0.00769609330977789
+"F","Catalan","pare","AU","i1",4874,4189954719,"web","Catalan Web 2014 (caTenTen14)",7,"Catalan","kinterm","stan1289","IE286(416)",2.58093634467001,0.00769609330977789
+"F","Welsh","tad","AC","celtic",NA,NA,NA,NA,7,"Welsh_C","kinterm","wels1247","IE174(42);IE173(119);IE288(103); IE339",2.58093634467001,0.00769609330977789
+"F","French","père","CP","i1",2068530,9889689889,"web","French Web 2012 (frTenTen12)",7,"French","kinterm","stan1290","IE80(156,167)",2.58093634467001,0.00769609330977789
+"F","Gujarati","pitā","GI","i1",NA,NA,NA,NA,7,"Gujarati","kinterm","guja1252","IE9(106);IE96(209)",2.58093634467001,0.00769609330977789
+"F","Frisian","heit","GU","misc",NA,NA,NA,NA,7,"Frisian","kinterm","fris1239","IE305;IE307;IE348",2.58093634467001,0.00769609330977789
+"F","Russian","отец","BD","slavic",960736,14553856113,"web","Russian Web 2011 (ruTenTen11)",7,"Russian","kinterm","russ1263",NA,2.58093634467001,0.00769609330977789
+"F","Lithuanian","tevas","EA","slavic",NA,NA,NA,NA,7,"Lithuanian_ST","kinterm","lith1251",NA,2.58093634467001,0.00769609330977789
+"F","French","père","CP","i1",879.31,1.5e+07,"spoken","lexique corpus",7,"French","kinterm","stan1290","IE80(156,167)",2.58093634467001,0.00769609330977789
+"F","Norwegian","far","BP","i2",152857,1698481187,"web","Norwegian Web 2015 (noTenTen15) Bokmal and Nynorsk",7,"Riksmal","kinterm","norw1259","IE89(95)",2.58093634467001,0.00769609330977789
+"F","Breton","tad","AC","celtic",NA,NA,NA,NA,7,"Breton_List","kinterm","bret1244","IE182(361);IE82(92,93);IE288(103); IE83",2.58093634467001,0.00769609330977789
+"F","Bulgarian","баща","AK","bulgarian",139647,1.95e+09,"written","Bulgarian NC",7,"Bulgarian","kinterm","bulg1262",NA,2.58093634467001,0.00769609330977789
+"F","English","father","CG","i2",3771,39502648,"web","pukWaC (ukWaC parsed with MaltParser)",7,"English_ST","kinterm","stan1293","IE72",2.58093634467001,0.00769609330977789
+"F","Russian","отец","BD","slavic",37192.44,8200000,"written","Russian NC via Leeds",7,"Russian","kinterm","russ1263",NA,2.58093634467001,0.00769609330977789
+"F","Greek","πατέρας","DB","i1",95044,1958348129,"web","Greek Web 2014 (elTenTen14)",7,"Greek_Mod","kinterm","mode1248",NA,2.58093634467001,0.00769609330977789
+"F","Nepali","bābu","FR","indian1",NA,NA,NA,NA,7,"Nepali_List","kinterm","nepa1254","DR7(103);IE197(29);IE293(427,434)",2.58093634467001,0.00769609330977789
+"F","Lahnda","peō","HK","misc",NA,NA,NA,NA,7,"Lahnda","kinterm","lahn1241","IE337(133,6,8,9);IE292(18);IE338(48,50)",2.58093634467001,0.00769609330977789
+"F","Tajik","padar","BX","i1",NA,NA,NA,NA,7,"Tadzik","kinterm","taji1245","IE208(478);IE323(532)",2.58093634467001,0.00769609330977789
+"F","Polish","ojciec","BD","slavic",393031,7796796565,"web","Polish Web 2012 (plTenTen12)",7,"Polish","kinterm","poli1260","IE71(260);IE59(142);IE146(754)",2.58093634467001,0.00769609330977789
+"F","Bulgarian","баща","AK","bulgarian",66750,704955109,"web","Bulgarian Web 2012 (bgTenTen12)",7,"Bulgarian","kinterm","bulg1262",NA,2.58093634467001,0.00769609330977789
+"F","Czech","otec","BD","slavic",260720,4175089440,"web","Czech Web 2012 (czTenTen12 v8)",7,"Czech","kinterm","czec1258","IE146(527);IE288(103)",2.58093634467001,0.00769609330977789
+"F","Italian","padre","AU","i1",37898,1.3e+08,"written","CORIS",7,"Italian","kinterm","ital1282","IE80(156,167)",2.58093634467001,0.00769609330977789
+"F","Romanian","tată","ET","misc",2918,44729032,"web","Romanian Web (roWaC)",7,"Romanian_List","kinterm","roma1327",NA,2.58093634467001,0.00769609330977789
+"F","French","père","CP","i1",708.11,1.5e+07,"written","lexique corpus",7,"French","kinterm","stan1290","IE80(156,167)",2.58093634467001,0.00769609330977789
+"M","Ossetic","mad","AD","i1",NA,NA,NA,NA,5,"Iron_Ossetic","kinterm","osse1245","IE211(201,202);IE205(41)",2.99457870208105,0.00961165025479344
+"M","Dutch","moeder","BY","i4",62699,42400000,"spoken","Dutch Instituut voor Nederlandse Lexicologie text corpora (written) (mysterious) Corpus Gesproken Nederlands (spoken)",5,"Dutch_List","kinterm","dutc1256","IE73",2.99457870208105,0.00961165025479344
+"M","Swedish","mor","BQ","i4",NA,1e+06,"spoken","SUC",5,"Swedish_List","kinterm","swed1254","IE995;IE89(94)",2.99457870208105,0.00961165025479344
+"M","Hindi","maːn̪","AD","i1",NA,NA,NA,NA,5,"Hindi","kinterm","hind1269",NA,2.99457870208105,0.00961165025479344
+"M","German","Mutter","CX","i4",47,5400000,"spoken","CELEX",5,"German_ST","kinterm","stan1295","IE74;IE234(268)",2.99457870208105,0.00961165025479344
+"M","Marathi","maːt̪aː","BJ","i3",NA,NA,NA,NA,5,"Marathi","kinterm","mara1378",NA,2.99457870208105,0.00961165025479344
+"M","German","Mutter","CX","i4",2286150,16534176369,"web","German Web 2013 (deTenTen13)",5,"German_ST","kinterm","stan1295","IE74;IE234(268)",2.99457870208105,0.00961165025479344
+"M","Romanian","mamă","EU","i1",NA,4.1e+07,"spoken","ROMBAC",5,"Romanian_List","kinterm","roma1327",NA,2.99457870208105,0.00961165025479344
+"M","Danish","mor","BQ","i4",386537,2042601251,"web","Danish Web 2014 (daTenTen14)",5,"Danish","kinterm","dani1285","IE996;IE89(95)",2.99457870208105,0.00961165025479344
+"M","Spanish","madre","AV","i2",1168083,9497402122,"web","Spanish Web 2011 (esTenTen11, Eu + Am, Freeling v4)",5,"Spanish","kinterm","stan1288","IE80(156-167)",2.99457870208105,0.00961165025479344
+"M","Belarusian","mátka","BJ","i3",NA,NA,NA,NA,5,"Byelorussian","kinterm","bela1254","IE146(941);IE296(315);IE332(223,64)",2.99457870208105,0.00961165025479344
+"M","Norwegian","mor","BQ","i4",310428,1698481187,"web","Norwegian Web 2015 (noTenTen15) Bokmal and Nynorsk",5,"Riksmal","kinterm","norw1259","IE89(95)",2.99457870208105,0.00961165025479344
+"M","German","Mutter","CX","i4",552,5400000,"written","CELEX",5,"German_ST","kinterm","stan1295","IE74;IE234(268)",2.99457870208105,0.00961165025479344
+"M","Dutch","moeder","BY","i4",378456,2576596803,"web","Dutch Web 2014 (nlTenTen14)",5,"Dutch_List","kinterm","dutc1256","IE73",2.99457870208105,0.00961165025479344
+"M","Dutch","moeder","BY","i4",309864,2576596803,"web","Dutch Web 2014 (nlTenTen14)",5,"Dutch_List","kinterm","dutc1256","IE73",2.99457870208105,0.00961165025479344
+"M","Danish","mor","BQ","i4",486403,2042601251,"web","Danish Web 2014 (daTenTen14)",5,"Danish","kinterm","dani1285","IE996;IE89(95)",2.99457870208105,0.00961165025479344
+"M","French","mère","CQ","i2",672,1.5e+07,"spoken","lexique corpus",5,"French","kinterm","stan1290","IE80(156,167)",2.99457870208105,0.00961165025479344
+"M","Sindhi","mā","IF","i1",NA,NA,NA,NA,5,"Sindhi","kinterm","sind1272","DR7(98);IE292);IE9(106)",2.99457870208105,0.00961165025479344
+"M","Romanian","mamă","EU","i1",4673,4.1e+07,"written","ROMBAC",5,"Romanian_List","kinterm","roma1327",NA,2.99457870208105,0.00961165025479344
+"M","Spanish","madre","AV","i2",1141,1e+08,"spoken","CoE",5,"Spanish","kinterm","stan1288","IE80(156-167)",2.99457870208105,0.00961165025479344
+"M","Norwegian","mor","BQ","i4",187940,1698481187,"web","Norwegian Web 2015 (noTenTen15) Bokmal and Nynorsk",5,"Riksmal","kinterm","norw1259","IE89(95)",2.99457870208105,0.00961165025479344
+"M","Kashmiri","maj","HD","i1",NA,NA,NA,NA,5,"Kashmiri","kinterm","kash1277","IE43(231);IE42(40);IE121(224);IE218(194)",2.99457870208105,0.00961165025479344
+"M","Spanish","madre","AV","i2",1658162,9497402122,"web","Spanish Web 2011 (esTenTen11, Eu + Am, Freeling v4)",5,"Spanish","kinterm","stan1288","IE80(156-167)",2.99457870208105,0.00961165025479344
+"M","French","mère","CQ","i2",1558534,9889689889,"web","French Web 2012 (frTenTen12)",5,"French","kinterm","stan1290","IE80(156,167)",2.99457870208105,0.00961165025479344
+"M","Avestan","mātar-","BJ","i3",NA,NA,NA,NA,5,"Avestan","kinterm","aves1237","IE507",2.99457870208105,0.00961165025479344
+"M","Albanian","nënë","FS","misc",1028,16700000,"spoken","Albanian NC",5,"Albanian_Top","kinterm","alba1267","IE12(155);IE29(261);IE138(57)",2.99457870208105,0.00961165025479344
+"M","Russian","мать","BJ","i3",339.81,8200000,"spoken","Russian NC via Leeds",5,"Russian","kinterm","russ1263",NA,2.99457870208105,0.00961165025479344
+"M","Albanian","nënë","FS","misc",3475,16700000,"written","Albanian NC",5,"Albanian_Top","kinterm","alba1267","IE12(155);IE29(261);IE138(57)",2.99457870208105,0.00961165025479344
+"M","French","mère","CQ","i2",1729497,9889689889,"web","French Web 2012 (frTenTen12)",5,"French","kinterm","stan1290","IE80(156,167)",2.99457870208105,0.00961165025479344
+"M","Ukrainian","máty","BJ","i3",NA,NA,NA,NA,5,"Ukrainian","kinterm","ukra1253","IE146(993);IE297(314);IE299)",2.99457870208105,0.00961165025479344
+"M","Romanian","mamă","EU","i1",3043,44729032,"web","Romanian Web (roWaC)",5,"Romanian_List","kinterm","roma1327",NA,2.99457870208105,0.00961165025479344
+"M","Polish","matka","BJ","i3",313152,7796796565,"web","Polish Web 2012 (plTenTen12)",5,"Polish","kinterm","poli1260","IE71(260);IE59(142);IE146(754)",2.99457870208105,0.00961165025479344
+"M","Polish","matka","BJ","i3",1537921,7796796565,"web","Polish Web 2012 (plTenTen12)",5,"Polish","kinterm","poli1260","IE71(260);IE59(142);IE146(754)",2.99457870208105,0.00961165025479344
+"M","German","Mutter","CX","i4",2685337,16534176369,"web","German Web 2013 (deTenTen13)",5,"German_ST","kinterm","stan1295","IE74;IE234(268)",2.99457870208105,0.00961165025479344
+"M","Gujarati","mā","AD","i1",NA,NA,NA,NA,5,"Gujarati","kinterm","guja1252","IE108(165);IE9(107);IE96(209);DR7(145)",2.99457870208105,0.00961165025479344
+"M","Czech","matka","BJ","i3",115,1700000,"spoken","UCNK:SYN2015 (written) ORAL2013 (spoken)",5,"Czech","kinterm","czec1258","IE146(527);IE143(77,78);IE288(103)",2.99457870208105,0.00961165025479344
+"M","Urdu","māṇ","AD","i1",NA,NA,NA,NA,5,"Urdu","kinterm","urdu1245","IE188(345);IE292",2.99457870208105,0.00961165025479344
+"M","Bulgarian","майка","AL","i2",98003,1.95e+09,"written","Bulgarian NC",5,"Bulgarian","kinterm","bulg1262",NA,2.99457870208105,0.00961165025479344
+"M","French","mère","CQ","i2",737.09,1.5e+07,"written","lexique corpus",5,"French","kinterm","stan1290","IE80(156,167)",2.99457870208105,0.00961165025479344
+"M","Catalan","mare","AV","i2",38731,4189954719,"web","Catalan Web 2014 (caTenTen14)",5,"Catalan","kinterm","stan1289","IE286(416)",2.99457870208105,0.00961165025479344
+"M","Frisian","mem","GV","i1",NA,NA,NA,NA,5,"Frisian","kinterm","fris1239","IE305;IE307;IE348",2.99457870208105,0.00961165025479344
+"M","Bengali","mātā","BJ","i3",NA,NA,NA,NA,5,"Bengali","kinterm","beng1280","IE508",2.99457870208105,0.00961165025479344
+"M","Dutch","moeder","BY","i4",25272,42400000,"written","Dutch Instituut voor Nederlandse Lexicologie text corpora (written) (mysterious) Corpus Gesproken Nederlands (spoken)",5,"Dutch_List","kinterm","dutc1256","IE73",2.99457870208105,0.00961165025479344
+"M","Macedonian","мајка","AL","i2",NA,NA,NA,NA,5,"Macedonian","kinterm","mace1250",NA,2.99457870208105,0.00961165025479344
+"M","Assamese","āī","GC","misc",NA,NA,NA,NA,5,"Assamese","kinterm","assa1263","DR7(103);IE224(71);IE292",2.99457870208105,0.00961165025479344
+"M","Swedish","mor","BQ","i4",130157,3411216955,"web","Swedish Web 2014 (svTenTen14)",5,"Swedish_List","kinterm","swed1254","IE995;IE89(94)",2.99457870208105,0.00961165025479344
+"M","Portuguese","mãe","AV","i2",760216,3900501097,"web","Portuguese Web 2011 (ptTenTen11, Freeling v3)",5,"Portuguese_ST","kinterm","port1283","IE80(166)",2.99457870208105,0.00961165025479344
+"M","Czech","matka","BJ","i3",37008,1700000,"written","UCNK:SYN2015 (written) ORAL2013 (spoken)",5,"Czech","kinterm","czec1258","IE146(527);IE143(77,78);IE288(103)",2.99457870208105,0.00961165025479344
+"M","Swedish","mor","BQ","i4",14237,3411216955,"web","Swedish Web 2014 (svTenTen14)",5,"Swedish_List","kinterm","swed1254","IE995;IE89(94)",2.99457870208105,0.00961165025479344
+"M","Italian","madre","AV","i2",31495,1.3e+08,"written","CORIS",5,"Italian","kinterm","ital1282","IE80(156,167)",2.99457870208105,0.00961165025479344
+"M","Nepali","āmā","HD","i1",NA,NA,NA,NA,5,"Nepali_List","kinterm","nepa1254","DR7(103);IE197(29);IE293(36,37)",2.99457870208105,0.00961165025479344
+"M","Bulgarian","майка","AL","i2",NA,1.95e+09,"spoken","Bulgarian NC",5,"Bulgarian","kinterm","bulg1262",NA,2.99457870208105,0.00961165025479344
+"M","Tajik","modar","BY","i4",NA,NA,NA,NA,5,"Tadzik","kinterm","taji1245","IE207(33);IE208(478);IE323(532)",2.99457870208105,0.00961165025479344
+"M","English","mother","CH","i4",3015,39502648,"web","pukWaC (ukWaC parsed with MaltParser)",5,"English_ST","kinterm","stan1293","IE72",2.99457870208105,0.00961165025479344
+"M","English","mother","CH","i4",179,17400000,"spoken","CELEX",5,"English_ST","kinterm","stan1293","IE72",2.99457870208105,0.00961165025479344
+"M","Irish","mathair","DL","i4",NA,NA,NA,NA,5,"Irish_A","kinterm","iris1253","IE180();IE225(432);IE182(103)",2.99457870208105,0.00961165025479344
+"M","Portuguese","mãe","AV","i2",441,4.5e+07,"spoken","CoP",5,"Portuguese_ST","kinterm","port1283","IE80(166)",2.99457870208105,0.00961165025479344
+"M","English","mother","CH","i4",8327,17400000,"written","CELEX",5,"English_ST","kinterm","stan1293","IE72",2.99457870208105,0.00961165025479344
+"M","Polish","matka","BJ","i3",23694,3e+08,"written","Polish NC written PELCRA spoken",5,"Polish","kinterm","poli1260","IE71(260);IE59(142);IE146(754)",2.99457870208105,0.00961165025479344
+"M","Swedish","mor","BQ","i4",310,1e+06,"written","SUC",5,"Swedish_List","kinterm","swed1254","IE995;IE89(94)",2.99457870208105,0.00961165025479344
+"M","Oriya","mā","AD","i1",NA,NA,NA,NA,5,"Oriya","kinterm","oriy1255","DR7(145);IE9(107)",2.99457870208105,0.00961165025479344
+"M","Breton","mamm","AD","i1",NA,NA,NA,NA,5,"Breton_List","kinterm","bret1244","IE182(361);IE82(92,93);IE288(103)",2.99457870208105,0.00961165025479344
+"M","Spanish","madre","AV","i2",4372,1e+08,"written","CoE",5,"Spanish","kinterm","stan1288","IE80(156-167)",2.99457870208105,0.00961165025479344
+"M","Romanian","mamă","EU","i1",18872,44729032,"web","Romanian Web (roWaC)",5,"Romanian_List","kinterm","roma1327",NA,2.99457870208105,0.00961165025479344
+"M","Greek","μητέρα","DC","i2",128072,1958348129,"web","Greek Web 2014 (elTenTen14)",5,"Greek_Mod","kinterm","mode1248",NA,2.99457870208105,0.00961165025479344
+"M","Bulgarian","майка","AL","i2",86642,704955109,"web","Bulgarian Web 2012 (bgTenTen12)",5,"Bulgarian","kinterm","bulg1262",NA,2.99457870208105,0.00961165025479344
+"M","Catalan","mare","AV","i2",23464,4189954719,"web","Catalan Web 2014 (caTenTen14)",5,"Catalan","kinterm","stan1289","IE286(416)",2.99457870208105,0.00961165025479344
+"M","Italian","madre","AV","i2",15,1.3e+08,"spoken","CORIS",5,"Italian","kinterm","ital1282","IE80(156,167)",2.99457870208105,0.00961165025479344
+"M","Portuguese","mãe","AV","i2",11576,4.5e+07,"written","CoP",5,"Portuguese_ST","kinterm","port1283","IE80(166)",2.99457870208105,0.00961165025479344
+"M","English","mother","CH","i4",3755,39502648,"web","pukWaC (ukWaC parsed with MaltParser)",5,"English_ST","kinterm","stan1293","IE72",2.99457870208105,0.00961165025479344
+"M","Russian","мать","BJ","i3",23567.19,8200000,"written","Russian NC via Leeds",5,"Russian","kinterm","russ1263",NA,2.99457870208105,0.00961165025479344
+"M","Polish","matka","BJ","i3",161,3e+08,"spoken","Polish NC written PELCRA spoken",5,"Polish","kinterm","poli1260","IE71(260);IE59(142);IE146(754)",2.99457870208105,0.00961165025479344
+"M","Welsh","mam","EU","i1",NA,NA,NA,NA,5,"Welsh_C","kinterm","wels1247","IE174(42);IE173(119);IE288(103); IE339",2.99457870208105,0.00961165025479344
+"M","Icelandic","móðir","DL","i4",245,6.5e+07,"written","textasafn",5,"Icelandic_ST","kinterm","icel1247",NA,2.99457870208105,0.00961165025479344
+"M","Serbian","majka",NA,"i1",29881,5.54e+08,"web","scWaC",5,"Serbocroatian","kinterm","sout1528","IE20(47);IE65(25);IE63(46);IE12(146)",2.99457870208105,0.00961165025479344
+"M","Czech","matka","BJ","i3",657788,4175089440,"web","Czech Web 2012 (czTenTen12 v8)",5,"Czech","kinterm","czec1258","IE146(527);IE143(77,78);IE288(103)",2.99457870208105,0.00961165025479344
+"M","Latvian","mate","AV","i2",NA,NA,NA,NA,5,"Latvian","kinterm","latv1249",NA,2.99457870208105,0.00961165025479344
+"M","Italian","madre","AV","i2",307983,2588873046,"web","Italian Web 2010 (itTenTen)",5,"Italian","kinterm","ital1282","IE80(156,167)",2.99457870208105,0.00961165025479344
+"M","Lithuanian","motina","ED","i1",NA,NA,NA,NA,5,"Lithuanian_ST","kinterm","lith1251",NA,2.99457870208105,0.00961165025479344
+"M","Russian","мать","BJ","i3",797154,14553856113,"web","Russian Web 2011 (ruTenTen11)",5,"Russian","kinterm","russ1263",NA,2.99457870208105,0.00961165025479344
+"M","Lahnda","mā","AD","i1",NA,NA,NA,NA,5,"Lahnda","kinterm","lahn1241","IE337(133,6,7);IE292(5);IE293(36,499);IE338(48)",2.99457870208105,0.00961165025479344
+"M","Icelandic","móðir","DL","i4",9,6.5e+07,"spoken","textasafn",5,"Icelandic_ST","kinterm","icel1247",NA,2.99457870208105,0.00961165025479344
+"M","Croatian","majka","AL","i2",88377,1.21e+09,"web","hrWaC",5,"Serbocroatian_Croatia","kinterm","sout1528","IE20(47);IE65(25);IE63(46);IE12(146)",2.99457870208105,0.00961165025479344
+"M","Italian","madre","AV","i2",349053,2588873046,"web","Italian Web 2010 (itTenTen)",5,"Italian","kinterm","ital1282","IE80(156,167)",2.99457870208105,0.00961165025479344
+"M","Slovak","mať","BJ","i3",NA,NA,NA,NA,5,"Slovak","kinterm","slov1269","IE146(587);IE177(100);IE301(55,63);IE330(22,35)",2.99457870208105,0.00961165025479344
+"M","Czech","matka","BJ","i3",215134,4175089440,"web","Czech Web 2012 (czTenTen12 v8)",5,"Czech","kinterm","czec1258","IE146(527);IE143(77,78);IE288(103)",2.99457870208105,0.00961165025479344
+"M","Portuguese","mãe","AV","i2",570327,3900501097,"web","Portuguese Web 2011 (ptTenTen11, Freeling v3)",5,"Portuguese_ST","kinterm","port1283","IE80(166)",2.99457870208105,0.00961165025479344
+"M","Russian","мать","BJ","i3",1954000,14553856113,"web","Russian Web 2011 (ruTenTen11)",5,"Russian","kinterm","russ1263",NA,2.99457870208105,0.00961165025479344
+"MB","Danish","onkel","BR","latin",35812,2042601251,"web","Danish Web 2014 (daTenTen14)",7,"Danish","kinterm","dani1285","IE89(95)",3.30762367413492,0.0105171143815727
+"MB","Albanian","dajë","FV","slavic2",140,16700000,"written","Albanian NC",7,"Albanian_Top","kinterm","alba1267","IE12(155);IE20(70)",3.30762367413492,0.0105171143815727
+"MB","Spanish","tio","AW","iberian",374,1e+08,"spoken","CoE",7,"Spanish","kinterm","stan1288",NA,3.30762367413492,0.0105171143815727
+"MB","Catalan","tio","AW","iberian",26634,4189954719,"web","Catalan Web 2014 (caTenTen14)",7,"Catalan","kinterm","stan1289","IE286(416)",3.30762367413492,0.0105171143815727
+"MB","English","uncle","CI","latin",259,39502648,"web","pukWaC (ukWaC parsed with MaltParser)",7,"English_ST","kinterm","stan1293","IE72",3.30762367413492,0.0105171143815727
+"MB","Swedish","morbror","FF","misc",17604,3411216955,"web","Swedish Web 2014 (svTenTen14)",7,"Swedish_List","kinterm","swed1254",NA,3.30762367413492,0.0105171143815727
+"MB","Albanian","dajë","FV","slavic2",19,16700000,"spoken","Albanian NC",7,"Albanian_Top","kinterm","alba1267","IE12(155);IE20(70)",3.30762367413492,0.0105171143815727
+"MB","Spanish","tio","AW","iberian",58555,9497402122,"web","Spanish Web 2011 (esTenTen11, Eu + Am, Freeling v4)",7,"Spanish","kinterm","stan1288",NA,3.30762367413492,0.0105171143815727
+"MB","Hindi","maːmaː","GS","indian",NA,NA,NA,NA,7,"Hindi","kinterm","hind1269",NA,3.30762367413492,0.0105171143815727
+"MB","Greek","θείος","DD","iberian",10618,1958348129,"web","Greek Web 2014 (elTenTen14)",7,"Greek_Mod","kinterm","mode1248",NA,3.30762367413492,0.0105171143815727
+"MB","Bulgarian","вуйчо","AM","slavic",NA,1.95e+09,"spoken","Bulgarian NC",7,"Bulgarian","kinterm","bulg1262",NA,3.30762367413492,0.0105171143815727
+"MB","Ossetic","madirvadɐ","HZ","misc",NA,NA,NA,NA,7,"Iron_Ossetic","kinterm","osse1245",NA,3.30762367413492,0.0105171143815727
+"MB","Norwegian","onkel","BR","latin",27431,1698481187,"web","Norwegian Web 2015 (noTenTen15) Bokmal and Nynorsk",7,"Riksmal","kinterm","norw1259","IE89(95)",3.30762367413492,0.0105171143815727
+"MB","Dutch","oom","BZ","north",20891,2576596803,"web","Dutch Web 2014 (nlTenTen14)",7,"Dutch_List","kinterm","dutc1256","IE73",3.30762367413492,0.0105171143815727
+"MB","Urdu","mamu","GS","indian",NA,NA,NA,NA,7,"Urdu","kinterm","urdu1245","IE363(26);IE292",3.30762367413492,0.0105171143815727
+"MB","Dutch","oom","BZ","north",4675,42400000,"written","Dutch Instituut voor Nederlandse Lexicologie text corpora (written) (mysterious) Corpus Gesproken Nederlands (spoken)",7,"Dutch_List","kinterm","dutc1256","IE73",3.30762367413492,0.0105171143815727
+"MB","Bulgarian","вуйчо","AM","slavic",1723,704955109,"web","Bulgarian Web 2012 (bgTenTen12)",7,"Bulgarian","kinterm","bulg1262",NA,3.30762367413492,0.0105171143815727
+"MB","Polish","wuj","EM","slavic",13004,7796796565,"web","Polish Web 2012 (plTenTen12)",7,"Polish","kinterm","poli1260",NA,3.30762367413492,0.0105171143815727
+"MB","Czech","strýc","BK","slavic",38511,4175089440,"web","Czech Web 2012 (czTenTen12 v8)",7,"Czech","kinterm","czec1258","IE146(527)",3.30762367413492,0.0105171143815727
+"MB","German","Onkel","BR","latin",8,5400000,"spoken","CELEX",7,"German_ST","kinterm","stan1295","IE74;IE234(268)",3.30762367413492,0.0105171143815727
+"MB","Danish","onkel","BR","latin",20635,2042601251,"web","Danish Web 2014 (daTenTen14)",7,"Danish","kinterm","dani1285","IE89(95)",3.30762367413492,0.0105171143815727
+"MB","Ukrainian","djád'ko","FA","slavic2",NA,NA,NA,NA,7,"Ukrainian","kinterm","ukra1253","IE146(993);IE299)",3.30762367413492,0.0105171143815727
+"MB","English","uncle","CI","latin",1161,17400000,"written","CELEX",7,"English_ST","kinterm","stan1293","IE72",3.30762367413492,0.0105171143815727
+"MB","Czech","strýc","BK","slavic",18,1700000,"spoken","UCNK:SYN2015 (written) ORAL2013 (spoken)",7,"Czech","kinterm","czec1258","IE146(527)",3.30762367413492,0.0105171143815727
+"MB","Norwegian","onkel","BR","latin",17576,1698481187,"web","Norwegian Web 2015 (noTenTen15) Bokmal and Nynorsk",7,"Riksmal","kinterm","norw1259","IE89(95)",3.30762367413492,0.0105171143815727
+"MB","English","uncle","CI","latin",27,17400000,"spoken","CELEX",7,"English_ST","kinterm","stan1293","IE72",3.30762367413492,0.0105171143815727
+"MB","Gujarati","māmā","GS","indian",NA,NA,NA,NA,7,"Gujarati","kinterm","guja1252","IE108(166);IE9(110);IE96(210);DR7(145)",3.30762367413492,0.0105171143815727
+"MB","German","Onkel","BR","latin",200637,16534176369,"web","German Web 2013 (deTenTen13)",7,"German_ST","kinterm","stan1295","IE74;IE234(268)",3.30762367413492,0.0105171143815727
+"MB","German","Onkel","BR","latin",132,5400000,"written","CELEX",7,"German_ST","kinterm","stan1295","IE74;IE234(268)",3.30762367413492,0.0105171143815727
+"MB","Kashmiri","mam","GS","indian",NA,NA,NA,NA,7,"Kashmiri","kinterm","kash1277","IE43(230);IE42(40);IE121(226);IE218(194)",3.30762367413492,0.0105171143815727
+"MB","Spanish","tio","AW","iberian",66354,9497402122,"web","Spanish Web 2011 (esTenTen11, Eu + Am, Freeling v4)",7,"Spanish","kinterm","stan1288",NA,3.30762367413492,0.0105171143815727
+"MB","Portuguese","tio","AW","iberian",70,4.5e+07,"spoken","CoP",7,"Portuguese_ST","kinterm","port1283","IE80(167)",3.30762367413492,0.0105171143815727
+"MB","Italian","zio","AW","iberian",1,1.3e+08,"spoken","CORIS",7,"Italian","kinterm","ital1282","IE80(156,167)",3.30762367413492,0.0105171143815727
+"MB","Swedish","morbror","FF","misc",NA,1e+06,"spoken","SUC",7,"Swedish_List","kinterm","swed1254",NA,3.30762367413492,0.0105171143815727
+"MB","Bengali","māmā","GS","indian",NA,NA,NA,NA,7,"Bengali","kinterm","beng1280","DR7(103)",3.30762367413492,0.0105171143815727
+"MB","Dutch","oom","BZ","north",5021,42400000,"spoken","Dutch Instituut voor Nederlandse Lexicologie text corpora (written) (mysterious) Corpus Gesproken Nederlands (spoken)",7,"Dutch_List","kinterm","dutc1256","IE73",3.30762367413492,0.0105171143815727
+"MB","Belarusian","dzjádz'ka","GP","misc",NA,NA,NA,NA,7,"Byelorussian","kinterm","bela1254","IE146(941);IE332(272)",3.30762367413492,0.0105171143815727
+"MB","Dutch","oom","BZ","north",30880,2576596803,"web","Dutch Web 2014 (nlTenTen14)",7,"Dutch_List","kinterm","dutc1256","IE73",3.30762367413492,0.0105171143815727
+"MB","Russian","дядя","FA","slavic2",8066.24,8200000,"written","Russian NC via Leeds",7,"Russian","kinterm","russ1263",NA,3.30762367413492,0.0105171143815727
+"MB","Russian","дядя","FA","slavic2",390601,14553856113,"web","Russian Web 2011 (ruTenTen11)",7,"Russian","kinterm","russ1263",NA,3.30762367413492,0.0105171143815727
+"MB","Czech","strýc","BK","slavic",3398,1700000,"written","UCNK:SYN2015 (written) ORAL2013 (spoken)",7,"Czech","kinterm","czec1258","IE146(527)",3.30762367413492,0.0105171143815727
+"MB","German","Onkel","BR","latin",177739,16534176369,"web","German Web 2013 (deTenTen13)",7,"German_ST","kinterm","stan1295","IE74;IE234(268)",3.30762367413492,0.0105171143815727
+"MB","Spanish","tio","AW","iberian",NA,1e+08,"written","CoE",7,"Spanish","kinterm","stan1288",NA,3.30762367413492,0.0105171143815727
+"MB","Italian","zio","AW","iberian",53705,2588873046,"web","Italian Web 2010 (itTenTen)",7,"Italian","kinterm","ital1282","IE80(156,167)",3.30762367413492,0.0105171143815727
+"MB","Swedish","morbror","FF","misc",12,1e+06,"written","SUC",7,"Swedish_List","kinterm","swed1254",NA,3.30762367413492,0.0105171143815727
+"MB","Polish","wuj","EM","slavic",9,3e+08,"spoken","Polish NC written PELCRA spoken",7,"Polish","kinterm","poli1260",NA,3.30762367413492,0.0105171143815727
+"MB","Greek","θείος","DD","iberian",10618,1958348129,"web","Greek Web 2014 (elTenTen14)",7,"Greek_Mod","kinterm","mode1248",NA,3.30762367413492,0.0105171143815727
+"MB","Marathi","maːmaː","GS","indian",NA,NA,NA,NA,7,"Marathi","kinterm","mara1378",NA,3.30762367413492,0.0105171143815727
+"MB","Greek","θείος","DD","iberian",10618,1958348129,"web","Greek Web 2014 (elTenTen14)",7,"Greek_Mod","kinterm","mode1248",NA,3.30762367413492,0.0105171143815727
+"MB","English","uncle","CI","latin",286,39502648,"web","pukWaC (ukWaC parsed with MaltParser)",7,"English_ST","kinterm","stan1293","IE72",3.30762367413492,0.0105171143815727
+"MB","Assamese","momai","GF","indian",NA,NA,NA,NA,7,"Assamese","kinterm","assa1263","IE99(236);IE292",3.30762367413492,0.0105171143815727
+"MB","Macedonian","vujko","EM","slavic",NA,NA,NA,NA,7,"Macedonian","kinterm","mace1250","IE12(142);IE146(299)",3.30762367413492,0.0105171143815727
+"MB","French","oncle","BR","latin",121.96,1.5e+07,"written","lexique corpus",7,"French","kinterm","stan1290","IE80(156,167)",3.30762367413492,0.0105171143815727
+"MB","Swedish","morbror","FF","misc",16281,3411216955,"web","Swedish Web 2014 (svTenTen14)",7,"Swedish_List","kinterm","swed1254",NA,3.30762367413492,0.0105171143815727
+"MB","Serbian","ujak",NA,"slavic",1201,5.54e+08,"web","scWaC",7,"Serbocroatian","kinterm","sout1528","IE65(24);IE20(47);IE63(47)",3.30762367413492,0.0105171143815727
+"MB","Oriya","mamo","GS","indian",NA,NA,NA,NA,7,"Oriya","kinterm","oriy1255","DR7(145)",3.30762367413492,0.0105171143815727
+"MB","Greek","θείος","DD","iberian",10618,1958348129,"web","Greek Web 2014 (elTenTen14)",7,"Greek_Mod","kinterm","mode1248",NA,3.30762367413492,0.0105171143815727
+"MB","Romanian","unchi","EV","latin",NA,4.1e+07,"spoken","ROMBAC",7,"Romanian_List","kinterm","roma1327","IE55(141);IE12(161)",3.30762367413492,0.0105171143815727
+"MB","Portuguese","tio","AW","iberian",120006,3900501097,"web","Portuguese Web 2011 (ptTenTen11, Freeling v3)",7,"Portuguese_ST","kinterm","port1283","IE80(167)",3.30762367413492,0.0105171143815727
+"MB","Italian","zio","AW","iberian",43790,2588873046,"web","Italian Web 2010 (itTenTen)",7,"Italian","kinterm","ital1282","IE80(156,167)",3.30762367413492,0.0105171143815727
+"MB","Bulgarian","вуйчо","AM","slavic",1723,704955109,"web","Bulgarian Web 2012 (bgTenTen12)",7,"Bulgarian","kinterm","bulg1262",NA,3.30762367413492,0.0105171143815727
+"MB","Icelandic","frændi","DM","misc",251,6.5e+07,"written","textasafn",7,"Icelandic_ST","kinterm","icel1247","IE89(91)",3.30762367413492,0.0105171143815727
+"MB","French","oncle","BR","latin",124.11,1.5e+07,"spoken","lexique corpus",7,"French","kinterm","stan1290","IE80(156,167)",3.30762367413492,0.0105171143815727
+"MB","French","oncle","BR","latin",161314,9889689889,"web","French Web 2012 (frTenTen12)",7,"French","kinterm","stan1290","IE80(156,167)",3.30762367413492,0.0105171143815727
+"MB","Russian","дядя","FA","slavic2",121.76,8200000,"spoken","Russian NC via Leeds",7,"Russian","kinterm","russ1263",NA,3.30762367413492,0.0105171143815727
+"MB","Romanian","unchi","EV","latin",2278,44729032,"web","Romanian Web (roWaC)",7,"Romanian_List","kinterm","roma1327","IE55(141);IE12(161)",3.30762367413492,0.0105171143815727
+"MB","French","oncle","BR","latin",135842,9889689889,"web","French Web 2012 (frTenTen12)",7,"French","kinterm","stan1290","IE80(156,167)",3.30762367413492,0.0105171143815727
+"MB","Lahnda","māmā","GS","indian",NA,NA,NA,NA,7,"Lahnda","kinterm","lahn1241","IE337(133);IE293(504);IE292(27,29,71)",3.30762367413492,0.0105171143815727
+"MB","Welsh","ewythr","FJ","misc",NA,NA,NA,NA,7,"Welsh_C","kinterm","wels1247","IE173(119);IE288(113,114)",3.30762367413492,0.0105171143815727
+"MB","Portuguese","tio","AW","iberian",46742,3900501097,"web","Portuguese Web 2011 (ptTenTen11, Freeling v3)",7,"Portuguese_ST","kinterm","port1283","IE80(167)",3.30762367413492,0.0105171143815727
+"MB","Lithuanian","avynas","EE","misc",NA,NA,NA,NA,7,"Lithuanian_ST","kinterm","lith1251","IE21(79);IE288(113)",3.30762367413492,0.0105171143815727
+"MB","Polish","wuj","EM","slavic",43641,7796796565,"web","Polish Web 2012 (plTenTen12)",7,"Polish","kinterm","poli1260",NA,3.30762367413492,0.0105171143815727
+"MB","Polish","wuj","EM","slavic",1712,3e+08,"written","Polish NC written PELCRA spoken",7,"Polish","kinterm","poli1260",NA,3.30762367413492,0.0105171143815727
+"MB","Slovak","ujec","IJ","slavic",NA,NA,NA,NA,7,"Slovak","kinterm","slov1269","IE146(587);IE177(100);IE301(42);IE330(28)",3.30762367413492,0.0105171143815727
+"MB","Icelandic","frændi","DM","misc",17,6.5e+07,"spoken","textasafn",7,"Icelandic_ST","kinterm","icel1247","IE89(91)",3.30762367413492,0.0105171143815727
+"MB","Bulgarian","вуйчо","AM","slavic",5718,1.95e+09,"written","Bulgarian NC",7,"Bulgarian","kinterm","bulg1262",NA,3.30762367413492,0.0105171143815727
+"MB","Russian","дядя","FA","slavic2",152804,14553856113,"web","Russian Web 2011 (ruTenTen11)",7,"Russian","kinterm","russ1263",NA,3.30762367413492,0.0105171143815727
+"MB","Romanian","unchi","EV","latin",267,44729032,"web","Romanian Web (roWaC)",7,"Romanian_List","kinterm","roma1327","IE55(141);IE12(161)",3.30762367413492,0.0105171143815727
+"MB","Italian","zio","AW","iberian",5270,1.3e+08,"written","CORIS",7,"Italian","kinterm","ital1282","IE80(156,167)",3.30762367413492,0.0105171143815727
+"MB","Catalan","tio","AW","iberian",24062,4189954719,"web","Catalan Web 2014 (caTenTen14)",7,"Catalan","kinterm","stan1289","IE286(416)",3.30762367413492,0.0105171143815727
+"MB","Sindhi","māmo","GS","indian",NA,NA,NA,NA,7,"Sindhi","kinterm","sind1272","DR7(98);IE292);IE9(110)",3.30762367413492,0.0105171143815727
+"MB","Portuguese","tio","AW","iberian",2725,4.5e+07,"written","CoP",7,"Portuguese_ST","kinterm","port1283","IE80(167)",3.30762367413492,0.0105171143815727
+"MB","Romanian","unchi","EV","latin",407,4.1e+07,"written","ROMBAC",7,"Romanian_List","kinterm","roma1327","IE55(141);IE12(161)",3.30762367413492,0.0105171143815727
+"MB","Croatian","ujak","BE","slavic",2902,1.21e+09,"web","hrWaC",7,"Serbocroatian_Croatia","kinterm","sout1528","IE65(24);IE20(47);IE63(47)",3.30762367413492,0.0105171143815727
+"MB","Frisian","omke","GW","north",NA,NA,NA,NA,7,"Frisian","kinterm","fris1239","IE305;IE307;IE348",3.30762367413492,0.0105171143815727
+"MB","Czech","strýc","BK","slavic",16010,4175089440,"web","Czech Web 2012 (czTenTen12 v8)",7,"Czech","kinterm","czec1258","IE146(527)",3.30762367413492,0.0105171143815727
+"MZ","Albanian","teze","FW","albanian",22,16700000,"spoken","Albanian NC",10,"Albanian_Top","kinterm","alba1267","IE12(156);IE138(64);IE20(71)",5.05633699459966,0.0175108936667287
+"MZ","German","Tante","BS","german",187,5400000,"written","CELEX",10,"German_ST","kinterm","stan1295","IE74;IE234(268)",5.05633699459966,0.0175108936667287
+"MZ","French","tante","CJ","german",70.69,1.5e+07,"spoken","lexique corpus",10,"French","kinterm","stan1290","IE80(156,167)",5.05633699459966,0.0175108936667287
+"MZ","Spanish","tia","AX","iberian",NA,1e+08,"written","CoE",10,"Spanish","kinterm","stan1288",NA,5.05633699459966,0.0175108936667287
+"MZ","German","Tante","BS","german",174020,16534176369,"web","German Web 2013 (deTenTen13)",10,"German_ST","kinterm","stan1295","IE74;IE234(268)",5.05633699459966,0.0175108936667287
+"MZ","German","Tante","BS","german",9,5400000,"spoken","CELEX",10,"German_ST","kinterm","stan1295","IE74;IE234(268)",5.05633699459966,0.0175108936667287
+"MZ","French","tante","CJ","german",104045,9889689889,"web","French Web 2012 (frTenTen12)",10,"French","kinterm","stan1290","IE80(156,167)",5.05633699459966,0.0175108936667287
+"MZ","Danish","tante","BS","german",24837,2042601251,"web","Danish Web 2014 (daTenTen14)",10,"Danish","kinterm","dani1285","IE89(95)",5.05633699459966,0.0175108936667287
+"MZ","Welsh","modryb","FK","misc",NA,NA,NA,NA,10,"Welsh_C","kinterm","wels1247","IE174(42);IE173(119);IE288(113,114)",5.05633699459966,0.0175108936667287
+"MZ","Dutch","tante","BS","german",34361,2576596803,"web","Dutch Web 2014 (nlTenTen14)",10,"Dutch_List","kinterm","dutc1256","IE73",5.05633699459966,0.0175108936667287
+"MZ","German","Tante","BS","german",194618,16534176369,"web","German Web 2013 (deTenTen13)",10,"German_ST","kinterm","stan1295","IE74;IE234(268)",5.05633699459966,0.0175108936667287
+"MZ","Polish","ciotka","EN","iberian",103,3e+08,"spoken","Polish NC written PELCRA spoken",10,"Polish","kinterm","poli1260","IE71(266);IE59(142);IE146(754)",5.05633699459966,0.0175108936667287
+"MZ","Tajik","holam","IN","misc",NA,NA,NA,NA,10,"Tadzik","kinterm","taji1245","IE207(34);IE208(478)",5.05633699459966,0.0175108936667287
+"MZ","Portuguese","tia","AX","iberian",34846,3900501097,"web","Portuguese Web 2011 (ptTenTen11, Freeling v3)",10,"Portuguese_ST","kinterm","port1283","IE80(167)",5.05633699459966,0.0175108936667287
+"MZ","Urdu","khāla","GT","urdu",NA,NA,NA,NA,10,"Urdu","kinterm","urdu1245","IE188(347);IE9(109);IE363(26);IE292",5.05633699459966,0.0175108936667287
+"MZ","Marathi","maːvaɕiː","HR","indian",NA,NA,NA,NA,10,"Marathi","kinterm","mara1378",NA,5.05633699459966,0.0175108936667287
+"MZ","Albanian","teze","FW","albanian",85,16700000,"written","Albanian NC",10,"Albanian_Top","kinterm","alba1267","IE12(156);IE138(64);IE20(71)",5.05633699459966,0.0175108936667287
+"MZ","Swedish","moster","FG","german2",33411,3411216955,"web","Swedish Web 2014 (svTenTen14)",10,"Swedish_List","kinterm","swed1254","IE995;IE89(94)",5.05633699459966,0.0175108936667287
+"MZ","English","aunt","CJ","german",573,17400000,"written","CELEX",10,"English_ST","kinterm","stan1293","IE72",5.05633699459966,0.0175108936667287
+"MZ","Icelandic","frænka","DN","misc",272,6.5e+07,"written","textasafn",10,"Icelandic_ST","kinterm","icel1247","IE89(91)",5.05633699459966,0.0175108936667287
+"MZ","Nepali","chēmā","HT","nepali",NA,NA,NA,NA,10,"Nepali_List","kinterm","nepa1254","IE197(29);IE293(204)",5.05633699459966,0.0175108936667287
+"MZ","Dutch","tante","BS","german",4406,42400000,"written","Dutch Instituut voor Nederlandse Lexicologie text corpora (written) (mysterious) Corpus Gesproken Nederlands (spoken)",10,"Dutch_List","kinterm","dutc1256","IE73",5.05633699459966,0.0175108936667287
+"MZ","Lahnda","māsī","GG","indian",NA,NA,NA,NA,10,"Lahnda","kinterm","lahn1241","IE337(133);IE293(516)",5.05633699459966,0.0175108936667287
+"MZ","Dutch","tante","BS","german",4952,42400000,"spoken","Dutch Instituut voor Nederlandse Lexicologie text corpora (written) (mysterious) Corpus Gesproken Nederlands (spoken)",10,"Dutch_List","kinterm","dutc1256","IE73",5.05633699459966,0.0175108936667287
+"MZ","Kashmiri","mas","GG","indian",NA,NA,NA,NA,10,"Kashmiri","kinterm","kash1277","IE43(230);IE42(40);IE121(224);IE218(194)",5.05633699459966,0.0175108936667287
+"MZ","Gujarati","māsī","GG","indian",NA,NA,NA,NA,10,"Gujarati","kinterm","guja1252","IE108(166);IE155(175);IE96(211);DR7(145)",5.05633699459966,0.0175108936667287
+"MZ","Russian","тётя","FB","iberian",14540,14553856113,"web","Russian Web 2011 (ruTenTen11)",10,"Russian","kinterm","russ1263",NA,5.05633699459966,0.0175108936667287
+"MZ","Serbian","tetka",NA,"iberian",2064,5.54e+08,"web","scWaC",10,"Serbocroatian","kinterm","sout1528","IE65(24);IE20(47);IE63(46)",5.05633699459966,0.0175108936667287
+"MZ","Spanish","tia","AX","iberian",27393,9497402122,"web","Spanish Web 2011 (esTenTen11, Eu + Am, Freeling v4)",10,"Spanish","kinterm","stan1288",NA,5.05633699459966,0.0175108936667287
+"MZ","Swedish","moster","FG","german2",4515,3411216955,"web","Swedish Web 2014 (svTenTen14)",10,"Swedish_List","kinterm","swed1254","IE995;IE89(94)",5.05633699459966,0.0175108936667287
+"MZ","Bulgarian","леля","AN","iberian",16828,1.95e+09,"written","Bulgarian NC",10,"Bulgarian","kinterm","bulg1262",NA,5.05633699459966,0.0175108936667287
+"MZ","Bulgarian","леля","AN","iberian",5290,704955109,"web","Bulgarian Web 2012 (bgTenTen12)",10,"Bulgarian","kinterm","bulg1262",NA,5.05633699459966,0.0175108936667287
+"MZ","Hindi","maːn̪siː","GG","indian",NA,NA,NA,NA,10,"Hindi","kinterm","hind1269",NA,5.05633699459966,0.0175108936667287
+"MZ","Macedonian","тетка","BF","slavic",NA,NA,NA,NA,10,"Macedonian","kinterm","mace1250",NA,5.05633699459966,0.0175108936667287
+"MZ","Sindhi","māsī","GG","indian",NA,NA,NA,NA,10,"Sindhi","kinterm","sind1272","DR7(98);IE292);IE9(109)",5.05633699459966,0.0175108936667287
+"MZ","Italian","zia","AX","iberian",29105,2588873046,"web","Italian Web 2010 (itTenTen)",10,"Italian","kinterm","ital1282","IE80(156,167)",5.05633699459966,0.0175108936667287
+"MZ","English","aunt","CJ","german",193,39502648,"web","pukWaC (ukWaC parsed with MaltParser)",10,"English_ST","kinterm","stan1293","IE72",5.05633699459966,0.0175108936667287
+"MZ","Dutch","tante","BS","german",25905,2576596803,"web","Dutch Web 2014 (nlTenTen14)",10,"Dutch_List","kinterm","dutc1256","IE73",5.05633699459966,0.0175108936667287
+"MZ","Lithuanian","teta","BF","slavic",NA,NA,NA,NA,10,"Lithuanian_ST","kinterm","lith1251",NA,5.05633699459966,0.0175108936667287
+"MZ","Oriya","mausi","GG","indian",NA,NA,NA,NA,10,"Oriya","kinterm","oriy1255","DR7(145);IE9(109)",5.05633699459966,0.0175108936667287
+"MZ","Norwegian","tante","BS","german",45691,1698481187,"web","Norwegian Web 2015 (noTenTen15) Bokmal and Nynorsk",10,"Riksmal","kinterm","norw1259","IE89(95)",5.05633699459966,0.0175108936667287
+"MZ","Polish","ciotka","EN","iberian",23615,7796796565,"web","Polish Web 2012 (plTenTen12)",10,"Polish","kinterm","poli1260","IE71(266);IE59(142);IE146(754)",5.05633699459966,0.0175108936667287
+"MZ","Spanish","tia","AX","iberian",22921,9497402122,"web","Spanish Web 2011 (esTenTen11, Eu + Am, Freeling v4)",10,"Spanish","kinterm","stan1288",NA,5.05633699459966,0.0175108936667287
+"MZ","Spanish","tia","AX","iberian",237,1e+08,"spoken","CoE",10,"Spanish","kinterm","stan1288",NA,5.05633699459966,0.0175108936667287
+"MZ","Croatian","tetka","BF","slavic",2557,1.21e+09,"web","hrWaC",10,"Serbocroatian_Croatia","kinterm","sout1528","IE65(24);IE20(47);IE63(46)",5.05633699459966,0.0175108936667287
+"MZ","Assamese","māhī","GG","indian",NA,NA,NA,NA,10,"Assamese","kinterm","assa1263","IE9(109);IE99(237);IE292",5.05633699459966,0.0175108936667287
+"MZ","Icelandic","frænka","DN","misc",4,6.5e+07,"spoken","textasafn",10,"Icelandic_ST","kinterm","icel1247","IE89(91)",5.05633699459966,0.0175108936667287
+"MZ","Danish","tante","BS","german",12778,2042601251,"web","Danish Web 2014 (daTenTen14)",10,"Danish","kinterm","dani1285","IE89(95)",5.05633699459966,0.0175108936667287
+"MZ","French","tante","CJ","german",110.95,1.5e+07,"written","lexique corpus",10,"French","kinterm","stan1290","IE80(156,167)",5.05633699459966,0.0175108936667287
+"MZ","Russian","тётя","FB","iberian",4541.2,8200000,"written","Russian NC via Leeds",10,"Russian","kinterm","russ1263",NA,5.05633699459966,0.0175108936667287
+"MZ","English","aunt","CJ","german",152,39502648,"web","pukWaC (ukWaC parsed with MaltParser)",10,"English_ST","kinterm","stan1293","IE72",5.05633699459966,0.0175108936667287
+"MZ","English","aunt","CJ","german",35,17400000,"spoken","CELEX",10,"English_ST","kinterm","stan1293","IE72",5.05633699459966,0.0175108936667287
+"MZ","Catalan","tia","AX","iberian",10451,4189954719,"web","Catalan Web 2014 (caTenTen14)",10,"Catalan","kinterm","stan1289","IE285(7);IE286(416)",5.05633699459966,0.0175108936667287
+"MZ","Bengali","khālā","GT","urdu",NA,NA,NA,NA,10,"Bengali","kinterm","beng1280","IE508",5.05633699459966,0.0175108936667287
+"MZ","Russian","тётя","FB","iberian",206.8,8200000,"spoken","Russian NC via Leeds",10,"Russian","kinterm","russ1263",NA,5.05633699459966,0.0175108936667287
+"MZ","Polish","ciotka","EN","iberian",72326,7796796565,"web","Polish Web 2012 (plTenTen12)",10,"Polish","kinterm","poli1260","IE71(266);IE59(142);IE146(754)",5.05633699459966,0.0175108936667287
+"MZ","Czech","teta","BF","slavic",28265,4175089440,"web","Czech Web 2012 (czTenTen12 v8)",10,"Czech","kinterm","czec1258","IE146(527);IE288(113)",5.05633699459966,0.0175108936667287
+"MZ","Norwegian","tante","BS","german",57439,1698481187,"web","Norwegian Web 2015 (noTenTen15) Bokmal and Nynorsk",10,"Riksmal","kinterm","norw1259","IE89(95)",5.05633699459966,0.0175108936667287
+"MZ","Italian","zia","AX","iberian",24357,2588873046,"web","Italian Web 2010 (itTenTen)",10,"Italian","kinterm","ital1282","IE80(156,167)",5.05633699459966,0.0175108936667287
+"MZ","Ukrainian","títka","EN","iberian",NA,NA,NA,NA,10,"Ukrainian","kinterm","ukra1253","IE146(993);IE297(314);IE299)",5.05633699459966,0.0175108936667287
+"MZ","French","tante","CJ","german",88371,9889689889,"web","French Web 2012 (frTenTen12)",10,"French","kinterm","stan1290","IE80(156,167)",5.05633699459966,0.0175108936667287
+"MZ","Bulgarian","леля","AN","iberian",NA,1.95e+09,"spoken","Bulgarian NC",10,"Bulgarian","kinterm","bulg1262",NA,5.05633699459966,0.0175108936667287
+"MZ","Frisian","tante","BS","german",NA,NA,NA,NA,10,"Frisian","kinterm","fris1239","IE305",5.05633699459966,0.0175108936667287
+"MZ","Belarusian","cëtka","BF","slavic",NA,NA,NA,NA,10,"Byelorussian","kinterm","bela1254","IE146(941);IE296(291,296);IE332(158,139)",5.05633699459966,0.0175108936667287
+"MZ","Portuguese","tia","AX","iberian",16750,3900501097,"web","Portuguese Web 2011 (ptTenTen11, Freeling v3)",10,"Portuguese_ST","kinterm","port1283","IE80(167)",5.05633699459966,0.0175108936667287
+"MZ","Czech","teta","BF","slavic",85697,4175089440,"web","Czech Web 2012 (czTenTen12 v8)",10,"Czech","kinterm","czec1258","IE146(527);IE288(113)",5.05633699459966,0.0175108936667287
+"MZ","Swedish","moster","FG","german2",11,1e+06,"written","SUC",10,"Swedish_List","kinterm","swed1254","IE995;IE89(94)",5.05633699459966,0.0175108936667287
+"MZ","Portuguese","tia","AX","iberian",39,4.5e+07,"spoken","CoP",10,"Portuguese_ST","kinterm","port1283","IE80(167)",5.05633699459966,0.0175108936667287
+"MZ","Italian","zia","AX","iberian",4349,1.3e+08,"written","CORIS",10,"Italian","kinterm","ital1282","IE80(156,167)",5.05633699459966,0.0175108936667287
+"MZ","Slovak","teta","BF","slavic",NA,NA,NA,NA,10,"Slovak","kinterm","slov1269","IE146(587);IE177(100);IE330(22)",5.05633699459966,0.0175108936667287
+"MZ","Czech","teta","BF","slavic",188,1700000,"spoken","UCNK:SYN2015 (written) ORAL2013 (spoken)",10,"Czech","kinterm","czec1258","IE146(527);IE288(113)",5.05633699459966,0.0175108936667287
+"MZ","Polish","ciotka","EN","iberian",2416,3e+08,"written","Polish NC written PELCRA spoken",10,"Polish","kinterm","poli1260","IE71(266);IE59(142);IE146(754)",5.05633699459966,0.0175108936667287
+"MZ","Swedish","moster","FG","german2",NA,1e+06,"spoken","SUC",10,"Swedish_List","kinterm","swed1254","IE995;IE89(94)",5.05633699459966,0.0175108936667287
+"MZ","Catalan","tia","AX","iberian",8702,4189954719,"web","Catalan Web 2014 (caTenTen14)",10,"Catalan","kinterm","stan1289","IE285(7);IE286(416)",5.05633699459966,0.0175108936667287
+"MZ","Czech","teta","BF","slavic",4263,1700000,"written","UCNK:SYN2015 (written) ORAL2013 (spoken)",10,"Czech","kinterm","czec1258","IE146(527);IE288(113)",5.05633699459966,0.0175108936667287
+"MZ","Portuguese","tia","AX","iberian",2354,4.5e+07,"written","CoP",10,"Portuguese_ST","kinterm","port1283","IE80(167)",5.05633699459966,0.0175108936667287
+"MZ","Greek","θεία","DE","greek",33081,1958348129,"web","Greek Web 2014 (elTenTen14)",10,"Greek_Mod","kinterm","mode1248",NA,5.05633699459966,0.0175108936667287
+"MZ","Italian","zia","AX","iberian",3,1.3e+08,"spoken","CORIS",10,"Italian","kinterm","ital1282","IE80(156,167)",5.05633699459966,0.0175108936667287
+"MZD","Lahnda","masēr","HM","indian",NA,NA,NA,NA,11,"Lahnda","kinterm","lahn1241","IE337(134)",3.87745347839901,0.0132851013372306
+"MZD","Welsh","cyfnither","FL","celtic",NA,NA,NA,NA,11,"Welsh_C","kinterm","wels1247","IE173(119);IE288(117,118); IE339",3.87745347839901,0.0132851013372306
+"MZD","Swedish","kusin","BT","latin",52222,3411216955,"web","Swedish Web 2014 (svTenTen14)",11,"Swedish_List","kinterm","swed1254","IE995;IE89(94)",3.87745347839901,0.0132851013372306
+"MZD","Macedonian","братучеда","AO","slavic",NA,NA,NA,NA,11,"Macedonian","kinterm","mace1250",NA,3.87745347839901,0.0132851013372306
+"MZD","Breton","keniterv","AE","celtic",NA,NA,NA,NA,11,"Breton_List","kinterm","bret1244","IE82(95);IE288(117,118)",3.87745347839901,0.0132851013372306
+"MZD","Kashmiri","master-beni","HG","indian",NA,NA,NA,NA,11,"Kashmiri","kinterm","kash1277","IE43(230);IE42(40);IE218(194)",3.87745347839901,0.0132851013372306
+"MZD","French","cousine","BT","latin",25.14,1.5e+07,"written","lexique corpus",11,"French","kinterm","stan1290","IE80(156,167)",3.87745347839901,0.0132851013372306
+"MZD","Dutch","nicht","CA","dutch",1698995,2576596803,"web","Dutch Web 2014 (nlTenTen14)",11,"Dutch_List","kinterm","dutc1256","IE73",3.87745347839901,0.0132851013372306
+"MZD","Romanian","vară","EW","misc",3045,4.1e+07,"written","ROMBAC",11,"Romanian_List","kinterm","roma1327",NA,3.87745347839901,0.0132851013372306
+"MZD","Danish","kusine","BT","latin",17183,2042601251,"web","Danish Web 2014 (daTenTen14)",11,"Danish","kinterm","dani1285","IE89(95)",3.87745347839901,0.0132851013372306
+"MZD","Ukrainian","kuzy'na","BT","latin",NA,NA,NA,NA,11,"Ukrainian","kinterm","ukra1253","IE146(993)",3.87745347839901,0.0132851013372306
+"MZD","Dutch","nicht","CA","dutch",1591,42400000,"spoken","Dutch Instituut voor Nederlandse Lexicologie text corpora (written) (mysterious) Corpus Gesproken Nederlands (spoken)",11,"Dutch_List","kinterm","dutc1256","IE73",3.87745347839901,0.0132851013372306
+"MZD","Spanish","prima","EQ","iberian",145228,9497402122,"web","Spanish Web 2011 (esTenTen11, Eu + Am, Freeling v4)",11,"Spanish","kinterm","stan1288","IE80(156-167)",3.87745347839901,0.0132851013372306
+"MZD","English","cousin","CK","latin",21,17400000,"spoken","CELEX",11,"English_ST","kinterm","stan1293","IE72",3.87745347839901,0.0132851013372306
+"MZD","Romanian","vară","EW","misc",1757,44729032,"web","Romanian Web (roWaC)",11,"Romanian_List","kinterm","roma1327",NA,3.87745347839901,0.0132851013372306
+"MZD","German","Cousine","BT","latin",NA,5400000,"spoken","CELEX",11,"German_ST","kinterm","stan1295","IE74;IE234(268)",3.87745347839901,0.0132851013372306
+"MZD","Dutch","nicht","CA","dutch",470,42400000,"written","Dutch Instituut voor Nederlandse Lexicologie text corpora (written) (mysterious) Corpus Gesproken Nederlands (spoken)",11,"Dutch_List","kinterm","dutc1256","IE73",3.87745347839901,0.0132851013372306
+"MZD","Czech","sestřenice","BL","slavic3",17,1700000,"spoken","UCNK:SYN2015 (written) ORAL2013 (spoken)",11,"Czech","kinterm","czec1258","IE146(527);IE288(117)",3.87745347839901,0.0132851013372306
+"MZD","Swedish","kusin","BT","latin",24,1e+06,"written","SUC",11,"Swedish_List","kinterm","swed1254","IE995;IE89(94)",3.87745347839901,0.0132851013372306
+"MZD","Romanian","vară","EW","misc",3934,44729032,"web","Romanian Web (roWaC)",11,"Romanian_List","kinterm","roma1327",NA,3.87745347839901,0.0132851013372306
+"MZD","Sindhi","māsāti","IH","indian",NA,NA,NA,NA,11,"Sindhi","kinterm","sind1272","DR7(99);IE292);IE9(112)",3.87745347839901,0.0132851013372306
+"MZD","Romanian","vară","EW","misc",NA,4.1e+07,"spoken","ROMBAC",11,"Romanian_List","kinterm","roma1327",NA,3.87745347839901,0.0132851013372306
+"MZD","Polish","kuzynka","BT","latin",27,3e+08,"spoken","Polish NC written PELCRA spoken",11,"Polish","kinterm","poli1260","IE71(268);IE146(754)",3.87745347839901,0.0132851013372306
+"MZD","Spanish","prima","EQ","iberian",226043,9497402122,"web","Spanish Web 2011 (esTenTen11, Eu + Am, Freeling v4)",11,"Spanish","kinterm","stan1288","IE80(156-167)",3.87745347839901,0.0132851013372306
+"MZD","English","cousin","CK","latin",398,39502648,"web","pukWaC (ukWaC parsed with MaltParser)",11,"English_ST","kinterm","stan1293","IE72",3.87745347839901,0.0132851013372306
+"MZD","Bulgarian","братовчедка","AO","slavic",3372,1.95e+09,"written","Bulgarian NC",11,"Bulgarian","kinterm","bulg1262",NA,3.87745347839901,0.0132851013372306
+"MZD","Dutch","nicht","CA","dutch",1643293,2576596803,"web","Dutch Web 2014 (nlTenTen14)",11,"Dutch_List","kinterm","dutc1256","IE73",3.87745347839901,0.0132851013372306
+"MZD","French","cousine","BT","latin",23.72,1.5e+07,"spoken","lexique corpus",11,"French","kinterm","stan1290","IE80(156,167)",3.87745347839901,0.0132851013372306
+"MZD","Czech","sestřenice","BL","slavic3",936,1700000,"written","UCNK:SYN2015 (written) ORAL2013 (spoken)",11,"Czech","kinterm","czec1258","IE146(527);IE288(117)",3.87745347839901,0.0132851013372306
+"MZD","English","cousin","CK","latin",279,39502648,"web","pukWaC (ukWaC parsed with MaltParser)",11,"English_ST","kinterm","stan1293","IE72",3.87745347839901,0.0132851013372306
+"MZD","French","cousine","BT","latin",77068,9889689889,"web","French Web 2012 (frTenTen12)",11,"French","kinterm","stan1290","IE80(156,167)",3.87745347839901,0.0132851013372306
+"MZD","English","cousin","CK","latin",563,17400000,"written","CELEX",11,"English_ST","kinterm","stan1293","IE72",3.87745347839901,0.0132851013372306
+"MZD","Serbian","rodjak",NA,"slavic2",403,5.54e+08,"web","scWaC",11,"Serbocroatian","kinterm","sout1528",NA,3.87745347839901,0.0132851013372306
+"MZD","Spanish","prima","EQ","iberian",364,1e+08,"written","CoE",11,"Spanish","kinterm","stan1288","IE80(156-167)",3.87745347839901,0.0132851013372306
+"MZD","Bulgarian","братовчедка","AO","slavic",1383,704955109,"web","Bulgarian Web 2012 (bgTenTen12)",11,"Bulgarian","kinterm","bulg1262",NA,3.87745347839901,0.0132851013372306
+"MZD","Albanian","kushërirë","FX","albanian",75,16700000,"written","Albanian NC",11,"Albanian_Top","kinterm","alba1267","IE12(156);IE138(64)",3.87745347839901,0.0132851013372306
+"MZD","Italian","cugina","DV","latin",11521,2588873046,"web","Italian Web 2010 (itTenTen)",11,"Italian","kinterm","ital1282","IE80(156,167)",3.87745347839901,0.0132851013372306
+"MZD","Danish","kusine","BT","latin",10736,2042601251,"web","Danish Web 2014 (daTenTen14)",11,"Danish","kinterm","dani1285","IE89(95)",3.87745347839901,0.0132851013372306
+"MZD","Swedish","kusin","BT","latin",NA,1e+06,"spoken","SUC",11,"Swedish_List","kinterm","swed1254","IE995;IE89(94)",3.87745347839901,0.0132851013372306
+"MZD","German","Cousine","BT","latin",NA,5400000,"written","CELEX",11,"German_ST","kinterm","stan1295","IE74;IE234(268)",3.87745347839901,0.0132851013372306
+"MZD","Avestan","tūriyō-puθra-","GL","misc",NA,NA,NA,NA,11,"Avestan","kinterm","aves1237","IE507",3.87745347839901,0.0132851013372306
+"MZD","Norwegian","kusine","BT","latin",3450,1698481187,"web","Norwegian Web 2015 (noTenTen15) Bokmal and Nynorsk",11,"Riksmal","kinterm","norw1259","IE89(95)",3.87745347839901,0.0132851013372306
+"MZD","Lithuanian","pussesere","EF","misc",NA,NA,NA,NA,11,"Lithuanian_ST","kinterm","lith1251",NA,3.87745347839901,0.0132851013372306
+"MZD","Icelandic","frænka","DO","misc",4,6.5e+07,"spoken","textasafn",11,"Icelandic_ST","kinterm","icel1247","IE89(91)",3.87745347839901,0.0132851013372306
+"MZD","Italian","cugina","DV","latin",13512,2588873046,"web","Italian Web 2010 (itTenTen)",11,"Italian","kinterm","ital1282","IE80(156,167)",3.87745347839901,0.0132851013372306
+"MZD","Croatian","rodjak","BG","slavic2",568,1.21e+09,"web","hrWaC",11,"Serbocroatian_Croatia","kinterm","sout1528",NA,3.87745347839901,0.0132851013372306
+"MZD","Polish","kuzynka","BT","latin",19606,7796796565,"web","Polish Web 2012 (plTenTen12)",11,"Polish","kinterm","poli1260","IE71(268);IE146(754)",3.87745347839901,0.0132851013372306
+"MZD","Bulgarian","братовчедка","AO","slavic",NA,1.95e+09,"spoken","Bulgarian NC",11,"Bulgarian","kinterm","bulg1262",NA,3.87745347839901,0.0132851013372306
+"MZD","Italian","cugina","DV","latin",1,1.3e+08,"spoken","CORIS",11,"Italian","kinterm","ital1282","IE80(156,167)",3.87745347839901,0.0132851013372306
+"MZD","Polish","kuzynka","BT","latin",45880,7796796565,"web","Polish Web 2012 (plTenTen12)",11,"Polish","kinterm","poli1260","IE71(268);IE146(754)",3.87745347839901,0.0132851013372306
+"MZD","Czech","sestřenice","BL","slavic3",9384,4175089440,"web","Czech Web 2012 (czTenTen12 v8)",11,"Czech","kinterm","czec1258","IE146(527);IE288(117)",3.87745347839901,0.0132851013372306
+"MZD","Spanish","prima","EQ","iberian",97,1e+08,"spoken","CoE",11,"Spanish","kinterm","stan1288","IE80(156-167)",3.87745347839901,0.0132851013372306
+"MZD","Swedish","kusin","BT","latin",91956,3411216955,"web","Swedish Web 2014 (svTenTen14)",11,"Swedish_List","kinterm","swed1254","IE995;IE89(94)",3.87745347839901,0.0132851013372306
+"MZD","German","Cousine","BT","latin",39863,16534176369,"web","German Web 2013 (deTenTen13)",11,"German_ST","kinterm","stan1295","IE74;IE234(268)",3.87745347839901,0.0132851013372306
+"MZD","Icelandic","frænka","DO","misc",272,6.5e+07,"written","textasafn",11,"Icelandic_ST","kinterm","icel1247","IE89(91)",3.87745347839901,0.0132851013372306
+"MZD","Norwegian","kusine","BT","latin",7737,1698481187,"web","Norwegian Web 2015 (noTenTen15) Bokmal and Nynorsk",11,"Riksmal","kinterm","norw1259","IE89(95)",3.87745347839901,0.0132851013372306
+"MZD","Italian","cugina","DV","latin",248,1.3e+08,"written","CORIS",11,"Italian","kinterm","ital1282","IE80(156,167)",3.87745347839901,0.0132851013372306
+"MZD","Portuguese","prima","EQ","iberian",1480,4.5e+07,"written","CoP",11,"Portuguese_ST","kinterm","port1283","IE80(166)",3.87745347839901,0.0132851013372306
+"MZD","German","Cousine","BT","latin",47665,16534176369,"web","German Web 2013 (deTenTen13)",11,"German_ST","kinterm","stan1295","IE74;IE234(268)",3.87745347839901,0.0132851013372306
+"MZD","Polish","kuzynka","BT","latin",560,3e+08,"written","Polish NC written PELCRA spoken",11,"Polish","kinterm","poli1260","IE71(268);IE146(754)",3.87745347839901,0.0132851013372306
+"MZD","Portuguese","prima","EQ","iberian",50077,3900501097,"web","Portuguese Web 2011 (ptTenTen11, Freeling v3)",11,"Portuguese_ST","kinterm","port1283","IE80(166)",3.87745347839901,0.0132851013372306
+"MZD","Greek","ξαδερφη","DF","greek",164,1958348129,"web","Greek Web 2014 (elTenTen14)",11,"Greek_Mod","kinterm","mode1248",NA,3.87745347839901,0.0132851013372306
+"MZD","Albanian","kushërirë","FX","albanian",38,16700000,"spoken","Albanian NC",11,"Albanian_Top","kinterm","alba1267","IE12(156);IE138(64)",3.87745347839901,0.0132851013372306
+"MZD","Portuguese","prima","EQ","iberian",24,4.5e+07,"spoken","CoP",11,"Portuguese_ST","kinterm","port1283","IE80(166)",3.87745347839901,0.0132851013372306
+"MZD","Czech","sestřenice","BL","slavic3",16302,4175089440,"web","Czech Web 2012 (czTenTen12 v8)",11,"Czech","kinterm","czec1258","IE146(527);IE288(117)",3.87745347839901,0.0132851013372306
+"MZD","Slovak","sesternica","BL","slavic3",NA,NA,NA,NA,11,"Slovak","kinterm","slov1269","IE146(588);IE177(101)",3.87745347839901,0.0132851013372306
+"MZD","Catalan","cosina","AY","latin",696,4189954719,"web","Catalan Web 2014 (caTenTen14)",11,"Catalan","kinterm","stan1289","IE286(416)",3.87745347839901,0.0132851013372306
+"MZD","Portuguese","prima","EQ","iberian",18324,3900501097,"web","Portuguese Web 2011 (ptTenTen11, Freeling v3)",11,"Portuguese_ST","kinterm","port1283","IE80(166)",3.87745347839901,0.0132851013372306
+"MZD","Frisian","nicht","CA","dutch",NA,NA,NA,NA,11,"Frisian","kinterm","fris1239","IE305;IE307;IE348",3.87745347839901,0.0132851013372306
+"MZD","Catalan","cosina","AY","latin",753,4189954719,"web","Catalan Web 2014 (caTenTen14)",11,"Catalan","kinterm","stan1289","IE286(416)",3.87745347839901,0.0132851013372306
+"MZS","Romanian","văr","EX","iberian",198,44729032,"web","Romanian Web (roWaC)",11,"Romanian_List","kinterm","roma1327",NA,4.16150008280831,0.0134001669082929
+"MZS","Welsh","cefnder","FM","celtic",NA,NA,NA,NA,11,"Welsh_C","kinterm","wels1247","IE173(119);IE288(117,118); IE339",4.16150008280831,0.0134001669082929
+"MZS","Spanish","primo","ER","iberian",72105,9497402122,"web","Spanish Web 2011 (esTenTen11, Eu + Am, Freeling v4)",11,"Spanish","kinterm","stan1288","IE80(156-167)",4.16150008280831,0.0134001669082929
+"MZS","Spanish","primo","ER","iberian",74,1e+08,"spoken","CoE",11,"Spanish","kinterm","stan1288","IE80(156-167)",4.16150008280831,0.0134001669082929
+"MZS","Dutch","neef","CB","german2",4184,42400000,"spoken","Dutch Instituut voor Nederlandse Lexicologie text corpora (written) (mysterious) Corpus Gesproken Nederlands (spoken)",11,"Dutch_List","kinterm","dutc1256","IE73",4.16150008280831,0.0134001669082929
+"MZS","Avestan","tūriyō-puθra-","GM","misc",NA,NA,NA,NA,11,"Avestan","kinterm","aves1237","IE507",4.16150008280831,0.0134001669082929
+"MZS","German","Cousin","CR","latin",55116,16534176369,"web","German Web 2013 (deTenTen13)",11,"German_ST","kinterm","stan1295","IE74;IE234(268)",4.16150008280831,0.0134001669082929
+"MZS","Norwegian","fetter","BU","german",5375,1698481187,"web","Norwegian Web 2015 (noTenTen15) Bokmal and Nynorsk",11,"Riksmal","kinterm","norw1259","IE89(95)",4.16150008280831,0.0134001669082929
+"MZS","Breton","kenderv","AF","celtic",NA,NA,NA,NA,11,"Breton_List","kinterm","bret1244","IE82(91,93);IE288(117,118)",4.16150008280831,0.0134001669082929
+"MZS","Dutch","neef","CB","german2",13051,2576596803,"web","Dutch Web 2014 (nlTenTen14)",11,"Dutch_List","kinterm","dutc1256","IE73",4.16150008280831,0.0134001669082929
+"MZS","English","cousin","CL","latin",398,39502648,"web","pukWaC (ukWaC parsed with MaltParser)",11,"English_ST","kinterm","stan1293","IE72",4.16150008280831,0.0134001669082929
+"MZS","Spanish","primo","ER","iberian",359650,9497402122,"web","Spanish Web 2011 (esTenTen11, Eu + Am, Freeling v4)",11,"Spanish","kinterm","stan1288","IE80(156-167)",4.16150008280831,0.0134001669082929
+"MZS","Serbian","rodjak",NA,"slavic2",403,5.54e+08,"web","scWaC",11,"Serbocroatian","kinterm","sout1528","IE20(50)",4.16150008280831,0.0134001669082929
+"MZS","Swedish","kusin","CR","latin",52222,3411216955,"web","Swedish Web 2014 (svTenTen14)",11,"Swedish_List","kinterm","swed1254","IE995;IE89(94)",4.16150008280831,0.0134001669082929
+"MZS","Polish","kuzyn","CR","latin",25090,7796796565,"web","Polish Web 2012 (plTenTen12)",11,"Polish","kinterm","poli1260","IE71(268);IE146(754)",4.16150008280831,0.0134001669082929
+"MZS","Czech","bratranec","BM","slavic",1731,1700000,"written","UCNK:SYN2015 (written) ORAL2013 (spoken)",11,"Czech","kinterm","czec1258","IE146(527);IE288(117)",4.16150008280831,0.0134001669082929
+"MZS","Dutch","neef","CB","german2",26199,2576596803,"web","Dutch Web 2014 (nlTenTen14)",11,"Dutch_List","kinterm","dutc1256","IE73",4.16150008280831,0.0134001669082929
+"MZS","Norwegian","fetter","BU","german",8957,1698481187,"web","Norwegian Web 2015 (noTenTen15) Bokmal and Nynorsk",11,"Riksmal","kinterm","norw1259","IE89(95)",4.16150008280831,0.0134001669082929
+"MZS","Lahnda","masēr","HN","indian",NA,NA,NA,NA,11,"Lahnda","kinterm","lahn1241","IE337(134)",4.16150008280831,0.0134001669082929
+"MZS","English","cousin","CL","latin",279,39502648,"web","pukWaC (ukWaC parsed with MaltParser)",11,"English_ST","kinterm","stan1293","IE72",4.16150008280831,0.0134001669082929
+"MZS","Catalan","cosí","AZ","latin",64,4189954719,"web","Catalan Web 2014 (caTenTen14)",11,"Catalan","kinterm","stan1289","IE286(416)",4.16150008280831,0.0134001669082929
+"MZS","Danish","fætter","BU","german",17249,2042601251,"web","Danish Web 2014 (daTenTen14)",11,"Danish","kinterm","dani1285","IE89(95)",4.16150008280831,0.0134001669082929
+"MZS","Lithuanian","pusbrolis","EG","misc",NA,NA,NA,NA,11,"Lithuanian_ST","kinterm","lith1251","IE288(117,118,119)",4.16150008280831,0.0134001669082929
+"MZS","Croatian","rodjak","BH","slavic2",568,1.21e+09,"web","hrWaC",11,"Serbocroatian_Croatia","kinterm","sout1528","IE20(50)",4.16150008280831,0.0134001669082929
+"MZS","Swedish","kusin","CR","latin",91956,3411216955,"web","Swedish Web 2014 (svTenTen14)",11,"Swedish_List","kinterm","swed1254","IE995;IE89(94)",4.16150008280831,0.0134001669082929
+"MZS","Italian","cugino","DW","latin",30628,2588873046,"web","Italian Web 2010 (itTenTen)",11,"Italian","kinterm","ital1282","IE80(156,167)",4.16150008280831,0.0134001669082929
+"MZS","German","Cousin","CR","latin",NA,5400000,"spoken","CELEX",11,"German_ST","kinterm","stan1295","IE74;IE234(268)",4.16150008280831,0.0134001669082929
+"MZS","Swedish","kusin","CR","latin",24,1e+06,"written","SUC",11,"Swedish_List","kinterm","swed1254","IE995;IE89(94)",4.16150008280831,0.0134001669082929
+"MZS","Kashmiri","mastur-boi","HH","indian",NA,NA,NA,NA,11,"Kashmiri","kinterm","kash1277","IE43(230);IE42(40);IE121(225);IE218(194)",4.16150008280831,0.0134001669082929
+"MZS","French","cousin","CR","latin",264920,9889689889,"web","French Web 2012 (frTenTen12)",11,"French","kinterm","stan1290","IE80(156,167)",4.16150008280831,0.0134001669082929
+"MZS","Czech","bratranec","BM","slavic",8732,4175089440,"web","Czech Web 2012 (czTenTen12 v8)",11,"Czech","kinterm","czec1258","IE146(527);IE288(117)",4.16150008280831,0.0134001669082929
+"MZS","Italian","cugino","DW","latin",3089,1.3e+08,"written","CORIS",11,"Italian","kinterm","ital1282","IE80(156,167)",4.16150008280831,0.0134001669082929
+"MZS","English","cousin","CL","latin",563,17400000,"written","CELEX",11,"English_ST","kinterm","stan1293","IE72",4.16150008280831,0.0134001669082929
+"MZS","Portuguese","primo","ER","iberian",33139,3900501097,"web","Portuguese Web 2011 (ptTenTen11, Freeling v3)",11,"Portuguese_ST","kinterm","port1283","IE80(166)",4.16150008280831,0.0134001669082929
+"MZS","Albanian","kushëri","FY","albanian",97,16700000,"spoken","Albanian NC",11,"Albanian_Top","kinterm","alba1267","IE12(156);IE138(73)",4.16150008280831,0.0134001669082929
+"MZS","German","Cousin","CR","latin",25,5400000,"written","CELEX",11,"German_ST","kinterm","stan1295","IE74;IE234(268)",4.16150008280831,0.0134001669082929
+"MZS","Portuguese","primo","ER","iberian",39,4.5e+07,"spoken","CoP",11,"Portuguese_ST","kinterm","port1283","IE80(166)",4.16150008280831,0.0134001669082929
+"MZS","Bulgarian","братовчед","AP","slavic",NA,1.95e+09,"spoken","Bulgarian NC",11,"Bulgarian","kinterm","bulg1262",NA,4.16150008280831,0.0134001669082929
+"MZS","Bulgarian","братовчед","AP","slavic",3239,704955109,"web","Bulgarian Web 2012 (bgTenTen12)",11,"Bulgarian","kinterm","bulg1262",NA,4.16150008280831,0.0134001669082929
+"MZS","Bulgarian","братовчед","AP","slavic",10154,1.95e+09,"written","Bulgarian NC",11,"Bulgarian","kinterm","bulg1262",NA,4.16150008280831,0.0134001669082929
+"MZS","Polish","kuzyn","CR","latin",71586,7796796565,"web","Polish Web 2012 (plTenTen12)",11,"Polish","kinterm","poli1260","IE71(268);IE146(754)",4.16150008280831,0.0134001669082929
+"MZS","Icelandic","frændi","DP","misc",17,6.5e+07,"spoken","textasafn",11,"Icelandic_ST","kinterm","icel1247","IE89(91)",4.16150008280831,0.0134001669082929
+"MZS","French","cousin","CR","latin",21,1.5e+07,"spoken","lexique corpus",11,"French","kinterm","stan1290","IE80(156,167)",4.16150008280831,0.0134001669082929
+"MZS","French","cousin","CR","latin",115405,9889689889,"web","French Web 2012 (frTenTen12)",11,"French","kinterm","stan1290","IE80(156,167)",4.16150008280831,0.0134001669082929
+"MZS","Catalan","cosí","AZ","latin",868,4189954719,"web","Catalan Web 2014 (caTenTen14)",11,"Catalan","kinterm","stan1289","IE286(416)",4.16150008280831,0.0134001669082929
+"MZS","Slovak","bratanec","BM","slavic",NA,NA,NA,NA,11,"Slovak","kinterm","slov1269","IE146(588);IE177(101)",4.16150008280831,0.0134001669082929
+"MZS","Romanian","văr","EX","iberian",1130,44729032,"web","Romanian Web (roWaC)",11,"Romanian_List","kinterm","roma1327",NA,4.16150008280831,0.0134001669082929
+"MZS","Portuguese","primo","ER","iberian",97009,3900501097,"web","Portuguese Web 2011 (ptTenTen11, Freeling v3)",11,"Portuguese_ST","kinterm","port1283","IE80(166)",4.16150008280831,0.0134001669082929
+"MZS","Bulgarian","братовчед","AP","slavic",3239,704955109,"web","Bulgarian Web 2012 (bgTenTen12)",11,"Bulgarian","kinterm","bulg1262",NA,4.16150008280831,0.0134001669082929
+"MZS","Spanish","primo","ER","iberian",351,1e+08,"written","CoE",11,"Spanish","kinterm","stan1288","IE80(156-167)",4.16150008280831,0.0134001669082929
+"MZS","Polish","kuzyn","CR","latin",928,3e+08,"written","Polish NC written PELCRA spoken",11,"Polish","kinterm","poli1260","IE71(268);IE146(754)",4.16150008280831,0.0134001669082929
+"MZS","Czech","bratranec","BM","slavic",24781,4175089440,"web","Czech Web 2012 (czTenTen12 v8)",11,"Czech","kinterm","czec1258","IE146(527);IE288(117)",4.16150008280831,0.0134001669082929
+"MZS","Italian","cugino","DW","latin",4,1.3e+08,"spoken","CORIS",11,"Italian","kinterm","ital1282","IE80(156,167)",4.16150008280831,0.0134001669082929
+"MZS","Icelandic","frændi","DP","misc",251,6.5e+07,"written","textasafn",11,"Icelandic_ST","kinterm","icel1247","IE89(91)",4.16150008280831,0.0134001669082929
+"MZS","Italian","cugino","DW","latin",17578,2588873046,"web","Italian Web 2010 (itTenTen)",11,"Italian","kinterm","ital1282","IE80(156,167)",4.16150008280831,0.0134001669082929
+"MZS","Frisian","neef","CB","german2",NA,NA,NA,NA,11,"Frisian","kinterm","fris1239","IE305;IE307;IE348",4.16150008280831,0.0134001669082929
+"MZS","English","cousin","CL","latin",21,17400000,"spoken","CELEX",11,"English_ST","kinterm","stan1293","IE72",4.16150008280831,0.0134001669082929
+"MZS","Romanian","văr","EX","iberian",216,4.1e+07,"written","ROMBAC",11,"Romanian_List","kinterm","roma1327",NA,4.16150008280831,0.0134001669082929
+"MZS","Greek","ξαδερφος","DG","greek",102,1958348129,"web","Greek Web 2014 (elTenTen14)",11,"Greek_Mod","kinterm","mode1248",NA,4.16150008280831,0.0134001669082929
+"MZS","Swedish","kusin","CR","latin",NA,1e+06,"spoken","SUC",11,"Swedish_List","kinterm","swed1254","IE995;IE89(94)",4.16150008280831,0.0134001669082929
+"MZS","Portuguese","primo","ER","iberian",1664,4.5e+07,"written","CoP",11,"Portuguese_ST","kinterm","port1283","IE80(166)",4.16150008280831,0.0134001669082929
+"MZS","Danish","fætter","BU","german",26992,2042601251,"web","Danish Web 2014 (daTenTen14)",11,"Danish","kinterm","dani1285","IE89(95)",4.16150008280831,0.0134001669082929
+"MZS","Macedonian","братучед","AP","slavic",NA,NA,NA,NA,11,"Macedonian","kinterm","mace1250",NA,4.16150008280831,0.0134001669082929
+"MZS","German","Cousin","CR","latin",40879,16534176369,"web","German Web 2013 (deTenTen13)",11,"German_ST","kinterm","stan1295","IE74;IE234(268)",4.16150008280831,0.0134001669082929
+"MZS","Polish","kuzyn","CR","latin",20,3e+08,"spoken","Polish NC written PELCRA spoken",11,"Polish","kinterm","poli1260","IE71(268);IE146(754)",4.16150008280831,0.0134001669082929
+"MZS","Romanian","văr","EX","iberian",NA,4.1e+07,"spoken","ROMBAC",11,"Romanian_List","kinterm","roma1327",NA,4.16150008280831,0.0134001669082929
+"MZS","Czech","bratranec","BM","slavic",14,1700000,"spoken","UCNK:SYN2015 (written) ORAL2013 (spoken)",11,"Czech","kinterm","czec1258","IE146(527);IE288(117)",4.16150008280831,0.0134001669082929
+"MZS","Albanian","kushëri","FY","albanian",275,16700000,"written","Albanian NC",11,"Albanian_Top","kinterm","alba1267","IE12(156);IE138(73)",4.16150008280831,0.0134001669082929
+"MZS","Dutch","neef","CB","german2",1162,42400000,"written","Dutch Instituut voor Nederlandse Lexicologie text corpora (written) (mysterious) Corpus Gesproken Nederlands (spoken)",11,"Dutch_List","kinterm","dutc1256","IE73",4.16150008280831,0.0134001669082929
+"MZS","Sindhi","masātu","II","indian",NA,NA,NA,NA,11,"Sindhi","kinterm","sind1272","DR7(99);IE292);IE9(112)",4.16150008280831,0.0134001669082929
+"MZS","French","cousin","CR","latin",39.05,1.5e+07,"written","lexique corpus",11,"French","kinterm","stan1290","IE80(156,167)",4.16150008280831,0.0134001669082929
+"MZS","Ukrainian","kuzén","CR","latin",NA,NA,NA,NA,11,"Ukrainian","kinterm","ukra1253","IE146(993)",4.16150008280831,0.0134001669082929
+"S","Norwegian","sønn","EJ","i",72853,1698481187,"web","Norwegian Web 2015 (noTenTen15) Bokmal and Nynorsk",7,"Riksmal","kinterm","norw1259","IE89(95)",1.66941729780198,0.00679155132440427
+"S","Assamese","put","GD","indian",NA,NA,NA,NA,7,"Assamese","kinterm","assa1263","DR7(104);IE224(72);IE292",1.66941729780198,0.00679155132440427
+"S","Welsh","mab","AG","celtic",NA,NA,NA,NA,7,"Welsh_C","kinterm","wels1247","IE288(105); IE339",1.66941729780198,0.00679155132440427
+"S","Czech","syn","AQ","i",686247,4175089440,"web","Czech Web 2012 (czTenTen12 v8)",7,"Czech","kinterm","czec1258","IE146(527);IE288(105)",1.66941729780198,0.00679155132440427
+"S","Kashmiri","nechuv","HE","misc",NA,NA,NA,NA,7,"Kashmiri","kinterm","kash1277","IE42(40);IE121(224);IE218(194);IE43(232)",1.66941729780198,0.00679155132440427
+"S","Romanian","fiu","CS","latin",NA,4.1e+07,"spoken","ROMBAC",7,"Romanian_List","kinterm","roma1327","IE12(161)",1.66941729780198,0.00679155132440427
+"S","Bulgarian","син","AQ","i",NA,1.95e+09,"spoken","Bulgarian NC",7,"Bulgarian","kinterm","bulg1262",NA,1.66941729780198,0.00679155132440427
+"S","Marathi","mulagaː","HQ","misc",NA,NA,NA,NA,7,"Marathi","kinterm","mara1378",NA,1.66941729780198,0.00679155132440427
+"S","Slovak","syn","AQ","i",NA,NA,NA,NA,7,"Slovak","kinterm","slov1269","IE146(588);IE177(101);IE301(41,42)",1.66941729780198,0.00679155132440427
+"S","Swedish","son","CC","i",NA,1e+06,"spoken","SUC",7,"Swedish_List","kinterm","swed1254","IE995;IE89(94)",1.66941729780198,0.00679155132440427
+"S","Urdu","bēṭa","GZ","indian2",NA,NA,NA,NA,7,"Urdu","kinterm","urdu1245","IE188(350);IE363(26);IE292",1.66941729780198,0.00679155132440427
+"S","Czech","syn","AQ","i",21846,1700000,"written","UCNK:SYN2015 (written) ORAL2013 (spoken)",7,"Czech","kinterm","czec1258","IE146(527);IE288(105)",1.66941729780198,0.00679155132440427
+"S","Czech","syn","AQ","i",93,1700000,"spoken","UCNK:SYN2015 (written) ORAL2013 (spoken)",7,"Czech","kinterm","czec1258","IE146(527);IE288(105)",1.66941729780198,0.00679155132440427
+"S","Ossetic","fyrt","HY","misc",NA,NA,NA,NA,7,"Iron_Ossetic","kinterm","osse1245","IE211(190);IE209(102,108)",1.66941729780198,0.00679155132440427
+"S","Frisian","soan","AQ","i",NA,NA,NA,NA,7,"Frisian","kinterm","fris1239","IE305;IE307;IE348",1.66941729780198,0.00679155132440427
+"S","French","fils","CS","latin",480.15,1.5e+07,"spoken","lexique corpus",7,"French","kinterm","stan1290","IE80(156,167)",1.66941729780198,0.00679155132440427
+"S","Spanish","hijo","FE","latin",3729,1e+08,"written","CoE",7,"Spanish","kinterm","stan1288","IE80(156-167)",1.66941729780198,0.00679155132440427
+"S","Spanish","hijo","FE","latin",691,1e+08,"spoken","CoE",7,"Spanish","kinterm","stan1288","IE80(156-167)",1.66941729780198,0.00679155132440427
+"S","Swedish","son","CC","i",415257,3411216955,"web","Swedish Web 2014 (svTenTen14)",7,"Swedish_List","kinterm","swed1254","IE995;IE89(94)",1.66941729780198,0.00679155132440427
+"S","Lahnda","puttur","HL","indian",NA,NA,NA,NA,7,"Lahnda","kinterm","lahn1241","IE337(133,6);IE293(385);IE292(127,158,159);IE338(48)",1.66941729780198,0.00679155132440427
+"S","Bulgarian","син","AQ","i",41060,704955109,"web","Bulgarian Web 2012 (bgTenTen12)",7,"Bulgarian","kinterm","bulg1262",NA,1.66941729780198,0.00679155132440427
+"S","Portuguese","filho","BA","latin",11570,4.5e+07,"written","CoP",7,"Portuguese_ST","kinterm","port1283","IE80(165)",1.66941729780198,0.00679155132440427
+"S","Italian","figlio","DX","latin",347235,2588873046,"web","Italian Web 2010 (itTenTen)",7,"Italian","kinterm","ital1282","IE80(156,167)",1.66941729780198,0.00679155132440427
+"S","Italian","figlio","DX","latin",24,1.3e+08,"spoken","CORIS",7,"Italian","kinterm","ital1282","IE80(156,167)",1.66941729780198,0.00679155132440427
+"S","Norwegian","sønn","EJ","i",152726,1698481187,"web","Norwegian Web 2015 (noTenTen15) Bokmal and Nynorsk",7,"Riksmal","kinterm","norw1259","IE89(95)",1.66941729780198,0.00679155132440427
+"S","Czech","syn","AQ","i",226361,4175089440,"web","Czech Web 2012 (czTenTen12 v8)",7,"Czech","kinterm","czec1258","IE146(527);IE288(105)",1.66941729780198,0.00679155132440427
+"S","Bengali","putra","GJ","indian",NA,NA,NA,NA,7,"Bengali","kinterm","beng1280","IE508",1.66941729780198,0.00679155132440427
+"S","Irish","mac","AG","celtic",NA,NA,NA,NA,7,"Irish_A","kinterm","iris1253","IE225(432);IE182(105);IE294(61)",1.66941729780198,0.00679155132440427
+"S","Romanian","fiu","CS","latin",4940,4.1e+07,"written","ROMBAC",7,"Romanian_List","kinterm","roma1327","IE12(161)",1.66941729780198,0.00679155132440427
+"S","German","Sohn","CC","i",1426628,16534176369,"web","German Web 2013 (deTenTen13)",7,"German_ST","kinterm","stan1295","IE74;IE234(268)",1.66941729780198,0.00679155132440427
+"S","Albanian","bir","FT","albanian",709,16700000,"spoken","Albanian NC",7,"Albanian_Top","kinterm","alba1267","IE29(262);IE139(44);IE20(70)",1.66941729780198,0.00679155132440427
+"S","German","Sohn","CC","i",787,5400000,"written","CELEX",7,"German_ST","kinterm","stan1295","IE74;IE234(268)",1.66941729780198,0.00679155132440427
+"S","Nepali","choro","HS","misc",NA,NA,NA,NA,7,"Nepali_List","kinterm","nepa1254","DR7(104);IE197(30);IE293(203)",1.66941729780198,0.00679155132440427
+"S","Danish","søn","AQ","i",253625,2042601251,"web","Danish Web 2014 (daTenTen14)",7,"Danish","kinterm","dani1285","IE996;IE89(95)",1.66941729780198,0.00679155132440427
+"S","Avestan","puθra-","GJ","indian",NA,NA,NA,NA,7,"Avestan","kinterm","aves1237","IE507",1.66941729780198,0.00679155132440427
+"S","Polish","syn","AQ","i",111,3e+08,"spoken","Polish NC written PELCRA spoken",7,"Polish","kinterm","poli1260","IE71(261);IE59(143);IE146(754)",1.66941729780198,0.00679155132440427
+"S","Polish","syn","AQ","i",1103828,7796796565,"web","Polish Web 2012 (plTenTen12)",7,"Polish","kinterm","poli1260","IE71(261);IE59(143);IE146(754)",1.66941729780198,0.00679155132440427
+"S","Bulgarian","син","AQ","i",163283,1.95e+09,"written","Bulgarian NC",7,"Bulgarian","kinterm","bulg1262",NA,1.66941729780198,0.00679155132440427
+"S","German","Sohn","CC","i",1844067,16534176369,"web","German Web 2013 (deTenTen13)",7,"German_ST","kinterm","stan1295","IE74;IE234(268)",1.66941729780198,0.00679155132440427
+"S","Swedish","son","CC","i",244980,3411216955,"web","Swedish Web 2014 (svTenTen14)",7,"Swedish_List","kinterm","swed1254","IE995;IE89(94)",1.66941729780198,0.00679155132440427
+"S","Swedish","son","CC","i",100,1e+06,"written","SUC",7,"Swedish_List","kinterm","swed1254","IE995;IE89(94)",1.66941729780198,0.00679155132440427
+"S","Greek","υιός","DH","latin",8412,1958348129,"web","Greek Web 2014 (elTenTen14)",7,"Greek_Mod","kinterm","mode1248",NA,1.66941729780198,0.00679155132440427
+"S","Croatian","sin","AQ","i",69308,1.21e+09,"web","hrWaC",7,"Serbocroatian_Croatia","kinterm","sout1528","IE20(47);IE65(25);IE63(46);IE12(146)",1.66941729780198,0.00679155132440427
+"S","English","son","AQ","i",100,17400000,"spoken","CELEX",7,"English_ST","kinterm","stan1293","IE72",1.66941729780198,0.00679155132440427
+"S","Portuguese","filho","BA","latin",574153,3900501097,"web","Portuguese Web 2011 (ptTenTen11, Freeling v3)",7,"Portuguese_ST","kinterm","port1283","IE80(165)",1.66941729780198,0.00679155132440427
+"S","Macedonian","син","AQ","i",NA,NA,NA,NA,7,"Macedonian","kinterm","mace1250",NA,1.66941729780198,0.00679155132440427
+"S","Gujarati","put","GD","indian",NA,NA,NA,NA,7,"Gujarati","kinterm","guja1252","IE9(105)",1.66941729780198,0.00679155132440427
+"S","Portuguese","filho","BA","latin",610,4.5e+07,"spoken","CoP",7,"Portuguese_ST","kinterm","port1283","IE80(165)",1.66941729780198,0.00679155132440427
+"S","Russian","сын","AQ","i",2621510,14553856113,"web","Russian Web 2011 (ruTenTen11)",7,"Russian","kinterm","russ1263",NA,1.66941729780198,0.00679155132440427
+"S","Lithuanian","sūnùs","EH","i",NA,NA,NA,NA,7,"Lithuanian_ST","kinterm","lith1251","IE13(33);IE21(79);IE287(97,102);IE288(105)",1.66941729780198,0.00679155132440427
+"S","German","Sohn","CC","i",37,5400000,"spoken","CELEX",7,"German_ST","kinterm","stan1295","IE74;IE234(268)",1.66941729780198,0.00679155132440427
+"S","Italian","figlio","DX","latin",738506,2588873046,"web","Italian Web 2010 (itTenTen)",7,"Italian","kinterm","ital1282","IE80(156,167)",1.66941729780198,0.00679155132440427
+"S","Italian","figlio","DX","latin",45685,1.3e+08,"written","CORIS",7,"Italian","kinterm","ital1282","IE80(156,167)",1.66941729780198,0.00679155132440427
+"S","Albanian","bir","FT","albanian",4119,16700000,"written","Albanian NC",7,"Albanian_Top","kinterm","alba1267","IE29(262);IE139(44);IE20(70)",1.66941729780198,0.00679155132440427
+"S","Dutch","zoon","CC","i",38066,42400000,"spoken","Dutch Instituut voor Nederlandse Lexicologie text corpora (written) (mysterious) Corpus Gesproken Nederlands (spoken)",7,"Dutch_List","kinterm","dutc1256","IE73",1.66941729780198,0.00679155132440427
+"S","Breton","mab","AG","celtic",NA,NA,NA,NA,7,"Breton_List","kinterm","bret1244","IE182(369);IE82(93);IE288(105)",1.66941729780198,0.00679155132440427
+"S","English","son","AQ","i",4363,39502648,"web","pukWaC (ukWaC parsed with MaltParser)",7,"English_ST","kinterm","stan1293","IE72",1.66941729780198,0.00679155132440427
+"S","Polish","syn","AQ","i",321518,7796796565,"web","Polish Web 2012 (plTenTen12)",7,"Polish","kinterm","poli1260","IE71(261);IE59(143);IE146(754)",1.66941729780198,0.00679155132440427
+"S","Portuguese","filho","BA","latin",1809152,3900501097,"web","Portuguese Web 2011 (ptTenTen11, Freeling v3)",7,"Portuguese_ST","kinterm","port1283","IE80(165)",1.66941729780198,0.00679155132440427
+"S","Russian","сын","AQ","i",23247.96,8200000,"written","Russian NC via Leeds",7,"Russian","kinterm","russ1263",NA,1.66941729780198,0.00679155132440427
+"S","Danish","søn","AQ","i",150659,2042601251,"web","Danish Web 2014 (daTenTen14)",7,"Danish","kinterm","dani1285","IE996;IE89(95)",1.66941729780198,0.00679155132440427
+"S","Spanish","hijo","FE","latin",3550529,9497402122,"web","Spanish Web 2011 (esTenTen11, Eu + Am, Freeling v4)",7,"Spanish","kinterm","stan1288","IE80(156-167)",1.66941729780198,0.00679155132440427
+"S","Hindi","beʈaː","GZ","indian2",NA,NA,NA,NA,7,"Hindi","kinterm","hind1269",NA,1.66941729780198,0.00679155132440427
+"S","Belarusian","syn","AQ","i",NA,NA,NA,NA,7,"Byelorussian","kinterm","bela1254","IE146(941);IE296(324)",1.66941729780198,0.00679155132440427
+"S","Spanish","hijo","FE","latin",1178390,9497402122,"web","Spanish Web 2011 (esTenTen11, Eu + Am, Freeling v4)",7,"Spanish","kinterm","stan1288","IE80(156-167)",1.66941729780198,0.00679155132440427
+"S","Oriya","puvo","HU","indian",NA,NA,NA,NA,7,"Oriya","kinterm","oriy1255","DR7(146);IE224(72);IE9(105)",1.66941729780198,0.00679155132440427
+"S","Russian","сын","AQ","i",218.04,8200000,"spoken","Russian NC via Leeds",7,"Russian","kinterm","russ1263",NA,1.66941729780198,0.00679155132440427
+"S","Icelandic","sonur","DQ","i",176,6.5e+07,"written","textasafn",7,"Icelandic_ST","kinterm","icel1247","IE86(186);IE89(91)",1.66941729780198,0.00679155132440427
+"S","Sindhi","puṭu","GD","indian",NA,NA,NA,NA,7,"Sindhi","kinterm","sind1272","DR7(100);IE292);IE9(105)",1.66941729780198,0.00679155132440427
+"S","Romanian","fiu","CS","latin",9926,44729032,"web","Romanian Web (roWaC)",7,"Romanian_List","kinterm","roma1327","IE12(161)",1.66941729780198,0.00679155132440427
+"S","Dutch","zoon","CC","i",247452,2576596803,"web","Dutch Web 2014 (nlTenTen14)",7,"Dutch_List","kinterm","dutc1256","IE73",1.66941729780198,0.00679155132440427
+"S","English","son","AQ","i",3561,39502648,"web","pukWaC (ukWaC parsed with MaltParser)",7,"English_ST","kinterm","stan1293","IE72",1.66941729780198,0.00679155132440427
+"S","Serbian","sin",NA,"i",24816,5.54e+08,"web","scWaC",7,"Serbocroatian","kinterm","sout1528","IE20(47);IE65(25);IE63(46);IE12(146)",1.66941729780198,0.00679155132440427
+"S","Icelandic","sonur","DQ","i",24,6.5e+07,"spoken","textasafn",7,"Icelandic_ST","kinterm","icel1247","IE86(186);IE89(91)",1.66941729780198,0.00679155132440427
+"S","English","son","AQ","i",3589,17400000,"written","CELEX",7,"English_ST","kinterm","stan1293","IE72",1.66941729780198,0.00679155132440427
+"S","Catalan","fill","BA","latin",20462,4189954719,"web","Catalan Web 2014 (caTenTen14)",7,"Catalan","kinterm","stan1289","IE285(4);IE286(416)",1.66941729780198,0.00679155132440427
+"S","Dutch","zoon","CC","i",7997,42400000,"written","Dutch Instituut voor Nederlandse Lexicologie text corpora (written) (mysterious) Corpus Gesproken Nederlands (spoken)",7,"Dutch_List","kinterm","dutc1256","IE73",1.66941729780198,0.00679155132440427
+"S","Catalan","fill","BA","latin",18170,4189954719,"web","Catalan Web 2014 (caTenTen14)",7,"Catalan","kinterm","stan1289","IE285(4);IE286(416)",1.66941729780198,0.00679155132440427
+"S","Polish","syn","AQ","i",15371,3e+08,"written","Polish NC written PELCRA spoken",7,"Polish","kinterm","poli1260","IE71(261);IE59(143);IE146(754)",1.66941729780198,0.00679155132440427
+"S","Romanian","fiu","CS","latin",8837,44729032,"web","Romanian Web (roWaC)",7,"Romanian_List","kinterm","roma1327","IE12(161)",1.66941729780198,0.00679155132440427
+"S","Ukrainian","syn","AQ","i",NA,NA,NA,NA,7,"Ukrainian","kinterm","ukra1253","IE146(993);IE297(314);IE299)",1.66941729780198,0.00679155132440427
+"S","French","fils","CS","latin",1442017,9889689889,"web","French Web 2012 (frTenTen12)",7,"French","kinterm","stan1290","IE80(156,167)",1.66941729780198,0.00679155132440427
+"S","Russian","сын","AQ","i",811604,14553856113,"web","Russian Web 2011 (ruTenTen11)",7,"Russian","kinterm","russ1263",NA,1.66941729780198,0.00679155132440427
+"S","Dutch","zoon","CC","i",187313,2576596803,"web","Dutch Web 2014 (nlTenTen14)",7,"Dutch_List","kinterm","dutc1256","IE73",1.66941729780198,0.00679155132440427
+"S","French","fils","CS","latin",247.64,1.5e+07,"written","lexique corpus",7,"French","kinterm","stan1290","IE80(156,167)",1.66941729780198,0.00679155132440427
+"Z","Bengali","bona","GQ","indian",NA,NA,NA,NA,6,"Bengali","kinterm","beng1280","IE508",1.2052625918976,0.00506460495466527
+"Z","Slovak","sestra","AR","i",NA,NA,NA,NA,6,"Slovak","kinterm","slov1269","IE146(587);IE177(101);IE330(35)",1.2052625918976,0.00506460495466527
+"Z","Frisian","sus","CD","i",NA,NA,NA,NA,6,"Frisian","kinterm","fris1239","IE305;IE307;IE348",1.2052625918976,0.00506460495466527
+"Z","Greek","αδελφή","DI","misc",20849,1958348129,"web","Greek Web 2014 (elTenTen14)",6,"Greek_Mod","kinterm","mode1248",NA,1.2052625918976,0.00506460495466527
+"Z","Kashmiri","beni","HB","indian",NA,NA,NA,NA,6,"Kashmiri","kinterm","kash1277","IE42(40);IE43(229);IE121(224,225);IE218(194)",1.2052625918976,0.00506460495466527
+"Z","Latvian","masa","EB","misc",NA,NA,NA,NA,6,"Latvian","kinterm","latv1249",NA,1.2052625918976,0.00506460495466527
+"Z","German","Schwester","CY","i",13,5400000,"spoken","CELEX",6,"German_ST","kinterm","stan1295","IE74;IE234(268)",1.2052625918976,0.00506460495466527
+"Z","Bulgarian","сестра","AR","i",21630,704955109,"web","Bulgarian Web 2012 (bgTenTen12)",6,"Bulgarian","kinterm","bulg1262",NA,1.2052625918976,0.00506460495466527
+"Z","Marathi","bahiːɳa","HP","indian",NA,NA,NA,NA,6,"Marathi","kinterm","mara1378",NA,1.2052625918976,0.00506460495466527
+"Z","Czech","sestra","AR","i",117,1700000,"spoken","UCNK:SYN2015 (written) ORAL2013 (spoken)",6,"Czech","kinterm","czec1258","IE146(527);IE288(105)",1.2052625918976,0.00506460495466527
+"Z","German","Schwester","CY","i",847345,16534176369,"web","German Web 2013 (deTenTen13)",6,"German_ST","kinterm","stan1295","IE74;IE234(268)",1.2052625918976,0.00506460495466527
+"Z","Lahnda","bhéṇ","HJ","indian",NA,NA,NA,NA,6,"Lahnda","kinterm","lahn1241","IE337(133,6,7);IE292(70);IE293(459)",1.2052625918976,0.00506460495466527
+"Z","Spanish","hermana","BB","latin",726,1e+08,"written","CoE",6,"Spanish","kinterm","stan1288","IE80(156-167)",1.2052625918976,0.00506460495466527
+"Z","Czech","sestra","AR","i",110215,4175089440,"web","Czech Web 2012 (czTenTen12 v8)",6,"Czech","kinterm","czec1258","IE146(527);IE288(105)",1.2052625918976,0.00506460495466527
+"Z","Italian","sorella","DY","i",114826,2588873046,"web","Italian Web 2010 (itTenTen)",6,"Italian","kinterm","ital1282","IE80(156,167)",1.2052625918976,0.00506460495466527
+"Z","Polish","siostra","AR","i",190,3e+08,"spoken","Polish NC written PELCRA spoken",6,"Polish","kinterm","poli1260","IE71(262);IE59(143);IE146(754)",1.2052625918976,0.00506460495466527
+"Z","Breton","c'hoar","AH","celtic",NA,NA,NA,NA,6,"Breton_List","kinterm","bret1244","IE180(181);IE182(366);IE82(93,95);IE288(107); IE83",1.2052625918976,0.00506460495466527
+"Z","Bulgarian","сестра","AR","i",NA,1.95e+09,"spoken","Bulgarian NC",6,"Bulgarian","kinterm","bulg1262",NA,1.2052625918976,0.00506460495466527
+"Z","Albanian","motër","FQ","misc",437,16700000,"spoken","Albanian NC",6,"Albanian_Top","kinterm","alba1267","IE12(155);IE29(261);IE138(17,64);IE20(70)",1.2052625918976,0.00506460495466527
+"Z","Croatian","sestra","AR","i",39122,1.21e+09,"web","hrWaC",6,"Serbocroatian_Croatia","kinterm","sout1528","IE20(47);IE65(25);IE63(46,47);IE12(146)",1.2052625918976,0.00506460495466527
+"Z","German","Schwester","CY","i",402,5400000,"written","CELEX",6,"German_ST","kinterm","stan1295","IE74;IE234(268)",1.2052625918976,0.00506460495466527
+"Z","Spanish","hermana","BB","latin",346,1e+08,"spoken","CoE",6,"Spanish","kinterm","stan1288","IE80(156-167)",1.2052625918976,0.00506460495466527
+"Z","Bulgarian","сестра","AR","i",60080,1.95e+09,"written","Bulgarian NC",6,"Bulgarian","kinterm","bulg1262",NA,1.2052625918976,0.00506460495466527
+"Z","Albanian","motër","FQ","misc",1125,16700000,"written","Albanian NC",6,"Albanian_Top","kinterm","alba1267","IE12(155);IE29(261);IE138(17,64);IE20(70)",1.2052625918976,0.00506460495466527
+"Z","Spanish","hermana","BB","latin",285553,9497402122,"web","Spanish Web 2011 (esTenTen11, Eu + Am, Freeling v4)",6,"Spanish","kinterm","stan1288","IE80(156-167)",1.2052625918976,0.00506460495466527
+"Z","Norwegian","søster","EK","i",47441,1698481187,"web","Norwegian Web 2015 (noTenTen15) Bokmal and Nynorsk",6,"Riksmal","kinterm","norw1259","IE89(95)",1.2052625918976,0.00506460495466527
+"Z","Spanish","hermana","BB","latin",9748,9497402122,"web","Spanish Web 2011 (esTenTen11, Eu + Am, Freeling v4)",6,"Spanish","kinterm","stan1288","IE80(156-167)",1.2052625918976,0.00506460495466527
+"Z","Icelandic","systir","BV","i",252,6.5e+07,"written","textasafn",6,"Icelandic_ST","kinterm","icel1247","IE89(91)",1.2052625918976,0.00506460495466527
+"Z","Macedonian","сестра","AR","i",NA,NA,NA,NA,6,"Macedonian","kinterm","mace1250",NA,1.2052625918976,0.00506460495466527
+"Z","Oriya","bhauni","GA","indian",NA,NA,NA,NA,6,"Oriya","kinterm","oriy1255","DR7(146);IE224(71);IE9(109)",1.2052625918976,0.00506460495466527
+"Z","Lithuanian","sesuo","EI","i",NA,NA,NA,NA,6,"Lithuanian_ST","kinterm","lith1251",NA,1.2052625918976,0.00506460495466527
+"Z","Czech","sestra","AR","i",16792,1700000,"written","UCNK:SYN2015 (written) ORAL2013 (spoken)",6,"Czech","kinterm","czec1258","IE146(527);IE288(105)",1.2052625918976,0.00506460495466527
+"Z","Portuguese","irmã","ES","latin",3121,4.5e+07,"written","CoP",6,"Portuguese_ST","kinterm","port1283","IE80(166)",1.2052625918976,0.00506460495466527
+"Z","Avestan","xʷaŋhar-","GH","misc",NA,NA,NA,NA,6,"Avestan","kinterm","aves1237","IE507",1.2052625918976,0.00506460495466527
+"Z","Norwegian","søster","EK","i",104646,1698481187,"web","Norwegian Web 2015 (noTenTen15) Bokmal and Nynorsk",6,"Riksmal","kinterm","norw1259","IE89(95)",1.2052625918976,0.00506460495466527
+"Z","Gujarati","bahan","GX","indian",NA,NA,NA,NA,6,"Gujarati","kinterm","guja1252","IE9(109);IE155(93);IE108(167);IE96(211);DR7(146)",1.2052625918976,0.00506460495466527
+"Z","Ossetic","xwæræ","HW","indian2",NA,NA,NA,NA,6,"Iron_Ossetic","kinterm","osse1245","IE211(248)",1.2052625918976,0.00506460495466527
+"Z","Czech","sestra","AR","i",369758,4175089440,"web","Czech Web 2012 (czTenTen12 v8)",6,"Czech","kinterm","czec1258","IE146(527);IE288(105)",1.2052625918976,0.00506460495466527
+"Z","Portuguese","irmã","ES","latin",77,4.5e+07,"spoken","CoP",6,"Portuguese_ST","kinterm","port1283","IE80(166)",1.2052625918976,0.00506460495466527
+"Z","Portuguese","irmã","ES","latin",104344,3900501097,"web","Portuguese Web 2011 (ptTenTen11, Freeling v3)",6,"Portuguese_ST","kinterm","port1283","IE80(166)",1.2052625918976,0.00506460495466527
+"Z","Dutch","zus","CD","i",423,42400000,"written","Dutch Instituut voor Nederlandse Lexicologie text corpora (written) (mysterious) Corpus Gesproken Nederlands (spoken)",6,"Dutch_List","kinterm","dutc1256","IE73",1.2052625918976,0.00506460495466527
+"Z","English","sister","CM","i",1299,39502648,"web","pukWaC (ukWaC parsed with MaltParser)",6,"English_ST","kinterm","stan1293","IE72",1.2052625918976,0.00506460495466527
+"Z","English","sister","CM","i",75,17400000,"spoken","CELEX",6,"English_ST","kinterm","stan1293","IE72",1.2052625918976,0.00506460495466527
+"Z","English","sister","CM","i",1964,17400000,"written","CELEX",6,"English_ST","kinterm","stan1293","IE72",1.2052625918976,0.00506460495466527
+"Z","Danish","søster","BV","i",115128,2042601251,"web","Danish Web 2014 (daTenTen14)",6,"Danish","kinterm","dani1285","IE996;IE89(95)",1.2052625918976,0.00506460495466527
+"Z","Danish","søster","BV","i",70845,2042601251,"web","Danish Web 2014 (daTenTen14)",6,"Danish","kinterm","dani1285","IE996;IE89(95)",1.2052625918976,0.00506460495466527
+"Z","Portuguese","irmã","ES","latin",21817,3900501097,"web","Portuguese Web 2011 (ptTenTen11, Freeling v3)",6,"Portuguese_ST","kinterm","port1283","IE80(166)",1.2052625918976,0.00506460495466527
+"Z","German","Schwester","CY","i",616266,16534176369,"web","German Web 2013 (deTenTen13)",6,"German_ST","kinterm","stan1295","IE74;IE234(268)",1.2052625918976,0.00506460495466527
+"Z","Swedish","syster","BV","i",229119,3411216955,"web","Swedish Web 2014 (svTenTen14)",6,"Swedish_List","kinterm","swed1254","IE995;IE89(94)",1.2052625918976,0.00506460495466527
+"Z","Swedish","syster","BV","i",166142,3411216955,"web","Swedish Web 2014 (svTenTen14)",6,"Swedish_List","kinterm","swed1254","IE995;IE89(94)",1.2052625918976,0.00506460495466527
+"Z","Swedish","syster","BV","i",NA,1e+06,"spoken","SUC",6,"Swedish_List","kinterm","swed1254","IE995;IE89(94)",1.2052625918976,0.00506460495466527
+"Z","Irish","deirbhshiur","DS","i",NA,NA,NA,NA,6,"Irish_A","kinterm","iris1253","IE180(181,261);IE225(432);IE182(107,108);IE294(63)",1.2052625918976,0.00506460495466527
+"Z","Hindi","bahan̪","GX","indian",NA,NA,NA,NA,6,"Hindi","kinterm","hind1269",NA,1.2052625918976,0.00506460495466527
+"Z","Dutch","zus","CD","i",57001,2576596803,"web","Dutch Web 2014 (nlTenTen14)",6,"Dutch_List","kinterm","dutc1256","IE73",1.2052625918976,0.00506460495466527
+"Z","Catalan","germana","BB","latin",703,4189954719,"web","Catalan Web 2014 (caTenTen14)",6,"Catalan","kinterm","stan1289","IE285(5);IE286(416)",1.2052625918976,0.00506460495466527
+"Z","Catalan","germana","BB","latin",8094,4189954719,"web","Catalan Web 2014 (caTenTen14)",6,"Catalan","kinterm","stan1289","IE285(5);IE286(416)",1.2052625918976,0.00506460495466527
+"Z","English","sister","CM","i",1763,39502648,"web","pukWaC (ukWaC parsed with MaltParser)",6,"English_ST","kinterm","stan1293","IE72",1.2052625918976,0.00506460495466527
+"Z","Tajik","hohar","IL","misc",NA,NA,NA,NA,6,"Tadzik","kinterm","taji1245","IE208(478)",1.2052625918976,0.00506460495466527
+"Z","Icelandic","systir","BV","i",47,6.5e+07,"spoken","textasafn",6,"Icelandic_ST","kinterm","icel1247","IE89(91)",1.2052625918976,0.00506460495466527
+"Z","Russian","сестра","AR","i",984530,14553856113,"web","Russian Web 2011 (ruTenTen11)",6,"Russian","kinterm","russ1263",NA,1.2052625918976,0.00506460495466527
+"Z","Russian","сестра","AR","i",9808.81,8200000,"written","Russian NC via Leeds",6,"Russian","kinterm","russ1263",NA,1.2052625918976,0.00506460495466527
+"Z","Russian","сестра","AR","i",270463,14553856113,"web","Russian Web 2011 (ruTenTen11)",6,"Russian","kinterm","russ1263",NA,1.2052625918976,0.00506460495466527
+"Z","Russian","сестра","AR","i",249.19,8200000,"spoken","Russian NC via Leeds",6,"Russian","kinterm","russ1263",NA,1.2052625918976,0.00506460495466527
+"Z","Italian","sorella","DY","i",4,1.3e+08,"spoken","CORIS",6,"Italian","kinterm","ital1282","IE80(156,167)",1.2052625918976,0.00506460495466527
+"Z","Swedish","syster","BV","i",60,1e+06,"written","SUC",6,"Swedish_List","kinterm","swed1254","IE995;IE89(94)",1.2052625918976,0.00506460495466527
+"Z","Assamese","bhani","GA","indian",NA,NA,NA,NA,6,"Assamese","kinterm","assa1263","DR7(104);IE9(109);IE224(71)",1.2052625918976,0.00506460495466527
+"Z","Belarusian","sjastrá","AR","i",NA,NA,NA,NA,6,"Byelorussian","kinterm","bela1254","IE146(941);IE296(28);IE332(253,123)",1.2052625918976,0.00506460495466527
+"Z","Ukrainian","sestrá","AR","i",NA,NA,NA,NA,6,"Ukrainian","kinterm","ukra1253","IE146(993);IE297(314);IE299)",1.2052625918976,0.00506460495466527
+"Z","Romanian","tată","EY","misc",NA,4.1e+07,"spoken","ROMBAC",6,"Romanian_List","kinterm","roma1327",NA,1.2052625918976,0.00506460495466527
+"Z","Romanian","tată","EY","misc",3741,4.1e+07,"written","ROMBAC",6,"Romanian_List","kinterm","roma1327",NA,1.2052625918976,0.00506460495466527
+"Z","Romanian","tată","EY","misc",2918,44729032,"web","Romanian Web (roWaC)",6,"Romanian_List","kinterm","roma1327",NA,1.2052625918976,0.00506460495466527
+"Z","Romanian","tată","EY","misc",19883,44729032,"web","Romanian Web (roWaC)",6,"Romanian_List","kinterm","roma1327",NA,1.2052625918976,0.00506460495466527
+"Z","Serbian","sestra",NA,"i",10288,5.54e+08,"web","scWaC",6,"Serbocroatian","kinterm","sout1528","IE20(47);IE65(25);IE63(46,47);IE12(146)",1.2052625918976,0.00506460495466527
+"Z","Polish","siostra","AR","i",6573,3e+08,"written","Polish NC written PELCRA spoken",6,"Polish","kinterm","poli1260","IE71(262);IE59(143);IE146(754)",1.2052625918976,0.00506460495466527
+"Z","Polish","siostra","AR","i",2273975,7796796565,"web","Polish Web 2012 (plTenTen12)",6,"Polish","kinterm","poli1260","IE71(262);IE59(143);IE146(754)",1.2052625918976,0.00506460495466527
+"Z","Urdu","bahen","GX","indian",NA,NA,NA,NA,6,"Urdu","kinterm","urdu1245","IE188(347);IE363(26);IE292",1.2052625918976,0.00506460495466527
+"Z","Polish","siostra","AR","i",165822,7796796565,"web","Polish Web 2012 (plTenTen12)",6,"Polish","kinterm","poli1260","IE71(262);IE59(143);IE146(754)",1.2052625918976,0.00506460495466527
+"Z","Italian","sorella","DY","i",79116,2588873046,"web","Italian Web 2010 (itTenTen)",6,"Italian","kinterm","ital1282","IE80(156,167)",1.2052625918976,0.00506460495466527
+"Z","Italian","sorella","DY","i",9680,1.3e+08,"written","CORIS",6,"Italian","kinterm","ital1282","IE80(156,167)",1.2052625918976,0.00506460495466527
+"Z","French","soeur","CT","i",116.55,1.5e+07,"written","lexique corpus",6,"French","kinterm","stan1290","IE80(156,167)",1.2052625918976,0.00506460495466527
+"Z","French","soeur","CT","i",400824,9889689889,"web","French Web 2012 (frTenTen12)",6,"French","kinterm","stan1290","IE80(156,167)",1.2052625918976,0.00506460495466527
+"Z","French","soeur","CT","i",155.22,1.5e+07,"spoken","lexique corpus",6,"French","kinterm","stan1290","IE80(156,167)",1.2052625918976,0.00506460495466527
+"Z","Sindhi","bheṇu","HJ","indian",NA,NA,NA,NA,6,"Sindhi","kinterm","sind1272","IE9(109);DR7(99);IE292)",1.2052625918976,0.00506460495466527
+"Z","Dutch","zus","CD","i",78554,2576596803,"web","Dutch Web 2014 (nlTenTen14)",6,"Dutch_List","kinterm","dutc1256","IE73",1.2052625918976,0.00506460495466527
+"Z","Dutch","zus","CD","i",11457,42400000,"spoken","Dutch Instituut voor Nederlandse Lexicologie text corpora (written) (mysterious) Corpus Gesproken Nederlands (spoken)",6,"Dutch_List","kinterm","dutc1256","IE73",1.2052625918976,0.00506460495466527
+"Z","Welsh","chwaer","FN","celtic",NA,NA,NA,NA,6,"Welsh_C","kinterm","wels1247","IE174(42);IE173(117,119);IE288(107); IE339",1.2052625918976,0.00506460495466527

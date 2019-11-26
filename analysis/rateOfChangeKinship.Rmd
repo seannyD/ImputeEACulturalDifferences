@@ -1,0 +1,145 @@
+---
+title: "Rate of change for Kinship words"
+output: pdf_document
+---
+
+```{r echo=F,eval=F}
+setwd("~/Documents/Bristol/word2vec/word2vec_DPLACE/analysis/")
+```
+
+
+```{r warning=F,message=F}
+library(dplyr)
+library(lme4)
+library(ggplot2)
+```
+
+Read in data:
+
+```{r}
+d = read.csv("../data/FAIR/nel-wiki-k100-alignments-merged-long.csv",encoding = "UTF-8",fileEncoding = "UTF-8",stringsAsFactors = F)
+# Data on languages
+l = read.csv("../data/FAIR_langauges_glotto_xdid.csv", stringsAsFactors = F)
+
+# Read in kinship rate of change data
+r = read.csv("../data/RaczPassmoreSheardJordan_2019/supp-data-si.csv",encoding = "UTF-8",fileEncoding = "UTF-8",stringsAsFactors = F)
+# Edit language isos
+r$language.iso = l[match(r$language,l$Language),]$iso2
+r[r$language=="Norwegian",]$language.iso = "no"
+r[r$language=="Ossetic",]$language.iso = "os"
+# copy
+rkin = r
+```
+
+Calculate log frequency per million
+```{r}
+rkin$lfpm = log10(rkin$word.count / (rkin$corpora.size/1000000))
+```
+
+Merge the data:
+
+```{r}
+rkin2 = left_join(d, rkin, by = c("Word_Form_l1" = "word", "l1" = "language.iso"))
+names(rkin) = paste0(names(rkin),".l2")
+rkin2 = left_join(rkin2, rkin, by = c("Word_Form_l2" = "word.l2", "l2" = "language.iso.l2"))
+```
+
+Exclude missing data:
+
+```{r}
+rkin2 = rkin2[!is.na(rkin2$mean.roc),]
+rkin2 = rkin2[!is.na(rkin2$mean.roc.l2),]
+rkin3 = rkin2[,c("l1","l2","meaning","Word_Form_l1","Word_Form_l2",
+                 "local_alignment","Concept_ID","lfpm","lfpm.l2",
+                 "mean.roc","mean.roc.l2","lingpy.cognate","expert.cognate",
+                 "glottocode","glottocode.l2")]
+```
+
+Plot data:
+```{r}
+ggplot(rkin3, aes(y=local_alignment,x=mean.roc,color=meaning)) +
+  geom_boxplot() 
+```
+
+Scale and center data
+```{r}
+rkin3$mean.roc.scaled = scale(rkin3$mean.roc)
+rkin3$local_alignment.scaled = scale(rkin3$local_alignment)
+rkin3$meaning = factor(rkin3$meaning,
+                       levels=c("Z","B","D","S","F","M","MZ","MB","MZD"),
+                       labels = c("Sister","Brother","Daughter","Son",
+                                  "Father","Mother","Aunt","Uncle","Niece"))
+```
+
+Variable for language pair:
+```{r}
+rkin3$langPair = apply(rkin3[,c("l1","l2")],1,function(X){
+  paste(sort(X),collapse="-")
+})
+```
+
+Predit local alignment by rate of change, with random intercepts for each cognate within each meaning, and random intercepts for l1 and l2.  Note that we're predicting local alignment from rate of change (not the other way around). This is because rate of change is unique to a particular cognate within a particular meaning.
+
+```{r}
+m0 = lmer(local_alignment.scaled ~ 
+            (1|lingpy.cognate/meaning) +
+            (1|langPair), 
+          data=rkin3,
+          control = lmerControl(optimizer = "bobyqa"))
+m1 = update(m0, ~.+mean.roc.scaled)
+
+anova(m0,m1)
+summary(m1)
+```
+
+
+Same as above, but also control for frequency difference (part of speech is the same).
+
+```{r}
+rkin3$freq_diff = abs(rkin3$lfpm - rkin3$lfpm.l2)
+rkin3Freq = rkin3[!is.na(rkin3$freq_diff),]
+m0.freq = lmer(local_alignment.scaled ~ freq_diff +
+            (1|lingpy.cognate/meaning) +
+            (1|langPair), 
+          data=rkin3Freq,
+          control = lmerControl(optimizer = "bobyqa"))
+m1.freq = update(m0.freq, ~.+mean.roc.scaled)
+
+anova(m0.freq,m1.freq)
+summary(m1.freq)
+```
+
+
+Plot data with model estimate (solid line), and estimate when taking frequency into account (dashed line). The rate of change is calculated for each meaning, hence the clustering. Note the plot is in scaled space.
+
+```{r}
+ggplot(rkin3, aes(y=local_alignment.scaled,
+                  x=mean.roc.scaled,
+                  color=meaning)) +
+  geom_boxplot() +
+  geom_abline(slope=fixef(m1)["mean.roc.scaled"],
+              intercept = fixef(m1)[1]) +
+  geom_abline(slope=fixef(m1.freq)["mean.roc.scaled"],
+              intercept = fixef(m1.freq)[1],linetype = 2) +
+  xlab("Rate of change (scaled and centered)") +
+  ylab("Local alignment (scaled and centered)")
+
+```
+
+```{r echo=F,eval=F}
+# Attempt to rescale model estimates back to real numbers:
+m1_slope = fixef(m1)["mean.roc.scaled"] * 
+            attr(rkin3$mean.roc.scaled,"scaled:scale") *
+            attr(rkin3$local_alignment.scaled,"scaled:scale")
+m1_intercept = (fixef(m1)[1] -
+        (attr(rkin3$mean.roc.scaled,"scaled:center")*fixef(m1)[2]) +
+      attr(rkin3$local_alignment.scaled,"scaled:center")) 
+
+ggplot(rkin3, aes(y=local_alignment,
+                  x=mean.roc,
+                  color=meaning)) +
+  geom_boxplot() +
+  geom_abline(slope=m1_slope, intercept =  m1_intercept) 
+
+```
+
