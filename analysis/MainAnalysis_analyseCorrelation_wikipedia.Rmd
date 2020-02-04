@@ -61,10 +61,22 @@ We produced 100 imputation sets with the final settings.  These were then used t
 
 The full scripts and data can be found at [https://github.com/seannyD/ImputeEACulturalDifferences](https://github.com/seannyD/ImputeEACulturalDifferences).  Reviewers can follow this link: [https://figshare.com/s/06378bc59a771d28b1d0](https://figshare.com/s/06378bc59a771d28b1d0)
 
+## Colexification data
+
+We used the CLICS3 database (Rzymski et al., 2020) to obtain an estimate of the proportion of colexifications in common between two langauges. A colexification is when the same word is used (within a language) to refer to two concepts. The measure is based on the number of pairs of concepts that are colexified in both languages in the CLICS database. For each language pair, we look at each concept pair and tests whether their colexification status matches. The value is 1 if and only if the two concepts are colexified in each langage.
+
+For example, if language A uses one word to refer to both of the concepts 'hand' and 'arm', and language B also uses (a different) one word to refer to both of the concepts 'hand' and 'arm', then the languages have a colexification in common, and we would expect higher alignment.
+
+For a language pair, the total number of colexifications in common is calculated and divided by the total number of pairs for which a comparison was possible, to get an estimate of the proportion of colexifications in common.  Example code for calculating this measure is found in `processing/getCLICSData.py`.
+
+Colexification data was not available for 5% of language pairs. 
+
+Note that the data file also contains a measure `numMatchingColexified`, which counts the numebr of concept pairs where the colexification status matches (1 if both languages are colexified or both languages are not colexified). This is not used.
+
 \newpage
 
 
-## Load libraries
+# Load libraries
 ```{r warning=F, message=F}
 library(ape)
 library(ecodist)
@@ -140,10 +152,10 @@ matches = sapply(1:nrow(ling), function(i){
 })
 
 ling$cult.dist = cult[matches,]$cult.dist
-# Flip
-ling$cult.dist = 1 - ling$cult.dist
+# Flip to similarity
+ling$cult.sim = 1 - ling$cult.dist
 # Scale
-ling$cult.dist.center = scale(ling$cult.dist)
+ling$cult.sim.center = scale(ling$cult.sim)
 cdc.s = attr(ling$cult.dist.center,"scaled:scale")
 cdc.c = attr(ling$cult.dist.center,"scaled:center")
 ling$cult.dist.center = as.numeric(ling$cult.dist.center)
@@ -180,6 +192,27 @@ And the same is true for area:
 ```{r}
 tail(ling[,c("l1","l2","local_alignment",'area.group')])
 ```
+
+
+```{r}
+colex = read.csv("../data/FAIR/colexification-for-alignment-with-isos.csv",
+                 stringsAsFactors = F)
+colex$propCommonColexifications = 
+  colex$numColexified / colex$n_overlapConceptPairs
+# Scale and center
+colex$propCommonColexifications = scale(colex$propCommonColexifications)
+
+colex$langPair = apply(colex[,c("l1_iso2","l2_iso2")],
+                  1, function(X){
+                  paste(sort(X),collapse="_")})
+ling$langPair = apply(ling[,c("l1","l2")],
+                  1, function(X){
+                  paste(sort(X),collapse="_")})
+
+ling$colex = colex[match(ling$langPair,colex$langPair),
+                   ]$propCommonColexifications
+```
+
 
 Number of observations:
 
@@ -368,6 +401,26 @@ summary(m1NK)
 ```
 
 \newpage
+
+## Controlling for colexification
+
+Below we show two things: 
+First, the proportion of common colexifications between two languages predicts semantic alignment. However, the relationship is fairly weak and negative. A higher number of common colexifications predicts a lower semantic alignment.
+
+```{r}
+m0Colex = lmer(
+  rho.center ~ 1 +
+    comparison_count.center +
+    (1 + cult.dist.center | family.group) +
+    (1 + cult.dist.center | area.group),
+  data = ling[!is.na(ling$colex),]
+)
+m1Colex = update(m0Colex,~.+colex)
+m2Colex = update(m1Colex,~.+cult.dist.center)
+anova(m0Colex,m1Colex,m2Colex)
+summary(m2Colex)
+```
+
 
 ##  MRM
 
@@ -1081,8 +1134,9 @@ Mantel, N. (1967). The detection of disease clustering and a generalized regress
 
 Murdock, G. P., R. Textor, H. Barry, III, D. R. White, J. P. Gray, and W. T. Divale. 1999. Ethnographic Atlas. World Cultures 10:24-136 (codebook)
 
-Nichols, J., Witzlack-Makarevich, A. & Bickel, B. (2013), The AUTOTYP genealogy and geography
-database: 2013 release, http://www.spw.uzh.ch/autotyp/.
+Nichols, J., Witzlack-Makarevich, A. & Bickel, B. (2013), The AUTOTYP genealogy and geography database: 2013 release, http://www.spw.uzh.ch/autotyp/.
+
+Rzymski, C., Tresoldi, T., Greenhill, S.J., Wu, M.S., Schweikhard, N.E., Koptjevskaja-Tamm, M., Gast, V., Bodt, T.A., Hantgan, A., Kaiping, G.A. and Chang, S. (2020). The Database of Cross-Linguistic Colexifications, reproducible analysis of cross-linguistic polysemies. Scientific Data, 7(1), 1-12.
 
 Smouse, P.E., Long, J.C. & Sokal, R.R. (1986). Multiple regression and correlation extensions of the Mantel test of matrix correspondence. Systematic Zoology 35:62 7-632.
 
