@@ -101,7 +101,9 @@ lingDistancesByDomainFile = "../results/EA_distances/nel-wiki-k100_with_ling.csv
 \newpage
 
 
-# All domains
+# Categorical controls for historical relatedness
+
+This section uses language families as a control for historical relatedness using mixed effects modelling and MRM.
 
 ## Load data
 
@@ -156,9 +158,9 @@ ling$cult.dist = cult[matches,]$cult.dist
 ling$cult.sim = 1 - ling$cult.dist
 # Scale
 ling$cult.sim.center = scale(ling$cult.sim)
-cdc.s = attr(ling$cult.dist.center,"scaled:scale")
-cdc.c = attr(ling$cult.dist.center,"scaled:center")
-ling$cult.dist.center = as.numeric(ling$cult.dist.center)
+cdc.s = attr(ling$cult.sim.center,"scaled:scale")
+cdc.c = attr(ling$cult.sim.center,"scaled:center")
+ling$cult.sim.center = as.numeric(ling$cult.sim.center)
 ling$comparison_count.center = 
   scale(ling$comparison_count)
 
@@ -193,6 +195,7 @@ And the same is true for area:
 tail(ling[,c("l1","l2","local_alignment",'area.group')])
 ```
 
+Add colexification data:
 
 ```{r}
 colex = read.csv("../data/FAIR/colexification-for-alignment-with-isos.csv",
@@ -251,23 +254,23 @@ We start with a null model with random intercepts for family and area, and rando
 ```{r}
 m0 = lmer(
   rho.center ~ 1 +
-    (1 + cult.dist.center | family.group) +
-    (1 + cult.dist.center | area.group),
+    (1 + cult.sim.center | family.group) +
+    (1 + cult.sim.center | area.group),
   data = ling
 )
 m0.5 = lmer(
   rho.center ~ 1 +
     comparison_count.center +
-    (1 + cult.dist.center | family.group) +
-    (1 + cult.dist.center | area.group),
+    (1 + cult.sim.center | family.group) +
+    (1 + cult.sim.center | area.group),
   data = ling
 )
 m1 = lmer(
   rho.center ~ 1 +
     comparison_count.center +
-    cult.dist.center +
-    (1 + cult.dist.center | family.group) +
-    (1 + cult.dist.center | area.group),
+    cult.sim.center +
+    (1 + cult.sim.center | family.group) +
+    (1 + cult.sim.center | area.group),
   data = ling
 )
 an1 = anova(m0,m0.5,m1)
@@ -300,7 +303,7 @@ trans = function(X){
   attr(ling$rho.center,"scaled:center")
 }
 
-gx = plot_model(m1,'pred',terms='cult.dist.center')
+gx = plot_model(m1,'pred',terms='cult.sim.center')
 gx$data$predicted = trans(gx$data$predicted)
 gx$data$conf.low = trans(gx$data$conf.low)
 gx$data$conf.high = trans(gx$data$conf.high)
@@ -311,7 +314,7 @@ gx = gx + #coord_cartesian(ylim=c(0,0.5),
   xlab("Cultural similarity") +
   ylab("Semantic alignment") +
   ggtitle("") +
-  geom_point(data=ling,aes(x=cult.dist,y=local_alignment))
+  geom_point(data=ling,aes(x=cult.sim,y=local_alignment))
 gx
 pdf(paste0("../results/stats/",datasetName,"/CulturalDistance_Rho_Graph.pdf"),
     height=2.5, width=2.5)
@@ -322,7 +325,7 @@ dev.off()
 Plot the random effects:
 
 ```{r}
-plot_model(m1,'re', sort.est = "cult.dist.center")
+plot_model(m1,'re', sort.est = "cult.sim.center")
 ```
 
 \newpage
@@ -347,12 +350,12 @@ which(cult$l1.iso2==lingNK$l1[i] & cult$l2.iso2==lingNK$l2[i])
 
 lingNK$cult.dist = cult[matches,]$cult.dist
 # Flip
-lingNK$cult.dist = 1 - lingNK$cult.dist
+lingNK$sim.dist = 1 - lingNK$cult.dist
 # Scale
-lingNK$cult.dist.center = scale(lingNK$cult.dist)
-cdc.sNK = attr(lingNK$cult.dist.center,"scaled:scale")
-cdc.cNK = attr(lingNK$cult.dist.center,"scaled:center")
-lingNK$cult.dist.center = as.numeric(lingNK$cult.dist.center)
+lingNK$cult.sim.center = scale(lingNK$cult.sim)
+cdc.sNK = attr(lingNK$cult.sim.center,"scaled:scale")
+cdc.cNK = attr(lingNK$cult.sim.center,"scaled:center")
+lingNK$cult.sim.center = as.numeric(lingNK$cult.sim.center)
 lingNK$comparison_count.center = 
 scale(lingNK$comparison_count)
 
@@ -377,23 +380,23 @@ Run the lmer models:
 ```{r}
 m0NK = lmer(
   rho.center ~ 1 +
-    (1 + cult.dist.center | family.group) +
-    (1 + cult.dist.center | area.group),
+    (1 + cult.sim.center | family.group) +
+    (1 + cult.sim.center | area.group),
   data = lingNK
 )
 m0.5NK = lmer(
   rho.center ~ 1 +
     comparison_count.center +
-    (1 + cult.dist.center | family.group) +
-    (1 + cult.dist.center | area.group),
+    (1 + cult.sim.center | family.group) +
+    (1 + cult.sim.center | area.group),
   data = lingNK
 )
 m1NK = lmer(
   rho.center ~ 1 +
     comparison_count.center +
-    cult.dist.center +
-    (1 + cult.dist.center | family.group) +
-    (1 + cult.dist.center | area.group),
+    cult.sim.center +
+    (1 + cult.sim.center | family.group) +
+    (1 + cult.sim.center | area.group),
   data = lingNK
 )
 anova(m0NK,m0.5NK,m1NK)
@@ -405,18 +408,25 @@ summary(m1NK)
 ## Controlling for colexification
 
 Below we show two things: 
-First, the proportion of common colexifications between two languages predicts semantic alignment. However, the relationship is fairly weak and negative. A higher number of common colexifications predicts a lower semantic alignment.
+
+Firstly, the proportion of common colexifications between two languages predicts semantic alignment. However, the relationship is fairly weak and negative. A higher number of common colexifications predicts a lower semantic alignment.
+
+Secondly, the relationship between semantic alignment and cultural similarity remains significant when controlling for colexification. 
 
 ```{r}
+# baseline model with just comparison count
 m0Colex = lmer(
   rho.center ~ 1 +
     comparison_count.center +
-    (1 + cult.dist.center | family.group) +
-    (1 + cult.dist.center | area.group),
+    (1 + cult.sim.center | family.group) +
+    (1 + cult.sim.center | area.group),
   data = ling[!is.na(ling$colex),]
 )
+# Add colexification
 m1Colex = update(m0Colex,~.+colex)
-m2Colex = update(m1Colex,~.+cult.dist.center)
+# Add cultural similarity
+m2Colex = update(m1Colex,~.+cult.sim.center)
+# Model comparison
 anova(m0Colex,m1Colex,m2Colex)
 summary(m2Colex)
 ```
@@ -572,15 +582,15 @@ ecodist::MRM(as.dist(ling.m2) ~
 
 \newpage
 
-# Mantel tests
+# Continuous controls for historical relatedness 
 
-Read the historical distances for Indo-European, based on the phylogenetic distances.
+This section uses phylogenetic distances between langauges to control for historical relatedness using Mantel tests and MRM. 
 
 ## Data prep
 
 The geographic distances are loaded above (from "../data/GeographicDistances.csv").
 
-Load historical distances (Indo-European tree patristic distances):
+Read the historical distances for Indo-European, based on the phylogenetic distances (Indo-European tree patristic distances):
 
 ```{r}
 hist = read.csv("../data/trees/IndoEuropean_historical_distances.csv", stringsAsFactors = F)
@@ -744,6 +754,91 @@ cat(mainMantel2,
 ```
 
 
+### Controlling for colexification
+
+Convert the colexification data to a distance matrix:
+
+```{r}
+# recalculate proportion without scaling and centering
+colex$propCommonColexifications.raw = 
+  colex$numColexified/colex$n_overlapConceptPairs
+# This method sets missing values to zero
+# this is ok above, because we can identify zero
+# as missing. But the propCommonColexifications 
+# measure can have values of 0, so we shift everything up
+# temporarily: 
+colex$propCommonColexifications.raw = colex$propCommonColexifications.raw + 100
+grphC <- graph.data.frame(colex[,
+          c("l1_iso2", 'l2_iso2', 'propCommonColexifications.raw')], 
+          directed=FALSE)
+# add value as a weight attribute
+colex.m = get.adjacency(grphC, attr="propCommonColexifications.raw", sparse=FALSE)
+rownames(colex.m) = l[match(rownames(colex.m),l$iso2),]$Language2
+colnames(colex.m) = l[match(colnames(colex.m),l$iso2),]$Language2
+# impute missing data with mean
+colex.m[colex.m==0] = mean(colex$propCommonColexifications.raw)
+# shift back:
+colex.m = colex.m -100
+# Flip to distance
+colex.m = 0-colex.m
+diag(colex.m) = 0
+```
+
+The colexification data is missing for one language, so we only have 18 observations in common:
+
+```{r}
+in.colex = in.analysis[in.analysis %in% rownames(colex.m)]
+colex.m3 = colex.m[in.colex,in.colex]
+cult.m3 = cult.m[in.colex,in.colex]
+ling.m3 = ling.m[in.colex,in.colex]
+hist.m3 = hist.m[in.colex,in.colex]
+geo.m3 = geoDist.m[in.colex,in.colex]
+```
+
+There is a weak positive correlation between the colexification distance and the historical distance. This makes sense: a greater proportion of colexifications would be expected between languages with a smaller historical distance (more closely related).
+
+```{r}
+ecodist::mantel(as.dist(hist.m3)~
+                  as.dist(colex.m3),
+                nperm = 100000)
+```
+
+There is no significant correlation between semantic alignment and colexificaiton:
+
+```{r}
+ecodist::mantel(as.dist(ling.m3)~
+                  as.dist(colex.m3),
+                nperm = 100000)
+```
+
+
+*Main test*: The correlation between semantic alignment and cultural distance remains significant when controlling for historical distance, geographic distance and colexification distance:
+
+```{r}
+mainMantelCLX = ecodist::mantel(as.dist(ling.m3)~
+                  as.dist(cult.m3) + 
+                  as.dist(hist.m3) +
+                  as.dist(geo.m3) +
+                  as.dist(colex.m3),
+                nperm = 100000)
+mainMantelCLX
+```
+
+
+```{r}
+mainMantelCLX = round(mainMantelCLX,2)
+mainMantelCLX2 = sprintf("$r$ = %s, 95\\%% CI = [%s,%s], one-tailed $p$ = %s",
+        round(mainMantelCLX[1],3),
+        round(mainMantelCLX[5],3),
+        round(mainMantelCLX[6],3),
+        round(mainMantelCLX[2],3)
+      )
+mainMantelCLX2 = gsub("0\\.",".",mainMantelCLX2)
+cat(mainMantelCLX2,
+    file="../results/stats/tex/MantelCultrualVsLinguisticDistance_Partial_withColexification.tex")
+```
+
+
 ## MRM
 
 Perform the main test using the phylogenetic distance, but using multiple regression on distance matrices (MRM).
@@ -763,6 +858,18 @@ mainMRM2 = sprintf("$\\beta= $%s, $p=$%s",
                    round(mainMRM$coef[2,2],2))
 cat(mainMRM2,
     file="../results/stats/tex/MRMCultrualVsLinguisticDistance_Partial.tex")
+```
+
+
+Cultural distance is still a signfiicant predictor of semantic alignment when controlling for colexificaiton distance:
+
+```{r}
+mainMRMCLX = ecodist::MRM(as.dist(ling.m3)~
+                  as.dist(cult.m3) + 
+                  as.dist(hist.m3) +
+                  as.dist(geo.m3) + 
+                  as.dist(colex.m3), nperm=10000)
+mainMRMCLX
 ```
 
 
@@ -822,33 +929,33 @@ matches = sapply(1:nrow(ling.filtered), function(i){
 
 ling.filtered$cult.dist = cult[matches,]$cult.dist
 # flip
-ling.filtered$cult.dist = 1 - ling.filtered$cult.dist
-ling.filtered = ling.filtered[!is.na(ling.filtered$cult.dist),]
+ling.filtered$cult.sim = 1 - ling.filtered$cult.dist
+ling.filtered = ling.filtered[!is.na(ling.filtered$cult.sim),]
 
-ling.filtered$cult.dist.center = scale(ling.filtered$cult.dist)
+ling.filtered$cult.sim.center = scale(ling.filtered$cult.sim)
 ```
 
 
 ```{r}
 m0F = lmer(
   rho.center ~ 1 +
-    (1 + cult.dist.center | family.group) +
-    (1 + cult.dist.center | area.group),
+    (1 + cult.sim.center | family.group) +
+    (1 + cult.sim.center | area.group),
   data = ling.filtered
 )
 m0.5F = lmer(
   rho.center ~ 1 +
     comparison_count.center +
-    (1 + cult.dist.center | family.group) +
-    (1 + cult.dist.center | area.group),
+    (1 + cult.sim.center | family.group) +
+    (1 + cult.sim.center | area.group),
   data = ling.filtered
 )
 m1F = lmer(
   rho.center ~ 1 +
     comparison_count.center +
-    cult.dist.center +
-    (1 + cult.dist.center | family.group) +
-    (1 + cult.dist.center | area.group),
+    cult.sim.center +
+    (1 + cult.sim.center | family.group) +
+    (1 + cult.sim.center | area.group),
   data = ling.filtered
 )
 an1F = anova(m0F,m0.5F,m1F)
@@ -894,33 +1001,33 @@ matches = sapply(1:nrow(ling.semFiltered), function(i){
 
 ling.semFiltered$cult.dist = cult[matches,]$cult.dist
 # flip
-ling.semFiltered$cult.dist = 1 - ling.semFiltered$cult.dist
-ling.semFiltered = ling.semFiltered[!is.na(ling.semFiltered$cult.dist),]
+ling.semFiltered$cult.sim = 1 - ling.semFiltered$cult.dist
+ling.semFiltered = ling.semFiltered[!is.na(ling.semFiltered$cult.sim),]
 
-ling.semFiltered$cult.dist.center = scale(ling.semFiltered$cult.dist)
+ling.semFiltered$cult.sim.center = scale(ling.semFiltered$cult.sim)
 ```
 
 
 ```{r}
 m0F = lmer(
   rho.center ~ 1 +
-    (1 + cult.dist.center | family.group) +
-    (1 + cult.dist.center | area.group),
+    (1 + cult.sim.center | family.group) +
+    (1 + cult.sim.center | area.group),
   data = ling.semFiltered
 )
 m0.5F = lmer(
   rho.center ~ 1 +
     comparison_count.center +
-    (1 + cult.dist.center | family.group) +
-    (1 + cult.dist.center | area.group),
+    (1 + cult.sim.center | family.group) +
+    (1 + cult.sim.center | area.group),
   data = ling.semFiltered
 )
 m1F = lmer(
   rho.center ~ 1 +
     comparison_count.center +
-    cult.dist.center +
-    (1 + cult.dist.center | family.group) +
-    (1 + cult.dist.center | area.group),
+    cult.sim.center +
+    (1 + cult.sim.center | family.group) +
+    (1 + cult.sim.center | area.group),
   data = ling.semFiltered
 )
 an1F = anova(m0F,m0.5F,m1F)
@@ -968,33 +1075,33 @@ matches = sapply(1:nrow(ling.bothFiltered), function(i){
 
 ling.bothFiltered$cult.dist = cult[matches,]$cult.dist
 # flip
-ling.bothFiltered$cult.dist = 1 - ling.bothFiltered$cult.dist
-ling.bothFiltered = ling.bothFiltered[!is.na(ling.bothFiltered$cult.dist),]
+ling.bothFiltered$cult.sim = 1 - ling.bothFiltered$cult.dist
+ling.bothFiltered = ling.bothFiltered[!is.na(ling.bothFiltered$cult.sim),]
 
-ling.bothFiltered$cult.dist.center = scale(ling.bothFiltered$cult.dist)
+ling.bothFiltered$cult.sim.center = scale(ling.bothFiltered$cult.sim)
 ```
 
 
 ```{r}
 m0F = lmer(
   rho.center ~ 1 +
-    (1 + cult.dist.center | family.group) +
-    (1 + cult.dist.center | area.group),
+    (1 + cult.sim.center | family.group) +
+    (1 + cult.sim.center | area.group),
   data = ling.bothFiltered
 )
 m0.5F = lmer(
   rho.center ~ 1 +
     comparison_count.center +
-    (1 + cult.dist.center | family.group) +
-    (1 + cult.dist.center | area.group),
+    (1 + cult.sim.center | family.group) +
+    (1 + cult.sim.center | area.group),
   data = ling.bothFiltered
 )
 m1F = lmer(
   rho.center ~ 1 +
     comparison_count.center +
-    cult.dist.center +
-    (1 + cult.dist.center | family.group) +
-    (1 + cult.dist.center | area.group),
+    cult.sim.center +
+    (1 + cult.sim.center | family.group) +
+    (1 + cult.sim.center | area.group),
   data = ling.bothFiltered
 )
 an1F = anova(m0F,m0.5F,m1F)
