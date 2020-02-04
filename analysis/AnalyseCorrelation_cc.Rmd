@@ -14,7 +14,7 @@ setwd("~/Documents/Bristol/word2vec/word2vec_DPLACE/analysis/")
 
 # Introduction
 
-This file replicates the tests for the main wikipedia data on the common crawl data. 
+This file replicates the tests for the main Wikipedia data on the common crawl data. 
 
 # Load libraries
 ```{r warning=F, message=F}
@@ -28,7 +28,7 @@ library(lattice)
 library(xtable)
 ```
 
-Parameters (using data from Northuralex and common crawl, k=100, unfiltered):
+Parameters (using data from NorthEuraLex and common crawl, k=100, unfiltered):
 
 ```{r}
 datasetName = "cc"
@@ -76,7 +76,7 @@ ling = ling[!(ling$l1=="sl" | ling$l2 == "sl"),]
 ```
 
 
-Combine the lingusitic and cultural distances. Note that we flip the cultural measure from a distance measure to a similarity measure.
+Combine the linguistic and cultural distances. Note that we flip the cultural measure from a distance measure to a similarity measure.
 
 ```{r}
 cult$l1.iso2 = l[match(cult$l1,l$Language2),]$iso2
@@ -122,7 +122,7 @@ ling$rho.center = scale(ling$local_alignment)
 
 ```
 
-Each observation is now assocaited with a language family pair:
+Each observation is now associated with a language family pair:
 
 ```{r}
 head(ling[,c("l1","l2","local_alignment",'family.group')])
@@ -149,7 +149,7 @@ uniqueAreas = unique(unlist(ling[,c("area1","area2")]))
 length(uniqueAreas)
 ```
 
-Cross-over between language famlies and areas:
+Cross-over between language families and areas:
 
 ```{r}
 tx = data.frame(lang= c(ling$l1,ling$l2),
@@ -164,9 +164,9 @@ table(tx$fam,tx$area)
 
 ## LMER models
 
-Mixed effects model, predicting Linguistic similaritys from cultural similarity, with random intercept for family and area and random slope for cultural similarity for family and area.
+Mixed effects model, predicting Linguistic similarities from cultural similarity, with random intercept for family and area and random slope for cultural similarity for family and area.
 
-We start with a null model with random intercepts for family and area, and random slopes for cultural similarity by both. We add a fixed effect of the number of comparisons made for each datapoint (number of concepts that were available to compare). Then we add a fixed effect of cultural similarity
+We start with a null model with random intercepts for family and area, and random slopes for cultural similarity by both. We add a fixed effect of the number of comparisons made for each data point (number of concepts that were available to compare). Then we add a fixed effect of cultural similarity
 
 ```{r}
 m0 = lmer(
@@ -322,7 +322,7 @@ geoDist.m2 = matrix(scale(as.vector(geoDist.m2)),nrow=nrow(geoDist.m2))
 
 \newpage
 
-Run the MRM model, predicting semantic alignment by cultural distance, controlling for family distance, geographic ditance, and the comparison count (number of observations). Here, the family distance between two languages is just whether they are part of the same family.  Note that this does not take into account particular values for particular families, nor the random slopes within families.
+Run the MRM model, predicting semantic alignment by cultural distance, controlling for family distance, geographic distance, and the comparison count (number of observations). Here, the family distance between two languages is just whether they are part of the same family.  Note that this does not take into account particular values for particular families, nor the random slopes within families.
 
 ```{r}
 set.seed(289)
@@ -420,7 +420,7 @@ hist.m2 = hist.m[in.analysis,in.analysis]
 geo.m2 = geoDist.m[in.analysis,in.analysis]
 ```
 
-Note that there are only `r length(in.analysis)` languages with data on lingusitic, cultural and historical distance. This is becasue the historical distances are derived from a tree of Indo-European languages (there are currently no reliable phylogentic trees constructed from cognates that span different language families). The languages in this test include: `r paste(sort(in.analysis),collapse=", ")`.
+Note that there are only `r length(in.analysis)` languages with data on linguistic, cultural and historical distance. This is because the historical distances are derived from a tree of Indo-European languages (there are currently no reliable phylogentic trees constructed from cognates that span different language families). The languages in this test include: `r paste(sort(in.analysis),collapse=", ")`.
 
 ```{r}
 plot(as.dist(cult.m2),as.dist(ling.m2),
@@ -469,7 +469,7 @@ set.seed(1498)
 Run tests between each pair of measures.
 
 ```{r}
-distms = list("Cultrual"= cult.m2,
+distms = list("Cultural"= cult.m2,
               "Linguistic" = ling.m2,
               "Historical" = hist.m2,
               "Geographic" = geo.m2)

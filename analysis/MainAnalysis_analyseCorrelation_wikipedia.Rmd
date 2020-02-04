@@ -25,13 +25,13 @@ setwd("~/Documents/Bristol/word2vec/word2vec_DPLACE/analysis/")
 
 # Introduction
 
-We compare cultural distances between socieites with semantic alignment between societies, controlling for shared history in two ways.
+We compare cultural distances between societies with semantic alignment between societies, controlling for shared history in two ways.
 
 The first test uses mixed effects modelling.  The pairing of the language family of each language (according to Glottolog, Hammarstrom et al., 2018) is used as a random effect.  That means that the model can capture the likelihood that two languages from the same language family (e.g. Indo-European) will be more similar to each other than two languages from different language families. The same is done with geographic area according to Autotyp (Nichols et al., 2013), which reflect areas of known linguistic contact. The model also included a fixed effect for for the number of lexical comparisons that went into the mean semantic alignment estimates (generally, more available comparisons indicate more possible comparisons, i.e. more similar languages).
 
-The second and thrid test controls for history using distances from a phylogenetic tree.  The tree comes from Bouckaert et al. (2012), which was estimated by comapring the gain and loss of cognates in the lexicon of Indo-European languages. Patristic distances between languages are used as a measure of historical distance between languages. Patristic distance is the distance between two leaves on the tree following the shortest path (which will go through the most recent common ancestor). The branch lengths in the tree are scaled to reflect time, so the shortest distance between two leaves on the tree indicates the total amount of independent evolution between two languages. An alternative measure of historical distance was obtained from data from the Automated Similarity Judgement Program database (ASJP, Wichmann, Holman & Brown, 2018). This is a databse of basic vocabulary in a common phonetic format. We used the distances as calculated by Jäger (2018) which essentially measure the average edit distance between langauges (the number of changes to turn one vocabulary into the other), accounting for the likelihood of historical changes between sound segments. The measure is similar to calculating distances between sequences of DNA. Both of these measures of historical distance are based on the lexicon, but do not use measures of the semantic meanings of words.
+The second and third test controls for history using distances from a phylogenetic tree.  The tree comes from Bouckaert et al. (2012), which was estimated by comparing the gain and loss of cognates in the lexicon of Indo-European languages. Patristic distances between languages are used as a measure of historical distance between languages. Patristic distance is the distance between two leaves on the tree following the shortest path (which will go through the most recent common ancestor). The branch lengths in the tree are scaled to reflect time, so the shortest distance between two leaves on the tree indicates the total amount of independent evolution between two languages. An alternative measure of historical distance was obtained from data from the Automated Similarity Judgement Program database (ASJP, Wichmann, Holman & Brown, 2018). This is a database of basic vocabulary in a common phonetic format. We used the distances as calculated by Jäger (2018) which essentially measure the average edit distance between languages (the number of changes to turn one vocabulary into the other), accounting for the likelihood of historical changes between sound segments. The measure is similar to calculating distances between sequences of DNA. Both of these measures of historical distance are based on the lexicon, but do not use measures of the semantic meanings of words.
 
-The second test uses simple and partial Mantel tests (Mantel, 1967 and e.g. Smouse, Long & Sokal, 1986, Legendre, 2000; Castellano & Balletto, 2002, Goslee, 2010), using the implementation in the R package *ecodist* (Goslee & Urban, 2007). A Mantel test is a nonparemetric test that uses permutation to assess the strength of the relationship between two distance matrices. It compares the correlation between the values from two distance matrices with the correlation produced when the values of one of the matrices is permuted. This allows it to account for the dependencies between the distances. Note that the Mantel test assumes a strict distance metric, which is not necessarily the case with this data (see also e.g. Harmon & Glor, 2010), but there are few other ways to deal with continuous pairwise distances. 
+The second test uses simple and partial Mantel tests (Mantel, 1967 and e.g. Smouse, Long & Sokal, 1986, Legendre, 2000; Castellano & Balletto, 2002, Goslee, 2010), using the implementation in the R package *ecodist* (Goslee & Urban, 2007). A Mantel test is a nonparametric test that uses permutation to assess the strength of the relationship between two distance matrices. It compares the correlation between the values from two distance matrices with the correlation produced when the values of one of the matrices is permuted. This allows it to account for the dependencies between the distances. Note that the Mantel test assumes a strict distance metric, which is not necessarily the case with this data (see also e.g. Harmon & Glor, 2010), but there are few other ways to deal with continuous pairwise distances. 
 
 Mantel tests were used to test the relationship between semantic alignment and historical proximity, and between semantic alignment and geographic proximity. Geographic proximity was measured as the great circle distance between the cultural centres of each language as defined in Glottolog (Hammarstrom et al., 2018). For the analysis within domains, partial Mantel tests were used to estimate the correlation between the semantic alignment and the cultural/geographic/historical proximity while partialling out the effect of the other two proximity measures. 
 
@@ -43,7 +43,7 @@ The final section looks at relationships between sub-domains.  The first section
 
 # Calculating cultural similarity
 
-The aim is to produce a set of distances between societies based on their cultural traits.  The Ethnographic Atlas (Murdock et al., 1999) is a database of (non-linguistic) cultural traits on many societies. For each variable, societies are assigned to one category (or value). For example, the variable 'EA011' classifies a society's norms for "Transfer of residence at marriage". Each society is assigned to one of the following groups: "Wife to husband's group", "Husband to wife's group" "Couple to either group", "Nonestablishment of a common household". The D-PLACE database (https://d-place.org/, Kirby et al., 2016) links societies in the Ethnogrpahic atlas to the languages they speak (through the Glottolog ID, Hammarstrom et al., 2018). D-PLACE also provides the data in an updated format, so we use this as our primary data source.
+The aim is to produce a set of distances between societies based on their cultural traits.  The Ethnographic Atlas (Murdock et al., 1999) is a database of (non-linguistic) cultural traits on many societies. For each variable, societies are assigned to one category (or value). For example, the variable 'EA011' classifies a society's norms for "Transfer of residence at marriage". Each society is assigned to one of the following groups: "Wife to husband's group", "Husband to wife's group" "Couple to either group", "Nonestablishment of a common household". The D-PLACE database (https://d-place.org/, Kirby et al., 2016) links societies in the Ethnographic Atlas to the languages they speak (through the Glottolog ID, Hammarstrom et al., 2018). D-PLACE also provides the data in an updated format, so we use this as our primary data source.
 
 However, there is a lot of missing data in the Ethnographic Atlas (about 25% in the whole dataset), which means that distances can't be computed easily.  One approach is to impute the missing data (guess their values based on existing data).  It's unlikely that any imputation method will be completely accurate, but for our purposes we don't need to be accurate, just *unbiased*.  That is, the imputed values should not bias the estimates of the distances between cultures.
 
@@ -55,7 +55,7 @@ We use the imputation package `mice` for R (van Buuren & Groothuis-Oudshoorn, 20
 
 We ran CART multiple imputation on the Ethnographic Atlas.  We excluded population size, one more variable that was coded for less than 33% of societies, and any societies that had fewer than 33% variables coded.  This left 92 variables for 962 languages with 16% missing data.
 
-We tested the imputation by taking the full Ethnographic Atlas data, creating some new missing values in random places and then re-imputing those missing values. We can then asses how accurate the imputation was for those values. Since the main analysis would only be using a small sub-set of the data, it is important to assess performance on these in particular, rather than the entire set of languages. Missing data was only inserted for languages in the main analysis of semantic alignment below. CART imputation guessed the correct value of missing data 74% of the time (average over 100 imputations).  This is reasonably good, considering that most variables have between 4 and 8 possible values (median = 6).  For example, this is 8.6 standard deviations better than choosing randomly (accuracy = 19%) and 5.6 standard deviations better than sampling from the known distribution of the target variable (accuracy = 37% on the same missing data).  This is not good enough to use in analyses that look at individual traits, but serves our purposes to estimate overall distances between langauges.
+We tested the imputation by taking the full Ethnographic Atlas data, creating some new missing values in random places and then re-imputing those missing values. We can then asses how accurate the imputation was for those values. Since the main analysis would only be using a small sub-set of the data, it is important to assess performance on these in particular, rather than the entire set of languages. Missing data was only inserted for languages in the main analysis of semantic alignment below. CART imputation guessed the correct value of missing data 74% of the time (average over 100 imputations).  This is reasonably good, considering that most variables have between 4 and 8 possible values (median = 6).  For example, this is 8.6 standard deviations better than choosing randomly (accuracy = 19%) and 5.6 standard deviations better than sampling from the known distribution of the target variable (accuracy = 37% on the same missing data).  This is not good enough to use in analyses that look at individual traits, but serves our purposes to estimate overall distances between languages.
 
 We produced 100 imputation sets with the final settings.  These were then used to create distance matrices using Gower distance between discrete traits (mean correlation between sets r = 0.94, estimates of distance vary by around 2% on average). The final distance matrix was the mean of each of the 100 distance matrices. Distances were also calculate for sub-domains of the data.
 
@@ -63,7 +63,7 @@ The full scripts and data can be found at [https://github.com/seannyD/ImputeEACu
 
 ## Colexification data
 
-We used the CLICS3 database (Rzymski et al., 2020) to obtain an estimate of the proportion of colexifications in common between two langauges. A colexification is when the same word is used (within a language) to refer to two concepts. The measure is based on the number of pairs of concepts that are colexified in both languages in the CLICS database. For each language pair, we look at each concept pair and tests whether their colexification status matches. The value is 1 if and only if the two concepts are colexified in each langage.
+We used the CLICS3 database (Rzymski et al., 2020) to obtain an estimate of the proportion of colexifications in common between two languages. A colexification is when the same word is used (within a language) to refer to two concepts. The measure is based on the number of pairs of concepts that are colexified in both languages in the CLICS database. For each language pair, we look at each concept pair and tests whether their colexification status matches. The value is 1 if and only if the two concepts are colexified in each language.
 
 For example, if language A uses one word to refer to both of the concepts 'hand' and 'arm', and language B also uses (a different) one word to refer to both of the concepts 'hand' and 'arm', then the languages have a colexification in common, and we would expect higher alignment.
 
@@ -71,7 +71,7 @@ For a language pair, the total number of colexifications in common is calculated
 
 Colexification data was not available for 5% of language pairs. 
 
-Note that the data file also contains a measure `numMatchingColexified`, which counts the numebr of concept pairs where the colexification status matches (1 if both languages are colexified or both languages are not colexified). This is not used.
+Note that the data file also contains a measure `numMatchingColexified`, which counts the number of concept pairs where the colexification status matches (1 if both languages are colexified or both languages are not colexified). This is not used.
 
 \newpage
 
@@ -224,7 +224,7 @@ Number of observations:
 nrow(ling)
 # Number of unique languages:
 length(unique(unlist(ling[,c("l1","l2")])))
-# Number of unique langauge families:
+# Number of unique language families:
 uniqueFamilies = unique(unlist(ling[,c("family1","family2")]))
 length(uniqueFamilies)
 # Number of unique areas:
@@ -535,7 +535,7 @@ geoDist.m2 = matrix(scale(as.vector(geoDist.m2)),nrow=nrow(geoDist.m2))
 
 \newpage
 
-Run the MRM model, predicting semantic alignment by cultural distance, controlling for family distance, geographic ditance, and the comparison count (number of observations). Here, the family distance between two languages is just whether they are part of the same family.  Note that this does not take into account particular values for particular families, nor the random slopes within families.
+Run the MRM model, predicting semantic alignment by cultural distance, controlling for family distance, geographic distance, and the comparison count (number of observations). Here, the family distance between two languages is just whether they are part of the same family.  Note that this does not take into account particular values for particular families, nor the random slopes within families.
 
 ```{r}
 set.seed(1282)
@@ -584,7 +584,7 @@ ecodist::MRM(as.dist(ling.m2) ~
 
 # Continuous controls for historical relatedness 
 
-This section uses phylogenetic distances between langauges to control for historical relatedness using Mantel tests and MRM. 
+This section uses phylogenetic distances between languages to control for historical relatedness using Mantel tests and MRM. 
 
 ## Data prep
 
@@ -616,7 +616,7 @@ Flip the cultural distance into a cultural similarity measure:
 cult.m = 1-cult.m
 ```
 
-Convert the semantic alignment to a matrix and impute the missing values with the mean. Note that in the final selection of langauges excludes any imputed values, but we perform the imputation just to be safe:
+Convert the semantic alignment to a matrix and impute the missing values with the mean. Note that in the final selection of languages excludes any imputed values, but we perform the imputation just to be safe:
 
 ```{r}
 grph <- graph.data.frame(ling[,c("l1",'l2','local_alignment')], directed=FALSE)
@@ -641,7 +641,7 @@ hist.m2 = hist.m[in.analysis,in.analysis]
 geo.m2 = geoDist.m[in.analysis,in.analysis]
 ```
 
-Note that there are only `r length(in.analysis)` languages with data on lingusitic, cultural and historical distance. This is becasue the historical distances are derived from a tree of Indo-European languages (there are currently no reliable phylogentic trees constructed from cognates that span different language families). The languages in this test include: `r paste(sort(in.analysis),collapse=", ")`.
+Note that there are only `r length(in.analysis)` languages with data on linguistic, cultural and historical distance. This is because the historical distances are derived from a tree of Indo-European languages (there are currently no reliable phylogenetic trees constructed from cognates that span different language families). The languages in this test include: `r paste(sort(in.analysis),collapse=", ")`.
 
 ```{r}
 plot(as.dist(cult.m2),as.dist(ling.m2),
@@ -1123,7 +1123,7 @@ The code that produce the results of this section can be found in `analysis/comp
 
 ## Part 1: Compare each linguistic domain to the overall cultural similarity
 
-We fit a mixed effects model to compare the semantic alignment in a given domain to the overall cultural distance. The semantic alignment for the given domain is the dependent variable.  There are random intercepts for language family and area pairs, and random slopes for overall cultural similarity by language family and by area.  The `comparison_count` variable is added as a fixed effect. This null model is compared to a model with an additional fixed effect for the overall cultural similairty.
+We fit a mixed effects model to compare the semantic alignment in a given domain to the overall cultural distance. The semantic alignment for the given domain is the dependent variable.  There are random intercepts for language family and area pairs, and random slopes for overall cultural similarity by language family and by area.  The `comparison_count` variable is added as a fixed effect. This null model is compared to a model with an additional fixed effect for the overall cultural similarity.
 
 There are 21 linguistic domains with enough data. All correlations are positive and 11 are significant at the 0.05 level (adjusted for multiple comparisons).
 
@@ -1163,7 +1163,7 @@ The graph below shows the mixed effects model coefficient estimate for the relat
 
 The insert in the top left shows the distribution of Beta values. 
 
-The domains are clustered using higherarchical clustering. This is for visualisaiton and reflects similarity in the numeric relations, not history or conceptual hierarchies.
+The domains are clustered using hierarchical clustering. This is for visualisation and reflects similarity in the numeric relations, not history or conceptual hierarchies.
 
 ![](../results/stats/wikipedia-main/LingAlignmentByDomains_vs_DPlaceCulturalDomains_Beta.pdf)
 

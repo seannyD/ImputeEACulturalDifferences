@@ -23,8 +23,8 @@ Although translations may be more direct for number words, there are still diffe
 
 -  *l1*: Iso2 code for language 1
 -  *l2*: Iso2 code for language 2
--  *wordform_l1*: Orthogaphic word form for language 1
--  *wordform_l2*: Orthogaphic word form for language 2
+-  *wordform_l1*: Orthographic word form for language 1
+-  *wordform_l2*: Orthographic word form for language 2
 -  *local_alignment*: Local semantic alignment
 -  *global_alignment*: Global semantic alignment
 -  *freq_l1*: Frequency of orthographic form in l1 
@@ -39,11 +39,11 @@ Although translations may be more direct for number words, there are still diffe
 -  *n*: Number of possible comparisons
 -  *number*: Number concept
 -  *number_numeric*: Numeric value of number
--  *name_l1*: Name of langauge l1
+-  *name_l1*: Name of language l1
 -  *family_l1*: Family of language l1
--  *name_l2*: Name of langauge l2
+-  *name_l2*: Name of language l2
 -  *family_l2*: Family of language l2
--  *same.family*: Compared langauges are part of same family?
+-  *same.family*: Compared languages are part of same family?
 -  *hist.dist*: Historical distance according to phylogenetic tree.
 -  *l1_typology*: Numeral typology for L1 according to Calude & Verkerk (2016) (see the section on "Number line" below). 
 -  *l2_typology*: Same as above for L2.
@@ -56,7 +56,7 @@ The Estimated Degrees of Freedom (EDF) is an indication of how non-linear a smoo
 
 Random effects in the GAM implementation we use are treated just like a smooth term with the identity matrix as the penalty coefficient matrix. When entering a language pair as a random (intercept) effect, coefficients are created for each pair, modelled as independent and identically distributed normal random variables. The values are defined as discrete points along a smooth function. So, just like in a mixed effects model, the predicted alignment can be adjusted by a random intercept (the coefficients), e.g. the model can represent the alignment between English and French as higher overall, and the alignment between English and Bulgarian as being slightly lower etc. Stronger differences between levels of the random effect would need be represented by more complex functions, which would be penalised (similar to how a linear mixed effect model penalises random effect coefficient estimates which deviate from a normal distribution). The EDF value for the random effects relates to the ‘wiggliness’ of these coefficients when plotted in a regular space. This makes the EDF difficult to interpret.  A random effect where there were no differences between levels would have an EDF of 1 (a flat line), but it would also be 1 when there were consistent distances between each level. So a high EDF would indicate something like an imbalance in the distribution of coefficients, e.g. a range of values that does not fit a normal distribution. In fact, there are several language pairs with lower alignment (pairs from different language families), and few with very high alignment (possibly a ceiling effect).
 
-See the SI of Monaghan & Roberts (2019) for further explanation of EDF and random effects applied to lingusitic data.
+See the SI of Monaghan & Roberts (2019) for further explanation of EDF and random effects applied to linguistic data.
 
 Monaghan & Roberts (2019) Cognitive influences in language evolution: Psycholinguistic predictors of loan word borrowing. _Cognition_, 186, 147-158.
 
@@ -228,7 +228,7 @@ ggplot(numbers,aes(x=factor(number_numeric),y=local_alignment)) + geom_boxplot()
 
 1 and 2 are often sources for grammaticalised indefinite/duel markers (Givón, 1981).
 
-The slight decline from 10 to 1000 could be due to the declining frequency of occurances of these numbers (Dehaene & Mehler, 1992), which might affect convergence on meanings, but more direcly would affect the co-occurance statistics.
+The slight decline from 10 to 1000 could be due to the declining frequency of occurrences of these numbers (Dehaene & Mehler, 1992), which might affect convergence on meanings, but more directly would affect the co-occurrence statistics.
 
 What's driving the difference with 7 and 9? 7 might be linked to there being 7 days in the week, so semantic differences in time might be reflected. Let's look at individual languages:
 
@@ -283,11 +283,11 @@ ggplot(numbers[!numbers$homophone,],
 
 ## Number line
 
-We can look at the importance of the different ways that numeral systems are compased. We use data from Calude & Verkerk (2016)'s typology which describe the composition of numerals in many Indo-European langages (what Calude & Verkerk call the 'number line'). For example, the numeral 'four' in English is an 'atom' (it is not composable into smaller parts), while 'fourteen' is composed of two atoms (four + ten). There are differences between languages in terms of whether they use an atom or a composition of two atoms. For example, English uses a unique atom to represent 12 ('twelve'), while Bulgarian uses a form that is composed as "2 + 10" (2 = dve, 10 = deset, 12 = dvanadeset). There are also differences between languages in how they compose some numerals. For example, 'eighty' in English is constructed as 8 x 10 but in French 'quatre-vingts' is 4 x 20. We used this data to  identify whether two languages have the same system for forming a particular numeral. 
+We can look at the importance of the different ways that numeral systems are composed. We use data from Calude & Verkerk (2016)'s typology which describe the composition of numerals in many Indo-European languages (what Calude & Verkerk call the 'number line'). For example, the numeral 'four' in English is an 'atom' (it is not decomposable into smaller parts), while 'fourteen' is composed of two atoms (four + ten). There are differences between languages in terms of whether they use an atom or a composition of two atoms. For example, English uses a unique atom to represent 12 ('twelve'), while Bulgarian uses a form that is composed as "2 + 10" (2 = dve, 10 = deset, 12 = dvanadeset). There are also differences between languages in how they compose some numerals. For example, 'eighty' in English is constructed as 8 x 10 but in French 'quatre-vingts' is 4 x 20. We used this data to  identify whether two languages have the same system for forming a particular numeral. 
 
-We note that, in our sample, there are no differences between languages in the number line for numerals from 0 to ten. This is because all numbers below 10 for all languages in the sample are atoms. Therefore, the measure of numeral compostion is only explains variation for higher numerals.
+We note that, in our sample, there are no differences between languages in the number line for numerals from 0 to ten. This is because all numbers below 10 for all languages in the sample are atoms. Therefore, the measure of numeral composition is only explains variation for higher numerals.
 
-It looks like there's an interaction between numeral typoogy and numeric value:
+It looks like there's an interaction between numeral typology and numeric value:
 
 ```{r}
 ggplot(numbers[numbers$number_numeric>10,],
@@ -307,7 +307,7 @@ The plot below shows the overview of comparisons by language:
 ggplot(langAverages,aes(x=l,y=local_alignment)) + geom_boxplot()
 ```
 
-Danish seems to have a lower average.  We note that some Danish 'crowns' are irregular (50,60,70,80,90).  These pick out many outliers (dots are danish, blue dots are irregualr, violin plots are the rest of the data):
+Danish seems to have a lower average.  We note that some Danish 'crowns' are irregular (50,60,70,80,90).  These pick out many outliers (dots are danish, blue dots are irregular, violin plots are the rest of the data):
 
 ```{r}
 ggplot(numbers[!numbers$is_danish,],
@@ -399,7 +399,7 @@ cluster = factor(rp.rt$where,
 plot2 = ggplot(numbers,aes(y=local_alignment,
                    x=cluster)) +
   geom_violin() + myThemeBasic +
-  xlab("") + ylab("Semantic alginment")
+  xlab("") + ylab("Semantic alignment")
 
 pdf("rDecisionTree.pdf",width=12,height=8)
   layout(t(t(c(1,2))), heights=c(2.5,1))
@@ -458,7 +458,7 @@ numbers$homophone = factor(numbers$homophone)
 ```
 
 
-We start by looking at a simple model that has a random effect for langauge pair and a main smooth term for number. Note that since this is a non-linear model, a random effect for numeric value is very similar to a fully articulated smooth slope, so we just model numeric as a fixed effect. 
+We start by looking at a simple model that has a random effect for language pair and a main smooth term for number. Note that since this is a non-linear model, a random effect for numeric value is very similar to a fully articulated smooth slope, so we just model numeric as a fixed effect. 
 
 ```{r}
 m0 = bam(local_alignment.center ~
@@ -577,7 +577,7 @@ The final model explains `r round(summary(m1)$dev.expl*100,2)`% of the deviance,
 
 Parametric effects:
 
--  Being an Uralic language is nota strong predictor.
+-  Being an Uralic language is not a strong predictor.
 -  The number 7 has lower alignment in general (`r mp("sevenTRUE")`)
 -  Danish irregulars have lower alignment (`r mp("danish_irregularTRUE")`))
 -  Overall, there is no difference for comparisons between numbers with different numeral typologies (`r mp("differentNumeralTypologyTRUE")`)
@@ -715,7 +715,7 @@ dev.off()
 
 ## Controlling for linguistic history
 
-In the model above, the effects of historical distance are minimal: the fit is lienar and not significant.  This might be because there are random effects for language pairs which are taking up the variance.  In the section below, we use only historical distance:
+In the model above, the effects of historical distance are minimal: the fit is linear and not significant.  This might be because there are random effects for language pairs which are taking up the variance.  In the section below, we use only historical distance:
 
 ```{r}
 m1.phylo = bam(local_alignment.center~

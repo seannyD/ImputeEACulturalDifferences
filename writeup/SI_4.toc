@@ -1,6 +1,6 @@
 \contentsline {section}{\numberline {4.1}Main cross-cultural analysis (Wikipedia data)}{2}% 
 \contentsline {section}{\numberline {4.2}Analysis of numerals}{46}% 
-\contentsline {section}{\numberline {4.3}Neighbour net visualisation of semantic alignment}{74}% 
-\contentsline {section}{\numberline {4.4}Cross-cultural analysis (Common Crawl data)}{78}% 
-\contentsline {section}{\numberline {4.5}Cross-cultural analysis (Subtitles data)}{96}% 
-\contentsline {section}{\numberline {4.6}Summary of findings}{114}% 
+\contentsline {section}{\numberline {4.3}Neighbour net visualisation of semantic alignment}{73}% 
+\contentsline {section}{\numberline {4.4}Cross-cultural analysis (Common Crawl data)}{77}% 
+\contentsline {section}{\numberline {4.5}Cross-cultural analysis (Subtitles data)}{95}% 
+\contentsline {section}{\numberline {4.6}Summary of findings}{113}% 
