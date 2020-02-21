@@ -7,7 +7,7 @@ output:
     latex_engine: xelatex
 ---
 
-\setcounter{page}{42}
+\setcounter{page}{47}
 
 ```{r echo=F,eval=F}
 try(setwd("~/Documents/Bristol/word2vec/word2vec_DPLACE/analysis/numbers/"))
@@ -17,7 +17,7 @@ try(setwd("~/Documents/Bristol/word2vec/word2vec_DPLACE/analysis/numbers/"))
 
 What predicts the semantic alignment of number words?
 
-Although translations may be more direct for number words, there are still differences between languages regarding their semantic associations. Numerals in 16 languages were analysed using binary decision trees to find coherent clusters then a Generalised Additive Model to explain differences in alignment.
+Although translations may be more direct for number words, there are still differences between languages regarding their semantic associations. Data was available for various analyses of numerals in 16 langauges (mainly constrained by the data from Calude & Verkerk, 2016). These were anlaysed using binary decision trees to find coherent clusters then a Generalised Additive Model to explain differences in alignment.
 
 ## Variables:
 

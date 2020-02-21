@@ -3,7 +3,7 @@ title: "Summary of findings"
 output: pdf_document
 ---
 
-\setcounter{page}{110}
+\setcounter{page}{115}
 
 ## Main analyses of Wikipedia data.
 

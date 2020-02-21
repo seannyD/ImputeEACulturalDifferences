@@ -4,7 +4,7 @@ d = read.csv("../data/FAIR/nel-wiki-k100-alignments-merged-long.csv",
              stringsAsFactors = F,
              encoding = "UTF-8",fileEncoding = "UTF-8")
 
-m = read.csv("../../offline/CLICS_numMeanings.csv")
+m = read.csv("../../offline/CLICS_numMeanings.csv",stringsAsFactors = F)
 
 d = left_join(d,m,by = c("Glottocode_l1"="glottocode","Word_Form_l1"="sourceForm"))
 names(m) = paste0(names(m),".l2")
