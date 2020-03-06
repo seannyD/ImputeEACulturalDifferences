@@ -4,7 +4,7 @@ setwd("~/Documents/Bristol/word2vec/word2vec_DPLACE/processing/")
 #saveRDS(d,"../data/FAIR/alignment_merged.RDS")
 
 #d = readRDS("../data/FAIR/alignment_merged.RDS")
-d = read.csv("../data/FAIR/nel-wiki-k100-alignments-merged-long.csv",stringsAsFactors = F)
+d = read.csv("../data/FAIR/nel-wiki-k100-alignments-merged-long.csv",stringsAsFactors = F,encoding = "UTF-8",fileEncoding = "UTF-8")
 
 l = read.csv("../data/FAIR_langauges_glotto_xdid.csv",stringsAsFactors = F)
 
