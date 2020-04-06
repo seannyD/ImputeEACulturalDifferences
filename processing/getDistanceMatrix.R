@@ -4,6 +4,7 @@
 library(cluster)
 library(reshape2)
 library(mclust)
+library(fields)
 
 try(setwd("~/Documents/Bristol/word2vec/word2vec_DPLACE/processing/"))
 
@@ -161,9 +162,28 @@ g = read.csv("../data/glottolog-languoid.csv/languoid.csv",stringsAsFactors = F,
 l$lat = g[match(l$glotto,g$id),]$latitude
 l$long = g[match(l$glotto,g$id),]$longitude
 
-library(fields)
+# Arabic is standard arabic
+l[!is.na(l$iso2) & l$iso2=="ar",]$lat = 27.96
+l[!is.na(l$iso2) & l$iso2=="ar",]$long= 43.85
+# Komi is Komi-Yazva (most central)
+l[!is.na(l$iso2) & l$iso2=="kv",]$lat = 60.72
+l[!is.na(l$iso2) & l$iso2=="kv",]$long= 55.76
+# Mongolian is Halh Mongolian
+l[!is.na(l$iso2) & l$iso2=="mn",]$lat = 48.32
+l[!is.na(l$iso2) & l$iso2=="mn",]$long=  106.29
+# Pashto is Central pashto
+l[!is.na(l$iso2) & l$iso2=="ps",]$lat = 31.92
+l[!is.na(l$iso2) & l$iso2=="ps",]$long=  69.45
+# Uzbek is Northern Uzbek (by populaiton)
+l[!is.na(l$iso2) & l$iso2=="uz",]$lat = 40.89
+l[!is.na(l$iso2) & l$iso2=="uz",]$long=  69.21
+# Azerbaijani is Northern Azerbaijani
+l[!is.na(l$iso2) & l$iso2=="az",]$lat = 40.98
+l[!is.na(l$iso2) & l$iso2=="az",]$long=  46.47
+
+
 lx = l[!is.na(l$lat),]
-geoDist = fields::rdist.earth(lx[,c("long","lat")],miles=F)
+geoDist = fields::rdist.earth(lx[,c("long","lat")],miles=F)  #241
 rownames(geoDist) = lx$Language
 colnames(geoDist) = lx$Language
 diag(geoDist) =0
