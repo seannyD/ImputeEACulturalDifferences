@@ -334,7 +334,7 @@ plot_model(m1,'re', sort.est = "cult.sim.center")
 \clearpage
 \newpage
 
-Check some basic correlations with a simpler linear model. Some code to wrangle the data is hidden, but available in the Rmd file.
+Check some basic correlations. Some code to wrangle the data is hidden, but available in the Rmd file.
 
 ```{r echo=F}
 geoDist = read.csv("../data/GeographicDistances.csv",stringsAsFactors = F)
