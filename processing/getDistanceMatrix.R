@@ -183,7 +183,7 @@ l[!is.na(l$iso2) & l$iso2=="az",]$long=  46.47
 
 
 lx = l[!is.na(l$lat),]
-geoDist = fields::rdist.earth(lx[,c("long","lat")],miles=F)  #241
+geoDist = fields::rdist.earth(lx[,c("long","lat")],miles=F)  
 rownames(geoDist) = lx$Language
 colnames(geoDist) = lx$Language
 diag(geoDist) =0
