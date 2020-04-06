@@ -6,7 +6,7 @@ output:
     toc: true
 ---
 
-\setcounter{page}{97}
+\setcounter{page}{100}
 
 ```{r echo=F, eval=F}
 setwd("~/Documents/Bristol/word2vec/word2vec_DPLACE/analysis/")

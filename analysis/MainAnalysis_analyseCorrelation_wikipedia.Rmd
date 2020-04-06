@@ -214,6 +214,9 @@ ling$langPair = apply(ling[,c("l1","l2")],
 
 ling$colex = colex[match(ling$langPair,colex$langPair),
                    ]$propCommonColexifications
+
+ling$colexRAW = colex[match(ling$langPair,colex$langPair),
+                   ]$numColexified
 ```
 
 
@@ -328,6 +331,151 @@ Plot the random effects:
 plot_model(m1,'re', sort.est = "cult.sim.center")
 ```
 
+\clearpage
+\newpage
+
+Check some basic correlations with a simpler linear model. Some code to wrangle the data is hidden, but available in the Rmd file.
+
+```{r echo=F}
+geoDist = read.csv("../data/GeographicDistances.csv",stringsAsFactors = F)
+geoDist.m = as.matrix(geoDist)
+geoDist.m = geoDist.m[!is.na(geoDist.m[,1]),!is.na(geoDist.m[1,])]
+# Convert to log distance in thousand km
+geoDist.m = log10(geoDist.m/1000)
+geoDist.m[is.infinite(geoDist.m)] = 0
+colnames(geoDist.m) = gsub("\\."," ",colnames(geoDist.m))
+rownames(geoDist.m) = colnames(geoDist.m)
+
+rownames(geoDist.m) = l[match(rownames(geoDist.m),l$Language),]$iso2
+colnames(geoDist.m) = l[match(colnames(geoDist.m),l$Language),]$iso2
+
+ling$geoDist = NA
+for(i in 1:nrow(ling)){
+  ling[i,]$geoDist = geoDist.m[ling[i,]$l1,ling[i,]$l2]
+}
+ling$geoDist.center = scale(ling$geoDist)
+
+
+asjp = readRDS("../data/ASJP/asjp17-dists_FAIR.RData")
+ling$glotto1 = l[match(ling$l1,l$iso2),]$glotto
+ling$glotto2 = l[match(ling$l2,l$iso2),]$glotto
+ling$asjpDist = NA
+for(i in 1:nrow(ling)){
+  if(ling$glotto1[i] %in% rownames(asjp) & ling$glotto2[i] %in% rownames(asjp)){
+    ling$asjpDist[i] = asjp[ling$glotto1[i],ling$glotto2[i]]
+  }
+}
+
+hist = read.csv("../data/trees/IndoEuropean_historical_distances.csv", stringsAsFactors = F)
+hist = hist[!duplicated(hist[,1]),!duplicated(hist[,1])]
+rownames(hist) = hist[,1]
+hist = hist[,2:ncol(hist)]
+hist.m = as.matrix(hist)
+colnames(hist.m) = rownames(hist.m)
+hist.m = hist.m/max(hist.m)
+
+colnames(hist.m)= l[match(colnames(hist.m),l$Language),]$iso2
+rownames(hist.m)= colnames(hist.m)
+
+hist.m = hist.m[!is.na(colnames(hist.m)),!is.na(colnames(hist.m))]
+
+ling$histDist = NA
+for(i in 1:nrow(ling)){
+    if(ling$l1[i] %in% rownames(hist.m) & ling$l2[i] %in% rownames(hist.m)){
+    ling$histDist[i] = hist.m[ling$l1[i],ling$l2[i]]
+  }
+}
+
+ling$histDist.center = scale(ling$histDist)
+
+```
+
+alignment ~ geography:
+
+```{r}
+mX.rhoVgeo = lmer(
+  rho.center ~ 1 +
+    comparison_count.center +
+    geoDist.center +
+    (1 | family.group) +
+    (1 | area.group),
+  data = ling
+)
+coef(summary(mX.rhoVgeo))
+```
+
+alignment ~ historical (cophenetic). These only include Indo-European languages, so we remove the random effects for area and langauge family:
+
+```{r}
+mX.rhoVhist = lm(
+  rho.center ~ 1 +
+    comparison_count.center +
+    histDist.center,
+  data = ling
+)
+coef(summary(mX.rhoVhist))
+```
+
+alignment~ historical (ASJP):
+
+```{r}
+mX.rhoVasjp = lmer(
+  rho.center ~ 1 +
+    comparison_count.center +
+    asjpDist +
+    (1 | family.group) +
+    (1 | area.group),
+  data = ling
+)
+coef(summary(mX.rhoVasjp))
+```
+
+alignment ~ geography + cultural:
+
+```{r}
+m1.geo = lmer(
+  rho.center ~ 1 +
+    comparison_count.center +
+    cult.sim.center +
+    geoDist.center +
+    (1 + cult.sim.center | family.group) +
+    (1 + cult.sim.center | area.group),
+  data = ling
+)
+coef(summary(m1.geo))
+```
+
+alignment ~ geography + cultural + cophenetic:
+
+```{r}
+mX.all = lm(
+  rho.center ~ 1 +
+    comparison_count.center +
+    cult.sim.center +
+    geoDist.center +
+    histDist.center,
+  data = ling
+)
+coef(summary(mX.all))
+```
+
+alignment ~ geography + cultural + ASJP
+
+```{r}
+mX.allASJP = lmer(
+  rho.center ~ 1 +
+    comparison_count.center +
+    cult.sim.center +
+    geoDist.center +
+    asjpDist +
+    (1 + cult.sim.center | family.group) +
+    (1 + cult.sim.center | area.group),
+  data = ling, control = lmerControl(optimizer = 'bobyqa')
+)
+coef(summary(mX.allASJP))
+```
+
+\clearpage
 \newpage
 
 ## Without Kinship data
