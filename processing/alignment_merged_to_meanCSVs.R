@@ -1,7 +1,8 @@
 library(dplyr)
 setwd("~/Documents/Bristol/word2vec/word2vec_DPLACE/processing/")
 #d = read.csv("../data/FAIR/alignment_merged.csv",stringsAsFactors = F)
-#saveRDS(d,"../data/FAIR/alignment_merged.RDS")
+#cols = c("l1","l2","Word_Form_l1","Word_Form_l2","local_alignment","Language_Family_l1","Language_Family_l2","Glottocode_l1","Glottocode_l2","TOKO.TRANS.SIM","PASSES.CONCEPT.FILTER","PASSES.WIKI.FILTER")
+#saveRDS(d[,cols],"../data/FAIR/alignment_merged.RDS")
 
 #d = readRDS("../data/FAIR/alignment_merged.RDS")
 d = read.csv("../data/FAIR/nel-wiki-k100-alignments-merged-long.csv",stringsAsFactors = F,encoding = "UTF-8",fileEncoding = "UTF-8")

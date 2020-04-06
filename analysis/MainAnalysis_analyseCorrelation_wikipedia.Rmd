@@ -277,7 +277,7 @@ an1 = anova(m0,m0.5,m1)
 an1
 ```
 
-Cultural similarity is not significantly correlated with semantic alignment.  Here are the model estimates:
+Cultural similarity is significantly correlated with semantic alignment.  Here are the model estimates:
 
 ```{r}
 summary(m1)
