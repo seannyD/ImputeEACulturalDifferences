@@ -543,6 +543,8 @@ Below we show three things:
 
 Firstly, the average colexification overlap between two languages predicts semantic alignment. Secondly, the relationship between semantic alignment and cultural similarity remains significant when controlling for colexification. Thirdly, the colexification variable does not predict cultural distance, and only weakly predicts geographic distance.
 
+The first set of models predict the distributional semantics measure by the cultural similarity measure. We show that this is robust to adding the colexification measure:
+
 ```{r}
 # baseline model with just comparison count
 m0Colex = lmer(
