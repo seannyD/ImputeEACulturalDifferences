@@ -399,8 +399,7 @@ mX.rhoVgeo = lmer(
     geoDist.center +
     (1 | family.group) +
     (1 | area.group),
-  data = ling
-)
+  data = ling)
 coef(summary(mX.rhoVgeo))
 ```
 
@@ -411,8 +410,7 @@ mX.rhoVhist = lm(
   rho.center ~ 1 +
     comparison_count.center +
     histDist.center,
-  data = ling
-)
+  data = ling)
 coef(summary(mX.rhoVhist))
 ```
 
@@ -423,10 +421,8 @@ mX.rhoVasjp = lmer(
   rho.center ~ 1 +
     comparison_count.center +
     asjpDist +
-    (1 | family.group) +
-    (1 | area.group),
-  data = ling
-)
+    (1 | family.group) + (1 | area.group),
+  data = ling)
 coef(summary(mX.rhoVasjp))
 ```
 
@@ -440,8 +436,7 @@ m1.geo = lmer(
     geoDist.center +
     (1 + cult.sim.center | family.group) +
     (1 + cult.sim.center | area.group),
-  data = ling
-)
+  data = ling)
 coef(summary(m1.geo))
 ```
 
@@ -454,8 +449,7 @@ mX.all = lm(
     cult.sim.center +
     geoDist.center +
     histDist.center,
-  data = ling
-)
+  data = ling)
 coef(summary(mX.all))
 summary(mX.all)$r.squared
 ```
@@ -471,8 +465,7 @@ mX.allASJP = lmer(
     asjpDist +
     (1 + cult.sim.center | family.group) +
     (1 + cult.sim.center | area.group),
-  data = ling, control = lmerControl(optimizer = 'bobyqa')
-)
+  data = ling, control = lmerControl(optimizer = 'bobyqa'))
 coef(summary(mX.allASJP))
 ```
 
