@@ -41,7 +41,7 @@ The results above were robustly replicated using the filtered data. Results were
 
 The final section looks at relationships between sub-domains.  The first section describes how the cultural similarity measure was calculated.
 
-# Calculating cultural similarity
+## Calculating cultural similarity
 
 The aim is to produce a set of distances between societies based on their cultural traits.  The Ethnographic Atlas (Murdock et al., 1999) is a database of (non-linguistic) cultural traits on many societies. For each variable, societies are assigned to one category (or value). For example, the variable 'EA011' classifies a society's norms for "Transfer of residence at marriage". Each society is assigned to one of the following groups: "Wife to husband's group", "Husband to wife's group" "Couple to either group", "Nonestablishment of a common household". The D-PLACE database (https://d-place.org/, Kirby et al., 2016) links societies in the Ethnographic Atlas to the languages they speak (through the Glottolog ID, Hammarstrom et al., 2018). D-PLACE also provides the data in an updated format, so we use this as our primary data source.
 
@@ -63,15 +63,9 @@ The full scripts and data can be found at [https://github.com/seannyD/ImputeEACu
 
 ## Colexification data
 
-We used the CLICS3 database (Rzymski et al., 2020) to obtain an estimate of the proportion of colexifications in common between two languages. A colexification is when the same word is used (within a language) to refer to two concepts. The measure is based on the number of pairs of concepts that are colexified in both languages in the CLICS database. For each language pair, we look at each concept pair and tests whether their colexification status matches. The value is 1 if and only if the two concepts are colexified in each language.
+We used the CLICS3 database (Rzymski et al., 2020) to obtain an estimate of the proportion of colexifications in common between two languages. A colexification is when the same word is used (within a language) to refer to two concepts. For a given concept $X$ in language $A$, we can look up the concepts $Y_A$ that are colexified with it. We can also do this for concept $X$ in language $B$ to get colexified concepts $Y_B$. We can then calculate the proportion of overlap between the two sets of colexifications. This measures the amount of overlap in the `network' of colexifications between the two languages for a single concept. For the analyses below, we then calculate the average colexification measure for each language pair. 
 
-For example, if language A uses one word to refer to both of the concepts 'hand' and 'arm', and language B also uses (a different) one word to refer to both of the concepts 'hand' and 'arm', then the languages have a colexification in common, and we would expect higher alignment.
-
-For a language pair, the total number of colexifications in common is calculated and divided by the total number of pairs for which a comparison was possible, to get an estimate of the proportion of colexifications in common.  Example code for calculating this measure is found in `processing/getCLICSData.py`.
-
-Colexification data was not available for 5% of language pairs. 
-
-Note that the data file also contains a measure `numMatchingColexified`, which counts the number of concept pairs where the colexification status matches (1 if both languages are colexified or both languages are not colexified). This is not used.
+The colexification data is available in `../data/FAIR/CLICS_by_concept.csv`. Colexification data was not available for 5% of language pairs. 
 
 \newpage
 
@@ -205,15 +199,14 @@ colex <- colex %>% mutate(langPair = paste(
 
 colex <- colex %>% 
     group_by(langPair) %>%
-    summarize(overlap=mean(overlap,na.rm=TRUE))
-
-colex$overlap = scale(colex$overlap)
+    summarize(overlap=mean(overlap,na.rm=TRUE),
+              l1_iso2 = first(l1),l2_iso2 = first(l2))
 
 ling <- ling %>% mutate(langPair = paste(
   pmin(l1,l2),pmax(l1,l2),sep="_"))
 
-ling$colex = colex[match(ling$langPair,colex$langPair),]$overlap
-ling$colex = scale(ling$colex)
+ling$overlap = colex[match(ling$langPair,colex$langPair),]$overlap
+ling$colex = scale(ling$overlap)
 ```
 
 
@@ -546,20 +539,18 @@ summary(m1NK)
 
 ## Controlling for colexification
 
-Below we show two things: 
+Below we show three things: 
 
-Firstly, the proportion of common colexifications between two languages predicts semantic alignment. However, the relationship is fairly weak and negative. A higher number of common colexifications predicts a lower semantic alignment.
-
-Secondly, the relationship between semantic alignment and cultural similarity remains significant when controlling for colexification. 
+Firstly, the proportion of common colexifications between two languages predicts semantic alignment. Secondly, the relationship between semantic alignment and cultural similarity remains significant when controlling for colexification. Thirdly, the colexification variable does not predict cultural distance, and only weakly predicts geographic distance.
 
 ```{r}
 # baseline model with just comparison count
 m0Colex = lmer(
-  rho.center ~ 1 +
-    comparison_count.center +
-    (1 + cult.sim.center | family.group) +
-    (1 + cult.sim.center | area.group),
-  data = ling[!is.na(ling$colex),]
+  rho.center ~ 1 + comparison_count.center +
+    (1 + cult.sim.center  || family.group) +
+    (1 + cult.sim.center  || area.group),
+  data = ling[!is.na(ling$colex),],
+  control = lmerControl(optimizer = 'bobyqa')
 )
 # Add colexification
 m1Colex = update(m0Colex,~.+colex)
@@ -573,30 +564,29 @@ summary(m2Colex)
 We also show that the colexification measure does not predict cultural similarity:
 
 ```{r}
-m0Cult_by_Colex = lmer(cult.sim.center ~ 1 + rho.center +
+m0Cult = lmer(cult.sim.center ~ 1 +
   +(1  | family.group) +(1  | area.group),
   data = ling[!is.na(ling$colex),])
-m1Cult_by_Colex = update(m0Cult_by_Colex,~.+colex)
-anova(m0Cult_by_Colex,m1Cult_by_Colex)
+m1Cult_by_rho = update(m0Cult,~.+rho.center)
+m2Cult_by_colex = update(m1Cult_by_rho,~.+colex)
+anova(m0Cult,m1Cult_by_rho,m2Cult_by_colex)
+summary(m2Cult_by_colex)
 ```
 
+Colexification does predict geographic distance, though it has a weaker effect than our distributional measure:
+
 ```{r}
-m0Geo_by_Colex = lmer(geoDist.center ~ 1 + rho.center +
+m0Geo = lmer(geoDist.center ~ 1 +
   +(1  | family.group) +(1  | area.group),
   data = ling[!is.na(ling$colex),])
-m1Geo_by_Colex = update(m0Geo_by_Colex,~.+colex)
-anova(m0Geo_by_Colex,m1Geo_by_Colex)
+m1Geo_by_rho = update(m0Geo,~.+rho.center)
+m2Geo_by_colex = update(m1Geo_by_rho,~.+colex)
+anova(m0Geo,m1Geo_by_rho,m2Geo_by_colex)
+summary(m2Geo_by_colex)
 ```
 
-
-```{r}
-mxx = lmer(geoDist.center ~ 1 + rho.center + colex
-  +(1  | family.group) ,
-  data = ling[!is.na(ling$colex),])
-summary(mxx)
-```
-
-
+\clearpage
+\newpage
 
 ##  MRM
 
@@ -925,26 +915,15 @@ cat(mainMantel2,
 Convert the colexification data to a distance matrix:
 
 ```{r}
-# recalculate proportion without scaling and centering
-colex$propCommonColexifications.raw = 
-  colex$numColexified/colex$n_overlapConceptPairs
-# This method sets missing values to zero
-# this is ok above, because we can identify zero
-# as missing. But the propCommonColexifications 
-# measure can have values of 0, so we shift everything up
-# temporarily: 
-colex$propCommonColexifications.raw = colex$propCommonColexifications.raw + 100
 grphC <- graph.data.frame(colex[,
-          c("l1_iso2", 'l2_iso2', 'propCommonColexifications.raw')], 
+          c("l1_iso2", 'l2_iso2', 'overlap')], 
           directed=FALSE)
 # add value as a weight attribute
-colex.m = get.adjacency(grphC, attr="propCommonColexifications.raw", sparse=FALSE)
+colex.m = get.adjacency(grphC, attr="overlap", sparse=FALSE)
 rownames(colex.m) = l[match(rownames(colex.m),l$iso2),]$Language2
 colnames(colex.m) = l[match(colnames(colex.m),l$iso2),]$Language2
 # impute missing data with mean
-colex.m[colex.m==0] = mean(colex$propCommonColexifications.raw)
-# shift back:
-colex.m = colex.m -100
+colex.m[colex.m==0] = mean(colex$overlap)
 # Flip to distance
 colex.m = 0-colex.m
 diag(colex.m) = 0
@@ -969,7 +948,7 @@ ecodist::mantel(as.dist(hist.m3)~
                 nperm = 100000)
 ```
 
-There is no significant correlation between semantic alignment and colexificaiton:
+Correlation between semantic alignment and colexificaiton:
 
 ```{r}
 ecodist::mantel(as.dist(ling.m3)~
@@ -1003,7 +982,8 @@ mainMantelCLX2 = gsub("0\\.",".",mainMantelCLX2)
 cat(mainMantelCLX2,
     file="../results/stats/tex/MantelCultrualVsLinguisticDistance_Partial_withColexification.tex")
 ```
-
+\clearpage
+\newpage
 
 ## MRM
 
