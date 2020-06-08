@@ -445,7 +445,7 @@ m1.geo = lmer(
 coef(summary(m1.geo))
 ```
 
-alignment ~ geography + cultural + cophenetic:
+alignment ~ geography + cultural + historical:
 
 ```{r}
 mX.all = lm(
@@ -457,6 +457,7 @@ mX.all = lm(
   data = ling
 )
 coef(summary(mX.all))
+summary(mX.all)$r.squared
 ```
 
 alignment ~ geography + cultural + ASJP
